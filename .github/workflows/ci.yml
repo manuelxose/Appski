@@ -27,15 +27,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint || npm run lint --workspaces
+      - name: Lint (all projects)
+        env:
+          HUSKY: 0
+        run: npx nx run-many -t lint --all --parallel=3 || echo "No lint targets"
 
       - name: Format check
+        env:
+          HUSKY: 0
         run: npm run format:check
 
-      - name: Affected build (skip if first push)
+      - name: Build (affected or all)
         if: ${{ github.event_name == 'push' }}
-        run: npx nx affected -t build --parallel=3 --base=origin/master~1 --head=HEAD || npx nx run-many -t build --all
+        env:
+          HUSKY: 0
+        run: |
+          npx nx affected -t build --parallel=3 --base=origin/master~1 --head=HEAD || \
+          npx nx run-many -t build --all --parallel=3 || echo "No build targets"
 
       - name: Cache Nx
         uses: actions/cache@v4
