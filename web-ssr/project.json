@@ -1,0 +1,86 @@
+{
+  "name": "web-ssr",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "web-ssr/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/web-ssr",
+        "browser": "web-ssr/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "web-ssr/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "web-ssr/public"
+          }
+        ],
+        "styles": ["web-ssr/src/styles.css"],
+        "server": "web-ssr/src/main.server.ts",
+        "ssr": {
+          "entry": "web-ssr/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@angular/build:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "web-ssr:build:production"
+        },
+        "development": {
+          "buildTarget": "web-ssr:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular/build:extract-i18n",
+      "options": {
+        "buildTarget": "web-ssr:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "web-ssr:build",
+        "staticFilePath": "dist/web-ssr/browser",
+        "spa": true
+      }
+    }
+  }
+}

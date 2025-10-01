@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nieve/ads": ["ads/src/index.ts"],
+      "@nieve/analytics": ["analytics/src/index.ts"],
+      "@nieve/auth": ["auth/src/index.ts"],
+      "@nieve/data-access": ["data-access/src/index.ts"],
+      "@nieve/i18n": ["i18n/src/index.ts"],
+      "@nieve/maps": ["maps/src/index.ts"],
+      "@nieve/seo": ["seo/src/index.ts"],
+      "@nieve/state": ["state/src/index.ts"],
+      "@nieve/ui-design-system": ["ui-design-system/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
