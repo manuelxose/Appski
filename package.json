@@ -3,12 +3,21 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "nx lint --all",
+    "format": "nx format:write",
+    "format:check": "nx format:check",
+    "prettier:write": "prettier \"**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,html,css,scss,yml,yaml}\" --ignore-path .prettierignore",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,html,css,scss,yml,yaml}\" --ignore-path .prettierignore"
   },
   "private": true,
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs}": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,html,css,scss}": [
+      "prettier --write"
     ]
   },
   "devDependencies": {
