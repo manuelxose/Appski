@@ -1,0 +1,321 @@
+{
+  "invoices": [
+    {
+      "id": "INV-2025-001",
+      "bookingId": "BK001",
+      "amount": 450.0,
+      "currency": "EUR",
+      "status": "paid",
+      "issueDate": "2025-10-01",
+      "dueDate": "2025-10-15",
+      "paidAt": "2025-10-01T10:30:00Z",
+      "items": [
+        {
+          "description": "Forfait 3 días - Sierra Nevada",
+          "quantity": 2,
+          "unitPrice": 75.0,
+          "subtotal": 150.0,
+          "tax": 31.5,
+          "total": 181.5
+        },
+        {
+          "description": "Clase de esquí grupal",
+          "quantity": 2,
+          "unitPrice": 45.0,
+          "subtotal": 90.0,
+          "tax": 18.9,
+          "total": 108.9
+        },
+        {
+          "description": "Alquiler equipo completo",
+          "quantity": 2,
+          "unitPrice": 30.0,
+          "subtotal": 60.0,
+          "tax": 12.6,
+          "total": 72.6
+        }
+      ],
+      "subtotal": 300.0,
+      "tax": 63.0,
+      "total": 450.0,
+      "customer": {
+        "name": "Carlos Martínez",
+        "email": "carlos.martinez@email.com",
+        "phone": "+34 612 345 678",
+        "address": "Calle Mayor 123, Madrid"
+      }
+    },
+    {
+      "id": "INV-2025-002",
+      "bookingId": "BK003",
+      "amount": 580.0,
+      "currency": "EUR",
+      "status": "paid",
+      "issueDate": "2025-09-30",
+      "dueDate": "2025-10-14",
+      "paidAt": "2025-09-30T09:15:00Z",
+      "items": [
+        {
+          "description": "Paquete Premium 5 días - Formigal",
+          "quantity": 1,
+          "unitPrice": 450.0,
+          "subtotal": 450.0,
+          "tax": 94.5,
+          "total": 544.5
+        },
+        {
+          "description": "Seguro cancelación",
+          "quantity": 1,
+          "unitPrice": 35.0,
+          "subtotal": 35.0,
+          "tax": 0.0,
+          "total": 35.0
+        }
+      ],
+      "subtotal": 485.0,
+      "tax": 94.5,
+      "total": 580.0,
+      "customer": {
+        "name": "Luis Fernández",
+        "email": "luis.fernandez@email.com",
+        "phone": "+34 623 456 789",
+        "address": "Avenida del Sol 45, Barcelona"
+      }
+    },
+    {
+      "id": "INV-2025-003",
+      "bookingId": "BK005",
+      "amount": 390.0,
+      "currency": "EUR",
+      "status": "paid",
+      "issueDate": "2025-10-01",
+      "dueDate": "2025-10-15",
+      "paidAt": "2025-10-01T15:30:00Z",
+      "items": [
+        {
+          "description": "Forfait 2 días - Baqueira Beret",
+          "quantity": 2,
+          "unitPrice": 85.0,
+          "subtotal": 170.0,
+          "tax": 35.7,
+          "total": 205.7
+        },
+        {
+          "description": "Clase particular 2 horas",
+          "quantity": 2,
+          "unitPrice": 60.0,
+          "subtotal": 120.0,
+          "tax": 25.2,
+          "total": 145.2
+        }
+      ],
+      "subtotal": 290.0,
+      "tax": 60.9,
+      "total": 390.0,
+      "customer": {
+        "name": "Pedro Sánchez",
+        "email": "pedro.sanchez@email.com",
+        "phone": "+34 634 567 890",
+        "address": "Plaza España 12, Valencia"
+      }
+    },
+    {
+      "id": "INV-2025-004",
+      "bookingId": "BK006",
+      "amount": 275.0,
+      "currency": "EUR",
+      "status": "refunded",
+      "issueDate": "2025-09-28",
+      "dueDate": "2025-10-12",
+      "paidAt": "2025-09-28T10:00:00Z",
+      "refundedAt": "2025-09-29T14:30:00Z",
+      "items": [
+        {
+          "description": "Forfait 2 días - Formigal",
+          "quantity": 1,
+          "unitPrice": 70.0,
+          "subtotal": 70.0,
+          "tax": 14.7,
+          "total": 84.7
+        },
+        {
+          "description": "Alquiler snowboard",
+          "quantity": 2,
+          "unitPrice": 40.0,
+          "subtotal": 80.0,
+          "tax": 16.8,
+          "total": 96.8
+        }
+      ],
+      "subtotal": 150.0,
+      "tax": 31.5,
+      "total": 275.0,
+      "customer": {
+        "name": "Laura Ruiz",
+        "email": "laura.ruiz@email.com",
+        "phone": "+34 645 678 901",
+        "address": "Calle Luna 78, Sevilla"
+      }
+    },
+    {
+      "id": "INV-2025-005",
+      "bookingId": "BK007",
+      "amount": 520.0,
+      "currency": "EUR",
+      "status": "paid",
+      "issueDate": "2025-10-02",
+      "dueDate": "2025-10-16",
+      "paidAt": "2025-10-02T08:30:00Z",
+      "items": [
+        {
+          "description": "Paquete Familia 4 días - Sierra Nevada",
+          "quantity": 1,
+          "unitPrice": 420.0,
+          "subtotal": 420.0,
+          "tax": 88.2,
+          "total": 508.2
+        },
+        {
+          "description": "Parking 4 días",
+          "quantity": 1,
+          "unitPrice": 12.0,
+          "subtotal": 12.0,
+          "tax": 0.0,
+          "total": 12.0
+        }
+      ],
+      "subtotal": 432.0,
+      "tax": 88.2,
+      "total": 520.0,
+      "customer": {
+        "name": "Jorge Moreno",
+        "email": "jorge.moreno@email.com",
+        "phone": "+34 656 789 012",
+        "address": "Paseo Marítimo 34, Málaga"
+      }
+    },
+    {
+      "id": "INV-2025-006",
+      "bookingId": "BK008",
+      "amount": 185.0,
+      "currency": "EUR",
+      "status": "paid",
+      "issueDate": "2025-10-01",
+      "dueDate": "2025-10-15",
+      "paidAt": "2025-10-01T12:15:00Z",
+      "items": [
+        {
+          "description": "Forfait 1 día - Baqueira Beret",
+          "quantity": 1,
+          "unitPrice": 90.0,
+          "subtotal": 90.0,
+          "tax": 18.9,
+          "total": 108.9
+        },
+        {
+          "description": "Alquiler esquís",
+          "quantity": 1,
+          "unitPrice": 25.0,
+          "subtotal": 25.0,
+          "tax": 5.25,
+          "total": 30.25
+        }
+      ],
+      "subtotal": 115.0,
+      "tax": 24.15,
+      "total": 185.0,
+      "customer": {
+        "name": "Elena Torres",
+        "email": "elena.torres@email.com",
+        "phone": "+34 667 890 123",
+        "address": "Ronda Norte 56, Bilbao"
+      }
+    },
+    {
+      "id": "INV-2025-007",
+      "bookingId": "BK011",
+      "amount": 340.0,
+      "currency": "EUR",
+      "status": "pending",
+      "issueDate": "2025-10-03",
+      "dueDate": "2025-10-17",
+      "items": [
+        {
+          "description": "Forfait 3 días - Formigal",
+          "quantity": 1,
+          "unitPrice": 210.0,
+          "subtotal": 210.0,
+          "tax": 44.1,
+          "total": 254.1
+        },
+        {
+          "description": "Clase privada iniciación",
+          "quantity": 1,
+          "unitPrice": 75.0,
+          "subtotal": 75.0,
+          "tax": 15.75,
+          "total": 90.75
+        }
+      ],
+      "subtotal": 285.0,
+      "tax": 59.85,
+      "total": 340.0,
+      "customer": {
+        "name": "Roberto Díaz",
+        "email": "roberto.diaz@email.com",
+        "phone": "+34 678 901 234",
+        "address": "Calle Real 89, Zaragoza"
+      }
+    },
+    {
+      "id": "INV-2025-008",
+      "bookingId": "BK012",
+      "amount": 225.0,
+      "currency": "EUR",
+      "status": "overdue",
+      "issueDate": "2025-09-20",
+      "dueDate": "2025-10-04",
+      "items": [
+        {
+          "description": "Forfait fin de semana - Sierra Nevada",
+          "quantity": 1,
+          "unitPrice": 120.0,
+          "subtotal": 120.0,
+          "tax": 25.2,
+          "total": 145.2
+        },
+        {
+          "description": "Alquiler completo 2 días",
+          "quantity": 1,
+          "unitPrice": 50.0,
+          "subtotal": 50.0,
+          "tax": 10.5,
+          "total": 60.5
+        }
+      ],
+      "subtotal": 170.0,
+      "tax": 35.7,
+      "total": 225.0,
+      "customer": {
+        "name": "Carmen Vega",
+        "email": "carmen.vega@email.com",
+        "phone": "+34 689 012 345",
+        "address": "Avenida Principal 23, Granada"
+      }
+    }
+  ],
+  "summary": {
+    "totalAmount": 2965.0,
+    "paidAmount": 2400.0,
+    "pendingAmount": 340.0,
+    "overdueAmount": 225.0,
+    "refundedAmount": 275.0,
+    "count": {
+      "total": 8,
+      "paid": 6,
+      "pending": 1,
+      "overdue": 1,
+      "refunded": 1
+    }
+  }
+}

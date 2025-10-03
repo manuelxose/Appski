@@ -1,1 +1,244 @@
-<p>stations-list works!</p>
+<!-- Stations List Page -->
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+
+  <!-- Page Header -->
+  <section
+    class="bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 pt-24 pb-16 relative overflow-hidden"
+  >
+    <!-- Background Pattern -->
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02LTYgMi42ODYtNiA2IDIuNjg2IDYgNiA2em0tMTIgMzZjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTYtNiAyLjY4Ni02IDYgMi42ODYgNiA2IDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"
+    ></div>
+
+    <div class="container mx-auto px-4 relative">
+      <div class="max-w-5xl mx-auto">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm mb-6 justify-center">
+          <a
+            href="/"
+            class="hover:underline flex items-center gap-1 text-white/90 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Inicio
+          </a>
+          <span class="text-white/60">›</span>
+          <span class="text-white font-semibold">Estaciones de Esquí</span>
+        </div>
+
+        <div class="text-center text-white">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <span data-i18n="stations_list.title"
+              >⛷️ Todas las Estaciones de Esquí</span
+            >
+          </h1>
+          <p class="text-xl md:text-2xl text-blue-100 mb-8">
+            <span data-i18n="stations_list.subtitle"
+              >Información en tiempo real de nieve, remontes y condiciones</span
+            >
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">
+                  {{ filteredStations().length }}
+                </div>
+                <div class="text-blue-200 text-xs">Estaciones disponibles</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">En Tiempo Real</div>
+                <div class="text-blue-200 text-xs">Datos actualizados</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">120-180cm</div>
+                <div class="text-blue-200 text-xs">Nieve base media</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <!-- Filters Sidebar (Desktop) -->
+      <aside class="hidden lg:block">
+        <app-stations-filters
+          (filtersChanged)="onFiltersChanged($event)"
+          (filtersReset)="onFiltersReset()"
+        />
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="lg:col-span-3 space-y-6">
+        <!-- Mobile Filter Toggle -->
+        <div class="lg:hidden">
+          <button
+            (click)="toggleMobileFilters()"
+            class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-xl shadow-md text-slate-900 font-semibold hover:bg-gray-50 transition-colors"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+              />
+            </svg>
+            <span data-i18n="filters.toggle">Filtros</span>
+          </button>
+        </div>
+
+        <!-- Sort Bar -->
+        <app-stations-sort-bar
+          (sortChanged)="onSortChanged($event)"
+          (viewModeChanged)="onViewModeChanged($event)"
+        />
+
+        <!-- Stations Grid -->
+        <app-station-card-grid
+          [stations]="filteredStations()"
+          [viewMode]="currentView()"
+          [loading]="isLoading()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Filters Overlay -->
+  @if (mobileFiltersOpen()) {
+  <div
+    class="fixed inset-0 z-50 lg:hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Filtros de búsqueda"
+  >
+    <!-- Backdrop -->
+    <button
+      type="button"
+      class="absolute inset-0 bg-black bg-opacity-50 w-full h-full cursor-default"
+      (click)="toggleMobileFilters()"
+      aria-label="Cerrar filtros"
+    ></button>
+
+    <!-- Filters Panel -->
+    <div
+      class="absolute inset-y-0 left-0 w-80 max-w-[85vw] bg-white shadow-xl overflow-y-auto"
+      role="document"
+    >
+      <div class="p-4">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-semibold">
+            <span data-i18n="filters.title">Filtros</span>
+          </h3>
+          <button
+            (click)="toggleMobileFilters()"
+            class="p-2 rounded-lg hover:bg-gray-100"
+            aria-label="Cerrar filtros"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <app-stations-filters
+          (filtersChanged)="onFiltersChanged($event); toggleMobileFilters()"
+          (filtersReset)="onFiltersReset(); toggleMobileFilters()"
+        />
+      </div>
+    </div>
+  </div>
+  }
+
+  <app-site-footer />
+</div>

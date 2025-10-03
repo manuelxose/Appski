@@ -1,0 +1,20 @@
+{
+  "smtpHost": "smtp.gmail.com",
+  "smtpPort": 587,
+  "smtpUser": "noreply@nieve.com",
+  "smtpPassword": "••••••••••••••••",
+  "smtpFromEmail": "noreply@nieve.com",
+  "smtpFromName": "Nieve Platform",
+  "emailProvider": "smtp",
+  "sendgridApiKey": "",
+  "twilioAccountSid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "twilioAuthToken": "••••••••••••••••••••••••••••••••",
+  "twilioPhoneNumber": "+34900123456",
+  "enableEmailNotifications": true,
+  "enableSmsNotifications": false,
+  "enablePushNotifications": true,
+  "bookingConfirmationEmail": true,
+  "bookingCancellationEmail": true,
+  "bookingReminderEmail": true,
+  "reminderDaysBefore": 3
+}

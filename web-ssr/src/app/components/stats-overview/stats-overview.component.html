@@ -1,0 +1,102 @@
+<section
+  class="stats-section py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50"
+>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">
+        La Plataforma de Nieve Más Completa
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Conectamos esquiadores con las mejores experiencias en las montañas
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      @for (stat of stats(); track stat.label) {
+      <div
+        class="stat-card bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-slate-200 hover:border-blue-300"
+        [class.stat-card-primary]="stat.color === 'primary'"
+        [class.stat-card-success]="stat.color === 'success'"
+        [class.stat-card-warning]="stat.color === 'warning'"
+        [class.stat-card-teal]="stat.color === 'teal'"
+      >
+        <!-- Icon -->
+        <div class="flex justify-between items-start mb-4">
+          <div class="text-5xl stat-icon">{{ stat.icon }}</div>
+          <div
+            class="px-3 py-1 rounded-full text-xs font-bold"
+            [ngClass]="{
+              'bg-blue-100 text-blue-700': stat.color === 'primary',
+              'bg-green-100 text-green-700': stat.color === 'success',
+              'bg-yellow-100 text-yellow-700': stat.color === 'warning',
+              'bg-teal-100 text-teal-700': stat.color === 'teal'
+            }"
+          >
+            {{ stat.trend }}
+          </div>
+        </div>
+
+        <!-- Value -->
+        <div class="mb-2">
+          <p
+            class="text-4xl md:text-5xl font-black stat-value"
+            [ngClass]="{
+              'text-blue-600': stat.color === 'primary',
+              'text-green-600': stat.color === 'success',
+              'text-yellow-600': stat.color === 'warning',
+              'text-teal-600': stat.color === 'teal'
+            }"
+          >
+            {{ stat.value }}
+          </p>
+        </div>
+
+        <!-- Label -->
+        <p class="text-slate-700 font-semibold text-lg">{{ stat.label }}</p>
+
+        <!-- Animated bar -->
+        <div
+          class="stat-bar mt-4 h-1 rounded-full overflow-hidden bg-slate-200"
+        >
+          <div
+            class="h-full animate-bar"
+            [ngClass]="{
+              'bg-gradient-to-r from-blue-400 to-blue-600':
+                stat.color === 'primary',
+              'bg-gradient-to-r from-green-400 to-green-600':
+                stat.color === 'success',
+              'bg-gradient-to-r from-yellow-400 to-yellow-600':
+                stat.color === 'warning',
+              'bg-gradient-to-r from-teal-400 to-teal-600':
+                stat.color === 'teal'
+            }"
+          ></div>
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Call to action -->
+    <div class="text-center mt-12">
+      <a
+        href="/estaciones"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      >
+        <span>Explorar Estaciones</span>
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<div class="shops-toolbar">
+  <div class="results-info">
+    <h2>{{ resultsCount() }} tiendas encontradas</h2>
+  </div>
+  <div class="view-controls">
+    <button
+      class="view-btn"
+      [class.active]="viewMode() === 'grid'"
+      (click)="setViewMode('grid')"
+    >
+      <span class="material-icons">grid_view</span>
+    </button>
+    <button
+      class="view-btn"
+      [class.active]="viewMode() === 'list'"
+      (click)="setViewMode('list')"
+    >
+      <span class="material-icons">view_list</span>
+    </button>
+  </div>
+</div>

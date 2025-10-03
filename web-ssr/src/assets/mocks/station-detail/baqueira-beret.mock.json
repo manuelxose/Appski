@@ -1,0 +1,233 @@
+{
+  "data": {
+    "hero": {
+      "name": "Baqueira Beret",
+      "slug": "baqueira-beret",
+      "region": "Pirineo Catalán",
+      "location": "Valle de Arán, Lleida",
+      "heroImage": "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=1920",
+      "status": "open",
+      "price": {
+        "adult": 62,
+        "currency": "€"
+      },
+      "altitude": {
+        "base": 1500,
+        "top": 2610
+      },
+      "rating": 4.5,
+      "reviews": 1234
+    },
+    "snowReport": {
+      "snowBase": 120,
+      "snowTop": 180,
+      "snowNew24h": 15,
+      "snowNew48h": 25,
+      "snowNew7days": 45,
+      "snowQuality": "powder",
+      "lastSnowfall": "2024-01-15",
+      "temperature": {
+        "current": -3,
+        "min": -8,
+        "max": 2
+      },
+      "wind": {
+        "speed": 15,
+        "direction": "NO"
+      },
+      "visibility": "excellent",
+      "updatedAt": "2024-01-15T08:00:00Z"
+    },
+    "liftsSlopes": {
+      "lifts": {
+        "open": 35,
+        "total": 39,
+        "list": [
+          {
+            "id": "tsd-cap-de-baqueira",
+            "name": "TSD Cap de Baqueira",
+            "type": "chairlift",
+            "status": "open",
+            "capacity": 2400
+          },
+          {
+            "id": "tc-mirador",
+            "name": "TC Mirador",
+            "type": "gondola",
+            "status": "open",
+            "capacity": 3200
+          },
+          {
+            "id": "tsd-blanhiblar",
+            "name": "TSD Blanhiblar",
+            "type": "chairlift",
+            "status": "open",
+            "capacity": 2000
+          },
+          {
+            "id": "tk-bonaigua",
+            "name": "TK Bonaigua",
+            "type": "t-bar",
+            "status": "closed",
+            "capacity": 800
+          },
+          {
+            "id": "mc-jardin-infantil",
+            "name": "MC Jardín Infantil",
+            "type": "magic-carpet",
+            "status": "open",
+            "capacity": 600
+          }
+        ]
+      },
+      "slopes": {
+        "open": 110,
+        "total": 120,
+        "list": [
+          {
+            "id": "pista-escornacrabas",
+            "name": "Escornacrabas",
+            "difficulty": "black",
+            "status": "open",
+            "length": 3200
+          },
+          {
+            "id": "pista-luis-arias",
+            "name": "Luis Arias",
+            "difficulty": "red",
+            "status": "open",
+            "length": 2800
+          },
+          {
+            "id": "pista-cap-del-port",
+            "name": "Cap del Port",
+            "difficulty": "blue",
+            "status": "open",
+            "length": 4500
+          },
+          {
+            "id": "pista-mirador",
+            "name": "Mirador",
+            "difficulty": "green",
+            "status": "open",
+            "length": 1200
+          },
+          {
+            "id": "pista-argulls",
+            "name": "Argulls",
+            "difficulty": "red",
+            "status": "closed",
+            "length": 3000
+          }
+        ]
+      }
+    },
+    "webcams": [
+      {
+        "id": "webcam-baqueira-1800",
+        "name": "Baqueira 1800",
+        "location": "Cota 1800m",
+        "imageUrl": "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=800",
+        "lastUpdate": "2024-01-15T09:30:00Z",
+        "isLive": true
+      },
+      {
+        "id": "webcam-beret-2500",
+        "name": "Beret 2500",
+        "location": "Cota 2500m",
+        "imageUrl": "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800",
+        "lastUpdate": "2024-01-15T09:30:00Z",
+        "isLive": true
+      },
+      {
+        "id": "webcam-cap-baqueira",
+        "name": "Cap de Baqueira",
+        "location": "Cota 2510m",
+        "imageUrl": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+        "lastUpdate": "2024-01-15T09:30:00Z",
+        "isLive": true
+      }
+    ],
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "dayName": "Lun",
+        "temp": -2,
+        "icon": "❄️",
+        "snowCm": 10
+      },
+      {
+        "date": "2024-01-16",
+        "dayName": "Mar",
+        "temp": -4,
+        "icon": "🌨️",
+        "snowCm": 15
+      },
+      {
+        "date": "2024-01-17",
+        "dayName": "Mié",
+        "temp": -1,
+        "icon": "☁️",
+        "snowCm": 5
+      },
+      {
+        "date": "2024-01-18",
+        "dayName": "Jue",
+        "temp": 1,
+        "icon": "⛅",
+        "snowCm": 0
+      },
+      {
+        "date": "2024-01-19",
+        "dayName": "Vie",
+        "temp": 3,
+        "icon": "☀️",
+        "snowCm": 0
+      },
+      {
+        "date": "2024-01-20",
+        "dayName": "Sáb",
+        "temp": 0,
+        "icon": "☁️",
+        "snowCm": 2
+      },
+      {
+        "date": "2024-01-21",
+        "dayName": "Dom",
+        "temp": -3,
+        "icon": "❄️",
+        "snowCm": 12
+      }
+    ],
+    "info": {
+      "about": "Baqueira Beret es la estación de esquí más grande de España, situada en el corazón del Valle de Arán. Con 167 km esquiables distribuidos en tres sectores (Baqueira, Beret y Bonaigua), ofrece una experiencia única para esquiadores de todos los niveles. Su ubicación privilegiada garantiza una excelente calidad de nieve durante toda la temporada.",
+      "services": [
+        "12 restaurantes",
+        "Escuela de esquí",
+        "Guardería infantil",
+        "Alquiler de material",
+        "Clínica médica",
+        "WiFi gratuito",
+        "Parking 2000 plazas",
+        "Snowpark",
+        "Área freeride"
+      ],
+      "access": {
+        "car": "Por la N-230 desde Lleida (180 km) o por Francia vía túnel de Vielha. Aparcamiento gratuito con 2000 plazas.",
+        "publicTransport": "Autobuses directos desde Barcelona (4h), Madrid (6h) y principales ciudades. Servicio de shuttle desde Vielha cada 30 min.",
+        "parking": "2000 plazas gratuitas. Parking cubierto disponible (10€/día)."
+      },
+      "prices": {
+        "adult": 62,
+        "child": 45,
+        "senior": 52,
+        "season": 1200,
+        "currency": "€"
+      }
+    }
+  },
+  "meta": {
+    "timestamp": "2024-01-15T10:00:00Z",
+    "version": "1.0"
+  }
+}

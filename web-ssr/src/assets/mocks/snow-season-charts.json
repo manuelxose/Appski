@@ -1,0 +1,205 @@
+{
+  "season": "2022-2023",
+  "totalKm": 5,
+  "totalPistes": 1,
+  "snowTypes": {
+    "powder": 48,
+    "packed": 46,
+    "spring": 4
+  },
+  "snowDepthData": [
+    {
+      "date": "2022-12-15",
+      "min": 0,
+      "max": 0,
+      "value": 0,
+      "status": "closed"
+    },
+    {
+      "date": "2023-01-19",
+      "min": 5,
+      "max": 8,
+      "value": 6.5,
+      "status": "open"
+    },
+    {
+      "date": "2023-01-25",
+      "min": 8,
+      "max": 12,
+      "value": 10,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-01",
+      "min": 15,
+      "max": 20,
+      "value": 17.5,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-08",
+      "min": 18,
+      "max": 24,
+      "value": 21,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-15",
+      "min": 20,
+      "max": 26,
+      "value": 23,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-22",
+      "min": 12,
+      "max": 18,
+      "value": 15,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-01",
+      "min": 8,
+      "max": 14,
+      "value": 11,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-08",
+      "min": 2,
+      "max": 6,
+      "value": 4,
+      "status": "touristic"
+    }
+  ],
+  "kmOpenData": [
+    {
+      "date": "2022-12-15",
+      "min": null,
+      "max": null,
+      "value": 0,
+      "status": "closed"
+    },
+    {
+      "date": "2023-01-19",
+      "min": null,
+      "max": null,
+      "value": 2,
+      "status": "open"
+    },
+    {
+      "date": "2023-01-25",
+      "min": null,
+      "max": null,
+      "value": 3,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-01",
+      "min": null,
+      "max": null,
+      "value": 4.5,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-08",
+      "min": null,
+      "max": null,
+      "value": 5,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-15",
+      "min": null,
+      "max": null,
+      "value": 5,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-22",
+      "min": null,
+      "max": null,
+      "value": 4,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-01",
+      "min": null,
+      "max": null,
+      "value": 3,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-08",
+      "min": null,
+      "max": null,
+      "value": 1.5,
+      "status": "touristic"
+    }
+  ],
+  "pistesOpenData": [
+    {
+      "date": "2022-12-15",
+      "min": null,
+      "max": null,
+      "value": 0,
+      "status": "closed"
+    },
+    {
+      "date": "2023-01-19",
+      "min": null,
+      "max": null,
+      "value": 0.4,
+      "status": "open"
+    },
+    {
+      "date": "2023-01-25",
+      "min": null,
+      "max": null,
+      "value": 0.6,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-01",
+      "min": null,
+      "max": null,
+      "value": 0.9,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-08",
+      "min": null,
+      "max": null,
+      "value": 1,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-15",
+      "min": null,
+      "max": null,
+      "value": 1,
+      "status": "open"
+    },
+    {
+      "date": "2023-02-22",
+      "min": null,
+      "max": null,
+      "value": 0.8,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-01",
+      "min": null,
+      "max": null,
+      "value": 0.6,
+      "status": "open"
+    },
+    {
+      "date": "2023-03-08",
+      "min": null,
+      "max": null,
+      "value": 0.3,
+      "status": "touristic"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "stats": [
+    {
+      "value": "50+",
+      "label": "Estaciones de Esquí",
+      "icon": "🎿",
+      "trend": "+5 este año",
+      "color": "primary"
+    },
+    {
+      "value": "1.2M",
+      "label": "Usuarios Activos",
+      "icon": "👥",
+      "trend": "+15% vs año anterior",
+      "color": "success"
+    },
+    {
+      "value": "24/7",
+      "label": "Datos en Tiempo Real",
+      "icon": "⚡",
+      "trend": "Actualización continua",
+      "color": "warning"
+    },
+    {
+      "value": "500+",
+      "label": "Alojamientos Disponibles",
+      "icon": "🏠",
+      "trend": "+120 nuevos",
+      "color": "teal"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "María González",
+      "location": "Madrid",
+      "avatar": "👩‍🦰",
+      "rating": 5,
+      "text": "Increíble plataforma. Encontré las mejores condiciones de nieve en Sierra Nevada gracias a sus datos en tiempo real. ¡Muy recomendable!",
+      "date": "Hace 2 días"
+    },
+    {
+      "name": "Carlos Ruiz",
+      "location": "Barcelona",
+      "avatar": "👨‍💼",
+      "rating": 5,
+      "text": "El planificador inteligente me ahorró horas de búsqueda. Reservé alojamiento y material de alquiler en un solo lugar. Perfecto.",
+      "date": "Hace 1 semana"
+    },
+    {
+      "name": "Laura Martínez",
+      "location": "Valencia",
+      "avatar": "👩",
+      "rating": 5,
+      "text": "Los pronósticos meteorológicos son súper precisos. Pude planificar mi viaje con total confianza. La app es muy intuitiva.",
+      "date": "Hace 3 días"
+    },
+    {
+      "name": "David Sánchez",
+      "location": "Sevilla",
+      "avatar": "👨",
+      "rating": 5,
+      "text": "Como miembro Premium, tengo acceso anticipado a las mejores ofertas. Las notificaciones de nieve fresca son oro puro.",
+      "date": "Hace 5 días"
+    }
+  ],
+  "features": [
+    {
+      "title": "Parte de Nieve en Tiempo Real",
+      "description": "Información actualizada de todas las estaciones: estado de pistas, remontes y condiciones meteorológicas.",
+      "icon": "❄️",
+      "link": "/estaciones",
+      "gradient": "from-blue-500 to-cyan-500"
+    },
+    {
+      "title": "Planificador Inteligente",
+      "description": "Organiza tu viaje perfecto con sugerencias personalizadas de alojamiento, transporte y actividades.",
+      "icon": "🗓️",
+      "link": "/plan",
+      "gradient": "from-purple-500 to-pink-500"
+    },
+    {
+      "title": "Meteorología Avanzada",
+      "description": "Pronósticos detallados, mapas de precipitación y alertas de nieve para planificar con confianza.",
+      "icon": "🌤️",
+      "link": "/meteorologia",
+      "gradient": "from-orange-500 to-yellow-500"
+    },
+    {
+      "title": "Alquiler de Material",
+      "description": "Encuentra y reserva equipamiento en tiendas locales. Compara precios y disponibilidad.",
+      "icon": "🎿",
+      "link": "/alquiler-material",
+      "gradient": "from-green-500 to-teal-500"
+    },
+    {
+      "title": "Alojamientos Rurales",
+      "description": "Descubre cabañas, apartamentos y hoteles cerca de las pistas con las mejores valoraciones.",
+      "icon": "🏠",
+      "link": "/alojamientos",
+      "gradient": "from-red-500 to-pink-500"
+    },
+    {
+      "title": "Comunidad Premium",
+      "description": "Conecta con otros esquiadores, comparte experiencias y descubre rutas secretas.",
+      "icon": "👥",
+      "link": "/premium",
+      "gradient": "from-indigo-500 to-blue-500"
+    }
+  ],
+  "featuredStations": [
+    {
+      "id": "sierra-nevada",
+      "name": "Sierra Nevada",
+      "slug": "sierra-nevada",
+      "status": "open",
+      "region": "Andalucía",
+      "imageUrl": "/assets/images/stations/sierra-nevada.jpg",
+      "snowBaseCm": 120,
+      "snowNew24hCm": 15,
+      "pistasOpen": 88,
+      "pistasTotal": 110,
+      "remontesOpen": 18,
+      "remontesTotal": 20,
+      "tempC": -3,
+      "windKmh": 12,
+      "confidence": 0.95
+    },
+    {
+      "id": "baqueira-beret",
+      "name": "Baqueira Beret",
+      "slug": "baqueira-beret",
+      "status": "open",
+      "region": "Val d'Aran",
+      "imageUrl": "/assets/images/stations/baqueira.jpg",
+      "snowBaseCm": 150,
+      "snowNew24hCm": 25,
+      "pistasOpen": 142,
+      "pistasTotal": 165,
+      "remontesOpen": 30,
+      "remontesTotal": 35,
+      "tempC": -5,
+      "windKmh": 8,
+      "confidence": 0.98
+    },
+    {
+      "id": "formigal",
+      "name": "Formigal",
+      "slug": "formigal",
+      "status": "open",
+      "region": "Huesca",
+      "imageUrl": "/assets/images/stations/formigal.jpg",
+      "snowBaseCm": 135,
+      "snowNew24hCm": 20,
+      "pistasOpen": 137,
+      "pistasTotal": 146,
+      "remontesOpen": 19,
+      "remontesTotal": 23,
+      "tempC": -4,
+      "windKmh": 15,
+      "confidence": 0.92
+    },
+    {
+      "id": "cerler",
+      "name": "Cerler",
+      "slug": "cerler",
+      "status": "open",
+      "region": "Huesca",
+      "imageUrl": "/assets/images/stations/cerler.jpg",
+      "snowBaseCm": 110,
+      "snowNew24hCm": 10,
+      "pistasOpen": 68,
+      "pistasTotal": 77,
+      "remontesOpen": 16,
+      "remontesTotal": 18,
+      "tempC": -2,
+      "windKmh": 10,
+      "confidence": 0.9
+    }
+  ],
+  "searchSuggestions": [
+    {
+      "name": "Sierra Nevada",
+      "type": "station",
+      "location": "Granada",
+      "openStatus": true,
+      "snowBaseCm": 120,
+      "snowNew24hCm": 15
+    },
+    {
+      "name": "Baqueira Beret",
+      "type": "station",
+      "location": "Val d'Aran",
+      "openStatus": true,
+      "snowBaseCm": 150,
+      "snowNew24hCm": 25
+    },
+    {
+      "name": "Formigal",
+      "type": "station",
+      "location": "Huesca",
+      "openStatus": true,
+      "snowBaseCm": 135,
+      "snowNew24hCm": 20
+    },
+    {
+      "name": "Candanchú",
+      "type": "station",
+      "location": "Huesca",
+      "openStatus": false,
+      "snowBaseCm": 0,
+      "snowNew24hCm": 0
+    },
+    {
+      "name": "Cerler",
+      "type": "station",
+      "location": "Huesca",
+      "openStatus": true,
+      "snowBaseCm": 110,
+      "snowNew24hCm": 10
+    },
+    {
+      "name": "La Molina",
+      "type": "station",
+      "location": "Girona",
+      "openStatus": true,
+      "snowBaseCm": 95,
+      "snowNew24hCm": 8
+    },
+    {
+      "name": "Pirineos",
+      "type": "region",
+      "location": "España",
+      "openStatus": true
+    },
+    {
+      "name": "Sistema Central",
+      "type": "region",
+      "location": "España"
+    }
+  ]
+}

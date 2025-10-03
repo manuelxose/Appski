@@ -1,0 +1,182 @@
+{
+  "data": {
+    "savedPlans": [],
+    "stations": [
+      {
+        "id": "baqueira-beret",
+        "name": "Baqueira Beret",
+        "location": "Valle de Arán, Lleida",
+        "isOpen": true,
+        "snowBase": 180,
+        "snowFresh": 25,
+        "temperature": -2,
+        "quality": 4.8,
+        "image": "/assets/images/stations/baqueira-beret.jpg",
+        "altitude": {
+          "base": 1500,
+          "top": 2610
+        }
+      },
+      {
+        "id": "formigal",
+        "name": "Formigal",
+        "location": "Huesca",
+        "isOpen": true,
+        "snowBase": 160,
+        "snowFresh": 15,
+        "temperature": -1,
+        "quality": 4.5,
+        "image": "/assets/images/stations/formigal.jpg",
+        "altitude": {
+          "base": 1500,
+          "top": 2250
+        }
+      },
+      {
+        "id": "sierra-nevada",
+        "name": "Sierra Nevada",
+        "location": "Granada",
+        "isOpen": true,
+        "snowBase": 120,
+        "snowFresh": 10,
+        "temperature": 2,
+        "quality": 4.3,
+        "image": "/assets/images/stations/sierra-nevada.jpg",
+        "altitude": {
+          "base": 2100,
+          "top": 3300
+        }
+      },
+      {
+        "id": "cerler",
+        "name": "Cerler",
+        "location": "Huesca",
+        "isOpen": true,
+        "snowBase": 150,
+        "snowFresh": 20,
+        "temperature": -3,
+        "quality": 4.6,
+        "image": "/assets/images/stations/cerler.jpg",
+        "altitude": {
+          "base": 1500,
+          "top": 2630
+        }
+      },
+      {
+        "id": "candanchu",
+        "name": "Candanchú",
+        "location": "Huesca",
+        "isOpen": true,
+        "snowBase": 140,
+        "snowFresh": 12,
+        "temperature": -1,
+        "quality": 4.4,
+        "image": "/assets/images/stations/candanchu.jpg",
+        "altitude": {
+          "base": 1530,
+          "top": 2400
+        }
+      },
+      {
+        "id": "la-molina",
+        "name": "La Molina",
+        "location": "Girona",
+        "isOpen": true,
+        "snowBase": 110,
+        "snowFresh": 8,
+        "temperature": 0,
+        "quality": 4.2,
+        "image": "/assets/images/stations/la-molina.jpg",
+        "altitude": {
+          "base": 1600,
+          "top": 2535
+        }
+      }
+    ],
+    "defaultRecommendations": [
+      "Reserva con al menos 2 semanas de antelación para mejores precios",
+      "Consulta el parte de nieve 24h antes de tu viaje",
+      "Considera contratar seguro de esquí para mayor tranquilidad",
+      "Lleva ropa térmica y protección solar, incluso en días nublados",
+      "Reserva clases de esquí si eres principiante o quieres mejorar técnica"
+    ],
+    "defaultLodgingOptions": [
+      {
+        "id": "hotel-1",
+        "name": "Hotel Valle Blanco",
+        "type": "hotel",
+        "image": "/assets/images/lodging/hotel-valle-blanco.jpg",
+        "pricePerNight": 120,
+        "rating": 4.5,
+        "distanceToSlopes": 0.2,
+        "amenities": ["wifi", "spa", "restaurant", "parking"]
+      },
+      {
+        "id": "apartment-1",
+        "name": "Apartamentos Montaña",
+        "type": "apartment",
+        "image": "/assets/images/lodging/apartamentos-montana.jpg",
+        "pricePerNight": 80,
+        "rating": 4.2,
+        "distanceToSlopes": 0.5,
+        "amenities": ["wifi", "kitchen", "parking"]
+      },
+      {
+        "id": "hostel-1",
+        "name": "Albergue Esquí y Montaña",
+        "type": "hostel",
+        "image": "/assets/images/lodging/albergue-esqui.jpg",
+        "pricePerNight": 60,
+        "rating": 4.0,
+        "distanceToSlopes": 0.8,
+        "amenities": ["wifi", "shared-kitchen", "lounge"]
+      }
+    ],
+    "defaultEquipmentChecklist": [
+      {
+        "name": "Ropa térmica",
+        "icon": "🧥",
+        "required": true
+      },
+      {
+        "name": "Gafas de sol/nieve",
+        "icon": "🕶️",
+        "required": true
+      },
+      {
+        "name": "Protector solar",
+        "icon": "🧴",
+        "required": true
+      },
+      {
+        "name": "Guantes",
+        "icon": "🧤",
+        "required": true
+      },
+      {
+        "name": "Gorro",
+        "icon": "🎩",
+        "required": true
+      },
+      {
+        "name": "Forfait",
+        "icon": "🎫",
+        "required": false
+      },
+      {
+        "name": "Botiquín",
+        "icon": "💊",
+        "required": false
+      },
+      {
+        "name": "Cámara",
+        "icon": "📸",
+        "required": false
+      }
+    ]
+  },
+  "meta": {
+    "timestamp": "2025-01-15T10:30:00Z",
+    "version": "1.0"
+  }
+}

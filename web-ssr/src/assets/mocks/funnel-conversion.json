@@ -1,0 +1,74 @@
+{
+  "stages": [
+    {
+      "stage": "Visitantes",
+      "value": 456000,
+      "percentage": 100.0,
+      "dropOff": 0.0
+    },
+    {
+      "stage": "Registros",
+      "value": 57000,
+      "percentage": 12.5,
+      "dropOff": 87.5
+    },
+    {
+      "stage": "Reservas",
+      "value": 15678,
+      "percentage": 27.5,
+      "dropOff": 72.5
+    },
+    {
+      "stage": "Pagos",
+      "value": 14234,
+      "percentage": 90.8,
+      "dropOff": 9.2
+    }
+  ],
+  "conversionRates": {
+    "visitorToSignup": 12.5,
+    "signupToBooking": 27.5,
+    "bookingToPayment": 90.8,
+    "overallConversion": 3.12
+  },
+  "bottlenecks": [
+    {
+      "stage": "Visitantes → Registros",
+      "dropOffRate": 87.5,
+      "severity": "high",
+      "recommendation": "Simplificar proceso de registro y añadir incentivos"
+    },
+    {
+      "stage": "Registros → Reservas",
+      "dropOffRate": 72.5,
+      "severity": "critical",
+      "recommendation": "Mejorar UX del calendario de reservas y mostrar disponibilidad en tiempo real"
+    },
+    {
+      "stage": "Reservas → Pagos",
+      "dropOffRate": 9.2,
+      "severity": "low",
+      "recommendation": "Añadir más métodos de pago y mejorar confianza en checkout"
+    }
+  ],
+  "periodComparison": {
+    "current": {
+      "visitors": 456000,
+      "signups": 57000,
+      "bookings": 15678,
+      "payments": 14234
+    },
+    "previous": {
+      "visitors": 398400,
+      "signups": 47880,
+      "bookings": 14489,
+      "payments": 13142
+    },
+    "growth": {
+      "visitors": 14.5,
+      "signups": 19.0,
+      "bookings": 8.2,
+      "payments": 8.3
+    }
+  }
+}

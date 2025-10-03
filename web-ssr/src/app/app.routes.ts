@@ -1,63 +1,211 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
+import { adminGuard, authGuard } from "./guards/auth.guard";
 
 export const routes: Routes = [
   {
-    path: '',
-    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
+    path: "",
+    loadComponent: () => import("./pages/home/home").then((m) => m.Home),
   },
   {
-    path: 'estaciones',
+    path: "estaciones",
     loadComponent: () =>
-      import('./pages/stations-list/stations-list').then((m) => m.StationsList),
+      import("./pages/stations-list/stations-list").then((m) => m.StationsList),
   },
   {
-    path: 'estacion/:slug',
+    path: "estacion/:slug",
     loadComponent: () =>
-      import('./pages/station-detail/station-detail').then(
+      import("./pages/station-detail/station-detail").then(
         (m) => m.StationDetail
       ),
   },
   {
-    path: 'alojamientos/:station',
+    path: "alojamientos",
     loadComponent: () =>
-      import('./pages/lodging-marketplace/lodging-marketplace').then(
+      import("./pages/lodging-marketplace/lodging-marketplace").then(
         (m) => m.LodgingMarketplace
       ),
   },
   {
-    path: 'alquiler/:station',
+    path: "alojamientos/:station",
     loadComponent: () =>
-      import('./pages/rental-directory/rental-directory').then(
-        (m) => m.RentalDirectory
+      import("./pages/lodging-marketplace/lodging-marketplace").then(
+        (m) => m.LodgingMarketplace
       ),
   },
   {
-    path: 'plan',
+    path: "alojamiento/:id",
     loadComponent: () =>
-      import('./pages/planner/planner').then((m) => m.Planner),
+      import("./pages/lodging-detail/lodging-detail").then(
+        (m) => m.LodgingDetailComponent
+      ),
   },
   {
-    path: 'premium',
+    path: "alquiler-material",
     loadComponent: () =>
-      import('./pages/premium/premium').then((m) => m.Premium),
+      import("./pages/rental-marketplace/rental-marketplace.component").then(
+        (m) => m.RentalMarketplaceComponent
+      ),
   },
   {
-    path: 'blog',
+    path: "tienda/dashboard",
     loadComponent: () =>
-      import('./pages/blog-list/blog-list').then((m) => m.BlogList),
+      import(
+        "./pages/shop-owner-dashboard/shop-owner-dashboard.component"
+      ).then((m) => m.ShopOwnerDashboardComponent),
+    canActivate: [authGuard],
   },
   {
-    path: 'blog/:slug',
+    path: "tienda/:slug",
     loadComponent: () =>
-      import('./pages/blog-article/blog-article').then((m) => m.BlogArticle),
+      import("./pages/shop-detail/shop-detail.component").then(
+        (m) => m.ShopDetailComponent
+      ),
   },
   {
-    path: 'login',
-    loadComponent: () => import('./pages/login/login').then((m) => m.Login),
+    path: "plan",
+    loadComponent: () =>
+      import("./pages/planner/planner").then((m) => m.Planner),
   },
   {
-    path: 'cuenta',
+    path: "meteorologia",
     loadComponent: () =>
-      import('./pages/account/account').then((m) => m.Account),
+      import("./pages/weather/tiempo-page.component").then(
+        (m) => m.TiempoPageComponent
+      ),
+  },
+  {
+    path: ":lang/estacion/:slug/tiempo",
+    loadComponent: () =>
+      import("./pages/weather/tiempo-page.component").then(
+        (m) => m.TiempoPageComponent
+      ),
+  },
+  {
+    path: "estacion/:slug/tiempo",
+    loadComponent: () =>
+      import("./pages/weather/tiempo-page.component").then(
+        (m) => m.TiempoPageComponent
+      ),
+  },
+  {
+    path: "premium",
+    loadComponent: () =>
+      import("./pages/premium/premium").then((m) => m.PremiumComponent),
+  },
+  {
+    path: "blog",
+    loadComponent: () =>
+      import("./pages/blog-list/blog-list").then((m) => m.BlogList),
+  },
+  {
+    path: "blog/:slug",
+    loadComponent: () =>
+      import("./pages/blog-article/blog-article").then((m) => m.BlogArticle),
+  },
+  {
+    path: "login",
+    loadComponent: () => import("./pages/login/login").then((m) => m.Login),
+  },
+  {
+    path: "cuenta",
+    loadComponent: () =>
+      import("./pages/account/account").then((m) => m.Account),
+    canActivate: [authGuard],
+  },
+  {
+    path: "admin",
+    loadComponent: () => import("./pages/admin/admin").then((m) => m.Admin),
+    canActivate: [adminGuard],
+    children: [
+      {
+        path: "",
+        redirectTo: "dashboard",
+        pathMatch: "full",
+      },
+      {
+        path: "dashboard",
+        loadComponent: () =>
+          import("./pages/admin/dashboard/dashboard.component").then(
+            (m) => m.AdminDashboardComponent
+          ),
+      },
+      {
+        path: "analytics",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics/admin-analytics.component"
+          ).then((m) => m.AdminAnalyticsComponent),
+      },
+      {
+        path: "analytics/general",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-general/admin-analytics-general.component"
+          ).then((m) => m.AdminAnalyticsGeneralComponent),
+      },
+      {
+        path: "analytics/financial",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-financial/admin-analytics-financial.component"
+          ).then((m) => m.AdminAnalyticsFinancialComponent),
+      },
+      {
+        path: "users",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-users/admin-users.component"
+          ).then((m) => m.AdminUsersComponent),
+      },
+      {
+        path: "stations",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-stations/admin-stations.component"
+          ).then((m) => m.AdminStationsComponent),
+      },
+      {
+        path: "bookings",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-bookings/admin-bookings.component"
+          ).then((m) => m.AdminBookingsComponent),
+      },
+      {
+        path: "payments",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-payments/admin-payments.component"
+          ).then((m) => m.AdminPaymentsComponent),
+      },
+      {
+        path: "lodgings",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-lodgings/admin-lodgings.component"
+          ).then((m) => m.AdminLodgingsComponent),
+      },
+      {
+        path: "shops",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-shops/admin-shops.component"
+          ).then((m) => m.AdminShopsComponent),
+      },
+      {
+        path: "blog",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-blog/admin-blog.component"
+          ).then((m) => m.AdminBlogComponent),
+      },
+      {
+        path: "settings",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-settings/admin-settings.component"
+          ).then((m) => m.AdminSettingsComponent),
+      },
+    ],
   },
 ];

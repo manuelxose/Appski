@@ -1,0 +1,308 @@
+<!-- Shop Owner Dashboard -->
+<div class="dashboard-container">
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div>
+        <h1 class="dashboard-title">Panel de Tienda</h1>
+        <p class="dashboard-subtitle">Gestiona tu inventario y reservas</p>
+      </div>
+      <button class="btn-add">
+        <span class="material-icons">add</span>
+        Añadir Equipo
+      </button>
+    </div>
+  </header>
+
+  <!-- Stats Cards -->
+  <div class="stats-grid">
+    <div class="stat-card revenue">
+      <div class="stat-icon">
+        <span class="material-icons">euro</span>
+      </div>
+      <div class="stat-info">
+        <span class="stat-label">Ingresos Totales</span>
+        <span class="stat-value"
+          >€{{ stats().totalRevenue.toLocaleString() }}</span
+        >
+        <span class="stat-change positive">
+          <span class="material-icons">trending_up</span>
+          +12% vs mes anterior
+        </span>
+      </div>
+    </div>
+
+    <div class="stat-card bookings">
+      <div class="stat-icon">
+        <span class="material-icons">event_available</span>
+      </div>
+      <div class="stat-info">
+        <span class="stat-label">Reservas Activas</span>
+        <span class="stat-value">{{ stats().activeBookings }}</span>
+        <span class="stat-change">
+          {{ stats().pendingOrders }} pendientes
+        </span>
+      </div>
+    </div>
+
+    <div class="stat-card equipment">
+      <div class="stat-icon">
+        <span class="material-icons">inventory_2</span>
+      </div>
+      <div class="stat-info">
+        <span class="stat-label">Equipos Totales</span>
+        <span class="stat-value">{{ stats().totalEquipment }}</span>
+        <span class="stat-change"> {{ stats().utilizationRate }}% en uso </span>
+      </div>
+    </div>
+
+    <div class="stat-card rating">
+      <div class="stat-icon">
+        <span class="material-icons">star</span>
+      </div>
+      <div class="stat-info">
+        <span class="stat-label">Valoración Media</span>
+        <span class="stat-value">{{ stats().averageRating }}</span>
+        <span class="stat-change">
+          <span class="material-icons">star</span>
+          Excelente
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs-container">
+    <div class="tabs">
+      <button
+        class="tab"
+        [class.active]="activeTab() === 'inventory'"
+        (click)="setActiveTab('inventory')"
+      >
+        <span class="material-icons">inventory_2</span>
+        Inventario
+      </button>
+      <button
+        class="tab"
+        [class.active]="activeTab() === 'bookings'"
+        (click)="setActiveTab('bookings')"
+      >
+        <span class="material-icons">event_note</span>
+        Reservas
+      </button>
+      <button
+        class="tab"
+        [class.active]="activeTab() === 'stats'"
+        (click)="setActiveTab('stats')"
+      >
+        <span class="material-icons">analytics</span>
+        Estadísticas
+      </button>
+    </div>
+  </div>
+
+  <!-- Inventory Tab -->
+  @if (activeTab() === 'inventory') {
+  <div class="content-section" [@fadeIn]>
+    <div class="section-header">
+      <h2>Gestión de Inventario</h2>
+      <div class="search-box">
+        <span class="material-icons">search</span>
+        <input type="text" placeholder="Buscar equipo..." />
+      </div>
+    </div>
+
+    <div class="inventory-grid">
+      @for (item of inventory(); track item.id) {
+      <article class="inventory-card">
+        <div class="item-image">
+          <img [src]="item.image" [alt]="item.name" />
+          <div
+            class="item-badge"
+            [style.background-color]="getConditionColor(item.condition)"
+          >
+            {{ getConditionText(item.condition) }}
+          </div>
+        </div>
+
+        <div class="item-content">
+          <div class="item-header">
+            <h3 class="item-name">{{ item.name }}</h3>
+            <span class="item-category">{{ item.category }}</span>
+          </div>
+
+          <div class="item-brand">
+            <span class="material-icons">verified</span>
+            {{ item.brand }}
+          </div>
+
+          <div class="item-stats">
+            <div class="stat-row">
+              <span class="stat-label">Cantidad Total:</span>
+              <span class="stat-value">{{ item.quantity }}</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Disponibles:</span>
+              <span class="stat-value available">{{ item.available }}</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Precio/día:</span>
+              <span class="stat-value price">€{{ item.pricePerDay }}</span>
+            </div>
+          </div>
+
+          <!-- Availability Bar -->
+          <div class="availability-bar">
+            <div class="availability-label">
+              <span>Disponibilidad</span>
+              <span>{{ getAvailabilityPercentage(item).toFixed(0) }}%</span>
+            </div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                [style.width.%]="getAvailabilityPercentage(item)"
+                [style.background-color]="
+                  item.available > 0 ? 'var(--success-500)' : 'var(--error-500)'
+                "
+              ></div>
+            </div>
+          </div>
+
+          <div class="item-actions">
+            <button class="btn-action edit">
+              <span class="material-icons">edit</span>
+              Editar
+            </button>
+            <button class="btn-action delete">
+              <span class="material-icons">delete</span>
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- Bookings Tab -->
+  @if (activeTab() === 'bookings') {
+  <div class="content-section" [@fadeIn]>
+    <div class="section-header">
+      <h2>Gestión de Reservas</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active">Todas</button>
+        <button class="filter-btn">Pendientes</button>
+        <button class="filter-btn">Confirmadas</button>
+        <button class="filter-btn">En curso</button>
+      </div>
+    </div>
+
+    <div class="bookings-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Equipo</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Estado</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (booking of bookings(); track booking.id) {
+          <tr class="booking-row">
+            <td class="booking-id">#{{ booking.id }}</td>
+            <td class="booking-customer">
+              <div class="customer-info">
+                <div class="customer-avatar">
+                  {{ booking.customerName.charAt(0) }}
+                </div>
+                <span>{{ booking.customerName }}</span>
+              </div>
+            </td>
+            <td class="booking-equipment">{{ booking.equipment }}</td>
+            <td>{{ booking.startDate }}</td>
+            <td>{{ booking.endDate }}</td>
+            <td>
+              <span
+                class="status-badge"
+                [style.background-color]="getStatusColor(booking.status)"
+              >
+                {{ getStatusText(booking.status) }}
+              </span>
+            </td>
+            <td class="booking-price">€{{ booking.totalPrice }}</td>
+            <td class="booking-actions">
+              <button class="action-btn view" title="Ver detalles">
+                <span class="material-icons">visibility</span>
+              </button>
+              @if (booking.status === 'pending') {
+              <button class="action-btn confirm" title="Confirmar">
+                <span class="material-icons">check_circle</span>
+              </button>
+              <button class="action-btn cancel" title="Cancelar">
+                <span class="material-icons">cancel</span>
+              </button>
+              }
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+  }
+
+  <!-- Stats Tab -->
+  @if (activeTab() === 'stats') {
+  <div class="content-section" [@fadeIn]>
+    <div class="section-header">
+      <h2>Estadísticas y Análisis</h2>
+      <select class="period-select">
+        <option>Últimos 7 días</option>
+        <option>Últimos 30 días</option>
+        <option>Este año</option>
+      </select>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3 class="chart-title">
+          <span class="material-icons">trending_up</span>
+          Ingresos por Mes
+        </h3>
+        <div class="chart-placeholder">
+          <span class="material-icons">insert_chart</span>
+          <p>Gráfico de ingresos mensuales</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3 class="chart-title">
+          <span class="material-icons">pie_chart</span>
+          Equipos Más Rentados
+        </h3>
+        <div class="chart-placeholder">
+          <span class="material-icons">donut_large</span>
+          <p>Distribución por categoría</p>
+        </div>
+      </div>
+
+      <div class="chart-card full-width">
+        <h3 class="chart-title">
+          <span class="material-icons">schedule</span>
+          Ocupación por Día
+        </h3>
+        <div class="chart-placeholder">
+          <span class="material-icons">bar_chart</span>
+          <p>Calendario de reservas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

@@ -1,0 +1,91 @@
+/* ============================================
+   FEATURES GRID - APPLE/BOLT PREMIUM DESIGN
+   ============================================ */
+
+.features-section {
+  background: white;
+}
+
+.feature-card {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-3xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--neutral-200);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadeInScale 0.6s var(--ease-out);
+}
+
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+  border-color: transparent;
+}
+
+.feature-icon {
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: grayscale(0.3);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.15) rotate(5deg);
+  filter: grayscale(0) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+/* Stagger animations */
+.feature-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.feature-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.feature-card:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Gradient backgrounds */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-2xl);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+}

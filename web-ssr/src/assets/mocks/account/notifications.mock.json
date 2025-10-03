@@ -1,0 +1,96 @@
+[
+  {
+    "id": "notif-001",
+    "type": "weather",
+    "priority": "urgent",
+    "title": "⚠️ Alerta meteorológica - Sierra Nevada",
+    "message": "Se esperan nevadas intensas de 30-40cm en las próximas 24h. Precaución en carreteras de acceso.",
+    "timestamp": "2025-10-02T08:30:00Z",
+    "read": false,
+    "actionUrl": "/weather/sierra-nevada",
+    "actionLabel": "Ver detalles",
+    "icon": "❄️"
+  },
+  {
+    "id": "notif-002",
+    "type": "booking",
+    "priority": "high",
+    "title": "Confirmación de reserva",
+    "message": "Tu reserva en Baqueira Beret para el 15-17 de diciembre está confirmada. Check-in a las 16:00.",
+    "timestamp": "2025-10-01T14:22:00Z",
+    "read": false,
+    "actionUrl": "/cuenta?tab=bookings",
+    "actionLabel": "Ver reserva",
+    "icon": "✅"
+  },
+  {
+    "id": "notif-003",
+    "type": "weather",
+    "priority": "medium",
+    "title": "Condiciones óptimas en Formigal",
+    "message": "Cielo despejado, -5°C y 120cm de nieve polvo. ¡Día perfecto para esquiar!",
+    "timestamp": "2025-10-01T07:00:00Z",
+    "read": true,
+    "actionUrl": "/weather/formigal",
+    "actionLabel": "Ver webcams",
+    "icon": "☀️"
+  },
+  {
+    "id": "notif-004",
+    "type": "promotion",
+    "priority": "medium",
+    "title": "🎉 Descuento 20% en forfaits",
+    "message": "Oferta especial para miembros Premium. Válido hasta el 31 de octubre.",
+    "timestamp": "2025-09-30T09:00:00Z",
+    "read": true,
+    "actionUrl": "/ofertas",
+    "actionLabel": "Ver ofertas",
+    "icon": "🎁"
+  },
+  {
+    "id": "notif-005",
+    "type": "social",
+    "priority": "low",
+    "title": "Carlos te ha enviado solicitud de amistad",
+    "message": "Carlos Martínez (nivel avanzado) quiere conectar contigo.",
+    "timestamp": "2025-09-29T16:45:00Z",
+    "read": true,
+    "actionUrl": "/cuenta?tab=friends",
+    "actionLabel": "Responder",
+    "icon": "👤"
+  },
+  {
+    "id": "notif-006",
+    "type": "alert",
+    "priority": "high",
+    "title": "Actualización importante de seguridad",
+    "message": "Nueva sesión detectada desde Madrid. Si no fuiste tú, revoca el acceso inmediatamente.",
+    "timestamp": "2025-09-28T11:20:00Z",
+    "read": true,
+    "actionUrl": "/cuenta?tab=security",
+    "actionLabel": "Ver sesiones",
+    "icon": "🔒"
+  },
+  {
+    "id": "notif-007",
+    "type": "system",
+    "priority": "low",
+    "title": "Actualización de la app",
+    "message": "Nueva versión disponible con mejoras en el mapa de radar y notificaciones.",
+    "timestamp": "2025-09-27T08:00:00Z",
+    "read": true,
+    "icon": "🔄"
+  },
+  {
+    "id": "notif-008",
+    "type": "weather",
+    "priority": "medium",
+    "title": "Previsión de nevadas - Cerler",
+    "message": "Se esperan 15-20cm de nieve fresca este fin de semana.",
+    "timestamp": "2025-09-26T18:30:00Z",
+    "read": true,
+    "actionUrl": "/weather/cerler",
+    "actionLabel": "Ver previsión",
+    "icon": "🌨️"
+  }
+]

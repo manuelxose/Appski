@@ -1,449 +1,100 @@
-<!-- Home Page Component - SnowHub -->
+<!-- Enhanced Home Page with New Features -->
 <div class="font-sans text-slate-900 bg-white min-h-screen scroll-smooth">
-  
-  <!-- Header Fixed -->
-  <header class="fixed top-0 w-full z-50 glass border-b border-gray-100">
-    <nav class="container mx-auto px-4 py-3 md:py-4">
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-          </svg>
-          <span class="text-xl font-bold text-slate-900">SnowHub</span>
-        </div>
-        
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#stations" class="text-slate-700 hover:text-blue-600 transition-colors" data-i18n="nav.stations">Estaciones</a>
-          <a href="#lodging" class="text-slate-700 hover:text-blue-600 transition-colors" data-i18n="nav.lodging">Alojamientos</a>
-          <a href="#planner" class="text-slate-700 hover:text-blue-600 transition-colors" data-i18n="nav.planner">Planificador</a>
-          <a href="#blog" class="text-slate-700 hover:text-blue-600 transition-colors" data-i18n="nav.blog">Blog</a>
-        </div>
-        
-        <!-- Right Actions -->
-        <div class="flex items-center space-x-4">
-          <!-- Language Selector -->
-          <button class="flex items-center space-x-1 text-slate-700 hover:text-blue-600 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-            <span class="hidden md:inline">ES</span>
-          </button>
-          
-          <!-- User Account -->
-          <button class="p-2 rounded-full hover:bg-blue-50 transition-colors">
-            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-            </svg>
-          </button>
-          
-          <!-- Mobile Menu Toggle -->
-          <button class="md:hidden p-2 rounded-lg hover:bg-blue-50 active:bg-blue-100 transition-colors" (click)="toggleMobileMenu()">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-  
-  <!-- Main Content -->
-  <main class="mt-16 md:mt-20">
-    
-    <!-- Hero Section with Search -->
-    <section class="hero-section relative bg-gradient-to-br from-blue via-white to-blue-50 min-h-[500px] md:min-h-[600px] flex items-center">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-gray-100"></div>
-      </div>
-      
-      <div class="container mx-auto px-4 py-8 md:py-12 lg:py-20 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 animate-fade-in leading-tight">
-            <span data-i18n="hero.title">Encuentra tu nieve perfecta</span>
-          </h1>
-          <p class="text-base sm:text-lg md:text-xl text-slate-700 mb-8 md:mb-12 animate-slide-up px-4" data-i18n="hero.subtitle">
-            Parte de nieve en tiempo real, alojamientos rurales y planificación inteligente
-          </p>
-          
-          <!-- Search Box -->
-          <div class="search-box bg-white rounded-2xl shadow-2xl p-4 md:p-6 hover-lift mx-4 md:mx-0">
-            <div class="search-grid grid grid-cols-1 md:grid-cols-3 gap-4">
-              <!-- Station Search -->
-              <div class="relative">
-                <label for="station-search" class="block text-sm font-medium text-slate-700 mb-2 text-left" data-i18n="search.station">¿Dónde quieres esquiar?</label>
-                <input type="text" 
-                       id="station-search"
-                       placeholder="Buscar estación..." 
-                       class="search-input w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-base"
-                       data-i18n-placeholder="search.station_placeholder">
-              </div>
-              
-              <!-- Date Picker -->
-              <div>
-                <label for="date-picker" class="block text-sm font-medium text-slate-700 mb-2 text-left" data-i18n="search.dates">Fechas</label>
-                <input type="date" 
-                       id="date-picker"
-                       class="search-input w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-base">
-              </div>
-              
-              <!-- Search Button -->
-              <div class="flex items-end">
-                <button class="search-button w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-all transform hover:scale-105 active:scale-95 font-semibold text-base">
-                  <span class="flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
-                    <span data-i18n="search.button">Buscar</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-            
-            <!-- Quick Filters -->
-            <div class="quick-filters mt-4 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-              <button class="flex-shrink-0 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm hover:bg-blue-100 active:bg-blue-200 transition-colors whitespace-nowrap">
-                🎿 <span data-i18n="filter.open_now">Abierto ahora</span>
-              </button>
-              <button class="flex-shrink-0 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm hover:bg-blue-100 active:bg-blue-200 transition-colors whitespace-nowrap">
-                ❄️ <span data-i18n="filter.fresh_snow">Nieve nueva</span>
-              </button>
-              <button class="flex-shrink-0 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm hover:bg-blue-100 active:bg-blue-200 transition-colors whitespace-nowrap">
-                👨‍👩‍👧‍👦 <span data-i18n="filter.family">Familiar</span>
-              </button>
-              <button class="flex-shrink-0 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm hover:bg-blue-100 active:bg-blue-200 transition-colors whitespace-nowrap">
-                🏔️ <span data-i18n="filter.high_altitude">Alta cota</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Featured Stations Grid -->
-    <section id="stations" class="py-12 md:py-16 lg:py-24 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-8 md:mb-12">
-          <h2 class="section-title text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4" data-i18n="stations.title">
-            Estaciones destacadas
-          </h2>
-          <p class="section-subtitle text-base md:text-lg text-slate-600 max-w-2xl mx-auto" data-i18n="stations.subtitle">
-            Las mejores condiciones de nieve ahora mismo
-          </p>
-        </div>
-        
-        <!-- Stations Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          <!-- Station Card 1 -->
-          <article class="station-card bg-white rounded-xl shadow-lg overflow-hidden hover-lift cursor-pointer">
-            <div class="relative h-40 md:h-48 bg-gray-100">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%23E6F4F9' width='800' height='400'/%3E%3Ctext fill='%23334155' font-family='Arial' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EBaqueira Beret%3C/text%3E%3C/svg%3E" 
-                   alt="Baqueira Beret" 
-                   class="w-full h-full object-cover">
-              <div class="absolute top-2 md:top-3 right-2 md:right-3 bg-green-500 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
-                <span data-i18n="status.open">ABIERTO</span>
-              </div>
-            </div>
-            <div class="p-4 md:p-6">
-              <h3 class="text-lg md:text-xl font-semibold text-slate-900 mb-2">Baqueira Beret</h3>
-              <p class="text-sm text-slate-600 mb-3 md:mb-4">Val d'Aran, España</p>
-              
-              <!-- Snow Info -->
-              <div class="grid grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-4">
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-blue-600">120</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.base">Base cm</div>
-                </div>
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-blue-600">180</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.top">Cima cm</div>
-                </div>
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-green-500">15</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.new">Nueva 24h</div>
-                </div>
-              </div>
-              
-              <!-- Additional Info -->
-              <div class="flex justify-between text-xs md:text-sm text-slate-600">
-                <span>🚡 35/39 <span data-i18n="lifts">remontes</span></span>
-                <span>⛷️ 110/120 <span data-i18n="slopes">pistas</span></span>
-              </div>
-            </div>
-          </article>
-          
-          <!-- Station Card 2 (Skeleton) -->
-          <article class="station-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="h-40 md:h-48 skeleton"></div>
-            <div class="p-4 md:p-6">
-              <div class="h-5 md:h-6 w-32 skeleton rounded mb-2"></div>
-              <div class="h-4 w-24 skeleton rounded mb-3 md:mb-4"></div>
-              <div class="grid grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-4">
-                <div class="h-10 md:h-12 skeleton rounded"></div>
-                <div class="h-10 md:h-12 skeleton rounded"></div>
-                <div class="h-10 md:h-12 skeleton rounded"></div>
-              </div>
-              <div class="h-4 skeleton rounded"></div>
-            </div>
-          </article>
-          
-          <!-- Station Card 3 -->
-          <article class="station-card bg-white rounded-xl shadow-lg overflow-hidden hover-lift cursor-pointer sm:col-span-2 lg:col-span-1">
-            <div class="relative h-40 md:h-48 bg-gray-100">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%23E6F4F9' width='800' height='400'/%3E%3Ctext fill='%23334155' font-family='Arial' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ESierra Nevada%3C/text%3E%3C/svg%3E" 
-                   alt="Sierra Nevada" 
-                   class="w-full h-full object-cover">
-              <div class="absolute top-2 md:top-3 right-2 md:right-3 bg-green-500 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
-                <span data-i18n="status.open">ABIERTO</span>
-              </div>
-            </div>
-            <div class="p-4 md:p-6">
-              <h3 class="text-lg md:text-xl font-semibold text-slate-900 mb-2">Sierra Nevada</h3>
-              <p class="text-sm text-slate-600 mb-3 md:mb-4">Granada, España</p>
-              
-              <div class="grid grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-4">
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-blue-600">95</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.base">Base cm</div>
-                </div>
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-blue-600">145</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.top">Cima cm</div>
-                </div>
-                <div class="text-center">
-                  <div class="snow-info text-xl md:text-2xl font-bold text-green-500">8</div>
-                  <div class="info-label text-xs text-slate-600" data-i18n="snow.new">Nueva 24h</div>
-                </div>
-              </div>
-              
-              <div class="flex justify-between text-xs md:text-sm text-slate-600">
-                <span>🚡 18/21 <span data-i18n="lifts">remontes</span></span>
-                <span>⛷️ 95/131 <span data-i18n="slopes">pistas</span></span>
-              </div>
-            </div>
-          </article>
-        </div>
-        
-        <!-- View All Button -->
-        <div class="text-center mt-8 md:mt-12">
-          <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white active:bg-blue-700 transition-all font-semibold">
-            <span data-i18n="stations.view_all">Ver todas las estaciones</span>
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Rural Lodging Carousel -->
-    <section id="lodging" class="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-8 md:mb-12">
-          <h2 class="section-title text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4" data-i18n="lodging.title">
-            Alojamientos rurales únicos
-          </h2>
-          <p class="section-subtitle text-base md:text-lg text-slate-600 max-w-2xl mx-auto" data-i18n="lodging.subtitle">
-            Casas de montaña y experiencias auténticas cerca de las pistas
-          </p>
-        </div>
-        
-        <!-- Lodging Carousel -->
-        <div class="lodging-carousel overflow-x-auto pb-4">
-          <div class="flex space-x-4 md:space-x-6" style="width: max-content;">
-            <!-- Lodging Card 1 -->
-            <div class="lodging-card w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover-lift flex-shrink-0">
-              <div class="h-48 md:h-56 bg-gray-100">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%23F3F4F6' width='800' height='600'/%3E%3Ctext fill='%23334155' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ECasa Rural Montaña%3C/text%3E%3C/svg%3E" 
-                     alt="Casa Rural" 
-                     class="w-full h-full object-cover">
-              </div>
-              <div class="p-4 md:p-6">
-                <h3 class="text-lg font-semibold text-slate-900 mb-2">Casa Rural El Refugio</h3>
-                <p class="text-sm text-slate-600 mb-3">A 5km de Baqueira • 8 personas</p>
-                <div class="flex items-center justify-between mb-4">
-                  <div class="flex items-center">
-                    <span class="text-yellow-500 text-sm">★★★★★</span>
-                    <span class="text-sm text-slate-600 ml-1">(4.8)</span>
-                  </div>
-                  <div class="text-right">
-                    <div class="text-xl md:text-2xl font-bold text-slate-900">€185</div>
-                    <div class="text-xs text-slate-600">/noche</div>
-                  </div>
-                </div>
-                <button class="w-full bg-blue-600 text-white py-2 md:py-3 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors text-sm md:text-base">
-                  <span data-i18n="lodging.view">Ver disponibilidad</span>
-                </button>
-              </div>
-            </div>
-            
-            <!-- Lodging Card 2 (Skeleton) -->
-            <div class="lodging-card w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover-lift flex-shrink-0">
-              <div class="h-48 md:h-56 skeleton"></div>
-              <div class="p-4 md:p-6">
-                <div class="h-5 w-48 skeleton rounded mb-2"></div>
-                <div class="h-4 w-32 skeleton rounded mb-3"></div>
-                <div class="h-8 skeleton rounded mb-4"></div>
-                <div class="h-10 skeleton rounded"></div>
-              </div>
-            </div>
-            
-            <!-- Lodging Card 3 -->
-            <div class="lodging-card w-72 md:w-80 bg-white rounded-xl shadow-lg overflow-hidden hover-lift flex-shrink-0">
-              <div class="h-48 md:h-56 bg-gray-100">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%23F3F4F6' width='800' height='600'/%3E%3Ctext fill='%23334155' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EApartamento Alpino%3C/text%3E%3C/svg%3E" 
-                     alt="Apartamento" 
-                     class="w-full h-full object-cover">
-              </div>
-              <div class="p-4 md:p-6">
-                <h3 class="text-lg font-semibold text-slate-900 mb-2">Apartamento Vista Pistas</h3>
-                <p class="text-sm text-slate-600 mb-3">Pie de pista • 4 personas</p>
-                <div class="flex items-center justify-between mb-4">
-                  <div class="flex items-center">
-                    <span class="text-yellow-500 text-sm">★★★★☆</span>
-                    <span class="text-sm text-slate-600 ml-1">(4.5)</span>
-                  </div>
-                  <div class="text-right">
-                    <div class="text-xl md:text-2xl font-bold text-slate-900">€220</div>
-                    <div class="text-xs text-slate-600">/noche</div>
-                  </div>
-                </div>
-                <button class="w-full bg-blue-600 text-white py-2 md:py-3 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors text-sm md:text-base">
-                  <span data-i18n="lodging.view">Ver disponibilidad</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Trip Planner Banner -->
-    <section id="planner" class="py-12 md:py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center text-white">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" data-i18n="planner.title">
-            Planifica tu viaje perfecto a la nieve
-          </h2>
-          <p class="text-lg md:text-xl mb-6 md:mb-8 text-blue-100 max-w-2xl mx-auto" data-i18n="planner.subtitle">
-            Nuestro asistente IA te ayuda a crear el viaje ideal: estación + alojamiento + material
-          </p>
-          
-          <div class="premium-buttons flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-white text-blue-600 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-gray-100 active:bg-gray-200 transition-colors transform hover:scale-105 active:scale-95">
-              <span class="flex items-center justify-center">
-                <svg class="w-5 md:w-6 h-5 md:h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4l-4 4z"/>
-                </svg>
-                <span data-i18n="planner.chat">Chatear con IA</span>
-              </span>
-            </button>
-            <button class="bg-transparent border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 active:bg-gray-100 transition-all">
-              <span data-i18n="planner.wizard">Usar planificador guiado</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  </main>
-  
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-white py-8 md:py-12">
-    <div class="container mx-auto px-4">
-      <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
-        <!-- Company -->
-        <div>
-          <h4 class="font-semibold text-lg mb-3 md:mb-4" data-i18n="footer.company">Empresa</h4>
-          <ul class="space-y-2 text-slate-400 text-sm md:text-base">
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.about">Sobre nosotros</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.careers">Trabaja con nosotros</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.press">Prensa</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.contact">Contacto</a></li>
-          </ul>
-        </div>
-        
-        <!-- Services -->
-        <div>
-          <h4 class="font-semibold text-lg mb-3 md:mb-4" data-i18n="footer.services">Servicios</h4>
-          <ul class="space-y-2 text-slate-400 text-sm md:text-base">
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.snow_report">Parte de nieve</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.lodging">Alojamientos</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.equipment">Alquiler material</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.planner">Planificador</a></li>
-          </ul>
-        </div>
-        
-        <!-- Resources -->
-        <div>
-          <h4 class="font-semibold text-lg mb-3 md:mb-4" data-i18n="footer.resources">Recursos</h4>
-          <ul class="space-y-2 text-slate-400 text-sm md:text-base">
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.guides">Guías</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.api">API</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.partners">Partners</a></li>
-          </ul>
-        </div>
-        
-        <!-- Newsletter -->
-        <div>
-          <h4 class="font-semibold text-lg mb-3 md:mb-4" data-i18n="footer.newsletter">Newsletter</h4>
-          <p class="text-slate-400 mb-4 text-sm md:text-base" data-i18n="footer.newsletter_text">
-            Recibe las mejores ofertas y nieve fresca
-          </p>
-          <form class="flex flex-col sm:flex-row gap-2">
-            <input type="email" 
-                   placeholder="tu@email.com" 
-                   class="flex-1 px-3 md:px-4 py-2 bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
-                   data-i18n-placeholder="footer.email_placeholder">
-            <button class="bg-blue-600 px-3 md:px-4 py-2 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors flex-shrink-0">
-              <svg class="w-4 md:w-5 h-4 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-      
-      <!-- Bottom Footer -->
-      <div class="footer-bottom border-t border-slate-800 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="text-slate-400 text-sm text-center md:text-left">
-          © 2025 SnowHub. <span data-i18n="footer.rights">Todos los derechos reservados.</span>
-        </div>
-        <div class="flex space-x-6 text-slate-400 text-sm">
-          <a href="#" class="hover:text-white transition-colors" data-i18n="footer.privacy">Privacidad</a>
-          <a href="#" class="hover:text-white transition-colors" data-i18n="footer.terms">Términos</a>
-          <a href="#" class="hover:text-white transition-colors" data-i18n="footer.cookies">Cookies</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  <!-- Mobile Menu (Hidden by default) -->
-  <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
-    <button class="fixed inset-0 bg-black bg-opacity-50 w-full h-full" 
-            (click)="toggleMobileMenu()" 
-            (keydown.escape)="toggleMobileMenu()" 
-            [attr.aria-label]="'Cerrar menú'">
-    </button>
-    <div class="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-xl p-6 transform transition-transform duration-300 ease-out">
-      <button (click)="toggleMobileMenu()" 
-              class="absolute top-4 right-4 p-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors" 
-              [attr.aria-label]="'Cerrar menú'">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+  <app-site-header />
+
+  <main class="mt-16 md:mt-20 flex flex-col gap-0">
+    <!-- Hero Section -->
+    <app-home-hero />
+
+    <!-- Weather Widget as Floating Button & Modal -->
+    <button
+      (click)="toggleWeatherModal()"
+      class="weather-float-button fixed bottom-6 right-6 z-40 bg-gradient-to-br from-blue-500 to-blue-700 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
+      aria-label="Ver tiempo actual"
+    >
+      <div class="flex items-center gap-2">
+        <svg
+          class="w-6 h-6 group-hover:rotate-12 transition-transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+          />
         </svg>
-      </button>
-      <nav class="mt-12">
-        <ul class="space-y-6">
-          <li><a href="#stations" class="block py-3 text-lg text-slate-700 hover:text-blue-600 active:text-blue-700 transition-colors border-b border-gray-100" (click)="toggleMobileMenu()">Estaciones</a></li>
-          <li><a href="#lodging" class="block py-3 text-lg text-slate-700 hover:text-blue-600 active:text-blue-700 transition-colors border-b border-gray-100" (click)="toggleMobileMenu()">Alojamientos</a></li>
-          <li><a href="#planner" class="block py-3 text-lg text-slate-700 hover:text-blue-600 active:text-blue-700 transition-colors border-b border-gray-100" (click)="toggleMobileMenu()">Planificador</a></li>
-          <li><a href="#blog" class="block py-3 text-lg text-slate-700 hover:text-blue-600 active:text-blue-700 transition-colors" (click)="toggleMobileMenu()">Blog</a></li>
-        </ul>
-      </nav>
+        <span class="hidden md:inline font-bold">Tiempo</span>
+      </div>
+      @if (!showWeatherModal()) {
+      <div
+        class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"
+      ></div>
+      }
+    </button>
+
+    <!-- Weather Modal Overlay -->
+    @if (showWeatherModal()) {
+    <div
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 animate-fade-in"
+      (click)="toggleWeatherModal()"
+      (keydown.escape)="toggleWeatherModal()"
+      role="dialog"
+      aria-modal="true"
+      tabindex="-1"
+    >
+      <div
+        class="max-w-2xl w-full animate-scale-in"
+        (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()"
+        role="document"
+      >
+        <div class="relative">
+          <button
+            (click)="toggleWeatherModal()"
+            class="absolute -top-4 -right-4 z-10 bg-white text-slate-700 rounded-full p-2 shadow-lg hover:bg-slate-100 transition-colors"
+            aria-label="Cerrar"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <app-weather-widget />
+        </div>
+      </div>
     </div>
-  </div>
-  
+    }
+
+    <!-- Platform Stats -->
+    <app-stats-overview />
+
+    <!-- Featured Stations -->
+    <app-stations-featured />
+
+    <!-- Features Grid -->
+    <app-features-grid />
+
+    <!-- Lodging Carousel -->
+    <app-lodging-carousel />
+
+    <!-- Testimonials -->
+    <app-testimonials-carousel />
+
+    <!-- Planner Banner -->
+    <app-planner-banner />
+  </main>
+
+  <app-site-footer />
 </div>

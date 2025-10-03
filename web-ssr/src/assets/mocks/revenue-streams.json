@@ -1,0 +1,40 @@
+{
+  "streams": [
+    {
+      "stream": "Bookings (Alojamientos)",
+      "amount": 1592500,
+      "percentage": 65.0,
+      "growth": 22.5,
+      "color": "#3b82f6"
+    },
+    {
+      "stream": "Premium Subscriptions",
+      "amount": 490000,
+      "percentage": 20.0,
+      "growth": 22.5,
+      "color": "#8b5cf6"
+    },
+    {
+      "stream": "Comisiones (Alquiler)",
+      "amount": 245000,
+      "percentage": 10.0,
+      "growth": 22.5,
+      "color": "#10b981"
+    },
+    {
+      "stream": "Publicidad & Patrocinios",
+      "amount": 122500,
+      "percentage": 5.0,
+      "growth": 22.5,
+      "color": "#f59e0b"
+    }
+  ],
+  "summary": {
+    "totalRevenue": 2450000,
+    "topStream": "Bookings (Alojamientos)",
+    "topStreamAmount": 1592500,
+    "fastestGrowing": "Premium Subscriptions",
+    "fastestGrowingRate": 22.5,
+    "diversificationIndex": 0.62
+  }
+}

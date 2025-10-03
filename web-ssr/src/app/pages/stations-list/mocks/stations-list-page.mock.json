@@ -1,0 +1,388 @@
+{
+  "stations": [
+    {
+      "id": "1",
+      "slug": "baqueira-beret",
+      "name": "Baqueira Beret",
+      "region": "pyrenees",
+      "location": "Val d'Aran, Lleida",
+      "image": "/assets/images/stations/baqueira-beret.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 120,
+      "snowTop": 180,
+      "snowNew24h": 15,
+      "liftsOpen": 35,
+      "liftsTotal": 39,
+      "slopesOpen": 110,
+      "slopesTotal": 120,
+      "altitude": {
+        "base": 1500,
+        "top": 2610
+      },
+      "price": {
+        "adult": 62,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "snow-park",
+        "restaurant",
+        "parking"
+      ],
+      "temperature": -3,
+      "wind": 12,
+      "lastUpdate": "2025-10-02T09:30:00Z"
+    },
+    {
+      "id": "2",
+      "slug": "sierra-nevada",
+      "name": "Sierra Nevada",
+      "region": "sierra-nevada",
+      "location": "Granada, Andalucía",
+      "image": "/assets/images/stations/sierra-nevada.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 95,
+      "snowTop": 145,
+      "snowNew24h": 8,
+      "liftsOpen": 18,
+      "liftsTotal": 21,
+      "slopesOpen": 95,
+      "slopesTotal": 131,
+      "altitude": {
+        "base": 2100,
+        "top": 3300
+      },
+      "price": {
+        "adult": 58,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "kids-area",
+        "restaurant",
+        "parking",
+        "equipment-rental"
+      ],
+      "temperature": 2,
+      "wind": 8,
+      "lastUpdate": "2025-10-02T09:15:00Z"
+    },
+    {
+      "id": "3",
+      "slug": "formigal-panticosa",
+      "name": "Formigal-Panticosa",
+      "region": "pyrenees",
+      "location": "Huesca, Aragón",
+      "image": "/assets/images/stations/formigal.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 110,
+      "snowTop": 165,
+      "snowNew24h": 12,
+      "liftsOpen": 21,
+      "liftsTotal": 23,
+      "slopesOpen": 142,
+      "slopesTotal": 147,
+      "altitude": {
+        "base": 1500,
+        "top": 2250
+      },
+      "price": {
+        "adult": 54,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "snow-park",
+        "kids-area",
+        "restaurant",
+        "parking"
+      ],
+      "temperature": -4,
+      "wind": 15,
+      "lastUpdate": "2025-10-02T09:20:00Z"
+    },
+    {
+      "id": "4",
+      "slug": "candanchu",
+      "name": "Candanchú",
+      "region": "pyrenees",
+      "location": "Huesca, Aragón",
+      "image": "/assets/images/stations/candanchu.jpg",
+      "status": "open",
+      "type": "family",
+      "snowBase": 85,
+      "snowTop": 135,
+      "snowNew24h": 5,
+      "liftsOpen": 24,
+      "liftsTotal": 26,
+      "slopesOpen": 48,
+      "slopesTotal": 51,
+      "altitude": {
+        "base": 1530,
+        "top": 2400
+      },
+      "price": {
+        "adult": 46,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "kids-area",
+        "parking",
+        "restaurant"
+      ],
+      "temperature": -2,
+      "wind": 10,
+      "lastUpdate": "2025-10-02T09:10:00Z"
+    },
+    {
+      "id": "5",
+      "slug": "cerler",
+      "name": "Cerler",
+      "region": "pyrenees",
+      "location": "Huesca, Aragón",
+      "image": "/assets/images/stations/cerler.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 100,
+      "snowTop": 160,
+      "snowNew24h": 10,
+      "liftsOpen": 18,
+      "liftsTotal": 19,
+      "slopesOpen": 68,
+      "slopesTotal": 77,
+      "altitude": {
+        "base": 1500,
+        "top": 2630
+      },
+      "price": {
+        "adult": 52,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "snow-park",
+        "restaurant",
+        "parking"
+      ],
+      "temperature": -3,
+      "wind": 11,
+      "lastUpdate": "2025-10-02T09:25:00Z"
+    },
+    {
+      "id": "6",
+      "slug": "la-molina",
+      "name": "La Molina",
+      "region": "pyrenees",
+      "location": "Girona, Cataluña",
+      "image": "/assets/images/stations/la-molina.jpg",
+      "status": "open",
+      "type": "family",
+      "snowBase": 75,
+      "snowTop": 125,
+      "snowNew24h": 3,
+      "liftsOpen": 16,
+      "liftsTotal": 18,
+      "slopesOpen": 61,
+      "slopesTotal": 71,
+      "altitude": {
+        "base": 1700,
+        "top": 2535
+      },
+      "price": {
+        "adult": 48,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "kids-area",
+        "parking",
+        "restaurant"
+      ],
+      "temperature": -1,
+      "wind": 7,
+      "lastUpdate": "2025-10-02T09:05:00Z"
+    },
+    {
+      "id": "7",
+      "slug": "masella",
+      "name": "Masella",
+      "region": "pyrenees",
+      "location": "Girona, Cataluña",
+      "image": "/assets/images/stations/masella.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 90,
+      "snowTop": 140,
+      "snowNew24h": 7,
+      "liftsOpen": 14,
+      "liftsTotal": 16,
+      "slopesOpen": 64,
+      "slopesTotal": 74,
+      "altitude": {
+        "base": 1600,
+        "top": 2535
+      },
+      "price": {
+        "adult": 50,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "snow-park",
+        "restaurant",
+        "parking"
+      ],
+      "temperature": -2,
+      "wind": 9,
+      "lastUpdate": "2025-10-02T09:00:00Z"
+    },
+    {
+      "id": "8",
+      "slug": "port-aine",
+      "name": "Port Ainé",
+      "region": "pyrenees",
+      "location": "Lleida, Cataluña",
+      "image": "/assets/images/stations/port-aine.jpg",
+      "status": "open",
+      "type": "family",
+      "snowBase": 70,
+      "snowTop": 115,
+      "snowNew24h": 4,
+      "liftsOpen": 10,
+      "liftsTotal": 12,
+      "slopesOpen": 28,
+      "slopesTotal": 30,
+      "altitude": {
+        "base": 1650,
+        "top": 2440
+      },
+      "price": {
+        "adult": 42,
+        "currency": "€"
+      },
+      "features": ["ski-school", "equipment-rental", "kids-area", "restaurant"],
+      "temperature": -1,
+      "wind": 6,
+      "lastUpdate": "2025-10-02T08:55:00Z"
+    },
+    {
+      "id": "9",
+      "slug": "astun",
+      "name": "Astún",
+      "region": "pyrenees",
+      "location": "Huesca, Aragón",
+      "image": "/assets/images/stations/astun.jpg",
+      "status": "open",
+      "type": "alpine",
+      "snowBase": 105,
+      "snowTop": 155,
+      "snowNew24h": 11,
+      "liftsOpen": 13,
+      "liftsTotal": 15,
+      "slopesOpen": 48,
+      "slopesTotal": 55,
+      "altitude": {
+        "base": 1700,
+        "top": 2300
+      },
+      "price": {
+        "adult": 49,
+        "currency": "€"
+      },
+      "features": [
+        "ski-school",
+        "equipment-rental",
+        "snow-park",
+        "restaurant",
+        "parking"
+      ],
+      "temperature": -3,
+      "wind": 13,
+      "lastUpdate": "2025-10-02T09:35:00Z"
+    },
+    {
+      "id": "10",
+      "slug": "valdezcaray",
+      "name": "Valdezcaray",
+      "region": "sistema-iberico",
+      "location": "La Rioja",
+      "image": "/assets/images/stations/valdezcaray.jpg",
+      "status": "open",
+      "type": "family",
+      "snowBase": 60,
+      "snowTop": 95,
+      "snowNew24h": 2,
+      "liftsOpen": 6,
+      "liftsTotal": 8,
+      "slopesOpen": 20,
+      "slopesTotal": 24,
+      "altitude": {
+        "base": 1550,
+        "top": 2125
+      },
+      "price": {
+        "adult": 38,
+        "currency": "€"
+      },
+      "features": ["ski-school", "equipment-rental", "kids-area", "restaurant"],
+      "temperature": 1,
+      "wind": 5,
+      "lastUpdate": "2025-10-02T08:50:00Z"
+    }
+  ],
+  "filterOptions": {
+    "regions": [
+      { "value": "", "label": "Todas las regiones", "icon": "🌍" },
+      { "value": "pyrenees", "label": "Pirineos", "icon": "⛰️" },
+      { "value": "sierra-nevada", "label": "Sierra Nevada", "icon": "🏔️" },
+      { "value": "sistema-central", "label": "Sistema Central", "icon": "⛰️" },
+      {
+        "value": "cordillera-cantabrica",
+        "label": "Cordillera Cantábrica",
+        "icon": "🏔️"
+      },
+      { "value": "sistema-iberico", "label": "Sistema Ibérico", "icon": "⛰️" }
+    ],
+    "stationTypes": [
+      { "value": "", "label": "Todos los tipos", "icon": "⛷️" },
+      { "value": "alpine", "label": "Alpino", "icon": "🎿" },
+      { "value": "nordic", "label": "Nórdico", "icon": "⛷️" },
+      { "value": "freeride", "label": "Freeride", "icon": "🏂" },
+      { "value": "family", "label": "Familiar", "icon": "👨‍👩‍👧‍👦" }
+    ],
+    "services": [
+      { "value": "ski-school", "label": "Escuela de esquí", "icon": "👨‍🏫" },
+      {
+        "value": "equipment-rental",
+        "label": "Alquiler de material",
+        "icon": "🎿"
+      },
+      { "value": "restaurant", "label": "Restaurantes", "icon": "🍴" },
+      { "value": "parking", "label": "Parking", "icon": "🅿️" },
+      { "value": "kids-area", "label": "Zona infantil", "icon": "🧒" },
+      { "value": "snow-park", "label": "Snow park", "icon": "🏂" }
+    ],
+    "statusOptions": [
+      { "value": "", "label": "Cualquier estado", "icon": "ℹ️" },
+      { "value": "open", "label": "Abierta", "icon": "✅" },
+      { "value": "closed", "label": "Cerrada", "icon": "❌" },
+      { "value": "seasonal", "label": "Temporal", "icon": "🗓️" },
+      { "value": "maintenance", "label": "Mantenimiento", "icon": "🔧" }
+    ]
+  },
+  "stats": {
+    "totalStations": 10,
+    "openStations": 10,
+    "avgSnowBase": 91
+  }
+}

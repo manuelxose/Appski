@@ -1,0 +1,137 @@
+[
+  {
+    "id": "author-001",
+    "name": "Carlos Martínez",
+    "slug": "carlos-martinez",
+    "email": "carlos.martinez@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=12",
+    "bio": {
+      "es": "Instructor profesional de esquí con más de 15 años de experiencia. Apasionado por compartir conocimientos sobre técnica y seguridad en la nieve.",
+      "en": "Professional ski instructor with over 15 years of experience. Passionate about sharing knowledge on technique and safety in the snow.",
+      "fr": "Moniteur de ski professionnel avec plus de 15 ans d'expérience. Passionné par le partage de connaissances sur la technique et la sécurité dans la neige."
+    },
+    "role": "Editor Jefe",
+    "social": {
+      "twitter": "@carlosmartinez_ski",
+      "linkedin": "carlos-martinez-ski",
+      "instagram": "@carlosski"
+    },
+    "stats": {
+      "totalArticles": 48,
+      "totalViews": 125430,
+      "totalLikes": 8920
+    }
+  },
+  {
+    "id": "author-002",
+    "name": "María González",
+    "slug": "maria-gonzalez",
+    "email": "maria.gonzalez@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=5",
+    "bio": {
+      "es": "Periodista especializada en deportes de invierno y viajes. Ha visitado más de 50 estaciones de esquí en Europa y América.",
+      "en": "Journalist specialized in winter sports and travel. Has visited over 50 ski resorts in Europe and America.",
+      "fr": "Journaliste spécialisée dans les sports d'hiver et les voyages. A visité plus de 50 stations de ski en Europe et en Amérique."
+    },
+    "role": "Redactora Senior",
+    "social": {
+      "twitter": "@mariagonzalez_snow",
+      "instagram": "@maria.snow.travels"
+    },
+    "stats": {
+      "totalArticles": 62,
+      "totalViews": 178900,
+      "totalLikes": 12350
+    }
+  },
+  {
+    "id": "author-003",
+    "name": "Javier Ruiz",
+    "slug": "javier-ruiz",
+    "email": "javier.ruiz@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=33",
+    "bio": {
+      "es": "Experto en equipamiento de esquí y snowboard. Colaborador habitual en revistas especializadas y tester profesional de material.",
+      "en": "Expert in ski and snowboard equipment. Regular contributor to specialized magazines and professional gear tester.",
+      "fr": "Expert en équipement de ski et snowboard. Collaborateur régulier de magazines spécialisés et testeur professionnel de matériel."
+    },
+    "role": "Especialista en Equipamiento",
+    "social": {
+      "twitter": "@javierruiz_gear",
+      "linkedin": "javier-ruiz-equipment",
+      "instagram": "@javi.ski.gear"
+    },
+    "stats": {
+      "totalArticles": 35,
+      "totalViews": 94200,
+      "totalLikes": 6780
+    }
+  },
+  {
+    "id": "author-004",
+    "name": "Laura Sánchez",
+    "slug": "laura-sanchez",
+    "email": "laura.sanchez@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=9",
+    "bio": {
+      "es": "Fotógrafa profesional de montaña y esquiadora experta. Sus imágenes han aparecido en National Geographic y revistas internacionales.",
+      "en": "Professional mountain photographer and expert skier. Her images have appeared in National Geographic and international magazines.",
+      "fr": "Photographe professionnelle de montagne et skieuse experte. Ses images sont apparues dans National Geographic et des magazines internationaux."
+    },
+    "role": "Fotógrafa y Redactora",
+    "social": {
+      "instagram": "@laura.mountain.photo",
+      "twitter": "@laurasanchez_photo"
+    },
+    "stats": {
+      "totalArticles": 29,
+      "totalViews": 156700,
+      "totalLikes": 15200
+    }
+  },
+  {
+    "id": "author-005",
+    "name": "David López",
+    "slug": "david-lopez",
+    "email": "david.lopez@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=15",
+    "bio": {
+      "es": "Guía de montaña certificado y experto en seguridad avalanchas. Imparte cursos de formación y lidera expediciones de esquí de travesía.",
+      "en": "Certified mountain guide and avalanche safety expert. Teaches training courses and leads backcountry skiing expeditions.",
+      "fr": "Guide de montagne certifié et expert en sécurité avalanche. Donne des cours de formation et dirige des expéditions de ski de randonnée."
+    },
+    "role": "Especialista en Seguridad",
+    "social": {
+      "linkedin": "david-lopez-mountain-guide",
+      "instagram": "@david.mountain.guide"
+    },
+    "stats": {
+      "totalArticles": 41,
+      "totalViews": 112500,
+      "totalLikes": 9840
+    }
+  },
+  {
+    "id": "author-006",
+    "name": "Ana Torres",
+    "slug": "ana-torres",
+    "email": "ana.torres@nieveplatform.com",
+    "avatar": "https://i.pravatar.cc/150?img=24",
+    "bio": {
+      "es": "Competidora profesional de snowboard y entrenadora. Medallista en campeonatos nacionales y promotora del deporte femenino en la nieve.",
+      "en": "Professional snowboard competitor and coach. Medalist in national championships and promoter of women's snow sports.",
+      "fr": "Compétitrice professionnelle de snowboard et entraîneuse. Médaillée aux championnats nationaux et promotrice du sport féminin dans la neige."
+    },
+    "role": "Especialista en Snowboard",
+    "social": {
+      "twitter": "@anatorres_snow",
+      "instagram": "@ana.snowboard.pro",
+      "linkedin": "ana-torres-snowboard"
+    },
+    "stats": {
+      "totalArticles": 27,
+      "totalViews": 87300,
+      "totalLikes": 7150
+    }
+  }
+]

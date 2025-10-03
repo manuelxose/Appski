@@ -1,0 +1,435 @@
+<div class="admin-bookings">
+  <!-- Breadcrumbs -->
+  <app-admin-breadcrumbs [items]="breadcrumbs" />
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">Gestión de Reservas</h1>
+      <p class="page-description">Administra reservas, estados y pagos</p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn btn-primary" (click)="openCreateModal()">
+        <span class="btn-icon">➕</span>
+        Nueva Reserva
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Reservas"
+      [value]="stats().total"
+      icon="📋"
+      variant="primary"
+    />
+
+    <app-admin-stat-card
+      label="Confirmadas"
+      [value]="stats().confirmed"
+      icon="✅"
+      variant="success"
+    />
+
+    <app-admin-stat-card
+      label="Pendientes"
+      [value]="stats().pending"
+      icon="⏳"
+      variant="warning"
+    />
+
+    <app-admin-stat-card
+      label="Ingresos del Mes"
+      [value]="stats().monthlyRevenue"
+      [subtitle]="'Total: ' + stats().totalRevenue.toFixed(2) + ' €'"
+      icon="💰"
+      variant="success"
+      valueFormat="currency"
+    />
+  </div>
+
+  <!-- Filters & Search -->
+  <div class="controls-section">
+    <app-admin-search-bar
+      placeholder="Buscar por cliente, email, referencia..."
+      (searchChange)="onSearch($event)"
+    />
+
+    <app-admin-filters
+      [fields]="filterFields"
+      (filterChange)="onFilterChange($event)"
+      (filterReset)="onFilterReset()"
+    />
+
+    <app-admin-date-range-picker
+      [value]="dateRange()"
+      [showPresets]="true"
+      (rangeChange)="onDateRangeChange($event)"
+    />
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader type="skeleton" />
+  }
+
+  <!-- Bookings Table -->
+  @if (!isLoading() && paginatedBookings().length > 0) {
+  <div class="table-container">
+    <app-admin-table
+      [data]="paginatedBookings()"
+      [columns]="tableColumns"
+      [actions]="tableActions"
+      [selectable]="true"
+      (selectionChange)="onSelectionChange($event)"
+    />
+
+    <app-admin-pagination
+      [currentPage]="currentPage()"
+      [totalPages]="totalPages()"
+      [pageSize]="pageSize()"
+      [totalItems]="totalBookings()"
+      (pageChange)="onPageChange($event)"
+      (pageSizeChange)="onPageSizeChange($event)"
+    />
+  </div>
+  }
+
+  <!-- Empty State -->
+  @if (!isLoading() && paginatedBookings().length === 0) {
+  <app-admin-empty-state
+    icon="📋"
+    title="No hay reservas"
+    description="No se encontraron reservas con los filtros aplicados"
+    [actionLabel]="
+      searchQuery() ||
+      Object.keys(activeFilters()).length > 0 ||
+      dateRange().startDate
+        ? 'Limpiar filtros'
+        : 'Crear primera reserva'
+    "
+    (primaryAction)="
+      searchQuery() ||
+      Object.keys(activeFilters()).length > 0 ||
+      dateRange().startDate
+        ? onFilterReset()
+        : openCreateModal()
+    "
+  />
+  }
+
+  <!-- Create/Edit Modal -->
+  <app-admin-modal
+    [open]="showCreateModal() || showEditModal()"
+    [title]="showCreateModal() ? 'Crear Reserva' : 'Editar Reserva'"
+    size="lg"
+    (modalClose)="showCreateModal.set(false); showEditModal.set(false)"
+  >
+    <form
+      class="booking-form"
+      (submit)="
+        $event.preventDefault();
+        showCreateModal() ? createBooking() : updateBooking()
+      "
+    >
+      <div class="form-section">
+        <h3 class="section-title">Información del Cliente</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="customerName" class="form-label"
+              >Nombre Completo *</label
+            >
+            <input
+              id="customerName"
+              type="text"
+              class="form-input"
+              [(ngModel)]="bookingForm().customerName"
+              name="customerName"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customerEmail" class="form-label">Email *</label>
+            <input
+              id="customerEmail"
+              type="email"
+              class="form-input"
+              [(ngModel)]="bookingForm().customerEmail"
+              name="customerEmail"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone" class="form-label">Teléfono *</label>
+            <input
+              id="customerPhone"
+              type="tel"
+              class="form-input"
+              [(ngModel)]="bookingForm().customerPhone"
+              name="customerPhone"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="section-title">Detalles de la Reserva</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="stationSlug" class="form-label">Estación *</label>
+            <select
+              id="stationSlug"
+              class="form-select"
+              [(ngModel)]="bookingForm().stationSlug"
+              name="stationSlug"
+              required
+            >
+              <option value="">Seleccionar estación</option>
+              <option value="sierra-nevada">Sierra Nevada</option>
+              <option value="baqueira-beret">Baqueira Beret</option>
+              <option value="formigal">Formigal</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType" class="form-label"
+              >Tipo de Servicio *</label
+            >
+            <select
+              id="serviceType"
+              class="form-select"
+              [(ngModel)]="bookingForm().serviceType"
+              name="serviceType"
+              (change)="calculateTotal()"
+              required
+            >
+              <option value="skipass">Forfait</option>
+              <option value="class">Clases</option>
+              <option value="equipment">Alquiler</option>
+              <option value="package">Paquete Completo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="startDate" class="form-label">Fecha Inicio *</label>
+            <input
+              id="startDate"
+              type="date"
+              class="form-input"
+              [(ngModel)]="bookingForm().startDate"
+              name="startDate"
+              (change)="calculateTotal()"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="endDate" class="form-label">Fecha Fin *</label>
+            <input
+              id="endDate"
+              type="date"
+              class="form-input"
+              [(ngModel)]="bookingForm().endDate"
+              name="endDate"
+              [min]="bookingForm().startDate"
+              (change)="calculateTotal()"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="participants" class="form-label">Participantes *</label>
+            <input
+              id="participants"
+              type="number"
+              class="form-input"
+              [(ngModel)]="bookingForm().participants"
+              name="participants"
+              min="1"
+              (change)="calculateTotal()"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="totalAmount" class="form-label">Importe Total</label>
+            <input
+              id="totalAmount"
+              type="number"
+              class="form-input"
+              [(ngModel)]="bookingForm().totalAmount"
+              name="totalAmount"
+              step="0.01"
+              readonly
+            />
+            <span class="form-hint">Calculado automáticamente</span>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="specialRequests" class="form-label"
+              >Solicitudes Especiales</label
+            >
+            <textarea
+              id="specialRequests"
+              class="form-textarea"
+              [(ngModel)]="bookingForm().specialRequests"
+              name="specialRequests"
+              rows="3"
+              placeholder="Necesidades especiales, dieta, nivel de esquí..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="showCreateModal.set(false); showEditModal.set(false)"
+        >
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary">
+          {{ showCreateModal() ? "Crear Reserva" : "Guardar Cambios" }}
+        </button>
+      </div>
+    </form>
+  </app-admin-modal>
+
+  <!-- Details Modal -->
+  <app-admin-modal
+    [open]="showDetailsModal()"
+    title="Detalles de la Reserva"
+    size="md"
+    (modalClose)="showDetailsModal.set(false)"
+  >
+    @if (selectedBookingDetails()) {
+    <div class="booking-details">
+      <div class="detail-section">
+        <h4 class="detail-title">Información General</h4>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Referencia:</span>
+            <span class="detail-value">{{
+              selectedBookingDetails()!.bookingReference
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Estado:</span>
+            <app-admin-badge
+              [label]="getStatusLabel(selectedBookingDetails()!.status)"
+              [variant]="getBadgeVariant(selectedBookingDetails()!.status)"
+            />
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Estación:</span>
+            <span class="detail-value">{{
+              formatStationName(selectedBookingDetails()!.stationSlug)
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Servicio:</span>
+            <span class="detail-value">{{
+              formatServiceType(selectedBookingDetails()!.serviceType)
+            }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h4 class="detail-title">Cliente</h4>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Nombre:</span>
+            <span class="detail-value">{{
+              selectedBookingDetails()!.customerName
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Email:</span>
+            <span class="detail-value">{{
+              selectedBookingDetails()!.customerEmail
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Teléfono:</span>
+            <span class="detail-value">{{
+              selectedBookingDetails()!.customerPhone
+            }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h4 class="detail-title">Fechas y Precio</h4>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Fecha Inicio:</span>
+            <span class="detail-value">{{
+              formatDate(selectedBookingDetails()!.startDate)
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Fecha Fin:</span>
+            <span class="detail-value">{{
+              formatDate(selectedBookingDetails()!.endDate)
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Participantes:</span>
+            <span class="detail-value">{{
+              selectedBookingDetails()!.participants
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Importe Total:</span>
+            <span class="detail-value price"
+              >{{ selectedBookingDetails()!.totalAmount.toFixed(2) }} €</span
+            >
+          </div>
+        </div>
+      </div>
+
+      @if (selectedBookingDetails()!.specialRequests) {
+      <div class="detail-section">
+        <h4 class="detail-title">Solicitudes Especiales</h4>
+        <p class="special-requests">
+          {{ selectedBookingDetails()!.specialRequests }}
+        </p>
+      </div>
+      }
+    </div>
+    }
+  </app-admin-modal>
+
+  <!-- Confirm Booking Dialog -->
+  <app-admin-confirm-dialog
+    [open]="showConfirmBookingDialog()"
+    title="Confirmar Reserva"
+    message="¿Deseas confirmar esta reserva? Se enviará un email de confirmación al cliente."
+    variant="info"
+    confirmLabel="Confirmar"
+    cancelLabel="Cancelar"
+    (confirmAction)="executeConfirmBooking()"
+    (cancelAction)="showConfirmBookingDialog.set(false)"
+  />
+
+  <!-- Cancel Booking Dialog -->
+  <app-admin-confirm-dialog
+    [open]="showCancelBookingDialog()"
+    title="Cancelar Reserva"
+    message="¿Estás seguro de que deseas cancelar esta reserva? Esta acción no se puede deshacer."
+    variant="danger"
+    confirmLabel="Cancelar Reserva"
+    cancelLabel="Volver"
+    (confirmAction)="executeCancelBooking()"
+    (cancelAction)="showCancelBookingDialog.set(false)"
+  />
+</div>

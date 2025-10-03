@@ -1,0 +1,207 @@
+[
+  {
+    "lodgingId": "LDG001",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 12, "booked": 33, "blocked": 0 },
+        "2": { "available": 15, "booked": 30, "blocked": 0 },
+        "3": { "available": 18, "booked": 27, "blocked": 0 },
+        "4": { "available": 20, "booked": 25, "blocked": 0 },
+        "5": { "available": 20, "booked": 25, "blocked": 0 },
+        "10": { "available": 8, "booked": 35, "blocked": 2 },
+        "11": { "available": 5, "booked": 38, "blocked": 2 },
+        "12": { "available": 5, "booked": 40, "blocked": 0 },
+        "15": { "available": 12, "booked": 33, "blocked": 0 },
+        "20": { "available": 18, "booked": 27, "blocked": 0 },
+        "25": { "available": 10, "booked": 32, "blocked": 3 },
+        "31": { "available": 7, "booked": 36, "blocked": 2 }
+      },
+      "2025-11": {
+        "1": { "available": 6, "booked": 37, "blocked": 2 },
+        "5": { "available": 8, "booked": 35, "blocked": 2 },
+        "10": { "available": 10, "booked": 33, "blocked": 2 },
+        "15": { "available": 15, "booked": 28, "blocked": 2 },
+        "20": { "available": 12, "booked": 30, "blocked": 3 },
+        "25": { "available": 9, "booked": 34, "blocked": 2 },
+        "30": { "available": 5, "booked": 38, "blocked": 2 }
+      },
+      "2025-12": {
+        "1": { "available": 3, "booked": 40, "blocked": 2 },
+        "10": { "available": 2, "booked": 41, "blocked": 2 },
+        "15": { "available": 0, "booked": 43, "blocked": 2 },
+        "20": { "available": 1, "booked": 42, "blocked": 2 },
+        "24": { "available": 0, "booked": 45, "blocked": 0 },
+        "25": { "available": 0, "booked": 45, "blocked": 0 },
+        "31": { "available": 0, "booked": 45, "blocked": 0 }
+      }
+    },
+    "minStay": 2,
+    "maxStay": 14,
+    "checkInTime": "15:00",
+    "checkOutTime": "11:00"
+  },
+  {
+    "lodgingId": "LDG002",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 6, "booked": 18, "blocked": 0 },
+        "5": { "available": 8, "booked": 16, "blocked": 0 },
+        "10": { "available": 4, "booked": 19, "blocked": 1 },
+        "15": { "available": 7, "booked": 17, "blocked": 0 },
+        "20": { "available": 9, "booked": 15, "blocked": 0 },
+        "25": { "available": 5, "booked": 18, "blocked": 1 },
+        "31": { "available": 3, "booked": 20, "blocked": 1 }
+      },
+      "2025-11": {
+        "1": { "available": 4, "booked": 19, "blocked": 1 },
+        "10": { "available": 6, "booked": 17, "blocked": 1 },
+        "20": { "available": 8, "booked": 15, "blocked": 1 },
+        "30": { "available": 2, "booked": 21, "blocked": 1 }
+      },
+      "2025-12": {
+        "1": { "available": 1, "booked": 22, "blocked": 1 },
+        "15": { "available": 0, "booked": 23, "blocked": 1 },
+        "24": { "available": 0, "booked": 24, "blocked": 0 },
+        "31": { "available": 0, "booked": 24, "blocked": 0 }
+      }
+    },
+    "minStay": 3,
+    "maxStay": 21,
+    "checkInTime": "16:00",
+    "checkOutTime": "10:00"
+  },
+  {
+    "lodgingId": "LDG003",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 18, "booked": 12, "blocked": 0 },
+        "5": { "available": 20, "booked": 10, "blocked": 0 },
+        "10": { "available": 15, "booked": 14, "blocked": 1 },
+        "15": { "available": 17, "booked": 13, "blocked": 0 },
+        "20": { "available": 19, "booked": 11, "blocked": 0 },
+        "25": { "available": 14, "booked": 15, "blocked": 1 },
+        "31": { "available": 12, "booked": 17, "blocked": 1 }
+      },
+      "2025-11": {
+        "1": { "available": 10, "booked": 19, "blocked": 1 },
+        "10": { "available": 13, "booked": 16, "blocked": 1 },
+        "20": { "available": 16, "booked": 13, "blocked": 1 },
+        "30": { "available": 8, "booked": 21, "blocked": 1 }
+      },
+      "2025-12": {
+        "1": { "available": 5, "booked": 24, "blocked": 1 },
+        "15": { "available": 2, "booked": 27, "blocked": 1 },
+        "24": { "available": 0, "booked": 30, "blocked": 0 },
+        "31": { "available": 0, "booked": 30, "blocked": 0 }
+      }
+    },
+    "minStay": 1,
+    "maxStay": 7,
+    "checkInTime": "14:00",
+    "checkOutTime": "12:00"
+  },
+  {
+    "lodgingId": "LDG004",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 3, "booked": 5, "blocked": 0 },
+        "10": { "available": 4, "booked": 4, "blocked": 0 },
+        "20": { "available": 5, "booked": 3, "blocked": 0 },
+        "31": { "available": 2, "booked": 6, "blocked": 0 }
+      },
+      "2025-11": {
+        "1": { "available": 2, "booked": 6, "blocked": 0 },
+        "15": { "available": 3, "booked": 5, "blocked": 0 },
+        "30": { "available": 1, "booked": 7, "blocked": 0 }
+      },
+      "2025-12": {
+        "1": { "available": 1, "booked": 7, "blocked": 0 },
+        "15": { "available": 0, "booked": 8, "blocked": 0 },
+        "24": { "available": 0, "booked": 8, "blocked": 0 },
+        "31": { "available": 0, "booked": 8, "blocked": 0 }
+      }
+    },
+    "minStay": 2,
+    "maxStay": 10,
+    "checkInTime": "16:00",
+    "checkOutTime": "11:00"
+  },
+  {
+    "lodgingId": "LDG005",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 15, "booked": 43, "blocked": 2 },
+        "10": { "available": 12, "booked": 45, "blocked": 3 },
+        "20": { "available": 18, "booked": 40, "blocked": 2 },
+        "31": { "available": 10, "booked": 48, "blocked": 2 }
+      },
+      "2025-11": {
+        "1": { "available": 8, "booked": 50, "blocked": 2 },
+        "15": { "available": 14, "booked": 44, "blocked": 2 },
+        "30": { "available": 6, "booked": 52, "blocked": 2 }
+      },
+      "2025-12": {
+        "1": { "available": 3, "booked": 55, "blocked": 2 },
+        "15": { "available": 1, "booked": 57, "blocked": 2 },
+        "24": { "available": 0, "booked": 60, "blocked": 0 },
+        "31": { "available": 0, "booked": 60, "blocked": 0 }
+      }
+    },
+    "minStay": 2,
+    "maxStay": 14,
+    "checkInTime": "15:00",
+    "checkOutTime": "11:00"
+  },
+  {
+    "lodgingId": "LDG007",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 9, "booked": 28, "blocked": 1 },
+        "10": { "available": 7, "booked": 30, "blocked": 1 },
+        "20": { "available": 11, "booked": 26, "blocked": 1 },
+        "31": { "available": 6, "booked": 31, "blocked": 1 }
+      },
+      "2025-11": {
+        "1": { "available": 5, "booked": 32, "blocked": 1 },
+        "15": { "available": 8, "booked": 29, "blocked": 1 },
+        "30": { "available": 4, "booked": 33, "blocked": 1 }
+      },
+      "2025-12": {
+        "1": { "available": 2, "booked": 35, "blocked": 1 },
+        "15": { "available": 1, "booked": 36, "blocked": 1 },
+        "24": { "available": 0, "booked": 38, "blocked": 0 },
+        "31": { "available": 0, "booked": 38, "blocked": 0 }
+      }
+    },
+    "minStay": 2,
+    "maxStay": 14,
+    "checkInTime": "15:00",
+    "checkOutTime": "11:00"
+  },
+  {
+    "lodgingId": "LDG010",
+    "availability": {
+      "2025-10": {
+        "1": { "available": 7, "booked": 44, "blocked": 1 },
+        "10": { "available": 5, "booked": 46, "blocked": 1 },
+        "20": { "available": 9, "booked": 42, "blocked": 1 },
+        "31": { "available": 4, "booked": 47, "blocked": 1 }
+      },
+      "2025-11": {
+        "1": { "available": 3, "booked": 48, "blocked": 1 },
+        "15": { "available": 6, "booked": 45, "blocked": 1 },
+        "30": { "available": 2, "booked": 49, "blocked": 1 }
+      },
+      "2025-12": {
+        "1": { "available": 1, "booked": 50, "blocked": 1 },
+        "15": { "available": 0, "booked": 51, "blocked": 1 },
+        "24": { "available": 0, "booked": 52, "blocked": 0 },
+        "31": { "available": 0, "booked": 52, "blocked": 0 }
+      }
+    },
+    "minStay": 3,
+    "maxStay": 14,
+    "checkInTime": "15:00",
+    "checkOutTime": "12:00"
+  }
+]

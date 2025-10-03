@@ -1,0 +1,375 @@
+/* Planner Page Styles - Apple/Bolt Premium Design */
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Page Container */
+.font-sans {
+  animation: fadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Transitions */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Step Circles */
+.flex.items-center.justify-center.w-10.h-10.bg-teal-600 {
+  box-shadow: var(--shadow-2xl);
+  border-color: rgba(255, 255, 255, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Info Cards */
+.bg-gradient-to-r.from-teal-50:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Action Buttons */
+button.bg-blue-600:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-2xl);
+}
+
+button.bg-green-600:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-2xl);
+}
+
+button.bg-purple-600:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-2xl);
+}
+
+button.bg-gray-200:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Success Messages */
+.animate-slide-in {
+  animation: slide-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Cards Premium */
+.bg-white.rounded-xl.shadow-lg {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid transparent;
+}
+
+.bg-white.rounded-xl.shadow-lg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+/* Info Items Interactive */
+.flex.items-start.gap-3 {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.flex.items-start.gap-3:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(8px);
+}
+
+.flex.items-start.gap-3 .text-2xl {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.flex.items-start.gap-3:hover .text-2xl {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Tips List */
+ul li {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(8px);
+  padding-left: 1rem;
+}
+
+ul li span:first-child {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+ul li:hover span:first-child {
+  transform: scale(1.3) rotate(5deg);
+}
+
+/* Button Icons */
+button svg {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+button:hover svg {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Step Connector */
+.w-16.h-1 {
+  transition: all 0.3s ease;
+}
+
+/* Modal Background */
+.fixed.inset-0.bg-black {
+  backdrop-filter: blur(8px);
+}
+
+/* Review Step Premium Cards */
+.bg-white.rounded-2xl.shadow-xl {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-white.rounded-2xl.shadow-xl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.bg-white.rounded-2xl.shadow-xl:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.18);
+  border-color: rgba(100, 200, 255, 0.3);
+}
+
+.bg-white.rounded-2xl.shadow-xl:hover::before {
+  opacity: 1;
+}
+
+/* Review Header Gradients */
+.bg-gradient-to-r.from-teal-500.to-cyan-500,
+.bg-gradient-to-r.from-blue-500.to-indigo-500,
+.bg-gradient-to-r.from-green-500.to-emerald-500,
+.bg-gradient-to-r.from-orange-500.to-red-500 {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-to-r.from-teal-500.to-cyan-500::after,
+.bg-gradient-to-r.from-blue-500.to-indigo-500::after,
+.bg-gradient-to-r.from-green-500.to-emerald-500::after,
+.bg-gradient-to-r.from-orange-500.to-red-500::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.bg-gradient-to-r.from-teal-500.to-cyan-500:hover::after,
+.bg-gradient-to-r.from-blue-500.to-indigo-500:hover::after,
+.bg-gradient-to-r.from-green-500.to-emerald-500:hover::after,
+.bg-gradient-to-r.from-orange-500.to-red-500:hover::after {
+  left: 100%;
+}
+
+/* Edit Buttons in Review */
+button.bg-white\/20 {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+button.bg-white\/20:hover {
+  transform: scale(1.1) translateY(-2px);
+  background: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Stat Boxes in Review */
+.text-center.p-4 {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.text-center.p-4:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Activity Tags */
+.px-4.py-2.bg-gradient-to-r {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.px-4.py-2.bg-gradient-to-r:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Action Buttons - Review Step */
+button.px-8.py-4 {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button.px-8.py-4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+button.px-8.py-4:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+button.px-8.py-4:active {
+  transform: scale(0.95);
+}
+
+/* Gradient Overlays for Premium Feel */
+.bg-gradient-to-br.from-purple-600.to-pink-600 {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-to-br.from-purple-600.to-pink-600::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Step Circle Premium */
+.w-12.h-12 {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.w-12.h-12.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 0 0 currentColor;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flex.items-center.justify-center.w-10.h-10 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .w-12.h-12 {
+    width: 40px;
+    height: 40px;
+  }
+
+  button.w-full.px-4.py-3 {
+    font-size: 0.875rem;
+  }
+
+  button.px-8.py-4 {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .bg-white.rounded-2xl.shadow-xl:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+}

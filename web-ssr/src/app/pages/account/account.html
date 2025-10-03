@@ -1,1 +1,121 @@
-<p>account works!</p>
+﻿<!-- Account Page - Refactored with Components -->
+<!-- Site Header -->
+<app-site-header />
+
+<div class="min-h-screen bg-gray-50">
+  <!-- Initialization Loading -->
+  @if (isInitializing()) {
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="text-center">
+      <div
+        class="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent mb-4"
+      ></div>
+      <p class="text-slate-600">Cargando cuenta...</p>
+    </div>
+  </div>
+  }
+
+  <!-- Initialization Error -->
+  @else if (initError()) {
+  <div class="flex items-center justify-center min-h-screen px-4">
+    <div
+      class="bg-red-50 border border-red-200 rounded-xl p-8 max-w-md text-center"
+    >
+      <div class="text-6xl mb-4"></div>
+      <h2 class="text-xl font-bold text-red-900 mb-2">Error al cargar</h2>
+      <p class="text-red-700 mb-4">{{ initError() }}</p>
+      <button
+        (click)="ngOnInit()"
+        class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all"
+      >
+        Reintentar
+      </button>
+    </div>
+  </div>
+  }
+
+  <!-- Main Content -->
+  @else if (userProfile()) {
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-container">
+    <div class="breadcrumb-wrapper">
+      <a routerLink="/" class="breadcrumb-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="breadcrumb-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+        Inicio
+      </a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Mi Cuenta</span>
+    </div>
+  </div>
+
+  <!-- Header con título de app -->
+  <app-account-header />
+
+  <!-- Tabs de navegación -->
+  <app-account-tabs [activeTab]="activeTab()" (tabChange)="changeTab($event)" />
+  <!-- Contenido de las tabs -->
+  <div class="container mx-auto px-4 py-8">
+    <!-- Tab: Perfil -->
+    @if (activeTab() === 'profile' && userProfile()) {
+    <app-profile-tab [user]="userProfile()!" />
+    }
+
+    <!-- Tab: Reservas -->
+    @if (activeTab() === 'bookings') {
+    <app-bookings-tab [bookings]="bookings()" />
+    }
+
+    <!-- Tab: Preferencias -->
+    @if (activeTab() === 'preferences' && preferences()) {
+    <app-preferences-tab [preferences]="preferences()!" />
+    }
+
+    <!-- Tab: Seguridad -->
+    @if (activeTab() === 'security') {
+    <app-security-tab [sessions]="sessions()" />
+    }
+
+    <!-- Tab: Notificaciones -->
+    @if (activeTab() === 'notifications') {
+    <app-notifications-tab />
+    }
+
+    <!-- Tab: Premium -->
+    @if (activeTab() === 'premium') {
+    <app-premium-tab />
+    }
+
+    <!-- Tab: Activity -->
+    @if (activeTab() === 'activity') {
+    <app-activity-tab />
+    }
+
+    <!-- Tab: Documents -->
+    @if (activeTab() === 'documents') {
+    <app-documents-tab />
+    }
+
+    <!-- Tab: Friends -->
+    @if (activeTab() === 'friends') {
+    <app-friends-tab />
+    }
+  </div>
+  }
+</div>
+
+<!-- Site Footer -->
+<app-site-footer />

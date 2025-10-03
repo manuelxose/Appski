@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Parte de Nieve en Tiempo Real",
+    "description": "Información actualizada de todas las estaciones: estado de pistas, remontes y condiciones meteorológicas.",
+    "icon": "❄️",
+    "link": "/estaciones",
+    "gradient": "from-blue-500 to-cyan-500"
+  },
+  {
+    "title": "Planificador Inteligente",
+    "description": "Organiza tu viaje perfecto con sugerencias personalizadas de alojamiento, transporte y actividades.",
+    "icon": "🗓️",
+    "link": "/plan",
+    "gradient": "from-purple-500 to-pink-500"
+  },
+  {
+    "title": "Meteorología Avanzada",
+    "description": "Pronósticos detallados, mapas de precipitación y alertas de nieve para planificar con confianza.",
+    "icon": "🌤️",
+    "link": "/meteorologia",
+    "gradient": "from-orange-500 to-yellow-500"
+  },
+  {
+    "title": "Alquiler de Material",
+    "description": "Encuentra y reserva equipamiento en tiendas locales. Compara precios y disponibilidad.",
+    "icon": "🎿",
+    "link": "/alquiler-material",
+    "gradient": "from-green-500 to-teal-500"
+  },
+  {
+    "title": "Alojamientos Rurales",
+    "description": "Descubre cabañas, apartamentos y hoteles cerca de las pistas con las mejores valoraciones.",
+    "icon": "🏠",
+    "link": "/alojamientos",
+    "gradient": "from-red-500 to-pink-500"
+  },
+  {
+    "title": "Comunidad Premium",
+    "description": "Conecta con otros esquiadores, comparte experiencias y descubre rutas secretas.",
+    "icon": "👥",
+    "link": "/premium",
+    "gradient": "from-indigo-500 to-blue-500"
+  }
+]

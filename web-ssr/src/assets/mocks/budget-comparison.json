@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "category": "Revenue Total",
+      "actual": 2450000,
+      "budget": 2300000,
+      "variance": 150000,
+      "variancePercent": 6.52
+    },
+    {
+      "category": "Bookings Revenue",
+      "actual": 1592500,
+      "budget": 1500000,
+      "variance": 92500,
+      "variancePercent": 6.17
+    },
+    {
+      "category": "Premium Revenue",
+      "actual": 490000,
+      "budget": 460000,
+      "variance": 30000,
+      "variancePercent": 6.52
+    },
+    {
+      "category": "Commission Revenue",
+      "actual": 245000,
+      "budget": 230000,
+      "variance": 15000,
+      "variancePercent": 6.52
+    },
+    {
+      "category": "Advertising Revenue",
+      "actual": 122500,
+      "budget": 110000,
+      "variance": 12500,
+      "variancePercent": 11.36
+    },
+    {
+      "category": "Total Expenses",
+      "actual": 1875000,
+      "budget": 1900000,
+      "variance": -25000,
+      "variancePercent": -1.32
+    },
+    {
+      "category": "Marketing Expenses",
+      "actual": 490000,
+      "budget": 460000,
+      "variance": 30000,
+      "variancePercent": 6.52
+    },
+    {
+      "category": "Technology Expenses",
+      "actual": 367500,
+      "budget": 380000,
+      "variance": -12500,
+      "variancePercent": -3.29
+    },
+    {
+      "category": "Personnel Expenses",
+      "actual": 612500,
+      "budget": 575000,
+      "variance": 37500,
+      "variancePercent": 6.52
+    },
+    {
+      "category": "Admin Expenses",
+      "actual": 245000,
+      "budget": 285000,
+      "variance": -40000,
+      "variancePercent": -14.04
+    },
+    {
+      "category": "Support Expenses",
+      "actual": 122500,
+      "budget": 150000,
+      "variance": -27500,
+      "variancePercent": -18.33
+    },
+    {
+      "category": "Net Profit",
+      "actual": 575000,
+      "budget": 400000,
+      "variance": 175000,
+      "variancePercent": 43.75
+    }
+  ],
+  "summary": {
+    "totalActual": 2450000,
+    "totalBudget": 2300000,
+    "totalVariance": 150000,
+    "variancePercent": 6.52,
+    "itemsOverBudget": 5,
+    "itemsUnderBudget": 5,
+    "itemsOnBudget": 2,
+    "budgetAccuracy": 93.48,
+    "largestPositiveVariance": {
+      "category": "Net Profit",
+      "amount": 175000,
+      "percent": 43.75
+    },
+    "largestNegativeVariance": {
+      "category": "Admin Expenses",
+      "amount": -40000,
+      "percent": -14.04
+    }
+  }
+}

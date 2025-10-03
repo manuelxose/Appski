@@ -1,0 +1,72 @@
+<div class="file-upload">
+  <div
+    class="upload-zone"
+    [class.dragging]="isDragging()"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave()"
+    (drop)="onDrop($event)"
+  >
+    <div class="upload-icon">📁</div>
+    <h4 class="upload-title">Arrastra archivos aquí</h4>
+    <p class="upload-description">
+      o haz clic para seleccionar @if (acceptedTypes() !== 'any') {
+      <br />
+      <span class="upload-hint">
+        Archivos {{ acceptedTypes() }} hasta {{ maxFileSizeMB() }}MB
+      </span>
+      }
+    </p>
+
+    <input
+      type="file"
+      class="upload-input"
+      [accept]="getAcceptAttribute()"
+      [multiple]="multiple()"
+      (change)="onFileInputChange($event)"
+    />
+  </div>
+
+  @if (files().length > 0) {
+  <div class="files-list">
+    @for (file of files(); track file.id) {
+    <div class="file-item file-{{ file.status }}">
+      @if (file.preview) {
+      <img [src]="file.preview" alt="Preview" class="file-preview" />
+      } @else {
+      <div class="file-icon">📄</div>
+      }
+
+      <div class="file-info">
+        <div class="file-name">{{ file.file.name }}</div>
+        <div class="file-size">{{ (file.file.size / 1024).toFixed(1) }} KB</div>
+
+        @if (file.status === 'uploading') {
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="file.progress"></div>
+        </div>
+        <div class="progress-text">{{ file.progress }}%</div>
+        } @if (file.status === 'success') {
+        <div class="file-status status-success">✓ Completado</div>
+        } @if (file.status === 'error') {
+        <div class="file-status status-error">✕ Error</div>
+        }
+      </div>
+
+      <button
+        class="file-remove"
+        (click)="removeFile(file.id)"
+        type="button"
+        aria-label="Eliminar archivo"
+      >
+        ✕
+      </button>
+    </div>
+    }
+  </div>
+
+  @if (!autoUpload() && hasPendingFiles()) {
+  <button class="upload-button" (click)="uploadFiles()" type="button">
+    Subir archivos
+  </button>
+  } }
+</div>

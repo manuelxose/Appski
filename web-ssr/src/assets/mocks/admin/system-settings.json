@@ -1,0 +1,161 @@
+{
+  "system": {
+    "siteName": "Nieve - Plataforma de Reservas",
+    "siteUrl": "https://nieve.es",
+    "adminEmail": "admin@nieve.com",
+    "supportEmail": "support@nieve.com",
+    "timezone": "Europe/Madrid",
+    "language": "es",
+    "currency": "EUR",
+    "dateFormat": "DD/MM/YYYY",
+    "timeFormat": "HH:mm",
+    "maintenanceMode": false,
+    "allowRegistrations": true,
+    "requireEmailVerification": true,
+    "requirePhoneVerification": false
+  },
+  "payment": {
+    "providers": {
+      "stripe": {
+        "enabled": true,
+        "publishableKey": "pk_test_...",
+        "webhookSecret": "whsec_..."
+      },
+      "paypal": {
+        "enabled": true,
+        "clientId": "CLIENT_ID_...",
+        "mode": "sandbox"
+      }
+    },
+    "commissionRate": 15,
+    "taxRate": 21,
+    "currency": "EUR",
+    "allowedMethods": ["credit_card", "debit_card", "paypal", "bank_transfer"],
+    "autoRefundEnabled": true,
+    "refundWindow": 48
+  },
+  "booking": {
+    "minAdvanceBooking": 1,
+    "maxAdvanceBooking": 365,
+    "cancellationWindow": 48,
+    "autoConfirm": false,
+    "requireDeposit": false,
+    "depositPercentage": 30,
+    "reminderDaysBefore": 3,
+    "maxBookingsPerDay": 100
+  },
+  "email": {
+    "provider": "sendgrid",
+    "fromEmail": "noreply@nieve.com",
+    "fromName": "Nieve Reservas",
+    "replyToEmail": "support@nieve.com",
+    "templates": {
+      "booking_confirmation": "d-abc123...",
+      "booking_reminder": "d-def456...",
+      "payment_received": "d-ghi789...",
+      "refund_processed": "d-jkl012...",
+      "password_reset": "d-mno345..."
+    },
+    "sendTestEmails": false
+  },
+  "notifications": {
+    "enablePush": true,
+    "enableEmail": true,
+    "enableSMS": false,
+    "adminNotifications": {
+      "newBooking": true,
+      "paymentReceived": true,
+      "paymentFailed": true,
+      "refundRequested": true,
+      "newUser": false,
+      "newReview": true,
+      "lowStock": true
+    }
+  },
+  "security": {
+    "sessionTimeout": 3600,
+    "maxLoginAttempts": 5,
+    "lockoutDuration": 1800,
+    "passwordMinLength": 8,
+    "passwordRequireUppercase": true,
+    "passwordRequireNumbers": true,
+    "passwordRequireSpecialChars": true,
+    "twoFactorEnabled": false,
+    "ipWhitelist": [],
+    "allowedCorsOrigins": ["https://nieve.es", "http://localhost:4200"]
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX",
+    "facebookPixelId": "123456789012345",
+    "enableHotjar": false,
+    "hotjarId": "",
+    "enableUserTracking": true,
+    "anonymizeIp": true
+  },
+  "storage": {
+    "provider": "s3",
+    "bucket": "nieve-uploads",
+    "region": "eu-west-1",
+    "maxFileSize": 10485760,
+    "allowedFileTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp",
+      "application/pdf",
+      "video/mp4"
+    ],
+    "imageQuality": 85,
+    "generateThumbnails": true,
+    "thumbnailSizes": [
+      { "name": "small", "width": 150, "height": 150 },
+      { "name": "medium", "width": 600, "height": 400 },
+      { "name": "large", "width": 1200, "height": 800 }
+    ]
+  },
+  "features": {
+    "enableBlog": true,
+    "enableReviews": true,
+    "enableWishlist": true,
+    "enableChat": false,
+    "enableMultiLanguage": false,
+    "enableDynamicPricing": true,
+    "enableLoyaltyProgram": false,
+    "enableGiftCards": false
+  },
+  "integrations": {
+    "googleMaps": {
+      "enabled": true,
+      "apiKey": "AIzaSy..."
+    },
+    "weatherAPI": {
+      "enabled": true,
+      "provider": "openweathermap",
+      "apiKey": "abc123..."
+    },
+    "sms": {
+      "enabled": false,
+      "provider": "twilio",
+      "accountSid": "",
+      "authToken": "",
+      "fromNumber": ""
+    }
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 3600,
+    "clearOnUpdate": true,
+    "cacheStations": true,
+    "cacheBookings": false,
+    "cachePayments": false
+  },
+  "backup": {
+    "enabled": true,
+    "frequency": "daily",
+    "time": "03:00",
+    "retention": 30,
+    "includeMedia": true,
+    "destination": "s3://nieve-backups/"
+  },
+  "updatedAt": "2025-10-02T14:30:00Z",
+  "updatedBy": "ADM001"
+}

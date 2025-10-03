@@ -1,0 +1,44 @@
+/* Rental Sort Bar Styles */
+
+/* Select dropdown custom styles */
+select {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+select:hover {
+  border-color: #2563eb;
+}
+
+select:focus {
+  outline: none;
+}
+
+/* Results count animation */
+.font-semibold {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  select {
+    min-width: 0;
+    font-size: 0.875rem;
+  }
+}
+
+/* Fade in animation */
+.bg-white.rounded-xl {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

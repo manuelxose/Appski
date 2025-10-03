@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": "booking",
+    "title": "Nueva reserva",
+    "description": "Baqueira Beret - 2 noches",
+    "time": "hace 5 min",
+    "user": "María González",
+    "timestamp": "2025-10-02T14:55:00Z"
+  },
+  {
+    "id": 2,
+    "type": "user",
+    "title": "Nuevo usuario premium",
+    "description": "Suscripción anual activada",
+    "time": "hace 15 min",
+    "user": "Carlos Ruiz",
+    "timestamp": "2025-10-02T14:45:00Z"
+  },
+  {
+    "id": 3,
+    "type": "blog",
+    "title": "Artículo publicado",
+    "description": "Las 10 mejores pistas de España",
+    "time": "hace 1 hora",
+    "user": "Admin",
+    "timestamp": "2025-10-02T13:00:00Z"
+  },
+  {
+    "id": 4,
+    "type": "station",
+    "title": "Estación actualizada",
+    "description": "Sierra Nevada - Nuevas fotos",
+    "time": "hace 2 horas",
+    "user": "Admin",
+    "timestamp": "2025-10-02T12:00:00Z"
+  },
+  {
+    "id": 5,
+    "type": "booking",
+    "title": "Reserva confirmada",
+    "description": "Formigal - 3 noches",
+    "time": "hace 3 horas",
+    "user": "Ana Martínez",
+    "timestamp": "2025-10-02T11:00:00Z"
+  },
+  {
+    "id": 6,
+    "type": "user",
+    "title": "Usuario registrado",
+    "description": "Nuevo usuario desde Madrid",
+    "time": "hace 4 horas",
+    "user": "Pedro López",
+    "timestamp": "2025-10-02T10:00:00Z"
+  },
+  {
+    "id": 7,
+    "type": "booking",
+    "title": "Reserva cancelada",
+    "description": "Cerler - Reembolso procesado",
+    "time": "hace 5 horas",
+    "user": "Laura Sánchez",
+    "timestamp": "2025-10-02T09:00:00Z"
+  },
+  {
+    "id": 8,
+    "type": "blog",
+    "title": "Artículo en borrador",
+    "description": "Guía de esquí para principiantes",
+    "time": "hace 6 horas",
+    "user": "Admin",
+    "timestamp": "2025-10-02T08:00:00Z"
+  }
+]

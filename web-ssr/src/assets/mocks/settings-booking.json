@@ -1,0 +1,13 @@
+{
+  "freeCancellationDays": 7,
+  "depositPercentage": 20,
+  "paymentDeadlineHours": 48,
+  "defaultCheckInTime": "15:00",
+  "defaultCheckOutTime": "11:00",
+  "minimumAge": 18,
+  "allowInstantBooking": true,
+  "requirePhoneVerification": false,
+  "autoConfirmBookings": true,
+  "maxAdvanceBookingDays": 365,
+  "minAdvanceBookingHours": 24
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "María González",
+    "location": "Madrid",
+    "avatar": "👩‍🦰",
+    "rating": 5,
+    "text": "Increíble plataforma. Encontré las mejores condiciones de nieve en Sierra Nevada gracias a sus datos en tiempo real. ¡Muy recomendable!",
+    "date": "Hace 2 días"
+  },
+  {
+    "name": "Carlos Ruiz",
+    "location": "Barcelona",
+    "avatar": "👨‍💼",
+    "rating": 5,
+    "text": "El planificador inteligente me ahorró horas de búsqueda. Reservé alojamiento y material de alquiler en un solo lugar. Perfecto.",
+    "date": "Hace 1 semana"
+  },
+  {
+    "name": "Laura Martínez",
+    "location": "Valencia",
+    "avatar": "👩",
+    "rating": 5,
+    "text": "Los pronósticos meteorológicos son súper precisos. Pude planificar mi viaje con total confianza. La app es muy intuitiva.",
+    "date": "Hace 3 días"
+  },
+  {
+    "name": "David Sánchez",
+    "location": "Sevilla",
+    "avatar": "👨",
+    "rating": 5,
+    "text": "Como miembro Premium, tengo acceso anticipado a las mejores ofertas. Las notificaciones de nieve fresca son oro puro.",
+    "date": "Hace 5 días"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "siteName": "Nieve Platform",
+  "siteDescription": "La plataforma líder para reservas en estaciones de esquí y montaña. Encuentra las mejores ofertas, compara precios y reserva tu próxima aventura invernal.",
+  "logo": "https://cdn.nieve.com/assets/logo.svg",
+  "favicon": "https://cdn.nieve.com/assets/favicon.ico",
+  "timezone": "Europe/Madrid",
+  "defaultLanguage": "es",
+  "availableLanguages": ["es", "en", "fr"],
+  "dateFormat": "DD/MM/YYYY",
+  "timeFormat": "24h",
+  "defaultCurrency": "EUR",
+  "maintenanceMode": false,
+  "maintenanceMessage": "Estamos realizando mejoras en la plataforma. Volveremos pronto. Disculpen las molestias."
+}

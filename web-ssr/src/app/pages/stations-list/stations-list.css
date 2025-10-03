@@ -1,0 +1,87 @@
+/* Stations List Page Styles */
+
+/* Page header gradient animation */
+section.bg-gradient-to-br {
+  position: relative;
+  overflow: hidden;
+}
+
+section.bg-gradient-to-br::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10%, 10%);
+  }
+}
+
+/* Mobile filters overlay animation */
+.fixed.inset-0 {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.fixed.inset-0 > div:last-child {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile filter toggle button pulse on hover */
+.lg\:hidden button:hover {
+  animation: subtlePulse 0.3s ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Ensure proper spacing and layout */
+.container {
+  max-width: 1400px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

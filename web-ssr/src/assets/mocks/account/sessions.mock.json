@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sess_001",
+    "device": "Desktop",
+    "browser": "Chrome 120.0",
+    "os": "Windows 11",
+    "location": "Madrid, España",
+    "ip": "93.45.123.45",
+    "lastActive": "2025-10-02T10:30:00Z",
+    "isCurrentSession": true,
+    "createdAt": "2025-10-02T09:00:00Z"
+  },
+  {
+    "id": "sess_002",
+    "device": "Mobile",
+    "browser": "Safari 17.2",
+    "os": "iOS 17.2",
+    "location": "Madrid, España",
+    "ip": "93.45.123.46",
+    "lastActive": "2025-10-01T20:15:00Z",
+    "isCurrentSession": false,
+    "createdAt": "2025-09-28T14:20:00Z"
+  },
+  {
+    "id": "sess_003",
+    "device": "Tablet",
+    "browser": "Firefox 119.0",
+    "os": "Android 14",
+    "location": "Barcelona, España",
+    "ip": "88.12.45.78",
+    "lastActive": "2025-09-30T18:45:00Z",
+    "isCurrentSession": false,
+    "createdAt": "2025-09-25T11:30:00Z"
+  }
+]

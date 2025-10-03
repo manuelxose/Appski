@@ -1,0 +1,738 @@
+[
+  {
+    "id": "SHOP-OWN-001",
+    "shopId": "SHP-001",
+    "shopName": "SkiPro Sierra Nevada",
+    "firstName": "Miguel Ángel",
+    "lastName": "Rodríguez Fernández",
+    "email": "miguel.rodriguez@skipro.es",
+    "phone": "+34 612 345 678",
+    "dni": "12345678A",
+    "dateOfBirth": "1975-03-15T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Calle Mayor 45, 2º B",
+      "city": "Granada",
+      "postalCode": "18001",
+      "province": "Granada",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES76 2100 0813 3701 2345 6789",
+      "bank": "CaixaBank",
+      "accountHolder": "Miguel Ángel Rodríguez Fernández",
+      "swift": "CAIXESBBXXX"
+    },
+    "contract": {
+      "startDate": "2020-10-01T00:00:00Z",
+      "endDate": "2025-09-30T00:00:00Z",
+      "renewalDate": "2025-10-01T00:00:00Z",
+      "type": "franchise",
+      "duration": "5 años",
+      "commissionRate": 15.0,
+      "paymentTerms": "Mensual, antes del día 5",
+      "minimumGuarantee": 36000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato de Franquicia SkiPro SN",
+        "url": "/documents/contracts/skipro-sn-2020.pdf",
+        "uploadDate": "2020-09-15T00:00:00Z",
+        "expiryDate": "2025-09-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro de Responsabilidad Civil",
+        "url": "/documents/insurance/skipro-sn-rc-2024.pdf",
+        "uploadDate": "2024-11-01T00:00:00Z",
+        "expiryDate": "2025-10-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Comercial Ayto. Granada",
+        "url": "/documents/licenses/skipro-sn-comercial.pdf",
+        "uploadDate": "2020-09-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/skipro-sn-hacienda-2024.pdf",
+        "uploadDate": "2024-12-15T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 187650.0,
+      "previousYear": 165420.0,
+      "commissionPaid": 28147.5,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-05T00:00:00Z",
+      "nextPaymentDate": "2025-02-05T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 1456,
+      "averageRentalValue": 128.88,
+      "customerSatisfaction": 4.6,
+      "repeatCustomerRate": 42.3,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Propietario fundador, excelente relación comercial. Interesado en abrir segunda tienda en Pradollano.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2020-09-15T00:00:00Z",
+    "updatedAt": "2025-01-18T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-002",
+    "shopId": "SHP-002",
+    "shopName": "Baqueira Rental Pro",
+    "firstName": "Laura",
+    "lastName": "Martínez González",
+    "email": "laura.martinez@baqueirarental.com",
+    "phone": "+34 623 456 789",
+    "dni": "23456789B",
+    "dateOfBirth": "1980-07-22T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Avenida Baqueira 128, Bajo",
+      "city": "Vielha",
+      "postalCode": "25530",
+      "province": "Lleida",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES91 2100 5731 7602 0012 3456",
+      "bank": "CaixaBank",
+      "accountHolder": "Laura Martínez González",
+      "swift": "CAIXESBBXXX"
+    },
+    "contract": {
+      "startDate": "2019-11-01T00:00:00Z",
+      "endDate": "2024-10-31T00:00:00Z",
+      "renewalDate": "2024-11-01T00:00:00Z",
+      "type": "partnership",
+      "duration": "5 años",
+      "commissionRate": 12.0,
+      "paymentTerms": "Mensual, antes del día 10",
+      "minimumGuarantee": 48000.0,
+      "status": "renewed"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato de Colaboración Baqueira",
+        "url": "/documents/contracts/baqueira-rental-2024.pdf",
+        "uploadDate": "2024-10-01T00:00:00Z",
+        "expiryDate": "2029-10-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro RC y Contenidos",
+        "url": "/documents/insurance/baqueira-rental-rc-2024.pdf",
+        "uploadDate": "2024-10-15T00:00:00Z",
+        "expiryDate": "2025-10-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Actividad Val d'Aran",
+        "url": "/documents/licenses/baqueira-rental-actividad.pdf",
+        "uploadDate": "2019-10-20T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/baqueira-rental-hacienda-2024.pdf",
+        "uploadDate": "2024-12-10T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 156780.0,
+      "previousYear": 148950.0,
+      "commissionPaid": 18813.6,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-10T00:00:00Z",
+      "nextPaymentDate": "2025-02-10T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 1289,
+      "averageRentalValue": 121.63,
+      "customerSatisfaction": 4.7,
+      "repeatCustomerRate": 38.5,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Propietaria con amplia experiencia en esquí profesional. Excelente gestión de inventario premium.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2019-10-20T00:00:00Z",
+    "updatedAt": "2025-01-15T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-003",
+    "shopId": "SHP-003",
+    "shopName": "Formigal Ski Center",
+    "firstName": "Carlos",
+    "lastName": "Sánchez Ruiz",
+    "email": "carlos.sanchez@formigalski.es",
+    "phone": "+34 634 567 890",
+    "dni": "34567890C",
+    "dateOfBirth": "1972-11-08T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Urbanización Formigal, Local 5",
+      "city": "Sallent de Gállego",
+      "postalCode": "22640",
+      "province": "Huesca",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES12 0049 1234 5612 3456 7890",
+      "bank": "Banco Santander",
+      "accountHolder": "Carlos Sánchez Ruiz",
+      "swift": "BSCHESMMXXX"
+    },
+    "contract": {
+      "startDate": "2021-09-01T00:00:00Z",
+      "endDate": "2026-08-31T00:00:00Z",
+      "renewalDate": null,
+      "type": "franchise",
+      "duration": "5 años",
+      "commissionRate": 14.0,
+      "paymentTerms": "Mensual, antes del día 5",
+      "minimumGuarantee": 30000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato de Franquicia Formigal",
+        "url": "/documents/contracts/formigal-ski-2021.pdf",
+        "uploadDate": "2021-08-15T00:00:00Z",
+        "expiryDate": "2026-08-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Multirriesgo Comercio",
+        "url": "/documents/insurance/formigal-ski-multirriesgo-2024.pdf",
+        "uploadDate": "2024-08-20T00:00:00Z",
+        "expiryDate": "2025-08-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Apertura Ayto. Sallent",
+        "url": "/documents/licenses/formigal-ski-apertura.pdf",
+        "uploadDate": "2021-08-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/formigal-ski-hacienda-2024.pdf",
+        "uploadDate": "2024-12-05T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 98450.0,
+      "previousYear": 87320.0,
+      "commissionPaid": 13783.0,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-05T00:00:00Z",
+      "nextPaymentDate": "2025-02-05T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 876,
+      "averageRentalValue": 112.39,
+      "customerSatisfaction": 4.4,
+      "repeatCustomerRate": 35.2,
+      "onTimePaymentRate": 98.5
+    },
+    "notes": "Negocio familiar. Especializado en equipamiento de montaña y seguridad.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2021-08-15T00:00:00Z",
+    "updatedAt": "2025-01-12T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-004",
+    "shopId": "SHP-004",
+    "shopName": "Candanchú Equipment",
+    "firstName": "Ana Isabel",
+    "lastName": "López Torres",
+    "email": "anaisabel.lopez@candanchuequip.com",
+    "phone": "+34 645 678 901",
+    "dni": "45678901D",
+    "dateOfBirth": "1978-05-19T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Estación de Candanchú, Edificio Los Arañones",
+      "city": "Candanchú",
+      "postalCode": "22889",
+      "province": "Huesca",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES45 0081 1234 5601 2345 6789",
+      "bank": "Banco Sabadell",
+      "accountHolder": "Ana Isabel López Torres",
+      "swift": "BSABESBBXXX"
+    },
+    "contract": {
+      "startDate": "2018-10-01T00:00:00Z",
+      "endDate": "2023-09-30T00:00:00Z",
+      "renewalDate": "2023-10-01T00:00:00Z",
+      "type": "partnership",
+      "duration": "5 años",
+      "commissionRate": 10.0,
+      "paymentTerms": "Mensual, antes del día 15",
+      "minimumGuarantee": 42000.0,
+      "status": "renewed"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato de Colaboración Candanchú",
+        "url": "/documents/contracts/candanchu-equipment-2023.pdf",
+        "uploadDate": "2023-09-01T00:00:00Z",
+        "expiryDate": "2028-09-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro RC Profesional",
+        "url": "/documents/insurance/candanchu-equipment-rc-2024.pdf",
+        "uploadDate": "2024-09-15T00:00:00Z",
+        "expiryDate": "2025-09-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Comercial Candanchú",
+        "url": "/documents/licenses/candanchu-equipment-comercial.pdf",
+        "uploadDate": "2018-09-20T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/candanchu-equipment-hacienda-2024.pdf",
+        "uploadDate": "2024-12-20T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "certification",
+        "name": "Certificación UIAA Material Montaña",
+        "url": "/documents/certifications/candanchu-equipment-uiaa.pdf",
+        "uploadDate": "2023-06-10T00:00:00Z",
+        "expiryDate": "2026-06-30T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 145320.0,
+      "previousYear": 138670.0,
+      "commissionPaid": 14532.0,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-15T00:00:00Z",
+      "nextPaymentDate": "2025-02-15T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 1134,
+      "averageRentalValue": 128.15,
+      "customerSatisfaction": 4.8,
+      "repeatCustomerRate": 45.7,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Propietaria veterana con certificación UIAA. Líder en material de seguridad y alpinismo.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2018-09-20T00:00:00Z",
+    "updatedAt": "2025-01-20T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-005",
+    "shopId": "SHP-005",
+    "shopName": "Astún Ski Shop",
+    "firstName": "Roberto",
+    "lastName": "García Navarro",
+    "email": "roberto.garcia@astunskishop.es",
+    "phone": "+34 656 789 012",
+    "dni": "56789012E",
+    "dateOfBirth": "1985-02-14T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Estación de Astún, Edificio La Raca",
+      "city": "Astún",
+      "postalCode": "22889",
+      "province": "Huesca",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES67 0030 1234 5628 0000 1234",
+      "bank": "BBVA",
+      "accountHolder": "Roberto García Navarro",
+      "swift": "BBVAESMMXXX"
+    },
+    "contract": {
+      "startDate": "2022-11-01T00:00:00Z",
+      "endDate": "2027-10-31T00:00:00Z",
+      "renewalDate": null,
+      "type": "franchise",
+      "duration": "5 años",
+      "commissionRate": 13.0,
+      "paymentTerms": "Mensual, antes del día 5",
+      "minimumGuarantee": 38000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato de Franquicia Astún",
+        "url": "/documents/contracts/astun-ski-shop-2022.pdf",
+        "uploadDate": "2022-10-15T00:00:00Z",
+        "expiryDate": "2027-10-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Comercio y RC",
+        "url": "/documents/insurance/astun-ski-shop-rc-2024.pdf",
+        "uploadDate": "2024-10-25T00:00:00Z",
+        "expiryDate": "2025-10-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Apertura Astún",
+        "url": "/documents/licenses/astun-ski-shop-apertura.pdf",
+        "uploadDate": "2022-10-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/astun-ski-shop-hacienda-2024.pdf",
+        "uploadDate": "2024-12-18T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 112450.0,
+      "previousYear": 95280.0,
+      "commissionPaid": 14618.5,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-05T00:00:00Z",
+      "nextPaymentDate": "2025-02-05T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 967,
+      "averageRentalValue": 116.25,
+      "customerSatisfaction": 4.7,
+      "repeatCustomerRate": 41.8,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Propietario joven con enfoque digital. Implementó sistema de reservas online con gran éxito.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2022-10-15T00:00:00Z",
+    "updatedAt": "2025-01-17T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-006",
+    "shopId": "SHP-006",
+    "shopName": "La Molina Rental",
+    "firstName": "Patricia",
+    "lastName": "Vega Morales",
+    "email": "patricia.vega@lamolinarental.cat",
+    "phone": "+34 667 890 123",
+    "dni": "67890123F",
+    "dateOfBirth": "1982-09-27T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Passeig de La Molina 78, Local 2",
+      "city": "Alp",
+      "postalCode": "17538",
+      "province": "Girona",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES89 2100 9012 3456 7890 1234",
+      "bank": "CaixaBank",
+      "accountHolder": "Patricia Vega Morales",
+      "swift": "CAIXESBBXXX"
+    },
+    "contract": {
+      "startDate": "2020-12-01T00:00:00Z",
+      "endDate": "2025-11-30T00:00:00Z",
+      "renewalDate": "2025-12-01T00:00:00Z",
+      "type": "partnership",
+      "duration": "5 años",
+      "commissionRate": 11.0,
+      "paymentTerms": "Mensual, antes del día 10",
+      "minimumGuarantee": 35000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contracte de Col·laboració La Molina",
+        "url": "/documents/contracts/la-molina-rental-2020.pdf",
+        "uploadDate": "2020-11-15T00:00:00Z",
+        "expiryDate": "2025-11-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Assegurança RC Comerç",
+        "url": "/documents/insurance/la-molina-rental-rc-2024.pdf",
+        "uploadDate": "2024-11-20T00:00:00Z",
+        "expiryDate": "2025-11-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Llicència Municipal Alp",
+        "url": "/documents/licenses/la-molina-rental-municipal.pdf",
+        "uploadDate": "2020-11-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificat Hisenda 2024",
+        "url": "/documents/tax/la-molina-rental-hisenda-2024.pdf",
+        "uploadDate": "2024-12-12T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 89670.0,
+      "previousYear": 82450.0,
+      "commissionPaid": 9863.7,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-10T00:00:00Z",
+      "nextPaymentDate": "2025-02-10T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 734,
+      "averageRentalValue": 122.17,
+      "customerSatisfaction": 4.5,
+      "repeatCustomerRate": 37.9,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Propietaria bilingüe (castellano/catalán). Excelente atención a familias y niños.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2020-11-15T00:00:00Z",
+    "updatedAt": "2025-01-14T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-007",
+    "shopId": "SHP-007",
+    "shopName": "Cerler Pro Shop",
+    "firstName": "Alberto",
+    "lastName": "Prieto Ramírez",
+    "email": "alberto.prieto@cerlerproshop.es",
+    "phone": "+34 678 901 234",
+    "dni": "78901234G",
+    "dateOfBirth": "1970-12-03T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Plaza Mayor 12, Ático",
+      "city": "Benasque",
+      "postalCode": "22440",
+      "province": "Huesca",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES23 0182 1234 5670 0123 4567",
+      "bank": "BBVA",
+      "accountHolder": "Alberto Prieto Ramírez",
+      "swift": "BBVAESMMXXX"
+    },
+    "contract": {
+      "startDate": "2023-10-01T00:00:00Z",
+      "endDate": "2028-09-30T00:00:00Z",
+      "renewalDate": null,
+      "type": "exclusive_retail",
+      "duration": "5 años",
+      "commissionRate": 8.0,
+      "paymentTerms": "Trimestral, antes del día 15",
+      "minimumGuarantee": 60000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Exclusivo Retail Cerler",
+        "url": "/documents/contracts/cerler-pro-shop-2023.pdf",
+        "uploadDate": "2023-09-15T00:00:00Z",
+        "expiryDate": "2028-09-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Todo Riesgo Comercio Lujo",
+        "url": "/documents/insurance/cerler-pro-shop-todo-riesgo-2024.pdf",
+        "uploadDate": "2024-09-25T00:00:00Z",
+        "expiryDate": "2025-09-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Licencia Comercial Benasque",
+        "url": "/documents/licenses/cerler-pro-shop-comercial.pdf",
+        "uploadDate": "2023-09-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificado Hacienda 2024",
+        "url": "/documents/tax/cerler-pro-shop-hacienda-2024.pdf",
+        "uploadDate": "2024-12-22T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "partnership",
+        "name": "Acuerdo Marcas Premium (Head, Burton, Arc'teryx)",
+        "url": "/documents/partnerships/cerler-pro-shop-premium-brands.pdf",
+        "uploadDate": "2023-10-01T00:00:00Z",
+        "expiryDate": "2028-09-30T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 187650.0,
+      "previousYear": 0.0,
+      "commissionPaid": 15012.0,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-15T00:00:00Z",
+      "nextPaymentDate": "2025-04-15T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 0,
+      "averageRentalValue": 0.0,
+      "customerSatisfaction": 4.8,
+      "repeatCustomerRate": 52.1,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Tienda exclusiva retail de lujo. Sin alquiler, solo venta de equipamiento premium. Comisión más baja por volumen alto.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2023-09-15T00:00:00Z",
+    "updatedAt": "2025-01-19T00:00:00Z"
+  },
+  {
+    "id": "SHOP-OWN-008",
+    "shopId": "SHP-008",
+    "shopName": "Port Ainé Sports",
+    "firstName": "Cristina",
+    "lastName": "Campos Serrano",
+    "email": "cristina.campos@portainesports.cat",
+    "phone": "+34 689 012 345",
+    "dni": "89012345H",
+    "dateOfBirth": "1988-04-11T00:00:00Z",
+    "nationality": "Española",
+    "address": {
+      "street": "Carrer Major 34, 1º A",
+      "city": "Rialp",
+      "postalCode": "25594",
+      "province": "Lleida",
+      "country": "España"
+    },
+    "bankAccount": {
+      "iban": "ES56 0049 8765 4321 0987 6543",
+      "bank": "Banco Santander",
+      "accountHolder": "Cristina Campos Serrano",
+      "swift": "BSCHESMMXXX"
+    },
+    "contract": {
+      "startDate": "2023-12-01T00:00:00Z",
+      "endDate": "2028-11-30T00:00:00Z",
+      "renewalDate": null,
+      "type": "franchise",
+      "duration": "5 años",
+      "commissionRate": 12.0,
+      "paymentTerms": "Mensual, antes del día 5",
+      "minimumGuarantee": 25000.0,
+      "status": "active"
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contracte de Franquícia Port Ainé",
+        "url": "/documents/contracts/port-aine-sports-2023.pdf",
+        "uploadDate": "2023-11-15T00:00:00Z",
+        "expiryDate": "2028-11-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "insurance",
+        "name": "Assegurança RC i Continguts",
+        "url": "/documents/insurance/port-aine-sports-rc-2024.pdf",
+        "uploadDate": "2024-11-20T00:00:00Z",
+        "expiryDate": "2025-11-30T00:00:00Z",
+        "verified": true
+      },
+      {
+        "type": "license",
+        "name": "Llicència Municipal Rialp",
+        "url": "/documents/licenses/port-aine-sports-municipal.pdf",
+        "uploadDate": "2023-11-10T00:00:00Z",
+        "expiryDate": null,
+        "verified": true
+      },
+      {
+        "type": "tax_certificate",
+        "name": "Certificat Hisenda 2024",
+        "url": "/documents/tax/port-aine-sports-hisenda-2024.pdf",
+        "uploadDate": "2024-12-08T00:00:00Z",
+        "expiryDate": "2025-12-31T00:00:00Z",
+        "verified": true
+      }
+    ],
+    "revenue": {
+      "ytd": 34670.0,
+      "previousYear": 0.0,
+      "commissionPaid": 4160.4,
+      "commissionPending": 0.0,
+      "lastPaymentDate": "2025-01-05T00:00:00Z",
+      "nextPaymentDate": "2025-02-05T00:00:00Z"
+    },
+    "performance": {
+      "totalRentals": 287,
+      "averageRentalValue": 120.8,
+      "customerSatisfaction": 4.1,
+      "repeatCustomerRate": 28.5,
+      "onTimePaymentRate": 100.0
+    },
+    "notes": "Nueva propietaria, primer año operativo. Estación pequeña pero con potencial. Necesita apoyo en marketing.",
+    "status": "active",
+    "verified": true,
+    "createdAt": "2023-11-15T00:00:00Z",
+    "updatedAt": "2025-01-16T00:00:00Z"
+  }
+]

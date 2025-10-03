@@ -1,0 +1,176 @@
+{
+  "general": {
+    "totalUsers": 12847,
+    "activeUsers": 9234,
+    "totalBookings": 3456,
+    "totalRevenue": 425680.5,
+    "conversionRate": 3.8,
+    "averageTicket": 123.15,
+    "trends": {
+      "users": 12.5,
+      "bookings": 8.2,
+      "revenue": 15.3,
+      "conversion": -0.5
+    }
+  },
+  "financial": {
+    "totalPayments": 425680.5,
+    "pendingPayments": 12350.0,
+    "refundedAmount": 5420.0,
+    "netRevenue": 420260.5,
+    "commissionRate": 15,
+    "totalCommissions": 63903.08,
+    "monthlyRevenue": 125840.0,
+    "yearlyRevenue": 1285640.0,
+    "trends": {
+      "payments": 15.3,
+      "refunds": -8.5,
+      "revenue": 12.7,
+      "commissions": 14.2
+    }
+  },
+  "user": {
+    "totalUsers": 12847,
+    "activeUsers": 9234,
+    "inactiveUsers": 3613,
+    "newUsersThisMonth": 456,
+    "newUsersToday": 23,
+    "usersByRole": {
+      "admin": 5,
+      "manager": 12,
+      "user": 12830
+    },
+    "usersByStatus": {
+      "active": 9234,
+      "inactive": 3523,
+      "suspended": 90
+    },
+    "trends": {
+      "total": 12.5,
+      "active": 8.3,
+      "new": 15.7
+    }
+  },
+  "booking": {
+    "totalBookings": 3456,
+    "confirmedBookings": 2876,
+    "pendingBookings": 345,
+    "cancelledBookings": 235,
+    "completedBookings": 2541,
+    "averageBookingValue": 123.15,
+    "bookingsByService": {
+      "skipass": 1564,
+      "class": 678,
+      "equipment": 543,
+      "package": 671
+    },
+    "bookingsByStatus": {
+      "pending": 345,
+      "confirmed": 2876,
+      "cancelled": 235,
+      "completed": 2541
+    },
+    "trends": {
+      "total": 8.2,
+      "confirmed": 6.5,
+      "cancelled": -12.3,
+      "revenue": 10.5
+    }
+  },
+  "marketing": {
+    "impressions": 125847,
+    "clicks": 4567,
+    "ctr": 3.63,
+    "conversions": 234,
+    "conversionRate": 5.12,
+    "cpa": 18.5,
+    "roi": 320,
+    "adSpend": 4329.0,
+    "revenue": 13852.8,
+    "trends": {
+      "impressions": 18.5,
+      "ctr": 2.3,
+      "conversions": 12.8,
+      "roi": 25.4
+    }
+  },
+  "topStations": [
+    {
+      "id": "sierra-nevada",
+      "name": "Sierra Nevada",
+      "bookings": 1245,
+      "revenue": 153475.5,
+      "growth": 15.3
+    },
+    {
+      "id": "baqueira-beret",
+      "name": "Baqueira Beret",
+      "bookings": 987,
+      "revenue": 142850.0,
+      "growth": 12.7
+    },
+    {
+      "id": "formigal",
+      "name": "Formigal",
+      "bookings": 876,
+      "revenue": 98765.0,
+      "growth": 8.5
+    }
+  ],
+  "topServices": [
+    {
+      "type": "skipass",
+      "bookings": 1564,
+      "revenue": 192450.0,
+      "percentage": 45
+    },
+    {
+      "type": "package",
+      "bookings": 671,
+      "revenue": 127704.0,
+      "percentage": 30
+    },
+    {
+      "type": "class",
+      "bookings": 678,
+      "revenue": 63894.0,
+      "percentage": 15
+    },
+    {
+      "type": "equipment",
+      "bookings": 543,
+      "revenue": 41632.5,
+      "percentage": 10
+    }
+  ],
+  "recentActivity": [
+    {
+      "id": "ACT001",
+      "type": "booking_confirmed",
+      "message": "Nueva reserva confirmada en Sierra Nevada",
+      "timestamp": "2025-10-03T10:30:00Z",
+      "icon": "✅"
+    },
+    {
+      "id": "ACT002",
+      "type": "payment_received",
+      "message": "Pago recibido por 450€",
+      "timestamp": "2025-10-03T09:15:00Z",
+      "icon": "💰"
+    },
+    {
+      "id": "ACT003",
+      "type": "user_registered",
+      "message": "Nuevo usuario registrado: carlos.martinez@email.com",
+      "timestamp": "2025-10-03T08:45:00Z",
+      "icon": "👤"
+    },
+    {
+      "id": "ACT004",
+      "type": "refund_processed",
+      "message": "Reembolso procesado por 100€",
+      "timestamp": "2025-10-03T07:20:00Z",
+      "icon": "🔄"
+    }
+  ]
+}

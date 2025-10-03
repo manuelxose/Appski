@@ -1,0 +1,10 @@
+{
+  "totalBookings": 2543,
+  "activeUsers": 8234,
+  "revenue": 125430,
+  "stations": 42,
+  "bookingsChange": 12.5,
+  "usersChange": 8.2,
+  "revenueChange": 23.1,
+  "stationsChange": 5.0
+}

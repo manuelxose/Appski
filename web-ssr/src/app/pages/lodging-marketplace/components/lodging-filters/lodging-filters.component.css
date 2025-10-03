@@ -1,0 +1,104 @@
+/* Lodging Filters Styles */
+
+/* Checkbox custom styles */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Range slider custom styles */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Number input styles */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* Hover effects */
+label:hover input[type="checkbox"] {
+  border-color: #2563eb;
+}
+
+/* Animation for filter changes */
+.space-y-2 > label,
+.grid > label {
+  transition: all 0.2s ease;
+}
+
+.space-y-2 > label:hover,
+.grid > label:hover {
+  background-color: #f8fafc;
+  transform: translateX(2px);
+}
+
+/* Badge animation */
+.inline-flex {
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sticky positioning enhancement */
+.sticky {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Reset button hover */
+button[data-i18n="lodging.filters.reset"]:hover {
+  text-decoration: underline;
+}
+
+/* Rating buttons */
+button.flex-1 {
+  transition: all 0.2s ease;
+}
+
+button.flex-1:hover {
+  transform: translateY(-2px);
+}
+
+button.flex-1:active {
+  transform: translateY(0);
+}

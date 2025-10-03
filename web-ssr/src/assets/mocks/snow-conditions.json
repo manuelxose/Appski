@@ -1,0 +1,29 @@
+{
+  "stationSlug": "baqueira-beret",
+  "updatedAt": "2025-10-01T08:00:00Z",
+  "avalancheRisk": "low",
+  "base": {
+    "altitudeM": 1500,
+    "depthCm": 45,
+    "quality": "packed",
+    "tempC": 8,
+    "windKmh": 12,
+    "lastSnowfall": "2025-09-28T14:30:00Z"
+  },
+  "mid": {
+    "altitudeM": 1800,
+    "depthCm": 65,
+    "quality": "packed",
+    "tempC": 5,
+    "windKmh": 18,
+    "lastSnowfall": "2025-09-28T14:30:00Z"
+  },
+  "top": {
+    "altitudeM": 2510,
+    "depthCm": 85,
+    "quality": "powder",
+    "tempC": -2,
+    "windKmh": 25,
+    "lastSnowfall": "2025-09-29T06:00:00Z"
+  }
+}

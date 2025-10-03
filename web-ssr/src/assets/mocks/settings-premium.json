@@ -1,0 +1,99 @@
+{
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "description": "Plan gratuito para usuarios individuales",
+      "monthlyPrice": 0,
+      "yearlyPrice": 0,
+      "features": [
+        "Búsqueda ilimitada de estaciones",
+        "Comparación de precios",
+        "Alertas de nieve básicas",
+        "Acceso a webcams públicas"
+      ],
+      "limits": {
+        "bookings": 5,
+        "users": 1,
+        "storage": 100,
+        "stations": 10
+      },
+      "popular": false
+    },
+    {
+      "id": "basic",
+      "name": "Basic",
+      "description": "Plan básico para usuarios frecuentes",
+      "monthlyPrice": 9.99,
+      "yearlyPrice": 99.99,
+      "features": [
+        "Todo de Free",
+        "Reservas ilimitadas",
+        "Alertas meteorológicas avanzadas",
+        "Descuentos exclusivos (5-10%)",
+        "Soporte por email",
+        "Acceso prioritario a ofertas"
+      ],
+      "limits": {
+        "bookings": 9999,
+        "users": 1,
+        "storage": 1024,
+        "stations": 9999
+      },
+      "popular": false
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "description": "Plan profesional para grupos y familias",
+      "monthlyPrice": 24.99,
+      "yearlyPrice": 249.99,
+      "features": [
+        "Todo de Basic",
+        "Hasta 5 usuarios por cuenta",
+        "Descuentos superiores (10-20%)",
+        "Gestión de grupo",
+        "Estadísticas personalizadas",
+        "Soporte telefónico 24/7",
+        "Cancelación gratuita extendida",
+        "Acceso beta a nuevas funciones"
+      ],
+      "limits": {
+        "bookings": 9999,
+        "users": 5,
+        "storage": 5120,
+        "stations": 9999
+      },
+      "popular": true
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "description": "Plan empresarial para agencias de viajes",
+      "monthlyPrice": 99.99,
+      "yearlyPrice": 999.99,
+      "features": [
+        "Todo de Pro",
+        "Usuarios ilimitados",
+        "API personalizada",
+        "Integración con sistemas propios",
+        "Soporte dedicado",
+        "SLA garantizado 99.9%",
+        "Formación personalizada",
+        "Facturación centralizada",
+        "Reportes avanzados",
+        "White-label disponible"
+      ],
+      "limits": {
+        "bookings": 9999,
+        "users": 9999,
+        "storage": 51200,
+        "stations": 9999
+      },
+      "popular": false
+    }
+  ],
+  "enablePremium": true,
+  "trialDays": 14,
+  "allowDowngrade": true
+}

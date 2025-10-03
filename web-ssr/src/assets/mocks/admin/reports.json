@@ -1,0 +1,181 @@
+{
+  "reports": [
+    {
+      "id": "REP001",
+      "title": "Informe Mensual Septiembre 2025",
+      "type": "monthly",
+      "period": {
+        "start": "2025-09-01",
+        "end": "2025-09-30"
+      },
+      "status": "completed",
+      "format": "pdf",
+      "fileSize": 2458000,
+      "url": "/assets/reports/monthly-2025-09.pdf",
+      "sections": [
+        "executive_summary",
+        "financial_overview",
+        "booking_analysis",
+        "customer_insights",
+        "station_performance",
+        "recommendations"
+      ],
+      "generatedBy": "ADM001",
+      "generatedAt": "2025-10-01T09:00:00Z",
+      "dataRange": {
+        "revenue": 125840.0,
+        "bookings": 456,
+        "newCustomers": 89,
+        "activeStations": 3
+      }
+    },
+    {
+      "id": "REP002",
+      "title": "Análisis Q3 2025",
+      "type": "quarterly",
+      "period": {
+        "start": "2025-07-01",
+        "end": "2025-09-30"
+      },
+      "status": "completed",
+      "format": "pdf",
+      "fileSize": 4567000,
+      "url": "/assets/reports/quarterly-2025-Q3.pdf",
+      "sections": [
+        "executive_summary",
+        "financial_performance",
+        "market_analysis",
+        "competitive_landscape",
+        "growth_opportunities",
+        "strategic_recommendations"
+      ],
+      "generatedBy": "ADM001",
+      "generatedAt": "2025-10-02T14:00:00Z",
+      "dataRange": {
+        "revenue": 325680.0,
+        "bookings": 1234,
+        "newCustomers": 267,
+        "growthRate": 15.3
+      }
+    },
+    {
+      "id": "REP003",
+      "title": "Informe Personalizado - Sierra Nevada",
+      "type": "custom",
+      "period": {
+        "start": "2025-01-01",
+        "end": "2025-09-30"
+      },
+      "status": "processing",
+      "format": "xlsx",
+      "filters": {
+        "stationId": "sierra-nevada",
+        "includeBookings": true,
+        "includeRevenue": true,
+        "includeCustomerData": true
+      },
+      "generatedBy": "MGR001",
+      "requestedAt": "2025-10-03T10:30:00Z",
+      "estimatedCompletion": "2025-10-03T11:00:00Z"
+    },
+    {
+      "id": "REP004",
+      "title": "Exportación Datos Financieros 2025",
+      "type": "export",
+      "period": {
+        "start": "2025-01-01",
+        "end": "2025-09-30"
+      },
+      "status": "completed",
+      "format": "xlsx",
+      "fileSize": 890000,
+      "url": "/assets/exports/financial-data-2025.xlsx",
+      "sheets": ["payments", "invoices", "refunds", "payouts", "summary"],
+      "generatedBy": "ADM001",
+      "generatedAt": "2025-10-02T16:20:00Z",
+      "dataRange": {
+        "totalPayments": 425680.0,
+        "totalInvoices": 1567,
+        "totalRefunds": 5420.0,
+        "totalPayouts": 72990.0
+      }
+    },
+    {
+      "id": "REP005",
+      "title": "Dashboard Ejecutivo - Semanal",
+      "type": "weekly",
+      "period": {
+        "start": "2025-09-27",
+        "end": "2025-10-03"
+      },
+      "status": "scheduled",
+      "format": "pdf",
+      "schedule": "every_monday_09:00",
+      "recipients": [
+        "admin@nieve.com",
+        "manager.baqueira@nieve.com",
+        "manager.formigal@nieve.com"
+      ],
+      "autoGenerate": true,
+      "nextGeneration": "2025-10-07T09:00:00Z"
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL001",
+      "name": "Informe Mensual Estándar",
+      "type": "monthly",
+      "sections": [
+        "executive_summary",
+        "financial_overview",
+        "booking_analysis",
+        "customer_insights",
+        "recommendations"
+      ],
+      "format": "pdf",
+      "active": true
+    },
+    {
+      "id": "TPL002",
+      "name": "Exportación Financiera Completa",
+      "type": "export",
+      "dataIncludes": [
+        "payments",
+        "invoices",
+        "refunds",
+        "payouts",
+        "commissions"
+      ],
+      "format": "xlsx",
+      "active": true
+    },
+    {
+      "id": "TPL003",
+      "name": "Análisis de Estación Individual",
+      "type": "custom",
+      "sections": [
+        "station_overview",
+        "booking_trends",
+        "revenue_analysis",
+        "customer_demographics",
+        "service_popularity"
+      ],
+      "format": "pdf",
+      "active": true
+    }
+  ],
+  "summary": {
+    "totalReports": 5,
+    "completedReports": 3,
+    "processingReports": 1,
+    "scheduledReports": 1,
+    "totalSize": 7915000,
+    "byType": {
+      "monthly": 1,
+      "quarterly": 1,
+      "weekly": 1,
+      "custom": 1,
+      "export": 1
+    }
+  }
+}

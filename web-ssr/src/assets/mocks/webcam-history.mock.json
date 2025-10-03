@@ -1,0 +1,142 @@
+{
+  "webcamId": "webcam-cotos-pista-principal",
+  "webcamName": "Pista Principal",
+  "dateRange": {
+    "from": "2025-01-15T08:00:00Z",
+    "to": "2025-01-15T18:00:00Z"
+  },
+  "snapshots": [
+    {
+      "id": "snap-001",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow1/1920/1080",
+      "timestamp": "2025-01-15T08:00:00Z",
+      "conditions": {
+        "tempC": -5,
+        "snowCm": 45,
+        "visibility": "excellent",
+        "weather": "sunny"
+      }
+    },
+    {
+      "id": "snap-002",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow2/1920/1080",
+      "timestamp": "2025-01-15T09:00:00Z",
+      "conditions": {
+        "tempC": -4,
+        "snowCm": 45,
+        "visibility": "excellent",
+        "weather": "sunny"
+      }
+    },
+    {
+      "id": "snap-003",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow3/1920/1080",
+      "timestamp": "2025-01-15T10:00:00Z",
+      "conditions": {
+        "tempC": -3,
+        "snowCm": 46,
+        "visibility": "good",
+        "weather": "partly-cloudy"
+      }
+    },
+    {
+      "id": "snap-004",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow4/1920/1080",
+      "timestamp": "2025-01-15T11:00:00Z",
+      "conditions": {
+        "tempC": -2,
+        "snowCm": 46,
+        "visibility": "good",
+        "weather": "partly-cloudy"
+      }
+    },
+    {
+      "id": "snap-005",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow5/1920/1080",
+      "timestamp": "2025-01-15T12:00:00Z",
+      "conditions": {
+        "tempC": -1,
+        "snowCm": 47,
+        "visibility": "moderate",
+        "weather": "cloudy"
+      }
+    },
+    {
+      "id": "snap-006",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow6/1920/1080",
+      "timestamp": "2025-01-15T13:00:00Z",
+      "conditions": {
+        "tempC": 0,
+        "snowCm": 48,
+        "visibility": "moderate",
+        "weather": "snowy"
+      }
+    },
+    {
+      "id": "snap-007",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow7/1920/1080",
+      "timestamp": "2025-01-15T14:00:00Z",
+      "conditions": {
+        "tempC": 0,
+        "snowCm": 50,
+        "visibility": "poor",
+        "weather": "snowy"
+      }
+    },
+    {
+      "id": "snap-008",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow8/1920/1080",
+      "timestamp": "2025-01-15T15:00:00Z",
+      "conditions": {
+        "tempC": -1,
+        "snowCm": 52,
+        "visibility": "poor",
+        "weather": "snowy"
+      }
+    },
+    {
+      "id": "snap-009",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow9/1920/1080",
+      "timestamp": "2025-01-15T16:00:00Z",
+      "conditions": {
+        "tempC": -2,
+        "snowCm": 53,
+        "visibility": "moderate",
+        "weather": "cloudy"
+      }
+    },
+    {
+      "id": "snap-010",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow10/1920/1080",
+      "timestamp": "2025-01-15T17:00:00Z",
+      "conditions": {
+        "tempC": -3,
+        "snowCm": 53,
+        "visibility": "good",
+        "weather": "partly-cloudy"
+      }
+    },
+    {
+      "id": "snap-011",
+      "webcamId": "webcam-cotos-pista-principal",
+      "imageUrl": "https://picsum.photos/seed/snow11/1920/1080",
+      "timestamp": "2025-01-15T18:00:00Z",
+      "conditions": {
+        "tempC": -4,
+        "snowCm": 53,
+        "visibility": "excellent",
+        "weather": "sunny"
+      }
+    }
+  ]
+}

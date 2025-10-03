@@ -1,0 +1,62 @@
+<div class="date-range-picker">
+  <button class="picker-trigger" (click)="togglePicker()" type="button">
+    <span class="trigger-icon">📅</span>
+    <span class="trigger-label">{{ displayLabel() }}</span>
+    <span class="trigger-arrow" [class.open]="isOpen()">▼</span>
+  </button>
+
+  @if (isOpen()) {
+  <div class="picker-dropdown">
+    @if (showPresets()) {
+    <div class="picker-presets">
+      <h4 class="presets-title">Rangos rápidos</h4>
+      @for (preset of presets; track preset.key) {
+      <button
+        class="preset-button"
+        [class.active]="selectedPreset() === preset.key"
+        (click)="selectPreset(preset.key)"
+        type="button"
+      >
+        {{ preset.label }}
+      </button>
+      }
+    </div>
+    }
+
+    <div class="picker-inputs">
+      <div class="input-group">
+        <label for="start-date" class="input-label">Fecha inicio</label>
+        <input
+          id="start-date"
+          type="date"
+          class="date-input"
+          [(ngModel)]="startDate"
+          [min]="minDate() ? toInputValue(minDate()!) : undefined"
+          [max]="maxDate() ? toInputValue(maxDate()!) : undefined"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="end-date" class="input-label">Fecha fin</label>
+        <input
+          id="end-date"
+          type="date"
+          class="date-input"
+          [(ngModel)]="endDate"
+          [min]="minDate() ? toInputValue(minDate()!) : undefined"
+          [max]="maxDate() ? toInputValue(maxDate()!) : undefined"
+        />
+      </div>
+
+      <button
+        class="apply-button"
+        (click)="applyRange()"
+        type="button"
+        [disabled]="!startDate() || !endDate()"
+      >
+        Aplicar
+      </button>
+    </div>
+  </div>
+  }
+</div>

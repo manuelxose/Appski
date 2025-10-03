@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "name": "Baqueira Beret",
+    "slug": "baqueira-beret",
+    "location": "Valle de Arán, Lleida",
+    "altitude": {
+      "min": 1500,
+      "max": 2510
+    },
+    "status": "seasonal",
+    "totalPistes": 110,
+    "totalLifts": 35,
+    "skiableArea": 2273,
+    "snowDepth": 0,
+    "lastUpdate": "2025-10-02T10:00:00Z",
+    "websiteUrl": "https://www.baqueira.es",
+    "phoneNumber": "+34 973 639 000",
+    "isActive": true,
+    "images": [
+      "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=800",
+      "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sierra Nevada",
+    "slug": "sierra-nevada",
+    "location": "Granada, Andalucía",
+    "altitude": {
+      "min": 2100,
+      "max": 3300
+    },
+    "status": "seasonal",
+    "totalPistes": 115,
+    "totalLifts": 28,
+    "skiableArea": 1200,
+    "snowDepth": 0,
+    "lastUpdate": "2025-10-02T09:30:00Z",
+    "websiteUrl": "https://www.sierranevada.es",
+    "phoneNumber": "+34 958 708 090",
+    "isActive": true,
+    "images": [
+      "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?w=800",
+      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Formigal",
+    "slug": "formigal",
+    "location": "Sallent de Gállego, Huesca",
+    "altitude": {
+      "min": 1500,
+      "max": 2250
+    },
+    "status": "seasonal",
+    "totalPistes": 141,
+    "totalLifts": 22,
+    "skiableArea": 1464,
+    "snowDepth": 0,
+    "lastUpdate": "2025-10-02T08:45:00Z",
+    "websiteUrl": "https://www.formigal.com",
+    "phoneNumber": "+34 974 490 000",
+    "isActive": true,
+    "images": [
+      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Cerler",
+    "slug": "cerler",
+    "location": "Benasque, Huesca",
+    "altitude": {
+      "min": 1500,
+      "max": 2630
+    },
+    "status": "seasonal",
+    "totalPistes": 78,
+    "totalLifts": 18,
+    "skiableArea": 1080,
+    "snowDepth": 0,
+    "lastUpdate": "2025-10-02T11:15:00Z",
+    "websiteUrl": "https://www.cerler.com",
+    "phoneNumber": "+34 974 551 111",
+    "isActive": true,
+    "images": [
+      "https://images.unsplash.com/photo-1521143544371-2a6a04f3c721?w=800"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "La Molina",
+    "slug": "la-molina",
+    "location": "Alp, Girona",
+    "altitude": {
+      "min": 1700,
+      "max": 2537
+    },
+    "status": "seasonal",
+    "totalPistes": 71,
+    "totalLifts": 18,
+    "skiableArea": 1458,
+    "snowDepth": 0,
+    "lastUpdate": "2025-10-02T10:30:00Z",
+    "websiteUrl": "https://www.lamolina.cat",
+    "phoneNumber": "+34 972 892 031",
+    "isActive": true,
+    "images": [
+      "https://images.unsplash.com/photo-1551582045-6ec9c11d8697?w=800"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Candanchú",
+    "slug": "candanchu",
+    "location": "Candanchú, Huesca",
+    "altitude": {
+      "min": 1530,
+      "max": 2400
+    },
+    "status": "maintenance",
+    "totalPistes": 50,
+    "totalLifts": 10,
+    "skiableArea": 400,
+    "snowDepth": 0,
+    "lastUpdate": "2025-09-15T14:00:00Z",
+    "websiteUrl": "https://www.candanchu.com",
+    "phoneNumber": "+34 974 373 192",
+    "isActive": false,
+    "images": [
+      "https://images.unsplash.com/photo-1565992441121-4367c2967103?w=800"
+    ]
+  }
+]

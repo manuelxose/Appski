@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "category": "Marketing & Sales",
+      "amount": 490000,
+      "percentage": 26.13,
+      "budget": 460000,
+      "variance": 30000,
+      "color": "#3b82f6"
+    },
+    {
+      "category": "Technology & Development",
+      "amount": 367500,
+      "percentage": 19.6,
+      "budget": 380000,
+      "variance": -12500,
+      "color": "#8b5cf6"
+    },
+    {
+      "category": "Personnel",
+      "amount": 612500,
+      "percentage": 32.67,
+      "budget": 575000,
+      "variance": 37500,
+      "color": "#10b981"
+    },
+    {
+      "category": "General & Administrative",
+      "amount": 245000,
+      "percentage": 13.07,
+      "budget": 285000,
+      "variance": -40000,
+      "color": "#f59e0b"
+    },
+    {
+      "category": "Customer Support",
+      "amount": 122500,
+      "percentage": 6.53,
+      "budget": 150000,
+      "variance": -27500,
+      "color": "#ef4444"
+    },
+    {
+      "category": "Other",
+      "amount": 37500,
+      "percentage": 2.0,
+      "budget": 50000,
+      "variance": -12500,
+      "color": "#6b7280"
+    }
+  ],
+  "summary": {
+    "totalExpenses": 1875000,
+    "totalBudget": 1900000,
+    "totalVariance": -25000,
+    "variancePercent": -1.32,
+    "largestCategory": "Personnel",
+    "largestAmount": 612500,
+    "smallestCategory": "Other",
+    "smallestAmount": 37500,
+    "overBudgetCategories": 2,
+    "underBudgetCategories": 4
+  }
+}

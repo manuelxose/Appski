@@ -1,0 +1,27 @@
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+  <button
+    (click)="faqToggle.emit()"
+    class="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+  >
+    <span class="font-semibold text-slate-900 pr-8">
+      {{ faq().question }}
+    </span>
+    <svg
+      [class.rotate-180]="faq().open"
+      class="w-6 h-6 text-slate-400 transition-transform flex-shrink-0"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </button>
+  @if (faq().open) {
+  <div class="px-6 pb-6 text-slate-600">{{ faq().answer }}</div>
+  }
+</div>

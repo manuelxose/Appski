@@ -1,0 +1,44 @@
+{
+  "general": {
+    "siteName": "Nieve - Plataforma de Esquí",
+    "siteDescription": "La mejor plataforma para reservar tu próxima aventura en la nieve",
+    "contactEmail": "contacto@nieveapp.com",
+    "supportPhone": "+34 900 123 456",
+    "timezone": "Europe/Madrid",
+    "language": "es-ES",
+    "currency": "EUR"
+  },
+  "booking": {
+    "minAdvanceBookingDays": 1,
+    "maxAdvanceBookingDays": 365,
+    "cancellationDeadlineHours": 48,
+    "refundPercentage": 80,
+    "requirePaymentUpfront": true,
+    "allowGuestCheckout": false
+  },
+  "payments": {
+    "stripePublicKey": "pk_test_xxxxxxxxxxxxx",
+    "stripeSecretKey": "sk_test_xxxxxxxxxxxxx",
+    "paypalClientId": "xxxxxxxxxxxxx",
+    "taxRate": 21,
+    "platformFee": 10
+  },
+  "notifications": {
+    "emailEnabled": true,
+    "smsEnabled": false,
+    "pushEnabled": true,
+    "adminAlerts": true
+  },
+  "premium": {
+    "monthlyPrice": 9.99,
+    "annualPrice": 99.99,
+    "trialDays": 14,
+    "features": [
+      "Descuentos exclusivos",
+      "Reservas prioritarias",
+      "Acceso a contenido premium",
+      "Sin anuncios",
+      "Soporte 24/7"
+    ]
+  }
+}

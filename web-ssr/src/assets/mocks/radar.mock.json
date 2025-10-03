@@ -1,0 +1,15 @@
+{
+  "tileUrlTemplate": "DYNAMIC",
+  "timestamp": "CURRENT",
+  "legendUrl": "https://rainviewer.com/",
+  "centerLat": 40.416775,
+  "centerLon": -3.70379,
+  "zoom": 7,
+  "_info": {
+    "provider": "Mock Simulation",
+    "note": "El componente genera timestamps dinámicos. Para datos reales, usa RainViewer API o agrega overlay visual simulado.",
+    "rainViewerExample": "https://tilecache.rainviewer.com/v2/radar/{unixTimestamp}/512/{z}/{x}/{y}/2/1_1.png",
+    "timestampFormat": "Unix timestamp en segundos (últimas 2 horas disponibles)",
+    "simulationMode": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "defaultMetaTitle": "Nieve Platform - Reserva tu Aventura en la Nieve | Estaciones de Esquí",
+  "defaultMetaDescription": "Descubre las mejores estaciones de esquí de España, Francia y los Alpes. Compara precios, reserva online y disfruta de ofertas exclusivas. Tu próxima aventura invernal comienza aquí.",
+  "defaultKeywords": [
+    "estaciones esquí",
+    "reservar esquí",
+    "forfait online",
+    "alquiler esquís",
+    "hoteles montaña",
+    "nieve españa",
+    "ski resort",
+    "pistas esquí",
+    "webcams nieve",
+    "partes nieve"
+  ],
+  "ogDefaultImage": "https://cdn.nieve.com/assets/og-image.jpg",
+  "twitterCard": "summary_large_image",
+  "googleAnalyticsId": "G-XXXXXXXXXX",
+  "googleSearchConsoleId": "google1234567890abcdef",
+  "googleTagManagerId": "GTM-XXXXXXX",
+  "facebookPixelId": "123456789012345",
+  "enableSitemap": true,
+  "sitemapFrequency": "weekly",
+  "robotsTxt": "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/private/\nDisallow: /user/account/\n\nUser-agent: Googlebot\nAllow: /\nDisallow: /admin/\n\nUser-agent: bingbot\nAllow: /\nDisallow: /admin/\n\nSitemap: https://nieve.com/sitemap.xml"
+}

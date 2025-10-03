@@ -1,0 +1,239 @@
+<!-- Activity & Statistics Tab -->
+<div class="activity-tab">
+  @if (activityData(); as data) {
+
+  <!-- Overview Stats Grid -->
+  <div class="stats-grid">
+    <!-- Days Skiing -->
+    <div class="stat-card primary">
+      <div class="stat-icon">⛷️</div>
+      <div class="stat-content">
+        <div class="stat-value">{{ data.totalDaysSkiing }}</div>
+        <div class="stat-label">Días esquiando</div>
+      </div>
+    </div>
+
+    <!-- Kilometers -->
+    <div class="stat-card success">
+      <div class="stat-icon">📏</div>
+      <div class="stat-content">
+        <div class="stat-value">{{ data.totalKilometers.toFixed(1) }}</div>
+        <div class="stat-label">Kilómetros totales</div>
+      </div>
+    </div>
+
+    <!-- Vertical Meters -->
+    <div class="stat-card warning">
+      <div class="stat-icon">⬆️</div>
+      <div class="stat-content">
+        <div class="stat-value">
+          {{ formatNumber(data.totalVerticalMeters) }}
+        </div>
+        <div class="stat-label">Metros verticales</div>
+      </div>
+    </div>
+
+    <!-- Total Runs -->
+    <div class="stat-card info">
+      <div class="stat-icon">🎿</div>
+      <div class="stat-content">
+        <div class="stat-value">{{ data.totalRuns }}</div>
+        <div class="stat-label">Bajadas totales</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Speed & Stations Row -->
+  <div class="secondary-stats-grid">
+    <div class="secondary-stat-card">
+      <div class="stat-header">
+        <span class="stat-icon-small">🏃</span>
+        <span class="stat-title">Velocidad promedio</span>
+      </div>
+      <div class="stat-value-large">
+        {{ data.averageSpeed }} <span class="unit">km/h</span>
+      </div>
+    </div>
+
+    <div class="secondary-stat-card">
+      <div class="stat-header">
+        <span class="stat-icon-small">⚡</span>
+        <span class="stat-title">Velocidad máxima</span>
+      </div>
+      <div class="stat-value-large">
+        {{ data.topSpeed }} <span class="unit">km/h</span>
+      </div>
+    </div>
+
+    <div class="secondary-stat-card">
+      <div class="stat-header">
+        <span class="stat-icon-small">🏔️</span>
+        <span class="stat-title">Estaciones visitadas</span>
+      </div>
+      <div class="stat-value-large">{{ data.stationsVisited }}</div>
+    </div>
+
+    <div class="secondary-stat-card">
+      <div class="stat-header">
+        <span class="stat-icon-small">⭐</span>
+        <span class="stat-title">Estación favorita</span>
+      </div>
+      <div class="stat-value-large favorite-station">
+        {{ data.favoriteStation }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill Progress Section -->
+  <div class="skill-progress-card">
+    <h3 class="section-title">
+      <span class="title-icon">🎯</span>
+      Progreso de habilidad
+    </h3>
+
+    <div class="skill-content">
+      <div class="skill-info">
+        <div class="current-level">
+          <span class="level-label">Nivel actual:</span>
+          <span
+            class="level-badge"
+            [class]="'level-' + data.skillProgress.current"
+          >
+            {{ getSkillLevelLabel(data.skillProgress.current) }}
+          </span>
+        </div>
+        <div class="next-milestone">
+          <span class="milestone-icon">🎖️</span>
+          <span class="milestone-text"
+            >{{ data.skillProgress.nextMilestone }}</span
+          >
+        </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar-wrapper">
+          <div
+            class="progress-bar-fill"
+            [style.width.%]="data.skillProgress.progressPercentage"
+          ></div>
+          <span class="progress-percentage"
+            >{{ data.skillProgress.progressPercentage }}%</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly Activity Chart -->
+  <div class="monthly-activity-card">
+    <h3 class="section-title">
+      <span class="title-icon">📊</span>
+      Actividad mensual (últimos 5 meses)
+    </h3>
+
+    <div class="chart-container">
+      <div class="chart-bars">
+        @for (month of data.monthlyActivity; track month.month) {
+        <div class="chart-bar-group">
+          <div class="chart-bars-stack">
+            <div
+              class="chart-bar days"
+              [style.height.%]="getBarHeight(month.days, getMaxValue(data.monthlyActivity, 'days'))"
+              [attr.data-value]="month.days"
+            >
+              <span class="bar-label">{{ month.days }}</span>
+            </div>
+          </div>
+          <div class="chart-label">{{ formatMonth(month.month) }}</div>
+        </div>
+        }
+      </div>
+
+      <div class="chart-legend">
+        <div class="legend-item">
+          <span class="legend-color days"></span>
+          <span class="legend-label">Días esquiados</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Table -->
+    <div class="monthly-stats-table">
+      <div class="table-header">
+        <div class="th">Mes</div>
+        <div class="th">Días</div>
+        <div class="th">Kilómetros</div>
+        <div class="th">Bajadas</div>
+      </div>
+      @for (month of data.monthlyActivity; track month.month) {
+      <div class="table-row">
+        <div class="td">{{ formatMonthFull(month.month) }}</div>
+        <div class="td">{{ month.days }} días</div>
+        <div class="td">{{ month.kilometers.toFixed(1) }} km</div>
+        <div class="td">{{ month.runs }} bajadas</div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="recent-activity-card">
+    <h3 class="section-title">
+      <span class="title-icon">🕐</span>
+      Actividad reciente
+    </h3>
+
+    <div class="activity-list">
+      @for (activity of data.recentActivity; track activity.id) {
+      <div class="activity-item">
+        <div class="activity-header">
+          <div class="activity-main-info">
+            <h4 class="activity-station">{{ activity.station }}</h4>
+            <span class="activity-date">{{ formatDate(activity.date) }}</span>
+          </div>
+          @if (activity.photos && activity.photos.length > 0) {
+          <div class="activity-photos-badge">
+            📸 {{ activity.photos.length }}
+          </div>
+          }
+        </div>
+
+        <div class="activity-stats-grid">
+          <div class="activity-stat">
+            <span class="stat-icon-mini">⏱️</span>
+            <span class="stat-value-mini"
+              >{{ formatDuration(activity.duration) }}</span
+            >
+          </div>
+          <div class="activity-stat">
+            <span class="stat-icon-mini">📏</span>
+            <span class="stat-value-mini">{{ activity.distance }} km</span>
+          </div>
+          <div class="activity-stat">
+            <span class="stat-icon-mini">⬆️</span>
+            <span class="stat-value-mini"
+              >{{ formatNumber(activity.verticalDrop) }}m</span
+            >
+          </div>
+          <div class="activity-stat">
+            <span class="stat-icon-mini">🎿</span>
+            <span class="stat-value-mini">{{ activity.runs }} bajadas</span>
+          </div>
+          <div class="activity-stat">
+            <span class="stat-icon-mini">⚡</span>
+            <span class="stat-value-mini">{{ activity.maxSpeed }} km/h</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  } @else {
+  <!-- Loading State -->
+  <div class="loading-state">
+    <div class="spinner"></div>
+    <p>Cargando estadísticas...</p>
+  </div>
+  }
+</div>

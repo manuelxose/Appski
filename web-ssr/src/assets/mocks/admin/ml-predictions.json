@@ -1,0 +1,146 @@
+{
+  "predictions": [
+    {
+      "id": "PRED001",
+      "type": "booking_demand",
+      "title": "Predicción demanda Navidad 2025",
+      "period": "2025-12-20 a 2026-01-06",
+      "confidence": 87.5,
+      "prediction": {
+        "expectedBookings": 1245,
+        "expectedRevenue": 178650.0,
+        "peakDays": ["2025-12-24", "2025-12-31", "2026-01-05"],
+        "recommendedActions": [
+          "Incrementar personal en recepción 30%",
+          "Preparar stock adicional alquiler equipos",
+          "Activar tarifas dinámicas para días pico"
+        ]
+      },
+      "factors": {
+        "historical_trend": 0.35,
+        "weather_forecast": 0.25,
+        "economic_indicators": 0.2,
+        "competitor_pricing": 0.2
+      },
+      "generatedAt": "2025-10-03T08:00:00Z",
+      "validUntil": "2025-12-20T00:00:00Z"
+    },
+    {
+      "id": "PRED002",
+      "type": "revenue_forecast",
+      "title": "Forecast ingresos Q1 2026",
+      "period": "2026-01-01 a 2026-03-31",
+      "confidence": 82.3,
+      "prediction": {
+        "expectedRevenue": 425680.0,
+        "minRevenue": 382112.0,
+        "maxRevenue": 468248.0,
+        "byMonth": {
+          "january": 165890.0,
+          "february": 142560.0,
+          "march": 117230.0
+        },
+        "growthRate": 12.5
+      },
+      "factors": {
+        "seasonal_patterns": 0.4,
+        "booking_trends": 0.3,
+        "market_conditions": 0.3
+      },
+      "generatedAt": "2025-10-03T09:00:00Z",
+      "validUntil": "2026-04-01T00:00:00Z"
+    },
+    {
+      "id": "PRED003",
+      "type": "customer_churn",
+      "title": "Riesgo de abandono clientes",
+      "period": "Próximos 30 días",
+      "confidence": 79.8,
+      "prediction": {
+        "atRiskCustomers": 145,
+        "potentialLostRevenue": 28900.0,
+        "topRiskFactors": [
+          "90+ días sin actividad",
+          "Experiencia negativa última visita",
+          "Incremento precios competidores"
+        ],
+        "recommendedActions": [
+          "Campaña reactivación personalizada",
+          "Descuento 15% próxima reserva",
+          "Contacto telefónico directo"
+        ]
+      },
+      "affectedSegments": {
+        "at_risk": 89,
+        "regular": 45,
+        "vip": 11
+      },
+      "generatedAt": "2025-10-03T10:00:00Z",
+      "validUntil": "2025-11-03T00:00:00Z"
+    },
+    {
+      "id": "PRED004",
+      "type": "pricing_optimization",
+      "title": "Optimización precios Semana Santa",
+      "period": "2026-04-05 a 2026-04-13",
+      "confidence": 85.2,
+      "prediction": {
+        "recommendedPricing": {
+          "skipass_1day": 72.0,
+          "skipass_3days": 195.0,
+          "skipass_5days": 305.0,
+          "equipment_rental": 32.0,
+          "group_class": 48.0
+        },
+        "expectedImpact": {
+          "revenueIncrease": 18.5,
+          "bookingChange": -3.2,
+          "netBenefit": "+15.3%"
+        },
+        "competitorAnalysis": {
+          "averageMarketPrice": 68.0,
+          "ourPosition": "premium",
+          "priceGap": 5.9
+        }
+      },
+      "generatedAt": "2025-10-03T11:00:00Z",
+      "validUntil": "2026-04-05T00:00:00Z"
+    }
+  ],
+  "models": {
+    "booking_demand": {
+      "name": "Random Forest Regressor",
+      "accuracy": 87.5,
+      "lastTrained": "2025-09-15T00:00:00Z",
+      "features": 28,
+      "samples": 15000
+    },
+    "revenue_forecast": {
+      "name": "LSTM Neural Network",
+      "accuracy": 82.3,
+      "lastTrained": "2025-09-20T00:00:00Z",
+      "features": 35,
+      "samples": 12000
+    },
+    "customer_churn": {
+      "name": "Gradient Boosting Classifier",
+      "accuracy": 79.8,
+      "lastTrained": "2025-09-25T00:00:00Z",
+      "features": 42,
+      "samples": 8500
+    },
+    "pricing_optimization": {
+      "name": "Deep Q-Learning",
+      "accuracy": 85.2,
+      "lastTrained": "2025-09-30T00:00:00Z",
+      "features": 18,
+      "samples": 20000
+    }
+  },
+  "summary": {
+    "totalPredictions": 4,
+    "averageConfidence": 83.7,
+    "lastGenerated": "2025-10-03T11:00:00Z",
+    "modelsUpdated": "2025-09-30T00:00:00Z"
+  }
+}

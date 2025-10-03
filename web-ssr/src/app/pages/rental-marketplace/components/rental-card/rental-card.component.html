@@ -1,0 +1,74 @@
+<article class="shop-card">
+  <div class="shop-image">
+    <img [src]="shop().image" [alt]="shop().name" />
+    <div class="shop-badge">
+      <span class="material-icons">verified</span>
+      Verificado
+    </div>
+    <div
+      class="availability-badge"
+      [style.background-color]="getAvailabilityColor(shop().availability)"
+    >
+      {{ getAvailabilityText(shop().availability) }}
+    </div>
+  </div>
+
+  <div class="shop-content">
+    <div class="shop-header">
+      <h3 class="shop-name">{{ shop().name }}</h3>
+      <div class="shop-rating">
+        <span class="material-icons">star</span>
+        <span class="rating-value">{{ shop().rating }}</span>
+        <span class="rating-count">({{ shop().reviewCount }})</span>
+      </div>
+    </div>
+
+    <div class="shop-meta">
+      <div class="meta-item">
+        <span class="material-icons">location_on</span>
+        <span>{{ shop().location }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="material-icons">directions_walk</span>
+        <span>{{ shop().distance }} km</span>
+      </div>
+      <div class="meta-item price">
+        <span class="material-icons">euro</span>
+        <span>{{ shop().priceRange }}/día</span>
+      </div>
+    </div>
+
+    <div class="shop-stations">
+      <span class="material-icons">terrain</span>
+      <div class="stations-list">
+        @for (station of shop().nearStations; track station; let last = $last) {
+        <span class="station-tag">{{ station }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="shop-services">
+      @for (service of shop().services; track service) {
+      <span class="service-tag">{{ service }}</span>
+      }
+    </div>
+
+    <div class="shop-specialties">
+      @for (specialty of shop().specialties; track specialty) {
+      <span class="specialty-badge">
+        <span class="material-icons">
+          {{ getSpecialtyIcon(specialty) }}
+        </span>
+        {{ specialty }}
+      </span>
+      }
+    </div>
+
+    <div class="shop-actions">
+      <button class="btn-primary" (click)="onViewDetail()">
+        <span class="material-icons">store</span>
+        Ver tienda
+      </button>
+    </div>
+  </div>
+</article>

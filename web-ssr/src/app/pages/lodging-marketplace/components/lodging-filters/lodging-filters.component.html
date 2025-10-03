@@ -1,0 +1,156 @@
+<!-- Lodging Filters -->
+<div class="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-lg font-bold text-slate-900">
+      🔍 <span data-i18n="lodging.filters.title">Filtros</span>
+    </h3>
+    <button
+      (click)="resetFilters()"
+      class="text-sm text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+      data-i18n="lodging.filters.reset"
+    >
+      Restablecer
+    </button>
+  </div>
+
+  <!-- Lodging Type Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      <span data-i18n="lodging.filters.type">Tipo de Alojamiento</span>
+    </div>
+    <div class="space-y-2">
+      @for (type of lodgingTypes(); track type.value) {
+      <label
+        class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      >
+        <input
+          type="checkbox"
+          [checked]="selectedTypes().includes(type.value)"
+          (change)="onTypeToggle(type.value)"
+          class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="ml-3 text-slate-700">
+          {{ type.icon }} {{ type.label }}
+        </span>
+      </label>
+      }
+    </div>
+  </div>
+
+  <!-- Price Range Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      💰 <span data-i18n="lodging.filters.price">Precio por Noche</span>
+    </div>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <input
+          type="number"
+          [(ngModel)]="priceMin"
+          (ngModelChange)="onPriceChange()"
+          min="0"
+          max="500"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Mín"
+        />
+        <span class="text-slate-500">-</span>
+        <input
+          type="number"
+          [(ngModel)]="priceMax"
+          (ngModelChange)="onPriceChange()"
+          min="0"
+          max="500"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Máx"
+        />
+      </div>
+      <div class="flex justify-between text-xs text-slate-500">
+        <span>{{ priceMin() }}€</span>
+        <span>{{ priceMax() }}€</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Distance Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      📍 <span data-i18n="lodging.filters.distance">Distancia a Pistas</span>
+    </div>
+    <div class="space-y-3">
+      <input
+        type="range"
+        [(ngModel)]="maxDistance"
+        (ngModelChange)="onDistanceChange()"
+        min="0"
+        max="20"
+        step="1"
+        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+      />
+      <div class="flex justify-between text-sm text-slate-600">
+        <span>0 km</span>
+        <span class="font-semibold text-blue-600">{{ maxDistance() }} km</span>
+        <span>20 km</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      ⭐ <span data-i18n="lodging.filters.rating">Valoración Mínima</span>
+    </div>
+    <div class="flex gap-2">
+      @for (rating of [0, 3, 4, 4.5]; track $index) {
+      <button
+        (click)="onRatingChange(rating)"
+        [class.bg-blue-600]="minRating() === rating"
+        [class.text-white]="minRating() === rating"
+        [class.bg-gray-100]="minRating() !== rating"
+        [class.text-slate-700]="minRating() !== rating"
+        class="flex-1 px-3 py-2 rounded-lg font-semibold text-sm transition-colors hover:shadow-md"
+      >
+        @if (rating === 0) {
+        <span>Todas</span>
+        } @else {
+        <span>{{ rating }}+</span>
+        }
+      </button>
+      }
+    </div>
+  </div>
+
+  <!-- Services Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      <span data-i18n="lodging.filters.services">Servicios</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      @for (service of services(); track service.value) {
+      <label
+        class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      >
+        <input
+          type="checkbox"
+          [checked]="selectedServices().includes(service.value)"
+          (change)="onServiceToggle(service.value)"
+          class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="ml-2 text-sm text-slate-700">
+          {{ service.icon }}
+        </span>
+      </label>
+      }
+    </div>
+    <!-- Service Labels -->
+    <div class="mt-2 flex flex-wrap gap-1">
+      @for (serviceValue of selectedServices(); track $index) { @for (service of
+      services(); track service.value) { @if (service.value === serviceValue) {
+      <span
+        class="inline-flex items-center px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
+      >
+        {{ service.label }}
+      </span>
+      } } }
+    </div>
+  </div>
+</div>

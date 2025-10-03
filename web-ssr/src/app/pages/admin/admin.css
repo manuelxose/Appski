@@ -1,0 +1,34 @@
+/* Admin Dashboard Layout - Using Modern Design System */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--neutral-50);
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+}
+
+.admin-content {
+  flex: 1;
+  padding: var(--space-6);
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .admin-main {
+    margin-left: 0;
+  }
+
+  .admin-content {
+    padding: var(--space-4);
+  }
+}

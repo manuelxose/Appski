@@ -1,0 +1,194 @@
+{
+  "hero": {
+    "badge": "Premium",
+    "title": "Desbloquea Tu Experiencia Premium",
+    "subtitle": "Accede a contenido exclusivo, funciones avanzadas y beneficios únicos para miembros premium",
+    "ctaText": "Ver Planes"
+  },
+  "benefits": [
+    {
+      "id": "benefit-1",
+      "icon": "💰",
+      "title": "Descuentos Exclusivos",
+      "description": "Ahorra hasta un 20% en todos los servicios de alquiler y forfaits",
+      "color": "from-yellow-400 to-orange-500"
+    },
+    {
+      "id": "benefit-2",
+      "icon": "⚡",
+      "title": "Reserva Prioritaria",
+      "description": "Acceso anticipado a las mejores ofertas y disponibilidad garantizada",
+      "color": "from-blue-400 to-indigo-500"
+    },
+    {
+      "id": "benefit-3",
+      "icon": "🎿",
+      "title": "Contenido Exclusivo",
+      "description": "Guías detalladas, vídeos tutoriales y consejos de expertos",
+      "color": "from-purple-400 to-pink-500"
+    },
+    {
+      "id": "benefit-4",
+      "icon": "🛡️",
+      "title": "Seguro Incluido",
+      "description": "Protección completa en tus reservas con cancelación gratuita",
+      "color": "from-green-400 to-teal-500"
+    }
+  ],
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "price": 9,
+      "billingPeriod": "month",
+      "description": "Perfecto para esquiadores ocasionales",
+      "features": [
+        "5% descuento en alquileres",
+        "Acceso a contenido básico",
+        "Soporte por email",
+        "1 reserva prioritaria/mes",
+        "Alertas de ofertas"
+      ],
+      "highlighted": false,
+      "ctaText": "Comenzar Ahora",
+      "savings": null
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price": 19,
+      "billingPeriod": "month",
+      "description": "Ideal para esquiadores frecuentes",
+      "features": [
+        "15% descuento en alquileres",
+        "Acceso a todo el contenido",
+        "Soporte prioritario 24/7",
+        "Reservas prioritarias ilimitadas",
+        "Alertas personalizadas",
+        "Acceso a eventos exclusivos",
+        "Seguro de cancelación básico",
+        "Programa de puntos premium"
+      ],
+      "highlighted": true,
+      "ctaText": "Prueba Gratis 14 Días",
+      "badge": "MÁS POPULAR",
+      "savings": null
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": 149,
+      "billingPeriod": "year",
+      "description": "Máxima experiencia para profesionales",
+      "features": [
+        "20% descuento en todos los servicios",
+        "Contenido exclusivo PRO",
+        "Gestor personal dedicado",
+        "Reservas VIP prioritarias",
+        "Alertas avanzadas IA",
+        "Acceso VIP a eventos",
+        "Seguro completo de cancelación",
+        "Programa de puntos x2",
+        "Regalos y merchandising"
+      ],
+      "highlighted": false,
+      "ctaText": "Comenzar Ahora",
+      "savings": "Ahorra un 20% al año"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Laura Martínez",
+      "role": "Esquiadora Profesional",
+      "company": "Club de Esquí Madrid",
+      "content": "La suscripción Premium ha transformado completamente mi experiencia. Los descuentos y el acceso prioritario valen cada euro.",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "rating": 5
+    },
+    {
+      "id": "testimonial-2",
+      "name": "Carlos Rodríguez",
+      "role": "Instructor de Esquí",
+      "company": "Escuela de Esquí Sierra Nevada",
+      "content": "El contenido exclusivo y las guías detalladas me han ayudado enormemente en mi trabajo como instructor. ¡Totalmente recomendado!",
+      "avatar": "https://i.pravatar.cc/150?img=2",
+      "rating": 5
+    },
+    {
+      "id": "testimonial-3",
+      "name": "Ana García",
+      "role": "Aficionada al Esquí",
+      "company": "Esquiadora Frecuente",
+      "content": "Con el plan Pro he ahorrado más de lo que cuesta la suscripción. Las alertas personalizadas son increíbles para encontrar las mejores ofertas.",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "rating": 5
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+      "answer": "Sí, puedes cancelar tu suscripción en cualquier momento desde tu panel de usuario. Si cancelas, seguirás teniendo acceso hasta el final del período por el que pagaste.",
+      "open": false,
+      "category": "billing"
+    },
+    {
+      "id": "faq-2",
+      "question": "¿Los descuentos se aplican automáticamente?",
+      "answer": "Sí, todos los descuentos premium se aplican automáticamente cuando realizas una reserva estando conectado con tu cuenta premium.",
+      "open": false,
+      "category": "features"
+    },
+    {
+      "id": "faq-3",
+      "question": "¿Puedo cambiar de plan más adelante?",
+      "answer": "Por supuesto. Puedes mejorar o cambiar tu plan en cualquier momento. Si mejoras, pagarás la diferencia prorrateada. Si reduces tu plan, el cambio se aplicará en tu próximo período de facturación.",
+      "open": false,
+      "category": "billing"
+    },
+    {
+      "id": "faq-4",
+      "question": "¿Hay período de prueba gratuito?",
+      "answer": "Sí, el plan Pro incluye 14 días de prueba gratuita. Puedes cancelar antes de que termine el período de prueba sin ningún cargo.",
+      "open": false,
+      "category": "general"
+    },
+    {
+      "id": "faq-5",
+      "question": "¿Qué incluye el seguro de cancelación?",
+      "answer": "El seguro cubre cancelaciones por enfermedad, lesiones, mal tiempo extremo y otras circunstancias imprevistas. El plan Pro incluye cobertura básica y el Premium cobertura completa con reembolso del 100%.",
+      "open": false,
+      "category": "features"
+    },
+    {
+      "id": "faq-6",
+      "question": "¿Cómo funciona el programa de puntos?",
+      "answer": "Por cada euro que gastes en la plataforma, acumulas puntos que puedes canjear por descuentos adicionales, equipamiento o acceso a eventos exclusivos. Los miembros Premium acumulan el doble de puntos.",
+      "open": false,
+      "category": "features"
+    }
+  ],
+  "trustBadges": [
+    {
+      "id": "badge-1",
+      "text": "Garantía de satisfacción 30 días",
+      "icon": "shield"
+    },
+    {
+      "id": "badge-2",
+      "text": "Más de 10,000 miembros satisfechos",
+      "icon": "users"
+    },
+    {
+      "id": "badge-3",
+      "text": "Pago seguro y protegido",
+      "icon": "lock"
+    }
+  ],
+  "finalCta": {
+    "title": "¿Listo para Empezar Tu Aventura Premium?",
+    "description": "Únete a miles de esquiadores que ya disfrutan de beneficios exclusivos",
+    "ctaText": "Comienza Tu Prueba Gratuita"
+  }
+}

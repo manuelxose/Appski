@@ -10,7 +10,6 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/bitbucket-pipelines.yml"]
   },
-  "nxCloudId": "68da7ea0cb49984a57f6a38f",
   "targetDefaults": {
     "@angular/build:application": {
       "cache": true,

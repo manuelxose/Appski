@@ -1,0 +1,19 @@
+{
+  "stationSlug": "baqueira-beret",
+  "observedAt": "2025-10-01T09:00:00Z",
+  "tempC": -5.2,
+  "windKmh": 28,
+  "gustKmh": 55,
+  "visibilityM": 3200,
+  "snowBaseCm": 90,
+  "snowTopCm": 155,
+  "snowNew24hCm": 18,
+  "iso0M": 1100,
+  "condition": "snow",
+  "confidence": 0.86,
+  "sources": [
+    { "name": "GFS", "weight": 0.5 },
+    { "name": "AEMET-HARMONIE", "weight": 0.3 },
+    { "name": "OpenWeather", "weight": 0.2 }
+  ]
+}

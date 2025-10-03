@@ -1,0 +1,385 @@
+<!-- Friends Tab Component -->
+<div class="friends-tab">
+  <!-- Conditional: Loading State -->
+  @if (accountService.isLoadingSocial()) {
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Cargando red social...</p>
+  </div>
+  }
+
+  <!-- Conditional: Error State -->
+  @else if (accountService.socialError()) {
+  <div class="error-container">
+    <div class="error-icon">⚠️</div>
+    <h3>Error al cargar red social</h3>
+    <p>{{ accountService.socialError() }}</p>
+    <button (click)="retryLoad()" class="retry-button">Reintentar</button>
+  </div>
+  }
+
+  <!-- Main Content -->
+  @else {
+
+  <!-- Header with Stats -->
+  <div class="friends-header">
+    <div class="header-title">
+      <h2>Amigos y Grupos</h2>
+      <p class="subtitle">Conecta con otros esquiadores y únete a grupos</p>
+    </div>
+
+    <div class="social-stats">
+      <div class="stat-item">
+        <div class="stat-icon">👥</div>
+        <div class="stat-content">
+          <span class="stat-value">{{ accountService.totalFriends() }}</span>
+          <span class="stat-label">Amigos</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">📬</div>
+        <div class="stat-content">
+          <span class="stat-value"
+            >{{ accountService.totalFriendRequests() }}</span
+          >
+          <span class="stat-label">Solicitudes</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">🏂</div>
+        <div class="stat-content">
+          <span class="stat-value">{{ accountService.totalGroups() }}</span>
+          <span class="stat-label">Grupos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friend Requests Section -->
+  @if (accountService.friendRequests().length > 0) {
+  <div class="requests-section">
+    <h3 class="section-title">
+      <span class="title-icon">📬</span>
+      Solicitudes de Amistad
+      <span class="count-badge"
+        >{{ accountService.friendRequests().length }}</span
+      >
+    </h3>
+
+    <div class="requests-grid">
+      @for (request of accountService.friendRequests(); track request.id) {
+      <div class="request-card">
+        <img
+          [src]="request.fromUserAvatar"
+          [alt]="request.fromUserName"
+          class="request-avatar"
+        />
+
+        <div class="request-content">
+          <h4 class="request-name">{{ request.fromUserName }}</h4>
+          <p class="request-time">{{ formatTimeAgo(request.timestamp) }}</p>
+
+          @if (request.message) {
+          <p class="request-message">{{ request.message }}</p>
+          }
+        </div>
+
+        <div class="request-actions">
+          <button
+            (click)="acceptFriendRequest(request)"
+            class="action-button accept"
+          >
+            <span class="action-icon">✅</span>
+            Aceptar
+          </button>
+          <button
+            (click)="rejectFriendRequest(request)"
+            class="action-button reject"
+          >
+            <span class="action-icon">❌</span>
+            Rechazar
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- Group Invitations Section -->
+  @if (accountService.groupInvitations().length > 0) {
+  <div class="invitations-section">
+    <h3 class="section-title">
+      <span class="title-icon">✉️</span>
+      Invitaciones a Grupos
+      <span class="count-badge"
+        >{{ accountService.groupInvitations().length }}</span
+      >
+    </h3>
+
+    <div class="invitations-grid">
+      @for (invitation of accountService.groupInvitations(); track
+      invitation.id) {
+      <div class="invitation-card">
+        <img
+          [src]="invitation.groupAvatar"
+          [alt]="invitation.groupName"
+          class="invitation-group-avatar"
+        />
+
+        <div class="invitation-content">
+          <h4 class="invitation-group-name">{{ invitation.groupName }}</h4>
+          <p class="invitation-by">
+            Invitado por <strong>{{ invitation.invitedByName }}</strong>
+          </p>
+          <p class="invitation-time">
+            {{ formatTimeAgo(invitation.timestamp) }}
+          </p>
+
+          @if (invitation.message) {
+          <p class="invitation-message">{{ invitation.message }}</p>
+          }
+        </div>
+
+        <div class="invitation-actions">
+          <button
+            (click)="acceptGroupInvitation(invitation)"
+            class="action-button accept"
+          >
+            <span class="action-icon">✅</span>
+            Unirse
+          </button>
+          <button
+            (click)="rejectGroupInvitation(invitation)"
+            class="action-button reject"
+          >
+            <span class="action-icon">❌</span>
+            Rechazar
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- Friends List Section -->
+  <div class="friends-section">
+    <div class="section-header">
+      <h3 class="section-title">
+        <span class="title-icon">👥</span>
+        Mis Amigos
+        <span class="count-badge">{{ accountService.friends().length }}</span>
+      </h3>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          placeholder="Buscar amigos..."
+          [value]="searchQuery()"
+          (input)="onSearchInput($event)"
+          class="search-input"
+        />
+      </div>
+    </div>
+
+    <div class="friends-grid">
+      @for (friend of filteredFriends(); track friend.id) {
+      <div class="friend-card">
+        <div class="friend-avatar-container">
+          <img
+            [src]="friend.avatar"
+            [alt]="friend.name"
+            class="friend-avatar"
+          />
+
+          @if (friend.isOnline) {
+          <span class="online-indicator" title="En línea"></span>
+          }
+        </div>
+
+        <div class="friend-content">
+          <h4 class="friend-name">{{ friend.name }}</h4>
+
+          <div class="friend-meta">
+            <div class="meta-item">
+              <span class="meta-icon">🏅</span>
+              <span class="meta-text"
+                >{{ getSkillLevelLabel(friend.skillLevel) }}</span
+              >
+            </div>
+
+            @if (friend.location) {
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <span class="meta-text">{{ friend.location }}</span>
+            </div>
+            } @if (friend.favoriteStation) {
+            <div class="meta-item">
+              <span class="meta-icon">⛷️</span>
+              <span class="meta-text">{{ friend.favoriteStation }}</span>
+            </div>
+            }
+          </div>
+
+          <div class="friend-stats">
+            <div class="stat-badge">
+              <span class="badge-icon">👥</span>
+              <span class="badge-value">{{ friend.mutualFriends }}</span>
+              <span class="badge-label">amigos comunes</span>
+            </div>
+
+            @if (friend.connectedSince) {
+            <div class="stat-badge">
+              <span class="badge-icon">📅</span>
+              <span class="badge-value"
+                >Desde {{ formatDate(friend.connectedSince) }}</span
+              >
+            </div>
+            }
+          </div>
+
+          @if (friend.lastActivity) {
+          <p class="friend-activity">
+            <span class="activity-icon">⏱️</span>
+            Última actividad: {{ formatTimeAgo(friend.lastActivity) }}
+          </p>
+          }
+        </div>
+
+        <div class="friend-actions">
+          <button
+            (click)="sendMessage(friend)"
+            class="action-button message"
+            title="Enviar mensaje"
+          >
+            <span class="action-icon">💬</span>
+            Mensaje
+          </button>
+          <button
+            (click)="viewProfile(friend)"
+            class="action-button profile"
+            title="Ver perfil"
+          >
+            <span class="action-icon">👤</span>
+            Perfil
+          </button>
+          <button
+            (click)="removeFriend(friend)"
+            class="action-button remove"
+            title="Eliminar amigo"
+          >
+            <span class="action-icon">🗑️</span>
+            Eliminar
+          </button>
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state">
+        <div class="empty-icon">😢</div>
+        <h3>No se encontraron amigos</h3>
+        <p>Prueba con otro término de búsqueda</p>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Groups Section -->
+  <div class="groups-section">
+    <div class="section-header">
+      <h3 class="section-title">
+        <span class="title-icon">🏂</span>
+        Mis Grupos
+        <span class="count-badge">{{ accountService.groups().length }}</span>
+      </h3>
+
+      <button class="create-group-button" disabled title="Próximamente">
+        <span class="button-icon">➕</span>
+        Crear Grupo
+      </button>
+    </div>
+
+    <div class="groups-grid">
+      @for (group of accountService.groups(); track group.id) {
+      <div class="group-card" [class.private]="group.isPrivate">
+        <div class="group-header">
+          <img [src]="group.avatar" [alt]="group.name" class="group-avatar" />
+
+          <div class="group-info">
+            <h4 class="group-name">
+              {{ group.name }} @if (group.isPrivate) {
+              <span class="private-badge">🔒 Privado</span>
+              }
+            </h4>
+
+            @if (group.description) {
+            <p class="group-description">{{ group.description }}</p>
+            }
+          </div>
+        </div>
+
+        <div class="group-stats">
+          <div class="stat-item">
+            <span class="stat-icon">👥</span>
+            <span class="stat-value">{{ group.memberCount }}</span>
+            <span class="stat-label">miembros</span>
+          </div>
+
+          @if (group.upcomingTrips) {
+          <div class="stat-item">
+            <span class="stat-icon">🗓️</span>
+            <span class="stat-value">{{ group.upcomingTrips }}</span>
+            <span class="stat-label">viajes</span>
+          </div>
+          }
+        </div>
+
+        @if (group.tags && group.tags.length > 0) {
+        <div class="group-tags">
+          @for (tag of group.tags; track tag) {
+          <span class="tag">{{ tag }}</span>
+          }
+        </div>
+        }
+
+        <div class="group-members-preview">
+          <p class="members-title">Miembros destacados:</p>
+          <div class="members-avatars">
+            @for (member of group.members.slice(0, 5); track member.userId) {
+            <img
+              [src]="member.avatar"
+              [alt]="member.name"
+              [title]="member.name + ' (' + getRoleLabel(member.role) + ')'"
+              class="member-avatar"
+            />
+            } @if (group.memberCount > 5) {
+            <span class="members-more">+{{ group.memberCount - 5 }}</span>
+            }
+          </div>
+        </div>
+
+        <div class="group-actions">
+          <button (click)="viewGroup(group)" class="action-button view">
+            <span class="action-icon">👁️</span>
+            Ver Grupo
+          </button>
+          <button (click)="leaveGroup(group)" class="action-button leave">
+            <span class="action-icon">🚪</span>
+            Salir
+          </button>
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state">
+        <div class="empty-icon">🏂</div>
+        <h3>No estás en ningún grupo</h3>
+        <p>Únete a un grupo para conectar con otros esquiadores</p>
+      </div>
+      }
+    </div>
+  </div>
+
+  }
+  <!-- End @else -->
+</div>

@@ -1,0 +1,243 @@
+<!-- Lodging Card - Grid View -->
+@if (viewMode() === 'grid') {
+<div
+  class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+>
+  <!-- Image -->
+  <div class="relative h-48 overflow-hidden">
+    <img
+      [src]="lodging().image"
+      [alt]="lodging().name"
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+    />
+
+    <!-- Badges -->
+    <div class="absolute top-3 left-3 flex flex-col gap-2">
+      @if (lodging().hasOffer && lodging().offerPercentage) {
+      <span
+        class="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full shadow-lg"
+      >
+        -{{ lodging().offerPercentage }}% OFF
+      </span>
+      } @if (lodging().freeCancellation) {
+      <span
+        class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full shadow-lg"
+      >
+        ✓ Cancelación gratis
+      </span>
+      }
+    </div>
+
+    <!-- Type Badge -->
+    <div class="absolute top-3 right-3">
+      <span
+        class="px-3 py-1 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold rounded-full shadow-md"
+      >
+        {{ getTypeLabel(lodging().type) }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-4">
+    <!-- Title and Location -->
+    <div class="mb-3">
+      <h3 class="text-lg font-bold text-slate-900 mb-1 line-clamp-1">
+        {{ lodging().name }}
+      </h3>
+      <p class="text-sm text-slate-600 flex items-center gap-1">
+        📍 {{ lodging().location }}
+      </p>
+      <p class="text-xs text-blue-600 font-semibold mt-1">
+        ⛷️ {{ lodging().distanceToSlopes }} km a las pistas
+      </p>
+    </div>
+
+    <!-- Rating -->
+    <div class="flex items-center gap-2 mb-3">
+      <div class="flex items-center">
+        @for (star of getStars(); track $index) { @if (star === 'full') {
+        <span class="text-yellow-400">★</span>
+        } @else if (star === 'half') {
+        <span class="text-yellow-400">⯨</span>
+        } @else {
+        <span class="text-gray-300">★</span>
+        } }
+      </div>
+      <span class="text-sm text-slate-600">
+        {{ lodging().rating }} ({{ lodging().reviewsCount }})
+      </span>
+    </div>
+
+    <!-- Services -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      @for (service of lodging().services.slice(0, 4); track $index) {
+      <span class="text-lg" [title]="service">
+        {{ getServiceIcon(service) }}
+      </span>
+      } @if (lodging().services.length > 4) {
+      <span class="text-xs text-slate-500 self-center">
+        +{{ lodging().services.length - 4 }} más
+      </span>
+      }
+    </div>
+
+    <!-- Price and Button -->
+    <div
+      class="flex items-center justify-between pt-3 border-t border-gray-200"
+    >
+      <div>
+        @if (lodging().hasOffer && lodging().offerPercentage) {
+        <div class="text-sm text-slate-500 line-through">
+          {{
+            lodging().pricePerNight *
+              (1 + (lodging().offerPercentage || 0) / 100) | number : "1.0-0"
+          }}€
+        </div>
+        }
+        <div class="text-2xl font-bold text-slate-900">
+          {{ lodging().pricePerNight }}€
+          <span class="text-sm font-normal text-slate-600">/noche</span>
+        </div>
+      </div>
+
+      @if (lodging().available) {
+      <a
+        [routerLink]="['/alojamiento', lodging().id]"
+        class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+      >
+        Reservar
+      </a>
+      } @else {
+      <span
+        class="px-4 py-2 bg-gray-300 text-gray-600 font-semibold rounded-lg cursor-not-allowed"
+      >
+        No disponible
+      </span>
+      }
+    </div>
+  </div>
+</div>
+}
+
+<!-- Lodging Card - List View -->
+@if (viewMode() === 'list') {
+<div
+  class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+>
+  <div class="flex flex-col md:flex-row">
+    <!-- Image -->
+    <div
+      class="relative w-full md:w-64 h-48 md:h-auto overflow-hidden flex-shrink-0"
+    >
+      <img
+        [src]="lodging().image"
+        [alt]="lodging().name"
+        class="w-full h-full object-cover"
+      />
+
+      <!-- Type Badge -->
+      <div class="absolute top-3 right-3">
+        <span
+          class="px-3 py-1 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold rounded-full shadow-md"
+        >
+          {{ getTypeLabel(lodging().type) }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 p-4 md:p-6 flex flex-col justify-between">
+      <div>
+        <!-- Badges -->
+        <div class="flex gap-2 mb-3">
+          @if (lodging().hasOffer && lodging().offerPercentage) {
+          <span
+            class="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full"
+          >
+            -{{ lodging().offerPercentage }}% OFF
+          </span>
+          } @if (lodging().freeCancellation) {
+          <span
+            class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full"
+          >
+            ✓ Cancelación gratis
+          </span>
+          }
+        </div>
+
+        <!-- Title and Location -->
+        <h3 class="text-xl font-bold text-slate-900 mb-2">
+          {{ lodging().name }}
+        </h3>
+        <p class="text-sm text-slate-600 flex items-center gap-1 mb-1">
+          📍 {{ lodging().location }}
+        </p>
+        <p class="text-sm text-blue-600 font-semibold mb-3">
+          ⛷️ {{ lodging().distanceToSlopes }} km a las pistas
+        </p>
+
+        <!-- Rating -->
+        <div class="flex items-center gap-2 mb-3">
+          <div class="flex items-center">
+            @for (star of getStars(); track $index) { @if (star === 'full') {
+            <span class="text-yellow-400">★</span>
+            } @else if (star === 'half') {
+            <span class="text-yellow-400">⯨</span>
+            } @else {
+            <span class="text-gray-300">★</span>
+            } }
+          </div>
+          <span class="text-sm text-slate-600">
+            {{ lodging().rating }} ({{ lodging().reviewsCount }} opiniones)
+          </span>
+        </div>
+
+        <!-- Services -->
+        <div class="flex flex-wrap gap-3">
+          @for (service of lodging().services; track $index) {
+          <span class="text-lg" [title]="service">
+            {{ getServiceIcon(service) }}
+          </span>
+          }
+        </div>
+      </div>
+
+      <!-- Price and Button -->
+      <div
+        class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200"
+      >
+        <div>
+          @if (lodging().hasOffer && lodging().offerPercentage) {
+          <div class="text-sm text-slate-500 line-through">
+            {{
+              lodging().pricePerNight *
+                (1 + (lodging().offerPercentage || 0) / 100) | number : "1.0-0"
+            }}€
+          </div>
+          W }
+          <div class="text-3xl font-bold text-slate-900">
+            {{ lodging().pricePerNight }}€
+            <span class="text-base font-normal text-slate-600">/noche</span>
+          </div>
+        </div>
+
+        @if (lodging().available) {
+        <a
+          [routerLink]="['/alojamiento', lodging().id]"
+          class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+        >
+          Reservar Ahora
+        </a>
+        } @else {
+        <span
+          class="px-6 py-3 bg-gray-300 text-gray-600 font-semibold rounded-lg cursor-not-allowed"
+        >
+          No disponible
+        </span>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+}

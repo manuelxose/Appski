@@ -1,0 +1,130 @@
+{
+  "content": [
+    {
+      "id": "IMG001",
+      "type": "image",
+      "title": "Sierra Nevada - Vista panorámica",
+      "url": "/assets/images/stations/sierra-nevada-panoramic.jpg",
+      "stationId": "sierra-nevada",
+      "category": "station_image",
+      "size": 2458000,
+      "mimeType": "image/jpeg",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uploadedBy": "MGR001",
+      "uploadedAt": "2025-09-15T10:30:00Z",
+      "status": "published",
+      "tags": ["panorama", "pistas", "invierno"]
+    },
+    {
+      "id": "VID001",
+      "type": "video",
+      "title": "Baqueira Beret - Tour virtual",
+      "url": "/assets/videos/baqueira-tour.mp4",
+      "thumbnailUrl": "/assets/videos/thumbnails/baqueira-tour.jpg",
+      "stationId": "baqueira-beret",
+      "category": "promotional",
+      "size": 45678000,
+      "mimeType": "video/mp4",
+      "duration": 180,
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uploadedBy": "MGR002",
+      "uploadedAt": "2025-08-20T14:15:00Z",
+      "status": "published",
+      "tags": ["tour", "promocional", "video"]
+    },
+    {
+      "id": "PDF001",
+      "type": "document",
+      "title": "Mapa de pistas - Formigal",
+      "url": "/assets/docs/formigal-map.pdf",
+      "stationId": "formigal",
+      "category": "map",
+      "size": 1234000,
+      "mimeType": "application/pdf",
+      "uploadedBy": "MGR003",
+      "uploadedAt": "2025-09-01T09:00:00Z",
+      "status": "published",
+      "tags": ["mapa", "pistas", "pdf"]
+    },
+    {
+      "id": "IMG002",
+      "type": "image",
+      "title": "Sierra Nevada - Remonte principal",
+      "url": "/assets/images/stations/sierra-nevada-lift.jpg",
+      "stationId": "sierra-nevada",
+      "category": "station_image",
+      "size": 1890000,
+      "mimeType": "image/jpeg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "uploadedBy": "ADM001",
+      "uploadedAt": "2025-09-10T11:20:00Z",
+      "status": "published",
+      "tags": ["remonte", "infraestructura"]
+    },
+    {
+      "id": "IMG003",
+      "type": "image",
+      "title": "Formigal - Zona principiantes",
+      "url": "/assets/images/stations/formigal-beginners.jpg",
+      "stationId": "formigal",
+      "category": "station_image",
+      "size": 2100000,
+      "mimeType": "image/jpeg",
+      "dimensions": {
+        "width": 1920,
+        "height": 1280
+      },
+      "uploadedBy": "MGR003",
+      "uploadedAt": "2025-08-25T15:45:00Z",
+      "status": "draft",
+      "tags": ["principiantes", "pistas verdes"]
+    },
+    {
+      "id": "VID002",
+      "type": "video",
+      "title": "Tutorial - Primeros pasos en esquí",
+      "url": "/assets/videos/ski-tutorial-basics.mp4",
+      "thumbnailUrl": "/assets/videos/thumbnails/ski-tutorial.jpg",
+      "category": "tutorial",
+      "size": 32500000,
+      "mimeType": "video/mp4",
+      "duration": 420,
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "uploadedBy": "ADM001",
+      "uploadedAt": "2025-07-15T10:00:00Z",
+      "status": "published",
+      "tags": ["tutorial", "principiantes", "esquí"]
+    }
+  ],
+  "summary": {
+    "totalMedia": 6,
+    "byType": {
+      "image": 3,
+      "video": 2,
+      "document": 1
+    },
+    "byStatus": {
+      "published": 5,
+      "draft": 1
+    },
+    "totalSize": 85859000,
+    "byStation": {
+      "sierra-nevada": 2,
+      "baqueira-beret": 1,
+      "formigal": 2,
+      "none": 1
+    }
+  }
+}

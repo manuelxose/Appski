@@ -1,0 +1,375 @@
+[
+  {
+    "lodgingId": "LDG001",
+    "pricing": {
+      "baseRate": 85,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 1
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.3,
+          "minStay": 2
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.2,
+          "minStay": 3
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.5,
+          "minStay": 2
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 30, "percentage": 10 },
+        { "type": "long_stay", "minNights": 7, "percentage": 15 },
+        { "type": "last_minute", "daysInAdvance": 3, "percentage": 20 }
+      ],
+      "packages": [
+        {
+          "id": "SKI001",
+          "name": "Paquete Esquí Completo",
+          "description": "Habitación + forfait + alquiler equipo",
+          "priceExtra": 45,
+          "includes": ["forfait_1day", "equipment_rental"]
+        },
+        {
+          "id": "SPA001",
+          "name": "Escapada Relax",
+          "description": "Habitación + circuito spa + masaje",
+          "priceExtra": 65,
+          "includes": ["spa_access", "massage_50min"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 15
+  },
+  {
+    "lodgingId": "LDG002",
+    "pricing": {
+      "baseRate": 120,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 2
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.4,
+          "minStay": 3
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.5,
+          "minStay": 5
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.6,
+          "minStay": 3
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 45, "percentage": 12 },
+        { "type": "long_stay", "minNights": 10, "percentage": 20 }
+      ],
+      "packages": [
+        {
+          "id": "FAM001",
+          "name": "Paquete Familiar",
+          "description": "Apartamento + forfait familia + actividades niños",
+          "priceExtra": 85,
+          "includes": ["forfait_family", "kids_activities"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 50
+  },
+  {
+    "lodgingId": "LDG003",
+    "pricing": {
+      "baseRate": 35,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 1
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.2,
+          "minStay": 1
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 1.8,
+          "minStay": 2
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.3,
+          "minStay": 1
+        }
+      ],
+      "discounts": [{ "type": "group", "minPersons": 6, "percentage": 15 }],
+      "packages": [
+        {
+          "id": "BAC001",
+          "name": "Backpacker Especial",
+          "description": "Cama + desayuno + taquilla",
+          "priceExtra": 8,
+          "includes": ["breakfast", "locker"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 0
+  },
+  {
+    "lodgingId": "LDG004",
+    "pricing": {
+      "baseRate": 65,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 2
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.3,
+          "minStay": 2
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.0,
+          "minStay": 3
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.4,
+          "minStay": 2
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 60, "percentage": 15 }
+      ],
+      "packages": [
+        {
+          "id": "RUR001",
+          "name": "Escapada Rural",
+          "description": "Habitación + desayuno + cena casera",
+          "priceExtra": 25,
+          "includes": ["breakfast", "dinner"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 10
+  },
+  {
+    "lodgingId": "LDG005",
+    "pricing": {
+      "baseRate": 95,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 2
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.35,
+          "minStay": 2
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.3,
+          "minStay": 4
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.55,
+          "minStay": 2
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 30, "percentage": 10 },
+        { "type": "long_stay", "minNights": 7, "percentage": 18 }
+      ],
+      "packages": [
+        {
+          "id": "LUX001",
+          "name": "Lujo Total",
+          "description": "Habitación + spa + forfait + cena gourmet",
+          "priceExtra": 120,
+          "includes": ["spa_access", "forfait_1day", "gourmet_dinner"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 20
+  },
+  {
+    "lodgingId": "LDG007",
+    "pricing": {
+      "baseRate": 110,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 2
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.4,
+          "minStay": 2
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.4,
+          "minStay": 3
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.6,
+          "minStay": 2
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 35, "percentage": 12 },
+        { "type": "long_stay", "minNights": 5, "percentage": 16 }
+      ],
+      "packages": [
+        {
+          "id": "SKI002",
+          "name": "Ski Premium",
+          "description": "Habitación + forfait + clases + equipo",
+          "priceExtra": 95,
+          "includes": ["forfait_1day", "equipment_rental", "ski_lesson"]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 18
+  },
+  {
+    "lodgingId": "LDG010",
+    "pricing": {
+      "baseRate": 135,
+      "seasons": [
+        {
+          "name": "Temporada Baja",
+          "start": "2025-04-01",
+          "end": "2025-11-30",
+          "multiplier": 1.0,
+          "minStay": 3
+        },
+        {
+          "name": "Pre-Temporada",
+          "start": "2025-12-01",
+          "end": "2025-12-19",
+          "multiplier": 1.5,
+          "minStay": 3
+        },
+        {
+          "name": "Navidad",
+          "start": "2025-12-20",
+          "end": "2026-01-06",
+          "multiplier": 2.8,
+          "minStay": 5
+        },
+        {
+          "name": "Temporada Alta",
+          "start": "2026-01-07",
+          "end": "2026-03-31",
+          "multiplier": 1.8,
+          "minStay": 3
+        }
+      ],
+      "discounts": [
+        { "type": "early_bird", "daysInAdvance": 60, "percentage": 15 },
+        { "type": "long_stay", "minNights": 10, "percentage": 25 }
+      ],
+      "packages": [
+        {
+          "id": "VIP001",
+          "name": "VIP Experience",
+          "description": "Suite + spa ilimitado + forfait + cena estrella Michelin",
+          "priceExtra": 180,
+          "includes": [
+            "spa_unlimited",
+            "forfait_1day",
+            "michelin_dinner",
+            "butler_service"
+          ]
+        }
+      ]
+    },
+    "currency": "EUR",
+    "taxRate": 10,
+    "cleaningFee": 30
+  }
+]

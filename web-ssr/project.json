@@ -18,9 +18,17 @@
           {
             "glob": "**/*",
             "input": "web-ssr/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "web-ssr/src/assets",
+            "output": "assets"
           }
         ],
-        "styles": ["web-ssr/src/styles.css"],
+        "styles": [
+          "node_modules/leaflet/dist/leaflet.css",
+          "web-ssr/src/styles.css"
+        ],
         "server": "web-ssr/src/main.server.ts",
         "ssr": {
           "entry": "web-ssr/src/server.ts"

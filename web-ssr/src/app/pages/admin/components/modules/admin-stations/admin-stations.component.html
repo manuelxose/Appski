@@ -1,0 +1,342 @@
+<div class="admin-stations">
+  <!-- Breadcrumbs -->
+  <app-admin-breadcrumbs [items]="breadcrumbs" />
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">Gestión de Estaciones de Esquí</h1>
+      <p class="page-description">
+        Administra estaciones, estado de pistas y condiciones
+      </p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn btn-primary" (click)="openCreateModal()">
+        <span class="btn-icon">➕</span>
+        Nueva Estación
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Estaciones"
+      [value]="stats().total"
+      icon="🏔️"
+      variant="primary"
+    />
+
+    <app-admin-stat-card
+      label="Estaciones Abiertas"
+      [value]="stats().open"
+      icon="✅"
+      variant="success"
+    />
+
+    <app-admin-stat-card
+      label="Total Pistas"
+      [value]="stats().totalPistes"
+      icon="🎿"
+      variant="info"
+    />
+
+    <app-admin-stat-card
+      label="Pistas Abiertas"
+      [value]="stats().openPistes"
+      [subtitle]="stats().pistesPercentage + '% del total'"
+      icon="📊"
+      variant="success"
+    />
+  </div>
+
+  <!-- Filters & Search -->
+  <div class="controls-section">
+    <app-admin-search-bar
+      placeholder="Buscar por nombre, slug..."
+      (searchChange)="onSearch($event)"
+    />
+
+    <app-admin-filters
+      [fields]="filterFields"
+      (filterChange)="onFilterChange($event)"
+      (filterReset)="onFilterReset()"
+    />
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader type="skeleton" />
+  }
+
+  <!-- Stations Table -->
+  @if (!isLoading() && paginatedStations().length > 0) {
+  <div class="table-container">
+    <app-admin-table
+      [data]="paginatedStations()"
+      [columns]="tableColumns"
+      [actions]="tableActions"
+      [selectable]="true"
+      (selectionChange)="onSelectionChange($event)"
+    />
+
+    <app-admin-pagination
+      [currentPage]="currentPage()"
+      [totalPages]="totalPages()"
+      [pageSize]="pageSize()"
+      [totalItems]="totalStations()"
+      (pageChange)="onPageChange($event)"
+      (pageSizeChange)="onPageSizeChange($event)"
+    />
+  </div>
+  }
+
+  <!-- Empty State -->
+  @if (!isLoading() && paginatedStations().length === 0) {
+  <app-admin-empty-state
+    icon="🏔️"
+    title="No hay estaciones"
+    description="No se encontraron estaciones con los filtros aplicados"
+    [actionLabel]="
+      searchQuery() || Object.keys(activeFilters()).length > 0
+        ? 'Limpiar filtros'
+        : 'Crear primera estación'
+    "
+    (primaryAction)="
+      searchQuery() || Object.keys(activeFilters()).length > 0
+        ? onFilterReset()
+        : openCreateModal()
+    "
+  />
+  }
+
+  <!-- Create/Edit Modal -->
+  <app-admin-modal
+    [open]="showCreateModal() || showEditModal()"
+    [title]="showCreateModal() ? 'Crear Estación' : 'Editar Estación'"
+    size="lg"
+    (modalClose)="showCreateModal.set(false); showEditModal.set(false)"
+  >
+    <form
+      class="station-form"
+      (submit)="
+        $event.preventDefault();
+        showCreateModal() ? createStation() : updateStation()
+      "
+    >
+      <div class="form-section">
+        <h3 class="section-title">Información General</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name" class="form-label">Nombre de la Estación *</label>
+            <input
+              id="name"
+              type="text"
+              class="form-input"
+              [(ngModel)]="stationForm().name"
+              name="name"
+              (blur)="generateSlug()"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="slug" class="form-label">Slug (URL) *</label>
+            <input
+              id="slug"
+              type="text"
+              class="form-input"
+              [(ngModel)]="stationForm().slug"
+              name="slug"
+              required
+            />
+            <span class="form-hint">Se genera automáticamente del nombre</span>
+          </div>
+
+          <div class="form-group">
+            <label for="status" class="form-label">Estado *</label>
+            <select
+              id="status"
+              class="form-select"
+              [(ngModel)]="stationForm().status"
+              name="status"
+              required
+            >
+              <option value="open">Abierta</option>
+              <option value="closed">Cerrada</option>
+              <option value="seasonal">Temporada</option>
+              <option value="maintenance">Mantenimiento</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea
+              id="description"
+              class="form-textarea"
+              [(ngModel)]="stationForm().description"
+              name="description"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="section-title">Altitudes</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="altitudeBase" class="form-label">Base (m) *</label>
+            <input
+              id="altitudeBase"
+              type="number"
+              class="form-input"
+              [(ngModel)]="stationForm().altitudeBase"
+              name="altitudeBase"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="altitudeMid" class="form-label">Media (m) *</label>
+            <input
+              id="altitudeMid"
+              type="number"
+              class="form-input"
+              [(ngModel)]="stationForm().altitudeMid"
+              name="altitudeMid"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="altitudeTop" class="form-label">Cima (m) *</label>
+            <input
+              id="altitudeTop"
+              type="number"
+              class="form-input"
+              [(ngModel)]="stationForm().altitudeTop"
+              name="altitudeTop"
+              min="0"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="section-title">Pistas</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="totalPistes" class="form-label">Total Pistas *</label>
+            <input
+              id="totalPistes"
+              type="number"
+              class="form-input"
+              [(ngModel)]="stationForm().totalPistes"
+              name="totalPistes"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="openPistes" class="form-label">Pistas Abiertas *</label>
+            <input
+              id="openPistes"
+              type="number"
+              class="form-input"
+              [(ngModel)]="stationForm().openPistes"
+              name="openPistes"
+              min="0"
+              [max]="stationForm().totalPistes"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="section-title">Contacto</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="phoneContact" class="form-label">Teléfono</label>
+            <input
+              id="phoneContact"
+              type="tel"
+              class="form-input"
+              [(ngModel)]="stationForm().phoneContact"
+              name="phoneContact"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="emailContact" class="form-label">Email</label>
+            <input
+              id="emailContact"
+              type="email"
+              class="form-input"
+              [(ngModel)]="stationForm().emailContact"
+              name="emailContact"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="showCreateModal.set(false); showEditModal.set(false)"
+        >
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary">
+          {{ showCreateModal() ? "Crear Estación" : "Guardar Cambios" }}
+        </button>
+      </div>
+    </form>
+  </app-admin-modal>
+
+  <!-- Map Upload Modal -->
+  <app-admin-modal
+    [open]="showMapUploadModal()"
+    title="Subir Mapa de Pistas"
+    size="md"
+    (modalClose)="showMapUploadModal.set(false)"
+  >
+    <div class="map-upload-content">
+      <p class="upload-description">
+        Sube el mapa de pistas de la estación. Formatos aceptados: JPG, PNG, PDF
+      </p>
+
+      <app-admin-file-upload
+        [acceptedTypes]="'image'"
+        [maxFileSizeMB]="10"
+        [multiple]="false"
+        [autoUpload]="true"
+        (filesSelected)="onMapFilesSelected($event)"
+        (uploadComplete)="onMapUploadComplete()"
+      />
+    </div>
+  </app-admin-modal>
+
+  <!-- Delete Confirmation -->
+  <app-admin-confirm-dialog
+    [open]="showDeleteConfirm()"
+    title="Eliminar Estación"
+    message="¿Estás seguro de que deseas eliminar esta estación? Esta acción no se puede deshacer."
+    variant="danger"
+    confirmLabel="Eliminar"
+    cancelLabel="Cancelar"
+    (confirmAction)="deleteStation()"
+    (cancelAction)="showDeleteConfirm.set(false)"
+  />
+</div>

@@ -1,0 +1,62 @@
+{
+  "totalRevenue": {
+    "current": 2450000,
+    "previous": 2000000,
+    "budget": 2300000,
+    "change": 450000,
+    "changePercent": 22.5,
+    "budgetVariance": 150000,
+    "budgetVariancePercent": 6.52,
+    "trend": "up"
+  },
+  "totalExpenses": {
+    "current": 1875000,
+    "previous": 1650000,
+    "budget": 1900000,
+    "change": 225000,
+    "changePercent": 13.64,
+    "budgetVariance": -25000,
+    "budgetVariancePercent": -1.32,
+    "trend": "up"
+  },
+  "netProfit": {
+    "current": 575000,
+    "previous": 350000,
+    "budget": 400000,
+    "change": 225000,
+    "changePercent": 64.29,
+    "budgetVariance": 175000,
+    "budgetVariancePercent": 43.75,
+    "trend": "up"
+  },
+  "profitMargin": {
+    "current": 23.47,
+    "previous": 17.5,
+    "budget": 17.39,
+    "change": 5.97,
+    "changePercent": 34.11,
+    "budgetVariance": 6.08,
+    "budgetVariancePercent": 34.96,
+    "trend": "up"
+  },
+  "ebitda": {
+    "current": 725000,
+    "previous": 480000,
+    "budget": 550000,
+    "change": 245000,
+    "changePercent": 51.04,
+    "budgetVariance": 175000,
+    "budgetVariancePercent": 31.82,
+    "trend": "up"
+  },
+  "operatingCashFlow": {
+    "current": 685000,
+    "previous": 425000,
+    "budget": 500000,
+    "change": 260000,
+    "changePercent": 61.18,
+    "budgetVariance": 185000,
+    "budgetVariancePercent": 37.0,
+    "trend": "up"
+  }
+}

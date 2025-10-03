@@ -1,0 +1,142 @@
+{
+  "ratios": [
+    {
+      "name": "Current Ratio",
+      "value": 2.45,
+      "benchmark": 2.0,
+      "status": "good",
+      "description": "Capacidad de cubrir pasivos a corto plazo. Ratio saludable > 2.0"
+    },
+    {
+      "name": "Quick Ratio",
+      "value": 1.85,
+      "benchmark": 1.5,
+      "status": "good",
+      "description": "Liquidez inmediata sin inventario. Ratio óptimo > 1.5"
+    },
+    {
+      "name": "Debt-to-Equity",
+      "value": 0.42,
+      "benchmark": 0.5,
+      "status": "good",
+      "description": "Ratio de apalancamiento financiero. Menor es mejor, óptimo < 0.5"
+    },
+    {
+      "name": "Return on Assets (ROA)",
+      "value": 18.5,
+      "benchmark": 15.0,
+      "status": "good",
+      "description": "Rentabilidad sobre activos totales. Objetivo > 15%"
+    },
+    {
+      "name": "Return on Equity (ROE)",
+      "value": 28.7,
+      "benchmark": 20.0,
+      "status": "good",
+      "description": "Rentabilidad sobre patrimonio. Excelente > 20%"
+    },
+    {
+      "name": "Gross Margin",
+      "value": 75.0,
+      "benchmark": 70.0,
+      "status": "good",
+      "description": "Margen bruto sobre ventas. Saludable > 70% en SaaS"
+    },
+    {
+      "name": "Operating Margin",
+      "value": 29.6,
+      "benchmark": 20.0,
+      "status": "good",
+      "description": "Margen operativo. Excelente > 20%"
+    },
+    {
+      "name": "Net Profit Margin",
+      "value": 17.6,
+      "benchmark": 15.0,
+      "status": "good",
+      "description": "Margen neto de beneficio. Objetivo > 15%"
+    },
+    {
+      "name": "Days Sales Outstanding (DSO)",
+      "value": 32,
+      "benchmark": 30,
+      "status": "warning",
+      "description": "Días promedio para cobrar. Ideal < 30 días"
+    },
+    {
+      "name": "Days Payable Outstanding (DPO)",
+      "value": 45,
+      "benchmark": 45,
+      "status": "good",
+      "description": "Días promedio para pagar proveedores. Objetivo 45 días"
+    },
+    {
+      "name": "Cash Conversion Cycle",
+      "value": 18,
+      "benchmark": 20,
+      "status": "good",
+      "description": "Días para convertir inversión en cash. Menor es mejor"
+    },
+    {
+      "name": "Asset Turnover",
+      "value": 1.52,
+      "benchmark": 1.5,
+      "status": "good",
+      "description": "Eficiencia en uso de activos. Óptimo > 1.5"
+    },
+    {
+      "name": "Interest Coverage",
+      "value": 9.67,
+      "benchmark": 5.0,
+      "status": "good",
+      "description": "Capacidad de pagar intereses. Saludable > 5.0"
+    },
+    {
+      "name": "Working Capital Ratio",
+      "value": 1.82,
+      "benchmark": 1.5,
+      "status": "good",
+      "description": "Capital de trabajo vs activos corrientes. Objetivo > 1.5"
+    },
+    {
+      "name": "Burn Rate (Monthly)",
+      "value": 156250,
+      "benchmark": 150000,
+      "status": "warning",
+      "description": "Gasto mensual neto de cash. Control bajo €150K"
+    },
+    {
+      "name": "Customer Acquisition Cost (CAC)",
+      "value": 42.15,
+      "benchmark": 50.0,
+      "status": "good",
+      "description": "Coste de adquirir un cliente. Óptimo < €50"
+    },
+    {
+      "name": "LTV/CAC Ratio",
+      "value": 11.56,
+      "benchmark": 3.0,
+      "status": "good",
+      "description": "Lifetime Value vs CAC. Excelente > 3.0"
+    },
+    {
+      "name": "Revenue per Employee",
+      "value": 156250,
+      "benchmark": 150000,
+      "status": "good",
+      "description": "Productividad por empleado. Objetivo > €150K"
+    }
+  ],
+  "summary": {
+    "totalRatios": 18,
+    "goodRatios": 15,
+    "warningRatios": 2,
+    "criticalRatios": 1,
+    "overallHealth": "Excelente",
+    "recommendations": [
+      "Mejorar DSO para acelerar cobros",
+      "Monitorear burn rate mensual",
+      "Mantener márgenes actuales"
+    ]
+  }
+}

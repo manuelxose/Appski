@@ -1,0 +1,9 @@
+<span [class]="badgeClass()">
+  @if (dot()) {
+  <span class="badge-dot"></span>
+  } @if (icon()) {
+  <span class="badge-icon">{{ icon() }}</span>
+  }
+
+  <span class="badge-text">{{ text() }}</span>
+</span>

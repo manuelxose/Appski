@@ -1,0 +1,1392 @@
+<div class="settings-container">
+  <!-- Header -->
+  <div class="settings-header">
+    <app-admin-breadcrumbs [items]="breadcrumbs"></app-admin-breadcrumbs>
+
+    <div class="header-content">
+      <h1 class="page-title">⚙️ Configuración del Sistema</h1>
+      <div class="header-actions">
+        <button class="btn btn-secondary" (click)="exportSettings()">
+          📥 Exportar
+        </button>
+        <input
+          type="file"
+          accept="application/json"
+          (change)="importSettings($event)"
+          style="display: none"
+          #fileInput
+        />
+        <button class="btn btn-secondary" (click)="fileInput.click()">
+          📤 Importar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerts -->
+  @if (successMessage()) {
+  <div class="alert alert-success">✅ {{ successMessage() }}</div>
+  } @if (error()) {
+  <div class="alert alert-error">❌ {{ error() }}</div>
+  }
+
+  <!-- Tabs Navigation -->
+  <div class="tabs-navigation">
+    @for (tab of tabs; track tab.id) {
+    <button
+      class="tab-button"
+      [class.active]="activeTab() === tab.id"
+      (click)="setActiveTab(tab.id)"
+    >
+      <span class="tab-icon">{{ tab.icon }}</span>
+      <span class="tab-label">{{ tab.label }}</span>
+    </button>
+    }
+  </div>
+
+  <!-- Content -->
+  <div class="settings-content">
+    @if (isLoading()) {
+    <app-admin-loader></app-admin-loader>
+    } @else {
+    <!-- GENERAL TAB -->
+    @if (activeTab() === 'general') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración General</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="siteName">Nombre del Sitio *</label>
+          <input
+            type="text"
+            id="siteName"
+            [(ngModel)]="generalSettings().siteName"
+            placeholder="Nieve Platform"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="siteDescription">Descripción</label>
+          <textarea
+            id="siteDescription"
+            [(ngModel)]="generalSettings().siteDescription"
+            rows="3"
+            placeholder="Plataforma de reservas para estaciones de esquí"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="logo">URL del Logo</label>
+          <input
+            type="url"
+            id="logo"
+            [(ngModel)]="generalSettings().logo"
+            placeholder="https://example.com/logo.png"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="favicon">URL del Favicon</label>
+          <input
+            type="url"
+            id="favicon"
+            [(ngModel)]="generalSettings().favicon"
+            placeholder="https://example.com/favicon.ico"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="timezone">Zona Horaria</label>
+          <select id="timezone" [(ngModel)]="generalSettings().timezone">
+            <option value="Europe/Madrid">Europe/Madrid (GMT+1)</option>
+            <option value="Europe/London">Europe/London (GMT+0)</option>
+            <option value="Europe/Paris">Europe/Paris (GMT+1)</option>
+            <option value="America/New_York">America/New_York (GMT-5)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="defaultLanguage">Idioma Predeterminado</label>
+          <select
+            id="defaultLanguage"
+            [(ngModel)]="generalSettings().defaultLanguage"
+          >
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="defaultCurrency">Moneda Predeterminada</label>
+          <select
+            id="defaultCurrency"
+            [(ngModel)]="generalSettings().defaultCurrency"
+          >
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dateFormat">Formato de Fecha</label>
+          <select id="dateFormat" [(ngModel)]="generalSettings().dateFormat">
+            <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+            <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+            <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="generalSettings().maintenanceMode"
+            />
+            <span>Modo Mantenimiento</span>
+          </label>
+          <p class="help-text">
+            Activa esta opción para mostrar una página de mantenimiento
+          </p>
+        </div>
+
+        @if (generalSettings().maintenanceMode) {
+        <div class="form-group full-width">
+          <label for="maintenanceMessage">Mensaje de Mantenimiento</label>
+          <textarea
+            id="maintenanceMessage"
+            [(ngModel)]="generalSettings().maintenanceMessage"
+            rows="3"
+            placeholder="Estamos realizando mejoras. Volveremos pronto."
+          ></textarea>
+        </div>
+        }
+      </div>
+    </div>
+    }
+
+    <!-- BOOKING TAB -->
+    @if (activeTab() === 'booking') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración de Reservas</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="freeCancellationDays">Cancelación Gratuita (días)</label>
+          <input
+            type="number"
+            id="freeCancellationDays"
+            [(ngModel)]="bookingSettings().freeCancellationDays"
+            min="0"
+            max="30"
+          />
+          <p class="help-text">
+            Días antes del check-in para cancelar sin cargo
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="depositPercentage">Depósito Requerido (%)</label>
+          <input
+            type="number"
+            id="depositPercentage"
+            [(ngModel)]="bookingSettings().depositPercentage"
+            min="0"
+            max="100"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="paymentDeadlineHours">Plazo de Pago (horas)</label>
+          <input
+            type="number"
+            id="paymentDeadlineHours"
+            [(ngModel)]="bookingSettings().paymentDeadlineHours"
+            min="1"
+            max="168"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="defaultCheckInTime">Hora de Entrada</label>
+          <input
+            type="time"
+            id="defaultCheckInTime"
+            [(ngModel)]="bookingSettings().defaultCheckInTime"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="defaultCheckOutTime">Hora de Salida</label>
+          <input
+            type="time"
+            id="defaultCheckOutTime"
+            [(ngModel)]="bookingSettings().defaultCheckOutTime"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="minimumAge">Edad Mínima</label>
+          <input
+            type="number"
+            id="minimumAge"
+            [(ngModel)]="bookingSettings().minimumAge"
+            min="0"
+            max="100"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maxAdvanceBookingDays"
+            >Reserva Anticipada Máxima (días)</label
+          >
+          <input
+            type="number"
+            id="maxAdvanceBookingDays"
+            [(ngModel)]="bookingSettings().maxAdvanceBookingDays"
+            min="1"
+            max="730"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="minAdvanceBookingHours"
+            >Reserva Anticipada Mínima (horas)</label
+          >
+          <input
+            type="number"
+            id="minAdvanceBookingHours"
+            [(ngModel)]="bookingSettings().minAdvanceBookingHours"
+            min="0"
+            max="72"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="bookingSettings().allowInstantBooking"
+            />
+            <span>Permitir Reserva Instantánea</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="bookingSettings().autoConfirmBookings"
+            />
+            <span>Confirmar Reservas Automáticamente</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="bookingSettings().requirePhoneVerification"
+            />
+            <span>Requerir Verificación de Teléfono</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- PAYMENTS TAB -->
+    @if (activeTab() === 'payments') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración de Pagos</h2>
+
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <span class="field-label">Pasarelas de Pago Activas</span>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                [checked]="paymentSettings().enabledGateways.includes('stripe')"
+                (change)="toggleGateway('stripe')"
+              />
+              <span>💳 Stripe</span>
+            </label>
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                [checked]="paymentSettings().enabledGateways.includes('paypal')"
+                (change)="toggleGateway('paypal')"
+              />
+              <span>🅿️ PayPal</span>
+            </label>
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                [checked]="paymentSettings().enabledGateways.includes('redsys')"
+                (change)="toggleGateway('redsys')"
+              />
+              <span>🏦 Redsys</span>
+            </label>
+          </div>
+        </div>
+
+        @if (paymentSettings().enabledGateways.includes('stripe')) {
+        <div class="form-group">
+          <label for="stripePublicKey">Stripe Public Key</label>
+          <input
+            type="text"
+            id="stripePublicKey"
+            [(ngModel)]="paymentSettings().stripePublicKey"
+            placeholder="pk_test_..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="stripeSecretKey">Stripe Secret Key</label>
+          <input
+            type="password"
+            id="stripeSecretKey"
+            [(ngModel)]="paymentSettings().stripeSecretKey"
+            placeholder="sk_test_..."
+          />
+        </div>
+        } @if (paymentSettings().enabledGateways.includes('paypal')) {
+        <div class="form-group">
+          <label for="paypalClientId">PayPal Client ID</label>
+          <input
+            type="text"
+            id="paypalClientId"
+            [(ngModel)]="paymentSettings().paypalClientId"
+            placeholder="AYxx..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="paypalSecretKey">PayPal Secret Key</label>
+          <input
+            type="password"
+            id="paypalSecretKey"
+            [(ngModel)]="paymentSettings().paypalSecretKey"
+            placeholder="ELxx..."
+          />
+        </div>
+        } @if (paymentSettings().enabledGateways.includes('redsys')) {
+        <div class="form-group">
+          <label for="redsysCommerceCode">Redsys Código de Comercio</label>
+          <input
+            type="text"
+            id="redsysCommerceCode"
+            [(ngModel)]="paymentSettings().redsysCommerceCode"
+            placeholder="999008881"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="redsysTerminal">Redsys Terminal</label>
+          <input
+            type="text"
+            id="redsysTerminal"
+            [(ngModel)]="paymentSettings().redsysTerminal"
+            placeholder="001"
+          />
+        </div>
+        }
+
+        <div class="form-group">
+          <label for="platformFeePercentage">Comisión de Plataforma (%)</label>
+          <input
+            type="number"
+            id="platformFeePercentage"
+            [(ngModel)]="paymentSettings().platformFeePercentage"
+            min="0"
+            max="50"
+            step="0.1"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="refundProcessingDays"
+            >Días de Procesamiento de Reembolsos</label
+          >
+          <input
+            type="number"
+            id="refundProcessingDays"
+            [(ngModel)]="paymentSettings().refundProcessingDays"
+            min="1"
+            max="30"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="paymentSettings().autoRefunds"
+            />
+            <span>Reembolsos Automáticos</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- NOTIFICATIONS TAB -->
+    @if (activeTab() === 'notifications') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración de Notificaciones</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="emailProvider">Proveedor de Email</label>
+          <select
+            id="emailProvider"
+            [(ngModel)]="notificationSettings().emailProvider"
+          >
+            <option value="smtp">SMTP</option>
+            <option value="sendgrid">SendGrid</option>
+            <option value="mailgun">Mailgun</option>
+          </select>
+        </div>
+
+        @if (notificationSettings().emailProvider === 'smtp') {
+        <div class="form-group">
+          <label for="smtpHost">SMTP Host</label>
+          <input
+            type="text"
+            id="smtpHost"
+            [(ngModel)]="notificationSettings().smtpHost"
+            placeholder="smtp.gmail.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="smtpPort">SMTP Puerto</label>
+          <input
+            type="number"
+            id="smtpPort"
+            [(ngModel)]="notificationSettings().smtpPort"
+            placeholder="587"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="smtpUser">SMTP Usuario</label>
+          <input
+            type="text"
+            id="smtpUser"
+            [(ngModel)]="notificationSettings().smtpUser"
+            placeholder="usuario@gmail.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="smtpPassword">SMTP Contraseña</label>
+          <input
+            type="password"
+            id="smtpPassword"
+            [(ngModel)]="notificationSettings().smtpPassword"
+            placeholder="••••••••"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="smtpFromEmail">Email Remitente</label>
+          <input
+            type="email"
+            id="smtpFromEmail"
+            [(ngModel)]="notificationSettings().smtpFromEmail"
+            placeholder="noreply@nieve.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="smtpFromName">Nombre Remitente</label>
+          <input
+            type="text"
+            id="smtpFromName"
+            [(ngModel)]="notificationSettings().smtpFromName"
+            placeholder="Nieve Platform"
+          />
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-secondary" (click)="testSmtpConnection()">
+            🧪 Probar Conexión SMTP
+          </button>
+        </div>
+        } @if (notificationSettings().emailProvider === 'sendgrid') {
+        <div class="form-group full-width">
+          <label for="sendgridApiKey">SendGrid API Key</label>
+          <input
+            type="password"
+            id="sendgridApiKey"
+            [(ngModel)]="notificationSettings().sendgridApiKey"
+            placeholder="SG.xxx..."
+          />
+        </div>
+        }
+
+        <div class="form-group">
+          <label for="twilioAccountSid">Twilio Account SID</label>
+          <input
+            type="text"
+            id="twilioAccountSid"
+            [(ngModel)]="notificationSettings().twilioAccountSid"
+            placeholder="ACxx..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="twilioAuthToken">Twilio Auth Token</label>
+          <input
+            type="password"
+            id="twilioAuthToken"
+            [(ngModel)]="notificationSettings().twilioAuthToken"
+            placeholder="••••••••"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="twilioPhoneNumber">Twilio Número de Teléfono</label>
+          <input
+            type="tel"
+            id="twilioPhoneNumber"
+            [(ngModel)]="notificationSettings().twilioPhoneNumber"
+            placeholder="+34600000000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="reminderDaysBefore">Días de Recordatorio</label>
+          <input
+            type="number"
+            id="reminderDaysBefore"
+            [(ngModel)]="notificationSettings().reminderDaysBefore"
+            min="1"
+            max="30"
+          />
+          <p class="help-text">
+            Días antes del check-in para enviar recordatorio
+          </p>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().enableEmailNotifications"
+            />
+            <span>📧 Notificaciones por Email</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().enableSmsNotifications"
+            />
+            <span>📱 Notificaciones por SMS</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().enablePushNotifications"
+            />
+            <span>🔔 Notificaciones Push</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().bookingConfirmationEmail"
+            />
+            <span>Email de Confirmación de Reserva</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().bookingCancellationEmail"
+            />
+            <span>Email de Cancelación de Reserva</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="notificationSettings().bookingReminderEmail"
+            />
+            <span>Email de Recordatorio de Reserva</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- PREMIUM TAB -->
+    @if (activeTab() === 'premium') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración Premium</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="trialDays">Días de Prueba</label>
+          <input
+            type="number"
+            id="trialDays"
+            [(ngModel)]="premiumSettings().trialDays"
+            min="0"
+            max="90"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="premiumSettings().enablePremium"
+            />
+            <span>Habilitar Planes Premium</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="premiumSettings().allowDowngrade"
+            />
+            <span>Permitir Downgrades</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="plans-preview">
+        <h3>Planes Disponibles</h3>
+        @for (plan of premiumSettings().plans; track plan.id) {
+        <div class="plan-card" [class.popular]="plan.popular">
+          <h4>{{ plan.name }}</h4>
+          <p>{{ plan.description }}</p>
+          <div class="plan-pricing">
+            <span class="price">{{ plan.monthlyPrice }}€/mes</span>
+            <span class="price-yearly">{{ plan.yearlyPrice }}€/año</span>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+
+    <!-- USERS TAB -->
+    @if (activeTab() === 'users') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración de Usuarios</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="passwordMinLength">Longitud Mínima de Contraseña</label>
+          <input
+            type="number"
+            id="passwordMinLength"
+            [(ngModel)]="userSettings().passwordMinLength"
+            min="6"
+            max="32"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="sessionTimeoutMinutes">Timeout de Sesión (minutos)</label>
+          <input
+            type="number"
+            id="sessionTimeoutMinutes"
+            [(ngModel)]="userSettings().sessionTimeoutMinutes"
+            min="5"
+            max="1440"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maxLoginAttempts">Máximo de Intentos de Login</label>
+          <input
+            type="number"
+            id="maxLoginAttempts"
+            [(ngModel)]="userSettings().maxLoginAttempts"
+            min="3"
+            max="10"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().enablePublicRegistration"
+            />
+            <span>Permitir Registro Público</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().requireEmailVerification"
+            />
+            <span>Requerir Verificación de Email</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().requirePhoneVerification"
+            />
+            <span>Requerir Verificación de Teléfono</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().allowSocialLogin"
+            />
+            <span>Permitir Login Social</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().passwordRequireUppercase"
+            />
+            <span>Contraseña: Requerir Mayúsculas</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().passwordRequireNumbers"
+            />
+            <span>Contraseña: Requerir Números</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="userSettings().passwordRequireSymbols"
+            />
+            <span>Contraseña: Requerir Símbolos</span>
+          </label>
+        </div>
+      </div>
+
+      @if (userSettings().allowSocialLogin) {
+      <div class="social-providers">
+        <h3>Proveedores Sociales Habilitados</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [checked]="
+                userSettings().enabledSocialProviders.includes('google')
+              "
+            />
+            <span>🔵 Google</span>
+          </label>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [checked]="
+                userSettings().enabledSocialProviders.includes('facebook')
+              "
+            />
+            <span>🔵 Facebook</span>
+          </label>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [checked]="
+                userSettings().enabledSocialProviders.includes('apple')
+              "
+            />
+            <span>⚫ Apple</span>
+          </label>
+        </div>
+      </div>
+      }
+    </div>
+    }
+
+    <!-- SEO TAB -->
+    @if (activeTab() === 'seo') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración SEO</h2>
+
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label for="defaultMetaTitle">Meta Title Predeterminado</label>
+          <input
+            type="text"
+            id="defaultMetaTitle"
+            [(ngModel)]="seoSettings().defaultMetaTitle"
+            placeholder="Nieve Platform - Reserva tu aventura en la nieve"
+            maxlength="60"
+          />
+          <p class="help-text">
+            {{ seoSettings().defaultMetaTitle.length }}/60 caracteres
+          </p>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="defaultMetaDescription"
+            >Meta Description Predeterminada</label
+          >
+          <textarea
+            id="defaultMetaDescription"
+            [(ngModel)]="seoSettings().defaultMetaDescription"
+            rows="3"
+            maxlength="160"
+            placeholder="Descubre las mejores estaciones de esquí..."
+          ></textarea>
+          <p class="help-text">
+            {{ seoSettings().defaultMetaDescription.length }}/160 caracteres
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="ogDefaultImage">Open Graph Imagen Predeterminada</label>
+          <input
+            type="url"
+            id="ogDefaultImage"
+            [(ngModel)]="seoSettings().ogDefaultImage"
+            placeholder="https://example.com/og-image.jpg"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="twitterCard">Tipo de Twitter Card</label>
+          <select id="twitterCard" [(ngModel)]="seoSettings().twitterCard">
+            <option value="summary">Summary</option>
+            <option value="summary_large_image">Summary Large Image</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="googleAnalyticsId">Google Analytics ID</label>
+          <input
+            type="text"
+            id="googleAnalyticsId"
+            [(ngModel)]="seoSettings().googleAnalyticsId"
+            placeholder="G-XXXXXXXXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="googleSearchConsoleId">Google Search Console ID</label>
+          <input
+            type="text"
+            id="googleSearchConsoleId"
+            [(ngModel)]="seoSettings().googleSearchConsoleId"
+            placeholder="verification_code"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="googleTagManagerId">Google Tag Manager ID</label>
+          <input
+            type="text"
+            id="googleTagManagerId"
+            [(ngModel)]="seoSettings().googleTagManagerId"
+            placeholder="GTM-XXXXXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="facebookPixelId">Facebook Pixel ID</label>
+          <input
+            type="text"
+            id="facebookPixelId"
+            [(ngModel)]="seoSettings().facebookPixelId"
+            placeholder="123456789012345"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="sitemapFrequency">Frecuencia del Sitemap</label>
+          <select
+            id="sitemapFrequency"
+            [(ngModel)]="seoSettings().sitemapFrequency"
+          >
+            <option value="daily">Diaria</option>
+            <option value="weekly">Semanal</option>
+            <option value="monthly">Mensual</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" [(ngModel)]="seoSettings().enableSitemap" />
+            <span>Habilitar Sitemap Automático</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="robotsTxt">Contenido de robots.txt</label>
+          <textarea
+            id="robotsTxt"
+            [(ngModel)]="seoSettings().robotsTxt"
+            rows="8"
+            placeholder="User-agent: *&#10;Disallow: /admin/&#10;Sitemap: https://example.com/sitemap.xml"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- INTEGRATIONS TAB -->
+    @if (activeTab() === 'integrations') {
+    <div class="settings-section">
+      <h2 class="section-title">Integraciones de Terceros</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="googleMapsApiKey">Google Maps API Key</label>
+          <input
+            type="text"
+            id="googleMapsApiKey"
+            [(ngModel)]="integrationSettings().googleMapsApiKey"
+            placeholder="AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="googlePlacesApiKey">Google Places API Key</label>
+          <input
+            type="text"
+            id="googlePlacesApiKey"
+            [(ngModel)]="integrationSettings().googlePlacesApiKey"
+            placeholder="AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="weatherApiKey">Weather API Key (OpenWeather)</label>
+          <input
+            type="text"
+            id="weatherApiKey"
+            [(ngModel)]="integrationSettings().weatherApiKey"
+            placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="cloudinaryCloudName">Cloudinary Cloud Name</label>
+          <input
+            type="text"
+            id="cloudinaryCloudName"
+            [(ngModel)]="integrationSettings().cloudinaryCloudName"
+            placeholder="my-cloud-name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="cloudinaryApiKey">Cloudinary API Key</label>
+          <input
+            type="text"
+            id="cloudinaryApiKey"
+            [(ngModel)]="integrationSettings().cloudinaryApiKey"
+            placeholder="123456789012345"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="cloudinaryApiSecret">Cloudinary API Secret</label>
+          <input
+            type="password"
+            id="cloudinaryApiSecret"
+            [(ngModel)]="integrationSettings().cloudinaryApiSecret"
+            placeholder="••••••••••••••••"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="integrationSettings().enableWebhooks"
+            />
+            <span>Habilitar Webhooks</span>
+          </label>
+        </div>
+      </div>
+
+      @if (integrationSettings().enableWebhooks) {
+      <div class="webhooks-section">
+        <div class="section-header">
+          <h3>Webhooks Configurados</h3>
+          <button class="btn btn-primary btn-sm" (click)="addWebhook()">
+            ➕ Agregar Webhook
+          </button>
+        </div>
+
+        @for (webhook of integrationSettings().webhooks; track webhook.id) {
+        <div class="webhook-card">
+          <div class="webhook-header">
+            <input
+              type="text"
+              [(ngModel)]="webhook.name"
+              placeholder="Nombre del webhook"
+              class="webhook-name"
+            />
+            <button class="btn-icon" (click)="removeWebhook(webhook.id)">
+              🗑️
+            </button>
+          </div>
+          <div class="webhook-body">
+            <input
+              type="url"
+              [(ngModel)]="webhook.url"
+              placeholder="https://example.com/webhook"
+              class="webhook-url"
+            />
+            <div class="webhook-secret">
+              <span class="secret-label">Secret:</span>
+              <code>{{ webhook.secret }}</code>
+            </div>
+            <label class="checkbox-label">
+              <input type="checkbox" [(ngModel)]="webhook.active" />
+              <span>Activo</span>
+            </label>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="testWebhook(webhook.id)"
+            >
+              🧪 Probar
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+      }
+    </div>
+    }
+
+    <!-- SECURITY TAB -->
+    @if (activeTab() === 'security') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración de Seguridad</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="sessionTimeout">Timeout de Sesión (segundos)</label>
+          <input
+            type="number"
+            id="sessionTimeout"
+            [(ngModel)]="securitySettings().sessionTimeout"
+            min="300"
+            max="86400"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maxLoginAttempts">Máximo de Intentos de Login</label>
+          <input
+            type="number"
+            id="maxLoginAttempts"
+            [(ngModel)]="securitySettings().maxLoginAttempts"
+            min="3"
+            max="10"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lockoutDurationMinutes"
+            >Duración del Bloqueo (minutos)</label
+          >
+          <input
+            type="number"
+            id="lockoutDurationMinutes"
+            [(ngModel)]="securitySettings().lockoutDurationMinutes"
+            min="5"
+            max="1440"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="rateLimitRequests">Rate Limit: Requests</label>
+          <input
+            type="number"
+            id="rateLimitRequests"
+            [(ngModel)]="securitySettings().rateLimitRequests"
+            min="10"
+            max="1000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="rateLimitWindow">Rate Limit: Ventana (segundos)</label>
+          <input
+            type="number"
+            id="rateLimitWindow"
+            [(ngModel)]="securitySettings().rateLimitWindow"
+            min="1"
+            max="3600"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input type="checkbox" [(ngModel)]="securitySettings().enable2FA" />
+            <span>Habilitar 2FA (Autenticación de Dos Factores)</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="securitySettings().force2FAForAdmins"
+            />
+            <span>Forzar 2FA para Administradores</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="securitySettings().enableCors"
+            />
+            <span>Habilitar CORS</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="securitySettings().enableRateLimiting"
+            />
+            <span>Habilitar Rate Limiting</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input type="checkbox" [(ngModel)]="securitySettings().enableSsl" />
+            <span>Forzar SSL/HTTPS</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="ip-whitelist-section">
+        <h3>IP Whitelist</h3>
+        <div class="ip-list">
+          @for (ip of securitySettings().ipWhitelist; track ip) {
+          <div class="ip-item">
+            <code>{{ ip }}</code>
+            <button class="btn-icon" (click)="removeFromIpWhitelist(ip)">
+              ❌
+            </button>
+          </div>
+          }
+        </div>
+        <div class="add-ip">
+          <input type="text" placeholder="192.168.1.1" #newIp />
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="addToIpWhitelist(newIp.value); newIp.value = ''"
+          >
+            ➕ Agregar IP
+          </button>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- LEGAL TAB -->
+    @if (activeTab() === 'legal') {
+    <div class="settings-section">
+      <h2 class="section-title">Configuración Legal</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="companyName">Nombre de la Empresa</label>
+          <input
+            type="text"
+            id="companyName"
+            [(ngModel)]="legalSettings().companyName"
+            placeholder="Nieve Platform S.L."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="companyAddress">Dirección</label>
+          <input
+            type="text"
+            id="companyAddress"
+            [(ngModel)]="legalSettings().companyAddress"
+            placeholder="C/ Principal 123, Madrid"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="companyPhone">Teléfono</label>
+          <input
+            type="tel"
+            id="companyPhone"
+            [(ngModel)]="legalSettings().companyPhone"
+            placeholder="+34 900 000 000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="companyEmail">Email</label>
+          <input
+            type="email"
+            id="companyEmail"
+            [(ngModel)]="legalSettings().companyEmail"
+            placeholder="legal@nieve.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="taxId">CIF/NIF</label>
+          <input
+            type="text"
+            id="taxId"
+            [(ngModel)]="legalSettings().taxId"
+            placeholder="B12345678"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="registrationNumber">Número de Registro</label>
+          <input
+            type="text"
+            id="registrationNumber"
+            [(ngModel)]="legalSettings().registrationNumber"
+            placeholder="RM 12345"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="dataRetentionDays">Retención de Datos (días)</label>
+          <input
+            type="number"
+            id="dataRetentionDays"
+            [(ngModel)]="legalSettings().dataRetentionDays"
+            min="30"
+            max="3650"
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="legalSettings().enableCookieConsent"
+            />
+            <span>Habilitar Banner de Cookies</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="legalSettings().gdprCompliant"
+            />
+            <span>Cumplimiento GDPR</span>
+          </label>
+        </div>
+
+        @if (legalSettings().enableCookieConsent) {
+        <div class="form-group full-width">
+          <label for="cookieConsentMessage"
+            >Mensaje de Consentimiento de Cookies</label
+          >
+          <textarea
+            id="cookieConsentMessage"
+            [(ngModel)]="legalSettings().cookieConsentMessage"
+            rows="3"
+            placeholder="Usamos cookies para mejorar tu experiencia..."
+          ></textarea>
+        </div>
+        }
+
+        <div class="form-group full-width">
+          <label for="termsOfService">Términos de Servicio</label>
+          <textarea
+            id="termsOfService"
+            [(ngModel)]="legalSettings().termsOfService"
+            rows="10"
+            placeholder="Escribe aquí los términos de servicio..."
+          ></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="privacyPolicy">Política de Privacidad</label>
+          <textarea
+            id="privacyPolicy"
+            [(ngModel)]="legalSettings().privacyPolicy"
+            rows="10"
+            placeholder="Escribe aquí la política de privacidad..."
+          ></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="cookiePolicy">Política de Cookies</label>
+          <textarea
+            id="cookiePolicy"
+            [(ngModel)]="legalSettings().cookiePolicy"
+            rows="10"
+            placeholder="Escribe aquí la política de cookies..."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    } }
+  </div>
+
+  <!-- Footer Actions -->
+  <div class="settings-footer">
+    <button
+      class="btn btn-secondary"
+      (click)="resetCurrentTab()"
+      [disabled]="isSaving()"
+    >
+      🔄 Reiniciar
+    </button>
+    <button
+      class="btn btn-primary"
+      (click)="saveCurrentTab()"
+      [disabled]="isSaving()"
+    >
+      @if (isSaving()) {
+      <span>💾 Guardando...</span>
+      } @else {
+      <span>💾 Guardar Cambios</span>
+      }
+    </button>
+  </div>
+</div>

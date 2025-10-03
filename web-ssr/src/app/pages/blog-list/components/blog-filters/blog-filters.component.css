@@ -1,0 +1,75 @@
+/* Blog Filters Component Styles */
+
+/* Filter Container Animation */
+.blog-filters {
+  animation: slideInLeft 0.5s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Search Input */
+input[type="text"] {
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: var(--shadow-focus-ring);
+}
+
+/* Category & Tag Buttons */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Active Filter Tags */
+.space-y-2 > div {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Info Section */
+.bg-gradient-to-r {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-filters {
+    padding: 1rem;
+  }
+}

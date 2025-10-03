@@ -1,0 +1,139 @@
+/* Lodging Marketplace Page Styles */
+
+/* Page header gradient animation */
+.bg-gradient-to-r {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Breadcrumb hover effect */
+.flex.items-center.gap-2 a {
+  transition: all 0.2s ease;
+}
+
+.flex.items-center.gap-2 a:hover {
+  transform: translateX(2px);
+}
+
+/* Grid layout transitions */
+.grid,
+.space-y-6 {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Empty state animation */
+.bg-white.rounded-xl.shadow-lg.p-12 {
+  animation: scaleIn 0.4s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile filter button pulse animation */
+.fixed.bottom-6.right-6 {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(var(--primary-600) / 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgb(var(--primary-600) / 0);
+  }
+}
+
+/* Mobile filters overlay animation */
+.fixed.inset-0.z-50 > .absolute.inset-0 {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.fixed.inset-0.z-50 > div[role="dialog"] {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 1rem;
+  }
+}
+
+/* Filter button hover effect */
+button.fixed.bottom-6:hover {
+  transform: scale(1.1);
+}
+
+button.fixed.bottom-6:active {
+  transform: scale(0.95);
+}
+
+/* Backdrop blur effect */
+.bg-black\/50 {
+  transition: opacity 0.3s ease;
+}
+
+/* Empty state button */
+button.px-6.py-3 {
+  transition: all 0.2s ease;
+}
+
+button.px-6.py-3:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+button.px-6.py-3:active {
+  transform: translateY(0);
+}

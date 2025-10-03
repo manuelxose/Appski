@@ -1,0 +1,125 @@
+/* Rental Filters Styles */
+
+/* Checkbox custom styles */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Select dropdown custom styles */
+select {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+select:hover {
+  border-color: #2563eb;
+}
+
+select:focus {
+  outline: none;
+}
+
+/* Range slider custom styles */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Hover effects */
+label:hover input[type="checkbox"] {
+  border-color: #2563eb;
+}
+
+/* Animation for filter changes */
+.space-y-2 > label {
+  transition: all 0.2s ease;
+}
+
+.space-y-2 > label:hover {
+  background-color: #f8fafc;
+  transform: translateX(2px);
+}
+
+/* Quick duration buttons */
+button.px-3.py-2 {
+  transition: all 0.2s ease;
+}
+
+button.px-3.py-2:hover {
+  transform: translateY(-2px);
+}
+
+button.px-3.py-2:active {
+  transform: translateY(0);
+}
+
+/* Price estimate animation */
+.bg-gradient-to-br {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+/* Price number animation */
+.text-2xl.font-bold {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sticky positioning enhancement */
+.sticky {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Reset button hover */
+button[data-i18n="rental.filters.reset"]:hover {
+  text-decoration: underline;
+}

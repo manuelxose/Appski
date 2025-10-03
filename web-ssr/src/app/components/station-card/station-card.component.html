@@ -1,0 +1,136 @@
+<!-- Station Card Premium -->
+<article
+  class="station-card bg-white rounded-2xl shadow-lg overflow-hidden hover-lift group"
+  [routerLink]="['/estacion', station().id]"
+>
+  <!-- Image with Badges -->
+  <div
+    class="relative h-44 md:h-48 overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50"
+  >
+    <img
+      [src]="station().image"
+      [alt]="station().name"
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+
+    <!-- Status Badge -->
+    <div class="absolute top-3 right-3">
+      <span
+        [class]="getStatusBadge().class"
+        class="px-3 py-1.5 text-xs font-bold rounded-full shadow-lg backdrop-blur-sm"
+      >
+        {{ getStatusBadge().text }}
+      </span>
+    </div>
+
+    <!-- Snow Quality Badge -->
+    <div class="absolute bottom-3 left-3">
+      <div
+        class="px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-full shadow-md"
+      >
+        <span [class]="getSnowQuality().color" class="text-xs font-bold">
+          ❄️ {{ getSnowQuality().label }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Weather & Temperature -->
+    @if (station().weather && station().temperature !== undefined) {
+    <div class="absolute top-3 left-3">
+      <div
+        class="px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-md flex items-center gap-1"
+      >
+        <span class="text-base">{{ station().weather }}</span>
+        <span class="text-xs font-bold text-slate-700"
+          >{{ station().temperature }}°</span
+        >
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- Content -->
+  <div class="p-4 md:p-5">
+    <!-- Title and Location -->
+    <div class="mb-3">
+      <h3
+        class="text-lg md:text-xl font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors"
+      >
+        {{ station().name }}
+      </h3>
+      <p class="text-sm text-slate-600 flex items-center gap-1">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        {{ station().location }}
+      </p>
+    </div>
+
+    <!-- Snow Data Grid -->
+    <div
+      class="grid grid-cols-3 gap-3 mb-4 p-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl"
+    >
+      <div class="text-center">
+        <div
+          class="snow-metric text-xl md:text-2xl font-black text-blue-600 mb-0.5"
+        >
+          {{ station().snowBase }}
+        </div>
+        <div
+          class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
+        >
+          Base cm
+        </div>
+      </div>
+      <div class="text-center">
+        <div
+          class="snow-metric text-xl md:text-2xl font-black text-blue-700 mb-0.5"
+        >
+          {{ station().snowTop }}
+        </div>
+        <div
+          class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
+        >
+          Cima cm
+        </div>
+      </div>
+      <div class="text-center">
+        <div
+          class="snow-metric text-xl md:text-2xl font-black text-green-600 mb-0.5"
+        >
+          {{ station().snowFresh }}
+        </div>
+        <div
+          class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
+        >
+          Nueva 24h
+        </div>
+      </div>
+    </div>
+
+    <!-- Infrastructure Info -->
+    <div
+      class="flex justify-between items-center text-sm text-slate-700 pt-3 border-t border-slate-200"
+    >
+      <div class="flex items-center gap-1.5">
+        <span class="text-base">🚡</span>
+        <span class="font-bold">{{ station().liftsOpen }}</span>
+        <span class="text-slate-500">/{{ station().liftsTotal }}</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <span class="text-base">⛷️</span>
+        <span class="font-bold">{{ station().slopesOpen }}</span>
+        <span class="text-slate-500">/{{ station().slopesTotal }}</span>
+      </div>
+      <div
+        class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform"
+      >
+        Ver más →
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,253 @@
+{
+  "success": true,
+  "data": {
+    "rentalShops": [
+      {
+        "id": "1",
+        "slug": "ski-pro-baqueira",
+        "name": "Ski Pro Baqueira",
+        "location": "Baqueira Beret",
+        "address": "Plaza de Baqueira, 25598 Baqueira, Lleida",
+        "lat": 42.7045,
+        "lng": 0.932,
+        "nearStations": ["Baqueira Beret", "Boí Taüll"],
+        "rating": 4.8,
+        "reviewCount": 234,
+        "priceRange": "€25-45",
+        "services": ["Esquís", "Snowboard", "Raquetas", "Ropa térmica"],
+        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "distance": 0.5,
+        "specialties": ["Expertos", "Niños", "Principiantes"],
+        "availability": "high"
+      },
+      {
+        "id": "2",
+        "slug": "snow-rental-sierra-nevada",
+        "name": "Snow Rental Sierra Nevada",
+        "location": "Sierra Nevada",
+        "address": "Plaza de Pradollano, 18196 Monachil, Granada",
+        "lat": 37.0959,
+        "lng": -3.3977,
+        "nearStations": ["Sierra Nevada"],
+        "rating": 4.6,
+        "reviewCount": 189,
+        "priceRange": "€20-40",
+        "services": ["Esquís", "Snowboard", "Cascos", "Gafas"],
+        "image": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+        "distance": 1.2,
+        "specialties": ["Principiantes", "Intermedio"],
+        "availability": "medium"
+      },
+      {
+        "id": "3",
+        "slug": "formigal-sport",
+        "name": "Formigal Sport",
+        "location": "Formigal",
+        "address": "Urbanización Formigal, 22640 Sallent de Gállego, Huesca",
+        "lat": 42.7755,
+        "lng": -0.3738,
+        "nearStations": ["Formigal", "Panticosa"],
+        "rating": 4.9,
+        "reviewCount": 312,
+        "priceRange": "€30-50",
+        "services": ["Esquís", "Snowboard", "Raquetas", "Trineos", "Clases"],
+        "image": "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=800",
+        "distance": 0.3,
+        "specialties": ["Expertos", "Freestyle", "Touring"],
+        "availability": "high"
+      },
+      {
+        "id": "4",
+        "slug": "mountain-gear-cerler",
+        "name": "Mountain Gear Cerler",
+        "location": "Cerler",
+        "address": "Calle Real, 22449 Cerler, Huesca",
+        "lat": 42.5969,
+        "lng": 0.5528,
+        "nearStations": ["Cerler"],
+        "rating": 4.5,
+        "reviewCount": 145,
+        "priceRange": "€22-38",
+        "services": ["Esquís", "Snowboard", "Cascos"],
+        "image": "https://images.unsplash.com/photo-1483884105135-c06ea9b87df9?w=800",
+        "distance": 0.8,
+        "specialties": ["Niños", "Principiantes"],
+        "availability": "low"
+      },
+      {
+        "id": "5",
+        "slug": "la-molina-rentals",
+        "name": "La Molina Rentals",
+        "location": "La Molina",
+        "address": "Carretera de Toses, 17537 La Molina, Girona",
+        "lat": 42.345,
+        "lng": 1.9483,
+        "nearStations": ["La Molina", "Masella"],
+        "rating": 4.7,
+        "reviewCount": 201,
+        "priceRange": "€28-45",
+        "services": ["Esquís", "Snowboard", "Ropa térmica", "Mochilas"],
+        "image": "https://images.unsplash.com/photo-1582028831994-b3c1f8c65352?w=800",
+        "distance": 1.5,
+        "specialties": ["Intermedio", "Avanzado", "Touring"],
+        "availability": "medium"
+      },
+      {
+        "id": "6",
+        "slug": "grandvalira-equipment",
+        "name": "Grandvalira Equipment",
+        "location": "Grandvalira",
+        "address": "Av. del Príncep Benlloch, AD200 Encamp, Andorra",
+        "lat": 42.539,
+        "lng": 1.6624,
+        "nearStations": ["Grandvalira"],
+        "rating": 4.8,
+        "reviewCount": 278,
+        "priceRange": "€35-55",
+        "services": ["Esquís", "Snowboard", "Raquetas", "Clases", "Guías"],
+        "image": "https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?w=800",
+        "distance": 0.6,
+        "specialties": ["Expertos", "Freestyle", "Freeride"],
+        "availability": "high"
+      },
+      {
+        "id": "7",
+        "slug": "ski-shop-madrid",
+        "name": "Madrid Ski Shop",
+        "location": "Madrid Centro",
+        "address": "Calle de Fuencarral, 45, 28004 Madrid",
+        "lat": 40.4248,
+        "lng": -3.7012,
+        "nearStations": ["Sierra Nevada", "Valdesquí", "Navacerrada"],
+        "rating": 4.4,
+        "reviewCount": 156,
+        "priceRange": "€30-50",
+        "services": ["Esquís", "Snowboard", "Ropa térmica", "Accesorios"],
+        "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800",
+        "distance": 2.0,
+        "specialties": ["Todos los niveles", "Tienda urbana"],
+        "availability": "high"
+      },
+      {
+        "id": "8",
+        "slug": "snow-tech-barcelona",
+        "name": "Snow Tech Barcelona",
+        "location": "Barcelona",
+        "address": "Passeig de Gràcia, 92, 08008 Barcelona",
+        "lat": 41.3947,
+        "lng": 2.1628,
+        "nearStations": ["La Molina", "Masella", "Port del Comte"],
+        "rating": 4.6,
+        "reviewCount": 198,
+        "priceRange": "€28-48",
+        "services": ["Esquís", "Snowboard", "Cascos", "Gafas", "Clases"],
+        "image": "https://images.unsplash.com/photo-1576020799627-aeac74d58064?w=800",
+        "distance": 1.8,
+        "specialties": ["Intermedio", "Avanzado", "Tienda urbana"],
+        "availability": "medium"
+      },
+      {
+        "id": "9",
+        "slug": "pyrenees-rental-jaca",
+        "name": "Pyrenees Rental Jaca",
+        "location": "Jaca",
+        "address": "Avenida Primer Viernes de Mayo, 8, 22700 Jaca, Huesca",
+        "lat": 42.5705,
+        "lng": -0.552,
+        "nearStations": ["Astún", "Candanchú", "Formigal"],
+        "rating": 4.7,
+        "reviewCount": 223,
+        "priceRange": "€24-42",
+        "services": ["Esquís", "Snowboard", "Raquetas", "Trineos"],
+        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "distance": 0.9,
+        "specialties": ["Principiantes", "Familias", "Grupos"],
+        "availability": "high"
+      }
+    ],
+    "stations": [
+      {
+        "value": "baqueira-beret",
+        "label": "Baqueira Beret",
+        "region": "Pirineos"
+      },
+      {
+        "value": "sierra-nevada",
+        "label": "Sierra Nevada",
+        "region": "Andalucía"
+      },
+      { "value": "formigal", "label": "Formigal", "region": "Pirineos" },
+      { "value": "cerler", "label": "Cerler", "region": "Pirineos" },
+      { "value": "la-molina", "label": "La Molina", "region": "Pirineos" },
+      { "value": "grandvalira", "label": "Grandvalira", "region": "Andorra" },
+      { "value": "masella", "label": "Masella", "region": "Pirineos" },
+      { "value": "panticosa", "label": "Panticosa", "region": "Pirineos" },
+      { "value": "astun", "label": "Astún", "region": "Pirineos" },
+      { "value": "candanchu", "label": "Candanchú", "region": "Pirineos" }
+    ],
+    "zones": [
+      { "value": "pirineos", "label": "Pirineos", "type": "mountain" },
+      {
+        "value": "sierra-nevada",
+        "label": "Sierra Nevada",
+        "type": "mountain"
+      },
+      { "value": "madrid", "label": "Madrid", "type": "city" },
+      { "value": "barcelona", "label": "Barcelona", "type": "city" },
+      { "value": "jaca", "label": "Jaca", "type": "city" },
+      { "value": "andorra", "label": "Andorra", "type": "mountain" }
+    ],
+    "equipmentTypes": [
+      { "value": "ski", "label": "Esquís", "icon": "⛷️" },
+      { "value": "snowboard", "label": "Snowboard", "icon": "🏂" },
+      { "value": "snowshoes", "label": "Raquetas", "icon": "🥾" },
+      { "value": "sleds", "label": "Trineos", "icon": "🛷" },
+      { "value": "thermal-clothing", "label": "Ropa térmica", "icon": "🧥" },
+      { "value": "helmets", "label": "Cascos", "icon": "⛑️" },
+      { "value": "goggles", "label": "Gafas", "icon": "🥽" },
+      { "value": "accessories", "label": "Accesorios", "icon": "🎒" }
+    ],
+    "priceRanges": [
+      { "value": "budget", "label": "Económico (< 25€)", "min": 0, "max": 25 },
+      {
+        "value": "moderate",
+        "label": "Moderado (25-40€)",
+        "min": 25,
+        "max": 40
+      },
+      { "value": "premium", "label": "Premium (40-60€)", "min": 40, "max": 60 },
+      { "value": "luxury", "label": "Lujo (> 60€)", "min": 60, "max": 999 }
+    ],
+    "availabilityLevels": [
+      { "value": "high", "label": "Alta disponibilidad", "color": "success" },
+      {
+        "value": "medium",
+        "label": "Disponibilidad media",
+        "color": "warning"
+      },
+      { "value": "low", "label": "Poca disponibilidad", "color": "error" }
+    ],
+    "sortOptions": [
+      { "value": "relevance", "label": "Relevancia" },
+      { "value": "price-asc", "label": "Precio: Menor a mayor" },
+      { "value": "price-desc", "label": "Precio: Mayor a menor" },
+      { "value": "rating", "label": "Mejor valorados" },
+      { "value": "distance", "label": "Más cercanos" },
+      { "value": "availability", "label": "Mayor disponibilidad" }
+    ],
+    "priceStats": {
+      "minPrice": 20,
+      "maxPrice": 55,
+      "avgPrice": 34,
+      "currency": "EUR"
+    },
+    "meta": {
+      "total": 9,
+      "page": 1,
+      "pageSize": 20,
+      "totalPages": 1
+    }
+  },
+  "message": "Rental shops loaded successfully",
+  "timestamp": "2025-10-02T12:00:00Z"
+}

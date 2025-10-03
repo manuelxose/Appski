@@ -1,0 +1,115 @@
+{
+  "refunds": [
+    {
+      "id": "REF001",
+      "paymentId": "PAY006",
+      "bookingId": "BK006",
+      "amount": 275.0,
+      "currency": "EUR",
+      "reason": "customer_request",
+      "status": "completed",
+      "requestedAt": "2025-09-29T10:00:00Z",
+      "processedAt": "2025-09-29T14:30:00Z",
+      "processedBy": "admin@nieve.com",
+      "notes": "Cliente solicitó cancelación por enfermedad. Se reembolsa el importe completo.",
+      "customerName": "Laura Ruiz",
+      "stationName": "Formigal",
+      "refundMethod": "credit_card"
+    },
+    {
+      "id": "REF002",
+      "paymentId": "PAY011",
+      "bookingId": "BK013",
+      "amount": 100.0,
+      "currency": "EUR",
+      "reason": "service_not_provided",
+      "status": "pending",
+      "requestedAt": "2025-10-02T16:00:00Z",
+      "notes": "Remonte cerrado por mal tiempo. Reembolso parcial solicitado.",
+      "customerName": "Miguel Ángel Castro",
+      "stationName": "Sierra Nevada",
+      "refundMethod": "bank_transfer"
+    },
+    {
+      "id": "REF003",
+      "paymentId": "PAY012",
+      "bookingId": "BK014",
+      "amount": 450.0,
+      "currency": "EUR",
+      "reason": "duplicate",
+      "status": "completed",
+      "requestedAt": "2025-10-01T11:30:00Z",
+      "processedAt": "2025-10-01T15:45:00Z",
+      "processedBy": "admin@nieve.com",
+      "notes": "Pago duplicado detectado en el sistema. Reembolso automático procesado.",
+      "customerName": "Andrea Gómez",
+      "stationName": "Baqueira Beret",
+      "refundMethod": "credit_card"
+    },
+    {
+      "id": "REF004",
+      "paymentId": "PAY013",
+      "bookingId": "BK015",
+      "amount": 75.0,
+      "currency": "EUR",
+      "reason": "customer_request",
+      "status": "rejected",
+      "requestedAt": "2025-09-25T09:00:00Z",
+      "processedAt": "2025-09-26T10:00:00Z",
+      "processedBy": "support@nieve.com",
+      "notes": "Solicitud fuera del período de cancelación permitido. Reembolso denegado según política.",
+      "customerName": "Francisco Romero",
+      "stationName": "Formigal",
+      "rejectionReason": "Outside cancellation window"
+    },
+    {
+      "id": "REF005",
+      "paymentId": "PAY014",
+      "bookingId": "BK016",
+      "amount": 180.0,
+      "currency": "EUR",
+      "reason": "other",
+      "status": "in_review",
+      "requestedAt": "2025-10-03T08:15:00Z",
+      "notes": "Cliente reporta problema con la calidad del servicio. En revisión por el equipo.",
+      "customerName": "Cristina Méndez",
+      "stationName": "Sierra Nevada"
+    },
+    {
+      "id": "REF006",
+      "paymentId": "PAY015",
+      "bookingId": "BK017",
+      "amount": 320.0,
+      "currency": "EUR",
+      "reason": "fraudulent",
+      "status": "completed",
+      "requestedAt": "2025-09-28T14:20:00Z",
+      "processedAt": "2025-09-28T16:00:00Z",
+      "processedBy": "security@nieve.com",
+      "notes": "Transacción fraudulenta detectada. Reembolso completo procesado inmediatamente.",
+      "customerName": "Alberto Prieto",
+      "stationName": "Baqueira Beret",
+      "refundMethod": "credit_card"
+    }
+  ],
+  "summary": {
+    "totalRefunded": 1400.0,
+    "pendingRefunds": 100.0,
+    "completedRefunds": 1225.0,
+    "rejectedRefunds": 75.0,
+    "count": {
+      "total": 6,
+      "completed": 3,
+      "pending": 1,
+      "in_review": 1,
+      "rejected": 1
+    },
+    "byReason": {
+      "customer_request": 2,
+      "service_not_provided": 1,
+      "duplicate": 1,
+      "fraudulent": 1,
+      "other": 1
+    }
+  }
+}

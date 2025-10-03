@@ -1,0 +1,155 @@
+<!-- Lodging Map View -->
+<div
+  class="relative w-full h-[600px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-lg"
+>
+  <!-- Map Placeholder -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="text-center">
+      <div class="text-6xl mb-4">🗺️</div>
+      <h3 class="text-xl font-bold text-slate-700 mb-2">Vista de Mapa</h3>
+      <p class="text-slate-600 max-w-md">
+        Integración con mapas interactivos próximamente. Aquí podrás ver la
+        ubicación de todos los alojamientos en el mapa.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mock Map Markers -->
+  <div class="absolute inset-0 pointer-events-none">
+    @for (lodging of lodgings(); track lodging.id) {
+    <button
+      class="absolute pointer-events-auto cursor-pointer transform -translate-x-1/2 -translate-y-1/2 transition-all duration-200 hover:scale-125 bg-transparent border-0 p-0"
+      [style.left.%]="20 + (($index * 15) % 60)"
+      [style.top.%]="30 + (($index * 20) % 40)"
+      (click)="onMarkerClick(lodging.id)"
+      (mouseenter)="onMarkerHover(lodging.id)"
+      (mouseleave)="onMarkerHover(null)"
+      [attr.aria-label]="'Ver ' + lodging.name"
+    >
+      <!-- Marker -->
+      <div class="relative">
+        <div
+          class="text-3xl filter drop-shadow-lg"
+          [class.animate-bounce]="hoveredLodging === lodging.id"
+        >
+          {{ getTypeIcon(lodging.type) }}
+        </div>
+
+        <!-- Popup on Hover -->
+        @if (hoveredLodging === lodging.id) {
+        <div
+          class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 bg-white rounded-lg shadow-2xl p-4 z-10 animate-fadeIn"
+        >
+          <div class="text-sm font-bold text-slate-900 mb-1">
+            {{ lodging.name }}
+          </div>
+          <div class="text-xs text-slate-600 mb-2">
+            📍 {{ lodging.location }}
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1">
+              <span class="text-yellow-400">★</span>
+              <span class="text-sm font-semibold text-slate-700">
+                {{ lodging.rating }}
+              </span>
+            </div>
+            <div class="text-lg font-bold text-blue-600">
+              {{ lodging.pricePerNight }}€
+              <span class="text-xs font-normal text-slate-600">/noche</span>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div
+            class="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1"
+          >
+            <div
+              class="w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white"
+            ></div>
+          </div>
+        </div>
+        }
+      </div>
+    </button>
+    }
+  </div>
+
+  <!-- Map Controls -->
+  <div class="absolute top-4 right-4 flex flex-col gap-2">
+    <button
+      class="bg-white p-3 rounded-lg shadow-lg hover:bg-gray-50 transition-colors"
+      title="Acercar"
+      aria-label="Acercar zoom"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 text-slate-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 4v16m8-8H4"
+        />
+      </svg>
+    </button>
+    <button
+      class="bg-white p-3 rounded-lg shadow-lg hover:bg-gray-50 transition-colors"
+      title="Alejar"
+      aria-label="Alejar zoom"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 text-slate-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20 12H4"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Legend -->
+  <div
+    class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-3"
+  >
+    <div class="text-xs font-semibold text-slate-700 mb-2">Leyenda</div>
+    <div class="space-y-1 text-xs text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="text-lg">🏨</span>
+        <span>Hotel</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-lg">🏢</span>
+        <span>Apartamento</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-lg">🛏️</span>
+        <span>Hostal</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-lg">🏡</span>
+        <span>Casa Rural</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Counter -->
+  <div
+    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg px-4 py-2"
+  >
+    <div class="text-sm">
+      <span class="font-bold text-slate-900">{{ lodgings().length }}</span>
+      <span class="text-slate-600"> alojamientos en el mapa</span>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,200 @@
-<p>premium works!</p>
+<!-- Premium Page -->
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+
+  <!-- Hero Section -->
+  <div
+    class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white py-16"
+  >
+    <div class="container mx-auto px-4 text-center">
+      <div
+        class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6"
+      >
+        ⭐ Únete a más de 10,000 esquiadores premium
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Lleva tu Experiencia en la Nieve<br />al Siguiente Nivel
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+        Descuentos exclusivos, acceso anticipado y beneficios premium para
+        disfrutar más por menos
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="#planes"
+          class="px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl"
+        >
+          Ver Planes y Precios
+        </a>
+        <a
+          [routerLink]="['/estaciones']"
+          class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 transition-all border-2 border-white"
+        >
+          Explorar Estaciones
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+        ¿Por qué hacerse Premium?
+      </h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Ahorra más, disfruta más, y vive experiencias únicas en cada viaje a la
+        nieve
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      @for (benefit of benefits(); track benefit.id) {
+      <app-benefit-card [benefit]="benefit" />
+      }
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div id="planes" class="bg-gradient-to-b from-gray-50 to-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          Elige el Plan Perfecto para Ti
+        </h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Todos los planes incluyen acceso completo a nuestra plataforma.
+          Cancela cuando quieras.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12"
+      >
+        @for (plan of plans(); track plan.id) {
+        <app-pricing-card [plan]="plan" />
+        }
+      </div>
+
+      <!-- Trust Badges -->
+      <div
+        class="flex flex-wrap justify-center items-center gap-8 text-slate-500 text-sm"
+      >
+        <div class="flex items-center gap-2">
+          <svg
+            class="w-5 h-5 text-green-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Sin compromiso</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg
+            class="w-5 h-5 text-green-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Cancela cuando quieras</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg
+            class="w-5 h-5 text-green-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Garantía 30 días</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+        Lo que Dicen Nuestros Miembros
+      </h2>
+      <p class="text-xl text-slate-600">
+        Miles de esquiadores ya confían en nosotros
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      @for (testimonial of testimonials(); track testimonial.id) {
+      <app-testimonial-card [testimonial]="testimonial" />
+      }
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="bg-gradient-to-b from-white to-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          Preguntas Frecuentes
+        </h2>
+        <p class="text-xl text-slate-600">
+          Todo lo que necesitas saber sobre la membresía premium
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        @for (faq of faqs(); track $index) {
+        <app-faq-item [faq]="faq" (faqToggle)="toggleFAQ($index)" />
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        ¿Listo para Empezar tu Aventura Premium?
+      </h2>
+      <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+        Únete hoy y comienza a ahorrar en tu próximo viaje a la nieve
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="#planes"
+          class="px-8 py-4 bg-white text-teal-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl"
+        >
+          Elegir mi Plan
+        </a>
+        <a
+          [routerLink]="['/blog']"
+          class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 transition-all border-2 border-white"
+        >
+          Leer más sobre Premium
+        </a>
+      </div>
+      <div class="mt-8 text-sm text-teal-100">
+        ¿Tienes dudas?
+        <a href="#" class="underline hover:text-white"
+          >Contacta con nuestro equipo</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <app-site-footer />
+</div>

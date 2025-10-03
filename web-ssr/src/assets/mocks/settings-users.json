@@ -1,0 +1,211 @@
+{
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Administrador",
+      "description": "Acceso completo a todas las funcionalidades del sistema",
+      "permissions": [
+        {
+          "module": "users",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        },
+        {
+          "module": "stations",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        },
+        {
+          "module": "bookings",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        },
+        {
+          "module": "payments",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        },
+        {
+          "module": "settings",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        },
+        {
+          "module": "analytics",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": true
+        }
+      ]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "description": "Gestión de estaciones y reservas sin acceso a configuración crítica",
+      "permissions": [
+        {
+          "module": "users",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": true,
+          "canDelete": false
+        },
+        {
+          "module": "stations",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": false
+        },
+        {
+          "module": "bookings",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": false
+        },
+        {
+          "module": "payments",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "settings",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "analytics",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        }
+      ]
+    },
+    {
+      "id": "shop_owner",
+      "name": "Propietario de Tienda",
+      "description": "Gestión de una tienda de alquiler específica",
+      "permissions": [
+        {
+          "module": "users",
+          "canView": false,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "stations",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "bookings",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": true,
+          "canDelete": false
+        },
+        {
+          "module": "payments",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "settings",
+          "canView": false,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "analytics",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        }
+      ]
+    },
+    {
+      "id": "user",
+      "name": "Usuario",
+      "description": "Usuario estándar con capacidad de reserva",
+      "permissions": [
+        {
+          "module": "users",
+          "canView": false,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "stations",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "bookings",
+          "canView": true,
+          "canCreate": true,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "payments",
+          "canView": true,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "settings",
+          "canView": false,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        },
+        {
+          "module": "analytics",
+          "canView": false,
+          "canCreate": false,
+          "canEdit": false,
+          "canDelete": false
+        }
+      ]
+    }
+  ],
+  "enablePublicRegistration": true,
+  "requireEmailVerification": true,
+  "requirePhoneVerification": false,
+  "allowSocialLogin": true,
+  "enabledSocialProviders": ["google", "facebook"],
+  "passwordMinLength": 8,
+  "passwordRequireUppercase": true,
+  "passwordRequireNumbers": true,
+  "passwordRequireSymbols": false,
+  "sessionTimeoutMinutes": 60,
+  "maxLoginAttempts": 5
+}

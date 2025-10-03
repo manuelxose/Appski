@@ -1,0 +1,35 @@
+{
+  "googleMapsApiKey": "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "googlePlacesApiKey": "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "weatherApiKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "cloudinaryCloudName": "nieve-platform",
+  "cloudinaryApiKey": "123456789012345",
+  "cloudinaryApiSecret": "••••••••••••••••••••••••",
+  "webhooks": [
+    {
+      "id": "webhook-1",
+      "name": "Booking Created",
+      "url": "https://api.example.com/webhooks/booking-created",
+      "events": ["booking.created", "booking.confirmed"],
+      "active": true,
+      "secret": "whsec_abc123xyz789"
+    },
+    {
+      "id": "webhook-2",
+      "name": "Payment Processed",
+      "url": "https://api.example.com/webhooks/payment-processed",
+      "events": ["payment.success", "payment.failed"],
+      "active": true,
+      "secret": "whsec_def456uvw012"
+    },
+    {
+      "id": "webhook-3",
+      "name": "User Registered",
+      "url": "https://crm.example.com/webhooks/user-registered",
+      "events": ["user.registered", "user.verified"],
+      "active": false,
+      "secret": "whsec_ghi789rst345"
+    }
+  ],
+  "enableWebhooks": true
+}

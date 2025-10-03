@@ -1,0 +1,92 @@
+/* Station Hero Styles */
+
+/* Parallax effect on scroll (optional, can be added with JS) */
+section {
+  position: relative;
+}
+
+/* Ensure image covers properly */
+img {
+  object-position: center 40%;
+}
+
+/* Breadcrumb hover animation */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Status badge pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Button animations */
+button,
+a[class*="px-6"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll indicator animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    min-height: 400px;
+    height: 50vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Stack buttons vertically on mobile */
+  .flex.flex-wrap.gap-3 {
+    flex-direction: column;
+  }
+
+  .flex.flex-wrap.gap-3 > * {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Glass morphism effects */
+.bg-white\/10,
+.backdrop-blur-sm {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

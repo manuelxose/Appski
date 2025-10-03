@@ -1,0 +1,37 @@
+@if (open()) {
+<div
+  class="confirm-backdrop"
+  (click)="onCancel()"
+  tabindex="0"
+  role="presentation"
+>
+  <div
+    class="confirm-dialog confirm-{{ variant() }}"
+    role="alertdialog"
+    aria-modal="true"
+  >
+    <div class="confirm-icon">
+      {{ icon() || getDefaultIcon() }}
+    </div>
+
+    <div class="confirm-content">
+      <h3 class="confirm-title">{{ title() }}</h3>
+      <p class="confirm-message">{{ message() }}</p>
+    </div>
+
+    <div class="confirm-actions">
+      <button class="btn btn-cancel" (click)="onCancel()" type="button">
+        {{ cancelLabel() }}
+      </button>
+
+      <button
+        class="btn btn-confirm btn-confirm-{{ variant() }}"
+        (click)="onConfirm()"
+        type="button"
+      >
+        {{ confirmLabel() }}
+      </button>
+    </div>
+  </div>
+</div>
+}
