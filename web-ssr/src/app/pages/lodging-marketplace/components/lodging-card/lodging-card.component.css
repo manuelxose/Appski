@@ -1,0 +1,239 @@
+/* ============================================
+   LODGING CARD - PREMIUM DESIGN
+   ============================================ */
+
+/* Card container */
+:host {
+  display: block;
+}
+
+.bg-white.rounded-xl {
+  position: relative;
+  border: 2px solid var(--neutral-200);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.bg-white.rounded-xl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-500), var(--primary-500));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease-spring);
+  z-index: 10;
+}
+
+.bg-white.rounded-xl:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(167, 139, 250, 0.25),
+    0 12px 24px -8px rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-300);
+}
+
+.bg-white.rounded-xl:hover::before {
+  transform: scaleX(1);
+}
+
+/* Image hover effect */
+img {
+  transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bg-white.rounded-xl:hover img {
+  transform: scale(1.1);
+}
+
+/* Badge animations */
+.absolute span {
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideInBadge 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideInBadge {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Star rating animation */
+.flex.items-center span {
+  display: inline-block;
+  animation: starPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: both;
+}
+
+.flex.items-center span:nth-child(1) {
+  animation-delay: 0s;
+}
+.flex.items-center span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.flex.items-center span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.flex.items-center span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.flex.items-center span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+@keyframes starPop {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Service icons hover */
+.flex.flex-wrap span[title] {
+  cursor: help;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: grayscale(0.2);
+}
+
+.flex.flex-wrap span[title]:hover {
+  transform: scale(1.4) rotate(12deg);
+  filter: grayscale(0);
+}
+
+/* Button hover effects */
+a[class*="bg-blue-600"],
+button[class*="bg-blue-600"] {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a[class*="bg-blue-600"]::before,
+button[class*="bg-blue-600"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+a[class*="bg-blue-600"]:hover::before,
+button[class*="bg-blue-600"]:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+a[class*="bg-blue-600"]:hover,
+button[class*="bg-blue-600"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+}
+
+a[class*="bg-blue-600"]:active,
+button[class*="bg-blue-600"]:active {
+  transform: translateY(-1px);
+}
+
+/* Price animation */
+.text-2xl.font-bold,
+.text-3xl.font-bold {
+  animation: priceReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes priceReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Title hover effect */
+h3 {
+  transition: color 0.3s ease;
+}
+
+.bg-white.rounded-xl:hover h3 {
+  color: var(--accent-600);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .text-3xl {
+    font-size: 2rem;
+  }
+
+  .bg-white.rounded-xl:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Disabled state */
+span.cursor-not-allowed {
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+/* Grid card entrance animation */
+.bg-white.rounded-xl {
+  animation: cardEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Distance badge pulse */
+.text-blue-600.font-semibold {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

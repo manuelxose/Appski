@@ -1,0 +1,245 @@
+<div class="admin-analytics">
+  <!-- Breadcrumbs -->
+  <app-admin-breadcrumbs [items]="breadcrumbs" />
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">Dashboard de Analíticas</h1>
+      <p class="page-description">
+        Métricas clave y análisis de rendimiento del negocio
+      </p>
+    </div>
+
+    <div class="header-actions">
+      <app-admin-date-range-picker
+        [value]="dateRange()"
+        [showPresets]="true"
+        (rangeChange)="onDateRangeChange($event)"
+      />
+
+      <button
+        class="btn btn-secondary"
+        (click)="refreshData()"
+        [disabled]="isLoading()"
+      >
+        <span class="btn-icon">🔄</span>
+        Actualizar
+      </button>
+
+      <button class="btn btn-primary" (click)="exportReport()">
+        <span class="btn-icon">📥</span>
+        Exportar
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader type="skeleton" />
+  } @if (!isLoading()) {
+  <!-- Quick Stats Grid -->
+  <div class="stats-grid">
+    @for (stat of quickStats(); track $index) {
+    <app-admin-stat-card
+      [label]="stat.label"
+      [value]="stat.value"
+      [change]="stat.change"
+      [trend]="stat.trend"
+      [icon]="stat.icon"
+      [variant]="stat.variant"
+      [valueFormat]="stat.valueFormat"
+      [suffix]="stat.suffix"
+    />
+    }
+  </div>
+
+  <!-- Main Dashboard Grid -->
+  <div class="dashboard-grid">
+    <!-- Revenue Chart -->
+    <div class="dashboard-card chart-card">
+      <div class="card-header">
+        <h3 class="card-title">Ingresos Mensuales</h3>
+        <app-admin-badge text="Últimos 12 meses" variant="info" size="sm" />
+      </div>
+      <div class="card-body">
+        <div class="chart-placeholder">
+          <div class="placeholder-icon">📊</div>
+          <p class="placeholder-text">Gráfico de ingresos mensuales</p>
+          <p class="placeholder-hint">ApexCharts se integrará en PASO 6</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bookings Chart -->
+    <div class="dashboard-card chart-card">
+      <div class="card-header">
+        <h3 class="card-title">Reservas por Día</h3>
+        <app-admin-badge text="Últimos 30 días" variant="success" size="sm" />
+      </div>
+      <div class="card-body">
+        <div class="chart-placeholder">
+          <div class="placeholder-icon">📈</div>
+          <p class="placeholder-text">Gráfico de reservas diarias</p>
+          <p class="placeholder-hint">ApexCharts se integrará en PASO 6</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Performing Stations -->
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h3 class="card-title">Estaciones Más Populares</h3>
+        <span class="card-subtitle">Top 3 del mes</span>
+      </div>
+      <div class="card-body">
+        <div class="ranking-list">
+          @for (station of topPerformingStations(); track station.name) {
+          <div class="ranking-item">
+            <div class="ranking-position">{{ $index + 1 }}</div>
+            <div class="ranking-info">
+              <div class="ranking-name">{{ station.name }}</div>
+              <div class="ranking-stats">
+                <span class="stat-label">{{ station.bookings }} reservas</span>
+                <span class="stat-separator">·</span>
+                <span class="stat-value"
+                  >{{ station.revenue.toFixed(0) }} €</span
+                >
+              </div>
+            </div>
+            <div class="ranking-badge">
+              <app-admin-badge
+                [text]="'+' + station.growth + '%'"
+                variant="success"
+                size="sm"
+              />
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Services -->
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h3 class="card-title">Servicios Más Vendidos</h3>
+        <span class="card-subtitle">Distribución de ingresos</span>
+      </div>
+      <div class="card-body">
+        <div class="services-list">
+          @for (service of topServices(); track service.name) {
+          <div class="service-item">
+            <div class="service-header">
+              <span class="service-name">{{ service.name }}</span>
+              <span class="service-revenue"
+                >{{ service.revenue.toFixed(0) }} €</span
+              >
+            </div>
+            <div class="service-bar">
+              <div
+                class="service-progress"
+                [style.width.%]="service.percentage"
+              ></div>
+            </div>
+            <div class="service-footer">
+              <span class="service-bookings"
+                >{{ service.bookings }} ventas</span
+              >
+              <span class="service-percentage">{{ service.percentage }}%</span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Users Growth Chart -->
+    <div class="dashboard-card chart-card">
+      <div class="card-header">
+        <h3 class="card-title">Crecimiento de Usuarios</h3>
+        <app-admin-badge text="Últimos 6 meses" variant="primary" size="sm" />
+      </div>
+      <div class="card-body">
+        <div class="chart-placeholder">
+          <div class="placeholder-icon">👥</div>
+          <p class="placeholder-text">Gráfico de usuarios nuevos vs activos</p>
+          <p class="placeholder-hint">ApexCharts se integrará en PASO 6</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversion Funnel -->
+    <div class="dashboard-card chart-card">
+      <div class="card-header">
+        <h3 class="card-title">Embudo de Conversión</h3>
+        <app-admin-badge text="Este mes" variant="warning" size="sm" />
+      </div>
+      <div class="card-body">
+        <div class="chart-placeholder">
+          <div class="placeholder-icon">🎯</div>
+          <p class="placeholder-text">Embudo de conversión de visitantes</p>
+          <p class="placeholder-hint">ApexCharts se integrará en PASO 6</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="dashboard-card activity-card">
+      <div class="card-header">
+        <h3 class="card-title">Actividad Reciente</h3>
+        <button class="btn-link">Ver todo</button>
+      </div>
+      <div class="card-body">
+        <div class="activity-list">
+          @for (activity of recentActivity(); track $index) {
+          <div class="activity-item">
+            <div class="activity-icon">{{ activity.icon }}</div>
+            <div class="activity-content">
+              <p class="activity-message">{{ activity.message }}</p>
+              <span class="activity-time">{{ activity.time }}</span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Marketing Metrics -->
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h3 class="card-title">Métricas de Marketing</h3>
+        <span class="card-subtitle">Rendimiento de campañas</span>
+      </div>
+      <div class="card-body">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-label">CTR Promedio</div>
+            <div class="metric-value">{{ marketingKPIs()?.averageCTR }}%</div>
+            <div class="metric-trend positive">+0.8%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">CPA</div>
+            <div class="metric-value">
+              {{ marketingKPIs()?.costPerAcquisition?.toFixed(2) }} €
+            </div>
+            <div class="metric-trend negative">-2.1%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">ROI</div>
+            <div class="metric-value">{{ marketingKPIs()?.roi }}%</div>
+            <div class="metric-trend positive">+5.3%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Impresiones</div>
+            <div class="metric-value">
+              {{ marketingKPIs()?.totalImpressions?.toLocaleString() }}
+            </div>
+            <div class="metric-trend positive">+12%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

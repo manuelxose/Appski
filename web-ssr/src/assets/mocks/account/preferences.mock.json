@@ -1,0 +1,20 @@
+{
+  "skillLevel": "intermediate",
+  "favoriteStations": ["Baqueira Beret", "Sierra Nevada", "Formigal-Panticosa"],
+  "equipment": "all-mountain",
+  "notifications": {
+    "email": true,
+    "sms": false,
+    "push": true,
+    "categories": {
+      "weather": true,
+      "alerts": true,
+      "bookings": true,
+      "promotions": false,
+      "news": true
+    }
+  },
+  "language": "es",
+  "theme": "auto",
+  "measurementSystem": "metric"
+}

@@ -1,0 +1,412 @@
+import {
+  Component,
+  input,
+  computed,
+  PLATFORM_ID,
+  inject,
+  signal,
+} from "@angular/core";
+import { CommonModule, isPlatformBrowser } from "@angular/common";
+import { NgxEchartsModule } from "ngx-echarts";
+import type { EChartsOption } from "echarts";
+import { MeteoForecastPoint } from "../../models/meteo.models";
+
+type ChartMode = "temp" | "wind" | "snow" | "precip";
+type TimeRange = "24h" | "48h" | "72h" | "7d";
+
+@Component({
+  selector: "app-tiempo-forecast-charts",
+  standalone: true,
+  imports: [CommonModule, NgxEchartsModule],
+  template: `
+    <div class="forecast-charts">
+      <div class="charts-header">
+        <h2 class="charts-title">Previsión 72 Horas</h2>
+
+        <div class="chart-tabs">
+          <button
+            type="button"
+            class="tab-button"
+            [class.active]="selectedMode() === 'temp'"
+            (click)="selectMode('temp')"
+          >
+            🌡️ Temperatura
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            [class.active]="selectedMode() === 'wind'"
+            (click)="selectMode('wind')"
+          >
+            💨 Viento
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            [class.active]="selectedMode() === 'snow'"
+            (click)="selectMode('snow')"
+          >
+            ❄️ Nieve
+          </button>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        @if (isBrowser) {
+        <div class="chart-placeholder">
+          <div class="placeholder-content">
+            <div class="placeholder-icon">{{ getModeIcon() }}</div>
+            <p class="placeholder-text">
+              Gráfico de {{ getModeLabel() }} para {{ points().length }} puntos
+            </p>
+            <p class="placeholder-hint">
+              Aquí se renderizaría el gráfico con ngx-echarts o canvas
+            </p>
+
+            <!-- Mini tabla de datos -->
+            <div class="data-preview">
+              @for (point of previewPoints(); track $index) {
+              <div class="data-row">
+                <span class="data-time">{{ formatTime(point.validAt) }}</span>
+                <span class="data-value">{{ getPointValue(point) }}</span>
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+        } @else {
+        <div class="chart-skeleton">
+          <div
+            class="skeleton-bar"
+            *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]"
+          ></div>
+        </div>
+        }
+      </div>
+
+      @if (points().length > 0) {
+      <div class="chart-stats">
+        <div class="stat-card">
+          <span class="stat-label">Puntos de datos</span>
+          <span class="stat-value">{{ points().length }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Rango temporal</span>
+          <span class="stat-value">{{ getTimeRange() }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Confianza media</span>
+          <span class="stat-value">{{ getAvgConfidence() }}%</span>
+        </div>
+      </div>
+      }
+    </div>
+  `,
+  styles: [
+    `
+      .forecast-charts {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .charts-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .charts-title {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--neutral-900);
+      }
+
+      .chart-tabs {
+        display: flex;
+        gap: 0.5rem;
+        background: var(--neutral-100);
+        padding: 4px;
+        border-radius: 8px;
+      }
+
+      .tab-button {
+        padding: 0.5rem 1rem;
+        border: none;
+        background: transparent;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--neutral-700);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .tab-button:hover {
+        background: var(--neutral-200);
+      }
+
+      .tab-button.active {
+        background: var(--primary-500);
+        color: white;
+      }
+
+      .chart-container {
+        width: 100%;
+        min-height: 400px;
+        background: var(--neutral-50);
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+      }
+
+      .chart-placeholder {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .placeholder-content {
+        text-align: center;
+        max-width: 600px;
+      }
+
+      .placeholder-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .placeholder-text {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--neutral-700);
+        margin: 0 0 0.5rem 0;
+      }
+
+      .placeholder-hint {
+        font-size: 0.875rem;
+        color: var(--neutral-500);
+        margin: 0 0 2rem 0;
+      }
+
+      .data-preview {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .data-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 6px;
+        font-size: 0.75rem;
+      }
+
+      .data-time {
+        color: var(--neutral-600);
+        font-weight: 600;
+      }
+
+      .data-value {
+        color: var(--primary-600);
+        font-weight: 700;
+      }
+
+      .chart-skeleton {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        padding: 2rem;
+        height: 400px;
+      }
+
+      .skeleton-bar {
+        flex: 1;
+        background: var(--neutral-200);
+        border-radius: 4px;
+        animation: pulse 1.5s infinite;
+      }
+
+      .skeleton-bar:nth-child(1) {
+        height: 40%;
+      }
+      .skeleton-bar:nth-child(2) {
+        height: 60%;
+      }
+      .skeleton-bar:nth-child(3) {
+        height: 80%;
+      }
+      .skeleton-bar:nth-child(4) {
+        height: 70%;
+      }
+      .skeleton-bar:nth-child(5) {
+        height: 50%;
+      }
+      .skeleton-bar:nth-child(6) {
+        height: 65%;
+      }
+      .skeleton-bar:nth-child(7) {
+        height: 75%;
+      }
+      .skeleton-bar:nth-child(8) {
+        height: 55%;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .chart-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .stat-card {
+        background: var(--neutral-50);
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--neutral-600);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--neutral-900);
+      }
+
+      @media (max-width: 768px) {
+        .forecast-charts {
+          padding: 1.5rem;
+        }
+
+        .charts-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .chart-tabs {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .tab-button {
+          flex: 1;
+          padding: 0.5rem;
+          font-size: 0.75rem;
+        }
+
+        .chart-container {
+          min-height: 300px;
+        }
+
+        .chart-placeholder {
+          height: 300px;
+        }
+      }
+    `,
+  ],
+})
+export class TiempoForecastChartsComponent {
+  private platformId = inject(PLATFORM_ID);
+
+  points = input.required<MeteoForecastPoint[]>();
+  mode = input<ChartMode>("temp");
+
+  isBrowser = isPlatformBrowser(this.platformId);
+
+  private _selectedMode = signal<ChartMode>("temp");
+  selectedMode = this._selectedMode.asReadonly();
+
+  previewPoints = computed(() => {
+    return this.points().slice(0, 8);
+  });
+
+  selectMode(mode: ChartMode): void {
+    this._selectedMode.set(mode);
+  }
+
+  getModeIcon(): string {
+    const icons: Record<ChartMode, string> = {
+      temp: "🌡️",
+      wind: "💨",
+      snow: "❄️",
+    };
+    return icons[this.selectedMode()];
+  }
+
+  getModeLabel(): string {
+    const labels: Record<ChartMode, string> = {
+      temp: "Temperatura",
+      wind: "Viento",
+      snow: "Nieve",
+    };
+    return labels[this.selectedMode()];
+  }
+
+  getPointValue(point: MeteoForecastPoint): string {
+    const mode = this.selectedMode();
+    switch (mode) {
+      case "temp":
+        return `${point.tempC}°C`;
+      case "wind":
+        return `${point.windKmh} km/h`;
+      case "snow":
+        return `${point.precipSnowCm} cm`;
+    }
+  }
+
+  formatTime(iso: string): string {
+    const date = new Date(iso);
+    return date.toLocaleTimeString("es-ES", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
+  getTimeRange(): string {
+    const points = this.points();
+    if (points.length === 0) return "-";
+    const first = new Date(points[0].validAt);
+    const last = new Date(points[points.length - 1].validAt);
+    const hours = Math.round(
+      (last.getTime() - first.getTime()) / (1000 * 60 * 60)
+    );
+    return `${hours}h`;
+  }
+
+  getAvgConfidence(): number {
+    const points = this.points();
+    if (points.length === 0) return 0;
+    const avg =
+      points.reduce((sum, p) => sum + p.confidence, 0) / points.length;
+    return Math.round(avg * 100);
+  }
+}

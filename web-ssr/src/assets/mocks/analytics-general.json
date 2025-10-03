@@ -1,0 +1,44 @@
+{
+  "totalUsers": {
+    "current": 125432,
+    "previous": 108764,
+    "change": 16668,
+    "changePercent": 15.3,
+    "trend": "up"
+  },
+  "activeUsers": {
+    "current": 28567,
+    "previous": 24891,
+    "change": 3676,
+    "changePercent": 14.8,
+    "trend": "up"
+  },
+  "totalBookings": {
+    "current": 15678,
+    "previous": 14489,
+    "change": 1189,
+    "changePercent": 8.2,
+    "trend": "up"
+  },
+  "conversionRate": {
+    "current": 12.5,
+    "previous": 12.77,
+    "change": -0.27,
+    "changePercent": -2.1,
+    "trend": "down"
+  },
+  "totalRevenue": {
+    "current": 2450000,
+    "previous": 2000000,
+    "change": 450000,
+    "changePercent": 22.5,
+    "trend": "up"
+  },
+  "trafficSessions": {
+    "current": 456000,
+    "previous": 398400,
+    "change": 57600,
+    "changePercent": 14.5,
+    "trend": "up"
+  }
+}

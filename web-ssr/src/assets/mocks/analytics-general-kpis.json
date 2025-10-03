@@ -1,0 +1,141 @@
+{
+  "totalUsers": 125432,
+  "activeUsers": {
+    "dau": 3245,
+    "mau": 28567,
+    "wau": 12456
+  },
+  "totalBookings": 15678,
+  "conversionRate": 12.5,
+  "totalRevenue": 2450000,
+  "mrr": 245000,
+  "arr": 2940000,
+  "trafficMetrics": {
+    "sessions": 456000,
+    "pageviews": 1200000,
+    "bounceRate": 42.3,
+    "avgSessionDuration": 272,
+    "newVsReturning": {
+      "new": 65.8,
+      "returning": 34.2
+    }
+  },
+  "funnelConversion": {
+    "visitors": 456000,
+    "signups": 57000,
+    "bookings": 15678,
+    "payments": 14234
+  },
+  "growth": {
+    "users": {
+      "value": 15.3,
+      "trend": "up",
+      "vsLastPeriod": 19200
+    },
+    "bookings": {
+      "value": 8.2,
+      "trend": "up",
+      "vsLastPeriod": 1189
+    },
+    "revenue": {
+      "value": 22.5,
+      "trend": "up",
+      "vsLastPeriod": 450000
+    },
+    "conversionRate": {
+      "value": -2.1,
+      "trend": "down",
+      "vsLastPeriod": -0.27
+    }
+  },
+  "topMetrics": {
+    "avgRevenuePerBooking": 156.24,
+    "avgBookingValue": 172.45,
+    "customerLifetimeValue": 487.32,
+    "churnRate": 5.8,
+    "customerAcquisitionCost": 42.15
+  },
+  "periodComparison": {
+    "current": {
+      "start": "2024-01-01",
+      "end": "2024-01-31",
+      "days": 31
+    },
+    "previous": {
+      "start": "2023-01-01",
+      "end": "2023-01-31",
+      "days": 31
+    }
+  },
+  "deviceBreakdown": {
+    "desktop": 45.2,
+    "mobile": 38.7,
+    "tablet": 16.1
+  },
+  "topSources": [
+    {
+      "source": "Google Organic",
+      "sessions": 156000,
+      "percentage": 34.2
+    },
+    {
+      "source": "Direct",
+      "sessions": 91200,
+      "percentage": 20.0
+    },
+    {
+      "source": "Facebook Ads",
+      "sessions": 68400,
+      "percentage": 15.0
+    },
+    {
+      "source": "Instagram",
+      "sessions": 45600,
+      "percentage": 10.0
+    },
+    {
+      "source": "Email Marketing",
+      "sessions": 36480,
+      "percentage": 8.0
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/estaciones",
+      "pageviews": 245000,
+      "avgTime": 185
+    },
+    {
+      "path": "/tiempo",
+      "pageviews": 198000,
+      "avgTime": 142
+    },
+    {
+      "path": "/reservas",
+      "pageviews": 156000,
+      "avgTime": 267
+    },
+    {
+      "path": "/",
+      "pageviews": 134000,
+      "avgTime": 98
+    },
+    {
+      "path": "/blog",
+      "pageviews": 87000,
+      "avgTime": 312
+    }
+  ],
+  "userRetention": {
+    "day1": 42.5,
+    "day7": 28.3,
+    "day30": 15.7,
+    "day90": 8.2
+  },
+  "premiumMetrics": {
+    "totalPremiumUsers": 4567,
+    "premiumConversionRate": 3.64,
+    "premiumRevenue": 490000,
+    "avgPremiumValue": 107.28
+  }
+}

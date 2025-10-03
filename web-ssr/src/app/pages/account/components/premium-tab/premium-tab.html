@@ -1,0 +1,256 @@
+<!-- Premium Subscription Tab -->
+<div class="premium-tab">
+  <!-- Success Message -->
+  @if (successMessage()) {
+  <div
+    class="success-banner bg-green-50 border border-green-200 text-green-700 px-6 py-4 rounded-xl mb-6 flex items-center justify-between"
+  >
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">✅</span>
+      <span class="font-medium">{{ successMessage() }}</span>
+    </div>
+    <button
+      (click)="successMessage.set(null)"
+      class="text-green-600 hover:text-green-800 transition-colors"
+    >
+      ✕
+    </button>
+  </div>
+  }
+
+  <!-- Current Subscription Card -->
+  @if (premiumData(); as data) {
+  <div class="current-plan-card">
+    <div class="card-header">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Plan Actual</h2>
+          <p class="text-slate-600 mt-1">
+            Gestiona tu suscripción y métodos de pago
+          </p>
+        </div>
+        <div
+          class="status-badge"
+          [class]="getStatusClass(data.subscription.status)"
+        >
+          {{ getStatusLabel(data.subscription.status) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="subscription-details">
+      <!-- Plan Info -->
+      <div class="plan-info-grid">
+        <div class="info-item">
+          <div class="info-label">Plan</div>
+          <div class="info-value">
+            {{ getPlanName(data.subscription.plan) }}
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Precio</div>
+          <div class="info-value">
+            {{ data.subscription.price }}{{ data.subscription.currency }} / {{
+            getBillingCycleLabel(data.subscription.billingCycle) }}
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Próxima renovación</div>
+          <div class="info-value">
+            {{ formatDate(data.subscription.renewalDate) }}
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Renovación automática</div>
+          <div class="info-value">
+            <button
+              (click)="toggleAutoRenew()"
+              class="toggle-button"
+              [class.active]="data.subscription.autoRenew"
+            >
+              <span class="toggle-slider"></span>
+              <span class="toggle-label"
+                >{{ data.subscription.autoRenew ? "Activada" : "Desactivada"
+                }}</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="features-section">
+        <h3 class="section-title">Características incluidas</h3>
+        <div class="features-grid">
+          @for (feature of data.subscription.features; track feature.name) {
+          <div class="feature-card">
+            <div class="feature-icon">{{ feature.icon }}</div>
+            <div class="feature-content">
+              <div class="feature-name">{{ feature.name }}</div>
+              <div class="feature-description">{{ feature.description }}</div>
+            </div>
+            @if (feature.enabled) {
+            <div class="feature-status enabled">✓</div>
+            } @else {
+            <div class="feature-status disabled">−</div>
+            }
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="payment-method-section">
+        <h3 class="section-title">Método de pago</h3>
+        <div class="payment-card">
+          <div class="payment-icon">
+            {{ getCardIcon(data.subscription.paymentMethod.brand) }}
+          </div>
+          <div class="payment-details">
+            <div class="payment-brand">
+              {{ data.subscription.paymentMethod.brand }}
+            </div>
+            <div class="payment-number">
+              •••• •••• •••• {{ data.subscription.paymentMethod.last4 }}
+            </div>
+            <div class="payment-expiry">
+              Expira {{ data.subscription.paymentMethod.expiryMonth }}/{{
+              data.subscription.paymentMethod.expiryYear }}
+            </div>
+          </div>
+          <button class="btn-secondary btn-sm" (click)="updatePaymentMethod()">
+            Actualizar
+          </button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions-section">
+        @if (data.subscription.plan !== 'free') {
+        <button class="btn-danger" (click)="cancelSubscription()">
+          Cancelar suscripción
+        </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Available Plans -->
+  <div class="available-plans-section">
+    <h2 class="section-title-large">Planes disponibles</h2>
+    <p class="section-description">
+      Cambia de plan en cualquier momento. Los cambios se aplicarán en la
+      próxima facturación.
+    </p>
+
+    <div class="plans-grid">
+      @for (plan of data.availablePlans; track plan.plan + plan.billingCycle) {
+      <div
+        class="plan-card"
+        [class.current]="isPlanCurrent(plan, data.subscription)"
+        [class.popular]="plan.popular"
+      >
+        @if (plan.popular) {
+        <div class="popular-badge">🌟 Más popular</div>
+        }
+
+        <div class="plan-header">
+          <h3 class="plan-name">{{ plan.name }}</h3>
+          <div class="plan-price">
+            @if (plan.price === 0) {
+            <span class="price-amount">Gratis</span>
+            } @else {
+            <span class="price-amount">{{ plan.price }}€</span>
+            <span class="price-period"
+              >/ {{ getBillingCycleLabel(plan.billingCycle) }}</span
+            >
+            }
+          </div>
+          @if (plan.savings) {
+          <div class="plan-savings">{{ plan.savings }}</div>
+          }
+        </div>
+
+        <p class="plan-description">{{ plan.description }}</p>
+
+        <div class="plan-features">
+          @for (feature of plan.features; track $index) {
+          <div class="plan-feature">
+            <span class="feature-check">✓</span>
+            <span>{{ feature }}</span>
+          </div>
+          }
+        </div>
+
+        <div class="plan-action">
+          @if (isPlanCurrent(plan, data.subscription)) {
+          <button class="btn-current" disabled>Plan actual</button>
+          } @else if (isUpgrade(plan, data.subscription)) {
+          <button
+            class="btn-primary"
+            (click)="changePlan(plan.plan, plan.billingCycle)"
+          >
+            Mejorar plan
+          </button>
+          } @else if (isDowngrade(plan, data.subscription)) {
+          <button
+            class="btn-secondary"
+            (click)="changePlan(plan.plan, plan.billingCycle)"
+          >
+            Cambiar a este plan
+          </button>
+          } @else {
+          <button
+            class="btn-primary"
+            (click)="changePlan(plan.plan, plan.billingCycle)"
+          >
+            Seleccionar plan
+          </button>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Invoices History -->
+  <div class="invoices-section">
+    <h2 class="section-title-large">Historial de facturas</h2>
+    <div class="invoices-table">
+      <div class="table-header">
+        <div class="th">Nº Factura</div>
+        <div class="th">Fecha</div>
+        <div class="th">Descripción</div>
+        <div class="th">Importe</div>
+        <div class="th">Estado</div>
+        <div class="th">Acciones</div>
+      </div>
+      @for (invoice of data.invoices; track invoice.id) {
+      <div class="table-row">
+        <div class="td">
+          <span class="invoice-number">{{ invoice.invoiceNumber }}</span>
+        </div>
+        <div class="td">{{ formatDate(invoice.date) }}</div>
+        <div class="td">{{ invoice.description }}</div>
+        <div class="td">
+          <span class="amount">{{ invoice.amount }}{{ invoice.currency }}</span>
+        </div>
+        <div class="td">
+          <span
+            class="status-badge"
+            [class]="getInvoiceStatusClass(invoice.status)"
+          >
+            {{ getInvoiceStatusLabel(invoice.status) }}
+          </span>
+        </div>
+        <div class="td">
+          <button class="btn-link" (click)="downloadInvoice(invoice.id)">
+            📥 Descargar PDF
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+</div>

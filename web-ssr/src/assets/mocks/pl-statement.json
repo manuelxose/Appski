@@ -1,0 +1,193 @@
+{
+  "items": [
+    {
+      "category": "Revenue",
+      "actual": 2450000,
+      "budget": 2300000,
+      "variance": 150000,
+      "variancePercent": 6.52,
+      "lastYear": 2000000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Revenue",
+      "subcategory": "Bookings",
+      "actual": 1592500,
+      "budget": 1500000,
+      "variance": 92500,
+      "variancePercent": 6.17,
+      "lastYear": 1300000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Revenue",
+      "subcategory": "Premium Subscriptions",
+      "actual": 490000,
+      "budget": 460000,
+      "variance": 30000,
+      "variancePercent": 6.52,
+      "lastYear": 400000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Revenue",
+      "subcategory": "Commissions",
+      "actual": 245000,
+      "budget": 230000,
+      "variance": 15000,
+      "variancePercent": 6.52,
+      "lastYear": 200000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Revenue",
+      "subcategory": "Advertising",
+      "actual": 122500,
+      "budget": 110000,
+      "variance": 12500,
+      "variancePercent": 11.36,
+      "lastYear": 100000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Cost of Goods Sold (COGS)",
+      "actual": 612500,
+      "budget": 575000,
+      "variance": 37500,
+      "variancePercent": 6.52,
+      "lastYear": 500000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Gross Profit",
+      "actual": 1837500,
+      "budget": 1725000,
+      "variance": 112500,
+      "variancePercent": 6.52,
+      "lastYear": 1500000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Operating Expenses",
+      "actual": 1262500,
+      "budget": 1325000,
+      "variance": -62500,
+      "variancePercent": -4.72,
+      "lastYear": 1150000,
+      "yoyChange": 9.78
+    },
+    {
+      "category": "Operating Expenses",
+      "subcategory": "Marketing & Sales",
+      "actual": 490000,
+      "budget": 460000,
+      "variance": 30000,
+      "variancePercent": 6.52,
+      "lastYear": 400000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Operating Expenses",
+      "subcategory": "Technology & Development",
+      "actual": 367500,
+      "budget": 380000,
+      "variance": -12500,
+      "variancePercent": -3.29,
+      "lastYear": 300000,
+      "yoyChange": 22.5
+    },
+    {
+      "category": "Operating Expenses",
+      "subcategory": "General & Administrative",
+      "actual": 245000,
+      "budget": 285000,
+      "variance": -40000,
+      "variancePercent": -14.04,
+      "lastYear": 250000,
+      "yoyChange": -2.0
+    },
+    {
+      "category": "Operating Expenses",
+      "subcategory": "Customer Support",
+      "actual": 122500,
+      "budget": 150000,
+      "variance": -27500,
+      "variancePercent": -18.33,
+      "lastYear": 150000,
+      "yoyChange": -18.33
+    },
+    {
+      "category": "Operating Expenses",
+      "subcategory": "Other Operating Costs",
+      "actual": 37500,
+      "budget": 50000,
+      "variance": -12500,
+      "variancePercent": -25.0,
+      "lastYear": 50000,
+      "yoyChange": -25.0
+    },
+    {
+      "category": "EBITDA",
+      "actual": 725000,
+      "budget": 550000,
+      "variance": 175000,
+      "variancePercent": 31.82,
+      "lastYear": 480000,
+      "yoyChange": 51.04
+    },
+    {
+      "category": "Depreciation & Amortization",
+      "actual": 75000,
+      "budget": 75000,
+      "variance": 0,
+      "variancePercent": 0,
+      "lastYear": 75000,
+      "yoyChange": 0
+    },
+    {
+      "category": "Interest Expense",
+      "actual": 75000,
+      "budget": 75000,
+      "variance": 0,
+      "variancePercent": 0,
+      "lastYear": 55000,
+      "yoyChange": 36.36
+    },
+    {
+      "category": "Net Profit Before Tax",
+      "actual": 575000,
+      "budget": 400000,
+      "variance": 175000,
+      "variancePercent": 43.75,
+      "lastYear": 350000,
+      "yoyChange": 64.29
+    },
+    {
+      "category": "Income Tax",
+      "actual": 143750,
+      "budget": 100000,
+      "variance": 43750,
+      "variancePercent": 43.75,
+      "lastYear": 87500,
+      "yoyChange": 64.29
+    },
+    {
+      "category": "Net Profit After Tax",
+      "actual": 431250,
+      "budget": 300000,
+      "variance": 131250,
+      "variancePercent": 43.75,
+      "lastYear": 262500,
+      "yoyChange": 64.29
+    }
+  ],
+  "summary": {
+    "revenueGrowth": 22.5,
+    "expenseGrowth": 13.64,
+    "profitGrowth": 64.29,
+    "grossMargin": 75.0,
+    "operatingMargin": 29.59,
+    "netMargin": 17.6,
+    "budgetAccuracy": 93.48
+  }
+}

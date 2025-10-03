@@ -1,0 +1,210 @@
+{
+  "data": {
+    "article": {
+      "id": "1",
+      "slug": "guia-completa-principiantes-esqui",
+      "title": "Guía Completa para Principiantes en el Esquí",
+      "excerpt": "Todo lo que necesitas saber para dar tus primeros pasos en la nieve. Desde el equipo básico hasta las técnicas fundamentales.",
+      "coverImage": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200",
+      "author": {
+        "name": "María González",
+        "avatar": "https://i.pravatar.cc/150?img=1"
+      },
+      "publishedAt": "2024-09-15",
+      "readingTime": 8,
+      "category": "Consejos",
+      "tags": ["principiantes", "esquí", "equipamiento"],
+      "featured": true,
+      "views": 1542,
+      "likes": 87
+    },
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Bienvenido al maravilloso mundo del esquí. Si estás leyendo esto, probablemente estés considerando dar tus primeros pasos en las pistas nevadas. Esta guía está diseñada para ayudarte a comenzar con confianza y seguridad."
+      },
+      {
+        "type": "heading",
+        "content": "Equipamiento Básico",
+        "level": 2
+      },
+      {
+        "type": "paragraph",
+        "content": "Antes de lanzarte a las pistas, necesitas el equipamiento adecuado. No te preocupes, no necesitas comprar todo de inmediato. La mayoría de las estaciones ofrecen servicios de alquiler de alta calidad."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Esquís adecuados a tu nivel y estatura",
+          "Botas de esquí bien ajustadas (lo más importante)",
+          "Bastones de la altura correcta",
+          "Casco de seguridad (obligatorio en muchas estaciones)",
+          "Gafas de sol o máscara de esquí",
+          "Guantes impermeables",
+          "Ropa térmica e impermeable en capas"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Las botas son el elemento más importante de tu equipo. Asegúrate de que te queden bien ajustadas pero no incómodas. Una bota mal ajustada puede arruinar completamente tu experiencia."
+      },
+      {
+        "type": "heading",
+        "content": "Eligiendo tu Primera Estación",
+        "level": 2
+      },
+      {
+        "type": "paragraph",
+        "content": "No todas las estaciones son ideales para principiantes. Busca una que tenga pistas verdes (nivel principiante) amplias y bien mantenidas, además de una buena escuela de esquí."
+      },
+      {
+        "type": "image",
+        "content": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+        "caption": "Estación de esquí ideal para principiantes"
+      },
+      {
+        "type": "heading",
+        "content": "Tus Primeras Clases",
+        "level": 2
+      },
+      {
+        "type": "paragraph",
+        "content": "Aunque pueda parecer tentador ahorrarte el coste de las clases, invertir en un instructor profesional es una de las mejores decisiones que puedes tomar. Te enseñarán la técnica correcta desde el principio y evitarás desarrollar malos hábitos."
+      },
+      {
+        "type": "heading",
+        "content": "Posición Básica",
+        "level": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "La posición correcta es fundamental. Mantén las rodillas ligeramente flexionadas, el peso centrado sobre los esquís, y los brazos adelante. Esta postura te dará equilibrio y control."
+      },
+      {
+        "type": "heading",
+        "content": "La Cuña: Tu Primera Técnica",
+        "level": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "La cuña (o \"pizza\" como algunos la llaman) es la primera técnica que aprenderás. Consiste en juntar las puntas de los esquís mientras separas las colas, formando una V. Esto te permite controlar la velocidad y detenerte."
+      },
+      {
+        "type": "quote",
+        "content": "El esquí es un 90% mental. Una vez que superas el miedo inicial, todo se vuelve mucho más fácil y divertido."
+      },
+      {
+        "type": "heading",
+        "content": "Seguridad en las Pistas",
+        "level": 2
+      },
+      {
+        "type": "paragraph",
+        "content": "La seguridad debe ser siempre tu prioridad número uno. Aprende y respeta las normas de conducta en las pistas (Código FIS)."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Respeta a los demás esquiadores y snowboarders",
+          "Controla tu velocidad y tu trayectoria",
+          "El esquiador que va por delante tiene prioridad",
+          "No te detengas en lugares estrechos o sin visibilidad",
+          "Respeta las señalizaciones y las pistas cerradas",
+          "Ayuda en caso de accidente"
+        ]
+      },
+      {
+        "type": "tip",
+        "content": "Siempre esquía dentro de tu nivel. Es mejor disfrutar de una pista fácil que sufrir en una pista que excede tus capacidades."
+      },
+      {
+        "type": "heading",
+        "content": "Consejos Finales",
+        "level": 2
+      },
+      {
+        "type": "paragraph",
+        "content": "Recuerda que todos los esquiadores expertos fueron principiantes alguna vez. Sé paciente contigo mismo, disfruta del proceso de aprendizaje, y sobre todo, ¡diviértete! El esquí es un deporte increíble que te conecta con la naturaleza y te proporciona experiencias inolvidables."
+      },
+      {
+        "type": "paragraph",
+        "content": "¿Listo para tu primera aventura en la nieve? Echa un vistazo a nuestro planificador de viajes para organizar tu escapada perfecta."
+      }
+    ],
+    "tableOfContents": [
+      { "id": "equipamiento", "title": "Equipamiento Básico", "level": 2 },
+      {
+        "id": "estacion",
+        "title": "Eligiendo tu Primera Estación",
+        "level": 2
+      },
+      { "id": "clases", "title": "Tus Primeras Clases", "level": 2 },
+      { "id": "posicion", "title": "Posición Básica", "level": 3 },
+      { "id": "cuna", "title": "La Cuña: Tu Primera Técnica", "level": 3 },
+      { "id": "seguridad", "title": "Seguridad en las Pistas", "level": 2 },
+      { "id": "consejos", "title": "Consejos Finales", "level": 2 }
+    ],
+    "relatedArticles": [
+      {
+        "id": "3",
+        "slug": "equipamiento-esencial-snowboard",
+        "title": "Equipamiento Esencial para Practicar Snowboard",
+        "coverImage": "https://images.unsplash.com/photo-1526912112623-8e9e654b1f86?w=200",
+        "readingTime": 6,
+        "category": "Equipamiento"
+      },
+      {
+        "id": "4",
+        "slug": "seguridad-montana-consejos-esenciales",
+        "title": "Seguridad en la Montaña: Consejos Esenciales",
+        "coverImage": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=200",
+        "readingTime": 10,
+        "category": "Seguridad"
+      },
+      {
+        "id": "5",
+        "slug": "ahorrar-forfait-trucos",
+        "title": "Cómo Ahorrar en el Forfait: Trucos y Consejos",
+        "coverImage": "https://images.unsplash.com/photo-1498146831523-fbe41acdc5ad?w=200",
+        "readingTime": 5,
+        "category": "Consejos"
+      }
+    ],
+    "author": {
+      "name": "María González",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "bio": "Instructora de esquí con más de 10 años de experiencia. Apasionada por compartir conocimientos sobre deportes de nieve.",
+      "articlesCount": 15,
+      "social": {
+        "twitter": "@mariagonzalez_ski",
+        "linkedin": "maria-gonzalez-ski",
+        "website": "https://mariagonzalez-ski.com"
+      }
+    },
+    "metadata": {
+      "title": "Guía Completa para Principiantes en el Esquí | Nieve Platform",
+      "description": "Todo lo que necesitas saber para dar tus primeros pasos en la nieve. Desde el equipo básico hasta las técnicas fundamentales.",
+      "keywords": [
+        "esquí principiantes",
+        "aprender a esquiar",
+        "equipamiento esquí",
+        "clases de esquí",
+        "seguridad esquí"
+      ],
+      "ogImage": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200",
+      "publishedAt": "2024-09-15",
+      "modifiedAt": "2024-09-20",
+      "author": "María González"
+    },
+    "stats": {
+      "views": 1542,
+      "likes": 87,
+      "shares": 23,
+      "comments": 12
+    }
+  },
+  "meta": {
+    "requestedAt": "2024-10-02T10:30:00Z",
+    "slug": "guia-completa-principiantes-esqui"
+  }
+}

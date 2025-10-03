@@ -1,0 +1,296 @@
+{
+  "data": {
+    "lodgings": [
+      {
+        "id": "1",
+        "name": "Hotel Montarto Suites",
+        "type": "hotel",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+        "location": "Baqueira, Valle de Arán",
+        "distanceToSlopes": 0.2,
+        "pricePerNight": 180,
+        "rating": 4.8,
+        "reviewsCount": 342,
+        "services": [
+          "wifi",
+          "parking",
+          "spa",
+          "pool",
+          "restaurant",
+          "ski-storage"
+        ],
+        "hasOffer": true,
+        "offerPercentage": 15,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "2",
+        "name": "Apartamentos Valle Nevado",
+        "type": "apartment",
+        "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+        "location": "Vielha, Valle de Arán",
+        "distanceToSlopes": 1.5,
+        "pricePerNight": 95,
+        "rating": 4.5,
+        "reviewsCount": 128,
+        "services": ["wifi", "parking", "ski-storage"],
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "3",
+        "name": "Hostal La Montaña",
+        "type": "hostel",
+        "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800",
+        "location": "Salardú, Valle de Arán",
+        "distanceToSlopes": 2.8,
+        "pricePerNight": 45,
+        "rating": 4.2,
+        "reviewsCount": 89,
+        "services": ["wifi", "restaurant"],
+        "hasOffer": false,
+        "freeCancellation": false,
+        "available": true
+      },
+      {
+        "id": "4",
+        "name": "Casa Rural Els Prats",
+        "type": "rural",
+        "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+        "location": "Arties, Valle de Arán",
+        "distanceToSlopes": 3.5,
+        "pricePerNight": 120,
+        "rating": 4.7,
+        "reviewsCount": 67,
+        "services": ["wifi", "parking", "pets"],
+        "hasOffer": true,
+        "offerPercentage": 10,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "5",
+        "name": "Grand Hotel Baqueira",
+        "type": "hotel",
+        "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800",
+        "location": "Baqueira-Beret",
+        "distanceToSlopes": 0.1,
+        "pricePerNight": 280,
+        "rating": 4.9,
+        "reviewsCount": 456,
+        "services": [
+          "wifi",
+          "parking",
+          "spa",
+          "pool",
+          "restaurant",
+          "gym",
+          "ski-storage"
+        ],
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "6",
+        "name": "Aparthotel Roca Blanca",
+        "type": "apartment",
+        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+        "location": "Baqueira, Valle de Arán",
+        "distanceToSlopes": 0.5,
+        "pricePerNight": 145,
+        "rating": 4.6,
+        "reviewsCount": 201,
+        "services": ["wifi", "parking", "pool", "ski-storage"],
+        "hasOffer": true,
+        "offerPercentage": 20,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "7",
+        "name": "Hotel Pirineos",
+        "type": "hotel",
+        "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+        "location": "Vielha, Valle de Arán",
+        "distanceToSlopes": 4.2,
+        "pricePerNight": 85,
+        "rating": 4.0,
+        "reviewsCount": 145,
+        "services": ["wifi", "parking", "restaurant"],
+        "hasOffer": false,
+        "freeCancellation": false,
+        "available": true
+      },
+      {
+        "id": "8",
+        "name": "Casa de Montaña Aurora",
+        "type": "rural",
+        "image": "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
+        "location": "Unha, Valle de Arán",
+        "distanceToSlopes": 6.0,
+        "pricePerNight": 75,
+        "rating": 4.4,
+        "reviewsCount": 52,
+        "services": ["wifi", "parking", "pets", "restaurant"],
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "9",
+        "name": "Chalet Luxury Baqueira",
+        "type": "rural",
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800",
+        "location": "Baqueira-Beret",
+        "distanceToSlopes": 0.3,
+        "pricePerNight": 450,
+        "rating": 5.0,
+        "reviewsCount": 89,
+        "services": [
+          "wifi",
+          "parking",
+          "spa",
+          "pool",
+          "restaurant",
+          "gym",
+          "ski-storage",
+          "pets"
+        ],
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true
+      },
+      {
+        "id": "10",
+        "name": "Apartamentos Vielha Center",
+        "type": "apartment",
+        "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800",
+        "location": "Vielha, Valle de Arán",
+        "distanceToSlopes": 5.5,
+        "pricePerNight": 65,
+        "rating": 3.9,
+        "reviewsCount": 112,
+        "services": ["wifi", "parking"],
+        "hasOffer": true,
+        "offerPercentage": 25,
+        "freeCancellation": true,
+        "available": true
+      }
+    ],
+    "lodgingTypes": [
+      {
+        "value": "hotel",
+        "label": "Hotel",
+        "icon": "🏨"
+      },
+      {
+        "value": "apartment",
+        "label": "Apartamento",
+        "icon": "🏢"
+      },
+      {
+        "value": "hostel",
+        "label": "Hostal",
+        "icon": "🛏️"
+      },
+      {
+        "value": "rural",
+        "label": "Casa Rural",
+        "icon": "🏡"
+      }
+    ],
+    "services": [
+      {
+        "value": "wifi",
+        "label": "WiFi",
+        "icon": "📶"
+      },
+      {
+        "value": "parking",
+        "label": "Parking",
+        "icon": "🅿️"
+      },
+      {
+        "value": "spa",
+        "label": "Spa",
+        "icon": "💆"
+      },
+      {
+        "value": "pool",
+        "label": "Piscina",
+        "icon": "🏊"
+      },
+      {
+        "value": "restaurant",
+        "label": "Restaurante",
+        "icon": "🍽️"
+      },
+      {
+        "value": "gym",
+        "label": "Gimnasio",
+        "icon": "💪"
+      },
+      {
+        "value": "ski-storage",
+        "label": "Guardaesquís",
+        "icon": "⛷️"
+      },
+      {
+        "value": "pets",
+        "label": "Mascotas",
+        "icon": "🐕"
+      }
+    ],
+    "sortOptions": [
+      {
+        "value": "relevance",
+        "label": "Relevancia"
+      },
+      {
+        "value": "price-asc",
+        "label": "Precio: Menor a Mayor"
+      },
+      {
+        "value": "price-desc",
+        "label": "Precio: Mayor a Menor"
+      },
+      {
+        "value": "rating",
+        "label": "Mejor Valorados"
+      },
+      {
+        "value": "distance",
+        "label": "Más Cercanos"
+      },
+      {
+        "value": "popularity",
+        "label": "Más Populares"
+      }
+    ],
+    "station": {
+      "slug": "baqueira",
+      "name": "Baqueira-Beret",
+      "location": "Valle de Arán, Lleida"
+    },
+    "priceStats": {
+      "min": 45,
+      "max": 450,
+      "average": 154
+    },
+    "meta": {
+      "currentPage": 1,
+      "totalPages": 1,
+      "totalItems": 10,
+      "itemsPerPage": 20
+    }
+  },
+  "meta": {
+    "currentPage": 1,
+    "totalPages": 1,
+    "totalItems": 10,
+    "itemsPerPage": 20
+  }
+}

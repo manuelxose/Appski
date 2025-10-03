@@ -1,0 +1,83 @@
+/* Stations filters specific styles */
+.stations-filters {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.filter-group {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom range slider styling */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--primary-600);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--primary-600);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Custom checkbox styling enhancement */
+input[type="checkbox"]:checked {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+}
+
+/* Scrollbar for filters sidebar */
+.stations-filters::-webkit-scrollbar {
+  width: 6px;
+}
+
+.stations-filters::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+  border-radius: 3px;
+}
+
+.stations-filters::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: 3px;
+}
+
+.stations-filters::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .stations-filters {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}

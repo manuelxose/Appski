@@ -1,0 +1,30 @@
+[
+  {
+    "value": "50+",
+    "label": "Estaciones de Esquí",
+    "icon": "🎿",
+    "trend": "+5 este año",
+    "color": "primary"
+  },
+  {
+    "value": "1.2M",
+    "label": "Usuarios Activos",
+    "icon": "👥",
+    "trend": "+15% vs año anterior",
+    "color": "success"
+  },
+  {
+    "value": "24/7",
+    "label": "Datos en Tiempo Real",
+    "icon": "⚡",
+    "trend": "Actualización continua",
+    "color": "warning"
+  },
+  {
+    "value": "500+",
+    "label": "Alojamientos Disponibles",
+    "icon": "🏠",
+    "trend": "+120 nuevos",
+    "color": "teal"
+  }
+]

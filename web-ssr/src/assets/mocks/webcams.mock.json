@@ -1,0 +1,38 @@
+[
+  {
+    "id": "w1",
+    "name": "Cima Bonaigua",
+    "snapshotUrl": "https://picsum.photos/seed/webcam1/800/600",
+    "lastUpdated": "2025-10-01T08:52:00Z",
+    "freshnessS": 480,
+    "active": true,
+    "cota": "top"
+  },
+  {
+    "id": "w2",
+    "name": "Pla de Beret",
+    "snapshotUrl": "https://picsum.photos/seed/webcam2/800/600",
+    "lastUpdated": "2025-10-01T08:49:00Z",
+    "freshnessS": 660,
+    "active": true,
+    "cota": "mid"
+  },
+  {
+    "id": "w3",
+    "name": "Aparcamiento Base",
+    "snapshotUrl": "https://picsum.photos/seed/webcam3/800/600",
+    "lastUpdated": "2025-10-01T08:55:00Z",
+    "freshnessS": 300,
+    "active": true,
+    "cota": "base"
+  },
+  {
+    "id": "w4",
+    "name": "Pista Escornacabres",
+    "snapshotUrl": "https://picsum.photos/seed/webcam4/800/600",
+    "lastUpdated": "2025-10-01T08:50:00Z",
+    "freshnessS": 600,
+    "active": true,
+    "cota": "mid"
+  }
+]

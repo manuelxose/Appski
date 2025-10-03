@@ -1,1 +1,140 @@
-<p>station-detail works!</p>
+<!-- Station Detail Page -->
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+
+  <!-- Hero Section -->
+  <app-station-hero [station]="stationData()" />
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8 md:py-12">
+    <!-- Snow Report Section -->
+    <section class="mb-8">
+      <app-station-snow-report [snowReport]="snowReport()" />
+    </section>
+
+    <!-- Lifts and Slopes Section -->
+    <section class="mb-8">
+      <app-station-lifts-slopes [data]="liftsSlopesData()" />
+    </section>
+
+    <!-- Webcams Section -->
+    <section class="mb-8">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">
+          📹 <span data-i18n="webcams.title">Webcams en Directo</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          @for (cam of webcams(); track cam.id) {
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <img
+              [src]="cam.imageUrl"
+              [alt]="cam.name"
+              class="w-full aspect-video object-cover"
+            />
+            @if (cam.isLive) {
+            <div
+              class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1"
+            >
+              <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              EN VIVO
+            </div>
+            }
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <p class="text-white text-sm font-semibold">{{ cam.name }}</p>
+              <p class="text-white/80 text-xs">{{ cam.location }}</p>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Forecast Section -->
+    <section class="mb-8">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">
+          🌤️ <span data-i18n="weather.title">Pronóstico 7 Días</span>
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          @for (day of forecast(); track day.date) {
+          <div
+            class="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            <div class="text-sm font-semibold text-slate-700 mb-2">
+              {{ day.dayName }}
+            </div>
+            <div class="text-4xl mb-2">{{ day.icon }}</div>
+            <div class="text-xl font-bold text-slate-900 mb-1">
+              {{ day.temp }}°C
+            </div>
+            @if (day.snowCm > 0) {
+            <div class="text-xs text-blue-600 font-semibold">
+              ❄️ {{ day.snowCm }}cm
+            </div>
+            }
+          </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Tabs Section -->
+    <section class="mb-8">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Tab Headers -->
+        <div
+          class="flex overflow-x-auto border-b border-gray-200 scrollbar-hide"
+        >
+          @for (tab of [ { id: 'about', label: 'Sobre la estación', icon: 'ℹ️'
+          }, { id: 'services', label: 'Servicios', icon: '🏪' }, { id: 'access',
+          label: 'Cómo llegar', icon: '🚗' }, { id: 'prices', label: 'Precios',
+          icon: '💰' } ]; track tab.id) {
+          <button
+            class="flex-shrink-0 px-6 py-4 font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-b-2 border-transparent hover:border-blue-600"
+          >
+            {{ tab.icon }} {{ tab.label }}
+          </button>
+          }
+        </div>
+
+        <!-- Tab Content -->
+        <div class="p-6">
+          <div class="prose max-w-none">
+            <h3 class="text-xl font-bold text-slate-900 mb-4">
+              Sobre Baqueira Beret
+            </h3>
+            <p class="text-slate-700 mb-4">
+              Baqueira Beret es la estación de esquí más grande de España,
+              situada en el Valle de Arán en los Pirineos. Con 167 km de pistas
+              esquiables y excelentes servicios, es uno de los destinos de nieve
+              más prestigiosos de Europa.
+            </p>
+            <p class="text-slate-700">
+              La estación cuenta con nieve de excelente calidad gracias a su
+              orientación norte y su altitud, garantizando una temporada larga
+              de esquí desde diciembre hasta abril.
+            </p>
+
+            <h4 class="text-lg font-semibold text-slate-900 mt-6 mb-3">
+              Características destacadas:
+            </h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2">
+              <li>167 km de pistas esquiables</li>
+              <li>39 remontes mecánicos</li>
+              <li>120 pistas de todos los niveles</li>
+              <li>Escuela de esquí con instructores certificados</li>
+              <li>Alquiler de material de última generación</li>
+              <li>Restaurantes y cafeterías en pistas</li>
+              <li>Snow park y zona freeride</li>
+              <li>Área infantil especializada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <app-site-footer />
+</div>

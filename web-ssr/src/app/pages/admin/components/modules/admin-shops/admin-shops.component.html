@@ -1,0 +1,434 @@
+<div class="admin-shops-container">
+  <!-- Breadcrumbs -->
+  <app-admin-breadcrumbs [items]="breadcrumbs" />
+
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1 class="admin-title">Gestión de Tiendas</h1>
+      <p class="admin-subtitle">
+        Administra tiendas de alquiler y venta de material de esquí
+      </p>
+    </div>
+    <button class="btn-primary" (click)="openCreateModal()">
+      <span class="icon">➕</span>
+      Nueva Tienda
+    </button>
+  </div>
+
+  <!-- Statistics Cards -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Tiendas"
+      [value]="stats().total"
+      icon="🎿"
+      variant="primary"
+    />
+    <app-admin-stat-card
+      label="Activas"
+      [value]="stats().active"
+      icon="✅"
+      variant="success"
+    />
+    <app-admin-stat-card
+      label="Ingresos Totales"
+      [value]="stats().revenue"
+      icon="💰"
+      variant="info"
+      format="currency"
+    />
+    <app-admin-stat-card
+      label="Valor Inventario"
+      [value]="stats().inventoryValue"
+      icon="📦"
+      variant="warning"
+      format="currency"
+    />
+  </div>
+
+  <!-- Search and Filters -->
+  <div class="admin-toolbar">
+    <app-admin-search-bar
+      placeholder="Buscar por nombre, estación, ciudad o propietario..."
+      (search)="handleSearch($any($event))"
+    />
+    <app-admin-filters
+      [fields]="filterFields"
+      (filterChange)="
+        handleFilterChange($any($event).filterId, $any($event).value)
+      "
+    />
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader message="Cargando tiendas..." />
+  }
+
+  <!-- Error State -->
+  @else if (error()) {
+  <div class="error-message">
+    <span class="icon">⚠️</span>
+    <p>{{ error() }}</p>
+    <button class="btn-secondary" (click)="loadShops()">Reintentar</button>
+  </div>
+  }
+
+  <!-- Empty State -->
+  @else if (filteredShops().length === 0) {
+  <app-admin-empty-state
+    title="No hay tiendas"
+    message="No se encontraron tiendas con los filtros aplicados"
+    icon="🎿"
+    [actionLabel]="searchQuery() ? 'Limpiar búsqueda' : 'Crear tienda'"
+    (action)="searchQuery() ? handleSearch('') : openCreateModal()"
+  />
+  }
+
+  <!-- Table -->
+  @else {
+  <app-admin-table
+    [columns]="tableColumns"
+    [data]="paginatedShops()"
+    [actions]="tableActions"
+    (rowClick)="handleRowClick($event)"
+    (actionClick)="handleActionClick($any($event))"
+  >
+    <!-- Custom column templates -->
+    <ng-template #customColumn let-column="column" let-row="row">
+      @if (column.key === 'type') {
+      <span class="shop-type">{{ getShopTypeLabel(row.type) }}</span>
+      } @if (column.key === 'totalRentals') {
+      <span class="rentals">{{ row.stats.totalRentals }}</span>
+      } @if (column.key === 'revenue') {
+      <span class="revenue">{{ row.stats.revenue }}€</span>
+      } @if (column.key === 'inventoryValue') {
+      <span class="inventory">{{ row.stats.inventoryValue }}€</span>
+      } @if (column.key === 'rating') {
+      <span class="rating">
+        <span class="icon">⭐</span>
+        {{ row.rating }} ({{ row.totalReviews }})
+      </span>
+      } @if (column.key === 'status') {
+      <app-admin-badge
+        [text]="
+          row.status === 'active'
+            ? 'Activo'
+            : row.status === 'inactive'
+            ? 'Inactivo'
+            : 'Mantenimiento'
+        "
+        [variant]="
+          row.status === 'active'
+            ? 'success'
+            : row.status === 'inactive'
+            ? 'danger'
+            : 'warning'
+        "
+      />
+      }
+    </ng-template>
+  </app-admin-table>
+
+  <!-- Pagination -->
+  <app-admin-pagination
+    [page]="currentPage()"
+    [total]="filteredShops().length"
+    [pageSize]="itemsPerPage()"
+    (pageChange)="handlePageChange($event)"
+  />
+  }
+
+  <!-- Create/Edit Modal -->
+  @if (showModal()) {
+  <app-admin-modal
+    [open]="true"
+    [title]="isEditMode() ? 'Editar Tienda' : 'Nueva Tienda'"
+    size="lg"
+    (close)="closeModal()"
+  >
+    <div class="modal-content">
+      <form class="admin-form">
+        <!-- Basic Information -->
+        <div class="form-section">
+          <h3 class="section-title">Información Básica</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre *</label>
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                [(ngModel)]="formData().name"
+                name="name"
+                placeholder="SkiPro Sierra Nevada"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="type">Tipo *</label>
+              <select
+                id="type"
+                class="form-select"
+                [(ngModel)]="formData().type"
+                name="type"
+                required
+              >
+                <option value="rental">Solo Alquiler</option>
+                <option value="retail">Solo Venta</option>
+                <option value="rental_retail">Alquiler + Venta</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="station">Estación *</label>
+              <select
+                id="station"
+                class="form-select"
+                [(ngModel)]="formData().station"
+                name="station"
+                required
+              >
+                <option value="">Seleccionar estación</option>
+                <option value="sierra-nevada">Sierra Nevada</option>
+                <option value="baqueira-beret">Baqueira Beret</option>
+                <option value="formigal">Formigal</option>
+                <option value="candanchu">Candanchú</option>
+                <option value="astun">Astún</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="status">Estado *</label>
+              <select
+                id="status"
+                class="form-select"
+                [(ngModel)]="formData().status"
+                name="status"
+                required
+              >
+                <option value="active">Activo</option>
+                <option value="inactive">Inactivo</option>
+                <option value="maintenance">Mantenimiento</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="form-section">
+          <h3 class="section-title">Ubicación</h3>
+
+          <div class="form-group">
+            <label for="address">Dirección *</label>
+            <input
+              type="text"
+              id="address"
+              class="form-input"
+              [(ngModel)]="formData().address"
+              name="address"
+              placeholder="Plaza Pradollano, 1"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">Ciudad *</label>
+              <input
+                type="text"
+                id="city"
+                class="form-input"
+                [(ngModel)]="formData().city"
+                name="city"
+                placeholder="Monachil"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="zipCode">Código Postal *</label>
+              <input
+                type="text"
+                id="zipCode"
+                class="form-input"
+                [(ngModel)]="formData().zipCode"
+                name="zipCode"
+                placeholder="18196"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="form-section">
+          <h3 class="section-title">Contacto</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Teléfono *</label>
+              <input
+                type="tel"
+                id="phone"
+                class="form-input"
+                [(ngModel)]="formData().phone"
+                name="phone"
+                placeholder="+34 958 480 100"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                [(ngModel)]="formData().email"
+                name="email"
+                placeholder="info@skipro.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Sitio Web</label>
+            <input
+              type="url"
+              id="website"
+              class="form-input"
+              [(ngModel)]="formData().website"
+              name="website"
+              placeholder="https://www.skipro.com"
+            />
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="form-section">
+          <h3 class="section-title">Servicios</h3>
+          <div class="services-grid">
+            @for (service of availableServices; track service) {
+            <label class="service-checkbox">
+              <input
+                type="checkbox"
+                [checked]="formData().services.includes(service)"
+                (change)="toggleService(service)"
+              />
+              <span>{{ service.replace("_", " ") }}</span>
+            </label>
+            }
+          </div>
+        </div>
+
+        <!-- Owner Information -->
+        <div class="form-section">
+          <h3 class="section-title">Propietario</h3>
+
+          <div class="form-group">
+            <label for="ownerName">Nombre *</label>
+            <input
+              type="text"
+              id="ownerName"
+              class="form-input"
+              [(ngModel)]="formData().ownerName"
+              name="ownerName"
+              placeholder="SkiPro España S.L."
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ownerEmail">Email *</label>
+              <input
+                type="email"
+                id="ownerEmail"
+                class="form-input"
+                [(ngModel)]="formData().ownerEmail"
+                name="ownerEmail"
+                placeholder="owner@skipro.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="ownerPhone">Teléfono *</label>
+              <input
+                type="tel"
+                id="ownerPhone"
+                class="form-input"
+                [(ngModel)]="formData().ownerPhone"
+                name="ownerPhone"
+                placeholder="+34 958 480 101"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="commissionRate">Comisión (%) *</label>
+            <input
+              type="number"
+              id="commissionRate"
+              class="form-input"
+              [(ngModel)]="formData().commissionRate"
+              name="commissionRate"
+              min="0"
+              max="100"
+              step="0.5"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Featured -->
+        <div class="form-section">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              [(ngModel)]="formData().featured"
+              name="featured"
+            />
+            <span>Marcar como destacado</span>
+          </label>
+        </div>
+
+        <!-- Actions -->
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" (click)="closeModal()">
+            Cancelar
+          </button>
+          <button type="button" class="btn-primary" (click)="handleSave()">
+            {{ isEditMode() ? "Guardar Cambios" : "Crear Tienda" }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </app-admin-modal>
+  }
+
+  <!-- Delete Confirmation Dialog -->
+  @if (showDeleteDialog()) {
+  <app-admin-confirm-dialog
+    [open]="true"
+    title="Eliminar Tienda"
+    [message]="
+      '¿Estás seguro de que quieres eliminar ' +
+      selectedShop()?.name +
+      '? Esta acción no se puede deshacer.'
+    "
+    confirmLabel="Eliminar"
+    cancelLabel="Cancelar"
+    variant="danger"
+    (confirm)="handleDelete()"
+    (cancel)="closeDeleteDialog()"
+  />
+  }
+</div>

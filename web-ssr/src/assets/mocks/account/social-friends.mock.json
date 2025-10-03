@@ -1,0 +1,159 @@
+{
+  "friends": [
+    {
+      "id": "friend-001",
+      "userId": "user-1234",
+      "name": "Carlos Martínez",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "status": "friends",
+      "skillLevel": "advanced",
+      "location": "Madrid, España",
+      "mutualFriends": 8,
+      "connectedSince": "2024-01-15T00:00:00Z",
+      "lastActivity": "2025-09-28T14:30:00Z",
+      "favoriteStation": "Sierra Nevada",
+      "isOnline": true
+    },
+    {
+      "id": "friend-002",
+      "userId": "user-2345",
+      "name": "Laura Sánchez",
+      "avatar": "https://i.pravatar.cc/150?img=25",
+      "status": "friends",
+      "skillLevel": "expert",
+      "location": "Barcelona, España",
+      "mutualFriends": 5,
+      "connectedSince": "2023-11-20T00:00:00Z",
+      "lastActivity": "2025-09-25T10:15:00Z",
+      "favoriteStation": "Baqueira Beret",
+      "isOnline": false
+    },
+    {
+      "id": "friend-003",
+      "userId": "user-3456",
+      "name": "David López",
+      "avatar": "https://i.pravatar.cc/150?img=33",
+      "status": "friends",
+      "skillLevel": "intermediate",
+      "location": "Zaragoza, España",
+      "mutualFriends": 12,
+      "connectedSince": "2024-03-05T00:00:00Z",
+      "lastActivity": "2025-09-20T16:45:00Z",
+      "favoriteStation": "Formigal",
+      "isOnline": true
+    },
+    {
+      "id": "friend-004",
+      "userId": "user-4567",
+      "name": "Ana García",
+      "avatar": "https://i.pravatar.cc/150?img=45",
+      "status": "friends",
+      "skillLevel": "advanced",
+      "location": "Valencia, España",
+      "mutualFriends": 3,
+      "connectedSince": "2024-06-12T00:00:00Z",
+      "lastActivity": "2025-09-15T09:00:00Z",
+      "favoriteStation": "Cerler"
+    }
+  ],
+  "pendingRequests": [
+    {
+      "id": "req-001",
+      "fromUserId": "user-5678",
+      "fromUserName": "Miguel Hernández",
+      "fromUserAvatar": "https://i.pravatar.cc/150?img=52",
+      "message": "¡Hola! Vi que también esquías en Formigal. ¿Conectamos?",
+      "timestamp": "2025-09-29T16:45:00Z"
+    },
+    {
+      "id": "req-002",
+      "fromUserId": "user-6789",
+      "fromUserName": "Sofía Ruiz",
+      "fromUserAvatar": "https://i.pravatar.cc/150?img=47",
+      "message": "Me gustó tu foto en Baqueira. ¡Conectemos para esquiar juntos!",
+      "timestamp": "2025-09-27T11:20:00Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-001",
+      "name": "Amigos del Pirineo",
+      "description": "Grupo de esquiadores del Pirineo Aragonés",
+      "avatar": "https://i.pravatar.cc/150?img=70",
+      "memberCount": 24,
+      "createdBy": "user-1234",
+      "createdAt": "2024-01-10T00:00:00Z",
+      "isPrivate": false,
+      "upcomingTrips": 3,
+      "tags": ["pirineo", "esquí", "aventura"],
+      "members": [
+        {
+          "userId": "user-1234",
+          "name": "Carlos Martínez",
+          "avatar": "https://i.pravatar.cc/150?img=12",
+          "role": "owner",
+          "joinedAt": "2024-01-10T00:00:00Z",
+          "skillLevel": "advanced"
+        },
+        {
+          "userId": "user-3456",
+          "name": "David López",
+          "avatar": "https://i.pravatar.cc/150?img=33",
+          "role": "admin",
+          "joinedAt": "2024-01-15T00:00:00Z",
+          "skillLevel": "intermediate"
+        },
+        {
+          "userId": "current-user",
+          "name": "María González",
+          "avatar": "https://i.pravatar.cc/150?img=5",
+          "role": "member",
+          "joinedAt": "2024-02-01T00:00:00Z",
+          "skillLevel": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "group-002",
+      "name": "Sierra Nevada Riders",
+      "description": "Esquiadores frecuentes de Sierra Nevada",
+      "avatar": "https://i.pravatar.cc/150?img=71",
+      "memberCount": 18,
+      "createdBy": "user-7890",
+      "createdAt": "2023-12-05T00:00:00Z",
+      "isPrivate": true,
+      "upcomingTrips": 1,
+      "tags": ["sierra nevada", "freestyle"],
+      "members": [
+        {
+          "userId": "user-7890",
+          "name": "Pedro Jiménez",
+          "avatar": "https://i.pravatar.cc/150?img=60",
+          "role": "owner",
+          "joinedAt": "2023-12-05T00:00:00Z",
+          "skillLevel": "expert"
+        },
+        {
+          "userId": "current-user",
+          "name": "María González",
+          "avatar": "https://i.pravatar.cc/150?img=5",
+          "role": "member",
+          "joinedAt": "2024-01-20T00:00:00Z",
+          "skillLevel": "advanced"
+        }
+      ]
+    }
+  ],
+  "groupInvitations": [
+    {
+      "id": "inv-001",
+      "groupId": "group-003",
+      "groupName": "Baqueira Experts",
+      "groupAvatar": "https://i.pravatar.cc/150?img=72",
+      "invitedBy": "user-2345",
+      "invitedByName": "Laura Sánchez",
+      "message": "Te invito a unirte a nuestro grupo de expertos de Baqueira",
+      "timestamp": "2025-09-28T18:00:00Z"
+    }
+  ]
+}

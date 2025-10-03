@@ -1,0 +1,166 @@
+<div class="admin-table-container">
+  <!-- Loading state -->
+  @if (loading()) {
+  <div class="loading-state">
+    <div class="spinner"></div>
+    <p>Cargando datos...</p>
+  </div>
+  }
+
+  <!-- Empty state -->
+  @else if (data().length === 0) {
+  <div class="empty-state">
+    <div class="empty-icon">📭</div>
+    <h3>No hay datos disponibles</h3>
+    <p>{{ emptyMessage() || "No se encontraron resultados" }}</p>
+  </div>
+  }
+
+  <!-- Table with data -->
+  @else {
+  <div class="table-wrapper">
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <!-- Checkbox column (if selectable) -->
+          @if (selectable()) {
+          <th class="checkbox-column">
+            <input
+              type="checkbox"
+              [checked]="allSelected()"
+              [indeterminate]="someSelected()"
+              (change)="toggleSelectAll()"
+            />
+          </th>
+          }
+
+          <!-- Data columns -->
+          @for (column of columns(); track column.key) {
+          <th
+            [style.width]="column.width"
+            [style.text-align]="column.align || 'left'"
+            [class.sortable]="column.sortable"
+            (click)="column.sortable ? onSort(column.key) : null"
+          >
+            <div class="th-content">
+              <span>{{ column.label }}</span>
+              @if (column.sortable && sortKey() === column.key) {
+              <span class="sort-icon">
+                {{ sortDirection() === "asc" ? "↑" : "↓" }}
+              </span>
+              }
+            </div>
+          </th>
+          }
+
+          <!-- Actions column -->
+          @if (actions() && actions()!.length > 0) {
+          <th class="actions-column">Acciones</th>
+          }
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (row of paginatedData(); track trackBy(row); let idx = $index) {
+        <tr [class.selected]="isRowSelected(row)" (click)="onRowClick(row)">
+          <!-- Checkbox -->
+          @if (selectable()) {
+          <td class="checkbox-column">
+            <input
+              type="checkbox"
+              [checked]="isRowSelected(row)"
+              (change)="toggleRowSelection(row)"
+              (click)="$event.stopPropagation()"
+            />
+          </td>
+          }
+
+          <!-- Data cells -->
+          @for (column of columns(); track column.key) {
+          <td [style.text-align]="column.align || 'left'">
+            {{ formatCell(row[column.key], column.format) }}
+          </td>
+          }
+
+          <!-- Action buttons -->
+          @if (actions() && actions()!.length > 0) {
+          <td class="actions-column">
+            <div class="action-buttons">
+              @for (action of actions(); track action.label) {
+              <button
+                class="action-btn"
+                [class]="'btn-' + (action.variant || 'secondary')"
+                (click)="action.handler(row); $event.stopPropagation()"
+                title="{{ action.label }}"
+              >
+                @if (action.icon) {
+                <span class="icon">{{ action.icon }}</span>
+                }
+                {{ action.label }}
+              </button>
+              }
+            </div>
+          </td>
+          }
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  @if (totalPages() > 1) {
+  <div class="table-footer">
+    <div class="pagination-info">
+      Mostrando {{ startIndex() + 1 }} - {{ endIndex() }} de
+      {{ total() }} resultados
+    </div>
+
+    <div class="pagination-controls">
+      <button
+        class="pagination-btn"
+        [disabled]="page() === 1"
+        (click)="goToPage(1)"
+      >
+        ⏮️
+      </button>
+
+      <button
+        class="pagination-btn"
+        [disabled]="page() === 1"
+        (click)="goToPage(page() - 1)"
+      >
+        ◀️
+      </button>
+
+      <div class="page-numbers">
+        @for (pageNum of visiblePages(); track pageNum) {
+        <button
+          class="page-btn"
+          [class.active]="pageNum === page()"
+          (click)="goToPage(pageNum)"
+        >
+          {{ pageNum }}
+        </button>
+        }
+      </div>
+
+      <button
+        class="pagination-btn"
+        [disabled]="page() === totalPages()"
+        (click)="goToPage(page() + 1)"
+      >
+        ▶️
+      </button>
+
+      <button
+        class="pagination-btn"
+        [disabled]="page() === totalPages()"
+        (click)="goToPage(totalPages())"
+      >
+        ⏭️
+      </button>
+    </div>
+  </div>
+  } }
+</div>

@@ -1,0 +1,30 @@
+<div [class.loader-fullscreen]="fullscreen()" class="loader-container">
+  <div class="loader-content">
+    @switch (type()) { @case ('spinner') {
+    <div class="loader loader-spinner loader-{{ size() }}">
+      <div class="spinner"></div>
+    </div>
+    } @case ('dots') {
+    <div class="loader loader-dots loader-{{ size() }}">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    } @case ('bars') {
+    <div class="loader loader-bars loader-{{ size() }}">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    } @case ('skeleton') {
+    <div class="loader loader-skeleton">
+      <div class="skeleton-line skeleton-line-long"></div>
+      <div class="skeleton-line skeleton-line-medium"></div>
+      <div class="skeleton-line skeleton-line-short"></div>
+    </div>
+    } } @if (message()) {
+    <p class="loader-message">{{ message() }}</p>
+    }
+  </div>
+</div>

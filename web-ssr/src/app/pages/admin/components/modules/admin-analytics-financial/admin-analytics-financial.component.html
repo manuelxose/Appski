@@ -1,0 +1,585 @@
+<div class="analytics-financial-container">
+  <!-- Header -->
+  <div class="financial-header">
+    <app-admin-breadcrumbs [items]="breadcrumbs"></app-admin-breadcrumbs>
+
+    <div class="header-content">
+      <div class="title-section">
+        <h1 class="page-title">💰 Analytics Financiero</h1>
+        <p class="page-subtitle">
+          Análisis completo de P&L, cash flow y métricas financieras
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button
+          class="btn btn-secondary"
+          (click)="refreshData()"
+          [disabled]="isLoading()"
+        >
+          🔄 Actualizar
+        </button>
+        <div class="export-dropdown">
+          <button class="btn btn-secondary">📥 Exportar</button>
+          <div class="dropdown-menu">
+            <button (click)="exportFinancialReport('csv')">CSV</button>
+            <button (click)="exportFinancialReport('excel')">Excel</button>
+            <button (click)="exportFinancialReport('pdf')">PDF Completo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-section">
+    <div class="period-filters">
+      <span class="filter-label">Período:</span>
+      <div class="btn-group">
+        <button
+          class="btn btn-filter"
+          [class.active]="periodFilter() === 'month'"
+          (click)="setPeriodFilter('month')"
+        >
+          Mes Actual
+        </button>
+        <button
+          class="btn btn-filter"
+          [class.active]="periodFilter() === 'quarter'"
+          (click)="setPeriodFilter('quarter')"
+        >
+          Trimestre
+        </button>
+        <button
+          class="btn btn-filter"
+          [class.active]="periodFilter() === 'ytd'"
+          (click)="setPeriodFilter('ytd')"
+        >
+          YTD
+        </button>
+        <button
+          class="btn btn-filter"
+          [class.active]="periodFilter() === 'year'"
+          (click)="setPeriodFilter('year')"
+        >
+          Año Completo
+        </button>
+      </div>
+    </div>
+
+    <div class="view-mode-filters">
+      <span class="filter-label">Vista:</span>
+      <div class="btn-group">
+        <button
+          class="btn btn-filter btn-sm"
+          [class.active]="viewMode() === 'summary'"
+          (click)="setViewMode('summary')"
+        >
+          Resumen
+        </button>
+        <button
+          class="btn btn-filter btn-sm"
+          [class.active]="viewMode() === 'detailed'"
+          (click)="setViewMode('detailed')"
+        >
+          Detallado
+        </button>
+        <button
+          class="btn btn-filter btn-sm"
+          [class.active]="viewMode() === 'variance'"
+          (click)="setViewMode('variance')"
+        >
+          Varianzas
+        </button>
+      </div>
+    </div>
+
+    <div class="comparison-toggles">
+      <label class="toggle-label">
+        <input
+          type="checkbox"
+          [(ngModel)]="showBudgetComparison"
+          (change)="toggleBudgetComparison()"
+        />
+        Comparar con presupuesto
+      </label>
+      <label class="toggle-label">
+        <input
+          type="checkbox"
+          [(ngModel)]="showYoYComparison"
+          (change)="toggleYoYComparison()"
+        />
+        Comparar año anterior
+      </label>
+    </div>
+  </div>
+
+  <!-- Error Alert -->
+  @if (error()) {
+  <div class="alert alert-error">❌ {{ error() }}</div>
+  }
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader></app-admin-loader>
+  } @else {
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <!-- Total Revenue -->
+    <app-admin-stat-card
+      icon="💰"
+      label="Revenue Total"
+      [value]="formatCurrency(kpis().totalRevenue.current)"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' +
+            formatCompactCurrency(kpis().totalRevenue.budget)
+          : 'Período actual'
+      "
+      [trend]="kpis().totalRevenue.trend"
+      [change]="kpis().totalRevenue.changePercent"
+      variant="success"
+    ></app-admin-stat-card>
+
+    <!-- Total Expenses -->
+    <app-admin-stat-card
+      icon="📊"
+      label="Gastos Totales"
+      [value]="formatCurrency(kpis().totalExpenses.current)"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' +
+            formatCompactCurrency(kpis().totalExpenses.budget)
+          : 'Período actual'
+      "
+      [trend]="kpis().totalExpenses.trend"
+      [change]="kpis().totalExpenses.changePercent"
+      variant="danger"
+    ></app-admin-stat-card>
+
+    <!-- Net Profit -->
+    <app-admin-stat-card
+      icon="📈"
+      label="Beneficio Neto"
+      [value]="formatCurrency(kpis().netProfit.current)"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' + formatCompactCurrency(kpis().netProfit.budget)
+          : 'Período actual'
+      "
+      [trend]="kpis().netProfit.trend"
+      [change]="kpis().netProfit.changePercent"
+      variant="primary"
+    ></app-admin-stat-card>
+
+    <!-- Profit Margin -->
+    <app-admin-stat-card
+      icon="📊"
+      label="Margen de Beneficio"
+      [value]="kpis().profitMargin.current.toFixed(1) + '%'"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' + kpis().profitMargin.budget.toFixed(1) + '%'
+          : 'Período actual'
+      "
+      [trend]="kpis().profitMargin.trend"
+      [change]="kpis().profitMargin.changePercent"
+      variant="info"
+    ></app-admin-stat-card>
+
+    <!-- EBITDA -->
+    <app-admin-stat-card
+      icon="💎"
+      label="EBITDA"
+      [value]="formatCurrency(kpis().ebitda.current)"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' + formatCompactCurrency(kpis().ebitda.budget)
+          : 'Período actual'
+      "
+      [trend]="kpis().ebitda.trend"
+      [change]="kpis().ebitda.changePercent"
+      variant="warning"
+    ></app-admin-stat-card>
+
+    <!-- Operating Cash Flow -->
+    <app-admin-stat-card
+      icon="💵"
+      label="Cash Flow Operativo"
+      [value]="formatCurrency(kpis().operatingCashFlow.current)"
+      [subtitle]="
+        showBudgetComparison()
+          ? 'vs. Presupuesto: ' +
+            formatCompactCurrency(kpis().operatingCashFlow.budget)
+          : 'Período actual'
+      "
+      [trend]="kpis().operatingCashFlow.trend"
+      [change]="kpis().operatingCashFlow.changePercent"
+      variant="success"
+    ></app-admin-stat-card>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="financial-content">
+    <!-- P&L Statement -->
+    <div class="content-card full-width">
+      <div class="card-header">
+        <h2 class="card-title">📋 Estado de Resultados (P&L)</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Expandir">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="pl-statement-table">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th class="text-left">Concepto</th>
+                <th class="text-right">Actual</th>
+                @if (showBudgetComparison()) {
+                <th class="text-right">Presupuesto</th>
+                <th class="text-right">Varianza</th>
+                } @if (showYoYComparison()) {
+                <th class="text-right">Año Anterior</th>
+                <th class="text-right">Cambio YoY</th>
+                }
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of plStatement(); track item.category) {
+              <tr
+                [class.pl-category]="!item.subcategory"
+                [class.pl-subcategory]="item.subcategory"
+              >
+                <td class="text-left">
+                  @if (item.subcategory) {
+                  <span class="indent">{{ item.subcategory }}</span>
+                  } @else {
+                  <strong>{{ item.category }}</strong>
+                  }
+                </td>
+                <td class="text-right">{{ formatCurrency(item.actual) }}</td>
+                @if (showBudgetComparison()) {
+                <td class="text-right">{{ formatCurrency(item.budget) }}</td>
+                <td
+                  class="text-right"
+                  [ngClass]="
+                    getVarianceClass(
+                      item.variance,
+                      item.category.includes('Expense')
+                    )
+                  "
+                >
+                  {{ formatCurrency(item.variance) }}
+                  <span class="variance-percent"
+                    >({{ item.variancePercent.toFixed(1) }}%)</span
+                  >
+                </td>
+                } @if (showYoYComparison()) {
+                <td class="text-right">{{ formatCurrency(item.lastYear) }}</td>
+                <td
+                  class="text-right"
+                  [ngClass]="item.yoyChange >= 0 ? 'trend-up' : 'trend-down'"
+                >
+                  {{ formatPercent(item.yoyChange) }}
+                </td>
+                }
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cash Flow Chart -->
+    <div class="content-card">
+      <div class="card-header">
+        <h2 class="card-title">💵 Cash Flow Mensual</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Pantalla completa">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="cash-flow-chart">
+          <div class="chart-wrapper">
+            @for (month of cashFlowData(); track month.month) {
+            <div class="cash-flow-bar-group">
+              <div class="cash-flow-bars">
+                <div
+                  class="cash-bar operating"
+                  [style.height.px]="absValue(month.operatingCashFlow / 1000)"
+                  [title]="
+                    'Operativo: ' + formatCurrency(month.operatingCashFlow)
+                  "
+                ></div>
+                <div
+                  class="cash-bar investing"
+                  [style.height.px]="absValue(month.investingCashFlow / 1000)"
+                  [title]="
+                    'Inversión: ' + formatCurrency(month.investingCashFlow)
+                  "
+                ></div>
+                <div
+                  class="cash-bar financing"
+                  [style.height.px]="absValue(month.financingCashFlow / 1000)"
+                  [title]="
+                    'Financiación: ' + formatCurrency(month.financingCashFlow)
+                  "
+                ></div>
+              </div>
+              <div
+                class="net-cash-flow"
+                [class.negative]="month.netCashFlow < 0"
+              >
+                {{ formatCompactCurrency(month.netCashFlow) }}
+              </div>
+              <div class="month-label">{{ month.month }}</div>
+            </div>
+            }
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"
+              ><span class="legend-dot operating"></span> Operativo</span
+            >
+            <span class="legend-item"
+              ><span class="legend-dot investing"></span> Inversión</span
+            >
+            <span class="legend-item"
+              ><span class="legend-dot financing"></span> Financiación</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Revenue Streams -->
+    <div class="content-card">
+      <div class="card-header">
+        <h2 class="card-title">💰 Fuentes de Ingresos</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Pantalla completa">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="revenue-streams">
+          @for (stream of revenueStreams(); track stream.stream) {
+          <div class="revenue-stream-item">
+            <div class="stream-info">
+              <div class="stream-name">{{ stream.stream }}</div>
+              <div class="stream-amount">
+                {{ formatCurrency(stream.amount) }}
+              </div>
+            </div>
+            <div class="stream-bar-container">
+              <div
+                class="stream-bar"
+                [style.width.%]="stream.percentage"
+                [style.background]="stream.color"
+              ></div>
+              <span class="stream-percentage">{{ stream.percentage }}%</span>
+            </div>
+            <div class="stream-growth" [class.positive]="stream.growth >= 0">
+              {{ formatPercent(stream.growth) }}
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Expense Breakdown -->
+    <div class="content-card">
+      <div class="card-header">
+        <h2 class="card-title">📊 Desglose de Gastos</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Pantalla completa">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="expense-breakdown">
+          <div class="expense-donut">
+            <svg viewBox="0 0 200 200" class="donut-svg">
+              <!-- Simplified donut - real implementation would calculate segments -->
+              <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="#3b82f6"
+                stroke-width="40"
+                stroke-dasharray="150 502"
+                transform="rotate(-90 100 100)"
+              ></circle>
+              <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="#8b5cf6"
+                stroke-width="40"
+                stroke-dasharray="100 502"
+                stroke-dashoffset="-150"
+                transform="rotate(-90 100 100)"
+              ></circle>
+              <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="40"
+                stroke-dasharray="80 502"
+                stroke-dashoffset="-250"
+                transform="rotate(-90 100 100)"
+              ></circle>
+              <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="#f59e0b"
+                stroke-width="40"
+                stroke-dasharray="60 502"
+                stroke-dashoffset="-330"
+                transform="rotate(-90 100 100)"
+              ></circle>
+            </svg>
+            <div class="donut-center">
+              <span class="donut-total">{{
+                formatCompactCurrency(kpis().totalExpenses.current)
+              }}</span>
+              <span class="donut-label">Total</span>
+            </div>
+          </div>
+          <div class="expense-legend">
+            @for (category of expenseCategories(); track category.category) {
+            <div class="expense-item">
+              <span
+                class="expense-dot"
+                [style.background]="category.color"
+              ></span>
+              <div class="expense-details">
+                <div class="expense-name">{{ category.category }}</div>
+                <div class="expense-amount">
+                  {{ formatCurrency(category.amount) }}
+                  <span class="expense-percent"
+                    >({{ category.percentage }}%)</span
+                  >
+                </div>
+                @if (showBudgetComparison()) {
+                <div
+                  class="expense-variance"
+                  [ngClass]="getVarianceClass(category.variance, true)"
+                >
+                  vs. Budget: {{ formatCurrency(category.variance) }}
+                </div>
+                }
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget Comparison -->
+    @if (showBudgetComparison()) {
+    <div class="content-card full-width">
+      <div class="card-header">
+        <h2 class="card-title">🎯 Actual vs. Presupuesto</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Expandir">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="budget-comparison">
+          @for (item of budgetComparison(); track item.category) {
+          <div class="budget-item">
+            <div class="budget-category">{{ item.category }}</div>
+            <div class="budget-bars">
+              <div class="budget-bar-container">
+                <div class="budget-label">Actual</div>
+                <div
+                  class="budget-bar actual"
+                  [style.width.%]="(item.actual / item.budget) * 100"
+                >
+                  {{ formatCompactCurrency(item.actual) }}
+                </div>
+              </div>
+              <div class="budget-bar-container">
+                <div class="budget-label">Presupuesto</div>
+                <div class="budget-bar budget" style="width: 100%">
+                  {{ formatCompactCurrency(item.budget) }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="budget-variance"
+              [ngClass]="
+                getVarianceClass(
+                  item.variance,
+                  item.category.includes('Expense')
+                )
+              "
+            >
+              <span class="variance-amount">{{
+                formatCurrency(item.variance)
+              }}</span>
+              <span class="variance-percent"
+                >({{ item.variancePercent.toFixed(1) }}%)</span
+              >
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- Financial Ratios -->
+    <div class="content-card full-width">
+      <div class="card-header">
+        <h2 class="card-title">📊 Ratios Financieros</h2>
+        <div class="card-actions">
+          <button class="btn-icon" title="Expandir">⛶</button>
+          <button class="btn-icon" title="Descargar">💾</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="financial-ratios-grid">
+          @for (ratio of financialRatios(); track ratio.name) {
+          <div class="ratio-card" [ngClass]="getRatioStatusClass(ratio.status)">
+            <div class="ratio-header">
+              <span class="ratio-icon">{{
+                getRatioStatusIcon(ratio.status)
+              }}</span>
+              <span class="ratio-name">{{ ratio.name }}</span>
+            </div>
+            <div class="ratio-value">{{ ratio.value.toFixed(2) }}</div>
+            <div class="ratio-benchmark">
+              Benchmark: {{ ratio.benchmark.toFixed(2) }}
+            </div>
+            <div class="ratio-description">{{ ratio.description }}</div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  @if (!isLoading() && plStatement().length === 0) {
+  <app-admin-empty-state
+    icon="💰"
+    title="No hay datos financieros"
+    message="No se encontraron datos financieros para el período seleccionado."
+  ></app-admin-empty-state>
+  } }
+</div>

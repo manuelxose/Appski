@@ -1,0 +1,220 @@
+{
+  "data": {
+    "lodging": {
+      "id": "casa-rural-el-refugio",
+      "name": "Casa Rural El Refugio de Montaña",
+      "type": "rural",
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200",
+        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1200",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200",
+        "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200"
+      ],
+      "location": "Sierra Nevada, Granada",
+      "distanceToSlopes": 2.5,
+      "pricePerNight": 120,
+      "rating": 4.8,
+      "reviewsCount": 87,
+      "services": [
+        "wifi",
+        "parking",
+        "pool",
+        "restaurant",
+        "spa",
+        "ski-storage",
+        "pets"
+      ],
+      "description": "Encantadora casa rural situada en las faldas de Sierra Nevada, perfecta para familias y grupos. Combina el encanto tradicional con comodidades modernas. Vistas espectaculares a la montaña y acceso directo a rutas de senderismo. La propiedad cuenta con amplios espacios comunes, chimenea de leña, cocina totalmente equipada y terrazas con vistas panorámicas. Ideal para disfrutar de la naturaleza y la tranquilidad de la montaña mientras te encuentras a pocos kilómetros de las pistas de esquí.",
+      "hasOffer": true,
+      "offerPercentage": 15,
+      "freeCancellation": true,
+      "available": true,
+      "capacity": 8,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": 180,
+      "checkIn": "15:00",
+      "checkOut": "11:00",
+      "policies": [
+        "No se permiten fiestas ni eventos",
+        "No fumar en el interior",
+        "Respetar el horario de silencio (22:00 - 08:00)",
+        "Depósito de seguridad: 200€",
+        "Máximo 8 personas",
+        "Las mascotas son bienvenidas (consultar condiciones)"
+      ],
+      "nearbyAttractions": [
+        "Estación de esquí Pradollano - 2.5 km",
+        "Mirador de la Veleta - 5 km",
+        "Ruta de senderismo Los Cahorros - 8 km",
+        "Centro de Granada - 35 km",
+        "Supermercado Mercadona - 1 km",
+        "Restaurante El Refugio - 500 m"
+      ],
+      "cancellationPolicy": "Cancelación gratuita hasta 7 días antes de la llegada. Después se aplica un cargo del 50% del total de la reserva. Sin reembolso si se cancela 48 horas antes del check-in."
+    },
+    "amenities": [
+      {
+        "value": "wifi",
+        "label": "WiFi gratuito",
+        "icon": "📶",
+        "category": "basic"
+      },
+      {
+        "value": "parking",
+        "label": "Parking gratuito",
+        "icon": "🅿️",
+        "category": "basic"
+      },
+      {
+        "value": "pool",
+        "label": "Piscina exterior",
+        "icon": "🏊",
+        "category": "comfort"
+      },
+      {
+        "value": "spa",
+        "label": "Spa y wellness",
+        "icon": "💆",
+        "category": "comfort"
+      },
+      {
+        "value": "restaurant",
+        "label": "Restaurante",
+        "icon": "🍽️",
+        "category": "comfort"
+      },
+      {
+        "value": "ski-storage",
+        "label": "Guardaesquís",
+        "icon": "⛷️",
+        "category": "basic"
+      },
+      {
+        "value": "pets",
+        "label": "Admite mascotas",
+        "icon": "🐕",
+        "category": "basic"
+      },
+      {
+        "value": "fireplace",
+        "label": "Chimenea",
+        "icon": "🔥",
+        "category": "comfort"
+      },
+      {
+        "value": "bbq",
+        "label": "Barbacoa",
+        "icon": "🍖",
+        "category": "comfort"
+      },
+      {
+        "value": "mountain-view",
+        "label": "Vistas a la montaña",
+        "icon": "🏔️",
+        "category": "comfort"
+      }
+    ],
+    "host": {
+      "id": "host-001",
+      "name": "María González",
+      "avatar": "https://i.pravatar.cc/150?img=45",
+      "joinedDate": "2019-03-15",
+      "responseRate": 98,
+      "responseTime": "dentro de 1 hora",
+      "isSuperhost": true,
+      "totalListings": 3
+    },
+    "reviewSummary": {
+      "overall": 4.8,
+      "cleanliness": 4.9,
+      "location": 4.7,
+      "valueForMoney": 4.6,
+      "service": 4.9,
+      "facilities": 4.8,
+      "totalReviews": 87
+    },
+    "relatedLodgings": [
+      {
+        "id": "hotel-montarto-suites",
+        "name": "Hotel Montarto Suites",
+        "type": "hotel",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+        "location": "Baqueira, Valle de Arán",
+        "distanceToSlopes": 0.2,
+        "pricePerNight": 180,
+        "rating": 4.8,
+        "reviewsCount": 342,
+        "services": [
+          "wifi",
+          "parking",
+          "spa",
+          "pool",
+          "restaurant",
+          "ski-storage"
+        ],
+        "description": "Hotel boutique con acceso directo a pistas",
+        "hasOffer": true,
+        "offerPercentage": 15,
+        "freeCancellation": true,
+        "available": true,
+        "capacity": 2,
+        "checkIn": "14:00",
+        "checkOut": "12:00",
+        "policies": [],
+        "nearbyAttractions": [],
+        "cancellationPolicy": "Cancelación gratuita 24h antes"
+      },
+      {
+        "id": "apartamentos-valle-nevado",
+        "name": "Apartamentos Valle Nevado",
+        "type": "apartment",
+        "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+        "location": "Vielha, Valle de Arán",
+        "distanceToSlopes": 1.5,
+        "pricePerNight": 95,
+        "rating": 4.5,
+        "reviewsCount": 128,
+        "services": ["wifi", "parking", "ski-storage"],
+        "description": "Apartamentos modernos con cocina equipada",
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true,
+        "capacity": 4,
+        "checkIn": "16:00",
+        "checkOut": "10:00",
+        "policies": [],
+        "nearbyAttractions": [],
+        "cancellationPolicy": "Cancelación gratuita 48h antes"
+      },
+      {
+        "id": "casa-montana-aurora",
+        "name": "Casa de Montaña Aurora",
+        "type": "rural",
+        "image": "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
+        "location": "Unha, Valle de Arán",
+        "distanceToSlopes": 6.0,
+        "pricePerNight": 75,
+        "rating": 4.4,
+        "reviewsCount": 52,
+        "services": ["wifi", "parking", "pets", "restaurant"],
+        "description": "Casa rural con encanto en pueblo de montaña",
+        "hasOffer": false,
+        "freeCancellation": true,
+        "available": true,
+        "capacity": 6,
+        "checkIn": "15:00",
+        "checkOut": "11:00",
+        "policies": [],
+        "nearbyAttractions": [],
+        "cancellationPolicy": "Cancelación gratuita 7 días antes"
+      }
+    ]
+  },
+  "meta": {
+    "timestamp": "2025-10-02T10:00:00Z",
+    "version": "1.0"
+  }
+}

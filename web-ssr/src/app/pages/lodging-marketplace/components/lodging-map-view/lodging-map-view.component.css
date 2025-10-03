@@ -1,0 +1,137 @@
+/* Lodging Map View Styles */
+
+/* Fade in animation for popup */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Bounce animation for active marker */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+/* Marker hover effect */
+.pointer-events-auto.cursor-pointer {
+  transition: all 0.2s ease;
+}
+
+.pointer-events-auto.cursor-pointer:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  z-index: 10;
+}
+
+/* Popup styles */
+.absolute.bottom-full {
+  pointer-events: none;
+}
+
+/* Map controls */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Legend animation */
+.absolute.bottom-4.left-4 {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Results counter animation */
+.absolute.top-4.left-4 {
+  animation: slideInDown 0.5s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Marker pulse effect */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Gradient background animation */
+.bg-gradient-to-br {
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .w-64 {
+    width: 12rem;
+  }
+
+  .absolute.bottom-4.left-4 {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.5rem;
+  }
+
+  .absolute.top-4.left-4 {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+}

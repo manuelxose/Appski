@@ -1,0 +1,103 @@
+/* Article Content Component Styles */
+
+/* Content Animations */
+.article-content > * {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+h2,
+h3,
+h4 {
+  scroll-margin-top: 6rem;
+}
+
+/* Images */
+figure img {
+  transition: transform 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.02);
+}
+
+/* Blockquote */
+blockquote {
+  animation: slideInLeft 0.6s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Lists */
+ul li {
+  transition: all 0.2s ease;
+}
+
+ul li:hover {
+  color: var(--teal-700);
+  transform: translateX(4px);
+}
+
+/* Tip Box */
+.bg-gradient-to-r {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.98;
+  }
+}
+
+/* Typography Improvements */
+.article-content {
+  line-height: 1.8;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 1rem;
+  }
+}

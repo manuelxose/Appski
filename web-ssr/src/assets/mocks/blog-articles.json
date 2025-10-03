@@ -1,0 +1,436 @@
+[
+  {
+    "id": "art-001",
+    "slug": "mejores-estaciones-esqui-espana-2025",
+    "status": "published",
+    "visibility": "public",
+    "format": "standard",
+    "title": {
+      "es": "Las Mejores Estaciones de Esquí en España para 2025",
+      "en": "The Best Ski Resorts in Spain for 2025",
+      "fr": "Les Meilleures Stations de Ski en Espagne pour 2025"
+    },
+    "excerpt": {
+      "es": "Descubre las estaciones de esquí españolas que marcarán tendencia esta temporada con sus nuevas instalaciones y pistas mejoradas.",
+      "en": "Discover the Spanish ski resorts that will set trends this season with their new facilities and improved slopes.",
+      "fr": "Découvrez les stations de ski espagnoles qui feront tendance cette saison avec leurs nouvelles installations et pistes améliorées."
+    },
+    "content": {
+      "es": "<h2>Las joyas de la nieve española</h2><p>España cuenta con algunas de las mejores estaciones de esquí de Europa, y la temporada 2025 promete ser excepcional. Desde los Pirineos hasta Sierra Nevada, estas son las estaciones que no puedes perderte.</p><h3>1. Baqueira Beret - Valle de Arán</h3><p>Con sus 160 km de pistas y una calidad de nieve excepcional, Baqueira se mantiene como la estación de referencia en España. Este año han ampliado el dominio esquiable con 2 nuevos remontes y 5 pistas adicionales.</p><h3>2. Sierra Nevada - Granada</h3><p>La estación más meridional de Europa ofrece una experiencia única: esquiar con vistas al Mediterráneo. Sus 110 km de pistas y el excelente clima la convierten en un destino imprescindible.</p>",
+      "en": "<h2>The jewels of Spanish snow</h2><p>Spain has some of the best ski resorts in Europe, and the 2025 season promises to be exceptional. From the Pyrenees to Sierra Nevada, these are the resorts you can't miss.</p><h3>1. Baqueira Beret - Aran Valley</h3><p>With its 160 km of slopes and exceptional snow quality, Baqueira remains the reference resort in Spain. This year they have expanded the skiable domain with 2 new lifts and 5 additional slopes.</p>",
+      "fr": "<h2>Les joyaux de la neige espagnole</h2><p>L'Espagne possède certaines des meilleures stations de ski d'Europe, et la saison 2025 promet d'être exceptionnelle. Des Pyrénées à la Sierra Nevada, voici les stations à ne pas manquer.</p><h3>1. Baqueira Beret - Vallée d'Aran</h3><p>Avec ses 160 km de pistes et une qualité de neige exceptionnelle, Baqueira reste la station de référence en Espagne. Cette année, ils ont élargi le domaine skiable avec 2 nouvelles remontées et 5 pistes supplémentaires.</p>"
+    },
+    "featuredImage": {
+      "url": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200",
+      "alt": "Vista panorámica de estación de esquí en los Pirineos",
+      "caption": "Baqueira Beret, la joya de los Pirineos"
+    },
+    "author": {
+      "id": "author-002",
+      "name": "María González",
+      "slug": "maria-gonzalez",
+      "email": "maria.gonzalez@nieveplatform.com",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "bio": {
+        "es": "Periodista especializada en deportes de invierno y viajes.",
+        "en": "Journalist specialized in winter sports and travel.",
+        "fr": "Journaliste spécialisée dans les sports d'hiver et les voyages."
+      },
+      "role": "Redactora Senior",
+      "social": {
+        "twitter": "@mariagonzalez_snow",
+        "instagram": "@maria.snow.travels"
+      },
+      "stats": {
+        "totalArticles": 62,
+        "totalViews": 178900,
+        "totalLikes": 12350
+      }
+    },
+    "categories": [
+      {
+        "id": "cat-004",
+        "slug": "estaciones",
+        "name": {
+          "es": "Estaciones",
+          "en": "Resorts",
+          "fr": "Stations"
+        },
+        "description": {
+          "es": "Reseñas y análisis de estaciones de esquí",
+          "en": "Reviews and analysis of ski resorts",
+          "fr": "Critiques et analyses des stations de ski"
+        },
+        "color": "#8B5CF6",
+        "icon": "⛷️",
+        "articleCount": 15
+      },
+      {
+        "id": "cat-007",
+        "slug": "viajes",
+        "name": {
+          "es": "Viajes",
+          "en": "Travel",
+          "fr": "Voyages"
+        },
+        "description": {
+          "es": "Destinos, rutas y experiencias de viaje",
+          "en": "Destinations, routes and travel experiences",
+          "fr": "Destinations, itinéraires et expériences de voyage"
+        },
+        "color": "#06B6D4",
+        "icon": "✈️",
+        "articleCount": 19
+      }
+    ],
+    "tags": [
+      {
+        "id": "tag-001",
+        "slug": "baqueira",
+        "name": "Baqueira",
+        "articleCount": 12
+      },
+      {
+        "id": "tag-002",
+        "slug": "sierra-nevada",
+        "name": "Sierra Nevada",
+        "articleCount": 18
+      },
+      {
+        "id": "tag-003",
+        "slug": "pirineos",
+        "name": "Pirineos",
+        "articleCount": 24
+      }
+    ],
+    "seo": {
+      "metaTitle": {
+        "es": "Mejores Estaciones de Esquí España 2025 | Guía Completa",
+        "en": "Best Ski Resorts Spain 2025 | Complete Guide",
+        "fr": "Meilleures Stations Ski Espagne 2025 | Guide Complet"
+      },
+      "metaDescription": {
+        "es": "Descubre las mejores estaciones de esquí en España para 2025. Análisis completo de Baqueira, Sierra Nevada, Formigal y más con precios, pistas y servicios.",
+        "en": "Discover the best ski resorts in Spain for 2025. Complete analysis of Baqueira, Sierra Nevada, Formigal and more with prices, slopes and services.",
+        "fr": "Découvrez les meilleures stations de ski en Espagne pour 2025. Analyse complète de Baqueira, Sierra Nevada, Formigal et plus avec prix, pistes et services."
+      },
+      "keywords": [
+        "esquí españa",
+        "estaciones esquí",
+        "Baqueira",
+        "Sierra Nevada",
+        "Pirineos",
+        "esquí 2025"
+      ],
+      "ogImage": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200",
+      "canonical": "https://nieveplatform.com/blog/mejores-estaciones-esqui-espana-2025",
+      "noindex": false,
+      "nofollow": false
+    },
+    "publishedAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-20T14:30:00Z",
+    "createdAt": "2025-01-10T09:00:00Z",
+    "stats": {
+      "views": 15430,
+      "likes": 892,
+      "shares": 234,
+      "comments": 67,
+      "readingTime": 8,
+      "avgTimeOnPage": 245
+    },
+    "allowComments": true,
+    "featured": true,
+    "sticky": true
+  },
+  {
+    "id": "art-002",
+    "slug": "guia-completa-elegir-esquis-2025",
+    "status": "published",
+    "visibility": "public",
+    "format": "standard",
+    "title": {
+      "es": "Guía Completa para Elegir tus Esquís en 2025",
+      "en": "Complete Guide to Choosing Your Skis in 2025",
+      "fr": "Guide Complet pour Choisir vos Skis en 2025"
+    },
+    "excerpt": {
+      "es": "Todo lo que necesitas saber para elegir los esquís perfectos según tu nivel, estilo y el terreno donde vas a esquiar.",
+      "en": "Everything you need to know to choose the perfect skis according to your level, style and the terrain where you will ski.",
+      "fr": "Tout ce que vous devez savoir pour choisir les skis parfaits selon votre niveau, style et le terrain où vous allez skier."
+    },
+    "content": {
+      "es": "<h2>Cómo elegir los esquís perfectos</h2><p>Elegir los esquís adecuados puede marcar la diferencia entre una experiencia frustrante y una temporada inolvidable. Esta guía te ayudará a tomar la mejor decisión.</p><h3>Tipos de esquís según tu nivel</h3><p><strong>Principiantes:</strong> Esquís más cortos y flexibles que facilitan los giros. Busca modelos con un radio de giro de 12-14 metros.</p><p><strong>Intermedios:</strong> Esquís all-mountain versátiles que funcionan bien en pistas y fuera de ellas. Radio de giro 14-18 metros.</p><p><strong>Avanzados:</strong> Esquís más rígidos y largos para mayor velocidad y estabilidad. Radio de giro 18-25 metros.</p><h3>Anchura del esquí</h3><ul><li>Pista: 70-85mm bajo el pie</li><li>All-Mountain: 85-100mm</li><li>Freeride: 100-120mm+</li></ul>",
+      "en": "<h2>How to choose the perfect skis</h2><p>Choosing the right skis can make the difference between a frustrating experience and an unforgettable season. This guide will help you make the best decision.</p><h3>Types of skis according to your level</h3><p><strong>Beginners:</strong> Shorter and more flexible skis that facilitate turns. Look for models with a turn radius of 12-14 meters.</p>",
+      "fr": "<h2>Comment choisir les skis parfaits</h2><p>Choisir les bons skis peut faire la différence entre une expérience frustrante et une saison inoubliable. Ce guide vous aidera à prendre la meilleure décision.</p><h3>Types de skis selon votre niveau</h3><p><strong>Débutants:</strong> Skis plus courts et plus flexibles qui facilitent les virages. Cherchez des modèles avec un rayon de virage de 12-14 mètres.</p>"
+    },
+    "featuredImage": {
+      "url": "https://images.unsplash.com/photo-1498146831523-fbe41acdc5ad?w=1200",
+      "alt": "Esquís de diferentes tipos sobre la nieve",
+      "caption": "Variedad de esquís para diferentes estilos"
+    },
+    "author": {
+      "id": "author-003",
+      "name": "Javier Ruiz",
+      "slug": "javier-ruiz",
+      "email": "javier.ruiz@nieveplatform.com",
+      "avatar": "https://i.pravatar.cc/150?img=33",
+      "bio": {
+        "es": "Experto en equipamiento de esquí y snowboard.",
+        "en": "Expert in ski and snowboard equipment.",
+        "fr": "Expert en équipement de ski et snowboard."
+      },
+      "role": "Especialista en Equipamiento",
+      "social": {
+        "twitter": "@javierruiz_gear",
+        "instagram": "@javi.ski.gear"
+      },
+      "stats": {
+        "totalArticles": 35,
+        "totalViews": 94200,
+        "totalLikes": 6780
+      }
+    },
+    "categories": [
+      {
+        "id": "cat-002",
+        "slug": "guias",
+        "name": {
+          "es": "Guías",
+          "en": "Guides",
+          "fr": "Guides"
+        },
+        "description": {
+          "es": "Guías completas para esquiadores de todos los niveles",
+          "en": "Complete guides for skiers of all levels",
+          "fr": "Guides complets pour les skieurs de tous niveaux"
+        },
+        "color": "#10B981",
+        "icon": "📚",
+        "articleCount": 18
+      },
+      {
+        "id": "cat-005",
+        "slug": "equipamiento",
+        "name": {
+          "es": "Equipamiento",
+          "en": "Equipment",
+          "fr": "Équipement"
+        },
+        "description": {
+          "es": "Reviews de material y equipamiento de esquí",
+          "en": "Reviews of ski gear and equipment",
+          "fr": "Critiques de matériel et équipement de ski"
+        },
+        "color": "#EC4899",
+        "icon": "🎿",
+        "articleCount": 27
+      }
+    ],
+    "tags": [
+      {
+        "id": "tag-004",
+        "slug": "equipamiento",
+        "name": "Equipamiento",
+        "articleCount": 45
+      },
+      {
+        "id": "tag-005",
+        "slug": "esquis",
+        "name": "Esquís",
+        "articleCount": 32
+      },
+      {
+        "id": "tag-006",
+        "slug": "guia-compra",
+        "name": "Guía de Compra",
+        "articleCount": 28
+      }
+    ],
+    "seo": {
+      "metaTitle": {
+        "es": "Cómo Elegir Esquís 2025 | Guía Completa para Principiantes y Expertos",
+        "en": "How to Choose Skis 2025 | Complete Guide for Beginners and Experts",
+        "fr": "Comment Choisir des Skis 2025 | Guide Complet pour Débutants et Experts"
+      },
+      "metaDescription": {
+        "es": "Guía definitiva para elegir esquís en 2025. Aprende sobre tipos, medidas, anchuras y marcas según tu nivel y estilo de esquí.",
+        "en": "Definitive guide to choosing skis in 2025. Learn about types, sizes, widths and brands according to your level and skiing style.",
+        "fr": "Guide définitif pour choisir des skis en 2025. Apprenez les types, tailles, largeurs et marques selon votre niveau et style de ski."
+      },
+      "keywords": [
+        "elegir esquís",
+        "comprar esquís",
+        "tipos de esquís",
+        "guía esquís 2025",
+        "esquís principiantes",
+        "esquís avanzados"
+      ],
+      "ogImage": "https://images.unsplash.com/photo-1498146831523-fbe41acdc5ad?w=1200",
+      "noindex": false,
+      "nofollow": false
+    },
+    "publishedAt": "2025-02-01T08:30:00Z",
+    "updatedAt": "2025-02-05T16:20:00Z",
+    "createdAt": "2025-01-28T10:00:00Z",
+    "stats": {
+      "views": 12890,
+      "likes": 756,
+      "shares": 189,
+      "comments": 54,
+      "readingTime": 10,
+      "avgTimeOnPage": 312
+    },
+    "allowComments": true,
+    "featured": true,
+    "sticky": false
+  },
+  {
+    "id": "art-003",
+    "slug": "seguridad-avalanchas-guia-esencial",
+    "status": "published",
+    "visibility": "public",
+    "format": "standard",
+    "title": {
+      "es": "Seguridad en Avalanchas: Guía Esencial para Esquí Fuera de Pista",
+      "en": "Avalanche Safety: Essential Guide for Off-Piste Skiing",
+      "fr": "Sécurité Avalanches: Guide Essentiel pour le Ski Hors-Piste"
+    },
+    "excerpt": {
+      "es": "Aprende todo sobre seguridad en avalanchas: equipamiento ARVA, técnicas de rescate y cómo evaluar el riesgo antes de salir a esquiar fuera de pista.",
+      "en": "Learn everything about avalanche safety: ARVA equipment, rescue techniques and how to assess risk before going off-piste skiing.",
+      "fr": "Apprenez tout sur la sécurité avalanche: équipement ARVA, techniques de sauvetage et comment évaluer le risque avant de skier hors-piste."
+    },
+    "content": {
+      "es": "<h2>Seguridad ante avalanchas: lo que puede salvarte la vida</h2><p>El esquí fuera de pista ofrece emociones únicas, pero también conlleva riesgos que debemos conocer y minimizar.</p><h3>Equipamiento básico obligatorio</h3><ul><li><strong>ARVA (DVA):</strong> Detector de víctimas de avalancha. Llévalo siempre puesto y con baterías nuevas.</li><li><strong>Pala:</strong> Para excavar la nieve compactada. Busca modelos de aluminio resistentes.</li><li><strong>Sonda:</strong> Mínimo 240cm para localizar víctimas enterradas.</li><li><strong>Airbag:</strong> Aumenta significativamente las probabilidades de supervivencia.</li></ul><h3>Formación necesaria</h3><p>Nunca salgas fuera de pista sin haber realizado un curso de seguridad en avalanchas. Estos cursos te enseñan:</p><ul><li>Lectura del boletín de peligro de aludes</li><li>Evaluación del terreno y del manto nivoso</li><li>Técnicas de rescate y búsqueda</li><li>Primeros auxilios en montaña</li></ul>",
+      "en": "<h2>Avalanche safety: what can save your life</h2><p>Off-piste skiing offers unique thrills, but also carries risks that we must know and minimize.</p><h3>Mandatory basic equipment</h3><ul><li><strong>ARVA (Avalanche Beacon):</strong> Always wear it and use new batteries.</li><li><strong>Shovel:</strong> For digging compacted snow. Look for strong aluminum models.</li><li><strong>Probe:</strong> Minimum 240cm to locate buried victims.</li><li><strong>Airbag:</strong> Significantly increases survival chances.</li></ul>",
+      "fr": "<h2>Sécurité avalanche: ce qui peut vous sauver la vie</h2><p>Le ski hors-piste offre des sensations uniques, mais comporte aussi des risques que nous devons connaître et minimiser.</p><h3>Équipement de base obligatoire</h3><ul><li><strong>ARVA (DVA):</strong> Détecteur de victimes d'avalanche. Portez-le toujours avec des piles neuves.</li><li><strong>Pelle:</strong> Pour creuser la neige compactée. Cherchez des modèles en aluminium résistants.</li><li><strong>Sonde:</strong> Minimum 240cm pour localiser les victimes ensevelies.</li><li><strong>Airbag:</strong> Augmente significativement les chances de survie.</li></ul>"
+    },
+    "featuredImage": {
+      "url": "https://images.unsplash.com/photo-1484759168984-bbf6f8f1eca6?w=1200",
+      "alt": "Esquiadores con equipamiento de seguridad ARVA",
+      "caption": "Equipamiento ARVA esencial para fuera de pista"
+    },
+    "author": {
+      "id": "author-005",
+      "name": "David López",
+      "slug": "david-lopez",
+      "email": "david.lopez@nieveplatform.com",
+      "avatar": "https://i.pravatar.cc/150?img=15",
+      "bio": {
+        "es": "Guía de montaña certificado y experto en seguridad avalanchas.",
+        "en": "Certified mountain guide and avalanche safety expert.",
+        "fr": "Guide de montagne certifié et expert en sécurité avalanche."
+      },
+      "role": "Especialista en Seguridad",
+      "social": {
+        "linkedin": "david-lopez-mountain-guide",
+        "instagram": "@david.mountain.guide"
+      },
+      "stats": {
+        "totalArticles": 41,
+        "totalViews": 112500,
+        "totalLikes": 9840
+      }
+    },
+    "categories": [
+      {
+        "id": "cat-002",
+        "slug": "guias",
+        "name": {
+          "es": "Guías",
+          "en": "Guides",
+          "fr": "Guides"
+        },
+        "description": {
+          "es": "Guías completas para esquiadores de todos los niveles",
+          "en": "Complete guides for skiers of all levels",
+          "fr": "Guides complets pour les skieurs de tous niveaux"
+        },
+        "color": "#10B981",
+        "icon": "📚",
+        "articleCount": 18
+      },
+      {
+        "id": "cat-003",
+        "slug": "consejos",
+        "name": {
+          "es": "Consejos",
+          "en": "Tips",
+          "fr": "Conseils"
+        },
+        "description": {
+          "es": "Consejos prácticos y trucos para mejorar tu técnica",
+          "en": "Practical tips and tricks to improve your technique",
+          "fr": "Conseils pratiques et astuces pour améliorer votre technique"
+        },
+        "color": "#F59E0B",
+        "icon": "💡",
+        "articleCount": 32
+      }
+    ],
+    "tags": [
+      {
+        "id": "tag-007",
+        "slug": "seguridad",
+        "name": "Seguridad",
+        "articleCount": 38
+      },
+      {
+        "id": "tag-008",
+        "slug": "avalanchas",
+        "name": "Avalanchas",
+        "articleCount": 15
+      },
+      {
+        "id": "tag-009",
+        "slug": "fuera-de-pista",
+        "name": "Fuera de Pista",
+        "articleCount": 22
+      },
+      {
+        "id": "tag-010",
+        "slug": "arva",
+        "name": "ARVA",
+        "articleCount": 12
+      }
+    ],
+    "seo": {
+      "metaTitle": {
+        "es": "Seguridad Avalanchas | Guía Completa ARVA y Equipamiento",
+        "en": "Avalanche Safety | Complete ARVA and Equipment Guide",
+        "fr": "Sécurité Avalanches | Guide Complet ARVA et Équipement"
+      },
+      "metaDescription": {
+        "es": "Guía completa de seguridad en avalanchas: uso de ARVA, pala y sonda, técnicas de rescate y cómo evaluar el riesgo antes de esquiar fuera de pista.",
+        "en": "Complete avalanche safety guide: using ARVA, shovel and probe, rescue techniques and how to assess risk before off-piste skiing.",
+        "fr": "Guide complet de sécurité avalanche: utilisation ARVA, pelle et sonde, techniques de sauvetage et évaluation du risque avant ski hors-piste."
+      },
+      "keywords": [
+        "seguridad avalanchas",
+        "ARVA",
+        "DVA",
+        "equipamiento avalanchas",
+        "rescate avalanchas",
+        "fuera de pista",
+        "esquí travesía"
+      ],
+      "ogImage": "https://images.unsplash.com/photo-1484759168984-bbf6f8f1eca6?w=1200",
+      "noindex": false,
+      "nofollow": false
+    },
+    "publishedAt": "2024-12-10T07:00:00Z",
+    "updatedAt": "2025-01-05T11:45:00Z",
+    "createdAt": "2024-12-05T09:30:00Z",
+    "stats": {
+      "views": 22340,
+      "likes": 1456,
+      "shares": 567,
+      "comments": 89,
+      "readingTime": 12,
+      "avgTimeOnPage": 398
+    },
+    "allowComments": true,
+    "featured": true,
+    "sticky": false
+  }
+]

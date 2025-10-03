@@ -1,0 +1,144 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+/* Sizes */
+.badge-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+.badge-md {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.badge-lg {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Variants */
+.badge-primary {
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border: 1px solid var(--primary-200);
+}
+
+.badge-secondary {
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-200);
+}
+
+.badge-success {
+  background: var(--green-50);
+  color: var(--green-700);
+  border: 1px solid var(--green-200);
+}
+
+.badge-warning {
+  background: var(--yellow-50);
+  color: var(--yellow-700);
+  border: 1px solid var(--yellow-200);
+}
+
+.badge-danger {
+  background: var(--red-50);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.badge-info {
+  background: var(--blue-50);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-200);
+}
+
+.badge-neutral {
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-300);
+}
+
+/* Dot */
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge-primary .badge-dot {
+  background: var(--primary-500);
+}
+
+.badge-success .badge-dot {
+  background: var(--green-500);
+}
+
+.badge-warning .badge-dot {
+  background: var(--yellow-500);
+}
+
+.badge-danger .badge-dot {
+  background: var(--red-500);
+}
+
+.badge-info .badge-dot {
+  background: var(--blue-500);
+}
+
+.badge-neutral .badge-dot {
+  background: var(--neutral-500);
+}
+
+/* Pulse Animation */
+.badge-pulse .badge-dot {
+  position: relative;
+}
+
+.badge-pulse .badge-dot::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.6;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+/* Icon */
+.badge-icon {
+  font-size: 1em;
+  line-height: 1;
+}
+
+.badge-text {
+  line-height: 1;
+}
+
+/* Hover effects */
+.badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

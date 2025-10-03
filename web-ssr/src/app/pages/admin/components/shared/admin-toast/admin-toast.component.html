@@ -1,0 +1,25 @@
+<div class="toast-container">
+  @for (toast of visibleToasts(); track toast.id) {
+  <div class="toast toast-{{ toast.type }}" role="alert" [@slideIn]>
+    <div class="toast-icon">
+      {{ toast.icon }}
+    </div>
+
+    <div class="toast-content">
+      <div class="toast-title">{{ toast.title }}</div>
+      @if (toast.message) {
+      <div class="toast-message">{{ toast.message }}</div>
+      }
+    </div>
+
+    <button
+      class="toast-close"
+      (click)="dismiss(toast.id)"
+      type="button"
+      aria-label="Cerrar"
+    >
+      ✕
+    </button>
+  </div>
+  }
+</div>

@@ -1,0 +1,76 @@
+/* ============================================
+   LODGING CAROUSEL CARD - PREMIUM DESIGN
+   ============================================ */
+
+.lodging-carousel-card {
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.lodging-carousel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-500), #ec4899);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease-spring);
+  z-index: 10;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+}
+
+.lodging-carousel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3),
+    0 10px 20px -10px rgba(236, 72, 153, 0.2);
+  border-color: var(--accent-200);
+}
+
+.lodging-carousel-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Line clamp utility */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Star animation on hover */
+.lodging-carousel-card:hover .text-yellow-400 {
+  animation: starTwinkle 0.5s ease-in-out;
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Service icon hover */
+.lodging-carousel-card [title] {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lodging-carousel-card:hover [title] {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lodging-carousel-card:hover {
+    transform: translateY(-4px);
+  }
+}

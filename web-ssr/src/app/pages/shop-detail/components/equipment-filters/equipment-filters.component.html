@@ -1,0 +1,71 @@
+<aside class="filters-container">
+  <!-- Header -->
+  <div class="filters-header">
+    <h2 class="filters-title">Filtros</h2>
+    <div class="total-count">
+      <span class="count-badge">{{ totalCount() }}</span>
+      <span class="count-label">productos</span>
+    </div>
+  </div>
+
+  <!-- Offer Type Toggle -->
+  <div class="filter-section">
+    <h3 class="section-title">Tipo de oferta</h3>
+    <div class="toggle-group">
+      <button
+        type="button"
+        class="toggle-btn"
+        [class.active]="offerType() === 'rental'"
+        (click)="onOfferTypeClick('rental')"
+      >
+        <span class="material-icons">event_available</span>
+        <span>Alquiler</span>
+      </button>
+      <button
+        type="button"
+        class="toggle-btn"
+        [class.active]="offerType() === 'sale'"
+        (click)="onOfferTypeClick('sale')"
+      >
+        <span class="material-icons">shopping_cart</span>
+        <span>Compra</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Category Filters -->
+  <div class="filter-section">
+    <h3 class="section-title">Categorías</h3>
+    <div class="category-list">
+      @for (category of categories(); track category) {
+      <button
+        type="button"
+        class="category-btn"
+        [class.active]="selectedCategory() === category"
+        (click)="onCategoryClick(category)"
+      >
+        <span class="category-icon material-icons">{{
+          getCategoryIcon(category)
+        }}</span>
+        <span class="category-label">{{ getCategoryLabel(category) }}</span>
+        <span class="category-count">{{ getCategoryCount()(category) }}</span>
+      </button>
+      }
+    </div>
+  </div>
+
+  <!-- Availability Filter -->
+  <div class="filter-section">
+    <h3 class="section-title">Disponibilidad</h3>
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        [checked]="showOnlyAvailable()"
+        (change)="onAvailabilityChange()"
+        class="checkbox-input"
+      />
+      <span class="checkbox-custom"></span>
+      <span class="checkbox-text">Solo disponibles</span>
+    </label>
+  </div>
+</aside>

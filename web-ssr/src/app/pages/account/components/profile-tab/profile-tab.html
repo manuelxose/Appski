@@ -1,0 +1,408 @@
+<!-- Profile Tab - Enhanced with Instagram/Apple Style -->
+<div class="profile-tab">
+  <!-- Success/Error Messages -->
+  @if (successMessage()) {
+  <div class="alert-success">
+    <div class="alert-icon">✅</div>
+    <p>{{ successMessage() }}</p>
+  </div>
+  } @if (errorMessage()) {
+  <div class="alert-error">
+    <div class="alert-icon">⚠️</div>
+    <p>{{ errorMessage() }}</p>
+  </div>
+  }
+
+  <!-- PROFILE CARD (Main) -->
+  <div class="profile-card">
+    <!-- Banner Section -->
+    <div class="banner-section">
+      <img
+        [src]="bannerUrl() || 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1200&h=300&fit=crop'"
+        alt="Banner de perfil"
+        class="banner-image"
+      />
+      <div class="banner-overlay"></div>
+      <button
+        (click)="triggerBannerUpload()"
+        class="change-banner-btn"
+        title="Cambiar banner"
+      >
+        <span class="btn-icon">🖼️</span>
+        <span class="btn-text">Cambiar portada</span>
+      </button>
+      <input
+        #bannerInput
+        type="file"
+        accept="image/*"
+        (change)="onBannerChange($event)"
+        class="hidden-input"
+      />
+    </div>
+
+    <!-- Avatar + User Info Grid -->
+    <div class="profile-header">
+      <div class="header-grid">
+        <!-- LEFT: Avatar -->
+        <div class="avatar-column">
+          <div
+            class="avatar-wrapper"
+            role="button"
+            tabindex="0"
+            (click)="triggerAvatarUpload()"
+            (keyup.enter)="triggerAvatarUpload()"
+            (keyup.space)="triggerAvatarUpload()"
+          >
+            <img
+              [src]="avatarUrl() || user()?.avatar || 'https://i.pravatar.cc/150?img=5'"
+              [alt]="user()?.name || 'Usuario'"
+              class="avatar-img"
+            />
+            <div class="avatar-overlay">
+              <span class="camera-icon">📷</span>
+              <span class="change-text">Cambiar</span>
+            </div>
+          </div>
+          <input
+            #avatarInput
+            type="file"
+            accept="image/*"
+            (change)="onAvatarChange($event)"
+            class="hidden-input"
+          />
+
+          <!-- Premium Badge (if premium) -->
+          @if (user()?.isPremium) {
+          <div class="premium-badge-float">
+            <span>⭐</span>
+          </div>
+          }
+        </div>
+
+        <!-- RIGHT: User Info + Stats -->
+        <div class="info-column">
+          <!-- Name + Premium Tag -->
+          <div class="user-header">
+            <h1 class="user-name">{{ user()?.name || "Usuario" }}</h1>
+            @if (user()?.isPremium) {
+            <span class="premium-tag">👑 Premium</span>
+            } @else {
+            <button routerLink="/premium" class="upgrade-btn">
+              Mejorar a Premium
+            </button>
+            }
+          </div>
+
+          <!-- Email -->
+          <p class="user-email">{{ user()?.email }}</p>
+
+          <!-- Stats Row (4 stats) -->
+          <div class="stats-row">
+            <div class="stat-card">
+              <span class="stat-icon">📍</span>
+              <div class="stat-content">
+                <span class="stat-label">Ubicación</span>
+                <span class="stat-value"
+                  >{{ user()?.location || "No especificada" }}</span
+                >
+              </div>
+            </div>
+
+            @if (age(); as userAge) {
+            <div class="stat-card">
+              <span class="stat-icon">🎂</span>
+              <div class="stat-content">
+                <span class="stat-label">Edad</span>
+                <span class="stat-value">{{ userAge }} años</span>
+              </div>
+            </div>
+            }
+
+            <div class="stat-card">
+              <span class="stat-icon">👥</span>
+              <div class="stat-content">
+                <span class="stat-label">Amigos</span>
+                <span class="stat-value">{{ totalFriends() }}</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon">📅</span>
+              <div class="stat-content">
+                <span class="stat-label">Miembro</span>
+                <span class="stat-value">{{ memberYears() }} años</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          @if (user()?.bio) {
+          <p class="user-bio">{{ user()?.bio }}</p>
+          } @else {
+          <p class="user-bio-empty">
+            Sin biografía. Edita tu perfil para añadir una.
+          </p>
+          }
+
+          <!-- Edit Button -->
+          @if (!isEditing()) {
+          <button (click)="startEditing()" class="edit-profile-btn">
+            <span class="btn-icon">✏️</span>
+            Editar Perfil
+          </button>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT FORM (only shown when editing) -->
+    @if (isEditing()) {
+    <div class="edit-section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="title-icon">📝</span>
+          Editar Información Personal
+        </h3>
+      </div>
+
+      <form class="profile-form">
+        <!-- Name & Phone -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="user-name" class="field-label">
+              <span class="label-icon">👤</span>
+              Nombre completo
+            </label>
+            <input
+              id="user-name"
+              type="text"
+              [value]="formData().name"
+              (input)="updateFormField('name', $any($event.target).value)"
+              class="field-input"
+              placeholder="Tu nombre"
+            />
+          </div>
+          <div class="form-field">
+            <label for="user-phone" class="field-label">
+              <span class="label-icon">📱</span>
+              Teléfono
+            </label>
+            <input
+              id="user-phone"
+              type="tel"
+              [value]="formData().phone || ''"
+              (input)="updateFormField('phone', $any($event.target).value)"
+              class="field-input"
+              placeholder="+34 600 000 000"
+            />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-field">
+          <label for="user-email" class="field-label">
+            <span class="label-icon">✉️</span>
+            Correo electrónico
+          </label>
+          <input
+            id="user-email"
+            type="email"
+            [value]="formData().email"
+            (input)="updateFormField('email', $any($event.target).value)"
+            class="field-input"
+            placeholder="tu@email.com"
+          />
+        </div>
+
+        <!-- Location & Birth Date -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="user-location" class="field-label">
+              <span class="label-icon">📍</span>
+              Ubicación
+            </label>
+            <input
+              id="user-location"
+              type="text"
+              [value]="formData().location || ''"
+              (input)="updateFormField('location', $any($event.target).value)"
+              placeholder="Madrid, España"
+              class="field-input"
+            />
+          </div>
+          <div class="form-field">
+            <label for="user-birthdate" class="field-label">
+              <span class="label-icon">🎂</span>
+              Fecha de nacimiento
+            </label>
+            <input
+              id="user-birthdate"
+              type="date"
+              [value]="formData().birthDate || ''"
+              (input)="updateFormField('birthDate', $any($event.target).value)"
+              class="field-input"
+            />
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="form-field">
+          <label for="user-bio" class="field-label">
+            <span class="label-icon">💭</span>
+            Biografía
+          </label>
+          <textarea
+            id="user-bio"
+            rows="4"
+            [value]="formData().bio || ''"
+            (input)="updateFormField('bio', $any($event.target).value)"
+            placeholder="Cuéntanos sobre ti, tus experiencias en la nieve..."
+            class="field-textarea"
+          ></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="form-actions">
+          <button
+            type="button"
+            (click)="saveProfile()"
+            [disabled]="isSaving()"
+            class="action-btn save"
+          >
+            @if (isSaving()) {
+            <span class="btn-spinner"></span>
+            <span>Guardando...</span>
+            } @else {
+            <span class="btn-icon">💾</span>
+            <span>Guardar cambios</span>
+            }
+          </button>
+          <button
+            type="button"
+            (click)="cancelEditing()"
+            [disabled]="isSaving()"
+            class="action-btn cancel"
+          >
+            <span class="btn-icon">❌</span>
+            <span>Cancelar</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    }
+  </div>
+
+  <!-- ADDITIONAL INFO CARDS (Below main card) -->
+  <div class="additional-cards">
+    <!-- Skiing Stats Card -->
+    <div class="info-card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span class="card-icon">⛷️</span>
+          Estadísticas de Esquí
+        </h3>
+      </div>
+      <div class="card-content">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Nivel de habilidad</span>
+            <span class="info-value">
+              {{ getSkillLevelIcon(skillLevel()) }} {{
+              getSkillLevelLabel(skillLevel()) }}
+            </span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Días esquiados</span>
+            <span class="info-value">{{ skiDays() }} días</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Estilo favorito</span>
+            <span class="info-value">{{ favoriteStyle() }}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Grupos</span>
+            <span class="info-value">{{ totalGroups() }} grupos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Links Card -->
+    <div class="info-card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span class="card-icon">🔗</span>
+          Redes Sociales
+        </h3>
+      </div>
+      <div class="card-content">
+        <div class="social-links">
+          <div class="social-item">
+            <span class="social-icon">📷</span>
+            <input
+              type="text"
+              [value]="instagram()"
+              (input)="instagram.set($any($event.target).value)"
+              placeholder="@usuario"
+              class="social-input"
+            />
+          </div>
+          <div class="social-item">
+            <span class="social-icon">🐦</span>
+            <input
+              type="text"
+              [value]="twitter()"
+              (input)="twitter.set($any($event.target).value)"
+              placeholder="@usuario"
+              class="social-input"
+            />
+          </div>
+          <div class="social-item">
+            <span class="social-icon">🏃</span>
+            <input
+              type="text"
+              [value]="strava()"
+              (input)="strava.set($any($event.target).value)"
+              placeholder="Strava ID"
+              class="social-input"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member Info Card -->
+    <div class="info-card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span class="card-icon">👤</span>
+          Información de Membresía
+        </h3>
+      </div>
+      <div class="card-content">
+        <div class="member-info">
+          <div class="member-item">
+            <span class="member-icon">📅</span>
+            <div class="member-text">
+              <span class="member-label">Miembro desde</span>
+              <span class="member-value"
+                >{{ formatMemberSince(user()?.memberSince) }}</span
+              >
+            </div>
+          </div>
+          @if (user()?.premiumUntil) {
+          <div class="member-item premium">
+            <span class="member-icon">⭐</span>
+            <div class="member-text">
+              <span class="member-label">Premium hasta</span>
+              <span class="member-value"
+                >{{ formatDate(user()?.premiumUntil ?? '') }}</span
+              >
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<!-- Lodging Carousel Card - Premium Design -->
+<article
+  class="lodging-carousel-card w-72 md:w-80 bg-white rounded-2xl shadow-lg overflow-hidden flex-shrink-0 group"
+  [routerLink]="['/alojamiento', lodging().id]"
+>
+  <!-- Image Container -->
+  <div
+    class="relative h-48 md:h-56 overflow-hidden bg-gradient-to-br from-purple-50 to-pink-50"
+  >
+    <img
+      [src]="lodging().image"
+      [alt]="lodging().name"
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+
+    <!-- Type Badge -->
+    <div class="absolute top-3 left-3">
+      <div
+        class="px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-full shadow-md flex items-center gap-1.5"
+      >
+        <span class="text-base">{{ getTypeIcon(lodging().type) }}</span>
+        <span class="text-xs font-bold text-slate-700">{{
+          getTypeLabel(lodging().type)
+        }}</span>
+      </div>
+    </div>
+
+    <!-- Offer Badge -->
+    @if (lodging().hasOffer && lodging().offerPercentage) {
+    <div class="absolute top-3 right-3">
+      <div
+        class="px-3 py-1.5 bg-red-500 text-white text-xs font-bold rounded-full shadow-lg"
+      >
+        -{{ lodging().offerPercentage }}%
+      </div>
+    </div>
+    }
+
+    <!-- Free Cancellation Badge -->
+    @if (lodging().freeCancellation) {
+    <div class="absolute bottom-3 left-3">
+      <div
+        class="px-3 py-1.5 bg-green-500 text-white text-xs font-bold rounded-full shadow-md flex items-center gap-1"
+      >
+        <span>✓</span>
+        <span>Cancelación gratis</span>
+      </div>
+    </div>
+    }
+
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    ></div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-5">
+    <!-- Title and Location -->
+    <div class="mb-3">
+      <h3
+        class="text-lg font-bold text-slate-900 mb-1.5 line-clamp-1 group-hover:text-purple-600 transition-colors"
+      >
+        {{ lodging().name }}
+      </h3>
+      <div class="flex items-center gap-2 text-sm text-slate-600 mb-1">
+        <svg
+          class="w-4 h-4 flex-shrink-0"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <span class="font-medium">{{ lodging().location }}</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-slate-600">
+        <span class="flex items-center gap-1">
+          <span class="text-base">⛷️</span>
+          <span class="font-semibold text-blue-600"
+            >{{ lodging().distanceToSlopes }}km</span
+          >
+          a {{ lodging().nearStation }}
+        </span>
+        <span class="flex items-center gap-1">
+          <span class="text-base">👥</span>
+          <span class="font-semibold">{{ lodging().capacity }} pers.</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Services (Top 3) -->
+    @if (lodging().topServices && lodging().topServices!.length > 0) {
+    <div class="flex gap-2 mb-3">
+      @for (service of lodging().topServices!.slice(0, 3); track service) {
+      <div class="px-2 py-1 bg-slate-100 rounded-lg text-sm" [title]="service">
+        {{ getServiceIcon(service) }}
+      </div>
+      }
+    </div>
+    }
+
+    <!-- Rating and Price Row -->
+    <div
+      class="flex items-center justify-between mb-4 pb-4 border-b border-slate-200"
+    >
+      <div class="flex items-center gap-2">
+        <div class="flex items-center">
+          @for (star of getStars(); track $index) { @if (star === 'full') {
+          <span class="text-yellow-400 text-sm">★</span>
+          } @else {
+          <span class="text-gray-300 text-sm">★</span>
+          } }
+        </div>
+        <span class="text-sm font-semibold text-slate-700">
+          {{ lodging().rating }}
+        </span>
+        <span class="text-xs text-slate-500">
+          ({{ lodging().reviewsCount }})
+        </span>
+      </div>
+    </div>
+
+    <!-- Price and CTA -->
+    <div class="flex items-end justify-between">
+      <div>
+        @if (lodging().hasOffer && lodging().offerPercentage) {
+        <div class="text-sm text-slate-500 line-through mb-0.5">
+          {{
+            lodging().pricePerNight *
+              (1 + (lodging().offerPercentage || 0) / 100) | number : "1.0-0"
+          }}€
+        </div>
+        }
+        <div class="flex items-baseline gap-1">
+          <span class="text-2xl font-black text-slate-900"
+            >{{ lodging().pricePerNight }}€</span
+          >
+          <span class="text-xs text-slate-600 font-medium">/noche</span>
+        </div>
+      </div>
+
+      <button
+        class="px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all shadow-md hover:shadow-lg group-hover:scale-105"
+      >
+        Ver detalles →
+      </button>
+    </div>
+  </div>
+</article>

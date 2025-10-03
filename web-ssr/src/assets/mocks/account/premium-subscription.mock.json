@@ -1,0 +1,183 @@
+{
+  "subscription": {
+    "id": "sub-12345",
+    "plan": "premium",
+    "status": "active",
+    "billingCycle": "yearly",
+    "price": 79.99,
+    "currency": "EUR",
+    "startDate": "2024-10-01T00:00:00Z",
+    "endDate": "2025-10-01T00:00:00Z",
+    "renewalDate": "2025-10-01T00:00:00Z",
+    "autoRenew": true,
+    "features": [
+      {
+        "name": "Alertas meteorológicas prioritarias",
+        "description": "Recibe notificaciones antes que los usuarios gratuitos",
+        "enabled": true,
+        "icon": "⚡"
+      },
+      {
+        "name": "Acceso a webcams HD",
+        "description": "Visualización en alta definición de todas las cámaras",
+        "enabled": true,
+        "icon": "📹"
+      },
+      {
+        "name": "Historial meteorológico extendido",
+        "description": "Acceso a datos históricos de hasta 5 años",
+        "enabled": true,
+        "icon": "📊"
+      },
+      {
+        "name": "Descuentos en forfaits",
+        "description": "Hasta 20% de descuento en pases de temporada",
+        "enabled": true,
+        "icon": "🎫"
+      },
+      {
+        "name": "Sin anuncios",
+        "description": "Experiencia sin publicidad",
+        "enabled": true,
+        "icon": "🚫"
+      },
+      {
+        "name": "Soporte prioritario",
+        "description": "Respuesta en menos de 24h",
+        "enabled": true,
+        "icon": "💬"
+      }
+    ],
+    "paymentMethod": {
+      "id": "pm-001",
+      "type": "card",
+      "last4": "4242",
+      "brand": "Visa",
+      "expiryMonth": 12,
+      "expiryYear": 2027,
+      "isDefault": true
+    }
+  },
+  "availablePlans": [
+    {
+      "plan": "free",
+      "name": "Gratis",
+      "price": 0,
+      "currency": "EUR",
+      "billingCycle": "monthly",
+      "description": "Acceso básico a información meteorológica",
+      "features": [
+        "Previsión de 3 días",
+        "Webcams en calidad estándar",
+        "Alertas básicas",
+        "Con anuncios"
+      ]
+    },
+    {
+      "plan": "basic",
+      "name": "Básico",
+      "price": 4.99,
+      "currency": "EUR",
+      "billingCycle": "monthly",
+      "description": "Para esquiadores ocasionales",
+      "features": [
+        "Previsión de 7 días",
+        "Webcams HD",
+        "Alertas meteorológicas",
+        "Sin anuncios",
+        "5% descuento en forfaits"
+      ]
+    },
+    {
+      "plan": "premium",
+      "name": "Premium",
+      "price": 7.99,
+      "currency": "EUR",
+      "billingCycle": "monthly",
+      "description": "Para esquiadores frecuentes",
+      "popular": true,
+      "features": [
+        "Todo lo de Básico",
+        "Previsión de 14 días",
+        "Alertas prioritarias",
+        "Historial meteorológico 5 años",
+        "15% descuento en forfaits",
+        "Soporte prioritario"
+      ]
+    },
+    {
+      "plan": "premium",
+      "name": "Premium Anual",
+      "price": 79.99,
+      "currency": "EUR",
+      "billingCycle": "yearly",
+      "description": "Ahorra 2 meses gratis",
+      "popular": true,
+      "savings": "Ahorra 16€",
+      "features": [
+        "Todo lo de Premium mensual",
+        "2 meses gratis",
+        "20% descuento en forfaits",
+        "Acceso prioritario a eventos",
+        "Regalo de bienvenida"
+      ]
+    },
+    {
+      "plan": "pro",
+      "name": "Pro",
+      "price": 14.99,
+      "currency": "EUR",
+      "billingCycle": "monthly",
+      "description": "Para profesionales y grupos",
+      "features": [
+        "Todo lo de Premium",
+        "Gestión de grupos hasta 20 personas",
+        "API de datos meteorológicos",
+        "Análisis avanzados",
+        "25% descuento en forfaits",
+        "Soporte 24/7",
+        "Acceso beta a nuevas funciones"
+      ]
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv-2024-10",
+      "invoiceNumber": "INV-2024-10-001",
+      "date": "2024-10-01T00:00:00Z",
+      "dueDate": "2024-10-15T00:00:00Z",
+      "amount": 79.99,
+      "currency": "EUR",
+      "status": "paid",
+      "description": "Suscripción Premium Anual",
+      "pdfUrl": "/invoices/INV-2024-10-001.pdf",
+      "items": [
+        {
+          "description": "Plan Premium - Anual",
+          "quantity": 1,
+          "unitPrice": 79.99,
+          "total": 79.99
+        }
+      ]
+    },
+    {
+      "id": "inv-2023-10",
+      "invoiceNumber": "INV-2023-10-001",
+      "date": "2023-10-01T00:00:00Z",
+      "dueDate": "2023-10-15T00:00:00Z",
+      "amount": 79.99,
+      "currency": "EUR",
+      "status": "paid",
+      "description": "Suscripción Premium Anual",
+      "pdfUrl": "/invoices/INV-2023-10-001.pdf",
+      "items": [
+        {
+          "description": "Plan Premium - Anual",
+          "quantity": 1,
+          "unitPrice": 79.99,
+          "total": 79.99
+        }
+      ]
+    }
+  ]
+}

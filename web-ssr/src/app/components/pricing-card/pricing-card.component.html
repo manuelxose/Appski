@@ -1,0 +1,94 @@
+<!-- Pricing Card Component -->
+<div
+  [class.ring-4]="plan().highlighted"
+  [class.ring-yellow-400]="plan().highlighted"
+  [class.scale-105]="plan().highlighted"
+  class="pricing-card bg-white rounded-2xl shadow-xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-2xl relative"
+>
+  <!-- Badge -->
+  @if (plan().badge) {
+  <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+    <span
+      class="inline-flex items-center px-4 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-bold rounded-full shadow-lg"
+    >
+      ⭐ {{ plan().badge }}
+    </span>
+  </div>
+  }
+
+  <!-- Plan Name -->
+  <div class="text-center mb-6">
+    <h3 class="text-2xl font-bold text-slate-900 mb-2">
+      {{ plan().name }}
+    </h3>
+    <p class="text-slate-600">
+      {{ plan().description }}
+    </p>
+  </div>
+
+  <!-- Price -->
+  <div class="text-center mb-8">
+    <div class="flex items-baseline justify-center gap-2">
+      <span class="text-5xl font-bold text-slate-900">
+        €{{ plan().price }}
+      </span>
+      <span class="text-slate-600">
+        /{{ plan().billingPeriod === "month" ? "mes" : "año" }}
+      </span>
+    </div>
+    @if (plan().billingPeriod === 'year') {
+    <div class="text-sm text-green-600 font-semibold mt-2">
+      Ahorra un 20% al año
+    </div>
+    }
+  </div>
+
+  <!-- CTA Button -->
+  <a
+    [routerLink]="['/login']"
+    [class.bg-gradient-to-r]="plan().highlighted"
+    [class.from-yellow-400]="plan().highlighted"
+    [class.to-orange-500]="plan().highlighted"
+    [class.text-white]="plan().highlighted"
+    [class.bg-teal-600]="!plan().highlighted"
+    [class.text-white]="!plan().highlighted"
+    [class.hover:bg-teal-700]="!plan().highlighted"
+    class="block w-full text-center px-6 py-4 font-bold rounded-xl transition-all mb-8 hover:shadow-lg"
+  >
+    {{ plan().ctaText }}
+  </a>
+
+  <!-- Features List -->
+  <div class="flex-1">
+    <div class="text-sm font-semibold text-slate-900 mb-4">
+      ✨ Características incluidas:
+    </div>
+    <ul class="space-y-3">
+      @for (feature of plan().features; track feature) {
+      <li class="flex items-start gap-3">
+        <svg
+          class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span class="text-slate-700 text-sm">{{ feature }}</span>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <!-- Guarantee Badge -->
+  <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+    <div class="text-xs text-slate-500">
+      🔒 Garantía de satisfacción 30 días
+    </div>
+  </div>
+</div>

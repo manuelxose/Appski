@@ -1,0 +1,106 @@
+<!-- Hero Section with Background Image -->
+<div class="hero-section">
+  <img [src]="shop().image" [alt]="shop().name" class="hero-image" />
+
+  <div class="hero-overlay">
+    <!-- Header: Title Left, Rating & Availability Right -->
+    <div class="hero-header">
+      <div class="hero-title">
+        <h1 class="shop-name">{{ shop().name }}</h1>
+        <div class="shop-location">
+          <span class="material-icons">location_on</span>
+          <span>{{ shop().location }}</span>
+        </div>
+      </div>
+
+      <div class="hero-badges">
+        <!-- Rating -->
+        <div class="rating-badge">
+          <span class="material-icons">star</span>
+          <span class="rating-value">{{ shop().rating }}</span>
+          <span class="review-count">({{ shop().reviewCount }})</span>
+        </div>
+        <!-- Availability -->
+        <div class="availability-badge" [class]="availabilityClass">
+          <span class="material-icons">inventory_2</span>
+          <span>{{ availabilityLabel }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Content: Services & Description -->
+    <div class="hero-content">
+      <!-- Services -->
+      <div class="services-card">
+        <h3 class="services-title">Servicios</h3>
+        <div class="services-list">
+          @for (service of shop().services; track service) {
+          <span class="service-tag">
+            <span class="material-icons">check_circle</span>
+            {{ service }}
+          </span>
+          }
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="description-card">
+        <p class="shop-description">{{ shop().description }}</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="shop-actions">
+        <button class="btn-primary" (click)="onContactClick()">
+          <span class="material-icons">email</span>
+          Enviar mensaje
+        </button>
+        <button class="btn-secondary" (click)="onCallClick()">
+          <span class="material-icons">phone</span>
+          Llamar
+        </button>
+        @if (shop().website) {
+        <a
+          [href]="'https://' + shop().website"
+          target="_blank"
+          class="btn-secondary"
+        >
+          <span class="material-icons">language</span>
+          Web
+        </a>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Details Row - Outside Hero, White Background -->
+<div class="details-row">
+  <div class="detail-item">
+    <span class="material-icons">schedule</span>
+    <div class="detail-content">
+      <div class="detail-label">Horario</div>
+      <div class="detail-value">{{ shop().openingHours }}</div>
+    </div>
+  </div>
+  <div class="detail-item">
+    <span class="material-icons">place</span>
+    <div class="detail-content">
+      <div class="detail-label">Dirección</div>
+      <div class="detail-value">{{ shop().address }}</div>
+    </div>
+  </div>
+  <div class="detail-item">
+    <span class="material-icons">euro</span>
+    <div class="detail-content">
+      <div class="detail-label">Precio</div>
+      <div class="detail-value">{{ shop().priceRange }}</div>
+    </div>
+  </div>
+  <div class="detail-item">
+    <span class="material-icons">landscape</span>
+    <div class="detail-content">
+      <div class="detail-label">Estaciones</div>
+      <div class="detail-value">{{ shop().nearStations.join(", ") }}</div>
+    </div>
+  </div>
+</div>

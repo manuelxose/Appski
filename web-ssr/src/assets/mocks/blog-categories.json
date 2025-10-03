@@ -1,0 +1,138 @@
+[
+  {
+    "id": "cat-001",
+    "slug": "noticias",
+    "name": {
+      "es": "Noticias",
+      "en": "News",
+      "fr": "Actualités"
+    },
+    "description": {
+      "es": "Últimas noticias del mundo del esquí y la nieve",
+      "en": "Latest news from the world of skiing and snow",
+      "fr": "Dernières nouvelles du monde du ski et de la neige"
+    },
+    "color": "#3B82F6",
+    "icon": "📰",
+    "articleCount": 24
+  },
+  {
+    "id": "cat-002",
+    "slug": "guias",
+    "name": {
+      "es": "Guías",
+      "en": "Guides",
+      "fr": "Guides"
+    },
+    "description": {
+      "es": "Guías completas para esquiadores de todos los niveles",
+      "en": "Complete guides for skiers of all levels",
+      "fr": "Guides complets pour les skieurs de tous niveaux"
+    },
+    "color": "#10B981",
+    "icon": "📚",
+    "articleCount": 18
+  },
+  {
+    "id": "cat-003",
+    "slug": "consejos",
+    "name": {
+      "es": "Consejos",
+      "en": "Tips",
+      "fr": "Conseils"
+    },
+    "description": {
+      "es": "Consejos prácticos y trucos para mejorar tu técnica",
+      "en": "Practical tips and tricks to improve your technique",
+      "fr": "Conseils pratiques et astuces pour améliorer votre technique"
+    },
+    "color": "#F59E0B",
+    "icon": "💡",
+    "articleCount": 32
+  },
+  {
+    "id": "cat-004",
+    "slug": "estaciones",
+    "name": {
+      "es": "Estaciones",
+      "en": "Resorts",
+      "fr": "Stations"
+    },
+    "description": {
+      "es": "Reseñas y análisis de estaciones de esquí",
+      "en": "Reviews and analysis of ski resorts",
+      "fr": "Critiques et analyses des stations de ski"
+    },
+    "color": "#8B5CF6",
+    "icon": "⛷️",
+    "articleCount": 15
+  },
+  {
+    "id": "cat-005",
+    "slug": "equipamiento",
+    "name": {
+      "es": "Equipamiento",
+      "en": "Equipment",
+      "fr": "Équipement"
+    },
+    "description": {
+      "es": "Reviews de material y equipamiento de esquí",
+      "en": "Reviews of ski gear and equipment",
+      "fr": "Critiques de matériel et équipement de ski"
+    },
+    "color": "#EC4899",
+    "icon": "🎿",
+    "articleCount": 27
+  },
+  {
+    "id": "cat-006",
+    "slug": "eventos",
+    "name": {
+      "es": "Eventos",
+      "en": "Events",
+      "fr": "Événements"
+    },
+    "description": {
+      "es": "Competiciones, festivales y eventos de esquí",
+      "en": "Competitions, festivals and ski events",
+      "fr": "Compétitions, festivals et événements de ski"
+    },
+    "color": "#EF4444",
+    "icon": "🏆",
+    "articleCount": 12
+  },
+  {
+    "id": "cat-007",
+    "slug": "viajes",
+    "name": {
+      "es": "Viajes",
+      "en": "Travel",
+      "fr": "Voyages"
+    },
+    "description": {
+      "es": "Destinos, rutas y experiencias de viaje",
+      "en": "Destinations, routes and travel experiences",
+      "fr": "Destinations, itinéraires et expériences de voyage"
+    },
+    "color": "#06B6D4",
+    "icon": "✈️",
+    "articleCount": 19
+  },
+  {
+    "id": "cat-008",
+    "slug": "resenas",
+    "name": {
+      "es": "Reseñas",
+      "en": "Reviews",
+      "fr": "Critiques"
+    },
+    "description": {
+      "es": "Opiniones y valoraciones de productos y servicios",
+      "en": "Opinions and ratings of products and services",
+      "fr": "Avis et évaluations de produits et services"
+    },
+    "color": "#84CC16",
+    "icon": "⭐",
+    "articleCount": 21
+  }
+]

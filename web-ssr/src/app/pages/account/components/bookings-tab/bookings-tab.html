@@ -1,0 +1,107 @@
+<div class="max-w-4xl mx-auto animate-slide-up">
+  <!-- Messages -->
+  @if (successMessage()) {
+  <div
+    class="mb-6 bg-green-50 border-l-4 border-green-400 p-4 rounded-lg animate-fade-in"
+  >
+    <p class="text-sm text-green-700">{{ successMessage() }}</p>
+  </div>
+  } @if (errorMessage()) {
+  <div
+    class="mb-6 bg-red-50 border-l-4 border-red-400 p-4 rounded-lg animate-fade-in"
+  >
+    <p class="text-sm text-red-700">{{ errorMessage() }}</p>
+  </div>
+  }
+
+  <!-- Header with Stats -->
+  <div class="mb-6 flex items-center justify-between flex-wrap gap-4">
+    <h2
+      class="text-2xl font-bold text-slate-900"
+      data-i18n="account.my_bookings"
+    >
+      Mis reservas
+    </h2>
+    <div class="flex gap-2 text-sm">
+      <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full">
+        {{ stats().total }} total
+      </span>
+      <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full">
+        {{ stats().upcoming }} próximas
+      </span>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="mb-6 flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+    <button
+      (click)="setFilter('all')"
+      [class.bg-blue-600]="filter() === 'all'"
+      [class.text-white]="filter() === 'all'"
+      [class.bg-gray-100]="filter() !== 'all'"
+      [class.text-slate-700]="filter() !== 'all'"
+      class="px-4 py-2 rounded-lg font-medium text-sm transition-all hover:scale-105"
+    >
+      Todas ({{ stats().total }})
+    </button>
+    <button
+      (click)="setFilter('upcoming')"
+      [class.bg-blue-600]="filter() === 'upcoming'"
+      [class.text-white]="filter() === 'upcoming'"
+      [class.bg-gray-100]="filter() !== 'upcoming'"
+      [class.text-slate-700]="filter() !== 'upcoming'"
+      class="px-4 py-2 rounded-lg font-medium text-sm transition-all hover:scale-105"
+    >
+      Próximas ({{ stats().upcoming }})
+    </button>
+    <button
+      (click)="setFilter('completed')"
+      [class.bg-blue-600]="filter() === 'completed'"
+      [class.text-white]="filter() === 'completed'"
+      [class.bg-gray-100]="filter() !== 'completed'"
+      [class.text-slate-700]="filter() !== 'completed'"
+      class="px-4 py-2 rounded-lg font-medium text-sm transition-all hover:scale-105"
+    >
+      Completadas ({{ stats().completed }})
+    </button>
+    <button
+      (click)="setFilter('cancelled')"
+      [class.bg-blue-600]="filter() === 'cancelled'"
+      [class.text-white]="filter() === 'cancelled'"
+      [class.bg-gray-100]="filter() !== 'cancelled'"
+      [class.text-slate-700]="filter() !== 'cancelled'"
+      class="px-4 py-2 rounded-lg font-medium text-sm transition-all hover:scale-105"
+    >
+      Canceladas ({{ stats().cancelled }})
+    </button>
+  </div>
+
+  <!-- Bookings List -->
+  @if (filteredBookings().length > 0) {
+  <div class="space-y-4">
+    @for (booking of filteredBookings(); track booking.id) {
+    <app-booking-card
+      [booking]="booking"
+      (viewDetails)="handleViewDetails(booking)"
+      (cancelBooking)="handleCancelBooking(booking.id)"
+    />
+    }
+  </div>
+  } @else {
+  <div class="bg-white rounded-xl shadow-md p-12 text-center">
+    <div class="text-6xl mb-4">📋</div>
+    <h3 class="text-xl font-semibold text-slate-900 mb-2">No hay reservas</h3>
+    <p class="text-slate-600 mb-6">
+      @if (filter() === 'all') { Todavía no has realizado ninguna reserva }
+      @else { No hay reservas {{ filter() === 'upcoming' ? 'próximas' : filter()
+      === 'completed' ? 'completadas' : 'canceladas' }} }
+    </p>
+    <a
+      href="/estaciones"
+      class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+    >
+      Explorar estaciones
+    </a>
+  </div>
+  }
+</div>

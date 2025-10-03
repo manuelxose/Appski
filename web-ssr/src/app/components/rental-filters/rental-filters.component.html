@@ -1,0 +1,136 @@
+<!-- Rental Filters -->
+<div class="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-lg font-bold text-slate-900">
+      🔍 <span data-i18n="rental.filters.title">Filtros</span>
+    </h3>
+    <button
+      (click)="resetFilters()"
+      class="text-sm text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+      data-i18n="rental.filters.reset"
+    >
+      Restablecer
+    </button>
+  </div>
+
+  <!-- Equipment Type Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      <span data-i18n="rental.filters.equipmentType">Tipo de Equipo</span>
+    </div>
+    <div class="space-y-2">
+      @for (type of equipmentTypes; track type.value) {
+      <label
+        class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      >
+        <input
+          type="checkbox"
+          [checked]="selectedEquipmentTypes().includes(type.value)"
+          (change)="onEquipmentTypeToggle(type.value)"
+          class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="ml-3 text-slate-700">
+          {{ type.icon }} {{ type.label }}
+        </span>
+      </label>
+      }
+    </div>
+  </div>
+
+  <!-- Level Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      🎯 <span data-i18n="rental.filters.level">Nivel de Esquí</span>
+    </div>
+    <select
+      [(ngModel)]="selectedLevel"
+      (ngModelChange)="onLevelChange()"
+      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer"
+    >
+      @for (level of levels; track level.value) {
+      <option [value]="level.value">
+        {{ level.label }}
+      </option>
+      }
+    </select>
+  </div>
+
+  <!-- Duration Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      📅 <span data-i18n="rental.filters.duration">Duración del Alquiler</span>
+    </div>
+    <div class="space-y-3">
+      <input
+        type="range"
+        [(ngModel)]="duration"
+        (ngModelChange)="onDurationChange()"
+        min="1"
+        max="14"
+        step="1"
+        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+      />
+      <div class="flex justify-between text-sm">
+        <span class="text-slate-600">1 día</span>
+        <span class="font-bold text-blue-600 text-lg">
+          {{ duration() }} {{ duration() === 1 ? "día" : "días" }}
+        </span>
+        <span class="text-slate-600">14 días</span>
+      </div>
+      <!-- Quick duration buttons -->
+      <div class="grid grid-cols-3 gap-2 mt-3">
+        @for (quickDuration of [1, 3, 7]; track $index) {
+        <button
+          (click)="duration.set(quickDuration); onDurationChange()"
+          [class.bg-blue-600]="duration() === quickDuration"
+          [class.text-white]="duration() === quickDuration"
+          [class.bg-gray-100]="duration() !== quickDuration"
+          [class.text-slate-700]="duration() !== quickDuration"
+          class="px-3 py-2 rounded-lg font-semibold text-sm transition-colors hover:shadow-md"
+        >
+          {{ quickDuration }}d
+        </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Filter -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-700 mb-3">
+      <span data-i18n="rental.filters.services">Servicios Adicionales</span>
+    </div>
+    <div class="space-y-2">
+      @for (service of services; track service.value) {
+      <label
+        class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      >
+        <input
+          type="checkbox"
+          [checked]="selectedServices().includes(service.value)"
+          (change)="onServiceToggle(service.value)"
+          class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="ml-3 text-sm text-slate-700">
+          {{ service.icon }} {{ service.label }}
+        </span>
+      </label>
+      }
+    </div>
+  </div>
+
+  <!-- Price Estimate -->
+  <div
+    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 border-2 border-blue-200"
+  >
+    <div class="text-sm font-semibold text-slate-700 mb-2">
+      💰 Precio Estimado
+    </div>
+    <div class="text-2xl font-bold text-blue-600">
+      {{ 15 * duration() }}-{{ 35 * duration() }}€
+    </div>
+    <div class="text-xs text-slate-600 mt-1">
+      para {{ duration() }} {{ duration() === 1 ? "día" : "días" }}
+    </div>
+  </div>
+</div>

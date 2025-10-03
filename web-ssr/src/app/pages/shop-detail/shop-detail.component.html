@@ -1,0 +1,73 @@
+﻿<app-site-header></app-site-header>
+
+@if (shopService.currentShop(); as shop) {
+<div class="shop-detail-container">
+  <!-- Shop Header Component -->
+  <app-shop-header
+    [shop]="shop"
+    (contactClick)="onContactShop()"
+    (callClick)="onCallShop()"
+  />
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+    <div class="content-layout">
+      <!-- Filters Sidebar Component -->
+      <aside class="filters-sidebar">
+        <app-equipment-filters
+          [categories]="shopService.categories()"
+          [selectedCategory]="shopService.currentFilters().category"
+          [offerType]="shopService.currentFilters().offerType"
+          [showOnlyAvailable]="shopService.currentFilters().showOnlyAvailable"
+          [totalCount]="shopService.filteredEquipment().length"
+          [getCategoryCount]="getCategoryCount"
+          (categoryChange)="onCategoryChange($event)"
+          (offerTypeChange)="onOfferTypeChange($event)"
+          (availabilityToggle)="onAvailabilityToggle()"
+        />
+      </aside>
+
+      <!-- Equipment Grid -->
+      <main class="equipment-main">
+        <div class="equipment-header">
+          <h2 class="section-title">
+            @if (shopService.currentFilters().offerType === "rental") { Equipos
+            en Alquiler } @else { Equipos en Venta }
+          </h2>
+          <p class="results-count">
+            {{ shopService.filteredEquipment().length }}
+            {{
+              shopService.filteredEquipment().length === 1
+                ? "equipo"
+                : "equipos"
+            }}
+          </p>
+        </div>
+
+        <div class="equipment-grid">
+          @for (item of shopService.filteredEquipment(); track item.id) {
+          <app-equipment-card
+            [item]="item"
+            [offerType]="shopService.currentFilters().offerType"
+            (rentalClick)="onRentalClick($event)"
+            (purchaseClick)="onPurchaseClick($event)"
+          />
+          } @empty {
+          <div class="empty-state">
+            <span class="material-icons">inventory_2</span>
+            <p>No hay equipos disponibles en esta categoría</p>
+          </div>
+          }
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+} @else {
+<div class="loading-container">
+  <div class="spinner"></div>
+  <p>Cargando información de la tienda...</p>
+</div>
+}
+
+<app-site-footer></app-site-footer>

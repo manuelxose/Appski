@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "month": "Ene",
+      "current": 180000,
+      "previous": 150000
+    },
+    {
+      "month": "Feb",
+      "current": 195000,
+      "previous": 160000
+    },
+    {
+      "month": "Mar",
+      "current": 210000,
+      "previous": 175000
+    },
+    {
+      "month": "Abr",
+      "current": 198000,
+      "previous": 168000
+    },
+    {
+      "month": "May",
+      "current": 185000,
+      "previous": 155000
+    },
+    {
+      "month": "Jun",
+      "current": 172000,
+      "previous": 145000
+    },
+    {
+      "month": "Jul",
+      "current": 165000,
+      "previous": 140000
+    },
+    {
+      "month": "Ago",
+      "current": 158000,
+      "previous": 135000
+    },
+    {
+      "month": "Sep",
+      "current": 192000,
+      "previous": 162000
+    },
+    {
+      "month": "Oct",
+      "current": 225000,
+      "previous": 188000
+    },
+    {
+      "month": "Nov",
+      "current": 248000,
+      "previous": 205000
+    },
+    {
+      "month": "Dic",
+      "current": 280000,
+      "previous": 220000
+    }
+  ],
+  "summary": {
+    "totalCurrent": 2408000,
+    "totalPrevious": 2003000,
+    "yoyGrowth": 20.2,
+    "averageMonthly": 200667,
+    "peakMonth": "Dic",
+    "peakValue": 280000,
+    "lowestMonth": "Ago",
+    "lowestValue": 158000
+  }
+}

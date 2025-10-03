@@ -1,0 +1,160 @@
+<div class="max-w-4xl mx-auto">
+  <!-- Header con filtros y acciones -->
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+    <div
+      class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+    >
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">Notificaciones</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          @if (unreadCount() > 0) {
+          <span class="font-medium text-blue-600"
+            >{{ unreadCount() }} sin leer</span
+          >
+          } @else {
+          <span>No tienes notificaciones sin leer</span>
+          }
+        </p>
+      </div>
+
+      <button
+        (click)="markAllAsRead()"
+        [disabled]="unreadCount() === 0"
+        class="px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Marcar todas como leídas
+      </button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="flex gap-2 mt-4 overflow-x-auto">
+      <button
+        (click)="filter.set('all')"
+        [class.bg-blue-600]="filter() === 'all'"
+        [class.text-white]="filter() === 'all'"
+        [class.bg-gray-100]="filter() !== 'all'"
+        [class.text-slate-700]="filter() !== 'all'"
+        class="px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+      >
+        Todas
+      </button>
+      <button
+        (click)="filter.set('weather')"
+        [class.bg-blue-600]="filter() === 'weather'"
+        [class.text-white]="filter() === 'weather'"
+        [class.bg-gray-100]="filter() !== 'weather'"
+        [class.text-slate-700]="filter() !== 'weather'"
+        class="px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+      >
+        🌨️ Clima
+      </button>
+      <button
+        (click)="filter.set('booking')"
+        [class.bg-blue-600]="filter() === 'booking'"
+        [class.text-white]="filter() === 'booking'"
+        [class.bg-gray-100]="filter() !== 'booking'"
+        [class.text-slate-700]="filter() !== 'booking'"
+        class="px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+      >
+        📅 Reservas
+      </button>
+      <button
+        (click)="filter.set('promotion')"
+        [class.bg-blue-600]="filter() === 'promotion'"
+        [class.text-white]="filter() === 'promotion'"
+        [class.bg-gray-100]="filter() !== 'promotion'"
+        [class.text-slate-700]="filter() !== 'promotion'"
+        class="px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+      >
+        🎁 Promociones
+      </button>
+      <button
+        (click)="filter.set('alert')"
+        [class.bg-blue-600]="filter() === 'alert'"
+        [class.text-white]="filter() === 'alert'"
+        [class.bg-gray-100]="filter() !== 'alert'"
+        [class.text-slate-700]="filter() !== 'alert'"
+        class="px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+      >
+        ⚠️ Alertas
+      </button>
+    </div>
+  </div>
+
+  <!-- Lista de notificaciones -->
+  @if (isLoading()) {
+  <div class="flex items-center justify-center py-12">
+    <div
+      class="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full"
+    ></div>
+  </div>
+  } @else if (filteredNotifications().length === 0) {
+  <div class="bg-white rounded-xl shadow-sm p-12 text-center">
+    <div class="text-6xl mb-4">📭</div>
+    <h3 class="text-lg font-semibold text-slate-900 mb-2">
+      No hay notificaciones
+    </h3>
+    <p class="text-slate-600">No tienes notificaciones en esta categoría</p>
+  </div>
+  } @else {
+  <div class="space-y-3">
+    @for (notification of filteredNotifications(); track notification.id) {
+    <div
+      [class]="'bg-white rounded-xl shadow-sm p-5 border-l-4 transition-all hover:shadow-md ' + getPriorityColor(notification.priority)"
+      [class.opacity-60]="notification.read"
+    >
+      <div class="flex gap-4">
+        <!-- Icon -->
+        <div class="flex-shrink-0">
+          <span class="text-3xl">{{ getNotificationIcon(notification) }}</span>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h3 class="font-semibold text-slate-900 text-base">
+              {{ notification.title }} @if (!notification.read) {
+              <span
+                class="inline-block w-2 h-2 bg-blue-600 rounded-full ml-2"
+              ></span>
+              }
+            </h3>
+            <span class="text-xs text-slate-500 whitespace-nowrap"
+              >{{ formatTimestamp(notification.timestamp) }}</span
+            >
+          </div>
+
+          <p class="text-sm text-slate-700 mb-3">{{ notification.message }}</p>
+
+          <!-- Actions -->
+          <div class="flex flex-wrap gap-2">
+            @if (notification.actionUrl) {
+            <a
+              [href]="notification.actionUrl"
+              class="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              {{ notification.actionLabel || 'Ver más' }} →
+            </a>
+            } @if (!notification.read) {
+            <button
+              (click)="markAsRead(notification.id)"
+              class="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              Marcar como leída
+            </button>
+            }
+
+            <button
+              (click)="deleteNotification(notification.id)"
+              class="text-xs font-medium text-red-600 hover:text-red-700 transition-colors ml-auto"
+            >
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  }
+</div>

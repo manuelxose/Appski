@@ -1,0 +1,414 @@
+/* ============================================
+   STATION SNOW REPORT - APPLE/BOLT PREMIUM DESIGN
+   ============================================ */
+
+/* Container - Premium Card */
+.bg-white {
+  background: white;
+  border-radius: var(--radius-3xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--neutral-200);
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.6s var(--ease-out);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-white:hover {
+  box-shadow: var(--shadow-2xl);
+  transform: translateY(-4px);
+  border-color: var(--primary-300);
+}
+
+/* Header Section */
+.flex.items-center.justify-between.mb-6 h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--neutral-900);
+  letter-spacing: var(--letter-spacing-tight);
+  background: linear-gradient(135deg, var(--neutral-900), var(--neutral-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.flex.items-center.justify-between.mb-6 .text-sm {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-500);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-2) var(--space-4);
+  background: var(--neutral-50);
+  border-radius: var(--radius-full);
+}
+
+/* Main Snow Stats - Premium Cards with Gradients */
+.grid.grid-cols-2 .text-center.p-4 {
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+  border-radius: var(--radius-2xl);
+  border: 2px solid var(--primary-200);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.5s var(--ease-out);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger animations */
+.grid > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.grid > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.grid > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.grid.grid-cols-2 .text-center.p-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.grid.grid-cols-2 .text-center.p-4:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(14, 165, 233, 0.3);
+  border-color: var(--primary-400);
+}
+
+.grid.grid-cols-2 .text-center.p-4:hover::before {
+  transform: scaleX(1);
+}
+
+/* Snow Values - Bold Numbers */
+.text-center.p-4 .text-3xl,
+.text-center.p-4 .text-4xl {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: var(--letter-spacing-tight);
+  transition: all var(--transition-base);
+}
+
+.text-center.p-4:hover .text-3xl,
+.text-center.p-4:hover .text-4xl {
+  transform: scale(1.15);
+}
+
+.text-center.p-4 .text-sm {
+  font-size: var(--font-size-base);
+  color: var(--neutral-700);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--space-2);
+}
+
+/* Snow Quality Card - Special Styling */
+.col-span-2.text-center.p-4 {
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  border: 2px solid;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: scaleIn 0.5s var(--ease-out);
+  animation-delay: 0.3s;
+}
+
+.col-span-2.text-center.p-4:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.col-span-2.text-center.p-4 .text-lg {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Recent Snowfall Cards - Premium Borders */
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4 {
+  padding: var(--space-6);
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-2xl);
+  transition: all var(--transition-base);
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--success-500), var(--success-600));
+  transform: scaleY(0);
+  transition: transform var(--transition-base);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--success-300);
+  background: var(--success-50);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4:hover::before {
+  transform: scaleY(1);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4 .text-sm {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4 .text-2xl {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--success-600), var(--success-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4 .text-3xl {
+  font-size: 3rem;
+  transition: all var(--transition-base);
+}
+
+.grid.grid-cols-1 .flex.items-center.justify-between.p-4:hover .text-3xl {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Weather Conditions - Gradient Cards */
+.grid.grid-cols-1:last-of-type .p-4 {
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.grid.grid-cols-1:last-of-type .p-4:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Temperature Card */
+.bg-gradient-to-br.from-orange-50.to-orange-100 {
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  border: 2px solid #fdba74;
+}
+
+.bg-gradient-to-br.from-orange-50.to-orange-100:hover {
+  border-color: #fb923c;
+}
+
+/* Wind Card */
+.bg-gradient-to-br.from-sky-50.to-sky-100 {
+  background: linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%);
+  border: 2px solid #7dd3fc;
+}
+
+.bg-gradient-to-br.from-sky-50.to-sky-100:hover {
+  border-color: #38bdf8;
+}
+
+/* Visibility Card */
+.bg-gradient-to-br.from-purple-50.to-purple-100 {
+  background: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%);
+  border: 2px solid #d8b4fe;
+}
+
+.bg-gradient-to-br.from-purple-50.to-purple-100:hover {
+  border-color: #c084fc;
+}
+
+/* Weather Icons */
+.grid.grid-cols-1:last-of-type .p-4 .text-3xl {
+  font-size: 3.5rem;
+  transition: all var(--transition-base);
+  display: inline-block;
+}
+
+.grid.grid-cols-1:last-of-type .p-4:hover .text-3xl {
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* Weather Values */
+.grid.grid-cols-1:last-of-type .p-4 .text-2xl {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--neutral-900);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.grid.grid-cols-1:last-of-type .p-4 .text-lg {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  color: var(--neutral-900);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.grid.grid-cols-1:last-of-type .p-4 .text-sm {
+  font-size: var(--font-size-base);
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Alert Banner - Premium Design */
+.mt-6.p-4.bg-green-50 {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--success-50), var(--success-100));
+  border-left: 4px solid var(--success-500);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2);
+  animation: slideInLeft 0.5s var(--ease-out);
+  border: 2px solid var(--success-300);
+  border-left-width: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mt-6.p-4.bg-green-50::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+.mt-6.p-4.bg-green-50 .text-2xl {
+  font-size: 2.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.mt-6.p-4.bg-green-50 .font-semibold {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--success-900);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.mt-6.p-4.bg-green-50 .text-sm {
+  font-size: var(--font-size-base);
+  color: var(--success-700);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bg-white {
+    padding: var(--space-6);
+    border-radius: var(--radius-2xl);
+  }
+
+  .flex.items-center.justify-between.mb-6 h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .text-center.p-4 .text-3xl,
+  .text-center.p-4 .text-4xl {
+    font-size: var(--font-size-3xl);
+  }
+
+  .grid.grid-cols-2 .text-center.p-4 {
+    padding: var(--space-6);
+  }
+
+  .grid.grid-cols-1 .flex.items-center.justify-between.p-4 {
+    padding: var(--space-4);
+  }
+
+  .grid.grid-cols-1:last-of-type .p-4 {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .flex.items-center.justify-between.mb-6 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .text-center.p-4 .text-3xl,
+  .text-center.p-4 .text-4xl {
+    font-size: var(--font-size-2xl);
+  }
+}

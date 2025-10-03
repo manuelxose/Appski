@@ -1,0 +1,122 @@
+<!-- Blog Filters Component -->
+<div class="blog-filters bg-white rounded-xl shadow-lg p-6">
+  <!-- Search Bar -->
+  <div class="mb-6">
+    <label for="search" class="block text-sm font-semibold text-slate-900 mb-2">
+      🔍 Buscar artículos
+    </label>
+    <div class="relative">
+      <input
+        type="text"
+        id="search"
+        [(ngModel)]="searchQuery"
+        (ngModelChange)="onSearchChange()"
+        placeholder="Buscar por título o contenido..."
+        class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+      />
+      @if (searchQuery()) {
+      <button
+        (click)="searchQuery.set(''); onSearchChange()"
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+        aria-label="Limpiar búsqueda"
+      >
+        ✕
+      </button>
+      }
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-900 mb-3">📁 Categorías</div>
+    <div class="flex flex-wrap gap-2">
+      @for (category of categories(); track category) {
+      <button
+        (click)="onCategoryChange(category)"
+        [class.bg-teal-600]="selectedCategory() === category"
+        [class.text-white]="selectedCategory() === category"
+        [class.bg-gray-100]="selectedCategory() !== category"
+        [class.text-gray-700]="selectedCategory() !== category"
+        class="px-4 py-2 rounded-lg font-medium text-sm transition-all hover:shadow-md"
+      >
+        {{ category }}
+      </button>
+      }
+    </div>
+  </div>
+
+  <!-- Popular Tags -->
+  <div class="mb-6">
+    <div class="text-sm font-semibold text-slate-900 mb-3">
+      🏷️ Etiquetas populares
+    </div>
+    <div class="flex flex-wrap gap-2">
+      @for (tag of popularTags(); track tag) {
+      <button
+        (click)="toggleTag(tag)"
+        [class.bg-blue-600]="isTagSelected(tag)"
+        [class.text-white]="isTagSelected(tag)"
+        [class.border-blue-600]="isTagSelected(tag)"
+        [class.bg-white]="!isTagSelected(tag)"
+        [class.text-blue-600]="!isTagSelected(tag)"
+        [class.border-blue-200]="!isTagSelected(tag)"
+        class="px-3 py-1.5 rounded-full text-xs font-medium border-2 transition-all hover:shadow-md"
+      >
+        #{{ tag }}
+      </button>
+      }
+    </div>
+  </div>
+
+  <!-- Active Filters Summary -->
+  @if (hasActiveFilters()) {
+  <div class="pt-4 border-t border-gray-200">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm font-semibold text-slate-900">
+        Filtros activos
+      </span>
+      <button
+        (click)="resetFilters()"
+        class="text-xs text-red-600 hover:text-red-700 font-medium transition-colors"
+      >
+        Limpiar todos
+      </button>
+    </div>
+
+    <div class="space-y-2">
+      @if (searchQuery()) {
+      <div class="flex items-center gap-2 text-xs">
+        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded">
+          🔍 "{{ searchQuery() }}"
+        </span>
+      </div>
+      } @if (selectedCategory() !== 'Todos') {
+      <div class="flex items-center gap-2 text-xs">
+        <span class="px-2 py-1 bg-teal-100 text-teal-800 rounded">
+          📁 {{ selectedCategory() }}
+        </span>
+      </div>
+      } @if (selectedTags().length > 0) {
+      <div class="flex flex-wrap gap-1 text-xs">
+        @for (tag of selectedTags(); track tag) {
+        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded">
+          #{{ tag }}
+        </span>
+        }
+      </div>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- Info Section -->
+  <div class="mt-6 pt-6 border-t border-gray-200">
+    <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-4">
+      <div class="text-sm font-semibold text-slate-900 mb-2">💡 Consejo</div>
+      <p class="text-xs text-slate-600">
+        Usa los filtros para encontrar artículos específicos sobre temas que te
+        interesan. Combina categorías y etiquetas para resultados más precisos.
+      </p>
+    </div>
+  </div>
+</div>

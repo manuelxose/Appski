@@ -1,0 +1,139 @@
+<app-site-header></app-site-header>
+
+<!-- Hero Section -->
+<div
+  class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+>
+  <!-- Background Pattern -->
+  <div
+    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02LTYgMi42ODYtNiA2IDIuNjg2IDYgNiA2em0tMTIgMzZjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTYtNiAyLjY4Ni02IDYgMi42ODYgNiA2IDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"
+  ></div>
+
+  <!-- Hero Content -->
+  <div class="relative container mx-auto px-4 py-16 md:py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <span
+        class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-full border border-white/30 mb-6"
+      >
+        <span class="material-icons text-lg">store</span>
+        Marketplace
+      </span>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Alquiler de Material
+      </h1>
+
+      <!-- Description -->
+      <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        Encuentra las mejores tiendas de alquiler cerca de tu estación favorita.
+        Equipo profesional, precios competitivos y reserva instantánea.
+      </p>
+
+      <!-- Quick Search -->
+      <div
+        class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 bg-white p-3 rounded-2xl shadow-2xl"
+      >
+        <div
+          class="flex-1 flex items-center gap-3 px-4 py-3 bg-gray-50 rounded-xl"
+        >
+          <span class="material-icons text-indigo-600">search</span>
+          <input
+            type="text"
+            placeholder="Busca por estación, zona o tipo de equipo..."
+            class="flex-1 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
+            (input)="updateFilter('station', $any($event.target).value)"
+          />
+        </div>
+        <button
+          class="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+          (click)="toggleFilters()"
+        >
+          <span class="material-icons">tune</span>
+          <span>Filtros</span>
+          @if (showFilters()) {
+          <span class="material-icons">expand_less</span>
+          } @else {
+          <span class="material-icons">expand_more</span>
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="marketplace-container">
+  <!-- Filters Sidebar -->
+  <app-rental-filters
+    [stations]="stations()"
+    [zones]="zones()"
+    [equipmentTypes]="equipmentTypes()"
+    [filters]="filters()"
+    [showFilters]="showFilters()"
+    (filterChange)="updateFilter($event.field, $event.value)"
+    (clearFilters)="clearFilters()"
+  />
+
+  <!-- Shops Grid -->
+  <main class="shops-content">
+    <!-- Toolbar -->
+    <app-rental-toolbar
+      [resultsCount]="filteredShops().length"
+      [viewMode]="viewMode()"
+      (viewModeChange)="setViewMode($event)"
+    />
+
+    <!-- Shops List -->
+    <div class="shops-grid" [class.list-view]="viewMode() === 'list'">
+      @for (shop of filteredShops(); track shop.id) {
+      <app-rental-card [shop]="shop" (viewDetail)="viewShopDetail($event)" />
+      } @empty {
+      <div class="empty-state">
+        <span class="material-icons">search_off</span>
+        <h3>No se encontraron tiendas</h3>
+        <p>Prueba ajustando los filtros de búsqueda</p>
+        <button class="btn-primary" (click)="clearFilters()">
+          Limpiar filtros
+        </button>
+      </div>
+      }
+    </div>
+  </main>
+</div>
+
+<!-- CTA Section -->
+<div
+  class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden my-16"
+>
+  <!-- Background Pattern -->
+  <div
+    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02LTYgMi42ODYtNiA2IDIuNjg2IDYgNiA2em0tMTIgMzZjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTYtNiAyLjY4Ni02IDYgMi42ODYgNiA2IDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"
+  ></div>
+
+  <!-- CTA Content -->
+  <div class="relative container mx-auto px-4 py-16">
+    <div
+      class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+    >
+      <div class="flex-1">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          ¿Tienes una tienda de alquiler?
+        </h2>
+        <p class="text-lg md:text-xl text-white/90">
+          Únete a nuestra plataforma y alcanza a miles de esquiadores cada
+          temporada
+        </p>
+      </div>
+      <button
+        class="inline-flex items-center gap-3 px-8 py-4 bg-white text-indigo-700 font-bold rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
+      >
+        <span class="material-icons text-2xl">store</span>
+        <span>Registra tu tienda</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-site-footer></app-site-footer>

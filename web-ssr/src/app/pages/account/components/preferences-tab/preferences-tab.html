@@ -1,0 +1,219 @@
+<div class="max-w-2xl mx-auto animate-slide-up space-y-6">
+  <!-- Messages -->
+  @if (successMessage()) {
+  <div
+    class="bg-green-50 border-l-4 border-green-400 p-4 rounded-lg animate-fade-in"
+  >
+    <p class="text-sm text-green-700">{{ successMessage() }}</p>
+  </div>
+  } @if (errorMessage()) {
+  <div
+    class="bg-red-50 border-l-4 border-red-400 p-4 rounded-lg animate-fade-in"
+  >
+    <p class="text-sm text-red-700">{{ errorMessage() }}</p>
+  </div>
+  }
+
+  <!-- Contenido principal solo si preferences existe -->
+  @if (preferences(); as prefs) {
+
+  <!-- Nivel de esquí -->
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <h3
+      class="text-lg font-semibold text-slate-900 mb-4"
+      data-i18n="account.skill_level"
+    >
+      Nivel de esquí
+    </h3>
+    <select
+      [value]="prefs.skillLevel"
+      (change)="updateSkillLevel($any($event.target).value)"
+      [disabled]="isSaving()"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+    >
+      <option value="beginner">🌱 Principiante</option>
+      <option value="intermediate">⛷️ Intermedio</option>
+      <option value="advanced">🎿 Avanzado</option>
+      <option value="expert">🏆 Experto</option>
+    </select>
+  </div>
+
+  <!-- Tipo de equipo -->
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <h3 class="text-lg font-semibold text-slate-900 mb-4">
+      Tipo de equipo preferido
+    </h3>
+    <select
+      [value]="prefs.equipment"
+      (change)="updateEquipment($any($event.target).value)"
+      [disabled]="isSaving()"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+    >
+      <option value="all-mountain">Todo terreno</option>
+      <option value="freestyle">Freestyle</option>
+      <option value="freeride">Freeride</option>
+      <option value="carving">Carving</option>
+    </select>
+  </div>
+
+  <!-- Estaciones favoritas -->
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <h3
+      class="text-lg font-semibold text-slate-900 mb-4"
+      data-i18n="account.favorite_stations"
+    >
+      Estaciones favoritas
+    </h3>
+    <div class="flex flex-wrap gap-2 mb-4">
+      @for (station of prefs.favoriteStations; track station) {
+      <span
+        class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all hover:bg-blue-200"
+      >
+        {{ station }}
+        <button
+          (click)="removeFavoriteStation(station)"
+          class="hover:text-blue-900 font-bold"
+          title="Eliminar"
+        >
+          ×
+        </button>
+      </span>
+      } @if (prefs.favoriteStations.length === 0) {
+      <p class="text-sm text-slate-500 italic">No hay estaciones favoritas</p>
+      }
+    </div>
+    <div class="flex gap-2">
+      <input
+        type="text"
+        [(ngModel)]="newStationName"
+        placeholder="Nombre de la estación..."
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
+      />
+      <button
+        (click)="addFavoriteStation()"
+        [disabled]="!newStationName().trim() || isSaving()"
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        + Añadir
+      </button>
+    </div>
+  </div>
+
+  <!-- Notificaciones -->
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <h3
+      class="text-lg font-semibold text-slate-900 mb-4"
+      data-i18n="account.notifications"
+    >
+      Notificaciones
+    </h3>
+
+    <div class="space-y-4 mb-6">
+      <label class="flex items-center justify-between cursor-pointer group">
+        <span
+          class="text-slate-700 group-hover:text-slate-900 transition-colors"
+          >📧 Email</span
+        >
+        <input
+          type="checkbox"
+          [checked]="prefs.notifications.email"
+          (change)="toggleNotification('email', $any($event.target).checked)"
+          [disabled]="isSaving()"
+          class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:opacity-50 transition-all"
+        />
+      </label>
+      <label class="flex items-center justify-between cursor-pointer group">
+        <span
+          class="text-slate-700 group-hover:text-slate-900 transition-colors"
+          >📱 SMS</span
+        >
+        <input
+          type="checkbox"
+          [checked]="prefs.notifications.sms"
+          (change)="toggleNotification('sms', $any($event.target).checked)"
+          [disabled]="isSaving()"
+          class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:opacity-50 transition-all"
+        />
+      </label>
+      <label class="flex items-center justify-between cursor-pointer group">
+        <span
+          class="text-slate-700 group-hover:text-slate-900 transition-colors"
+          >🔔 Push</span
+        >
+        <input
+          type="checkbox"
+          [checked]="prefs.notifications.push"
+          (change)="toggleNotification('push', $any($event.target).checked)"
+          [disabled]="isSaving()"
+          class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:opacity-50 transition-all"
+        />
+      </label>
+    </div>
+
+    <div class="border-t border-gray-200 pt-4">
+      <p class="text-sm font-medium text-slate-700 mb-3">
+        Categorías de notificaciones
+      </p>
+      <div class="space-y-3">
+        <label class="flex items-center justify-between cursor-pointer text-sm">
+          <span class="text-slate-600">Meteorología</span>
+          <input
+            type="checkbox"
+            [checked]="prefs.notifications.categories.weather"
+            (change)="toggleNotificationCategory('weather', $any($event.target).checked)"
+            [disabled]="isSaving()"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          />
+        </label>
+        <label class="flex items-center justify-between cursor-pointer text-sm">
+          <span class="text-slate-600">Alertas</span>
+          <input
+            type="checkbox"
+            [checked]="prefs.notifications.categories.alerts"
+            (change)="toggleNotificationCategory('alerts', $any($event.target).checked)"
+            [disabled]="isSaving()"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          />
+        </label>
+        <label class="flex items-center justify-between cursor-pointer text-sm">
+          <span class="text-slate-600">Reservas</span>
+          <input
+            type="checkbox"
+            [checked]="prefs.notifications.categories.bookings"
+            (change)="toggleNotificationCategory('bookings', $any($event.target).checked)"
+            [disabled]="isSaving()"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          />
+        </label>
+        <label class="flex items-center justify-between cursor-pointer text-sm">
+          <span class="text-slate-600">Promociones</span>
+          <input
+            type="checkbox"
+            [checked]="prefs.notifications.categories.promotions"
+            (change)="toggleNotificationCategory('promotions', $any($event.target).checked)"
+            [disabled]="isSaving()"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          />
+        </label>
+        <label class="flex items-center justify-between cursor-pointer text-sm">
+          <span class="text-slate-600">Noticias</span>
+          <input
+            type="checkbox"
+            [checked]="prefs.notifications.categories.news"
+            (change)="toggleNotificationCategory('news', $any($event.target).checked)"
+            [disabled]="isSaving()"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  } @else {
+  <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center">
+    <p class="text-yellow-700">
+      No se encontraron las preferencias del usuario
+    </p>
+  </div>
+  }
+</div>

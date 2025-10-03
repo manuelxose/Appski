@@ -1,0 +1,12 @@
+{
+  "id": "usr_2024_001",
+  "name": "María González",
+  "email": "maria.gonzalez@email.com",
+  "phone": "+34 612 345 678",
+  "avatar": "MG",
+  "memberSince": "2024-01-15",
+  "isPremium": false,
+  "bio": "Apasionada del esquí y la montaña. Siempre buscando nuevas pistas y experiencias.",
+  "location": "Madrid, España",
+  "birthDate": "1990-05-20"
+}

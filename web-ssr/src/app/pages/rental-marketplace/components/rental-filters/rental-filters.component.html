@@ -1,0 +1,150 @@
+<aside class="filters-sidebar" [class.show]="showFilters()">
+  <div class="filters-header">
+    <h3>Filtros</h3>
+    <button class="clear-filters-btn" (click)="clearFilters.emit()">
+      <span class="material-icons">refresh</span>
+      Limpiar
+    </button>
+  </div>
+
+  <div class="filters-section">
+    <!-- Station Filter -->
+    <div class="filter-group">
+      <div class="filter-label">
+        <span class="material-icons">terrain</span>
+        Estación de esquí
+      </div>
+      <select
+        class="filter-select"
+        [value]="filters().station"
+        (change)="
+          filterChange.emit({
+            field: 'station',
+            value: $any($event.target).value
+          })
+        "
+      >
+        <option value="">Todas las estaciones</option>
+        @for (station of stations(); track station.value) {
+        <option [value]="station.value">{{ station.label }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Zone/City Filter -->
+    <div class="filter-group">
+      <div class="filter-label">
+        <span class="material-icons">location_city</span>
+        Zona o Ciudad
+      </div>
+      <select
+        class="filter-select"
+        [value]="filters().zone"
+        (change)="
+          filterChange.emit({ field: 'zone', value: $any($event.target).value })
+        "
+      >
+        <option value="">Todas las zonas</option>
+        @for (zone of zones(); track zone.value) {
+        <option [value]="zone.value">{{ zone.label }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Equipment Type -->
+    <div class="filter-group">
+      <div class="filter-label">
+        <span class="material-icons">downhill_skiing</span>
+        Tipo de equipo
+      </div>
+      <select
+        class="filter-select"
+        [value]="filters().equipmentType"
+        (change)="
+          filterChange.emit({
+            field: 'equipmentType',
+            value: $any($event.target).value
+          })
+        "
+      >
+        <option value="">Todo el equipo</option>
+        @for (equipment of equipmentTypes(); track equipment.value) {
+        <option [value]="equipment.label">{{ equipment.label }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Rating Filter -->
+    <div class="filter-group">
+      <div class="filter-label">
+        <span class="material-icons">star</span>
+        Valoración mínima
+      </div>
+      <div class="rating-filter">
+        @for (star of [5, 4, 3, 2, 1]; track star) {
+        <button
+          class="rating-btn"
+          [class.active]="filters().rating === star"
+          (click)="filterChange.emit({ field: 'rating', value: star })"
+        >
+          @for (i of [1,2,3,4,5]; track i) {
+          <span class="material-icons" [class.filled]="i <= star">
+            {{ i <= star ? "star" : "star_border" }}
+          </span>
+          }
+          <span>{{ star }}+</span>
+        </button>
+        }
+      </div>
+    </div>
+
+    <!-- Availability -->
+    <div class="filter-group">
+      <div class="filter-label">
+        <span class="material-icons">inventory</span>
+        Disponibilidad
+      </div>
+      <div class="availability-filter">
+        <button
+          class="availability-btn high"
+          [class.active]="filters().availability === 'high'"
+          (click)="
+            filterChange.emit({
+              field: 'availability',
+              value: filters().availability === 'high' ? '' : 'high'
+            })
+          "
+        >
+          <span class="availability-dot"></span>
+          Alta
+        </button>
+        <button
+          class="availability-btn medium"
+          [class.active]="filters().availability === 'medium'"
+          (click)="
+            filterChange.emit({
+              field: 'availability',
+              value: filters().availability === 'medium' ? '' : 'medium'
+            })
+          "
+        >
+          <span class="availability-dot"></span>
+          Media
+        </button>
+        <button
+          class="availability-btn low"
+          [class.active]="filters().availability === 'low'"
+          (click)="
+            filterChange.emit({
+              field: 'availability',
+              value: filters().availability === 'low' ? '' : 'low'
+            })
+          "
+        >
+          <span class="availability-dot"></span>
+          Baja
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>

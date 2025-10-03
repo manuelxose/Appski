@@ -1,0 +1,95 @@
+[
+  {
+    "id": "doc-001",
+    "type": "invoice",
+    "title": "Factura Premium Anual 2024",
+    "description": "Suscripción Premium - Renovación anual",
+    "fileName": "factura-premium-2024.pdf",
+    "fileSize": 245678,
+    "fileType": "application/pdf",
+    "uploadDate": "2024-10-01T10:00:00Z",
+    "fileUrl": "/documents/factura-premium-2024.pdf",
+    "thumbnailUrl": "/documents/thumbnails/factura-premium-2024.jpg",
+    "tags": ["premium", "factura", "2024"]
+  },
+  {
+    "id": "doc-002",
+    "type": "ticket",
+    "title": "Forfait Baqueira Beret - Semana Blanca",
+    "description": "Pase de temporada válido del 15 al 22 de febrero",
+    "fileName": "forfait-baqueira-feb-2025.pdf",
+    "fileSize": 128934,
+    "fileType": "application/pdf",
+    "uploadDate": "2025-02-10T14:30:00Z",
+    "expiryDate": "2025-02-22T23:59:59Z",
+    "fileUrl": "/documents/forfait-baqueira-feb-2025.pdf",
+    "thumbnailUrl": "/documents/thumbnails/forfait-baqueira-feb-2025.jpg",
+    "tags": ["forfait", "baqueira", "2025"]
+  },
+  {
+    "id": "doc-003",
+    "type": "insurance",
+    "title": "Seguro de Esquí 2024-2025",
+    "description": "Cobertura completa para accidentes en pistas",
+    "fileName": "seguro-esqui-2024-2025.pdf",
+    "fileSize": 892341,
+    "fileType": "application/pdf",
+    "uploadDate": "2024-11-15T09:00:00Z",
+    "expiryDate": "2025-04-30T23:59:59Z",
+    "fileUrl": "/documents/seguro-esqui-2024-2025.pdf",
+    "thumbnailUrl": "/documents/thumbnails/seguro-esqui-2024-2025.jpg",
+    "tags": ["seguro", "cobertura", "2024-2025"],
+    "metadata": {
+      "policyNumber": "POL-2024-567890",
+      "provider": "Seguros Montaña"
+    }
+  },
+  {
+    "id": "doc-004",
+    "type": "license",
+    "title": "Licencia Federativa RFEDI",
+    "description": "Real Federación Española Deportes de Invierno",
+    "fileName": "licencia-rfedi-2024-2025.pdf",
+    "fileSize": 156789,
+    "fileType": "application/pdf",
+    "uploadDate": "2024-09-20T11:45:00Z",
+    "expiryDate": "2025-06-30T23:59:59Z",
+    "fileUrl": "/documents/licencia-rfedi-2024-2025.pdf",
+    "thumbnailUrl": "/documents/thumbnails/licencia-rfedi-2024-2025.jpg",
+    "tags": ["licencia", "federación", "rfedi"],
+    "metadata": {
+      "licenseNumber": "RFEDI-2024-12345",
+      "category": "Adulto"
+    }
+  },
+  {
+    "id": "doc-005",
+    "type": "receipt",
+    "title": "Recibo Alquiler Equipo - Sierra Nevada",
+    "description": "Alquiler de esquís y botas - 3 días",
+    "fileName": "recibo-alquiler-sierra-nevada.pdf",
+    "fileSize": 98234,
+    "fileType": "application/pdf",
+    "uploadDate": "2025-01-05T16:20:00Z",
+    "fileUrl": "/documents/recibo-alquiler-sierra-nevada.pdf",
+    "thumbnailUrl": "/documents/thumbnails/recibo-alquiler-sierra-nevada.jpg",
+    "tags": ["recibo", "alquiler", "sierra nevada"]
+  },
+  {
+    "id": "doc-006",
+    "type": "certificate",
+    "title": "Certificado Curso Avalanchas Nivel 1",
+    "description": "Curso de seguridad en terreno avalanchas",
+    "fileName": "certificado-avalanchas-nivel1.pdf",
+    "fileSize": 234567,
+    "fileType": "application/pdf",
+    "uploadDate": "2024-12-10T10:00:00Z",
+    "fileUrl": "/documents/certificado-avalanchas-nivel1.pdf",
+    "thumbnailUrl": "/documents/thumbnails/certificado-avalanchas-nivel1.jpg",
+    "tags": ["certificado", "formación", "avalanchas"],
+    "metadata": {
+      "certificateNumber": "CERT-AV1-2024-789",
+      "issuer": "Escuela de Montaña Pirineos"
+    }
+  }
+]

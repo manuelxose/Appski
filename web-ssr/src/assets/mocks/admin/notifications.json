@@ -1,0 +1,143 @@
+{
+  "notifications": [
+    {
+      "id": "NOT001",
+      "type": "booking_confirmed",
+      "title": "Nueva reserva confirmada",
+      "message": "Reserva BK010 confirmada para Isabel Navarro en Sierra Nevada",
+      "priority": "normal",
+      "status": "unread",
+      "actionUrl": "/admin/bookings/BK010",
+      "createdAt": "2025-10-03T09:00:00Z",
+      "relatedEntity": {
+        "type": "booking",
+        "id": "BK010"
+      }
+    },
+    {
+      "id": "NOT002",
+      "type": "payment_failed",
+      "title": "Pago fallido",
+      "message": "El pago PAY004 de María López ha fallado. Motivo: Fondos insuficientes",
+      "priority": "high",
+      "status": "unread",
+      "actionUrl": "/admin/payments/PAY004",
+      "createdAt": "2025-10-03T11:45:00Z",
+      "relatedEntity": {
+        "type": "payment",
+        "id": "PAY004"
+      }
+    },
+    {
+      "id": "NOT003",
+      "type": "refund_requested",
+      "title": "Solicitud de reembolso",
+      "message": "Cristina Méndez ha solicitado un reembolso de 180€ - REF005",
+      "priority": "high",
+      "status": "read",
+      "actionUrl": "/admin/payments?tab=refunds",
+      "createdAt": "2025-10-03T08:15:00Z",
+      "readAt": "2025-10-03T09:00:00Z",
+      "relatedEntity": {
+        "type": "refund",
+        "id": "REF005"
+      }
+    },
+    {
+      "id": "NOT004",
+      "type": "low_stock",
+      "title": "Stock bajo de equipamiento",
+      "message": "El inventario de esquís en Sierra Nevada está por debajo del mínimo (12 unidades)",
+      "priority": "medium",
+      "status": "read",
+      "actionUrl": "/admin/inventory",
+      "createdAt": "2025-10-02T16:30:00Z",
+      "readAt": "2025-10-03T08:00:00Z",
+      "relatedEntity": {
+        "type": "inventory",
+        "id": "INV-SN-SKI"
+      }
+    },
+    {
+      "id": "NOT005",
+      "type": "new_user",
+      "title": "Nuevo usuario registrado",
+      "message": "Isabel Navarro se ha registrado desde Madrid",
+      "priority": "low",
+      "status": "read",
+      "actionUrl": "/admin/users/USR010",
+      "createdAt": "2025-10-01T09:00:00Z",
+      "readAt": "2025-10-01T10:00:00Z",
+      "relatedEntity": {
+        "type": "user",
+        "id": "USR010"
+      }
+    },
+    {
+      "id": "NOT006",
+      "type": "payout_pending",
+      "title": "Pago a estación pendiente",
+      "message": "El pago PAYOUT002 a Baqueira Beret (8.750€) está programado para el 10/10/2025",
+      "priority": "normal",
+      "status": "read",
+      "actionUrl": "/admin/payments?tab=payouts",
+      "createdAt": "2025-10-01T09:00:00Z",
+      "readAt": "2025-10-01T14:00:00Z",
+      "relatedEntity": {
+        "type": "payout",
+        "id": "PAYOUT002"
+      }
+    },
+    {
+      "id": "NOT007",
+      "type": "review_posted",
+      "title": "Nueva valoración",
+      "message": "Luis Fernández ha dejado una valoración de 5 estrellas para Formigal",
+      "priority": "low",
+      "status": "read",
+      "actionUrl": "/admin/reviews",
+      "createdAt": "2025-09-30T18:20:00Z",
+      "readAt": "2025-10-01T09:00:00Z",
+      "relatedEntity": {
+        "type": "review",
+        "id": "REV045"
+      }
+    },
+    {
+      "id": "NOT008",
+      "type": "system_alert",
+      "title": "Actualización del sistema completada",
+      "message": "La actualización v2.5.0 se ha instalado correctamente",
+      "priority": "low",
+      "status": "read",
+      "actionUrl": "/admin/settings/system",
+      "createdAt": "2025-09-30T03:00:00Z",
+      "readAt": "2025-09-30T09:00:00Z",
+      "relatedEntity": {
+        "type": "system",
+        "id": "UPDATE-250"
+      }
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "unread": 2,
+    "read": 6,
+    "byPriority": {
+      "high": 2,
+      "medium": 1,
+      "normal": 2,
+      "low": 3
+    },
+    "byType": {
+      "booking_confirmed": 1,
+      "payment_failed": 1,
+      "refund_requested": 1,
+      "low_stock": 1,
+      "new_user": 1,
+      "payout_pending": 1,
+      "review_posted": 1,
+      "system_alert": 1
+    }
+  }
+}

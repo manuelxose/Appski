@@ -1,0 +1,36 @@
+<div [class]="cardClass()">
+  @if (loading()) {
+  <div class="stat-skeleton">
+    <div class="skeleton-icon"></div>
+    <div class="skeleton-content">
+      <div class="skeleton-line skeleton-line-short"></div>
+      <div class="skeleton-line skeleton-line-long"></div>
+    </div>
+  </div>
+  } @else {
+  <div class="stat-header">
+    @if (icon()) {
+    <div class="stat-icon">{{ icon() }}</div>
+    }
+
+    <div class="stat-info">
+      <div class="stat-label">{{ label() }}</div>
+
+      @if (change() !== undefined) {
+      <div [class]="trendClass()">
+        <span class="trend-icon">{{ trendIcon() }}</span>
+        <span class="trend-value">{{ formattedChange() }}</span>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="stat-body">
+    <div class="stat-value">{{ formattedValue() }}</div>
+
+    @if (subtitle()) {
+    <div class="stat-subtitle">{{ subtitle() }}</div>
+    }
+  </div>
+  }
+</div>

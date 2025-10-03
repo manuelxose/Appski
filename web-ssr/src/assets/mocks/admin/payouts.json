@@ -1,0 +1,143 @@
+{
+  "payouts": [
+    {
+      "id": "PAYOUT001",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "amount": 12500.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-09-10",
+      "processedAt": "2025-09-10T09:00:00Z",
+      "reference": "TRANS-SN-092025",
+      "bankAccount": "ES12 1234 5678 9012 3456 7890",
+      "commission": 15,
+      "grossRevenue": 14705.88,
+      "notes": "Pago mensual agosto 2025"
+    },
+    {
+      "id": "PAYOUT002",
+      "stationId": "baqueira-beret",
+      "stationName": "Baqueira Beret",
+      "amount": 8750.0,
+      "currency": "EUR",
+      "status": "pending",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-10-10",
+      "reference": "TRANS-BB-102025",
+      "bankAccount": "ES98 9876 5432 1098 7654 3210",
+      "commission": 15,
+      "grossRevenue": 10294.12,
+      "notes": "Pago mensual septiembre 2025"
+    },
+    {
+      "id": "PAYOUT003",
+      "stationId": "formigal",
+      "stationName": "Formigal",
+      "amount": 6350.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-09-10",
+      "processedAt": "2025-09-10T09:30:00Z",
+      "reference": "TRANS-FM-092025",
+      "bankAccount": "ES45 5555 6666 7777 8888 9999",
+      "commission": 15,
+      "grossRevenue": 7470.59,
+      "notes": "Pago mensual agosto 2025"
+    },
+    {
+      "id": "PAYOUT004",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "amount": 15800.0,
+      "currency": "EUR",
+      "status": "scheduled",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-10-15",
+      "reference": "TRANS-SN-102025",
+      "bankAccount": "ES12 1234 5678 9012 3456 7890",
+      "commission": 15,
+      "grossRevenue": 18588.24,
+      "notes": "Pago mensual septiembre 2025 - Incremento temporada alta"
+    },
+    {
+      "id": "PAYOUT005",
+      "stationId": "baqueira-beret",
+      "stationName": "Baqueira Beret",
+      "amount": 11200.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-09-10",
+      "processedAt": "2025-09-10T10:00:00Z",
+      "reference": "TRANS-BB-092025",
+      "bankAccount": "ES98 9876 5432 1098 7654 3210",
+      "commission": 15,
+      "grossRevenue": 13176.47,
+      "notes": "Pago mensual agosto 2025"
+    },
+    {
+      "id": "PAYOUT006",
+      "stationId": "formigal",
+      "stationName": "Formigal",
+      "amount": 7890.0,
+      "currency": "EUR",
+      "status": "in_progress",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-10-10",
+      "reference": "TRANS-FM-102025",
+      "bankAccount": "ES45 5555 6666 7777 8888 9999",
+      "commission": 15,
+      "grossRevenue": 9282.35,
+      "notes": "Pago mensual septiembre 2025 - En proceso de transferencia"
+    },
+    {
+      "id": "PAYOUT007",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "amount": 10500.0,
+      "currency": "EUR",
+      "status": "failed",
+      "method": "bank_transfer",
+      "scheduledAt": "2025-09-05",
+      "reference": "TRANS-SN-092025-FAIL",
+      "bankAccount": "ES12 1234 5678 9012 3456 7890",
+      "commission": 15,
+      "grossRevenue": 12352.94,
+      "notes": "Transferencia rechazada - Datos bancarios incorrectos. Reprogramar.",
+      "failureReason": "Invalid bank account"
+    }
+  ],
+  "summary": {
+    "totalPayouts": 72990.0,
+    "completedPayouts": 38600.0,
+    "pendingPayouts": 8750.0,
+    "scheduledPayouts": 15800.0,
+    "inProgressPayouts": 7890.0,
+    "failedPayouts": 10500.0,
+    "count": {
+      "total": 7,
+      "completed": 3,
+      "pending": 1,
+      "scheduled": 1,
+      "in_progress": 1,
+      "failed": 1
+    },
+    "byStation": {
+      "sierra-nevada": {
+        "count": 3,
+        "total": 38800.0
+      },
+      "baqueira-beret": {
+        "count": 2,
+        "total": 19950.0
+      },
+      "formigal": {
+        "count": 2,
+        "total": 14240.0
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "customers": [
+    {
+      "id": "CUS001",
+      "userId": "USR001",
+      "name": "Carlos Martínez",
+      "email": "carlos.martinez@email.com",
+      "phone": "+34 612 345 678",
+      "segment": "vip",
+      "lifetimeValue": 2450.0,
+      "totalBookings": 12,
+      "averageBookingValue": 204.17,
+      "lastBookingDate": "2025-09-28T10:00:00Z",
+      "firstBookingDate": "2024-05-20T14:30:00Z",
+      "preferredStation": "sierra-nevada",
+      "tags": ["frequent", "high-value", "ski-enthusiast"],
+      "status": "active",
+      "notes": "Cliente VIP - Ofrecer descuentos especiales",
+      "createdAt": "2024-05-15T10:30:00Z",
+      "updatedAt": "2025-10-01T16:20:00Z"
+    },
+    {
+      "id": "CUS002",
+      "userId": "USR002",
+      "name": "Ana García",
+      "email": "ana.garcia@email.com",
+      "phone": "+34 623 456 789",
+      "segment": "regular",
+      "lifetimeValue": 1680.0,
+      "totalBookings": 8,
+      "averageBookingValue": 210.0,
+      "lastBookingDate": "2025-10-02T14:20:00Z",
+      "firstBookingDate": "2024-09-10T11:15:00Z",
+      "preferredStation": "baqueira-beret",
+      "tags": ["frequent", "beginner"],
+      "status": "active",
+      "notes": "Interesada en clases grupales",
+      "createdAt": "2024-08-20T14:45:00Z",
+      "updatedAt": "2025-10-02T15:00:00Z"
+    },
+    {
+      "id": "CUS003",
+      "userId": "USR003",
+      "name": "Luis Fernández",
+      "email": "luis.fernandez@email.com",
+      "phone": "+34 634 567 890",
+      "segment": "vip",
+      "lifetimeValue": 5890.0,
+      "totalBookings": 25,
+      "averageBookingValue": 235.6,
+      "lastBookingDate": "2025-09-30T09:15:00Z",
+      "firstBookingDate": "2024-01-15T10:00:00Z",
+      "preferredStation": "formigal",
+      "tags": ["frequent", "high-value", "ambassador"],
+      "status": "active",
+      "notes": "Embajador de marca - Potencial para referidos",
+      "createdAt": "2023-12-10T11:20:00Z",
+      "updatedAt": "2025-09-30T10:30:00Z"
+    },
+    {
+      "id": "CUS004",
+      "userId": "USR004",
+      "name": "María López",
+      "email": "maria.lopez@email.com",
+      "phone": "+34 645 678 901",
+      "segment": "at_risk",
+      "lifetimeValue": 780.0,
+      "totalBookings": 3,
+      "averageBookingValue": 260.0,
+      "lastBookingDate": "2025-06-10T15:30:00Z",
+      "firstBookingDate": "2024-03-05T12:00:00Z",
+      "preferredStation": "sierra-nevada",
+      "tags": ["inactive", "needs-attention"],
+      "status": "inactive",
+      "notes": "No ha reservado en 4 meses - Enviar campaña de reactivación",
+      "createdAt": "2024-02-28T09:00:00Z",
+      "updatedAt": "2025-06-15T16:00:00Z"
+    },
+    {
+      "id": "CUS005",
+      "userId": "USR006",
+      "name": "Laura Ruiz",
+      "email": "laura.ruiz@email.com",
+      "phone": "+34 667 890 123",
+      "segment": "regular",
+      "lifetimeValue": 1250.0,
+      "totalBookings": 5,
+      "averageBookingValue": 250.0,
+      "lastBookingDate": "2025-09-28T10:00:00Z",
+      "firstBookingDate": "2024-06-20T09:30:00Z",
+      "preferredStation": "formigal",
+      "tags": ["family", "weekend-skier"],
+      "status": "active",
+      "notes": "Reserva principalmente fines de semana con familia",
+      "createdAt": "2024-06-12T10:15:00Z",
+      "updatedAt": "2025-09-28T11:00:00Z"
+    },
+    {
+      "id": "CUS006",
+      "userId": "USR007",
+      "name": "Jorge Moreno",
+      "email": "jorge.moreno@email.com",
+      "phone": "+34 678 901 234",
+      "segment": "promising",
+      "lifetimeValue": 1890.0,
+      "totalBookings": 7,
+      "averageBookingValue": 270.0,
+      "lastBookingDate": "2025-10-02T08:30:00Z",
+      "firstBookingDate": "2024-09-15T13:45:00Z",
+      "preferredStation": "sierra-nevada",
+      "tags": ["growing", "high-potential"],
+      "status": "active",
+      "notes": "Cliente en crecimiento - Buena conversión",
+      "createdAt": "2024-09-03T12:45:00Z",
+      "updatedAt": "2025-10-02T09:00:00Z"
+    }
+  ],
+  "segments": {
+    "vip": {
+      "count": 2,
+      "totalValue": 8340.0,
+      "averageValue": 4170.0,
+      "criteria": "LTV > 3000€ o >15 reservas"
+    },
+    "regular": {
+      "count": 2,
+      "totalValue": 2930.0,
+      "averageValue": 1465.0,
+      "criteria": "LTV 1000-3000€ y 5-15 reservas"
+    },
+    "promising": {
+      "count": 1,
+      "totalValue": 1890.0,
+      "averageValue": 1890.0,
+      "criteria": "Tendencia creciente última 3 meses"
+    },
+    "at_risk": {
+      "count": 1,
+      "totalValue": 780.0,
+      "averageValue": 780.0,
+      "criteria": "Sin actividad >90 días"
+    }
+  },
+  "summary": {
+    "totalCustomers": 6,
+    "activeCustomers": 5,
+    "inactiveCustomers": 1,
+    "totalLifetimeValue": 13890.0,
+    "averageLifetimeValue": 2315.0,
+    "totalBookings": 60,
+    "averageBookingsPerCustomer": 10
+  }
+}

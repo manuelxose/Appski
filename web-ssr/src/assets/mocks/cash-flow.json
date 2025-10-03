@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "month": "Ene",
+      "operatingCashFlow": 52000,
+      "investingCashFlow": -15000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 29000
+    },
+    {
+      "month": "Feb",
+      "operatingCashFlow": 58000,
+      "investingCashFlow": -12000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 38000
+    },
+    {
+      "month": "Mar",
+      "operatingCashFlow": 65000,
+      "investingCashFlow": -25000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 32000
+    },
+    {
+      "month": "Abr",
+      "operatingCashFlow": 60000,
+      "investingCashFlow": -10000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 42000
+    },
+    {
+      "month": "May",
+      "operatingCashFlow": 55000,
+      "investingCashFlow": -18000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 29000
+    },
+    {
+      "month": "Jun",
+      "operatingCashFlow": 50000,
+      "investingCashFlow": -8000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 34000
+    },
+    {
+      "month": "Jul",
+      "operatingCashFlow": 48000,
+      "investingCashFlow": -12000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 28000
+    },
+    {
+      "month": "Ago",
+      "operatingCashFlow": 45000,
+      "investingCashFlow": -15000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 22000
+    },
+    {
+      "month": "Sep",
+      "operatingCashFlow": 58000,
+      "investingCashFlow": -20000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 30000
+    },
+    {
+      "month": "Oct",
+      "operatingCashFlow": 70000,
+      "investingCashFlow": -18000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 44000
+    },
+    {
+      "month": "Nov",
+      "operatingCashFlow": 78000,
+      "investingCashFlow": -22000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 48000
+    },
+    {
+      "month": "Dic",
+      "operatingCashFlow": 96000,
+      "investingCashFlow": -30000,
+      "financingCashFlow": -8000,
+      "netCashFlow": 58000
+    }
+  ],
+  "summary": {
+    "totalOperatingCashFlow": 735000,
+    "totalInvestingCashFlow": -205000,
+    "totalFinancingCashFlow": -96000,
+    "totalNetCashFlow": 434000,
+    "averageMonthlyOperating": 61250,
+    "averageMonthlyInvesting": -17083,
+    "averageMonthlyFinancing": -8000,
+    "averageMonthlyNet": 36167,
+    "cashFlowMargin": 30.0,
+    "freeCashFlow": 530000
+  }
+}

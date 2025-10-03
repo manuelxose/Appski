@@ -1,0 +1,52 @@
+<!-- Moved lodging carousel template -->
+<section
+  id="lodging"
+  class="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-white"
+>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8 md:mb-12">
+      <h2
+        class="section-title text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4"
+        data-i18n="lodging.title"
+      >
+        Alojamientos rurales únicos
+      </h2>
+      <p
+        class="section-subtitle text-base md:text-lg text-slate-600 max-w-2xl mx-auto"
+        data-i18n="lodging.subtitle"
+      >
+        Casas de montaña y experiencias auténticas cerca de las pistas
+      </p>
+    </div>
+    <div class="lodging-carousel overflow-x-auto pb-6">
+      <div class="flex gap-5 md:gap-6" style="width: max-content">
+        @for (lodging of lodgings(); track lodging.id) {
+        <app-lodging-carousel-card [lodging]="lodging" />
+        }
+      </div>
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-8">
+      <a
+        routerLink="/alojamientos"
+        class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
+      >
+        <span>Ver todos los alojamientos</span>
+        <svg
+          class="w-5 h-5 ml-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

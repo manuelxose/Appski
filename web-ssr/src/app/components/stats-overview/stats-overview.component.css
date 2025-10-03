@@ -1,0 +1,158 @@
+/* ============================================
+   STATS OVERVIEW - APPLE/BOLT PREMIUM DESIGN
+   ============================================ */
+
+.stats-section {
+  background: linear-gradient(135deg, var(--neutral-50), var(--primary-50));
+}
+
+.stat-card {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--neutral-200);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  animation: slideUp 0.6s var(--ease-out);
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.stat-card-primary::before {
+  background: var(--gradient-primary);
+}
+
+.stat-card-success::before {
+  background: var(--gradient-success);
+}
+
+.stat-card-warning::before {
+  background: var(--gradient-warning);
+}
+
+.stat-card-teal::before {
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+}
+
+.stat-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card-primary:hover {
+  border-color: var(--primary-300);
+  box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.3);
+}
+
+.stat-card-success:hover {
+  border-color: var(--success-300);
+  box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.3);
+}
+
+.stat-card-warning:hover {
+  border-color: var(--warning-300);
+  box-shadow: 0 25px 50px -12px rgba(234, 179, 8, 0.3);
+}
+
+.stat-card-teal:hover {
+  border-color: #5eead4;
+  box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.3);
+}
+
+.stat-icon {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.stat-value {
+  font-weight: 900;
+  letter-spacing: var(--letter-spacing-tight);
+  animation: countUp 0.8s var(--ease-out);
+}
+
+.stat-bar {
+  background: var(--neutral-200);
+  border-radius: var(--radius-full);
+}
+
+.animate-bar {
+  width: 0;
+  animation: barGrow 1.5s var(--ease-out) forwards;
+  animation-delay: 0.3s;
+}
+
+/* Stagger animations */
+.stat-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes barGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+  }
+}

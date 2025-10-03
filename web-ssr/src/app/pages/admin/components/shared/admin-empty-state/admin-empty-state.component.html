@@ -1,0 +1,31 @@
+<div class="empty-state">
+  <div class="empty-state-icon">
+    {{ icon() }}
+  </div>
+
+  <div class="empty-state-content">
+    <h3 class="empty-state-title">{{ title() }}</h3>
+
+    @if (description()) {
+    <p class="empty-state-description">{{ description() }}</p>
+    }
+  </div>
+
+  @if (actionLabel() || secondaryActionLabel()) {
+  <div class="empty-state-actions">
+    @if (actionLabel()) {
+    <button class="btn btn-primary" (click)="onAction()" type="button">
+      {{ actionLabel() }}
+    </button>
+    } @if (secondaryActionLabel()) {
+    <button
+      class="btn btn-secondary"
+      (click)="onSecondaryAction()"
+      type="button"
+    >
+      {{ secondaryActionLabel() }}
+    </button>
+    }
+  </div>
+  }
+</div>

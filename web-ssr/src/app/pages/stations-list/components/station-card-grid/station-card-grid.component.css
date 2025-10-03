@@ -1,0 +1,105 @@
+/* Station card grid styles */
+.station-grid {
+  display: grid;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.station-grid.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.station-grid.list-view {
+  grid-template-columns: 1fr;
+}
+
+.station-card {
+  animation: slideUp 0.3s ease-out;
+  animation-fill-mode: backwards;
+}
+
+/* Stagger animation for cards */
+.station-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.station-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.station-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.station-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.station-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.station-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+/* List view specific styles */
+.list-view .station-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.list-view .station-card .relative {
+  height: 100%;
+  min-height: 220px;
+}
+
+/* Skeleton specific */
+.skeleton-card {
+  pointer-events: none;
+}
+
+/* Hover effects */
+.station-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Price badge animation */
+.station-card .absolute.bottom-3 {
+  transition: transform 0.2s ease;
+}
+
+.station-card:hover .absolute.bottom-3 {
+  transform: scale(1.05);
+}
+
+/* Feature badges */
+.station-card span[class*="bg-blue-50"] {
+  transition: all 0.2s ease;
+}
+
+.station-card:hover span[class*="bg-blue-50"] {
+  background-color: var(--primary-600);
+  color: var(--neutral-white);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .station-grid.grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .list-view .station-card {
+    grid-template-columns: 1fr;
+  }
+
+  .list-view .station-card .relative {
+    height: 200px;
+  }
+
+  /* Remove stagger on mobile for performance */
+  .station-card {
+    animation-delay: 0s !important;
+  }
+}
+
+/* Empty state */
+.col-span-full {
+  grid-column: 1 / -1;
+}

@@ -1,0 +1,407 @@
+[
+  {
+    "id": "SHP001",
+    "name": "SkiPro Sierra Nevada",
+    "station": "sierra-nevada",
+    "stationName": "Sierra Nevada",
+    "type": "rental_retail",
+    "address": "Plaza Pradollano, 1",
+    "city": "Monachil",
+    "zipCode": "18196",
+    "phone": "+34 958 480 100",
+    "email": "info@skipro-sn.com",
+    "website": "https://www.skipro-sn.com",
+    "rating": 4.6,
+    "totalReviews": 342,
+    "featured": true,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN001",
+      "name": "SkiPro España S.L.",
+      "email": "skipro@spain.com",
+      "phone": "+34 958 480 101",
+      "commissionRate": 12
+    },
+    "stats": {
+      "totalRentals": 1245,
+      "revenue": 89560,
+      "avgRating": 4.6,
+      "inventoryValue": 245000,
+      "lastRental": "2025-10-02T18:30:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "08:00", "close": "20:00" },
+      "tuesday": { "open": "08:00", "close": "20:00" },
+      "wednesday": { "open": "08:00", "close": "20:00" },
+      "thursday": { "open": "08:00", "close": "20:00" },
+      "friday": { "open": "08:00", "close": "20:00" },
+      "saturday": { "open": "08:00", "close": "21:00" },
+      "sunday": { "open": "08:00", "close": "21:00" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "boot_fitting",
+      "equipment_sale",
+      "repair_service",
+      "waxing",
+      "edge_sharpening",
+      "lift_pass_sales"
+    ],
+    "createdAt": "2024-01-10T10:00:00Z",
+    "updatedAt": "2025-10-02T18:30:00Z"
+  },
+  {
+    "id": "SHP002",
+    "name": "Baqueira Ski Rental",
+    "station": "baqueira-beret",
+    "stationName": "Baqueira Beret",
+    "type": "rental",
+    "address": "Carretera Baqueira, Km 3",
+    "city": "Baqueira",
+    "zipCode": "25598",
+    "phone": "+34 973 645 100",
+    "email": "info@baqueiraskirental.com",
+    "website": "https://www.baqueiraskirental.com",
+    "rating": 4.4,
+    "totalReviews": 198,
+    "featured": true,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN002",
+      "name": "Baqueira Sports S.L.",
+      "email": "baqueira@sports.com",
+      "phone": "+34 973 645 101",
+      "commissionRate": 12
+    },
+    "stats": {
+      "totalRentals": 987,
+      "revenue": 72340,
+      "avgRating": 4.4,
+      "inventoryValue": 198000,
+      "lastRental": "2025-10-02T16:15:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "08:30", "close": "19:30" },
+      "tuesday": { "open": "08:30", "close": "19:30" },
+      "wednesday": { "open": "08:30", "close": "19:30" },
+      "thursday": { "open": "08:30", "close": "19:30" },
+      "friday": { "open": "08:30", "close": "19:30" },
+      "saturday": { "open": "08:00", "close": "20:00" },
+      "sunday": { "open": "08:00", "close": "20:00" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "boot_fitting",
+      "waxing",
+      "storage",
+      "delivery"
+    ],
+    "createdAt": "2024-02-05T10:00:00Z",
+    "updatedAt": "2025-10-02T16:15:00Z"
+  },
+  {
+    "id": "SHP003",
+    "name": "Formigal Snow Shop",
+    "station": "formigal",
+    "stationName": "Formigal",
+    "type": "rental_retail",
+    "address": "Urbanización Formigal, 12",
+    "city": "Sallent de Gállego",
+    "zipCode": "22640",
+    "phone": "+34 974 490 200",
+    "email": "info@formigalsnowshop.com",
+    "website": "https://www.formigalsnowshop.com",
+    "rating": 4.3,
+    "totalReviews": 256,
+    "featured": false,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN003",
+      "name": "Pirineos Deportes S.A.",
+      "email": "pirineos@deportes.com",
+      "phone": "+34 974 490 201",
+      "commissionRate": 10
+    },
+    "stats": {
+      "totalRentals": 845,
+      "revenue": 58920,
+      "avgRating": 4.3,
+      "inventoryValue": 176000,
+      "lastRental": "2025-10-02T14:45:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "09:00", "close": "19:00" },
+      "tuesday": { "open": "09:00", "close": "19:00" },
+      "wednesday": { "open": "09:00", "close": "19:00" },
+      "thursday": { "open": "09:00", "close": "19:00" },
+      "friday": { "open": "09:00", "close": "19:00" },
+      "saturday": { "open": "08:30", "close": "20:00" },
+      "sunday": { "open": "08:30", "close": "20:00" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "equipment_sale",
+      "repair_service",
+      "waxing",
+      "lessons_booking",
+      "lift_pass_sales"
+    ],
+    "createdAt": "2024-01-20T10:00:00Z",
+    "updatedAt": "2025-10-02T14:45:00Z"
+  },
+  {
+    "id": "SHP004",
+    "name": "Candanchú Ski Center",
+    "station": "candanchu",
+    "stationName": "Candanchú",
+    "type": "rental_retail",
+    "address": "Estación de Candanchú, s/n",
+    "city": "Candanchú",
+    "zipCode": "22889",
+    "phone": "+34 974 373 200",
+    "email": "info@candanchuskicenter.com",
+    "website": "https://www.candanchuskicenter.com",
+    "rating": 4.5,
+    "totalReviews": 289,
+    "featured": true,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN004",
+      "name": "Candanchú Sports Group",
+      "email": "candanchu@sportsgroup.com",
+      "phone": "+34 974 373 201",
+      "commissionRate": 12
+    },
+    "stats": {
+      "totalRentals": 1123,
+      "revenue": 95780,
+      "avgRating": 4.5,
+      "inventoryValue": 267000,
+      "lastRental": "2025-10-02T19:20:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "08:00", "close": "20:00" },
+      "tuesday": { "open": "08:00", "close": "20:00" },
+      "wednesday": { "open": "08:00", "close": "20:00" },
+      "thursday": { "open": "08:00", "close": "20:00" },
+      "friday": { "open": "08:00", "close": "20:00" },
+      "saturday": { "open": "07:30", "close": "21:00" },
+      "sunday": { "open": "07:30", "close": "21:00" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "boot_fitting",
+      "equipment_sale",
+      "repair_service",
+      "waxing",
+      "edge_sharpening",
+      "storage",
+      "delivery",
+      "lift_pass_sales",
+      "avalanche_gear"
+    ],
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2025-10-02T19:20:00Z"
+  },
+  {
+    "id": "SHP005",
+    "name": "Astún Rental Point",
+    "station": "astun",
+    "stationName": "Astún",
+    "type": "rental",
+    "address": "Estación de Astún, Local 5",
+    "city": "Jaca",
+    "zipCode": "22889",
+    "phone": "+34 974 373 300",
+    "email": "info@astunrental.com",
+    "website": "https://www.astunrental.com",
+    "rating": 4.7,
+    "totalReviews": 412,
+    "featured": true,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN005",
+      "name": "Astún Services S.L.",
+      "email": "astun@services.com",
+      "phone": "+34 974 373 301",
+      "commissionRate": 15
+    },
+    "stats": {
+      "totalRentals": 1456,
+      "revenue": 112450,
+      "avgRating": 4.7,
+      "inventoryValue": 298000,
+      "lastRental": "2025-10-02T20:10:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "08:00", "close": "19:30" },
+      "tuesday": { "open": "08:00", "close": "19:30" },
+      "wednesday": { "open": "08:00", "close": "19:30" },
+      "thursday": { "open": "08:00", "close": "19:30" },
+      "friday": { "open": "08:00", "close": "19:30" },
+      "saturday": { "open": "07:30", "close": "20:30" },
+      "sunday": { "open": "07:30", "close": "20:30" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "boot_fitting",
+      "waxing",
+      "edge_sharpening",
+      "storage",
+      "delivery",
+      "avalanche_gear"
+    ],
+    "createdAt": "2024-02-01T10:00:00Z",
+    "updatedAt": "2025-10-02T20:10:00Z"
+  },
+  {
+    "id": "SHP006",
+    "name": "La Molina Equipment",
+    "station": "la-molina",
+    "stationName": "La Molina",
+    "type": "rental_retail",
+    "address": "Plaza de los Campeonatos, 3",
+    "city": "Alp",
+    "zipCode": "17538",
+    "phone": "+34 972 892 300",
+    "email": "info@lamolinaequipment.com",
+    "website": "https://www.lamolinaequipment.com",
+    "rating": 4.2,
+    "totalReviews": 178,
+    "featured": false,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN006",
+      "name": "Catalunya Snow Sports",
+      "email": "catalunya@snowsports.com",
+      "phone": "+34 972 892 301",
+      "commissionRate": 10
+    },
+    "stats": {
+      "totalRentals": 678,
+      "revenue": 45890,
+      "avgRating": 4.2,
+      "inventoryValue": 134000,
+      "lastRental": "2025-10-01T17:30:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "09:00", "close": "19:00" },
+      "tuesday": { "open": "09:00", "close": "19:00" },
+      "wednesday": { "open": "09:00", "close": "19:00" },
+      "thursday": { "open": "09:00", "close": "19:00" },
+      "friday": { "open": "09:00", "close": "19:00" },
+      "saturday": { "open": "08:30", "close": "19:30" },
+      "sunday": { "open": "08:30", "close": "19:30" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "equipment_sale",
+      "repair_service",
+      "lessons_booking"
+    ],
+    "createdAt": "2024-03-10T10:00:00Z",
+    "updatedAt": "2025-10-01T17:30:00Z"
+  },
+  {
+    "id": "SHP007",
+    "name": "Cerler Pro Shop",
+    "station": "cerler",
+    "stationName": "Cerler",
+    "type": "retail",
+    "address": "Calle Rincón de Cerler, 8",
+    "city": "Benasque",
+    "zipCode": "22440",
+    "phone": "+34 974 551 300",
+    "email": "info@cerlerproshop.com",
+    "website": "https://www.cerlerproshop.com",
+    "rating": 4.8,
+    "totalReviews": 523,
+    "featured": true,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN007",
+      "name": "Cerler Luxury Sports",
+      "email": "cerler@luxurysports.com",
+      "phone": "+34 974 551 301",
+      "commissionRate": 8
+    },
+    "stats": {
+      "totalRentals": 0,
+      "revenue": 187650,
+      "avgRating": 4.8,
+      "inventoryValue": 425000,
+      "lastRental": ""
+    },
+    "openingHours": {
+      "monday": { "open": "09:30", "close": "20:00" },
+      "tuesday": { "open": "09:30", "close": "20:00" },
+      "wednesday": { "open": "09:30", "close": "20:00" },
+      "thursday": { "open": "09:30", "close": "20:00" },
+      "friday": { "open": "09:30", "close": "20:00" },
+      "saturday": { "open": "09:00", "close": "21:00" },
+      "sunday": { "open": "09:00", "close": "21:00" }
+    },
+    "services": [
+      "equipment_sale",
+      "boot_fitting",
+      "repair_service",
+      "waxing",
+      "edge_sharpening"
+    ],
+    "createdAt": "2024-01-05T10:00:00Z",
+    "updatedAt": "2025-10-02T15:45:00Z"
+  },
+  {
+    "id": "SHP008",
+    "name": "Port Ainé Ski Hire",
+    "station": "port-aine",
+    "stationName": "Port Ainé",
+    "type": "rental",
+    "address": "Estación Port Ainé, Edificio Principal",
+    "city": "Rialp",
+    "zipCode": "25594",
+    "phone": "+34 973 621 200",
+    "email": "info@portaineskihire.com",
+    "rating": 4.1,
+    "totalReviews": 134,
+    "featured": false,
+    "status": "active",
+    "owner": {
+      "id": "SHOP_OWN008",
+      "name": "Port Ainé Mountain Services",
+      "email": "portaine@mountain.com",
+      "phone": "+34 973 621 201",
+      "commissionRate": 12
+    },
+    "stats": {
+      "totalRentals": 542,
+      "revenue": 34670,
+      "avgRating": 4.1,
+      "inventoryValue": 98000,
+      "lastRental": "2025-10-01T12:20:00Z"
+    },
+    "openingHours": {
+      "monday": { "open": "09:00", "close": "18:30" },
+      "tuesday": { "open": "09:00", "close": "18:30" },
+      "wednesday": { "open": "09:00", "close": "18:30" },
+      "thursday": { "open": "09:00", "close": "18:30" },
+      "friday": { "open": "09:00", "close": "18:30" },
+      "saturday": { "open": "08:30", "close": "19:00" },
+      "sunday": { "open": "08:30", "close": "19:00" }
+    },
+    "services": [
+      "ski_rental",
+      "snowboard_rental",
+      "storage",
+      "lift_pass_sales"
+    ],
+    "createdAt": "2024-03-01T10:00:00Z",
+    "updatedAt": "2025-10-01T12:20:00Z"
+  }
+]

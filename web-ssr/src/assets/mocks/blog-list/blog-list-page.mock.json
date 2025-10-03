@@ -1,0 +1,290 @@
+{
+  "data": {
+    "articles": [
+      {
+        "id": "1",
+        "slug": "guia-completa-principiantes-esqui",
+        "title": "Guía Completa para Principiantes en el Esquí",
+        "excerpt": "Todo lo que necesitas saber para dar tus primeros pasos en la nieve. Desde el equipo básico hasta las técnicas fundamentales.",
+        "coverImage": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "author": {
+          "name": "María González",
+          "avatar": "https://i.pravatar.cc/150?img=1"
+        },
+        "publishedAt": "2024-09-15",
+        "readingTime": 8,
+        "category": "Consejos",
+        "tags": ["principiantes", "esquí", "equipamiento"],
+        "featured": true,
+        "views": 1250,
+        "likes": 89
+      },
+      {
+        "id": "2",
+        "slug": "mejores-estaciones-pirineos-2024",
+        "title": "Las Mejores Estaciones de los Pirineos para 2024-2025",
+        "excerpt": "Descubre las estaciones más destacadas de los Pirineos con las mejores pistas, servicios y ofertas para esta temporada.",
+        "coverImage": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+        "author": {
+          "name": "Carlos Martínez",
+          "avatar": "https://i.pravatar.cc/150?img=3"
+        },
+        "publishedAt": "2024-09-10",
+        "readingTime": 12,
+        "category": "Destinos",
+        "tags": ["pirineos", "estaciones", "temporada"],
+        "featured": false,
+        "views": 980,
+        "likes": 67
+      },
+      {
+        "id": "3",
+        "slug": "equipamiento-esencial-snowboard",
+        "title": "Equipamiento Esencial para Practicar Snowboard",
+        "excerpt": "Una guía detallada sobre el equipo que necesitas para iniciarte en el snowboard y disfrutar al máximo de la experiencia.",
+        "coverImage": "https://images.unsplash.com/photo-1526912112623-8e9e654b1f86?w=800",
+        "author": {
+          "name": "Laura Sánchez",
+          "avatar": "https://i.pravatar.cc/150?img=5"
+        },
+        "publishedAt": "2024-09-08",
+        "readingTime": 6,
+        "category": "Equipamiento",
+        "tags": ["snowboard", "equipamiento", "principiantes"],
+        "featured": false,
+        "views": 760,
+        "likes": 54
+      },
+      {
+        "id": "4",
+        "slug": "seguridad-montana-consejos-esenciales",
+        "title": "Seguridad en la Montaña: Consejos Esenciales",
+        "excerpt": "La seguridad es lo primero. Aprende las reglas básicas y medidas de prevención para disfrutar de la nieve sin riesgos.",
+        "coverImage": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800",
+        "author": {
+          "name": "Javier Torres",
+          "avatar": "https://i.pravatar.cc/150?img=7"
+        },
+        "publishedAt": "2024-09-05",
+        "readingTime": 10,
+        "category": "Seguridad",
+        "tags": ["seguridad", "prevención", "montaña"],
+        "featured": false,
+        "views": 1100,
+        "likes": 92
+      },
+      {
+        "id": "5",
+        "slug": "ahorrar-forfait-trucos",
+        "title": "Cómo Ahorrar en el Forfait: Trucos y Consejos",
+        "excerpt": "Descubre las mejores estrategias para conseguir forfaits más económicos y aprovechar descuentos exclusivos.",
+        "coverImage": "https://images.unsplash.com/photo-1498146831523-fbe41acdc5ad?w=800",
+        "author": {
+          "name": "Ana Ruiz",
+          "avatar": "https://i.pravatar.cc/150?img=9"
+        },
+        "publishedAt": "2024-09-01",
+        "readingTime": 5,
+        "category": "Consejos",
+        "tags": ["forfait", "ahorro", "consejos"],
+        "featured": false,
+        "views": 850,
+        "likes": 71
+      },
+      {
+        "id": "6",
+        "slug": "mejores-pistas-nivel-avanzado",
+        "title": "Las Mejores Pistas para Esquiadores Avanzados",
+        "excerpt": "Si buscas desafíos y adrenalina, estas son las pistas más técnicas y exigentes de España.",
+        "coverImage": "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=800",
+        "author": {
+          "name": "Miguel Ángel López",
+          "avatar": "https://i.pravatar.cc/150?img=11"
+        },
+        "publishedAt": "2024-08-28",
+        "readingTime": 7,
+        "category": "Destinos",
+        "tags": ["pistas", "avanzado", "técnico"],
+        "featured": false,
+        "views": 650,
+        "likes": 48
+      },
+      {
+        "id": "7",
+        "slug": "preparacion-fisica-temporada-esqui",
+        "title": "Preparación Física para la Temporada de Esquí",
+        "excerpt": "Ejercicios y rutinas para llegar en forma a la temporada y evitar lesiones en las pistas.",
+        "coverImage": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800",
+        "author": {
+          "name": "Patricia Fernández",
+          "avatar": "https://i.pravatar.cc/150?img=13"
+        },
+        "publishedAt": "2024-08-25",
+        "readingTime": 9,
+        "category": "Consejos",
+        "tags": ["preparación", "fitness", "salud"],
+        "featured": false,
+        "views": 720,
+        "likes": 61
+      },
+      {
+        "id": "8",
+        "slug": "eventos-copa-mundo-esqui-2025",
+        "title": "Eventos Destacados: Copa del Mundo de Esquí 2025",
+        "excerpt": "No te pierdas los eventos más importantes de la temporada. Fechas, ubicaciones y cómo conseguir entradas.",
+        "coverImage": "https://images.unsplash.com/photo-1565593494330-5474fa7c16c7?w=800",
+        "author": {
+          "name": "Roberto Díaz",
+          "avatar": "https://i.pravatar.cc/150?img=15"
+        },
+        "publishedAt": "2024-08-20",
+        "readingTime": 6,
+        "category": "Eventos",
+        "tags": ["eventos", "competición", "copa-mundo"],
+        "featured": false,
+        "views": 540,
+        "likes": 38
+      },
+      {
+        "id": "9",
+        "slug": "esqui-familia-ninos",
+        "title": "Esquiar en Familia: Consejos con Niños",
+        "excerpt": "Planifica unas vacaciones perfectas en la nieve con toda la familia. Estaciones family-friendly y actividades para los más pequeños.",
+        "coverImage": "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800",
+        "author": {
+          "name": "Isabel Moreno",
+          "avatar": "https://i.pravatar.cc/150?img=17"
+        },
+        "publishedAt": "2024-08-18",
+        "readingTime": 8,
+        "category": "Consejos",
+        "tags": ["familia", "niños", "vacaciones"],
+        "featured": false,
+        "views": 890,
+        "likes": 75
+      },
+      {
+        "id": "10",
+        "slug": "mejores-destinos-sierra-nevada",
+        "title": "Sierra Nevada: Tu Guía Completa 2024-2025",
+        "excerpt": "Todo lo que necesitas saber sobre la estación más emblemática del sur de Europa. Pistas, alojamiento y mucho más.",
+        "coverImage": "https://images.unsplash.com/photo-1605538092605-2bc7a93d5b56?w=800",
+        "author": {
+          "name": "Francisco Jiménez",
+          "avatar": "https://i.pravatar.cc/150?img=19"
+        },
+        "publishedAt": "2024-08-15",
+        "readingTime": 11,
+        "category": "Destinos",
+        "tags": ["sierra-nevada", "guía", "andalucía"],
+        "featured": false,
+        "views": 1050,
+        "likes": 83
+      }
+    ],
+    "categories": [
+      {
+        "id": "1",
+        "name": "Todos",
+        "slug": "todos",
+        "description": "Todos los artículos del blog",
+        "count": 10
+      },
+      {
+        "id": "2",
+        "name": "Consejos",
+        "slug": "consejos",
+        "description": "Tips y recomendaciones para esquiadores",
+        "count": 4,
+        "color": "bg-blue-100 text-blue-800"
+      },
+      {
+        "id": "3",
+        "name": "Destinos",
+        "slug": "destinos",
+        "description": "Las mejores estaciones de esquí",
+        "count": 3,
+        "color": "bg-green-100 text-green-800"
+      },
+      {
+        "id": "4",
+        "name": "Equipamiento",
+        "slug": "equipamiento",
+        "description": "Guías de equipamiento y material",
+        "count": 1,
+        "color": "bg-purple-100 text-purple-800"
+      },
+      {
+        "id": "5",
+        "name": "Seguridad",
+        "slug": "seguridad",
+        "description": "Consejos de seguridad en la montaña",
+        "count": 1,
+        "color": "bg-red-100 text-red-800"
+      },
+      {
+        "id": "6",
+        "name": "Eventos",
+        "slug": "eventos",
+        "description": "Eventos y competiciones",
+        "count": 1,
+        "color": "bg-pink-100 text-pink-800"
+      }
+    ],
+    "tags": [
+      "principiantes",
+      "esquí",
+      "equipamiento",
+      "pirineos",
+      "estaciones",
+      "snowboard",
+      "seguridad",
+      "forfait",
+      "ahorro",
+      "avanzado",
+      "fitness",
+      "eventos",
+      "familia",
+      "niños",
+      "sierra-nevada"
+    ],
+    "featuredArticles": [
+      {
+        "id": "1",
+        "slug": "guia-completa-principiantes-esqui",
+        "title": "Guía Completa para Principiantes en el Esquí",
+        "excerpt": "Todo lo que necesitas saber para dar tus primeros pasos en la nieve.",
+        "coverImage": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "author": {
+          "name": "María González",
+          "avatar": "https://i.pravatar.cc/150?img=1"
+        },
+        "publishedAt": "2024-09-15",
+        "readingTime": 8,
+        "category": "Consejos",
+        "tags": ["principiantes", "esquí", "equipamiento"],
+        "featured": true,
+        "views": 1250,
+        "likes": 89
+      }
+    ],
+    "popularTags": [
+      "principiantes",
+      "esquí",
+      "snowboard",
+      "seguridad",
+      "equipamiento",
+      "pirineos",
+      "sierra-nevada",
+      "forfait"
+    ],
+    "meta": {
+      "totalArticles": 10,
+      "lastUpdated": "2024-09-15T10:00:00Z"
+    }
+  },
+  "meta": {
+    "timestamp": "2024-09-15T10:00:00Z",
+    "version": "1.0"
+  }
+}

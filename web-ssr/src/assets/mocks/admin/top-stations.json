@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Baqueira Beret",
+    "slug": "baqueira-beret",
+    "bookings": 234,
+    "revenue": 23450,
+    "change": 15,
+    "location": "Valle de Arán, Lleida"
+  },
+  {
+    "id": 2,
+    "name": "Sierra Nevada",
+    "slug": "sierra-nevada",
+    "bookings": 189,
+    "revenue": 18900,
+    "change": 12,
+    "location": "Granada, Andalucía"
+  },
+  {
+    "id": 3,
+    "name": "Formigal",
+    "slug": "formigal",
+    "bookings": 167,
+    "revenue": 16700,
+    "change": 8,
+    "location": "Sallent de Gállego, Huesca"
+  },
+  {
+    "id": 4,
+    "name": "Cerler",
+    "slug": "cerler",
+    "bookings": 145,
+    "revenue": 14500,
+    "change": -3,
+    "location": "Benasque, Huesca"
+  },
+  {
+    "id": 5,
+    "name": "La Molina",
+    "slug": "la-molina",
+    "bookings": 123,
+    "revenue": 12300,
+    "change": 5,
+    "location": "Alp, Girona"
+  }
+]

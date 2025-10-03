@@ -1,0 +1,511 @@
+<!-- Lodging Detail Page -->
+@if (lodging(); as detail) {
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+
+  <!-- Hero Header -->
+  <div
+    class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+  >
+    <!-- Background Pattern -->
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02LTYgMi42ODYtNiA2IDIuNjg2IDYgNiA2em0tMTIgMzZjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTYtNiAyLjY4Ni02IDYgMi42ODYgNiA2IDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"
+    ></div>
+
+    <!-- Hero Content -->
+    <div class="relative container mx-auto px-4 py-12">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-sm mb-6">
+        <a
+          routerLink="/"
+          class="hover:underline flex items-center gap-1 text-white/90 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          Inicio
+        </a>
+        <span class="text-white/60">›</span>
+        <a
+          routerLink="/alojamientos"
+          class="hover:underline text-white/90 hover:text-white"
+          >Alojamientos</a
+        >
+        <span class="text-white/60">›</span>
+        <span class="text-white font-semibold">{{ detail.name }}</span>
+      </nav>
+
+      <!-- Badges -->
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span
+          class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-full border border-white/30"
+        >
+          {{ getTypeLabel(detail.type) }}
+        </span>
+        @if (detail.hasOffer && detail.offerPercentage) {
+        <span
+          class="px-4 py-2 bg-red-500 text-white text-sm font-bold rounded-full shadow-lg animate-pulse"
+        >
+          🔥 -{{ detail.offerPercentage }}% OFF
+        </span>
+        } @if (detail.freeCancellation) {
+        <span
+          class="px-4 py-2 bg-green-500 text-white text-sm font-bold rounded-full"
+        >
+          ✅ Cancelación gratuita
+        </span>
+        }
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl">
+        {{ detail.name }}
+      </h1>
+
+      <!-- Meta Information -->
+      <div class="flex flex-wrap items-center gap-6 text-sm md:text-base">
+        <div class="flex items-center gap-2">
+          <svg
+            class="w-5 h-5 text-white/90"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="font-semibold">{{ detail.location }}</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-xl">⛷️</span>
+          <span class="font-semibold"
+            >{{ detail.distanceToSlopes }} km a las pistas</span
+          >
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="flex items-center">
+            @for (i of [1,2,3,4,5]; track i) {
+            <span
+              [class]="detail.rating >= i ? 'text-yellow-300' : 'text-white/30'"
+              >★</span
+            >
+            }
+          </div>
+          <span class="font-bold">{{ detail.rating }}</span>
+          <span class="text-white/80"
+            >({{ detail.reviewsCount }} opiniones)</span
+          >
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="flex flex-wrap gap-4 mt-6">
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+        >
+          <span class="text-2xl">👥</span>
+          <span class="font-semibold">{{ detail.capacity }} personas</span>
+        </div>
+        @if (detail.bedrooms) {
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+        >
+          <span class="text-2xl">🛏️</span>
+          <span class="font-semibold">{{ detail.bedrooms }} habitaciones</span>
+        </div>
+        } @if (detail.area) {
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+        >
+          <span class="text-2xl">📐</span>
+          <span class="font-semibold">{{ detail.area }} m²</span>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <!-- Image Gallery -->
+    <div class="mb-8">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-4 rounded-2xl overflow-hidden"
+      >
+        <!-- Main Image -->
+        <div
+          class="lg:col-span-8 relative h-96 lg:h-[600px] bg-slate-100 overflow-hidden group"
+        >
+          <img
+            [src]="detail.images[selectedImage()]"
+            alt="Imagen principal"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+
+          <!-- Navigation Arrows -->
+          <button
+            (click)="prevImage()"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            (click)="nextImage()"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          <!-- Image Counter -->
+          <div
+            class="absolute bottom-4 right-4 px-3 py-1.5 bg-black/70 backdrop-blur-sm text-white text-sm font-semibold rounded-full"
+          >
+            {{ selectedImage() + 1 }} / {{ detail.images.length }}
+          </div>
+        </div>
+
+        <!-- Thumbnail Grid -->
+        <div class="lg:col-span-4 grid grid-cols-4 lg:grid-cols-2 gap-3">
+          @for (img of detail.images.slice(0, 4); track $index) {
+          <button
+            (click)="selectImage($index)"
+            [class.ring-4]="selectedImage() === $index"
+            [class.ring-blue-500]="selectedImage() === $index"
+            class="relative h-28 lg:h-36 rounded-xl overflow-hidden bg-slate-100 transition-all hover:scale-105 hover:shadow-lg"
+          >
+            <img
+              [src]="img"
+              alt="Miniatura"
+              class="w-full h-full object-cover"
+            />
+          </button>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left Column - Info -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- Description -->
+        <section
+          class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-slate-200"
+        >
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Descripción</h2>
+          <p class="text-slate-700 leading-relaxed text-lg">
+            {{ detail.description }}
+          </p>
+
+          <!-- Capacity Info -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-slate-200"
+          >
+            <div class="text-center">
+              <div class="text-3xl font-black text-blue-600 mb-1">
+                {{ detail.capacity }}
+              </div>
+              <div class="text-sm text-slate-600 font-medium">Personas</div>
+            </div>
+            @if (detail.bedrooms) {
+            <div class="text-center">
+              <div class="text-3xl font-black text-blue-600 mb-1">
+                {{ detail.bedrooms }}
+              </div>
+              <div class="text-sm text-slate-600 font-medium">Habitaciones</div>
+            </div>
+            } @if (detail.bathrooms) {
+            <div class="text-center">
+              <div class="text-3xl font-black text-blue-600 mb-1">
+                {{ detail.bathrooms }}
+              </div>
+              <div class="text-sm text-slate-600 font-medium">Baños</div>
+            </div>
+            } @if (detail.area) {
+            <div class="text-center">
+              <div class="text-3xl font-black text-blue-600 mb-1">
+                {{ detail.area }}
+              </div>
+              <div class="text-sm text-slate-600 font-medium">m²</div>
+            </div>
+            }
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section
+          class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-slate-200"
+        >
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">
+            Servicios incluidos
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            @for (service of detail.services; track service) {
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition-colors"
+            >
+              <span class="text-2xl">{{ getServiceIcon(service) }}</span>
+              <span class="text-sm font-semibold text-slate-700"
+                >{{ getServiceName(service) }}</span
+              >
+            </div>
+            }
+          </div>
+        </section>
+
+        <!-- Nearby Attractions -->
+        <section
+          class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-slate-200"
+        >
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">
+            Lugares cercanos
+          </h2>
+          <ul class="space-y-3">
+            @for (attraction of detail.nearbyAttractions; track attraction) {
+            <li
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-slate-700">{{ attraction }}</span>
+            </li>
+            }
+          </ul>
+        </section>
+
+        <!-- Policies -->
+        <section
+          class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-slate-200"
+        >
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">
+            Normas de la casa
+          </h2>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 p-4 bg-green-50 rounded-xl">
+              <span class="text-2xl">✅</span>
+              <div>
+                <div class="font-semibold text-slate-900">
+                  Check-in: {{ detail.checkIn }}
+                </div>
+                <div class="font-semibold text-slate-900">
+                  Check-out: {{ detail.checkOut }}
+                </div>
+              </div>
+            </div>
+            @for (policy of detail.policies; track policy) {
+            <div
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+            >
+              <span class="text-xl mt-0.5">ℹ️</span>
+              <span class="text-slate-700">{{ policy }}</span>
+            </div>
+            }
+          </div>
+
+          <!-- Cancellation Policy -->
+          <div class="mt-6 pt-6 border-t border-slate-200">
+            <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="text-xl">🔄</span>
+              Política de cancelación
+            </h3>
+            <p class="text-slate-700 bg-blue-50 p-4 rounded-xl">
+              {{ detail.cancellationPolicy }}
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column - Booking Card -->
+      <div class="lg:col-span-1">
+        <div
+          class="sticky top-8 bg-white rounded-2xl p-6 shadow-2xl border-2 border-blue-200"
+        >
+          <div class="mb-6">
+            @if (detail.hasOffer && detail.offerPercentage) {
+            <div class="flex items-baseline gap-3 mb-2">
+              <span class="text-2xl text-slate-500 line-through">
+                {{ detail.pricePerNight * (1 + (detail.offerPercentage || 0) /
+                100) | number: '1.0-0' }}€
+              </span>
+              <span
+                class="px-2 py-1 bg-red-500 text-white text-sm font-bold rounded-full"
+              >
+                -{{ detail.offerPercentage }}%
+              </span>
+            </div>
+            }
+            <div class="text-4xl font-black text-slate-900">
+              {{ detail.pricePerNight }}€
+              <span class="text-lg font-normal text-slate-600">/noche</span>
+            </div>
+          </div>
+
+          @if (detail.freeCancellation) {
+          <div class="mb-6 p-3 bg-green-50 rounded-xl flex items-center gap-2">
+            <span class="text-xl">✅</span>
+            <span class="text-sm font-semibold text-green-700"
+              >Cancelación gratuita</span
+            >
+          </div>
+          }
+
+          <!-- Booking Form -->
+          <form class="space-y-4 mb-6">
+            <div>
+              <label
+                for="check-in-input"
+                class="block text-sm font-semibold text-slate-700 mb-2"
+                >Check-in</label
+              >
+              <input
+                type="date"
+                id="check-in-input"
+                [(ngModel)]="checkInDate"
+                name="checkIn"
+                class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+              />
+            </div>
+
+            <div>
+              <label
+                for="check-out-input"
+                class="block text-sm font-semibold text-slate-700 mb-2"
+                >Check-out</label
+              >
+              <input
+                type="date"
+                id="check-out-input"
+                [(ngModel)]="checkOutDate"
+                name="checkOut"
+                class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+              />
+            </div>
+
+            <div>
+              <label
+                for="guests-select"
+                class="block text-sm font-semibold text-slate-700 mb-2"
+                >Huéspedes</label
+              >
+              <select
+                id="guests-select"
+                [(ngModel)]="guests"
+                name="guests"
+                class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+              >
+                @for (i of [1,2,3,4,5,6,7,8]; track i) {
+                <option [value]="i">
+                  {{ i }} {{ i === 1 ? 'persona' : 'personas' }}
+                </option>
+                }
+              </select>
+            </div>
+          </form>
+
+          <!-- Price Summary -->
+          @if (calculateTotalNights() > 0) {
+          <div class="mb-6 p-4 bg-slate-50 rounded-xl space-y-2">
+            <div class="flex justify-between text-slate-700">
+              <span
+                >{{ detail.pricePerNight }}€ × {{ calculateTotalNights() }}
+                noches</span
+              >
+              <span class="font-semibold">{{ calculateTotalPrice() }}€</span>
+            </div>
+            <div
+              class="pt-2 border-t border-slate-200 flex justify-between text-lg font-bold text-slate-900"
+            >
+              <span>Total</span>
+              <span>{{ calculateTotalPrice() }}€</span>
+            </div>
+          </div>
+          }
+
+          <!-- Reserve Button -->
+          @if (detail.available) {
+          <button
+            (click)="reserve()"
+            class="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
+          >
+            Reservar Ahora
+          </button>
+          } @else {
+          <button
+            disabled
+            class="w-full py-4 bg-gray-300 text-gray-600 font-bold text-lg rounded-xl cursor-not-allowed"
+          >
+            No Disponible
+          </button>
+          }
+
+          <p class="text-xs text-center text-slate-500 mt-4">
+            No se te cobrará todavía
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-site-footer />
+</div>
+} @else {
+<!-- Loading State -->
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+  <div class="container mx-auto px-4 py-16 text-center">
+    <div
+      class="animate-spin w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"
+    ></div>
+    <p class="text-slate-600 text-lg">Cargando alojamiento...</p>
+  </div>
+  <app-site-footer />
+</div>
+}

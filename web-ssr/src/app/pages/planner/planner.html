@@ -1,1 +1,858 @@
-<p>planner works!</p>
+<!-- Planner Page -->
+<div class="font-sans text-slate-900 bg-gray-50 min-h-screen">
+  <app-site-header />
+
+  <!-- Page Header -->
+  <section
+    class="bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-500 text-white pt-16 pb-12 relative overflow-hidden"
+  >
+    <!-- Background Pattern -->
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02LTYgMi42ODYtNiA2IDIuNjg2IDYgNiA2em0tMTIgMzZjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTYtNiAyLjY4Ni02IDYgMi42ODYgNiA2IDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"
+    ></div>
+
+    <div class="container mx-auto px-4 relative">
+      <div class="max-w-5xl mx-auto">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm mb-6">
+          <a
+            href="/"
+            class="hover:underline flex items-center gap-1 text-white/90 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Inicio
+          </a>
+          <span class="text-white/60">›</span>
+          <span class="text-white font-semibold">Planificador de Viaje</span>
+        </div>
+
+        <div class="text-left">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            🗓️ Planificador de Viaje Completo
+          </h1>
+          <p class="text-xl md:text-2xl text-teal-100 mb-8">
+            Organiza tu escapada perfecta con condiciones de nieve en tiempo
+            real, alojamientos y previsión meteorológica
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap gap-6 text-sm mb-6">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">3 Pasos</div>
+                <div class="text-teal-200 text-xs">Wizard completo</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">
+                  @if (hasPlans()) { {{ savedPlans().length }} } @else { 0 }
+                </div>
+                <div class="text-teal-200 text-xs">Planes guardados</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-lg">Personalizado</div>
+                <div class="text-teal-200 text-xs">Tu viaje perfecto</div>
+              </div>
+            </div>
+
+            @if (hasPlans()) {
+            <button
+              (click)="toggleSavedPlans()"
+              class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 transition-all font-semibold"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"
+                />
+              </svg>
+              Ver Mis Planes
+            </button>
+            }
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="mt-4">
+            <div class="h-2 bg-white/20 rounded-full overflow-hidden max-w-md">
+              <div
+                class="h-full bg-white rounded-full transition-all duration-500 ease-out shadow-lg"
+                [style.width.%]="planProgress()"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Saved Plans Modal -->
+  @if (showSavedPlans()) {
+  <div
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="saved-plans-title"
+    (click)="toggleSavedPlans()"
+    (keydown.escape)="toggleSavedPlans()"
+    tabindex="0"
+  >
+    <div
+      class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto"
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()"
+      role="document"
+      tabindex="-1"
+    >
+      <div
+        class="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between"
+      >
+        <h2 id="saved-plans-title" class="text-2xl font-bold text-slate-900">
+          📁 Mis Planes Guardados
+        </h2>
+        <button
+          (click)="toggleSavedPlans()"
+          class="w-8 h-8 rounded-full hover:bg-gray-100 transition-colors flex items-center justify-center"
+          aria-label="Cerrar"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="p-6">
+        @if (savedPlans().length === 0) {
+        <div class="text-center py-12">
+          <div class="text-6xl mb-4">📂</div>
+          <p class="text-slate-600">No tienes planes guardados todavía</p>
+        </div>
+        } @else {
+        <div class="space-y-4">
+          @for (plan of savedPlans(); track plan.id) {
+          <div
+            class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                  📍 {{ plan.destination }}
+                </h3>
+                <div class="grid grid-cols-2 gap-2 text-sm text-slate-600">
+                  <div>
+                    📅 {{ plan.startDate | date:'dd/MM/yyyy' }} - {{
+                    plan.endDate | date:'dd/MM/yyyy' }}
+                  </div>
+                  <div>👥 {{ plan.adults + plan.children }} personas</div>
+                  <div>
+                    🏨 {{ plan.accommodationType === 'hotel' ? 'Hotel' :
+                    plan.accommodationType === 'apartment' ? 'Apartamento' :
+                    plan.accommodationType === 'hostel' ? 'Hostal' : 'Casa
+                    Rural' }}
+                  </div>
+                  <div>💰 {{ plan.totalCost }}€</div>
+                </div>
+                <div class="mt-3 text-xs text-slate-500">
+                  Creado el {{ plan.createdAt | date:'dd/MM/yyyy HH:mm' }}
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <button
+                  (click)="loadSavedPlan(plan)"
+                  class="px-4 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 transition-colors whitespace-nowrap"
+                >
+                  Ver Plan
+                </button>
+                <button
+                  (click)="deleteSavedPlan(plan.id)"
+                  class="px-4 py-2 bg-red-100 text-red-600 text-sm font-semibold rounded-lg hover:bg-red-200 transition-colors whitespace-nowrap"
+                >
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Success Messages -->
+  @if (shareSuccess()) {
+  <div
+    class="fixed top-4 right-4 z-50 bg-green-600 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 animate-slide-in"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <span class="font-semibold">Plan copiado al portapapeles</span>
+  </div>
+  } @if (exportSuccess()) {
+  <div
+    class="fixed top-4 right-4 z-50 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 animate-slide-in"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+      />
+    </svg>
+    <span class="font-semibold">Plan exportado correctamente</span>
+  </div>
+  }
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <!-- Progress Steps -->
+    <div class="mb-12">
+      <div class="flex items-center justify-center gap-2 sm:gap-4">
+        <!-- Step 1 -->
+        <div class="flex items-center">
+          <div
+            class="flex items-center justify-center w-12 h-12 rounded-full font-bold transition-all shadow-lg"
+            [class.bg-gradient-to-br]="currentStep() === 'form'"
+            [class.from-teal-600]="currentStep() === 'form'"
+            [class.to-cyan-600]="currentStep() === 'form'"
+            [class.text-white]="currentStep() === 'form'"
+            [class.animate-pulse]="currentStep() === 'form'"
+            [class.bg-teal-200]="currentStep() !== 'form' && (currentStep() === 'review' || currentStep() === 'summary')"
+            [class.text-teal-800]="currentStep() !== 'form' && (currentStep() === 'review' || currentStep() === 'summary')"
+            [class.bg-gray-200]="currentStep() === 'form'"
+            [class.text-gray-500]="currentStep() === 'form' && false"
+          >
+            1
+          </div>
+          <span class="ml-2 font-semibold text-slate-700 hidden sm:inline"
+            >Detalles</span
+          >
+        </div>
+
+        <!-- Connector -->
+        <div
+          class="w-8 sm:w-16 h-1 transition-all"
+          [class.bg-teal-600]="currentStep() === 'review' || currentStep() === 'summary'"
+          [class.bg-gray-300]="currentStep() === 'form'"
+        ></div>
+
+        <!-- Step 2 -->
+        <div class="flex items-center">
+          <div
+            class="flex items-center justify-center w-12 h-12 rounded-full font-bold transition-all shadow-lg"
+            [class.bg-gradient-to-br]="currentStep() === 'review'"
+            [class.from-purple-600]="currentStep() === 'review'"
+            [class.to-pink-600]="currentStep() === 'review'"
+            [class.text-white]="currentStep() === 'review'"
+            [class.animate-pulse]="currentStep() === 'review'"
+            [class.bg-purple-200]="currentStep() === 'summary'"
+            [class.text-purple-800]="currentStep() === 'summary'"
+            [class.bg-gray-200]="currentStep() === 'form'"
+            [class.text-gray-500]="currentStep() === 'form'"
+          >
+            2
+          </div>
+          <span class="ml-2 font-semibold text-slate-700 hidden sm:inline"
+            >Revisión</span
+          >
+        </div>
+
+        <!-- Connector -->
+        <div
+          class="w-8 sm:w-16 h-1 transition-all"
+          [class.bg-purple-600]="currentStep() === 'summary'"
+          [class.bg-gray-300]="currentStep() === 'form' || currentStep() === 'review'"
+        ></div>
+
+        <!-- Step 3 -->
+        <div class="flex items-center">
+          <div
+            class="flex items-center justify-center w-12 h-12 rounded-full font-bold transition-all shadow-lg"
+            [class.bg-gradient-to-br]="currentStep() === 'summary'"
+            [class.from-blue-600]="currentStep() === 'summary'"
+            [class.to-indigo-600]="currentStep() === 'summary'"
+            [class.text-white]="currentStep() === 'summary'"
+            [class.animate-pulse]="currentStep() === 'summary'"
+            [class.bg-gray-200]="currentStep() !== 'summary'"
+            [class.text-gray-500]="currentStep() !== 'summary'"
+          >
+            3
+          </div>
+          <span class="ml-2 font-semibold text-slate-700 hidden sm:inline"
+            >Resumen</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    @if (currentStep() === 'form') {
+    <!-- Step 1: Form -->
+    <div class="max-w-4xl mx-auto">
+      <app-planner-form
+        [stations]="pageData()?.stations || []"
+        (planSubmitted)="onPlanSubmitted($event)"
+      />
+
+      <!-- Info Section -->
+      <div class="mt-8 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6">
+        <h3 class="text-lg font-bold text-slate-900 mb-4">
+          ℹ️ ¿Por qué usar nuestro planificador?
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700"
+        >
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">💰</span>
+            <div>
+              <div class="font-semibold mb-1">Ahorra tiempo y dinero</div>
+              <div class="text-slate-600">
+                Calcula automáticamente los costes y encuentra las mejores
+                ofertas
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🎯</span>
+            <div>
+              <div class="font-semibold mb-1">
+                Recomendaciones personalizadas
+              </div>
+              <div class="text-slate-600">
+                Sugerencias según tu nivel y preferencias
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📱</span>
+            <div>
+              <div class="font-semibold mb-1">Plan en tu móvil</div>
+              <div class="text-slate-600">
+                Exporta y comparte tu itinerario fácilmente
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✅</span>
+            <div>
+              <div class="font-semibold mb-1">No olvides nada</div>
+              <div class="text-slate-600">
+                Checklist completo para tu viaje perfecto
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    } @else if (currentStep() === 'review' && tripPlan()) {
+    <!-- Step 2: Review & Edit -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Review Header -->
+      <div
+        class="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl p-8 mb-8 shadow-2xl"
+      >
+        <h2 class="text-3xl font-bold mb-4">✅ Revisa tu Plan</h2>
+        <p class="text-purple-100 text-lg">
+          Verifica que todos los detalles sean correctos antes de continuar
+        </p>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="space-y-6">
+        <!-- Destination Card -->
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+        >
+          <div
+            class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📍</span>
+              <h3 class="text-xl font-bold">Destino</h3>
+            </div>
+            <button
+              (click)="editPlan()"
+              class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-semibold transition-all"
+            >
+              ✏️ Editar
+            </button>
+          </div>
+          <div class="p-6">
+            <div class="text-3xl font-bold text-slate-900 mb-2">
+              {{ tripPlan()!.destination }}
+            </div>
+            <div class="grid grid-cols-2 gap-4 text-slate-700">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">📅</span>
+                <div>
+                  <div class="text-xs text-slate-500">Fechas</div>
+                  <div class="font-semibold">
+                    {{ tripPlan()!.startDate | date:'dd/MM/yyyy' }} - {{
+                    tripPlan()!.endDate | date:'dd/MM/yyyy' }}
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xl">⏱️</span>
+                <div>
+                  <div class="text-xs text-slate-500">Duración</div>
+                  <div class="font-semibold">
+                    {{ calculateDuration(tripPlan()!.startDate,
+                    tripPlan()!.endDate) }} días
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- People Card -->
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+        >
+          <div
+            class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">👥</span>
+              <h3 class="text-xl font-bold">Grupo</h3>
+            </div>
+            <button
+              (click)="editPlan()"
+              class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-semibold transition-all"
+            >
+              ✏️ Editar
+            </button>
+          </div>
+          <div class="p-6">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center p-4 bg-blue-50 rounded-xl">
+                <div class="text-3xl font-bold text-blue-600">
+                  {{ tripPlan()!.adults }}
+                </div>
+                <div class="text-sm text-slate-600 mt-1">Adultos</div>
+              </div>
+              <div class="text-center p-4 bg-indigo-50 rounded-xl">
+                <div class="text-3xl font-bold text-indigo-600">
+                  {{ tripPlan()!.children }}
+                </div>
+                <div class="text-sm text-slate-600 mt-1">Niños</div>
+              </div>
+              <div class="text-center p-4 bg-purple-50 rounded-xl">
+                <div class="text-3xl font-bold text-purple-600">
+                  {{ tripPlan()!.adults + tripPlan()!.children }}
+                </div>
+                <div class="text-sm text-slate-600 mt-1">Total</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Budget & Accommodation Card -->
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+        >
+          <div
+            class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">💰</span>
+              <h3 class="text-xl font-bold">Presupuesto y Alojamiento</h3>
+            </div>
+            <button
+              (click)="editPlan()"
+              class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-semibold transition-all"
+            >
+              ✏️ Editar
+            </button>
+          </div>
+          <div class="p-6">
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-sm text-slate-500 mb-2">Presupuesto Total</div>
+                <div class="text-4xl font-bold text-green-600">
+                  {{ tripPlan()!.budget }}€
+                </div>
+                <div class="text-xs text-slate-500 mt-1">
+                  {{ (tripPlan()!.budget / (tripPlan()!.adults +
+                  tripPlan()!.children)) | number:'1.0-0' }}€ por persona
+                </div>
+              </div>
+              <div>
+                <div class="text-sm text-slate-500 mb-2">
+                  Tipo de Alojamiento
+                </div>
+                <div class="text-2xl font-bold text-slate-900">
+                  @if (tripPlan()!.accommodationType === 'hotel') { 🏨 Hotel }
+                  @if (tripPlan()!.accommodationType === 'apartment') { 🏢
+                  Apartamento } @if (tripPlan()!.accommodationType === 'hostel')
+                  { 🏠 Hostal } @if (tripPlan()!.accommodationType ===
+                  'cottage') { 🏡 Casa Rural }
+                </div>
+                <div class="text-sm text-slate-600 mt-1">
+                  @if (tripPlan()!.accommodationType === 'hotel') { Servicio
+                  completo con restaurante } @if (tripPlan()!.accommodationType
+                  === 'apartment') { Cocina propia para ahorrar } @if
+                  (tripPlan()!.accommodationType === 'hostel') { Opción
+                  económica } @if (tripPlan()!.accommodationType === 'cottage')
+                  { Experiencia rural auténtica }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience & Activities Card -->
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+        >
+          <div
+            class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🎿</span>
+              <h3 class="text-xl font-bold">Experiencia y Actividades</h3>
+            </div>
+            <button
+              (click)="editPlan()"
+              class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-semibold transition-all"
+            >
+              ✏️ Editar
+            </button>
+          </div>
+          <div class="p-6">
+            <div class="mb-6">
+              <div class="text-sm text-slate-500 mb-3">
+                Nivel de Experiencia
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="text-4xl">
+                  @if (tripPlan()!.skillLevel === 'beginner') { 🟢 } @if
+                  (tripPlan()!.skillLevel === 'intermediate') { 🟡 } @if
+                  (tripPlan()!.skillLevel === 'advanced') { 🔴 }
+                </div>
+                <div>
+                  <div class="text-xl font-bold text-slate-900">
+                    @if (tripPlan()!.skillLevel === 'beginner') { Principiante }
+                    @if (tripPlan()!.skillLevel === 'intermediate') { Intermedio
+                    } @if (tripPlan()!.skillLevel === 'advanced') { Avanzado }
+                  </div>
+                  <div class="text-sm text-slate-600">
+                    @if (tripPlan()!.skillLevel === 'beginner') { Pistas verdes
+                    y azules recomendadas } @if (tripPlan()!.skillLevel ===
+                    'intermediate') { Pistas rojas disponibles } @if
+                    (tripPlan()!.skillLevel === 'advanced') { Todas las pistas
+                    incluidas }
+                  </div>
+                </div>
+              </div>
+            </div>
+            @if (tripPlan()!.activities && tripPlan()!.activities.length > 0) {
+            <div>
+              <div class="text-sm text-slate-500 mb-3">
+                Actividades Seleccionadas
+              </div>
+              <div class="flex flex-wrap gap-2">
+                @for (activity of tripPlan()!.activities; track activity) {
+                <span
+                  class="px-4 py-2 bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 rounded-full font-semibold text-sm shadow-sm"
+                >
+                  {{ activity }}
+                </span>
+                }
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 flex items-center justify-between gap-4">
+        <button
+          (click)="editPlan()"
+          class="px-8 py-4 bg-gray-200 text-slate-700 font-bold text-lg rounded-xl hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl flex items-center gap-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Volver a Editar
+        </button>
+
+        <button
+          (click)="goToSummary()"
+          class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all shadow-xl hover:shadow-2xl flex items-center gap-3 transform hover:scale-105"
+        >
+          Continuar al Resumen
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    } @else if (currentStep() === 'summary' && tripPlan()) {
+    <!-- Step 2: Summary -->
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Summary -->
+        <div class="lg:col-span-2">
+          <app-trip-summary [tripData]="tripPlan()!" />
+        </div>
+
+        <!-- Actions Sidebar -->
+        <div class="space-y-4">
+          <!-- Save Plan -->
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-4">📋 Acciones</h3>
+            <div class="space-y-3">
+              <button
+                (click)="savePlan()"
+                class="w-full px-4 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+                  />
+                </svg>
+                Guardar Plan
+              </button>
+
+              <button
+                (click)="exportPlan()"
+                class="w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Exportar Archivo
+              </button>
+
+              <button
+                (click)="sharePlan()"
+                class="w-full px-4 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                  />
+                </svg>
+                Compartir Plan
+              </button>
+
+              <button
+                (click)="resetPlanner()"
+                class="w-full px-4 py-3 bg-gray-200 text-slate-700 font-semibold rounded-lg hover:bg-gray-300 transition-colors flex items-center justify-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                  />
+                </svg>
+                Nuevo Plan
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Tips -->
+          <div
+            class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl shadow-lg p-6"
+          >
+            <h3 class="text-lg font-bold text-slate-900 mb-4">
+              💡 Próximos Pasos
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Reserva tu alojamiento cuanto antes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Compra los forfaits online con descuento</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Reserva el alquiler de equipos</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Revisa el parte de nieve antes de salir</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <app-site-footer />
+</div>

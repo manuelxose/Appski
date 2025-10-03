@@ -1,0 +1,109 @@
+{
+  "stationSlug": "cotos",
+  "days": [
+    {
+      "date": "2025-10-01",
+      "tempTopC": 6,
+      "tempBottomC": 6,
+      "iso0M": 4200,
+      "snowLineM": 3700,
+      "windTopKmh": 23,
+      "windBottomKmh": 18,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "clear"
+    },
+    {
+      "date": "2025-10-02",
+      "tempTopC": 5,
+      "tempBottomC": 5,
+      "iso0M": 4600,
+      "snowLineM": null,
+      "windTopKmh": 26,
+      "windBottomKmh": 20,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "clear"
+    },
+    {
+      "date": "2025-10-03",
+      "tempTopC": 7,
+      "tempBottomC": 7,
+      "iso0M": 4700,
+      "snowLineM": null,
+      "windTopKmh": 34,
+      "windBottomKmh": 23,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    },
+    {
+      "date": "2025-10-04",
+      "tempTopC": 8,
+      "tempBottomC": 8,
+      "iso0M": 4800,
+      "snowLineM": null,
+      "windTopKmh": 21,
+      "windBottomKmh": 19,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    },
+    {
+      "date": "2025-10-05",
+      "tempTopC": 8,
+      "tempBottomC": 9,
+      "iso0M": 4800,
+      "snowLineM": null,
+      "windTopKmh": 20,
+      "windBottomKmh": 17,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    },
+    {
+      "date": "2025-10-06",
+      "tempTopC": 12,
+      "tempBottomC": 13,
+      "iso0M": 4700,
+      "snowLineM": null,
+      "windTopKmh": 7,
+      "windBottomKmh": 11,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    },
+    {
+      "date": "2025-10-07",
+      "tempTopC": 13,
+      "tempBottomC": 13,
+      "iso0M": 4400,
+      "snowLineM": null,
+      "windTopKmh": 18,
+      "windBottomKmh": 11,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    },
+    {
+      "date": "2025-10-08",
+      "tempTopC": 12,
+      "tempBottomC": 12,
+      "iso0M": 4300,
+      "snowLineM": null,
+      "windTopKmh": 14,
+      "windBottomKmh": 11,
+      "snowTopCm": 0,
+      "snowBottomCm": 0,
+      "precipMm": 0,
+      "condition": "cloudy"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+<!-- Rental Shop Card -->
+<div
+  class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+>
+  <!-- Image -->
+  <div class="relative h-48 overflow-hidden">
+    <img
+      [src]="shop().image"
+      [alt]="shop().name"
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+    />
+
+    <!-- Badges -->
+    <div class="absolute top-3 left-3 flex flex-col gap-2">
+      @if (shop().hasDiscount && shop().discountPercentage) {
+      <span
+        class="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full shadow-lg"
+      >
+        -{{ shop().discountPercentage }}% OFF
+      </span>
+      } @if (shop().hasOnlineBooking) {
+      <span
+        class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full shadow-lg"
+      >
+        💻 Reserva Online
+      </span>
+      } @if (shop().hasDelivery) {
+      <span
+        class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full shadow-lg"
+      >
+        🚚 Entrega
+      </span>
+      }
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-4">
+    <!-- Title and Location -->
+    <div class="mb-3">
+      <h3 class="text-lg font-bold text-slate-900 mb-1">
+        {{ shop().name }}
+      </h3>
+      <p class="text-sm text-slate-600 flex items-center gap-1">
+        📍 {{ shop().location }}
+      </p>
+      <p class="text-xs text-blue-600 font-semibold mt-1">
+        ⛷️ {{ shop().distanceToSlopes }} km a las pistas
+      </p>
+    </div>
+
+    <!-- Rating -->
+    <div class="flex items-center gap-2 mb-3">
+      <div class="flex items-center">
+        @for (star of getStars(); track $index) { @if (star === 'full') {
+        <span class="text-yellow-400">★</span>
+        } @else if (star === 'half') {
+        <span class="text-yellow-400">⯨</span>
+        } @else {
+        <span class="text-gray-300">★</span>
+        } }
+      </div>
+      <span class="text-sm text-slate-600">
+        {{ shop().rating }} ({{ shop().reviewsCount }})
+      </span>
+    </div>
+
+    <!-- Equipment Available -->
+    <div class="mb-4">
+      <div class="text-xs font-semibold text-slate-600 mb-2">
+        Equipos disponibles:
+      </div>
+      <div class="flex flex-wrap gap-2">
+        @for (equipment of shop().equipmentAvailable.slice(0, 6); track $index)
+        {
+        <span class="text-xl" [title]="equipment">
+          {{ getEquipmentIcon(equipment) }}
+        </span>
+        } @if (shop().equipmentAvailable.length > 6) {
+        <span class="text-xs text-slate-500 self-center">
+          +{{ shop().equipmentAvailable.length - 6 }}
+        </span>
+        }
+      </div>
+    </div>
+
+    <!-- Price and Button -->
+    <div
+      class="flex items-center justify-between pt-3 border-t border-gray-200"
+    >
+      <div>
+        <div class="text-xs text-slate-500">Desde</div>
+        <div class="text-2xl font-bold text-slate-900">
+          {{ shop().priceFrom }}€
+          <span class="text-sm font-normal text-slate-600">/día</span>
+        </div>
+      </div>
+
+      @if (shop().available) {
+      <a
+        [routerLink]="['/tienda-alquiler', shop().id]"
+        class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+      >
+        Ver Tienda
+      </a>
+      } @else {
+      <span
+        class="px-4 py-2 bg-gray-300 text-gray-600 font-semibold rounded-lg cursor-not-allowed"
+      >
+        No disponible
+      </span>
+      }
+    </div>
+  </div>
+</div>

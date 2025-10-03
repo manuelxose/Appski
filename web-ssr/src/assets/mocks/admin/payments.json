@@ -1,0 +1,153 @@
+{
+  "payments": [
+    {
+      "id": "PAY001",
+      "bookingId": "BK001",
+      "amount": 450.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "credit_card",
+      "processedAt": "2025-10-01T10:30:00Z",
+      "customerName": "Carlos Martínez",
+      "stationName": "Sierra Nevada",
+      "invoiceNumber": "INV-2025-001",
+      "transactionId": "TRX-001-2025",
+      "cardLast4": "4242"
+    },
+    {
+      "id": "PAY002",
+      "bookingId": "BK002",
+      "amount": 320.0,
+      "currency": "EUR",
+      "status": "pending",
+      "method": "paypal",
+      "processedAt": "2025-10-02T14:20:00Z",
+      "customerName": "Ana García",
+      "stationName": "Baqueira Beret",
+      "transactionId": "TRX-002-2025"
+    },
+    {
+      "id": "PAY003",
+      "bookingId": "BK003",
+      "amount": 580.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "bank_transfer",
+      "processedAt": "2025-09-30T09:15:00Z",
+      "customerName": "Luis Fernández",
+      "stationName": "Formigal",
+      "invoiceNumber": "INV-2025-002",
+      "transactionId": "TRX-003-2025"
+    },
+    {
+      "id": "PAY004",
+      "bookingId": "BK004",
+      "amount": 250.0,
+      "currency": "EUR",
+      "status": "failed",
+      "method": "credit_card",
+      "processedAt": "2025-10-03T11:45:00Z",
+      "customerName": "María López",
+      "stationName": "Sierra Nevada",
+      "transactionId": "TRX-004-2025",
+      "failureReason": "Insufficient funds"
+    },
+    {
+      "id": "PAY005",
+      "bookingId": "BK005",
+      "amount": 390.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "debit_card",
+      "processedAt": "2025-10-01T15:30:00Z",
+      "customerName": "Pedro Sánchez",
+      "stationName": "Baqueira Beret",
+      "invoiceNumber": "INV-2025-003",
+      "transactionId": "TRX-005-2025",
+      "cardLast4": "5555"
+    },
+    {
+      "id": "PAY006",
+      "bookingId": "BK006",
+      "amount": 275.0,
+      "currency": "EUR",
+      "status": "refunded",
+      "method": "credit_card",
+      "processedAt": "2025-09-28T10:00:00Z",
+      "customerName": "Laura Ruiz",
+      "stationName": "Formigal",
+      "invoiceNumber": "INV-2025-004",
+      "transactionId": "TRX-006-2025",
+      "refundId": "REF001",
+      "cardLast4": "3782"
+    },
+    {
+      "id": "PAY007",
+      "bookingId": "BK007",
+      "amount": 520.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "paypal",
+      "processedAt": "2025-10-02T08:30:00Z",
+      "customerName": "Jorge Moreno",
+      "stationName": "Sierra Nevada",
+      "invoiceNumber": "INV-2025-005",
+      "transactionId": "TRX-007-2025"
+    },
+    {
+      "id": "PAY008",
+      "bookingId": "BK008",
+      "amount": 185.0,
+      "currency": "EUR",
+      "status": "completed",
+      "method": "credit_card",
+      "processedAt": "2025-10-01T12:15:00Z",
+      "customerName": "Elena Torres",
+      "stationName": "Baqueira Beret",
+      "invoiceNumber": "INV-2025-006",
+      "transactionId": "TRX-008-2025",
+      "cardLast4": "6011"
+    },
+    {
+      "id": "PAY009",
+      "bookingId": "BK009",
+      "amount": 425.0,
+      "currency": "EUR",
+      "status": "cancelled",
+      "method": "bank_transfer",
+      "processedAt": "2025-09-29T16:45:00Z",
+      "customerName": "David Jiménez",
+      "stationName": "Formigal",
+      "transactionId": "TRX-009-2025"
+    },
+    {
+      "id": "PAY010",
+      "bookingId": "BK010",
+      "amount": 310.0,
+      "currency": "EUR",
+      "status": "pending",
+      "method": "credit_card",
+      "processedAt": "2025-10-03T09:00:00Z",
+      "customerName": "Isabel Navarro",
+      "stationName": "Sierra Nevada",
+      "transactionId": "TRX-010-2025",
+      "cardLast4": "1234"
+    }
+  ],
+  "summary": {
+    "totalPayments": 3705.0,
+    "completedPayments": 2665.0,
+    "pendingPayments": 630.0,
+    "failedPayments": 250.0,
+    "refundedPayments": 275.0,
+    "cancelledPayments": 425.0,
+    "count": {
+      "total": 10,
+      "completed": 5,
+      "pending": 2,
+      "failed": 1,
+      "refunded": 1,
+      "cancelled": 1
+    }
+  }
+}

@@ -1,0 +1,158 @@
+<!-- Station Card Grid -->
+<div
+  class="station-grid"
+  [class.grid-view]="viewMode() === 'grid'"
+  [class.list-view]="viewMode() === 'list'"
+>
+  @if (loading()) {
+  <!-- Loading skeletons -->
+  @for (item of [1, 2, 3, 4, 5, 6]; track item) {
+  <div class="station-card skeleton-card">
+    <div class="h-48 skeleton"></div>
+    <div class="p-6">
+      <div class="h-6 w-3/4 skeleton rounded mb-2"></div>
+      <div class="h-4 w-1/2 skeleton rounded mb-4"></div>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="h-12 skeleton rounded"></div>
+        <div class="h-12 skeleton rounded"></div>
+        <div class="h-12 skeleton rounded"></div>
+      </div>
+      <div class="h-4 skeleton rounded"></div>
+    </div>
+  </div>
+  } } @else {
+  <!-- Station cards -->
+  @for (station of stations(); track station.id) {
+  <article
+    class="station-card bg-white rounded-xl shadow-lg overflow-hidden hover-lift cursor-pointer transition-all"
+    [routerLink]="['/estacion', station.slug]"
+  >
+    <!-- Image -->
+    <div class="relative h-48 bg-gray-100">
+      <img
+        [src]="station.image"
+        [alt]="station.name"
+        class="w-full h-full object-cover"
+      />
+      <!-- Status badge -->
+      <div
+        class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold"
+        [class.bg-green-500]="station.status === 'open'"
+        [class.bg-red-500]="station.status === 'closed'"
+        [class.text-white]="true"
+      >
+        @if (station.status === 'open') {
+        <span data-i18n="status.open">ABIERTO</span>
+        } @else {
+        <span data-i18n="status.closed">CERRADO</span>
+        }
+      </div>
+      <!-- Price badge -->
+      <div
+        class="absolute bottom-3 left-3 bg-white px-3 py-1 rounded-lg shadow-md"
+      >
+        <div class="text-sm font-bold text-slate-900">
+          {{ station.price.currency }}{{ station.price.adult }}
+          <span class="text-xs font-normal text-slate-600">/día</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6">
+      <!-- Title and location -->
+      <h3 class="text-xl font-semibold text-slate-900 mb-1">
+        {{ station.name }}
+      </h3>
+      <p class="text-sm text-slate-600 mb-4">
+        {{ station.location }} · {{ station.region }}
+      </p>
+
+      <!-- Snow stats -->
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-600">
+            {{ station.snowBase }}
+          </div>
+          <div class="text-xs text-slate-600" data-i18n="snow.base">
+            Base cm
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-600">
+            {{ station.snowTop }}
+          </div>
+          <div class="text-xs text-slate-600" data-i18n="snow.top">Cima cm</div>
+        </div>
+        <div class="text-center">
+          <div
+            class="text-2xl font-bold"
+            [class.text-green-500]="station.snowNew24h > 10"
+            [class.text-yellow-500]="
+              station.snowNew24h > 5 && station.snowNew24h <= 10
+            "
+            [class.text-slate-400]="station.snowNew24h <= 5"
+          >
+            {{ station.snowNew24h }}
+          </div>
+          <div class="text-xs text-slate-600" data-i18n="snow.new">
+            Nueva 24h
+          </div>
+        </div>
+      </div>
+
+      <!-- Facilities -->
+      <div class="flex justify-between text-sm text-slate-600 mb-4">
+        <span
+          >🚡 {{ station.liftsOpen }}/{{ station.liftsTotal }}
+          <span data-i18n="lifts">remontes</span></span
+        >
+        <span
+          >⛷️ {{ station.slopesOpen }}/{{ station.slopesTotal }}
+          <span data-i18n="slopes">pistas</span></span
+        >
+      </div>
+
+      <!-- Altitude -->
+      <div class="flex items-center justify-between text-xs text-slate-500">
+        <span
+          >🏔️ {{ station.altitude.base }}m - {{ station.altitude.top }}m</span
+        >
+      </div>
+
+      <!-- Features badges -->
+      <div class="flex flex-wrap gap-2 mt-4">
+        @for (feature of station.features.slice(0, 3); track feature) {
+        <span
+          class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+        >
+          @switch (feature) { @case ('ski-school') { 🎿 Escuela } @case
+          ('equipment-rental') { 🎒 Alquiler } @case ('snow-park') { 🏂 Snow
+          Park } @case ('kids-area') { 👶 Infantil } @case ('restaurant') { 🍴
+          Restaurante } @case ('parking') { 🚗 Parking } }
+        </span>
+        } @if (station.features.length > 3) {
+        <span
+          class="px-2 py-1 bg-gray-100 text-slate-600 rounded-full text-xs font-medium"
+        >
+          +{{ station.features.length - 3 }}
+        </span>
+        }
+      </div>
+    </div>
+  </article>
+  } } @if (!loading() && stations().length === 0) {
+  <!-- Empty state -->
+  <div class="col-span-full text-center py-16">
+    <div class="text-6xl mb-4">🎿</div>
+    <h3 class="text-xl font-semibold text-slate-900 mb-2">
+      <span data-i18n="empty.title">No se encontraron estaciones</span>
+    </h3>
+    <p class="text-slate-600">
+      <span data-i18n="empty.subtitle"
+        >Intenta ajustar los filtros de búsqueda</span
+      >
+    </p>
+  </div>
+  }
+</div>

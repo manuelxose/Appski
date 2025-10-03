@@ -1,0 +1,255 @@
+<div class="admin-users">
+  <!-- Breadcrumbs -->
+  <app-admin-breadcrumbs [items]="breadcrumbs" />
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="page-title">Gestión de Usuarios</h1>
+      <p class="page-description">
+        Administra usuarios, roles y permisos del sistema
+      </p>
+    </div>
+
+    <div class="header-actions">
+      @if (selectedUsers().length > 0) {
+      <button class="btn btn-danger" (click)="confirmBulkDelete()">
+        <span class="btn-icon">🗑️</span>
+        Eliminar seleccionados ({{ selectedUsers().length }})
+      </button>
+      }
+
+      <button class="btn btn-primary" (click)="openCreateModal()">
+        <span class="btn-icon">➕</span>
+        Nuevo Usuario
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Usuarios"
+      [value]="stats().total"
+      icon="👥"
+      variant="primary"
+    />
+
+    <app-admin-stat-card
+      label="Usuarios Activos"
+      [value]="stats().active"
+      icon="✅"
+      variant="success"
+    />
+
+    <app-admin-stat-card
+      label="Usuarios Inactivos"
+      [value]="stats().inactive"
+      icon="⏸️"
+      variant="warning"
+    />
+
+    <app-admin-stat-card
+      label="Nuevos este mes"
+      [value]="stats().newThisMonth"
+      icon="📈"
+      variant="info"
+      [trend]="'up'"
+    />
+  </div>
+
+  <!-- Filters & Search -->
+  <div class="controls-section">
+    <app-admin-search-bar
+      placeholder="Buscar por nombre, email..."
+      (searchChange)="onSearch($event)"
+    />
+
+    <app-admin-filters
+      [fields]="filterFields"
+      (filterChange)="onFilterChange($event)"
+      (filterReset)="onFilterReset()"
+    />
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+  <app-admin-loader type="skeleton" />
+  }
+
+  <!-- Users Table -->
+  @if (!isLoading() && paginatedUsers().length > 0) {
+  <div class="table-container">
+    <app-admin-table
+      [data]="paginatedUsers()"
+      [columns]="tableColumns"
+      [actions]="tableActions"
+      [selectable]="true"
+      (selectionChange)="onSelectionChange($event)"
+    />
+
+    <app-admin-pagination
+      [currentPage]="currentPage()"
+      [totalPages]="totalPages()"
+      [pageSize]="pageSize()"
+      [totalItems]="totalUsers()"
+      (pageChange)="onPageChange($event)"
+      (pageSizeChange)="onPageSizeChange($event)"
+    />
+  </div>
+  }
+
+  <!-- Empty State -->
+  @if (!isLoading() && paginatedUsers().length === 0) {
+  <app-admin-empty-state
+    icon="👥"
+    title="No hay usuarios"
+    description="No se encontraron usuarios con los filtros aplicados"
+    [actionLabel]="
+      searchQuery() || Object.keys(activeFilters()).length > 0
+        ? 'Limpiar filtros'
+        : 'Crear primer usuario'
+    "
+    (primaryAction)="
+      searchQuery() || Object.keys(activeFilters()).length > 0
+        ? onFilterReset()
+        : openCreateModal()
+    "
+  />
+  }
+
+  <!-- Create/Edit Modal -->
+  <app-admin-modal
+    [open]="showCreateModal() || showEditModal()"
+    [title]="showCreateModal() ? 'Crear Usuario' : 'Editar Usuario'"
+    size="md"
+    (modalClose)="showCreateModal.set(false); showEditModal.set(false)"
+  >
+    <form
+      class="user-form"
+      (submit)="
+        $event.preventDefault(); showCreateModal() ? createUser() : updateUser()
+      "
+    >
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="firstName" class="form-label">Nombre *</label>
+          <input
+            id="firstName"
+            type="text"
+            class="form-input"
+            [(ngModel)]="userForm().firstName"
+            name="firstName"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="form-label">Apellidos *</label>
+          <input
+            id="lastName"
+            type="text"
+            class="form-input"
+            [(ngModel)]="userForm().lastName"
+            name="lastName"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email *</label>
+          <input
+            id="email"
+            type="email"
+            class="form-input"
+            [(ngModel)]="userForm().email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Teléfono</label>
+          <input
+            id="phone"
+            type="tel"
+            class="form-input"
+            [(ngModel)]="userForm().phone"
+            name="phone"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="role" class="form-label">Rol *</label>
+          <select
+            id="role"
+            class="form-select"
+            [(ngModel)]="userForm().role"
+            name="role"
+            required
+          >
+            <option value="user">Usuario</option>
+            <option value="manager">Manager</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="status" class="form-label">Estado *</label>
+          <select
+            id="status"
+            class="form-select"
+            [(ngModel)]="userForm().status"
+            name="status"
+            required
+          >
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+            <option value="suspended">Suspendido</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="showCreateModal.set(false); showEditModal.set(false)"
+        >
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary">
+          {{ showCreateModal() ? "Crear Usuario" : "Guardar Cambios" }}
+        </button>
+      </div>
+    </form>
+  </app-admin-modal>
+
+  <!-- Delete Confirmation -->
+  <app-admin-confirm-dialog
+    [open]="showDeleteConfirm()"
+    title="Eliminar Usuario"
+    message="¿Estás seguro de que deseas eliminar este usuario? Esta acción no se puede deshacer."
+    variant="danger"
+    confirmLabel="Eliminar"
+    cancelLabel="Cancelar"
+    (confirmAction)="deleteUser()"
+    (cancelAction)="showDeleteConfirm.set(false)"
+  />
+
+  <!-- Bulk Delete Confirmation -->
+  <app-admin-confirm-dialog
+    [open]="showBulkDeleteConfirm()"
+    title="Eliminar Múltiples Usuarios"
+    [message]="
+      '¿Estás seguro de que deseas eliminar ' +
+      selectedUsers().length +
+      ' usuarios? Esta acción no se puede deshacer.'
+    "
+    variant="danger"
+    confirmLabel="Eliminar todos"
+    cancelLabel="Cancelar"
+    (confirmAction)="bulkDeleteUsers()"
+    (cancelAction)="showBulkDeleteConfirm.set(false)"
+  />
+</div>

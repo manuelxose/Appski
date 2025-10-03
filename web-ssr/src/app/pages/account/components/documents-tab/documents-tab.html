@@ -1,0 +1,245 @@
+<!-- Documents Tab Component -->
+<div class="documents-tab">
+  <!-- Conditional: Loading State -->
+  @if (accountService.isLoadingDocuments()) {
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Cargando documentos...</p>
+  </div>
+  }
+
+  <!-- Conditional: Error State -->
+  @else if (accountService.documentsError()) {
+  <div class="error-container">
+    <div class="error-icon">⚠️</div>
+    <h3>Error al cargar documentos</h3>
+    <p>{{ accountService.documentsError() }}</p>
+    <button (click)="retryLoad()" class="retry-button">Reintentar</button>
+  </div>
+  }
+
+  <!-- Main Content -->
+  @else {
+
+  <!-- Header with Stats -->
+  <div class="documents-header">
+    <div class="header-title">
+      <h2>Mis Documentos</h2>
+      <p class="subtitle">
+        Gestiona tus facturas, tickets, seguros y certificados
+      </p>
+    </div>
+
+    <div class="documents-stats">
+      <div class="stat-item">
+        <div class="stat-icon">📄</div>
+        <div class="stat-content">
+          <span class="stat-value">{{ accountService.totalDocuments() }}</span>
+          <span class="stat-label">Total</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon warning">⚠️</div>
+        <div class="stat-content">
+          <span class="stat-value"
+            >{{ accountService.expiredDocuments().length }}</span
+          >
+          <span class="stat-label">Vencidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="filters-section">
+    <button
+      [class.active]="selectedFilter() === 'all'"
+      (click)="setFilter('all')"
+      class="filter-button"
+    >
+      <span class="filter-icon">📂</span>
+      Todos ({{ accountService.documents().length }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'invoice'"
+      (click)="setFilter('invoice')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🧾</span>
+      Facturas ({{ getCountByType('invoice') }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'ticket'"
+      (click)="setFilter('ticket')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🎫</span>
+      Tickets ({{ getCountByType('ticket') }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'insurance'"
+      (click)="setFilter('insurance')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🛡️</span>
+      Seguros ({{ getCountByType('insurance') }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'license'"
+      (click)="setFilter('license')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🪪</span>
+      Licencias ({{ getCountByType('license') }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'certificate'"
+      (click)="setFilter('certificate')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🏆</span>
+      Certificados ({{ getCountByType('certificate') }})
+    </button>
+    <button
+      [class.active]="selectedFilter() === 'receipt'"
+      (click)="setFilter('receipt')"
+      class="filter-button"
+    >
+      <span class="filter-icon">🧾</span>
+      Recibos ({{ getCountByType('receipt') }})
+    </button>
+  </div>
+
+  <!-- Expiry Warnings (if any) -->
+  @if (accountService.expiredDocuments().length > 0) {
+  <div class="expiry-warning">
+    <div class="warning-icon">⚠️</div>
+    <div class="warning-content">
+      <h4>Documentos vencidos o próximos a vencer</h4>
+      <p>
+        Tienes {{ accountService.expiredDocuments().length }} documento(s) que
+        requieren atención
+      </p>
+    </div>
+  </div>
+  }
+
+  <!-- Documents Grid -->
+  <div class="documents-grid">
+    @for (document of filteredDocuments(); track document.id) {
+    <div class="document-card" [class.expired]="isExpired(document)">
+      <!-- Document Type Badge -->
+      <div class="document-type-badge" [class]="document.type">
+        <span class="badge-icon">{{ getTypeIcon(document.type) }}</span>
+        <span class="badge-label">{{ getTypeLabel(document.type) }}</span>
+      </div>
+
+      <!-- Expiry Warning (if applicable) -->
+      @if (isExpired(document)) {
+      <div class="expiry-badge">
+        <span class="expiry-icon">⚠️</span>
+        Vencido
+      </div>
+      } @else if (isExpiringSoon(document)) {
+      <div class="expiry-badge warning">
+        <span class="expiry-icon">⏰</span>
+        Próximo a vencer
+      </div>
+      }
+
+      <!-- Document Content -->
+      <div class="document-content">
+        <h3 class="document-title">{{ document.title }}</h3>
+
+        @if (document.description) {
+        <p class="document-description">{{ document.description }}</p>
+        }
+
+        <div class="document-meta">
+          <div class="meta-item">
+            <span class="meta-icon">📅</span>
+            <span class="meta-text"
+              >Subido: {{ formatDate(document.uploadDate) }}</span
+            >
+          </div>
+
+          @if (document.expiryDate) {
+          <div class="meta-item">
+            <span class="meta-icon">📆</span>
+            <span class="meta-text"
+              >Vence: {{ formatDate(document.expiryDate) }}</span
+            >
+          </div>
+          }
+
+          <div class="meta-item">
+            <span class="meta-icon">📦</span>
+            <span class="meta-text"
+              >{{ formatFileSize(document.fileSize) }}</span
+            >
+          </div>
+        </div>
+
+        <!-- Tags -->
+        @if (document.tags && document.tags.length > 0) {
+        <div class="document-tags">
+          @for (tag of document.tags; track tag) {
+          <span class="tag">{{ tag }}</span>
+          }
+        </div>
+        }
+      </div>
+
+      <!-- Actions -->
+      <div class="document-actions">
+        <button
+          (click)="downloadDocument(document)"
+          class="action-button download"
+          title="Descargar"
+        >
+          <span class="action-icon">⬇️</span>
+          Descargar
+        </button>
+        <button
+          (click)="previewDocument(document)"
+          class="action-button preview"
+          title="Vista previa"
+        >
+          <span class="action-icon">👁️</span>
+          Ver
+        </button>
+        <button
+          (click)="deleteDocument(document)"
+          class="action-button delete"
+          title="Eliminar"
+        >
+          <span class="action-icon">🗑️</span>
+          Eliminar
+        </button>
+      </div>
+    </div>
+    } @empty {
+    <div class="empty-state">
+      <div class="empty-icon">📭</div>
+      <h3>No hay documentos</h3>
+      <p>No se encontraron documentos con el filtro seleccionado</p>
+    </div>
+    }
+  </div>
+
+  <!-- Upload Section (Future Implementation) -->
+  <div class="upload-section">
+    <div class="upload-placeholder">
+      <div class="upload-icon">📤</div>
+      <h4>Subir nuevo documento</h4>
+      <p>Arrastra archivos aquí o haz clic para seleccionar</p>
+      <button class="upload-button" disabled title="Próximamente">
+        Seleccionar archivo
+      </button>
+      <span class="upload-note">* Funcionalidad próximamente</span>
+    </div>
+  </div>
+
+  }
+  <!-- End @else -->
+</div>

@@ -1,0 +1,485 @@
+[
+  {
+    "id": "OWN001",
+    "name": "García Hoteles S.L.",
+    "email": "garcia@hotels.es",
+    "phone": "+34 958 480 002",
+    "mobile": "+34 600 123 456",
+    "commissionRate": 15,
+    "contractStart": "2024-01-15",
+    "contractEnd": "2029-01-15",
+    "bankAccount": {
+      "iban": "ES91 2100 0418 4502 0005 1332",
+      "bankName": "CaixaBank",
+      "accountHolder": "García Hoteles S.L."
+    },
+    "properties": ["LDG001"],
+    "stats": {
+      "totalRevenue": 24580,
+      "totalBookings": 156,
+      "avgRating": 4.5,
+      "responseRate": 98,
+      "avgResponseTime": 2.5
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-garcia-2024.pdf",
+        "uploadedAt": "2024-01-15T10:00:00Z"
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Responsabilidad Civil",
+        "url": "/documents/insurance-garcia-2024.pdf",
+        "expiresAt": "2025-12-31",
+        "uploadedAt": "2024-01-15T10:30:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2025-10-02T14:30:00Z"
+  },
+  {
+    "id": "OWN002",
+    "name": "Val d'Aran Properties",
+    "email": "properties@valdaran.com",
+    "phone": "+34 973 645 002",
+    "mobile": "+34 610 234 567",
+    "commissionRate": 15,
+    "contractStart": "2024-03-20",
+    "contractEnd": "2029-03-20",
+    "bankAccount": {
+      "iban": "ES76 0049 1234 5612 3456 7890",
+      "bankName": "Banco Santander",
+      "accountHolder": "Val d'Aran Properties S.L."
+    },
+    "properties": ["LDG002"],
+    "stats": {
+      "totalRevenue": 18960,
+      "totalBookings": 78,
+      "avgRating": 4.2,
+      "responseRate": 95,
+      "avgResponseTime": 3.2
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-valdaran-2024.pdf",
+        "uploadedAt": "2024-03-20T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-03-20T10:00:00Z",
+    "updatedAt": "2025-10-01T09:15:00Z"
+  },
+  {
+    "id": "OWN003",
+    "name": "Pirineos Alojamientos S.L.",
+    "email": "pirineos@alojamientos.es",
+    "phone": "+34 974 490 002",
+    "mobile": "+34 620 345 678",
+    "commissionRate": 12,
+    "contractStart": "2024-02-10",
+    "contractEnd": "2029-02-10",
+    "bankAccount": {
+      "iban": "ES12 0030 1234 5678 9012 3456",
+      "bankName": "BBVA",
+      "accountHolder": "Pirineos Alojamientos S.L."
+    },
+    "properties": ["LDG003"],
+    "stats": {
+      "totalRevenue": 15680,
+      "totalBookings": 234,
+      "avgRating": 4.0,
+      "responseRate": 99,
+      "avgResponseTime": 1.8
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-pirineos-2024.pdf",
+        "uploadedAt": "2024-02-10T10:00:00Z"
+      },
+      {
+        "type": "license",
+        "name": "Licencia Turística Aragón",
+        "url": "/documents/license-pirineos-2024.pdf",
+        "expiresAt": "2026-02-10",
+        "uploadedAt": "2024-02-10T10:30:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-02-10T10:00:00Z",
+    "updatedAt": "2025-10-02T18:20:00Z"
+  },
+  {
+    "id": "OWN004",
+    "name": "Familia Rodríguez",
+    "email": "familia@rodriguez.com",
+    "phone": "+34 987 730 002",
+    "mobile": "+34 630 456 789",
+    "commissionRate": 10,
+    "contractStart": "2024-04-05",
+    "contractEnd": "2029-04-05",
+    "bankAccount": {
+      "iban": "ES45 2100 9876 5432 1098 7654",
+      "bankName": "CaixaBank",
+      "accountHolder": "José Rodríguez García"
+    },
+    "properties": ["LDG004"],
+    "stats": {
+      "totalRevenue": 8750,
+      "totalBookings": 52,
+      "avgRating": 4.7,
+      "responseRate": 92,
+      "avgResponseTime": 4.5
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-rodriguez-2024.pdf",
+        "uploadedAt": "2024-04-05T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-04-05T10:00:00Z",
+    "updatedAt": "2025-09-28T11:45:00Z"
+  },
+  {
+    "id": "OWN005",
+    "name": "Grupo Hotelero Pirineos",
+    "email": "grupo@pirineos.com",
+    "phone": "+34 974 373 002",
+    "mobile": "+34 640 567 890",
+    "commissionRate": 18,
+    "contractStart": "2024-01-25",
+    "contractEnd": "2029-01-25",
+    "bankAccount": {
+      "iban": "ES67 0182 1234 5678 9012 3456",
+      "bankName": "BBVA",
+      "accountHolder": "Grupo Hotelero Pirineos S.A."
+    },
+    "properties": ["LDG005"],
+    "stats": {
+      "totalRevenue": 45680,
+      "totalBookings": 298,
+      "avgRating": 4.3,
+      "responseRate": 97,
+      "avgResponseTime": 2.1
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-ghp-2024.pdf",
+        "uploadedAt": "2024-01-25T10:00:00Z"
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Hotelero Completo",
+        "url": "/documents/insurance-ghp-2024.pdf",
+        "expiresAt": "2025-12-31",
+        "uploadedAt": "2024-01-25T10:30:00Z"
+      },
+      {
+        "type": "license",
+        "name": "Licencia Turística 5 Estrellas",
+        "url": "/documents/license-ghp-5stars.pdf",
+        "expiresAt": "2027-01-25",
+        "uploadedAt": "2024-01-25T11:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-01-25T10:00:00Z",
+    "updatedAt": "2025-10-02T16:55:00Z"
+  },
+  {
+    "id": "OWN006",
+    "name": "Inversiones Béjar S.A.",
+    "email": "inversiones@bejar.com",
+    "phone": "+34 923 408 002",
+    "mobile": "+34 650 678 901",
+    "commissionRate": 15,
+    "contractStart": "2024-05-12",
+    "contractEnd": "2029-05-12",
+    "bankAccount": {
+      "iban": "ES89 0128 9876 5432 1098 7654",
+      "bankName": "Bankinter",
+      "accountHolder": "Inversiones Béjar S.A."
+    },
+    "properties": ["LDG006"],
+    "stats": {
+      "totalRevenue": 6890,
+      "totalBookings": 45,
+      "avgRating": 3.9,
+      "responseRate": 87,
+      "avgResponseTime": 5.2
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-bejar-2024.pdf",
+        "uploadedAt": "2024-05-12T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": false,
+    "createdAt": "2024-05-12T10:00:00Z",
+    "updatedAt": "2025-09-30T13:20:00Z"
+  },
+  {
+    "id": "OWN007",
+    "name": "Astún Turismo S.L.",
+    "email": "turismo@astun.com",
+    "phone": "+34 974 373 101",
+    "mobile": "+34 660 789 012",
+    "commissionRate": 16,
+    "contractStart": "2024-02-01",
+    "contractEnd": "2029-02-01",
+    "bankAccount": {
+      "iban": "ES34 0049 8765 4321 0987 6543",
+      "bankName": "Banco Santander",
+      "accountHolder": "Astún Turismo S.L."
+    },
+    "properties": ["LDG007"],
+    "stats": {
+      "totalRevenue": 52340,
+      "totalBookings": 312,
+      "avgRating": 4.6,
+      "responseRate": 99,
+      "avgResponseTime": 1.5
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-astun-2024.pdf",
+        "uploadedAt": "2024-02-01T10:00:00Z"
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Hotelero Premium",
+        "url": "/documents/insurance-astun-2024.pdf",
+        "expiresAt": "2025-12-31",
+        "uploadedAt": "2024-02-01T10:30:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-02-01T10:00:00Z",
+    "updatedAt": "2025-10-02T19:10:00Z"
+  },
+  {
+    "id": "OWN008",
+    "name": "Port Ainé Services",
+    "email": "services@portaine.com",
+    "phone": "+34 973 621 002",
+    "mobile": "+34 670 890 123",
+    "commissionRate": 12,
+    "contractStart": "2024-03-15",
+    "contractEnd": "2029-03-15",
+    "bankAccount": {
+      "iban": "ES56 0030 7654 3210 9876 5432",
+      "bankName": "BBVA",
+      "accountHolder": "Port Ainé Services S.L."
+    },
+    "properties": ["LDG008"],
+    "stats": {
+      "totalRevenue": 9870,
+      "totalBookings": 134,
+      "avgRating": 4.1,
+      "responseRate": 94,
+      "avgResponseTime": 2.8
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-portaine-2024.pdf",
+        "uploadedAt": "2024-03-15T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-03-15T10:00:00Z",
+    "updatedAt": "2025-10-01T15:30:00Z"
+  },
+  {
+    "id": "OWN009",
+    "name": "Molina Properties S.L.",
+    "email": "molina@properties.com",
+    "phone": "+34 972 892 002",
+    "mobile": "+34 680 901 234",
+    "commissionRate": 15,
+    "contractStart": "2024-04-20",
+    "contractEnd": "2029-04-20",
+    "bankAccount": {
+      "iban": "ES78 2100 6543 2109 8765 4321",
+      "bankName": "CaixaBank",
+      "accountHolder": "Molina Properties S.L."
+    },
+    "properties": ["LDG009"],
+    "stats": {
+      "totalRevenue": 28450,
+      "totalBookings": 167,
+      "avgRating": 4.4,
+      "responseRate": 96,
+      "avgResponseTime": 3.5
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-molina-2024.pdf",
+        "uploadedAt": "2024-04-20T10:00:00Z"
+      },
+      {
+        "type": "license",
+        "name": "Licencia Turística Catalunya",
+        "url": "/documents/license-molina-2024.pdf",
+        "expiresAt": "2026-04-20",
+        "uploadedAt": "2024-04-20T10:30:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-04-20T10:00:00Z",
+    "updatedAt": "2025-10-02T10:25:00Z"
+  },
+  {
+    "id": "OWN010",
+    "name": "Cerler Luxury Hotels",
+    "email": "luxury@cerler.com",
+    "phone": "+34 974 551 002",
+    "mobile": "+34 690 012 345",
+    "commissionRate": 20,
+    "contractStart": "2024-01-10",
+    "contractEnd": "2029-01-10",
+    "bankAccount": {
+      "iban": "ES90 0182 5432 1098 7654 3210",
+      "bankName": "BBVA",
+      "accountHolder": "Cerler Luxury Hotels S.A."
+    },
+    "properties": ["LDG010"],
+    "stats": {
+      "totalRevenue": 89560,
+      "totalBookings": 425,
+      "avgRating": 4.8,
+      "responseRate": 100,
+      "avgResponseTime": 1.2
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración Premium 2024",
+        "url": "/documents/contract-cerler-2024.pdf",
+        "uploadedAt": "2024-01-10T10:00:00Z"
+      },
+      {
+        "type": "insurance",
+        "name": "Seguro Luxury Hotelero",
+        "url": "/documents/insurance-cerler-2024.pdf",
+        "expiresAt": "2025-12-31",
+        "uploadedAt": "2024-01-10T10:30:00Z"
+      },
+      {
+        "type": "license",
+        "name": "Licencia Turística 5 Estrellas Gran Lujo",
+        "url": "/documents/license-cerler-5stars-luxury.pdf",
+        "expiresAt": "2028-01-10",
+        "uploadedAt": "2024-01-10T11:00:00Z"
+      },
+      {
+        "type": "certification",
+        "name": "Certificado Excelencia Turística",
+        "url": "/documents/cert-cerler-excellence.pdf",
+        "expiresAt": "2026-01-10",
+        "uploadedAt": "2024-01-10T11:30:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-01-10T10:00:00Z",
+    "updatedAt": "2025-10-02T20:45:00Z"
+  },
+  {
+    "id": "OWN011",
+    "name": "Asturias Rural S.L.",
+    "email": "asturias@rural.com",
+    "phone": "+34 985 497 002",
+    "mobile": "+34 655 123 456",
+    "commissionRate": 10,
+    "contractStart": "2024-05-01",
+    "contractEnd": "2029-05-01",
+    "bankAccount": {
+      "iban": "ES23 0049 3210 9876 5432 1098",
+      "bankName": "Banco Santander",
+      "accountHolder": "Asturias Rural S.L."
+    },
+    "properties": ["LDG011"],
+    "stats": {
+      "totalRevenue": 11250,
+      "totalBookings": 68,
+      "avgRating": 4.5,
+      "responseRate": 90,
+      "avgResponseTime": 4.0
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-asturias-2024.pdf",
+        "uploadedAt": "2024-05-01T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": true,
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2025-09-29T12:15:00Z"
+  },
+  {
+    "id": "OWN012",
+    "name": "Boí Gestión Inmobiliaria",
+    "email": "boi@gestion.com",
+    "phone": "+34 973 696 002",
+    "mobile": "+34 665 234 567",
+    "commissionRate": 15,
+    "contractStart": "2024-04-10",
+    "contractEnd": "2029-04-10",
+    "bankAccount": {
+      "iban": "ES45 0030 8765 4321 0987 6543",
+      "bankName": "BBVA",
+      "accountHolder": "Boí Gestión Inmobiliaria S.L."
+    },
+    "properties": ["LDG012"],
+    "stats": {
+      "totalRevenue": 16780,
+      "totalBookings": 95,
+      "avgRating": 4.0,
+      "responseRate": 85,
+      "avgResponseTime": 6.5
+    },
+    "documents": [
+      {
+        "type": "contract",
+        "name": "Contrato Colaboración 2024",
+        "url": "/documents/contract-boi-2024.pdf",
+        "uploadedAt": "2024-04-10T10:00:00Z"
+      }
+    ],
+    "status": "active",
+    "verified": false,
+    "createdAt": "2024-04-10T10:00:00Z",
+    "updatedAt": "2025-09-25T08:30:00Z"
+  }
+]

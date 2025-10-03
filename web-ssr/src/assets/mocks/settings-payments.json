@@ -1,0 +1,13 @@
+{
+  "enabledGateways": ["stripe", "paypal"],
+  "stripePublicKey": "MOCK_STRIPE_PUBLIC_KEY",
+  "stripeSecretKey": "MOCK_STRIPE_SECRET_KEY",
+  "paypalClientId": "MOCK_PAYPAL_CLIENT_ID",
+  "paypalSecretKey": "MOCK_PAYPAL_SECRET_KEY",
+  "redsysCommerceCode": "999008881",
+  "redsysTerminal": "001",
+  "platformFeePercentage": 10,
+  "acceptedCurrencies": ["EUR", "USD", "GBP"],
+  "autoRefunds": true,
+  "refundProcessingDays": 7
+}

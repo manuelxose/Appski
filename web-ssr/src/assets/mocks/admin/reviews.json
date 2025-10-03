@@ -1,0 +1,172 @@
+{
+  "reviews": [
+    {
+      "id": "REV001",
+      "bookingId": "BK001",
+      "userId": "USR001",
+      "userName": "Carlos Martínez",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "rating": 5,
+      "title": "Experiencia excepcional",
+      "comment": "Instalaciones de primera clase, pistas muy bien mantenidas y personal amable. Volveré sin duda.",
+      "pros": [
+        "Excelente estado pistas",
+        "Personal profesional",
+        "Buena relación calidad-precio"
+      ],
+      "cons": [],
+      "helpful": 23,
+      "notHelpful": 2,
+      "status": "approved",
+      "response": {
+        "text": "Muchas gracias por tu valoración Carlos. ¡Te esperamos pronto!",
+        "respondedBy": "MGR001",
+        "respondedAt": "2025-09-29T10:00:00Z"
+      },
+      "createdAt": "2025-09-28T18:30:00Z",
+      "verifiedPurchase": true
+    },
+    {
+      "id": "REV002",
+      "bookingId": "BK002",
+      "userId": "USR002",
+      "userName": "Ana García",
+      "stationId": "baqueira-beret",
+      "stationName": "Baqueira Beret",
+      "rating": 4,
+      "title": "Muy buena estación para principiantes",
+      "comment": "Las clases grupales fueron excelentes. Solo un poco caro para mi presupuesto, pero la calidad lo justifica.",
+      "pros": [
+        "Monitores excelentes",
+        "Zonas principiantes amplias",
+        "Servicios de calidad"
+      ],
+      "cons": ["Precios elevados", "Largas colas en cafetería"],
+      "helpful": 15,
+      "notHelpful": 1,
+      "status": "approved",
+      "response": {
+        "text": "Gracias Ana. Trabajamos constantemente para mejorar nuestros servicios.",
+        "respondedBy": "MGR002",
+        "respondedAt": "2025-10-03T09:00:00Z"
+      },
+      "createdAt": "2025-10-02T20:15:00Z",
+      "verifiedPurchase": true
+    },
+    {
+      "id": "REV003",
+      "bookingId": "BK003",
+      "userId": "USR003",
+      "userName": "Luis Fernández",
+      "stationId": "formigal",
+      "stationName": "Formigal",
+      "rating": 5,
+      "title": "Mi estación favorita",
+      "comment": "Llevo años viniendo y cada vez está mejor. Gran variedad de pistas y excelente organización.",
+      "pros": [
+        "Variedad de pistas",
+        "Buena organización",
+        "Paisajes increíbles"
+      ],
+      "cons": [],
+      "helpful": 42,
+      "notHelpful": 0,
+      "status": "approved",
+      "response": {
+        "text": "¡Gracias Luis! Es un placer tenerte como cliente habitual.",
+        "respondedBy": "MGR003",
+        "respondedAt": "2025-10-01T10:30:00Z"
+      },
+      "createdAt": "2025-09-30T19:45:00Z",
+      "verifiedPurchase": true
+    },
+    {
+      "id": "REV004",
+      "bookingId": "BK006",
+      "userId": "USR006",
+      "userName": "Laura Ruiz",
+      "stationId": "formigal",
+      "stationName": "Formigal",
+      "rating": 3,
+      "title": "Experiencia correcta pero mejorable",
+      "comment": "Tuvimos que cancelar por mal tiempo y el proceso fue confuso. El reembolso llegó pero tardó más de lo esperado.",
+      "pros": ["Reembolso completo", "Buen trato"],
+      "cons": ["Proceso de cancelación confuso", "Demora en reembolso"],
+      "helpful": 8,
+      "notHelpful": 3,
+      "status": "approved",
+      "response": {
+        "text": "Lamentamos las molestias Laura. Hemos mejorado nuestro proceso de cancelaciones.",
+        "respondedBy": "MGR003",
+        "respondedAt": "2025-09-29T15:00:00Z"
+      },
+      "createdAt": "2025-09-29T12:00:00Z",
+      "verifiedPurchase": true
+    },
+    {
+      "id": "REV005",
+      "bookingId": "BK007",
+      "userId": "USR007",
+      "userName": "Jorge Moreno",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "rating": 5,
+      "title": "Perfecto para familias",
+      "comment": "Llevamos a nuestros hijos y la experiencia fue fantástica. Zonas infantiles muy bien diseñadas.",
+      "pros": [
+        "Zonas infantiles",
+        "Monitores pacientes",
+        "Instalaciones familia-friendly"
+      ],
+      "cons": [],
+      "helpful": 18,
+      "notHelpful": 1,
+      "status": "approved",
+      "createdAt": "2025-10-02T17:30:00Z",
+      "verifiedPurchase": true
+    },
+    {
+      "id": "REV006",
+      "bookingId": "BK015",
+      "userId": "USR015",
+      "userName": "Roberto Díaz",
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "rating": 2,
+      "title": "Decepcionante",
+      "comment": "Varios remontes cerrados sin previo aviso. No cumplió mis expectativas para el precio pagado.",
+      "pros": [],
+      "cons": ["Remontes cerrados", "Falta de información", "Precio elevado"],
+      "helpful": 12,
+      "notHelpful": 8,
+      "status": "pending",
+      "flagged": true,
+      "flagReason": "Revisión manual requerida",
+      "createdAt": "2025-10-03T08:00:00Z",
+      "verifiedPurchase": true
+    }
+  ],
+  "summary": {
+    "totalReviews": 6,
+    "averageRating": 4.0,
+    "approvedReviews": 5,
+    "pendingReviews": 1,
+    "flaggedReviews": 1,
+    "byRating": {
+      "5": 3,
+      "4": 1,
+      "3": 1,
+      "2": 1,
+      "1": 0
+    },
+    "byStation": {
+      "sierra-nevada": 3,
+      "baqueira-beret": 1,
+      "formigal": 2
+    },
+    "verifiedPurchases": 6,
+    "totalHelpful": 118,
+    "totalNotHelpful": 15
+  }
+}

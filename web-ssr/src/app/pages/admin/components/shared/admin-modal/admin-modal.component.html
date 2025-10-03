@@ -1,0 +1,38 @@
+@if (open()) {
+<div
+  class="modal-backdrop"
+  [class.animating]="isAnimating()"
+  (click)="onBackdropClick()"
+  tabindex="0"
+  role="presentation"
+>
+  <div
+    class="modal-content modal-{{ size() }}"
+    [class.animating]="isAnimating()"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-labelledby]="title() ? 'modal-title' : null"
+  >
+    @if (title() || showCloseButton()) {
+    <div class="modal-header">
+      @if (title()) {
+      <h2 id="modal-title" class="modal-title">{{ title() }}</h2>
+      } @if (showCloseButton()) {
+      <button
+        class="modal-close"
+        (click)="onClose()"
+        type="button"
+        aria-label="Cerrar"
+      >
+        ✕
+      </button>
+      }
+    </div>
+    }
+
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+}

@@ -1,0 +1,33 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    @if (showHome()) {
+    <li class="breadcrumb-item">
+      <a href="/admin" class="breadcrumb-link">
+        <span class="breadcrumb-icon">🏠</span>
+        <span class="breadcrumb-label">Dashboard</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+    </li>
+    } @for (item of items(); track $index; let isLast = $last) {
+    <li class="breadcrumb-item" [class.active]="isLast">
+      @if (item.path && !isLast) {
+      <a [href]="item.path" class="breadcrumb-link">
+        @if (item.icon) {
+        <span class="breadcrumb-icon">{{ item.icon }}</span>
+        }
+        <span class="breadcrumb-label">{{ item.label }}</span>
+      </a>
+      } @else {
+      <span class="breadcrumb-current">
+        @if (item.icon) {
+        <span class="breadcrumb-icon">{{ item.icon }}</span>
+        }
+        <span class="breadcrumb-label">{{ item.label }}</span>
+      </span>
+      } @if (!isLast) {
+      <span class="breadcrumb-separator">/</span>
+      }
+    </li>
+    }
+  </ol>
+</nav>

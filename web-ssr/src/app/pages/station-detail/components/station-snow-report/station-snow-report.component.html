@@ -1,0 +1,172 @@
+<!-- Snow Report Card -->
+<div class="bg-white rounded-xl shadow-lg p-6">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-bold text-slate-900">
+      ❄️ <span data-i18n="snow_report.title">Parte de Nieve</span>
+    </h2>
+    <span class="text-sm text-slate-500">
+      <span data-i18n="snow_report.updated">Actualizado:</span>
+      {{ snowReport().updatedAt }}
+    </span>
+  </div>
+
+  <!-- Main Snow Stats Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+    <!-- Snow Base -->
+    <div class="text-center p-4 bg-blue-50 rounded-lg">
+      <div class="text-3xl md:text-4xl font-bold text-blue-600">
+        {{ snowReport().snowBase }}
+      </div>
+      <div class="text-sm text-slate-600 mt-1">
+        <span data-i18n="snow.base">Base</span> (cm)
+      </div>
+    </div>
+
+    <!-- Snow Top -->
+    <div class="text-center p-4 bg-blue-50 rounded-lg">
+      <div class="text-3xl md:text-4xl font-bold text-blue-600">
+        {{ snowReport().snowTop }}
+      </div>
+      <div class="text-sm text-slate-600 mt-1">
+        <span data-i18n="snow.top">Cima</span> (cm)
+      </div>
+    </div>
+
+    <!-- Snow Quality -->
+    <div
+      class="col-span-2 md:col-span-1 text-center p-4 rounded-lg"
+      [ngClass]="getQualityColor(snowReport().snowQuality)"
+    >
+      <div class="text-lg font-semibold">
+        {{ getQualityLabel(snowReport().snowQuality) }}
+      </div>
+      <div class="text-sm mt-1">
+        <span data-i18n="snow.quality">Calidad</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Snowfall -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div
+      class="flex items-center justify-between p-4 border border-gray-200 rounded-lg"
+    >
+      <div>
+        <div class="text-sm text-slate-600">
+          <span data-i18n="snow.new_24h">Última 24h</span>
+        </div>
+        <div class="text-2xl font-bold text-green-600">
+          {{ snowReport().snowNew24h }} cm
+        </div>
+      </div>
+      <span class="text-3xl">☃️</span>
+    </div>
+
+    <div
+      class="flex items-center justify-between p-4 border border-gray-200 rounded-lg"
+    >
+      <div>
+        <div class="text-sm text-slate-600">
+          <span data-i18n="snow.new_48h">Últimas 48h</span>
+        </div>
+        <div class="text-2xl font-bold text-green-600">
+          {{ snowReport().snowNew48h }} cm
+        </div>
+      </div>
+      <span class="text-3xl">🌨️</span>
+    </div>
+
+    <div
+      class="flex items-center justify-between p-4 border border-gray-200 rounded-lg"
+    >
+      <div>
+        <div class="text-sm text-slate-600">
+          <span data-i18n="snow.new_7days">Últimos 7 días</span>
+        </div>
+        <div class="text-2xl font-bold text-green-600">
+          {{ snowReport().snowNew7days }} cm
+        </div>
+      </div>
+      <span class="text-3xl">❄️</span>
+    </div>
+  </div>
+
+  <!-- Weather Conditions -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Temperature -->
+    <div class="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">🌡️</span>
+        <div>
+          <div class="text-sm text-slate-600">
+            <span data-i18n="weather.temperature">Temperatura</span>
+          </div>
+          <div class="text-2xl font-bold text-slate-900">
+            {{ snowReport().temperature.current }}°C
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-slate-600">
+        Min: {{ snowReport().temperature.min }}°C · Max:
+        {{ snowReport().temperature.max }}°C
+      </div>
+    </div>
+
+    <!-- Wind -->
+    <div class="p-4 bg-gradient-to-br from-sky-50 to-sky-100 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">💨</span>
+        <div>
+          <div class="text-sm text-slate-600">
+            <span data-i18n="weather.wind">Viento</span>
+          </div>
+          <div class="text-2xl font-bold text-slate-900">
+            {{ snowReport().wind.speed }} km/h
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-slate-600">
+        <span data-i18n="weather.direction">Dirección:</span>
+        {{ snowReport().wind.direction }}
+      </div>
+    </div>
+
+    <!-- Visibility -->
+    <div class="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">👁️</span>
+        <div>
+          <div class="text-sm text-slate-600">
+            <span data-i18n="weather.visibility">Visibilidad</span>
+          </div>
+          <div class="text-lg font-bold text-slate-900">
+            {{ getVisibilityLabel(snowReport().visibility) }}
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-slate-600">
+        <span data-i18n="snow.last_snowfall">Última nevada:</span>
+        {{ snowReport().lastSnowfall }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert banner if conditions are exceptional -->
+  @if (snowReport().snowNew24h > 20) {
+  <div
+    class="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-lg flex items-start gap-3"
+  >
+    <span class="text-2xl">🎉</span>
+    <div>
+      <div class="font-semibold text-green-900">
+        <span data-i18n="alert.powder_day">¡Día de polvo!</span>
+      </div>
+      <div class="text-sm text-green-700">
+        <span data-i18n="alert.fresh_snow"
+          >Condiciones excepcionales con nieve reciente</span
+        >
+      </div>
+    </div>
+  </div>
+  }
+</div>
