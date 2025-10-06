@@ -1,0 +1,6 @@
+[
+  { "name": "Forfaits", "bookings": 2156, "revenue": 215600, "percentage": 45 },
+  { "name": "Paquetes", "bookings": 987, "revenue": 197400, "percentage": 30 },
+  { "name": "Clases", "bookings": 654, "revenue": 98100, "percentage": 15 },
+  { "name": "Alquiler", "bookings": 424, "revenue": 42400, "percentage": 10 }
+]

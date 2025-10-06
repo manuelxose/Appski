@@ -1,0 +1,561 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="page-header">
+    <div class="breadcrumbs">
+      <span class="breadcrumb-item">Admin</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item">CRM</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item current">Campañas y Promociones</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="createDiscountCode()">
+        + Nuevo Código
+      </button>
+      <button class="btn-primary" (click)="createCampaign()">
+        + Nueva Campaña
+      </button>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-row">
+    <div class="filter-group">
+      <label>Estado</label>
+      <div class="button-group">
+        <button
+          [class.active]="selectedCampaignStatus() === 'all'"
+          (click)="selectedCampaignStatus.set('all')"
+        >
+          Todas
+        </button>
+        <button
+          [class.active]="selectedCampaignStatus() === 'active'"
+          (click)="selectedCampaignStatus.set('active')"
+        >
+          Activas
+        </button>
+        <button
+          [class.active]="selectedCampaignStatus() === 'scheduled'"
+          (click)="selectedCampaignStatus.set('scheduled')"
+        >
+          Programadas
+        </button>
+        <button
+          [class.active]="selectedCampaignStatus() === 'ended'"
+          (click)="selectedCampaignStatus.set('ended')"
+        >
+          Finalizadas
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label>Tipo</label>
+      <select
+        [value]="selectedCampaignType()"
+        (change)="selectedCampaignType.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todos los tipos</option>
+        <option value="seasonal">Temporada</option>
+        <option value="promotional">Promocional</option>
+        <option value="package">Paquete</option>
+        <option value="loyalty">Fidelización</option>
+        <option value="flash">Flash</option>
+      </select>
+    </div>
+
+    <div class="filter-group search-group">
+      <input
+        type="text"
+        placeholder="Buscar campañas..."
+        [value]="searchTerm()"
+        (input)="searchTerm.set($any($event.target).value)"
+        class="search-input"
+      />
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">📊</div>
+      <div class="stat-content">
+        <div class="stat-label">Campañas Activas</div>
+        <div class="stat-value">{{ stats().totalActiveCampaigns }}</div>
+        <div class="stat-sublabel">{{ totalCampaigns() }} en total</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">💰</div>
+      <div class="stat-content">
+        <div class="stat-label">Ingresos Generados</div>
+        <div class="stat-value">{{ formatCurrency(stats().totalRevenue) }}</div>
+        <div class="stat-sublabel">
+          ROI medio {{ formatPercent(stats().avgROI) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🎫</div>
+      <div class="stat-content">
+        <div class="stat-label">Códigos Activos</div>
+        <div class="stat-value">{{ stats().activeDiscountCodes }}</div>
+        <div class="stat-sublabel">
+          {{ stats().totalRedemptions }} canjeados
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">⭐</div>
+      <div class="stat-content">
+        <div class="stat-label">Miembros Fidelidad</div>
+        <div class="stat-value">{{ stats().loyaltyMembers }}</div>
+        <div class="stat-sublabel">
+          {{ formatCurrency(stats().avgSpendingPerMember) }} gasto medio
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading & Error States -->
+  @if (isLoading()) {
+  <div class="loading-state">Cargando campañas...</div>
+  } @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+  } @else {
+  <!-- Campaigns Table -->
+  <div class="table-header">
+    <h2>Campañas ({{ filteredCampaigns().length }})</h2>
+    <div class="table-actions">
+      <button class="btn-text" (click)="loadCampaignsData()">
+        🔄 Actualizar
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Campaña</th>
+          <th>Tipo</th>
+          <th>Período</th>
+          <th>Presupuesto</th>
+          <th>Rendimiento</th>
+          <th>ROI</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (campaign of filteredCampaigns(); track campaign.id) {
+        <tr>
+          <td>
+            <div class="campaign-info">
+              <div class="campaign-name">
+                <span class="type-icon">{{
+                  getCampaignTypeIcon(campaign.type)
+                }}</span>
+                {{ campaign.name }}
+              </div>
+              <div class="campaign-description">{{ campaign.description }}</div>
+            </div>
+          </td>
+          <td>
+            <span class="type-badge">{{
+              getCampaignTypeLabel(campaign.type)
+            }}</span>
+          </td>
+          <td>
+            <div class="period-info">
+              <div class="period-dates">
+                {{ formatDate(campaign.startDate) }} -
+                {{ formatDate(campaign.endDate) }}
+              </div>
+              @if (campaign.targetSegment) {
+              <div class="target-segment">🎯 {{ campaign.targetSegment }}</div>
+              }
+            </div>
+          </td>
+          <td>
+            @if (campaign.budget) {
+            <div class="budget-info">
+              <div class="budget-spent">
+                {{ formatCurrency(campaign.spent || 0) }}
+              </div>
+              <div class="budget-total">
+                de {{ formatCurrency(campaign.budget) }}
+              </div>
+              <div class="budget-bar">
+                <div
+                  class="budget-fill"
+                  [style.width.%]="
+                    ((campaign.spent || 0) / campaign.budget) * 100
+                  "
+                ></div>
+              </div>
+            </div>
+            } @else {
+            <span class="no-budget">Sin presupuesto</span>
+            }
+          </td>
+          <td>
+            <div class="performance-info">
+              <div class="perf-row">
+                <span class="perf-label">Impresiones:</span>
+                <span class="perf-value">{{
+                  campaign.performance.impressions.toLocaleString()
+                }}</span>
+              </div>
+              <div class="perf-row">
+                <span class="perf-label">Conversiones:</span>
+                <span class="perf-value conversion">{{
+                  campaign.performance.conversions
+                }}</span>
+              </div>
+              <div class="perf-row">
+                <span class="perf-label">Ingresos:</span>
+                <span class="perf-value revenue">{{
+                  formatCurrency(campaign.performance.revenue)
+                }}</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div
+              class="roi-cell"
+              [class]="getROIClass(campaign.performance.roi)"
+            >
+              {{ formatPercent(campaign.performance.roi) }}
+            </div>
+          </td>
+          <td>
+            <span
+              class="status-badge"
+              [class]="getStatusClass(campaign.status)"
+            >
+              {{ getStatusLabel(campaign.status) }}
+            </span>
+          </td>
+          <td>
+            <div class="actions-menu">
+              <button
+                class="btn-action"
+                (click)="editCampaign(campaign.id)"
+                title="Editar"
+              >
+                ✏️
+              </button>
+              @if (campaign.status === 'active') {
+              <button
+                class="btn-action"
+                (click)="pauseCampaign(campaign.id)"
+                title="Pausar"
+              >
+                ⏸️
+              </button>
+              } @if (campaign.status === 'paused') {
+              <button
+                class="btn-action primary"
+                (click)="resumeCampaign(campaign.id)"
+                title="Reanudar"
+              >
+                ▶️
+              </button>
+              } @if (campaign.status === 'active' || campaign.status ===
+              'paused') {
+              <button
+                class="btn-action"
+                (click)="endCampaign(campaign.id)"
+                title="Finalizar"
+              >
+                ⏹️
+              </button>
+              }
+              <button
+                class="btn-action"
+                (click)="viewCampaignReport(campaign.id)"
+                title="Informe"
+              >
+                📊
+              </button>
+              <button
+                class="btn-action"
+                (click)="duplicateCampaign(campaign.id)"
+                title="Duplicar"
+              >
+                📋
+              </button>
+            </div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="8" class="empty-state">
+            No hay campañas que coincidan con los filtros
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Discount Codes Section -->
+  <div class="codes-section">
+    <div class="section-header">
+      <h2>Códigos de Descuento</h2>
+      <div class="filter-group">
+        <select
+          [value]="selectedCodeStatus()"
+          (change)="selectedCodeStatus.set($any($event.target).value)"
+          class="filter-select-sm"
+        >
+          <option value="all">Todos</option>
+          <option value="active">Activos</option>
+          <option value="expired">Expirados</option>
+          <option value="disabled">Desactivados</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="codes-grid">
+      @for (code of filteredDiscountCodes(); track code.id) {
+      <div class="code-card">
+        <div class="code-header">
+          <div class="code-main">
+            <div class="code-value">{{ code.code }}</div>
+            <button
+              class="btn-copy"
+              (click)="copyCode(code.code)"
+              title="Copiar código"
+            >
+              📋
+            </button>
+          </div>
+          <span class="status-badge" [class]="'status-' + code.status">
+            {{
+              code.status === "active"
+                ? "Activo"
+                : code.status === "expired"
+                ? "Expirado"
+                : "Desactivado"
+            }}
+          </span>
+        </div>
+
+        <div class="code-details">
+          <div class="code-type">
+            @if (code.type === 'percentage') {
+            <span class="discount-value">-{{ code.value }}%</span>
+            } @else if (code.type === 'fixed') {
+            <span class="discount-value"
+              >-{{ formatCurrency(code.value) }}</span
+            >
+            } @else if (code.type === 'bogo') {
+            <span class="discount-value">2x1</span>
+            } @else {
+            <span class="discount-value">Envío Gratis</span>
+            }
+            <span class="discount-label">{{
+              getDiscountTypeLabel(code.type)
+            }}</span>
+          </div>
+
+          <div class="code-usage">
+            <div class="usage-bar">
+              <div
+                class="usage-fill"
+                [style.width.%]="
+                  code.usageLimit ? (code.usedCount / code.usageLimit) * 100 : 0
+                "
+              ></div>
+            </div>
+            <div class="usage-text">
+              {{ code.usedCount }} / {{ code.usageLimit || "∞" }} canjes
+            </div>
+          </div>
+
+          <div class="code-validity">
+            <div class="validity-dates">
+              📅 {{ formatDate(code.validFrom) }} -
+              {{ formatDate(code.validTo) }}
+            </div>
+            @if (code.campaignName) {
+            <div class="code-campaign">🎯 {{ code.campaignName }}</div>
+            }
+          </div>
+
+          @if (code.minimumPurchase) {
+          <div class="code-condition">
+            Compra mínima: {{ formatCurrency(code.minimumPurchase) }}
+          </div>
+          }
+        </div>
+
+        <div class="code-actions">
+          <button class="btn-text-sm" (click)="editDiscountCode(code.id)">
+            Editar
+          </button>
+          @if (code.status === 'active') {
+          <button class="btn-text-sm danger" (click)="disableCode(code.id)">
+            Desactivar
+          </button>
+          }
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state-card">No hay códigos de descuento</div>
+      }
+    </div>
+  </div>
+
+  <!-- Packages Section -->
+  <div class="packages-section">
+    <div class="section-header">
+      <h2>Paquetes Especiales</h2>
+      <button class="btn-secondary-sm" (click)="createPackage()">
+        + Nuevo Paquete
+      </button>
+    </div>
+
+    <div class="packages-grid">
+      @for (pkg of activePackages(); track pkg.id) {
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-type">{{ getPackageTypeLabel(pkg.type) }}</span>
+          <span class="package-discount">-{{ pkg.discount }}%</span>
+        </div>
+
+        <h3 class="package-name">{{ pkg.name }}</h3>
+        <p class="package-description">{{ pkg.description }}</p>
+
+        <div class="package-includes">
+          <div class="includes-label">Incluye:</div>
+          @for (item of pkg.includes; track $index) {
+          <div class="include-item">✓ {{ item }}</div>
+          }
+        </div>
+
+        <div class="package-price">
+          <div class="price-current">{{ formatCurrency(pkg.price) }}</div>
+          <div class="price-original">
+            {{ formatCurrency(pkg.originalPrice) }}
+          </div>
+        </div>
+
+        <div class="package-availability">
+          @if (pkg.maxBookings) {
+          <div class="bookings-progress">
+            <div class="bookings-bar">
+              <div
+                class="bookings-fill"
+                [style.width.%]="(pkg.currentBookings / pkg.maxBookings) * 100"
+              ></div>
+            </div>
+            <div class="bookings-text">
+              {{ pkg.currentBookings }} / {{ pkg.maxBookings }} reservas
+            </div>
+          </div>
+          }
+          <div class="package-dates">
+            {{ formatDate(pkg.availableFrom) }} -
+            {{ formatDate(pkg.availableTo) }}
+          </div>
+        </div>
+
+        <div class="package-actions">
+          <button class="btn-text-sm" (click)="editPackage(pkg.id)">
+            Editar
+          </button>
+          <button class="btn-text-sm" (click)="viewPackageBookings(pkg.id)">
+            Ver Reservas
+          </button>
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state-card">No hay paquetes activos</div>
+      }
+    </div>
+  </div>
+
+  <!-- Loyalty Programs Section -->
+  <div class="loyalty-section">
+    <div class="section-header">
+      <h2>Programa de Fidelización</h2>
+      <div class="header-actions">
+        <button class="btn-text" (click)="exportLoyaltyReport()">
+          📊 Exportar Informe
+        </button>
+      </div>
+    </div>
+
+    <div class="loyalty-grid">
+      @for (tier of activeLoyaltyTiers(); track tier.id) {
+      <div
+        class="loyalty-card"
+        [style.border-left-color]="getTierColor(tier.tier)"
+      >
+        <div class="tier-header">
+          <div
+            class="tier-badge"
+            [style.background-color]="getTierColor(tier.tier)"
+          >
+            {{ getLoyaltyTierLabel(tier.tier) }}
+          </div>
+          <div class="tier-discount">
+            {{ tier.discountPercentage }}% descuento
+          </div>
+        </div>
+
+        <div class="tier-name">{{ tier.name }}</div>
+
+        <div class="tier-requirements">
+          @if (tier.minPoints) {
+          <div class="requirement">Desde {{ tier.minPoints }} puntos</div>
+          } @if (tier.maxPoints) {
+          <div class="requirement">Hasta {{ tier.maxPoints }} puntos</div>
+          }
+        </div>
+
+        <div class="tier-benefits">
+          <div class="benefits-label">Beneficios:</div>
+          @for (benefit of tier.benefits; track $index) {
+          <div class="benefit-item">⭐ {{ benefit }}</div>
+          }
+        </div>
+
+        <div class="tier-stats">
+          <div class="tier-stat">
+            <div class="tier-stat-value">{{ tier.currentMembers }}</div>
+            <div class="tier-stat-label">Miembros</div>
+          </div>
+          <div class="tier-stat">
+            <div class="tier-stat-value">{{ tier.rewardsGiven }}</div>
+            <div class="tier-stat-label">Recompensas</div>
+          </div>
+        </div>
+
+        <div class="tier-actions">
+          <button class="btn-text-sm" (click)="editLoyaltyTier(tier.id)">
+            Editar Tier
+          </button>
+          <button class="btn-text-sm" (click)="viewLoyaltyMembers(tier.tier)">
+            Ver Miembros
+          </button>
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state-card">
+        No hay tiers de fidelización configurados
+      </div>
+      }
+    </div>
+  </div>
+  }
+</div>

@@ -15,14 +15,10 @@ import { AdminBadgeComponent } from "../../shared/admin-badge/admin-badge.compon
 import { AdminLoaderComponent } from "../../shared/admin-loader/admin-loader.component";
 import {
   ArticleStatus,
-  ArticleVisibility,
-  ArticleFormat,
   BlogArticle,
   BlogCategory,
   BlogTag,
   BlogAuthor,
-  BlogSEO,
-  BlogStats,
   BlogFormData,
   BlogOverviewStats,
 } from "./admin-blog.models";
@@ -114,6 +110,8 @@ export class AdminBlogComponent implements OnInit {
       totalArticles: arts.length,
       published: arts.filter((a) => a.status === "published").length,
       drafts: arts.filter((a) => a.status === "draft").length,
+      scheduled: arts.filter((a) => a.status === "scheduled").length,
+      archived: arts.filter((a) => a.status === "archived").length,
       totalViews: arts.reduce((sum, a) => sum + a.stats.views, 0),
       totalLikes: arts.reduce((sum, a) => sum + a.stats.likes, 0),
       totalComments: arts.reduce((sum, a) => sum + a.stats.comments, 0),

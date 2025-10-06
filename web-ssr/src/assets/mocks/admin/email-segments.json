@@ -1,0 +1,153 @@
+{
+  "segments": [
+    {
+      "id": "seg-001",
+      "name": "Alta Frecuencia",
+      "icon": "🔥",
+      "description": "Usuarios que visitaron 3+ veces en últimos 6 meses",
+      "userCount": 4823,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "visitsLast6Months",
+            "operator": ">=",
+            "value": "3"
+          },
+          {
+            "field": "lastVisit",
+            "operator": "<=",
+            "value": "30"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T10:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "seg-002",
+      "name": "Suscriptores Newsletter",
+      "icon": "📬",
+      "description": "Usuarios con suscripción activa a newsletter semanal",
+      "userCount": 8945,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "newsletterSubscribed",
+            "operator": "==",
+            "value": "true"
+          },
+          {
+            "field": "emailVerified",
+            "operator": "==",
+            "value": "true"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T09:30:00Z",
+      "isActive": true
+    },
+    {
+      "id": "seg-003",
+      "name": "Usuarios Inactivos",
+      "icon": "😴",
+      "description": "Sin actividad en los últimos 90 días",
+      "userCount": 2156,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "lastActivity",
+            "operator": ">",
+            "value": "90"
+          },
+          {
+            "field": "totalBookings",
+            "operator": ">=",
+            "value": "1"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T08:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "seg-004",
+      "name": "Nuevos Registros",
+      "icon": "🆕",
+      "description": "Registrados en los últimos 7 días",
+      "userCount": 287,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "registrationDate",
+            "operator": "<=",
+            "value": "7"
+          },
+          {
+            "field": "emailVerified",
+            "operator": "==",
+            "value": "true"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T11:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "seg-005",
+      "name": "Carrito Abandonado",
+      "icon": "🛒",
+      "description": "Con items en carrito sin finalizar compra (24-72h)",
+      "userCount": 124,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "cartItemsCount",
+            "operator": ">",
+            "value": "0"
+          },
+          {
+            "field": "cartAgeHours",
+            "operator": ">=",
+            "value": "24"
+          },
+          {
+            "field": "cartAgeHours",
+            "operator": "<=",
+            "value": "72"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T14:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "seg-006",
+      "name": "Alertas Meteorológicas",
+      "icon": "🌨️",
+      "description": "Interesados en recibir notificaciones de nevadas",
+      "userCount": 6734,
+      "criteria": {
+        "operator": "AND",
+        "rules": [
+          {
+            "field": "weatherAlertsEnabled",
+            "operator": "==",
+            "value": "true"
+          },
+          {
+            "field": "favoriteStationsCount",
+            "operator": ">=",
+            "value": "1"
+          }
+        ]
+      },
+      "lastUpdated": "2025-12-03T07:00:00Z",
+      "isActive": true
+    }
+  ]
+}

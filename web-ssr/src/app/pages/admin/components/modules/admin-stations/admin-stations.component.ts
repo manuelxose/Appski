@@ -14,7 +14,6 @@ import {
 } from "../../shared/admin-filters/admin-filters.component";
 import { AdminSearchBarComponent } from "../../shared/admin-search-bar/admin-search-bar.component";
 import { AdminStatCardComponent } from "../../shared/admin-stat-card/admin-stat-card.component";
-import { AdminBadgeComponent } from "../../shared/admin-badge/admin-badge.component";
 import {
   AdminBreadcrumbsComponent,
   BreadcrumbItem,
@@ -47,7 +46,6 @@ import { SkiStation, StationFormData } from "./admin-stations.models";
     AdminFiltersComponent,
     AdminSearchBarComponent,
     AdminStatCardComponent,
-    AdminBadgeComponent,
     AdminBreadcrumbsComponent,
     AdminModalComponent,
     AdminConfirmDialogComponent,
@@ -60,6 +58,9 @@ import { SkiStation, StationFormData } from "./admin-stations.models";
 })
 export class AdminStationsComponent {
   private readonly contentService = inject(ContentService);
+
+  // Object para uso en template
+  protected readonly Object = Object;
 
   // State
   readonly isLoading = signal(true);
@@ -102,8 +103,8 @@ export class AdminStationsComponent {
 
   // Breadcrumbs
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: "Admin", url: "/admin" },
-    { label: "Estaciones", url: "/admin/stations" },
+    { label: "Admin", path: "/admin" },
+    { label: "Estaciones", path: "/admin/stations" },
   ];
 
   // Stats
@@ -115,11 +116,11 @@ export class AdminStationsComponent {
       (s) => s.status === "closed"
     ).length;
     const totalPistes = stationList.reduce(
-      (sum, s) => sum + (s.totalPistes || 0),
+      (sum, s) => sum + (s.pistes?.total || 0),
       0
     );
     const openPistes = stationList.reduce(
-      (sum, s) => sum + (s.openPistes || 0),
+      (sum, s) => sum + (s.pistes?.open || 0),
       0
     );
 
@@ -164,59 +165,48 @@ export class AdminStationsComponent {
   });
 
   // Table Configuration
-  readonly tableColumns: TableColumn<SkiStation>[] = [
+  readonly tableColumns: TableColumn[] = [
     { key: "name", label: "Nombre", sortable: true },
     { key: "slug", label: "Slug", sortable: true },
     {
       key: "status",
       label: "Estado",
       sortable: true,
-      type: "badge",
-      formatter: (station) => this.getStatusLabel(station.status || "seasonal"),
+      format: "badge",
     },
     {
       key: "altitudes",
       label: "Altitudes",
       sortable: false,
-      formatter: (station) =>
-        `${station.altitudes.base}m - ${station.altitudes.top}m`,
     },
     {
       key: "pistes",
-      label: "Pistas",
+      label: "Pistas Abiertas",
       sortable: false,
-      formatter: (station) =>
-        `${station.openPistes || 0} / ${station.totalPistes || 0}`,
     },
     {
-      key: "openPistes",
+      key: "openPercentage",
       label: "% Apertura",
       sortable: true,
-      formatter: (station) => {
-        const total = station.totalPistes || 0;
-        const open = station.openPistes || 0;
-        const percentage = total > 0 ? Math.round((open / total) * 100) : 0;
-        return `${percentage}%`;
-      },
     },
   ];
 
-  readonly tableActions: TableAction<SkiStation>[] = [
+  readonly tableActions: TableAction[] = [
     {
       label: "Editar",
       icon: "✏️",
-      handler: (station) => this.openEditModal(station),
+      handler: (row: unknown) => this.openEditModal(row as SkiStation),
     },
     {
       label: "Subir Mapa",
       icon: "🗺️",
-      handler: (station) => this.openMapUploadModal(station),
+      handler: (row: unknown) => this.openMapUploadModal(row as SkiStation),
     },
     {
       label: "Eliminar",
       icon: "🗑️",
       variant: "danger",
-      handler: (station) => this.confirmDelete(station),
+      handler: (row: unknown) => this.confirmDelete(row as SkiStation),
     },
   ];
 
@@ -244,26 +234,46 @@ export class AdminStationsComponent {
       // TODO: Replace with actual API call
       const mockStations: SkiStation[] = [
         {
+          id: "sierra-nevada",
           slug: "sierra-nevada",
           name: "Sierra Nevada",
           status: "open",
           altitudes: { base: 2100, mid: 2500, top: 3300 },
-          totalPistes: 120,
-          openPistes: 95,
+          pistes: {
+            total: 120,
+            open: 95,
+            green: 20,
+            blue: 40,
+            red: 45,
+            black: 15,
+          },
           description: "Estación de esquí más al sur de Europa",
-          phoneContact: "+34 958 24 91 11",
-          emailContact: "info@sierranevada.es",
+          contact: {
+            phone: "+34 958 24 91 11",
+            email: "info@sierranevada.es",
+            website: "https://sierranevada.es",
+          },
         },
         {
+          id: "baqueira-beret",
           slug: "baqueira-beret",
           name: "Baqueira Beret",
           status: "open",
           altitudes: { base: 1500, mid: 2000, top: 2510 },
-          totalPistes: 165,
-          openPistes: 140,
+          pistes: {
+            total: 165,
+            open: 140,
+            green: 25,
+            blue: 55,
+            red: 60,
+            black: 25,
+          },
           description: "La estación más grande de España",
-          phoneContact: "+34 973 63 90 00",
-          emailContact: "info@baqueira.es",
+          contact: {
+            phone: "+34 973 63 90 00",
+            email: "info@baqueira.es",
+            website: "https://baqueira.es",
+          },
         },
       ];
       this.stations.set(mockStations);
@@ -290,6 +300,10 @@ export class AdminStationsComponent {
     this.currentPage.set(1);
   }
 
+  hasFilters(): boolean {
+    return Object.keys(this.activeFilters()).length > 0;
+  }
+
   // Pagination
   onPageChange(page: number): void {
     this.currentPage.set(page);
@@ -301,7 +315,8 @@ export class AdminStationsComponent {
   }
 
   // Selection
-  onSelectionChange(stationIds: string[]): void {
+  onSelectionChange(stations: SkiStation[]): void {
+    const stationIds = stations.map((s) => s.id);
     this.selectedStations.set(stationIds);
   }
 
@@ -348,11 +363,11 @@ export class AdminStationsComponent {
       altitudeBase: station.altitudes.base,
       altitudeMid: station.altitudes.mid,
       altitudeTop: station.altitudes.top,
-      totalPistes: station.totalPistes || 0,
-      openPistes: station.openPistes || 0,
+      totalPistes: station.pistes?.total || 0,
+      openPistes: station.pistes?.open || 0,
       description: station.description || "",
-      phoneContact: station.phoneContact || "",
-      emailContact: station.emailContact || "",
+      phoneContact: station.contact?.phone || "",
+      emailContact: station.contact?.email || "",
     });
     this.showEditModal.set(true);
   }

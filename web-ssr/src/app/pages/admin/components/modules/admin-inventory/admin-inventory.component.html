@@ -1,0 +1,343 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1 class="admin-title">📦 Gestión de Inventario</h1>
+      <p class="admin-subtitle">
+        Control de stock de equipamiento de alquiler y seguimiento de
+        movimientos
+      </p>
+    </div>
+    <div class="admin-header-actions">
+      <button class="btn-secondary" (click)="generateReport()">
+        📊 Generar Informe
+      </button>
+      <button class="btn-secondary" (click)="exportInventory()">
+        📥 Exportar Excel
+      </button>
+      <button class="btn-primary" (click)="addProduct()">
+        ➕ Añadir Producto
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Productos"
+      [value]="totalProducts()"
+      icon="📦"
+      trend="neutral"
+    />
+    <app-admin-stat-card
+      label="Valor Total Stock"
+      [value]="totalStockValue()"
+      icon="💰"
+      trend="up"
+      format="currency"
+    />
+    <app-admin-stat-card
+      label="Alertas Stock Bajo"
+      [value]="lowStockProducts().length"
+      icon="⚠️"
+      [trend]="lowStockProducts().length > 0 ? 'down' : 'neutral'"
+    />
+    <app-admin-stat-card
+      label="Utilización Media"
+      [value]="averageUtilization()"
+      icon="📈"
+      trend="up"
+      format="percentage"
+    />
+  </div>
+
+  <!-- Categories Grid -->
+  <div class="card mb-6">
+    <div class="card-header">
+      <h2 class="card-title">📊 Categorías de Inventario</h2>
+    </div>
+    <div class="card-body">
+      <div class="categories-grid">
+        @for (category of categories(); track category.id) {
+        <div class="category-card">
+          <div class="category-icon">{{ category.icon }}</div>
+          <div class="category-info">
+            <h3 class="category-name">{{ category.name }}</h3>
+            <div class="category-stats">
+              <span class="stat-item"
+                >{{ category.totalProducts }} productos</span
+              >
+              <span class="stat-item">{{
+                formatCurrency(category.totalStockValue)
+              }}</span>
+              <span class="stat-item"
+                >{{
+                  formatPercentage(category.averageUtilizationRate)
+                }}
+                uso</span
+              >
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="card mb-6">
+    <div class="card-body">
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="category-filter">Categoría</label>
+          <select
+            id="category-filter"
+            class="filter-select"
+            [value]="selectedCategory()"
+            (change)="selectedCategory.set($any($event.target).value)"
+          >
+            <option value="all">Todas las categorías</option>
+            <option value="ski">⛷️ Esquís</option>
+            <option value="snowboard">🏂 Snowboards</option>
+            <option value="boots">🥾 Botas</option>
+            <option value="helmet">🪖 Cascos</option>
+            <option value="poles">🎿 Bastones</option>
+            <option value="clothing">🧥 Ropa</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="condition-filter">Condición</label>
+          <select
+            id="condition-filter"
+            class="filter-select"
+            [value]="selectedCondition()"
+            (change)="selectedCondition.set($any($event.target).value)"
+          >
+            <option value="all">Todas las condiciones</option>
+            <option value="new">Nuevo</option>
+            <option value="excellent">Excelente</option>
+            <option value="good">Bueno</option>
+            <option value="fair">Regular</option>
+            <option value="retired">Retirado</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="stock-filter">Nivel de Stock</label>
+          <select
+            id="stock-filter"
+            class="filter-select"
+            [value]="selectedStockLevel()"
+            (change)="selectedStockLevel.set($any($event.target).value)"
+          >
+            <option value="all">Todos los niveles</option>
+            <option value="low">⚠️ Stock Bajo</option>
+            <option value="ok">✅ Stock OK</option>
+            <option value="overstocked">📦 Sobrestock</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="search-filter">Buscar</label>
+          <input
+            id="search-filter"
+            type="text"
+            class="filter-input"
+            placeholder="Nombre, SKU, marca..."
+            [value]="searchTerm()"
+            (input)="searchTerm.set($any($event.target).value)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Table -->
+  <div class="card mb-6">
+    <div class="card-header">
+      <h2 class="card-title">
+        📦 Inventario de Productos ({{ filteredProducts().length }})
+      </h2>
+    </div>
+    <div class="card-body p-0">
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>SKU</th>
+              <th>Categoría</th>
+              <th>Condición</th>
+              <th>Stock</th>
+              <th>Nivel Stock</th>
+              <th>Ubicación</th>
+              <th>Valor Unit.</th>
+              <th>Alquiler/día</th>
+              <th>Rotación</th>
+              <th class="actions-column">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (product of filteredProducts(); track product.id) {
+            <tr>
+              <td>
+                <div class="product-info">
+                  <span class="product-icon">{{
+                    getCategoryIcon(product.category)
+                  }}</span>
+                  <div>
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-brand">{{ product.brand }}</div>
+                    @if (product.size) {
+                    <div class="product-size">Talla: {{ product.size }}</div>
+                    }
+                  </div>
+                </div>
+              </td>
+              <td>
+                <code class="sku-code">{{ product.sku }}</code>
+              </td>
+              <td>{{ product.subcategory }}</td>
+              <td>
+                <span
+                  class="badge"
+                  [ngClass]="getConditionClass(product.condition)"
+                >
+                  {{ getConditionLabel(product.condition) }}
+                </span>
+              </td>
+              <td>
+                <div class="stock-info">
+                  <span class="stock-quantity">{{
+                    product.stockQuantity
+                  }}</span>
+                  <span class="stock-range">/ {{ product.maxStockLevel }}</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="getStockLevelClass(product)">
+                  {{ getStockLevelLabel(product) }}
+                </span>
+              </td>
+              <td>{{ product.location }}</td>
+              <td>{{ formatCurrency(product.unitCost) }}</td>
+              <td>{{ formatCurrency(product.rentalPricePerDay) }}</td>
+              <td>
+                <div class="rotation-info">
+                  <span class="rotation-count">{{ product.totalRentals }}</span>
+                  <span class="rotation-label">alquileres</span>
+                </div>
+              </td>
+              <td class="actions-column">
+                <button
+                  class="btn-icon"
+                  (click)="editProduct(product.id)"
+                  title="Editar"
+                >
+                  ✏️
+                </button>
+                <button
+                  class="btn-icon"
+                  (click)="viewProductHistory(product.id)"
+                  title="Historial"
+                >
+                  📊
+                </button>
+              </td>
+            </tr>
+            } @empty {
+            <tr>
+              <td colspan="11" class="empty-state">
+                No se encontraron productos con los filtros seleccionados
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Grid: Top Rotation + Recent Movements -->
+  <div class="bottom-grid">
+    <!-- Top Rotation Products -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">🔥 Productos Más Rotativos</h2>
+      </div>
+      <div class="card-body">
+        <div class="top-products-list">
+          @for (product of topRotationProducts(); track product.id; let idx =
+          $index) {
+          <div class="top-product-item">
+            <div class="product-rank">{{ idx + 1 }}</div>
+            <div class="product-icon">
+              {{ getCategoryIcon(product.category) }}
+            </div>
+            <div class="product-details">
+              <div class="product-name">{{ product.name }}</div>
+              <div class="product-meta">
+                {{ product.brand }} • {{ product.subcategory }}
+              </div>
+            </div>
+            <div class="product-rentals">
+              <span class="rentals-count">{{ product.totalRentals }}</span>
+              <span class="rentals-label">alquileres</span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Movements -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📋 Movimientos Recientes</h2>
+        <button class="btn-secondary btn-sm" (click)="registerMovement()">
+          ➕ Registrar Movimiento
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="movements-list">
+          @for (movement of recentMovements(); track movement.id) {
+          <div class="movement-item">
+            <div class="movement-icon">
+              {{ getMovementTypeIcon(movement.movementType) }}
+            </div>
+            <div class="movement-details">
+              <div class="movement-header">
+                <span
+                  class="badge"
+                  [ngClass]="getMovementTypeClass(movement.movementType)"
+                >
+                  {{ getMovementTypeLabel(movement.movementType) }}
+                </span>
+                <span class="movement-date">{{
+                  formatDate(movement.date)
+                }}</span>
+              </div>
+              <div class="movement-product">{{ movement.productName }}</div>
+              <div class="movement-meta">
+                <span>Cantidad: {{ movement.quantity }}</span>
+                @if (movement.fromLocation || movement.toLocation) {
+                <span>
+                  @if (movement.fromLocation) {
+                  {{ movement.fromLocation }}
+                  } @if (movement.fromLocation && movement.toLocation) { → } @if
+                  (movement.toLocation) {
+                  {{ movement.toLocation }}
+                  }
+                </span>
+                }
+                <span>Por: {{ movement.performedBy }}</span>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

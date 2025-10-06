@@ -1,0 +1,52 @@
+{
+  "segments": [
+    {
+      "id": "seg-001",
+      "name": "Todos los usuarios",
+      "description": "Todos los usuarios registrados con notificaciones activas",
+      "criteria": {},
+      "usersCount": 5820,
+      "isActive": true
+    },
+    {
+      "id": "seg-002",
+      "name": "Usuarios activos",
+      "description": "Usuarios con actividad en los últimos 7 días",
+      "criteria": { "lastActivityDays": 7 },
+      "usersCount": 2450,
+      "isActive": true
+    },
+    {
+      "id": "seg-003",
+      "name": "Usuarios premium",
+      "description": "Usuarios con membresía premium activa",
+      "criteria": { "userType": ["premium", "vip"] },
+      "usersCount": 890,
+      "isActive": true
+    },
+    {
+      "id": "seg-004",
+      "name": "Reservas pendientes",
+      "description": "Usuarios con reservas sin completar pago",
+      "criteria": { "hasBooking": false },
+      "usersCount": 34,
+      "isActive": true
+    },
+    {
+      "id": "seg-005",
+      "name": "iOS Users",
+      "description": "Usuarios con dispositivos iOS",
+      "criteria": { "platform": ["ios"] },
+      "usersCount": 3240,
+      "isActive": true
+    },
+    {
+      "id": "seg-006",
+      "name": "Android Users",
+      "description": "Usuarios con dispositivos Android",
+      "criteria": { "platform": ["android"] },
+      "usersCount": 2580,
+      "isActive": true
+    }
+  ]
+}

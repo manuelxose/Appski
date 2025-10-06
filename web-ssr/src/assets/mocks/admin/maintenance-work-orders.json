@@ -1,0 +1,273 @@
+[
+  {
+    "id": "WO-2025-001",
+    "assetId": "asset-003",
+    "assetName": "Pisapistas Kässbohrer 600",
+    "title": "Cambio de aceite hidráulico y filtros",
+    "description": "Mantenimiento preventivo según horas de uso (500h). Incluye cambio de aceite hidráulico, filtros y revisión general.",
+    "type": "preventive",
+    "priority": "high",
+    "status": "in-progress",
+    "assignedTo": "Miguel Torres",
+    "createdBy": "Jefe Mantenimiento",
+    "createdDate": "2025-09-28T10:00:00Z",
+    "scheduledDate": "2025-10-05T08:00:00Z",
+    "estimatedHours": 6,
+    "actualHours": 4,
+    "estimatedCost": 850.0,
+    "actualCost": 780.0,
+    "parts": [
+      {
+        "id": "part-001",
+        "name": "Aceite hidráulico SAE 15W-40",
+        "quantity": 120,
+        "unitCost": 3.5,
+        "totalCost": 420.0,
+        "supplier": "Lubricantes Montaña"
+      },
+      {
+        "id": "part-002",
+        "name": "Filtro hidráulico",
+        "quantity": 3,
+        "unitCost": 45.0,
+        "totalCost": 135.0,
+        "supplier": "Repuestos Kässbohrer"
+      }
+    ],
+    "notes": "Vehículo operativo durante proceso. Cambio realizado en garaje."
+  },
+  {
+    "id": "WO-2025-002",
+    "assetId": "asset-005",
+    "assetName": "Cañón de nieve Sector Sur 3",
+    "title": "Reparación bomba de agua principal",
+    "description": "Bomba de agua averiada. Requiere desmontaje, diagnóstico y reparación o sustitución.",
+    "type": "corrective",
+    "priority": "urgent",
+    "status": "pending",
+    "assignedTo": "Carlos Ruiz",
+    "createdBy": "Operador Innivación",
+    "createdDate": "2025-10-01T14:30:00Z",
+    "scheduledDate": "2025-10-03T07:00:00Z",
+    "estimatedHours": 8,
+    "estimatedCost": 1200.0,
+    "parts": [
+      {
+        "id": "part-003",
+        "name": "Bomba de agua centrífuga 5HP",
+        "quantity": 1,
+        "unitCost": 850.0,
+        "totalCost": 850.0,
+        "supplier": "Snow Factory Parts"
+      }
+    ],
+    "notes": "⚠️ URGENTE - Cañón fuera de servicio. Temporada alta próxima."
+  },
+  {
+    "id": "WO-2025-003",
+    "assetId": "asset-001",
+    "assetName": "Telesilla Valdelinares I",
+    "title": "Inspección trimestral obligatoria",
+    "description": "Inspección técnica reglamentaria Q3 2025. Incluye revisión de cables, poleas, frenos y sistemas de seguridad.",
+    "type": "inspection",
+    "priority": "high",
+    "status": "completed",
+    "assignedTo": "Técnico Certificado Doppelmayr",
+    "createdBy": "Responsable Seguridad",
+    "createdDate": "2025-09-01T09:00:00Z",
+    "scheduledDate": "2025-09-20T08:00:00Z",
+    "completedDate": "2025-09-20T16:30:00Z",
+    "estimatedHours": 8,
+    "actualHours": 8.5,
+    "estimatedCost": 1500.0,
+    "actualCost": 1580.0,
+    "parts": [],
+    "notes": "Inspección superada. Certificado válido hasta diciembre 2025."
+  },
+  {
+    "id": "WO-2025-004",
+    "assetId": "asset-006",
+    "assetName": "Pisapistas Prinoth Bison X",
+    "title": "Instalación sistema GPS premium",
+    "description": "Upgrade a sistema GPS Prinoth SNOWsat para optimización de pisado y control de espesores de nieve.",
+    "type": "upgrade",
+    "priority": "medium",
+    "status": "pending",
+    "assignedTo": "Técnico Prinoth Autorizado",
+    "createdBy": "Director Operaciones",
+    "createdDate": "2025-09-25T11:00:00Z",
+    "scheduledDate": "2025-10-15T09:00:00Z",
+    "estimatedHours": 4,
+    "estimatedCost": 3500.0,
+    "parts": [
+      {
+        "id": "part-004",
+        "name": "Sistema GPS SNOWsat",
+        "quantity": 1,
+        "unitCost": 3200.0,
+        "totalCost": 3200.0,
+        "supplier": "Prinoth Official"
+      }
+    ],
+    "notes": "Instalación en garaje. No afecta operatividad actual."
+  },
+  {
+    "id": "WO-2025-005",
+    "assetId": "asset-002",
+    "assetName": "Cañón de nieve Sector Norte 1",
+    "title": "Revisión pre-temporada",
+    "description": "Mantenimiento preventivo antes de inicio de temporada alta. Limpieza de boquillas, calibración y pruebas.",
+    "type": "preventive",
+    "priority": "medium",
+    "status": "completed",
+    "assignedTo": "David López",
+    "createdBy": "Jefe Innivación",
+    "createdDate": "2025-09-15T10:00:00Z",
+    "scheduledDate": "2025-09-28T07:00:00Z",
+    "completedDate": "2025-09-28T12:15:00Z",
+    "estimatedHours": 4,
+    "actualHours": 5.25,
+    "estimatedCost": 320.0,
+    "actualCost": 385.0,
+    "parts": [
+      {
+        "id": "part-005",
+        "name": "Kit boquillas TechnoAlpin",
+        "quantity": 1,
+        "unitCost": 180.0,
+        "totalCost": 180.0,
+        "supplier": "TechnoAlpin Parts"
+      }
+    ],
+    "notes": "Cañón listo para temporada. Rendimiento óptimo."
+  },
+  {
+    "id": "WO-2025-006",
+    "assetId": "asset-008",
+    "assetName": "Sistema de innivación automático",
+    "title": "Actualización software control v4.2",
+    "description": "Actualización de software de control del sistema de bombeo e innivación a versión 4.2 con mejoras de eficiencia.",
+    "type": "upgrade",
+    "priority": "low",
+    "status": "in-progress",
+    "assignedTo": "Técnico Hydro Snow",
+    "createdBy": "Jefe Innivación",
+    "createdDate": "2025-09-20T14:00:00Z",
+    "scheduledDate": "2025-10-02T10:00:00Z",
+    "estimatedHours": 3,
+    "actualHours": 2,
+    "estimatedCost": 450.0,
+    "parts": [],
+    "notes": "Actualización remota. Sistema operativo durante proceso."
+  },
+  {
+    "id": "WO-2025-007",
+    "assetId": "asset-004",
+    "assetName": "Telesilla Infantil",
+    "title": "Sustitución cable de tracción",
+    "description": "Sustitución programada del cable de tracción tras 10 años de servicio. Incluye retirada cable antiguo e instalación nuevo.",
+    "type": "preventive",
+    "priority": "urgent",
+    "status": "pending",
+    "assignedTo": "Equipo Leitner Certificado",
+    "createdBy": "Responsable Seguridad",
+    "createdDate": "2025-09-10T09:00:00Z",
+    "scheduledDate": "2025-10-08T07:00:00Z",
+    "estimatedHours": 16,
+    "estimatedCost": 12500.0,
+    "parts": [
+      {
+        "id": "part-006",
+        "name": "Cable de tracción Ø28mm",
+        "quantity": 450,
+        "unitCost": 18.5,
+        "totalCost": 8325.0,
+        "supplier": "Leitner Ropeways"
+      },
+      {
+        "id": "part-007",
+        "name": "Terminales y accesorios",
+        "quantity": 1,
+        "unitCost": 2800.0,
+        "totalCost": 2800.0,
+        "supplier": "Leitner Ropeways"
+      }
+    ],
+    "notes": "⚠️ Telesilla fuera de servicio 2 días. Programado fuera de temporada alta."
+  },
+  {
+    "id": "WO-2025-008",
+    "assetId": "asset-007",
+    "assetName": "Edificio Cafetería Principal",
+    "title": "Revisión instalación eléctrica anual",
+    "description": "Inspección reglamentaria anual de instalación eléctrica. Termografía, mediciones y certificación.",
+    "type": "inspection",
+    "priority": "medium",
+    "status": "completed",
+    "assignedTo": "Electricista Certificado",
+    "createdBy": "Responsable Mantenimiento",
+    "createdDate": "2025-07-01T10:00:00Z",
+    "scheduledDate": "2025-07-15T09:00:00Z",
+    "completedDate": "2025-07-15T14:30:00Z",
+    "estimatedHours": 6,
+    "actualHours": 5.5,
+    "estimatedCost": 680.0,
+    "actualCost": 650.0,
+    "parts": [],
+    "notes": "Instalación conforme. Certificado válido hasta julio 2026."
+  },
+  {
+    "id": "WO-2025-009",
+    "assetId": "asset-009",
+    "assetName": "Telesilla Valdelinares II",
+    "title": "Mantenimiento mensual preventivo",
+    "description": "Mantenimiento mensual según contrato Doppelmayr. Engrase, ajustes y comprobaciones.",
+    "type": "preventive",
+    "priority": "low",
+    "status": "pending",
+    "assignedTo": "Técnico Mantenimiento",
+    "createdBy": "Sistema Automático",
+    "createdDate": "2025-10-01T08:00:00Z",
+    "scheduledDate": "2025-10-10T08:00:00Z",
+    "estimatedHours": 3,
+    "estimatedCost": 280.0,
+    "parts": [
+      {
+        "id": "part-008",
+        "name": "Grasa para rodamientos",
+        "quantity": 5,
+        "unitCost": 25.0,
+        "totalCost": 125.0,
+        "supplier": "Lubricantes Industriales"
+      }
+    ]
+  },
+  {
+    "id": "WO-2025-010",
+    "assetId": "asset-010",
+    "assetName": "Cañón de nieve Sector Este 5",
+    "title": "Reparación conexión eléctrica",
+    "description": "Conexión eléctrica con fallos intermitentes. Revisión cuadro y cableado.",
+    "type": "corrective",
+    "priority": "high",
+    "status": "in-progress",
+    "assignedTo": "Electricista Turno",
+    "createdBy": "Operador Innivación",
+    "createdDate": "2025-09-30T16:00:00Z",
+    "scheduledDate": "2025-10-02T08:00:00Z",
+    "estimatedHours": 4,
+    "actualHours": 3,
+    "estimatedCost": 420.0,
+    "parts": [
+      {
+        "id": "part-009",
+        "name": "Cable apantallado 3x2.5mm",
+        "quantity": 50,
+        "unitCost": 2.8,
+        "totalCost": 140.0,
+        "supplier": "Material Eléctrico"
+      }
+    ],
+    "notes": "Conexión reparada. Probado OK."
+  }
+]

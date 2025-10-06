@@ -1,0 +1,49 @@
+{
+  "series": [
+    {
+      "code": "A",
+      "name": "Serie A - General",
+      "description": "Serie de facturación general para clientes particulares y empresas",
+      "prefix": "A",
+      "currentNumber": 11,
+      "isActive": true,
+      "isDefault": true
+    },
+    {
+      "code": "B",
+      "name": "Serie B - Corporativo",
+      "description": "Serie específica para clientes corporativos y grandes grupos",
+      "prefix": "B",
+      "currentNumber": 10,
+      "isActive": true,
+      "isDefault": false
+    },
+    {
+      "code": "REC",
+      "name": "Rectificativas",
+      "description": "Serie para facturas rectificativas y abonos",
+      "prefix": "REC",
+      "currentNumber": 2,
+      "isActive": true,
+      "isDefault": false
+    },
+    {
+      "code": "PRO",
+      "name": "Proformas",
+      "description": "Serie para facturas proforma (presupuestos)",
+      "prefix": "PRO",
+      "currentNumber": 5,
+      "isActive": true,
+      "isDefault": false
+    },
+    {
+      "code": "2024-A",
+      "name": "Serie A 2024 (Inactiva)",
+      "description": "Serie de facturación del ejercicio fiscal 2024",
+      "prefix": "2024-A",
+      "currentNumber": 458,
+      "isActive": false,
+      "isDefault": false
+    }
+  ]
+}

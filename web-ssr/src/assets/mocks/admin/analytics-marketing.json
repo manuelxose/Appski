@@ -1,0 +1,226 @@
+{
+  "trafficSources": [
+    {
+      "source": "organic",
+      "label": "Búsqueda Orgánica",
+      "sessions": 45820,
+      "users": 38940,
+      "bounceRate": 42.5,
+      "avgSessionDuration": 245,
+      "conversions": 1825,
+      "conversionRate": 3.98,
+      "revenue": 548700,
+      "color": "#10B981"
+    },
+    {
+      "source": "paid",
+      "label": "Publicidad Pagada",
+      "sessions": 28450,
+      "users": 24380,
+      "bounceRate": 38.2,
+      "avgSessionDuration": 198,
+      "conversions": 1280,
+      "conversionRate": 4.5,
+      "revenue": 384000,
+      "color": "#F59E0B"
+    },
+    {
+      "source": "social",
+      "label": "Redes Sociales",
+      "sessions": 18920,
+      "users": 16740,
+      "bounceRate": 52.8,
+      "avgSessionDuration": 165,
+      "conversions": 645,
+      "conversionRate": 3.41,
+      "revenue": 193500,
+      "color": "#7C3AED"
+    },
+    {
+      "source": "email",
+      "label": "Email Marketing",
+      "sessions": 12340,
+      "users": 10850,
+      "bounceRate": 28.5,
+      "avgSessionDuration": 312,
+      "conversions": 825,
+      "conversionRate": 6.69,
+      "revenue": 247500,
+      "color": "#2563EB"
+    },
+    {
+      "source": "direct",
+      "label": "Tráfico Directo",
+      "sessions": 24680,
+      "users": 21450,
+      "bounceRate": 35.4,
+      "avgSessionDuration": 278,
+      "conversions": 985,
+      "conversionRate": 3.99,
+      "revenue": 295500,
+      "color": "#EF4444"
+    },
+    {
+      "source": "referral",
+      "label": "Referencias",
+      "sessions": 8450,
+      "users": 7420,
+      "bounceRate": 45.8,
+      "avgSessionDuration": 215,
+      "conversions": 285,
+      "conversionRate": 3.37,
+      "revenue": 85500,
+      "color": "#06B6D4"
+    }
+  ],
+  "channelPerformance": [
+    {
+      "channel": "Google Ads",
+      "clicks": 12850,
+      "impressions": 285400,
+      "ctr": 4.5,
+      "cpc": 1.85,
+      "spend": 23772,
+      "conversions": 780,
+      "cpa": 30.48,
+      "roi": 225,
+      "revenue": 77220
+    },
+    {
+      "channel": "Facebook Ads",
+      "clicks": 8420,
+      "impressions": 425800,
+      "ctr": 1.98,
+      "cpc": 0.92,
+      "spend": 7746,
+      "conversions": 420,
+      "cpa": 18.44,
+      "roi": 185,
+      "revenue": 22076
+    },
+    {
+      "channel": "Instagram Ads",
+      "clicks": 5680,
+      "impressions": 312500,
+      "ctr": 1.82,
+      "cpc": 0.78,
+      "spend": 4430,
+      "conversions": 285,
+      "cpa": 15.54,
+      "roi": 195,
+      "revenue": 13065
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "camp-001",
+      "name": "Temporada Invierno 2025",
+      "channel": "Google Ads",
+      "status": "active",
+      "startDate": "2024-11-01",
+      "endDate": "2025-04-30",
+      "budget": 50000,
+      "spend": 23772,
+      "clicks": 12850,
+      "conversions": 780,
+      "revenue": 77220,
+      "roi": 225
+    },
+    {
+      "id": "camp-002",
+      "name": "Ofertas Black Friday",
+      "channel": "Facebook Ads",
+      "status": "completed",
+      "startDate": "2024-11-15",
+      "endDate": "2024-11-30",
+      "budget": 10000,
+      "spend": 7746,
+      "clicks": 8420,
+      "conversions": 420,
+      "revenue": 22076,
+      "roi": 185
+    },
+    {
+      "id": "camp-003",
+      "name": "Influencers Esquí",
+      "channel": "Instagram Ads",
+      "status": "active",
+      "startDate": "2024-12-01",
+      "endDate": "2025-02-28",
+      "budget": 15000,
+      "spend": 4430,
+      "clicks": 5680,
+      "conversions": 285,
+      "revenue": 13065,
+      "roi": 195
+    }
+  ],
+  "emailMetrics": [
+    {
+      "campaignName": "Newsletter Semanal",
+      "sent": 15420,
+      "delivered": 15182,
+      "opened": 6527,
+      "clicked": 1240,
+      "bounced": 238,
+      "unsubscribed": 45,
+      "openRate": 43.0,
+      "clickRate": 19.0,
+      "bounceRate": 1.54
+    },
+    {
+      "campaignName": "Ofertas Temporada",
+      "sent": 8950,
+      "delivered": 8805,
+      "opened": 4580,
+      "clicked": 1650,
+      "bounced": 145,
+      "unsubscribed": 28,
+      "openRate": 52.0,
+      "clickRate": 36.0,
+      "bounceRate": 1.62
+    }
+  ],
+  "socialMetrics": [
+    {
+      "platform": "facebook",
+      "followers": 28450,
+      "posts": 125,
+      "reach": 485200,
+      "engagement": 24850,
+      "engagementRate": 5.12,
+      "clicks": 4280,
+      "conversions": 215
+    },
+    {
+      "platform": "instagram",
+      "followers": 42680,
+      "posts": 185,
+      "reach": 728500,
+      "engagement": 45920,
+      "engagementRate": 6.3,
+      "clicks": 5840,
+      "conversions": 298
+    }
+  ],
+  "attributionModels": [
+    {
+      "model": "first-click",
+      "label": "Primer Click",
+      "conversions": 2845,
+      "revenue": 853500
+    },
+    {
+      "model": "last-click",
+      "label": "Último Click",
+      "conversions": 3120,
+      "revenue": 936000
+    },
+    {
+      "model": "linear",
+      "label": "Lineal",
+      "conversions": 2980,
+      "revenue": 894000
+    }
+  ]
+}

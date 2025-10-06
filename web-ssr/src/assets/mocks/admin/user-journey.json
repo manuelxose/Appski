@@ -1,0 +1,51 @@
+[
+  {
+    "step": "Visita al sitio",
+    "users": 48500,
+    "percentage": 100.0,
+    "conversionRate": 100.0,
+    "dropoffRate": 0.0
+  },
+  {
+    "step": "Registro de cuenta",
+    "users": 28350,
+    "percentage": 58.5,
+    "conversionRate": 58.5,
+    "dropoffRate": 41.5
+  },
+  {
+    "step": "Verificación de email",
+    "users": 24420,
+    "percentage": 50.4,
+    "conversionRate": 86.1,
+    "dropoffRate": 13.9
+  },
+  {
+    "step": "Completar perfil",
+    "users": 19870,
+    "percentage": 41.0,
+    "conversionRate": 81.4,
+    "dropoffRate": 18.6
+  },
+  {
+    "step": "Primer uso del servicio",
+    "users": 16580,
+    "percentage": 34.2,
+    "conversionRate": 83.4,
+    "dropoffRate": 16.6
+  },
+  {
+    "step": "Reserva o compra",
+    "users": 12150,
+    "percentage": 25.1,
+    "conversionRate": 73.3,
+    "dropoffRate": 26.7
+  },
+  {
+    "step": "Usuario recurrente",
+    "users": 8905,
+    "percentage": 18.4,
+    "conversionRate": 73.3,
+    "dropoffRate": 26.7
+  }
+]

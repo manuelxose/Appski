@@ -1,0 +1,206 @@
+[
+  {
+    "month": "Ene",
+    "totalUsers": 15420,
+    "churnedUsers": 1850,
+    "churnRate": 12.0,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 680, "percentage": 36.8 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 425,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 315, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 280, "percentage": 15.1 },
+      { "reason": "Otros", "count": 150, "percentage": 8.1 }
+    ]
+  },
+  {
+    "month": "Feb",
+    "totalUsers": 15890,
+    "churnedUsers": 1920,
+    "churnRate": 12.1,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 710, "percentage": 37.0 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 445,
+        "percentage": 23.2
+      },
+      { "reason": "Problemas técnicos", "count": 330, "percentage": 17.2 },
+      { "reason": "Competencia", "count": 290, "percentage": 15.1 },
+      { "reason": "Otros", "count": 145, "percentage": 7.6 }
+    ]
+  },
+  {
+    "month": "Mar",
+    "totalUsers": 16340,
+    "churnedUsers": 1980,
+    "churnRate": 12.1,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 735, "percentage": 37.1 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 458,
+        "percentage": 23.1
+      },
+      { "reason": "Problemas técnicos", "count": 338, "percentage": 17.1 },
+      { "reason": "Competencia", "count": 298, "percentage": 15.1 },
+      { "reason": "Otros", "count": 151, "percentage": 7.6 }
+    ]
+  },
+  {
+    "month": "Abr",
+    "totalUsers": 16780,
+    "churnedUsers": 2050,
+    "churnRate": 12.2,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 762, "percentage": 37.2 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 472,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 349, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 308, "percentage": 15.0 },
+      { "reason": "Otros", "count": 159, "percentage": 7.8 }
+    ]
+  },
+  {
+    "month": "May",
+    "totalUsers": 17250,
+    "churnedUsers": 2115,
+    "churnRate": 12.3,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 788, "percentage": 37.3 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 487,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 360, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 317, "percentage": 15.0 },
+      { "reason": "Otros", "count": 163, "percentage": 7.7 }
+    ]
+  },
+  {
+    "month": "Jun",
+    "totalUsers": 17820,
+    "churnedUsers": 2195,
+    "churnRate": 12.3,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 820, "percentage": 37.4 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 505,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 373, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 329, "percentage": 15.0 },
+      { "reason": "Otros", "count": 168, "percentage": 7.7 }
+    ]
+  },
+  {
+    "month": "Jul",
+    "totalUsers": 18450,
+    "churnedUsers": 2290,
+    "churnRate": 12.4,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 858, "percentage": 37.5 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 527,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 389, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 344, "percentage": 15.0 },
+      { "reason": "Otros", "count": 172, "percentage": 7.5 }
+    ]
+  },
+  {
+    "month": "Ago",
+    "totalUsers": 19050,
+    "churnedUsers": 2375,
+    "churnRate": 12.5,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 894, "percentage": 37.6 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 546,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 404, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 356, "percentage": 15.0 },
+      { "reason": "Otros", "count": 175, "percentage": 7.4 }
+    ]
+  },
+  {
+    "month": "Sep",
+    "totalUsers": 19680,
+    "churnedUsers": 2465,
+    "churnRate": 12.5,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 929, "percentage": 37.7 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 567,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 419, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 370, "percentage": 15.0 },
+      { "reason": "Otros", "count": 180, "percentage": 7.3 }
+    ]
+  },
+  {
+    "month": "Oct",
+    "totalUsers": 20340,
+    "churnedUsers": 2555,
+    "churnRate": 12.6,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 964, "percentage": 37.7 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 588,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 434, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 383, "percentage": 15.0 },
+      { "reason": "Otros", "count": 186, "percentage": 7.3 }
+    ]
+  },
+  {
+    "month": "Nov",
+    "totalUsers": 21020,
+    "churnedUsers": 2650,
+    "churnRate": 12.6,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 1001, "percentage": 37.8 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 610,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 451, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 398, "percentage": 15.0 },
+      { "reason": "Otros", "count": 190, "percentage": 7.2 }
+    ]
+  },
+  {
+    "month": "Dic",
+    "totalUsers": 21750,
+    "churnedUsers": 2750,
+    "churnRate": 12.6,
+    "reasons": [
+      { "reason": "Precio elevado", "count": 1040, "percentage": 37.8 },
+      {
+        "reason": "Falta de funcionalidades",
+        "count": 633,
+        "percentage": 23.0
+      },
+      { "reason": "Problemas técnicos", "count": 468, "percentage": 17.0 },
+      { "reason": "Competencia", "count": 413, "percentage": 15.0 },
+      { "reason": "Otros", "count": 196, "percentage": 7.1 }
+    ]
+  }
+]

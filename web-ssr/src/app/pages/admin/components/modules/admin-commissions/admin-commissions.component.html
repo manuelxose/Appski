@@ -1,0 +1,312 @@
+<!-- Header -->
+<div class="admin-header">
+  <div class="breadcrumbs">
+    <span class="breadcrumb-item">Admin</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item">Financiero</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item active">Comisiones</span>
+  </div>
+
+  <div class="header-content">
+    <div class="header-text">
+      <h1>Comisiones y Partners</h1>
+      <p>Gestión de comisiones, pagos y partners</p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="exportReport()">
+        <span class="icon">📊</span>
+        Exportar
+      </button>
+      <button class="btn-primary" (click)="processPayment('')">
+        <span class="icon">💰</span>
+        Procesar Pagos
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="filters-bar">
+  <div class="filters-group">
+    <span class="filter-label">Estado</span>
+    <div class="btn-group">
+      <button
+        [class.active]="selectedStatus() === 'all'"
+        (click)="setStatus('all')"
+      >
+        Todas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'pending'"
+        (click)="setStatus('pending')"
+      >
+        Pendientes
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'approved'"
+        (click)="setStatus('approved')"
+      >
+        Aprobadas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'paid'"
+        (click)="setStatus('paid')"
+      >
+        Pagadas
+      </button>
+    </div>
+  </div>
+
+  <div class="filters-group">
+    <span class="filter-label">Partner</span>
+    <select
+      [value]="selectedPartner()"
+      (change)="setPartner($any($event.target).value)"
+    >
+      <option value="all">Todos los partners</option>
+      @for (partner of activePartners(); track partner.id) {
+      <option [value]="partner.id">{{ partner.name }}</option>
+      }
+    </select>
+  </div>
+</div>
+
+<!-- Stats Grid -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">📊</div>
+    <div class="stat-content">
+      <div class="stat-label">Total Comisiones</div>
+      <div class="stat-value">{{ totalCommissions() }}</div>
+      <div class="stat-change positive">
+        {{ formatCurrency(totalAmount()) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">⏳</div>
+    <div class="stat-content">
+      <div class="stat-label">Pendientes</div>
+      <div class="stat-value">{{ formatCurrency(pendingAmount()) }}</div>
+      <div class="stat-change neutral">
+        {{ pendingCommissions().length }} comisiones
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">✅</div>
+    <div class="stat-content">
+      <div class="stat-label">Pagadas</div>
+      <div class="stat-value">{{ formatCurrency(paidAmount()) }}</div>
+      <div class="stat-change positive">
+        {{ formatPercent(avgCommissionRate()) }} rate medio
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">🏆</div>
+    <div class="stat-content">
+      <div class="stat-label">Top Partner</div>
+      <div class="stat-value">{{ topPartner().name || "N/A" }}</div>
+      <div class="stat-change positive">
+        {{ formatCurrency(topPartner().totalEarned) }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Commissions by Type -->
+<div class="type-distribution-section">
+  <h2>Comisiones por Tipo de Servicio</h2>
+  <div class="type-cards-grid">
+    @for (type of byType(); track type.type) {
+    <div class="type-card">
+      <div class="type-header">
+        <span class="type-name">{{ type.type }}</span>
+        <span class="type-count">{{ type.count }}</span>
+      </div>
+      <div class="type-stats">
+        <div class="type-stat">
+          <span class="label">Total</span>
+          <span class="value">{{ formatCurrency(type.totalAmount) }}</span>
+        </div>
+        <div class="type-stat">
+          <span class="label">Rate medio</span>
+          <span class="value">{{ formatPercent(type.avgRate) }}</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- Commissions Table -->
+<div class="data-table-container">
+  <h2>Comisiones</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID Comisión</th>
+        <th>Partner</th>
+        <th>Servicio</th>
+        <th>Fecha Reserva</th>
+        <th>Monto Reserva</th>
+        <th>% Comisión</th>
+        <th>Comisión</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (isLoading()) {
+      <tr>
+        <td colspan="9" class="loading-cell">
+          <div class="spinner"></div>
+          <span>Cargando comisiones...</span>
+        </td>
+      </tr>
+      } @else if (filteredCommissions().length === 0) {
+      <tr>
+        <td colspan="9" class="empty-cell">No se encontraron comisiones</td>
+      </tr>
+      } @else { @for (commission of filteredCommissions(); track commission.id)
+      {
+      <tr>
+        <td class="commission-id">{{ commission.id }}</td>
+        <td>{{ commission.partnerName }}</td>
+        <td>
+          <div class="service-info">
+            <div class="service-name">{{ commission.serviceName }}</div>
+            <div class="service-type">{{ commission.serviceType }}</div>
+          </div>
+        </td>
+        <td>{{ formatDate(commission.bookingDate) }}</td>
+        <td>{{ formatCurrency(commission.bookingAmount) }}</td>
+        <td class="rate">{{ formatPercent(commission.commissionRate) }}</td>
+        <td class="amount">
+          {{ formatCurrency(commission.commissionAmount) }}
+        </td>
+        <td>
+          <span [class]="'status-badge ' + getStatusClass(commission.status)">
+            {{ getStatusLabel(commission.status) }}
+          </span>
+        </td>
+        <td>
+          @if (commission.status === 'pending') {
+          <button
+            class="btn-approve"
+            (click)="approveCommission(commission.id)"
+          >
+            ✅ Aprobar
+          </button>
+          }
+        </td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+</div>
+
+<!-- Partners Section -->
+<div class="partners-section">
+  <h2>Partners Activos</h2>
+  <div class="partners-grid">
+    @for (partner of activePartners(); track partner.id) {
+    <div class="partner-card">
+      <div class="partner-header">
+        <span class="partner-icon">{{ getPartnerTypeIcon(partner.type) }}</span>
+        <div class="partner-info">
+          <div class="partner-name">{{ partner.name }}</div>
+          <div class="partner-type">
+            {{ getPartnerTypeLabel(partner.type) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="partner-stats">
+        <div class="partner-stat">
+          <span class="label">Comisión</span>
+          <span class="value">{{ formatPercent(partner.commissionRate) }}</span>
+        </div>
+        <div class="partner-stat">
+          <span class="label">Ganado</span>
+          <span class="value">{{ formatCurrency(partner.totalEarned) }}</span>
+        </div>
+        <div class="partner-stat">
+          <span class="label">Pagado</span>
+          <span class="value">{{ formatCurrency(partner.totalPaid) }}</span>
+        </div>
+        <div class="partner-stat highlight">
+          <span class="label">Pendiente</span>
+          <span class="value">{{ formatCurrency(partner.pendingAmount) }}</span>
+        </div>
+      </div>
+
+      <div class="partner-payment-info">
+        <div class="payment-detail">
+          <span class="icon">💳</span>
+          <span>{{ getPaymentMethodLabel(partner.paymentMethod) }}</span>
+        </div>
+        <div class="payment-detail">
+          <span class="icon">📅</span>
+          <span>{{ getFrequencyLabel(partner.paymentFrequency) }}</span>
+        </div>
+      </div>
+
+      <div class="partner-actions">
+        @if (partner.pendingAmount > 0) {
+        <button class="btn-pay" (click)="processPayment(partner.id)">
+          💰 Pagar {{ formatCurrency(partner.pendingAmount) }}
+        </button>
+        }
+        <button class="btn-edit" (click)="editPartner(partner.id)">
+          ✏️ Editar
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- Recent Payments -->
+<div class="recent-payments-section">
+  <h2>Pagos Recientes</h2>
+  <div class="payments-list">
+    @for (payment of recentPayments(); track payment.id) {
+    <div class="payment-card">
+      <div class="payment-header">
+        <div class="payment-partner">{{ payment.partnerName }}</div>
+        <div class="payment-amount">
+          {{ formatCurrency(payment.netAmount) }}
+        </div>
+      </div>
+      <div class="payment-details">
+        <div class="payment-detail">
+          <span class="label">Periodo:</span>
+          <span class="value"
+            >{{ formatDate(payment.periodStart) }} -
+            {{ formatDate(payment.periodEnd) }}</span
+          >
+        </div>
+        <div class="payment-detail">
+          <span class="label">Comisiones:</span>
+          <span class="value">{{ payment.commissionsCount }}</span>
+        </div>
+        <div class="payment-detail">
+          <span class="label">Método:</span>
+          <span class="value">{{ getPaymentMethodLabel(payment.method) }}</span>
+        </div>
+        <div class="payment-detail">
+          <span class="label">Fecha pago:</span>
+          <span class="value">{{ formatDate(payment.paidAt) }}</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

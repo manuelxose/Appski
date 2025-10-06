@@ -1,0 +1,26 @@
+[
+  {
+    "type": "booking",
+    "message": "Nueva reserva: Sierra Nevada - Juan García",
+    "time": "Hace 5 minutos",
+    "icon": "📋"
+  },
+  {
+    "type": "user",
+    "message": "Nuevo registro: María López",
+    "time": "Hace 12 minutos",
+    "icon": "👤"
+  },
+  {
+    "type": "payment",
+    "message": "Pago confirmado: 240.00€",
+    "time": "Hace 25 minutos",
+    "icon": "💳"
+  },
+  {
+    "type": "review",
+    "message": "Nueva valoración 5★ - Baqueira Beret",
+    "time": "Hace 1 hora",
+    "icon": "⭐"
+  }
+]

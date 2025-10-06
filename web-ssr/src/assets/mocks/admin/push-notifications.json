@@ -1,0 +1,112 @@
+{
+  "notifications": [
+    {
+      "id": "push-001",
+      "title": "¡Nevada Importante!",
+      "message": "Sierra Nevada ha recibido 40cm de nieve fresca. Condiciones perfectas para esquiar.",
+      "type": "alert",
+      "status": "sent",
+      "sentAt": "2025-10-02T08:00:00Z",
+      "targetSegment": "Usuarios activos",
+      "targetCount": 2450,
+      "deliveryStats": {
+        "sent": 2450,
+        "delivered": 2389,
+        "failed": 61,
+        "clicked": 456,
+        "ctr": 19.1
+      },
+      "deepLink": "/weather/sierra-nevada",
+      "createdBy": "admin",
+      "createdAt": "2025-10-02T07:30:00Z"
+    },
+    {
+      "id": "push-002",
+      "title": "Ofertas Black Friday",
+      "message": "Hasta 40% descuento en forfaits de temporada. Solo 48 horas.",
+      "type": "marketing",
+      "status": "sent",
+      "sentAt": "2025-09-25T10:00:00Z",
+      "targetSegment": "Todos los usuarios",
+      "targetCount": 5820,
+      "deliveryStats": {
+        "sent": 5820,
+        "delivered": 5654,
+        "failed": 166,
+        "clicked": 892,
+        "ctr": 15.8
+      },
+      "deepLink": "/offers/black-friday",
+      "imageUrl": "/images/bf-banner.jpg",
+      "createdBy": "marketing",
+      "createdAt": "2025-09-24T14:00:00Z"
+    },
+    {
+      "id": "push-003",
+      "title": "Tu reserva expira pronto",
+      "message": "Tienes una reserva pendiente que expira en 24h. Completa tu pago ahora.",
+      "type": "reminder",
+      "status": "scheduled",
+      "scheduledFor": "2025-10-04T09:00:00Z",
+      "targetSegment": "Reservas pendientes",
+      "targetCount": 34,
+      "deliveryStats": {
+        "sent": 0,
+        "delivered": 0,
+        "failed": 0,
+        "clicked": 0,
+        "ctr": 0
+      },
+      "deepLink": "/bookings/pending",
+      "createdBy": "system",
+      "createdAt": "2025-10-03T10:00:00Z"
+    },
+    {
+      "id": "push-004",
+      "title": "Confirmación de pago",
+      "message": "Tu pago de 249€ ha sido procesado. Ref: #TXN-2025-1234",
+      "type": "transactional",
+      "status": "sent",
+      "sentAt": "2025-10-03T11:15:00Z",
+      "targetSegment": "Cliente específico",
+      "targetCount": 1,
+      "deliveryStats": {
+        "sent": 1,
+        "delivered": 1,
+        "failed": 0,
+        "clicked": 1,
+        "ctr": 100.0
+      },
+      "deepLink": "/invoices/INV-2025-1234",
+      "createdBy": "system",
+      "createdAt": "2025-10-03T11:15:00Z"
+    },
+    {
+      "id": "push-005",
+      "title": "Nueva webcam disponible",
+      "message": "Hemos añadido una nueva webcam HD en Baqueira Beret.",
+      "type": "marketing",
+      "status": "draft",
+      "targetSegment": "Usuarios premium",
+      "targetCount": 890,
+      "deliveryStats": {
+        "sent": 0,
+        "delivered": 0,
+        "failed": 0,
+        "clicked": 0,
+        "ctr": 0
+      },
+      "deepLink": "/webcams/baqueira",
+      "createdBy": "admin",
+      "createdAt": "2025-10-03T09:00:00Z"
+    }
+  ],
+  "stats": {
+    "totalSent": 8271,
+    "totalDelivered": 8044,
+    "avgDeliveryRate": 97.3,
+    "avgClickRate": 12.5,
+    "activeSegments": 6,
+    "scheduledNotifications": 1
+  }
+}

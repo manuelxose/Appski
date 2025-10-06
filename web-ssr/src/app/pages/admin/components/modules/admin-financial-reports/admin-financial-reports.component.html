@@ -1,0 +1,357 @@
+<!-- Header -->
+<div class="admin-header">
+  <div class="breadcrumbs">
+    <span class="breadcrumb-item">Admin</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item">Financiero</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item active">Reportes</span>
+  </div>
+
+  <div class="header-content">
+    <div class="header-text">
+      <h1>Reportes Financieros</h1>
+      <p>Balance, P&L, Cash Flow y métricas clave</p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="exportToAccounting()">
+        <span class="icon">📤</span>
+        Exportar Contabilidad
+      </button>
+      <button class="btn-primary" (click)="refreshData()">
+        <span class="icon">🔄</span>
+        Actualizar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Period Selector -->
+<div class="filters-bar">
+  <div class="filters-group">
+    <label>Periodo</label>
+    <div class="btn-group">
+      <button
+        [class.active]="selectedPeriod() === '2025-Q1'"
+        (click)="setPeriod('2025-Q1')"
+      >
+        Q1 2025
+      </button>
+      <button
+        [class.active]="selectedPeriod() === '2024-Q4'"
+        (click)="setPeriod('2024-Q4')"
+      >
+        Q4 2024
+      </button>
+      <button
+        [class.active]="selectedPeriod() === '2024-Q3'"
+        (click)="setPeriod('2024-Q3')"
+      >
+        Q3 2024
+      </button>
+      <button
+        [class.active]="selectedPeriod() === '2024-annual'"
+        (click)="setPeriod('2024-annual')"
+      >
+        Anual 2024
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Key Metrics Grid -->
+<div class="metrics-grid">
+  <div class="metric-card">
+    <div class="metric-label">ROI</div>
+    <div class="metric-value" [class]="getMetricStatus(roi(), 15)">
+      {{ formatPercent(roi()) }}
+    </div>
+    <div class="metric-description">Return on Investment</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-label">Margen Neto</div>
+    <div class="metric-value" [class]="getMetricStatus(netMargin(), 10)">
+      {{ formatPercent(netMargin()) }}
+    </div>
+    <div class="metric-description">Net Profit Margin</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-label">Current Ratio</div>
+    <div
+      class="metric-value"
+      [class]="getMetricStatus(metrics()?.currentRatio ?? 0, 1.5)"
+    >
+      {{ formatRatio(metrics()?.currentRatio ?? 0) }}
+    </div>
+    <div class="metric-description">Liquidez Corriente</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-label">Debt/Equity</div>
+    <div
+      class="metric-value"
+      [class]="getMetricStatus(metrics()?.debtToEquity ?? 0, 1.0, false)"
+    >
+      {{ formatRatio(metrics()?.debtToEquity ?? 0) }}
+    </div>
+    <div class="metric-description">Apalancamiento</div>
+  </div>
+</div>
+
+<!-- Income Statement (P&L) -->
+<div class="financial-statement">
+  <div class="statement-header">
+    <h2>Cuenta de Resultados (P&L)</h2>
+    <button class="btn-export" (click)="exportIncomeStatement()">
+      📊 Exportar
+    </button>
+  </div>
+
+  @if (incomeStatement(); as pl) {
+  <div class="statement-content">
+    <div class="statement-section">
+      <div class="section-title">Ingresos</div>
+      <div class="statement-line">
+        <span class="line-label">Ingresos Operativos</span>
+        <span class="line-value">{{
+          formatCurrency(pl.operatingRevenue)
+        }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Otros Ingresos</span>
+        <span class="line-value">{{ formatCurrency(pl.otherRevenue) }}</span>
+      </div>
+      <div class="statement-line total">
+        <span class="line-label">Total Ingresos</span>
+        <span class="line-value">{{ formatCurrency(pl.totalRevenue) }}</span>
+      </div>
+    </div>
+
+    <div class="statement-section">
+      <div class="section-title">Costos y Gastos</div>
+      <div class="statement-line">
+        <span class="line-label">Costo de Ventas</span>
+        <span class="line-value negative">{{
+          formatCurrency(pl.costOfSales)
+        }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Gastos Operativos</span>
+        <span class="line-value negative">{{
+          formatCurrency(pl.operatingExpenses)
+        }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Gastos Financieros</span>
+        <span class="line-value negative">{{
+          formatCurrency(pl.financialExpenses)
+        }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Impuestos</span>
+        <span class="line-value negative">{{ formatCurrency(pl.taxes) }}</span>
+      </div>
+      <div class="statement-line total">
+        <span class="line-label">Total Gastos</span>
+        <span class="line-value negative">{{
+          formatCurrency(pl.totalExpenses)
+        }}</span>
+      </div>
+    </div>
+
+    <div class="statement-section">
+      <div class="section-title">Resultados</div>
+      <div class="statement-line">
+        <span class="line-label">Beneficio Bruto</span>
+        <span class="line-value">{{ formatCurrency(pl.grossProfit) }}</span>
+        <span class="line-margin">{{ formatPercent(pl.grossMargin) }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Beneficio Operativo</span>
+        <span class="line-value">{{ formatCurrency(pl.operatingProfit) }}</span>
+        <span class="line-margin">{{ formatPercent(pl.operatingMargin) }}</span>
+      </div>
+      <div class="statement-line highlight">
+        <span class="line-label">Beneficio Neto</span>
+        <span class="line-value">{{ formatCurrency(pl.netProfit) }}</span>
+        <span class="line-margin">{{ formatPercent(pl.netMargin) }}</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+
+<!-- Balance Sheet -->
+<div class="financial-statement">
+  <div class="statement-header">
+    <h2>Balance General</h2>
+    <button class="btn-export" (click)="exportBalanceSheet()">
+      📊 Exportar
+    </button>
+  </div>
+
+  @if (balanceSheet(); as bs) {
+  <div class="statement-content balance-grid">
+    <div class="balance-column">
+      <div class="section-title">Activos</div>
+      <div class="statement-line">
+        <span class="line-label">Activos Corrientes</span>
+        <span class="line-value">{{ formatCurrency(bs.currentAssets) }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Activos Fijos</span>
+        <span class="line-value">{{ formatCurrency(bs.fixedAssets) }}</span>
+      </div>
+      <div class="statement-line total">
+        <span class="line-label">Total Activos</span>
+        <span class="line-value">{{ formatCurrency(bs.totalAssets) }}</span>
+      </div>
+    </div>
+
+    <div class="balance-column">
+      <div class="section-title">Pasivos</div>
+      <div class="statement-line">
+        <span class="line-label">Pasivos Corrientes</span>
+        <span class="line-value">{{
+          formatCurrency(bs.currentLiabilities)
+        }}</span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Pasivos Largo Plazo</span>
+        <span class="line-value">{{
+          formatCurrency(bs.longTermLiabilities)
+        }}</span>
+      </div>
+      <div class="statement-line total">
+        <span class="line-label">Total Pasivos</span>
+        <span class="line-value">{{
+          formatCurrency(bs.totalLiabilities)
+        }}</span>
+      </div>
+
+      <div class="section-title" style="margin-top: 20px">Patrimonio</div>
+      <div class="statement-line highlight">
+        <span class="line-label">Patrimonio Neto</span>
+        <span class="line-value">{{ formatCurrency(bs.equity) }}</span>
+      </div>
+
+      @if (assetsLiabilitiesBalance()) {
+      <div class="balance-check">✅ Balance cuadrado</div>
+      } @else {
+      <div class="balance-check error">⚠️ Balance descuadrado</div>
+      }
+    </div>
+  </div>
+  }
+</div>
+
+<!-- Cash Flow -->
+<div class="financial-statement">
+  <div class="statement-header">
+    <h2>Estado de Flujo de Efectivo</h2>
+    <button class="btn-export" (click)="exportCashFlow()">📊 Exportar</button>
+  </div>
+
+  @if (cashFlow(); as cf) {
+  <div class="statement-content">
+    <div class="statement-line">
+      <span class="line-label">Saldo Inicial</span>
+      <span class="line-value">{{ formatCurrency(cf.beginningBalance) }}</span>
+    </div>
+
+    <div class="statement-section">
+      <div class="section-title">Actividades</div>
+      <div class="statement-line">
+        <span class="line-label">Flujo Operativo</span>
+        <span class="line-value" [class.negative]="cf.operatingCashFlow < 0">
+          {{ formatCurrency(cf.operatingCashFlow) }}
+        </span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Flujo Inversión</span>
+        <span class="line-value" [class.negative]="cf.investingCashFlow < 0">
+          {{ formatCurrency(cf.investingCashFlow) }}
+        </span>
+      </div>
+      <div class="statement-line">
+        <span class="line-label">Flujo Financiación</span>
+        <span class="line-value" [class.negative]="cf.financingCashFlow < 0">
+          {{ formatCurrency(cf.financingCashFlow) }}
+        </span>
+      </div>
+    </div>
+
+    <div class="statement-line highlight">
+      <span class="line-label">Cambio Neto Efectivo</span>
+      <span class="line-value" [class.negative]="cf.netCashChange < 0">
+        {{ formatCurrency(cf.netCashChange) }}
+      </span>
+    </div>
+
+    <div class="statement-line total">
+      <span class="line-label">Saldo Final</span>
+      <span class="line-value">{{ formatCurrency(cf.endingBalance) }}</span>
+    </div>
+  </div>
+  }
+</div>
+
+<!-- Revenue & Cost Breakdown -->
+<div class="breakdown-section">
+  <div class="breakdown-half">
+    <h2>Desglose de Ingresos</h2>
+    <div class="breakdown-list">
+      @for (item of revenueBreakdown(); track item.category) {
+      <div class="breakdown-item">
+        <div class="breakdown-header">
+          <span class="breakdown-category">{{ item.category }}</span>
+          <span class="breakdown-amount">{{
+            formatCurrency(item.amount)
+          }}</span>
+        </div>
+        <div class="breakdown-footer">
+          <div class="breakdown-bar">
+            <div class="breakdown-fill" [style.width.%]="item.percentage"></div>
+          </div>
+          <span class="breakdown-percentage">{{
+            formatPercent(item.percentage)
+          }}</span>
+          <span class="breakdown-growth" [class]="getGrowthClass(item.growth)">
+            {{ item.growth > 0 ? "+" : "" }}{{ formatPercent(item.growth) }}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="breakdown-half">
+    <h2>Desglose de Costos</h2>
+    <div class="breakdown-list">
+      @for (item of costBreakdown(); track item.category) {
+      <div class="breakdown-item">
+        <div class="breakdown-header">
+          <span class="breakdown-category">{{ item.category }}</span>
+          <span class="breakdown-amount">{{
+            formatCurrency(item.amount)
+          }}</span>
+        </div>
+        <div class="breakdown-footer">
+          <div class="breakdown-bar cost">
+            <div class="breakdown-fill" [style.width.%]="item.percentage"></div>
+          </div>
+          <span class="breakdown-percentage">{{
+            formatPercent(item.percentage)
+          }}</span>
+          <span class="breakdown-trend" [class]="getTrendClass(item.trend)">
+            {{ getTrendIcon(item.trend) }}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

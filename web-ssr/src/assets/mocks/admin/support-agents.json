@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent-001",
+      "name": "Ana Fernández",
+      "email": "ana.fernandez@nieve.com",
+      "status": "busy",
+      "specialties": ["Reservas", "Cancelaciones", "Quejas"],
+      "activeTickets": 3,
+      "resolvedToday": 5,
+      "avgResponseTime": 9,
+      "avgSatisfaction": 4.7
+    },
+    {
+      "id": "agent-002",
+      "name": "Carlos Ruiz",
+      "email": "carlos.ruiz@nieve.com",
+      "status": "busy",
+      "specialties": ["Pagos", "Facturación", "Reembolsos"],
+      "activeTickets": 2,
+      "resolvedToday": 4,
+      "avgResponseTime": 11,
+      "avgSatisfaction": 4.5
+    },
+    {
+      "id": "agent-003",
+      "name": "Pedro Gómez",
+      "email": "pedro.gomez@nieve.com",
+      "status": "available",
+      "specialties": ["Consultas generales", "Clases", "Material"],
+      "activeTickets": 0,
+      "resolvedToday": 7,
+      "avgResponseTime": 8,
+      "avgSatisfaction": 4.8
+    },
+    {
+      "id": "agent-004",
+      "name": "Luis Moreno",
+      "email": "luis.moreno@nieve.com",
+      "status": "available",
+      "specialties": ["Soporte técnico", "App móvil", "Web"],
+      "activeTickets": 1,
+      "resolvedToday": 3,
+      "avgResponseTime": 15,
+      "avgSatisfaction": 4.3
+    },
+    {
+      "id": "agent-005",
+      "name": "Isabel Navarro",
+      "email": "isabel.navarro@nieve.com",
+      "status": "offline",
+      "specialties": ["VIP", "Grupos", "Empresas"],
+      "activeTickets": 0,
+      "resolvedToday": 0,
+      "avgResponseTime": 7,
+      "avgSatisfaction": 4.9
+    }
+  ]
+}

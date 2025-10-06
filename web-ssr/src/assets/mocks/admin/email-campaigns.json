@@ -1,0 +1,256 @@
+{
+  "campaigns": [
+    {
+      "id": "camp-001",
+      "name": "Promoción Puente de Diciembre",
+      "subject": "🎿 Última oportunidad: -25% Forfaits Puente Diciembre",
+      "type": "promotional",
+      "status": "sent",
+      "segmentId": "seg-001",
+      "segmentName": "Alta Frecuencia",
+      "scheduledDate": null,
+      "sentDate": "2025-11-28T10:00:00Z",
+      "stats": {
+        "sent": 4823,
+        "delivered": 4788,
+        "opened": 1964,
+        "clicked": 445,
+        "unsubscribed": 12,
+        "bounced": 35
+      },
+      "hasAbTest": true,
+      "variants": [
+        {
+          "id": "var-a",
+          "name": "Variant A",
+          "subject": "🎿 Última oportunidad: -25% Forfaits Puente Diciembre",
+          "stats": {
+            "sent": 2411,
+            "opened": 1026,
+            "clicked": 238
+          }
+        },
+        {
+          "id": "var-b",
+          "name": "Variant B",
+          "subject": "⛷️ Solo hoy: 25% descuento en tu forfait de diciembre",
+          "stats": {
+            "sent": 2412,
+            "opened": 938,
+            "clicked": 207
+          }
+        }
+      ]
+    },
+    {
+      "id": "camp-002",
+      "name": "Bienvenida Nuevos Usuarios",
+      "subject": "¡Bienvenido a Nieve! Tu guía completa para la temporada",
+      "type": "automated",
+      "status": "sent",
+      "segmentId": "seg-004",
+      "segmentName": "Nuevos Registros",
+      "scheduledDate": null,
+      "sentDate": "2025-12-01T09:00:00Z",
+      "stats": {
+        "sent": 287,
+        "delivered": 285,
+        "opened": 189,
+        "clicked": 94,
+        "unsubscribed": 2,
+        "bounced": 2
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-003",
+      "name": "Newsletter Semanal - Condiciones Nieve",
+      "subject": "📊 Informe Semanal: Nuevas nevadas en Baqueira y Formigal",
+      "type": "newsletter",
+      "status": "sent",
+      "segmentId": "seg-002",
+      "segmentName": "Suscriptores Newsletter",
+      "scheduledDate": null,
+      "sentDate": "2025-12-02T08:00:00Z",
+      "stats": {
+        "sent": 8945,
+        "delivered": 8872,
+        "opened": 3104,
+        "clicked": 892,
+        "unsubscribed": 18,
+        "bounced": 73
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-004",
+      "name": "Carrito Abandonado - Forfait",
+      "subject": "Tu forfait te espera 🎿 + 10% descuento exclusivo",
+      "type": "automated",
+      "status": "sending",
+      "segmentId": "seg-005",
+      "segmentName": "Carrito Abandonado",
+      "scheduledDate": null,
+      "sentDate": "2025-12-03T14:30:00Z",
+      "stats": {
+        "sent": 124,
+        "delivered": 122,
+        "opened": 67,
+        "clicked": 28,
+        "unsubscribed": 0,
+        "bounced": 2
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-005",
+      "name": "Black Friday Ski Week",
+      "subject": "🔥 Black Friday: Hasta -40% en forfaits de temporada",
+      "type": "promotional",
+      "status": "scheduled",
+      "segmentId": "seg-001",
+      "segmentName": "Alta Frecuencia",
+      "scheduledDate": "2025-12-20T06:00:00Z",
+      "sentDate": null,
+      "stats": {
+        "sent": 0,
+        "delivered": 0,
+        "opened": 0,
+        "clicked": 0,
+        "unsubscribed": 0,
+        "bounced": 0
+      },
+      "hasAbTest": true,
+      "variants": [
+        {
+          "id": "var-a",
+          "name": "Variant A",
+          "subject": "🔥 Black Friday: Hasta -40% en forfaits de temporada",
+          "stats": {
+            "sent": 0,
+            "opened": 0,
+            "clicked": 0
+          }
+        },
+        {
+          "id": "var-b",
+          "name": "Variant B",
+          "subject": "⚡ Semana Black Friday: Ahorra hasta 40% en tu temporada",
+          "stats": {
+            "sent": 0,
+            "opened": 0,
+            "clicked": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "camp-006",
+      "name": "Confirmación Reserva",
+      "subject": "Confirmación de tu reserva #{{bookingId}}",
+      "type": "transactional",
+      "status": "sent",
+      "segmentId": null,
+      "segmentName": "Todos",
+      "scheduledDate": null,
+      "sentDate": "2025-12-02T18:45:00Z",
+      "stats": {
+        "sent": 1894,
+        "delivered": 1891,
+        "opened": 1823,
+        "clicked": 456,
+        "unsubscribed": 0,
+        "bounced": 3
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-007",
+      "name": "Reengagement Inactivos",
+      "subject": "Te echamos de menos ❄️ Vuelve con 20% descuento",
+      "type": "promotional",
+      "status": "draft",
+      "segmentId": "seg-003",
+      "segmentName": "Usuarios Inactivos",
+      "scheduledDate": null,
+      "sentDate": null,
+      "stats": {
+        "sent": 0,
+        "delivered": 0,
+        "opened": 0,
+        "clicked": 0,
+        "unsubscribed": 0,
+        "bounced": 0
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-008",
+      "name": "Alerta Meteorológica Nevadas",
+      "subject": "⚠️ Alerta Nieve: Previsión 30cm en próximas 48h",
+      "type": "newsletter",
+      "status": "draft",
+      "segmentId": "seg-006",
+      "segmentName": "Alertas Meteorológicas",
+      "scheduledDate": null,
+      "sentDate": null,
+      "stats": {
+        "sent": 0,
+        "delivered": 0,
+        "opened": 0,
+        "clicked": 0,
+        "unsubscribed": 0,
+        "bounced": 0
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-009",
+      "name": "Cumpleaños Usuario",
+      "subject": "🎂 ¡Feliz cumpleaños! Aquí tienes tu regalo",
+      "type": "automated",
+      "status": "paused",
+      "segmentId": null,
+      "segmentName": "Cumpleaños del mes",
+      "scheduledDate": null,
+      "sentDate": null,
+      "stats": {
+        "sent": 0,
+        "delivered": 0,
+        "opened": 0,
+        "clicked": 0,
+        "unsubscribed": 0,
+        "bounced": 0
+      },
+      "hasAbTest": false
+    },
+    {
+      "id": "camp-010",
+      "name": "Post-Visita Feedback",
+      "subject": "¿Cómo fue tu experiencia? Cuéntanos y gana descuentos",
+      "type": "automated",
+      "status": "sent",
+      "segmentId": null,
+      "segmentName": "Post-reserva (7 días)",
+      "scheduledDate": null,
+      "sentDate": "2025-12-01T16:00:00Z",
+      "stats": {
+        "sent": 412,
+        "delivered": 410,
+        "opened": 298,
+        "clicked": 156,
+        "unsubscribed": 3,
+        "bounced": 2
+      },
+      "hasAbTest": false
+    }
+  ],
+  "stats": {
+    "totalSent": 16589,
+    "totalDelivered": 16469,
+    "avgOpenRate": 38.5,
+    "avgClickRate": 6.2,
+    "totalSubscribers": 12847,
+    "activeSegments": 6
+  }
+}

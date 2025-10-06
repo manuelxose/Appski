@@ -1,0 +1,244 @@
+{
+  "stationPerformance": [
+    {
+      "stationId": "formigal",
+      "stationName": "Formigal-Panticosa",
+      "slug": "formigal-panticosa",
+      "totalBookings": 4850,
+      "totalRevenue": 2458000,
+      "averageOccupancy": 87.3,
+      "averageRating": 4.6,
+      "totalReviews": 1247,
+      "pageViews": 125800,
+      "conversionRate": 3.85,
+      "revenueGrowth": 15.8,
+      "bookingsGrowth": 12.4,
+      "location": {
+        "lat": 42.7736,
+        "lng": -0.3711,
+        "region": "Aragón"
+      }
+    },
+    {
+      "stationId": "baqueira",
+      "stationName": "Baqueira Beret",
+      "slug": "baqueira-beret",
+      "totalBookings": 5240,
+      "totalRevenue": 3125000,
+      "averageOccupancy": 91.2,
+      "averageRating": 4.8,
+      "totalReviews": 1856,
+      "pageViews": 178400,
+      "conversionRate": 4.12,
+      "revenueGrowth": 18.5,
+      "bookingsGrowth": 14.7,
+      "location": {
+        "lat": 42.7042,
+        "lng": 0.8883,
+        "region": "Cataluña"
+      }
+    },
+    {
+      "stationId": "sierra-nevada",
+      "stationName": "Sierra Nevada",
+      "slug": "sierra-nevada",
+      "totalBookings": 3980,
+      "totalRevenue": 1875000,
+      "averageOccupancy": 78.5,
+      "averageRating": 4.4,
+      "totalReviews": 982,
+      "pageViews": 98500,
+      "conversionRate": 3.42,
+      "revenueGrowth": 8.3,
+      "bookingsGrowth": 6.1,
+      "location": {
+        "lat": 37.0951,
+        "lng": -3.3988,
+        "region": "Andalucía"
+      }
+    },
+    {
+      "stationId": "candanchu",
+      "stationName": "Candanchú",
+      "slug": "candanchu",
+      "totalBookings": 2340,
+      "totalRevenue": 985000,
+      "averageOccupancy": 65.8,
+      "averageRating": 4.2,
+      "totalReviews": 548,
+      "pageViews": 54200,
+      "conversionRate": 2.95,
+      "revenueGrowth": -3.5,
+      "bookingsGrowth": -5.2,
+      "location": {
+        "lat": 42.7847,
+        "lng": -0.5289,
+        "region": "Aragón"
+      }
+    },
+    {
+      "stationId": "cerler",
+      "stationName": "Cerler",
+      "slug": "cerler",
+      "totalBookings": 2890,
+      "totalRevenue": 1245000,
+      "averageOccupancy": 72.4,
+      "averageRating": 4.5,
+      "totalReviews": 687,
+      "pageViews": 67800,
+      "conversionRate": 3.18,
+      "revenueGrowth": 10.2,
+      "bookingsGrowth": 8.9,
+      "location": {
+        "lat": 42.5611,
+        "lng": 0.5467,
+        "region": "Aragón"
+      }
+    },
+    {
+      "stationId": "masella",
+      "stationName": "La Molina - Masella",
+      "slug": "la-molina-masella",
+      "totalBookings": 3450,
+      "totalRevenue": 1587000,
+      "averageOccupancy": 80.1,
+      "averageRating": 4.3,
+      "totalReviews": 824,
+      "pageViews": 82400,
+      "conversionRate": 3.52,
+      "revenueGrowth": 12.7,
+      "bookingsGrowth": 11.3,
+      "location": {
+        "lat": 42.3494,
+        "lng": 1.9406,
+        "region": "Cataluña"
+      }
+    }
+  ],
+  "monthlyData": [
+    {
+      "month": "Diciembre 2024",
+      "year": 2024,
+      "bookings": 850,
+      "revenue": 425000,
+      "occupancy": 82.5,
+      "rating": 4.7
+    },
+    {
+      "month": "Enero 2025",
+      "year": 2025,
+      "bookings": 1240,
+      "revenue": 685000,
+      "occupancy": 95.3,
+      "rating": 4.8
+    },
+    {
+      "month": "Febrero 2025",
+      "year": 2025,
+      "bookings": 1380,
+      "revenue": 742000,
+      "occupancy": 98.1,
+      "rating": 4.7
+    },
+    {
+      "month": "Marzo 2025",
+      "year": 2025,
+      "bookings": 980,
+      "revenue": 512000,
+      "occupancy": 75.4,
+      "rating": 4.6
+    }
+  ],
+  "weatherImpact": [
+    {
+      "stationId": "formigal",
+      "snowfall": 145,
+      "temperature": -3.2,
+      "bookingsCorrelation": 0.82,
+      "revenueImpact": 22.5
+    },
+    {
+      "stationId": "baqueira",
+      "snowfall": 168,
+      "temperature": -4.5,
+      "bookingsCorrelation": 0.89,
+      "revenueImpact": 28.7
+    },
+    {
+      "stationId": "sierra-nevada",
+      "snowfall": 98,
+      "temperature": 1.2,
+      "bookingsCorrelation": 0.65,
+      "revenueImpact": 15.3
+    },
+    {
+      "stationId": "candanchu",
+      "snowfall": 132,
+      "temperature": -2.8,
+      "bookingsCorrelation": 0.74,
+      "revenueImpact": 18.9
+    },
+    {
+      "stationId": "cerler",
+      "snowfall": 155,
+      "temperature": -3.8,
+      "bookingsCorrelation": 0.78,
+      "revenueImpact": 21.4
+    },
+    {
+      "stationId": "masella",
+      "snowfall": 124,
+      "temperature": -2.1,
+      "bookingsCorrelation": 0.71,
+      "revenueImpact": 17.6
+    }
+  ],
+  "seasonalTrends": [
+    {
+      "season": "high",
+      "months": ["Diciembre", "Enero", "Febrero", "Semana Santa"],
+      "avgBookings": 1150,
+      "avgRevenue": 621000,
+      "avgOccupancy": 91.3
+    },
+    {
+      "season": "shoulder",
+      "months": ["Noviembre", "Marzo", "Abril"],
+      "avgBookings": 680,
+      "avgRevenue": 358000,
+      "avgOccupancy": 68.5
+    },
+    {
+      "season": "low",
+      "months": ["Mayo", "Junio", "Septiembre", "Octubre"],
+      "avgBookings": 180,
+      "avgRevenue": 95000,
+      "avgOccupancy": 25.4
+    }
+  ],
+  "comparisons": [
+    {
+      "metric": "Revenue Total",
+      "stations": [
+        {
+          "stationId": "baqueira",
+          "stationName": "Baqueira Beret",
+          "value": 3125000,
+          "rank": 1
+        },
+        {
+          "stationId": "formigal",
+          "stationName": "Formigal-Panticosa",
+          "value": 2458000,
+          "rank": 2
+        },
+        {
+          "stationId": "sierra-nevada",
+          "stationName": "Sierra Nevada",
+          "value": 1875000,
+          "rank": 3
+        }
+      ]
+    }
+  ]
+}

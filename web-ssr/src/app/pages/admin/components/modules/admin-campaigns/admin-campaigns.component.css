@@ -1,0 +1,745 @@
+/* Import base admin styles */
+@import url("../admin-analytics-stations/admin-analytics-stations.component.css");
+
+/* ========================================
+   Campaigns Styles
+   ======================================== */
+
+/* Campaign Info */
+.campaign-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campaign-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.type-icon {
+  font-size: 18px;
+}
+
+.campaign-description {
+  font-size: 13px;
+  color: var(--neutral-600);
+}
+
+/* Type Badge */
+.type-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Period Info */
+.period-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.period-dates {
+  font-size: 14px;
+  color: var(--neutral-800);
+}
+
+.target-segment {
+  font-size: 12px;
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+/* Budget Info */
+.budget-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.budget-spent {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  font-family: "SF Mono", monospace;
+}
+
+.budget-total {
+  font-size: 12px;
+  color: var(--neutral-600);
+}
+
+.budget-bar {
+  height: 4px;
+  background: var(--neutral-200);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.budget-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.no-budget {
+  font-size: 13px;
+  color: var(--neutral-500);
+  font-style: italic;
+}
+
+/* Performance Info */
+.performance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.perf-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.perf-label {
+  color: var(--neutral-600);
+}
+
+.perf-value {
+  font-weight: 600;
+  color: var(--neutral-900);
+  font-family: "SF Mono", monospace;
+}
+
+.perf-value.conversion {
+  color: var(--green-600);
+}
+
+.perf-value.revenue {
+  color: var(--primary-600);
+}
+
+/* ROI Cell */
+.roi-cell {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "SF Mono", monospace;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.roi-cell.roi-excellent {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.roi-cell.roi-good {
+  background: var(--green-50);
+  color: var(--green-600);
+}
+
+.roi-cell.roi-fair {
+  background: var(--yellow-50);
+  color: var(--yellow-700);
+}
+
+.roi-cell.roi-poor {
+  background: var(--red-50);
+  color: var(--red-600);
+}
+
+/* Status Badges */
+.status-draft {
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+}
+
+.status-scheduled {
+  background: var(--primary-100);
+  color: var(--primary-700);
+}
+
+.status-active {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.status-paused {
+  background: var(--yellow-100);
+  color: var(--yellow-700);
+}
+
+.status-ended {
+  background: var(--neutral-200);
+  color: var(--neutral-600);
+}
+
+.status-expired {
+  background: var(--red-100);
+  color: var(--red-700);
+}
+
+.status-disabled {
+  background: var(--neutral-100);
+  color: var(--neutral-500);
+}
+
+/* Actions Menu */
+.actions-menu {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 16px;
+}
+
+.btn-action:hover {
+  background: var(--neutral-100);
+  transform: scale(1.1);
+}
+
+.btn-action.primary {
+  background: var(--primary-100);
+  color: var(--primary-700);
+}
+
+.btn-action.primary:hover {
+  background: var(--primary-500);
+  color: white;
+}
+
+/* Discount Codes Section */
+.codes-section {
+  margin-top: 48px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.filter-select-sm {
+  padding: 6px 12px;
+  background: white;
+  border: 2px solid var(--neutral-300);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-select-sm:hover {
+  border-color: var(--primary-400);
+}
+
+.codes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.code-card {
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.code-card:hover {
+  border-color: var(--primary-300);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--neutral-100);
+}
+
+.code-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.code-value {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: "SF Mono", monospace;
+  color: var(--primary-700);
+  letter-spacing: 1px;
+}
+
+.btn-copy {
+  padding: 6px 10px;
+  background: var(--neutral-100);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.btn-copy:hover {
+  background: var(--primary-100);
+  transform: scale(1.1);
+}
+
+.code-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.code-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--green-50);
+  border-radius: 8px;
+}
+
+.discount-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--green-700);
+  font-family: "SF Mono", monospace;
+}
+
+.discount-label {
+  font-size: 13px;
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.code-usage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.usage-bar {
+  height: 6px;
+  background: var(--neutral-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.usage-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.usage-text {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.code-validity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.validity-dates {
+  color: var(--neutral-700);
+}
+
+.code-campaign {
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+.code-condition {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-style: italic;
+}
+
+.code-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 2px solid var(--neutral-100);
+}
+
+.btn-text-sm {
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--primary-600);
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-text-sm:hover {
+  background: var(--primary-50);
+}
+
+.btn-text-sm.danger {
+  color: var(--red-600);
+}
+
+.btn-text-sm.danger:hover {
+  background: var(--red-50);
+}
+
+/* Packages Section */
+.packages-section {
+  margin-top: 48px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.package-card {
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.package-card:hover {
+  border-color: var(--primary-300);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.package-type {
+  padding: 6px 12px;
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.package-discount {
+  padding: 6px 12px;
+  background: var(--red-100);
+  color: var(--red-700);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "SF Mono", monospace;
+}
+
+.package-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin: 0 0 12px 0;
+}
+
+.package-description {
+  font-size: 14px;
+  color: var(--neutral-600);
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.package-includes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--neutral-50);
+  border-radius: 12px;
+}
+
+.includes-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.include-item {
+  font-size: 14px;
+  color: var(--neutral-700);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.package-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.price-current {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-700);
+  font-family: "SF Mono", monospace;
+}
+
+.price-original {
+  font-size: 18px;
+  color: var(--neutral-500);
+  text-decoration: line-through;
+  font-family: "SF Mono", monospace;
+}
+
+.package-availability {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bookings-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bookings-bar {
+  height: 6px;
+  background: var(--neutral-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bookings-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green-500), var(--green-600));
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bookings-text {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.package-dates {
+  font-size: 13px;
+  color: var(--neutral-700);
+}
+
+.package-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 2px solid var(--neutral-100);
+}
+
+/* Loyalty Section */
+.loyalty-section {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.loyalty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.loyalty-card {
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-left-width: 6px;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.loyalty-card:hover {
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tier-badge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tier-discount {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--green-700);
+  font-family: "SF Mono", monospace;
+}
+
+.tier-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 12px;
+}
+
+.tier-requirements {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--neutral-600);
+}
+
+.tier-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--neutral-50);
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.benefits-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.benefit-item {
+  font-size: 14px;
+  color: var(--neutral-700);
+}
+
+.tier-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tier-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  background: var(--primary-50);
+  border-radius: 8px;
+}
+
+.tier-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-700);
+  font-family: "SF Mono", monospace;
+}
+
+.tier-stat-label {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.tier-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 2px solid var(--neutral-100);
+}
+
+/* Empty States */
+.empty-state-card {
+  grid-column: 1 / -1;
+  padding: 48px;
+  text-align: center;
+  color: var(--neutral-500);
+  font-size: 15px;
+  background: var(--neutral-50);
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .codes-grid,
+  .packages-grid,
+  .loyalty-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .codes-grid,
+  .packages-grid,
+  .loyalty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-menu {
+    flex-wrap: wrap;
+  }
+}

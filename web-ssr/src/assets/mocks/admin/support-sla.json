@@ -1,0 +1,19 @@
+{
+  "metrics": {
+    "firstResponseTime": {
+      "target": 15,
+      "current": 13,
+      "compliance": 86.7
+    },
+    "resolutionTime": {
+      "target": 24,
+      "current": 12.1,
+      "compliance": 95.4
+    },
+    "customerSatisfaction": {
+      "target": 4.0,
+      "current": 4.5,
+      "compliance": 112.5
+    }
+  }
+}

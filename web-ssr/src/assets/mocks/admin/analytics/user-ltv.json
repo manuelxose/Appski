@@ -1,0 +1,18 @@
+{
+  "averageLTV": 245.8,
+  "ltv30": 85.2,
+  "ltv90": 156.4,
+  "ltv365": 245.8,
+  "ltvBySegment": [
+    { "segment": "Power Users", "ltv": 485.2, "count": 2340, "percentage": 5 },
+    { "segment": "Activos", "ltv": 298.5, "count": 12456, "percentage": 27 },
+    {
+      "segment": "Ocasionales",
+      "ltv": 142.3,
+      "count": 18567,
+      "percentage": 41
+    },
+    { "segment": "En Riesgo", "ltv": 85.6, "count": 8923, "percentage": 20 },
+    { "segment": "Inactivos", "ltv": 32.1, "count": 3392, "percentage": 7 }
+  ]
+}

@@ -1,0 +1,496 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="page-header">
+    <div class="breadcrumbs">
+      <span class="breadcrumb-item">Admin</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item">CRM</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item current">Soporte y Tickets</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="exportTicketsReport()">
+        📊 Exportar Tickets
+      </button>
+      <button class="btn-primary" (click)="createTicket()">
+        + Nuevo Ticket
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card urgent">
+      <div class="stat-icon">🚨</div>
+      <div class="stat-content">
+        <div class="stat-label">Tickets Urgentes</div>
+        <div class="stat-value">{{ urgentTickets() }}</div>
+        <div class="stat-sublabel">Requieren atención inmediata</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📬</div>
+      <div class="stat-content">
+        <div class="stat-label">Nuevos sin Asignar</div>
+        <div class="stat-value">{{ newTickets() }}</div>
+        <div class="stat-sublabel">{{ assignedTickets() }} asignados</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">⏱️</div>
+      <div class="stat-content">
+        <div class="stat-label">Tiempo Respuesta</div>
+        <div class="stat-value">{{ formatTime(stats().avgResponseTime) }}</div>
+        <div class="stat-sublabel">Objetivo: 15m</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">😊</div>
+      <div class="stat-content">
+        <div class="stat-label">Satisfacción Media</div>
+        <div class="stat-value">{{ stats().avgSatisfaction.toFixed(1) }}/5</div>
+        <div class="stat-sublabel">
+          {{ getSatisfactionStars(Math.round(stats().avgSatisfaction)) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLA Metrics -->
+  @if (slaMetrics()) {
+  <div class="sla-section">
+    <div class="section-header">
+      <h2>Cumplimiento SLA</h2>
+      <button class="btn-text" (click)="exportSLAReport()">
+        📊 Exportar SLA
+      </button>
+    </div>
+
+    <div class="sla-grid">
+      <div class="sla-card">
+        <div class="sla-metric">
+          <div class="metric-label">Primera Respuesta</div>
+          <div class="metric-value">
+            {{ formatTime(slaMetrics()!.firstResponseTime.current) }}
+          </div>
+          <div class="metric-target">
+            Objetivo: {{ formatTime(slaMetrics()!.firstResponseTime.target) }}
+          </div>
+        </div>
+        <div class="compliance-bar">
+          <div
+            class="compliance-fill"
+            [class]="
+              getComplianceClass(slaMetrics()!.firstResponseTime.compliance)
+            "
+            [style.width.%]="slaMetrics()!.firstResponseTime.compliance"
+          ></div>
+        </div>
+        <div
+          class="compliance-text"
+          [class]="
+            getComplianceClass(slaMetrics()!.firstResponseTime.compliance)
+          "
+        >
+          {{ slaMetrics()!.firstResponseTime.compliance.toFixed(1) }}%
+          cumplimiento
+        </div>
+      </div>
+
+      <div class="sla-card">
+        <div class="sla-metric">
+          <div class="metric-label">Tiempo Resolución</div>
+          <div class="metric-value">
+            {{ formatHours(slaMetrics()!.resolutionTime.current) }}
+          </div>
+          <div class="metric-target">
+            Objetivo: {{ formatHours(slaMetrics()!.resolutionTime.target) }}
+          </div>
+        </div>
+        <div class="compliance-bar">
+          <div
+            class="compliance-fill"
+            [class]="
+              getComplianceClass(slaMetrics()!.resolutionTime.compliance)
+            "
+            [style.width.%]="slaMetrics()!.resolutionTime.compliance"
+          ></div>
+        </div>
+        <div
+          class="compliance-text"
+          [class]="getComplianceClass(slaMetrics()!.resolutionTime.compliance)"
+        >
+          {{ slaMetrics()!.resolutionTime.compliance.toFixed(1) }}% cumplimiento
+        </div>
+      </div>
+
+      <div class="sla-card">
+        <div class="sla-metric">
+          <div class="metric-label">Satisfacción Cliente</div>
+          <div class="metric-value">
+            {{ slaMetrics()!.customerSatisfaction.current.toFixed(1) }}/5
+          </div>
+          <div class="metric-target">
+            Objetivo:
+            {{ slaMetrics()!.customerSatisfaction.target.toFixed(1) }}/5
+          </div>
+        </div>
+        <div class="compliance-bar">
+          <div
+            class="compliance-fill"
+            [class]="
+              getComplianceClass(slaMetrics()!.customerSatisfaction.compliance)
+            "
+            [style.width.%]="slaMetrics()!.customerSatisfaction.compliance"
+          ></div>
+        </div>
+        <div
+          class="compliance-text"
+          [class]="
+            getComplianceClass(slaMetrics()!.customerSatisfaction.compliance)
+          "
+        >
+          {{ slaMetrics()!.customerSatisfaction.compliance.toFixed(1) }}%
+          cumplimiento
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Loading & Error States -->
+  @if (isLoading()) {
+  <div class="loading-state">Cargando tickets...</div>
+  } @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+  } @else {
+  <!-- Filters -->
+  <div class="filters-row">
+    <div class="filter-group">
+      <label for="status-filter">Estado</label>
+      <div class="button-group" id="status-filter">
+        <button
+          [class.active]="selectedStatus() === 'all'"
+          (click)="selectedStatus.set('all')"
+        >
+          Todos
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'new'"
+          (click)="selectedStatus.set('new')"
+        >
+          Nuevos
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'in_progress'"
+          (click)="selectedStatus.set('in_progress')"
+        >
+          En Progreso
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'resolved'"
+          (click)="selectedStatus.set('resolved')"
+        >
+          Resueltos
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label for="priority-filter">Prioridad</label>
+      <select
+        id="priority-filter"
+        [value]="selectedPriority()"
+        (change)="selectedPriority.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todas</option>
+        <option value="urgent">Urgente</option>
+        <option value="high">Alta</option>
+        <option value="medium">Media</option>
+        <option value="low">Baja</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="category-filter">Categoría</label>
+      <select
+        id="category-filter"
+        [value]="selectedCategory()"
+        (change)="selectedCategory.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todas</option>
+        <option value="booking">Reservas</option>
+        <option value="payment">Pagos</option>
+        <option value="technical">Técnico</option>
+        <option value="general">General</option>
+        <option value="complaint">Quejas</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="agent-filter">Agente</label>
+      <select
+        id="agent-filter"
+        [value]="selectedAgent()"
+        (change)="selectedAgent.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todos</option>
+        @for (agent of agents(); track agent.id) {
+        <option [value]="agent.id">{{ agent.name }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="filter-group search-group">
+      <input
+        type="text"
+        placeholder="Buscar tickets..."
+        [value]="searchTerm()"
+        (input)="searchTerm.set($any($event.target).value)"
+        class="search-input"
+      />
+    </div>
+  </div>
+
+  <!-- Tickets Table -->
+  <div class="table-header">
+    <h2>Tickets ({{ filteredTickets().length }})</h2>
+    <div class="table-actions">
+      <button class="btn-text" (click)="loadSupportData()">
+        🔄 Actualizar
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Ticket</th>
+          <th>Cliente</th>
+          <th>Asunto</th>
+          <th>Categoría</th>
+          <th>Prioridad</th>
+          <th>Agente</th>
+          <th>Estado</th>
+          <th>Tiempos</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (ticket of filteredTickets(); track ticket.id) {
+        <tr>
+          <td>
+            <div class="ticket-number">{{ ticket.ticketNumber }}</div>
+            <div class="ticket-date">
+              {{ formatDateShort(ticket.createdAt) }}
+            </div>
+          </td>
+          <td>
+            <div class="customer-info">
+              <div class="customer-name">{{ ticket.customerName }}</div>
+              <div class="customer-email">{{ ticket.customerEmail }}</div>
+            </div>
+          </td>
+          <td>
+            <div class="ticket-subject">
+              {{ ticket.subject }}
+              @if (ticket.messagesCount > 0) {
+              <span class="messages-badge">{{ ticket.messagesCount }}</span>
+              }
+            </div>
+          </td>
+          <td>
+            <div class="category-badge">
+              <span class="category-icon">{{
+                getCategoryIcon(ticket.category)
+              }}</span>
+              {{ getCategoryLabel(ticket.category) }}
+            </div>
+          </td>
+          <td>
+            <span
+              class="priority-badge"
+              [class]="getPriorityClass(ticket.priority)"
+            >
+              {{ getPriorityLabel(ticket.priority) }}
+            </span>
+          </td>
+          <td>
+            @if (ticket.assignedToName) {
+            <div class="agent-name">{{ ticket.assignedToName }}</div>
+            } @else {
+            <span class="unassigned">Sin asignar</span>
+            }
+          </td>
+          <td>
+            <span class="status-badge" [class]="getStatusClass(ticket.status)">
+              {{ getStatusLabel(ticket.status) }}
+            </span>
+          </td>
+          <td>
+            <div class="time-info">
+              @if (ticket.responseTime) {
+              <div class="time-row">
+                <span class="time-label">Respuesta:</span>
+                <span class="time-value">{{
+                  formatTime(ticket.responseTime)
+                }}</span>
+              </div>
+              } @if (ticket.resolutionTime) {
+              <div class="time-row">
+                <span class="time-label">Resolución:</span>
+                <span class="time-value">{{
+                  formatHours(ticket.resolutionTime)
+                }}</span>
+              </div>
+              } @if (ticket.satisfaction) {
+              <div class="time-row satisfaction">
+                <span [class]="getSatisfactionClass(ticket.satisfaction)">
+                  {{ getSatisfactionStars(ticket.satisfaction) }}
+                </span>
+              </div>
+              }
+            </div>
+          </td>
+          <td>
+            <div class="actions-menu">
+              <button
+                class="btn-action primary"
+                (click)="viewTicket(ticket.id)"
+                title="Ver"
+              >
+                👁️
+              </button>
+              @if (ticket.status === 'new') {
+              <button
+                class="btn-action"
+                (click)="assignTicket(ticket.id, '')"
+                title="Asignar"
+              >
+                👤
+              </button>
+              } @if (ticket.status === 'in_progress') {
+              <button
+                class="btn-action"
+                (click)="resolveTicket(ticket.id)"
+                title="Resolver"
+              >
+                ✅
+              </button>
+              } @if (ticket.status === 'resolved') {
+              <button
+                class="btn-action"
+                (click)="closeTicket(ticket.id)"
+                title="Cerrar"
+              >
+                🔒
+              </button>
+              }
+              <button
+                class="btn-action"
+                (click)="deleteTicket(ticket.id)"
+                title="Eliminar"
+              >
+                🗑️
+              </button>
+            </div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="9" class="empty-state">
+            No hay tickets que coincidan con los filtros
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Agents Section -->
+  <div class="agents-section">
+    <div class="section-header">
+      <h2>Agentes de Soporte</h2>
+      <button class="btn-text" (click)="exportAgentPerformance()">
+        📊 Rendimiento
+      </button>
+    </div>
+
+    <div class="agents-grid">
+      @for (agent of agents(); track agent.id) {
+      <div class="agent-card">
+        <div class="agent-header">
+          <div class="agent-avatar">
+            @if (agent.avatar) {
+            <img [src]="agent.avatar" [alt]="agent.name" />
+            } @else {
+            <div class="avatar-placeholder">{{ agent.name.charAt(0) }}</div>
+            }
+          </div>
+          <div class="agent-info">
+            <div class="agent-name-status">
+              <span class="agent-name">{{ agent.name }}</span>
+              <span
+                class="agent-status"
+                [class]="getAgentStatusClass(agent.status)"
+              >
+                {{ getAgentStatusLabel(agent.status) }}
+              </span>
+            </div>
+            <div class="agent-email">{{ agent.email }}</div>
+          </div>
+        </div>
+
+        <div class="agent-specialties">
+          @for (specialty of agent.specialties; track $index) {
+          <span class="specialty-tag">{{ specialty }}</span>
+          }
+        </div>
+
+        <div class="agent-stats">
+          <div class="agent-stat">
+            <div class="stat-value">{{ agent.activeTickets }}</div>
+            <div class="stat-label">Activos</div>
+          </div>
+          <div class="agent-stat">
+            <div class="stat-value">{{ agent.resolvedToday }}</div>
+            <div class="stat-label">Resueltos hoy</div>
+          </div>
+          <div class="agent-stat">
+            <div class="stat-value">
+              {{ formatTime(agent.avgResponseTime) }}
+            </div>
+            <div class="stat-label">Resp. media</div>
+          </div>
+          <div class="agent-stat">
+            <div class="stat-value">{{ agent.avgSatisfaction.toFixed(1) }}</div>
+            <div class="stat-label">Satisfacción</div>
+          </div>
+        </div>
+
+        <div class="agent-actions">
+          <button class="btn-text-sm" (click)="viewAgentProfile(agent.id)">
+            Ver Perfil
+          </button>
+          @if (agent.status === 'available') {
+          <button class="btn-text-sm" (click)="assignTicketsToAgent(agent.id)">
+            Auto-asignar
+          </button>
+          }
+        </div>
+      </div>
+      } @empty {
+      <div class="empty-state-card">No hay agentes disponibles</div>
+      }
+    </div>
+  </div>
+  }
+</div>

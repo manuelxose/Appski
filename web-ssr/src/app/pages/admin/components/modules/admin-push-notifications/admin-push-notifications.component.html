@@ -1,0 +1,326 @@
+<div class="admin-page">
+  <div class="page-header">
+    <div class="breadcrumbs">
+      <span class="breadcrumb-item">Admin</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item">CRM</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item current">Notificaciones Push</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="exportPushReport()">
+        📊 Exportar
+      </button>
+      <button class="btn-primary" (click)="createNotification()">
+        + Nueva Notificación
+      </button>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">📨</div>
+      <div class="stat-content">
+        <div class="stat-label">Enviadas</div>
+        <div class="stat-value">{{ stats().totalSent.toLocaleString() }}</div>
+        <div class="stat-sublabel">
+          {{ formatPercent(stats().avgDeliveryRate) }} entregadas
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📊</div>
+      <div class="stat-content">
+        <div class="stat-label">CTR Medio</div>
+        <div class="stat-value">{{ formatPercent(stats().avgClickRate) }}</div>
+        <div class="stat-sublabel">Tasa de clics</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-content">
+        <div class="stat-label">Segmentos Activos</div>
+        <div class="stat-value">{{ stats().activeSegments }}</div>
+        <div class="stat-sublabel">
+          {{ totalSegmentUsers().toLocaleString() }} usuarios
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">⏰</div>
+      <div class="stat-content">
+        <div class="stat-label">Programadas</div>
+        <div class="stat-value">{{ scheduledNotifications() }}</div>
+        <div class="stat-sublabel">Pendientes de envío</div>
+      </div>
+    </div>
+  </div>
+
+  @if (isLoading()) {
+  <div class="loading-state">Cargando notificaciones...</div>
+  } @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+  } @else {
+  <div class="filters-row">
+    <div class="filter-group">
+      <label>Estado</label>
+      <div class="button-group">
+        <button
+          [class.active]="selectedStatus() === 'all'"
+          (click)="selectedStatus.set('all')"
+        >
+          Todas
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'scheduled'"
+          (click)="selectedStatus.set('scheduled')"
+        >
+          Programadas
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'sent'"
+          (click)="selectedStatus.set('sent')"
+        >
+          Enviadas
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label>Tipo</label>
+      <select
+        [value]="selectedType()"
+        (change)="selectedType.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todos</option>
+        <option value="marketing">Marketing</option>
+        <option value="transactional">Transaccional</option>
+        <option value="alert">Alerta</option>
+        <option value="reminder">Recordatorio</option>
+      </select>
+    </div>
+
+    <div class="filter-group search-group">
+      <input
+        type="text"
+        placeholder="Buscar notificaciones..."
+        [value]="searchTerm()"
+        (input)="searchTerm.set($any($event.target).value)"
+        class="search-input"
+      />
+    </div>
+  </div>
+
+  <div class="table-header">
+    <h2>Notificaciones ({{ filteredNotifications().length }})</h2>
+    <button class="btn-text" (click)="loadPushData()">🔄 Actualizar</button>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Notificación</th>
+          <th>Tipo</th>
+          <th>Segmento</th>
+          <th>Programada/Enviada</th>
+          <th>Entrega</th>
+          <th>CTR</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (notif of filteredNotifications(); track notif.id) {
+        <tr>
+          <td>
+            <div class="notif-content">
+              <div class="notif-title">{{ notif.title }}</div>
+              <div class="notif-message">{{ notif.message }}</div>
+              @if (notif.deepLink) {
+              <div class="notif-link">🔗 {{ notif.deepLink }}</div>
+              }
+            </div>
+          </td>
+          <td>
+            <div class="type-badge">
+              <span class="type-icon">{{ getTypeIcon(notif.type) }}</span>
+              {{ getTypeLabel(notif.type) }}
+            </div>
+          </td>
+          <td>
+            <div class="segment-info">
+              <div class="segment-name">{{ notif.targetSegment }}</div>
+              <div class="segment-count">
+                {{ notif.targetCount.toLocaleString() }} usuarios
+              </div>
+            </div>
+          </td>
+          <td>
+            @if (notif.scheduledFor) {
+            <div class="date-info">📅 {{ formatDate(notif.scheduledFor) }}</div>
+            } @if (notif.sentAt) {
+            <div class="date-info sent">✅ {{ formatDate(notif.sentAt) }}</div>
+            }
+          </td>
+          <td>
+            <div class="delivery-stats">
+              <div class="stat-row">
+                <span>Enviadas:</span>
+                <span class="stat-val">{{
+                  notif.deliveryStats.sent.toLocaleString()
+                }}</span>
+              </div>
+              <div class="stat-row">
+                <span>Entregadas:</span>
+                <span class="stat-val">{{
+                  notif.deliveryStats.delivered.toLocaleString()
+                }}</span>
+              </div>
+              @if (notif.deliveryStats.failed > 0) {
+              <div class="stat-row failed">
+                <span>Fallidas:</span>
+                <span class="stat-val">{{ notif.deliveryStats.failed }}</span>
+              </div>
+              }
+            </div>
+          </td>
+          <td>
+            @if (notif.deliveryStats.sent > 0) {
+            <div
+              class="ctr-cell"
+              [class]="getCTRClass(notif.deliveryStats.ctr)"
+            >
+              {{ formatPercent(notif.deliveryStats.ctr) }}
+              <div class="ctr-label">
+                {{ notif.deliveryStats.clicked }} clics
+              </div>
+            </div>
+            } @else {
+            <span class="no-data">-</span>
+            }
+          </td>
+          <td>
+            <span class="status-badge" [class]="getStatusClass(notif.status)">{{
+              getStatusLabel(notif.status)
+            }}</span>
+          </td>
+          <td>
+            <div class="actions-menu">
+              @if (notif.status === 'draft' || notif.status === 'scheduled') {
+              <button
+                class="btn-action"
+                (click)="editNotification(notif.id)"
+                title="Editar"
+              >
+                ✏️
+              </button>
+              } @if (notif.status === 'draft') {
+              <button
+                class="btn-action primary"
+                (click)="sendNow(notif.id)"
+                title="Enviar"
+              >
+                📤
+              </button>
+              } @if (notif.status === 'scheduled') {
+              <button
+                class="btn-action"
+                (click)="cancelNotification(notif.id)"
+                title="Cancelar"
+              >
+                ❌
+              </button>
+              } @if (notif.status === 'sent') {
+              <button
+                class="btn-action"
+                (click)="viewReport(notif.id)"
+                title="Informe"
+              >
+                📊
+              </button>
+              }
+              <button
+                class="btn-action"
+                (click)="duplicateNotification(notif.id)"
+                title="Duplicar"
+              >
+                📋
+              </button>
+            </div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="8" class="empty-state">No hay notificaciones</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bottom-grid">
+    <div class="segments-section">
+      <div class="section-header">
+        <h2>Segmentos</h2>
+        <button class="btn-text" (click)="createSegment()">+ Crear</button>
+      </div>
+      <div class="segments-list">
+        @for (seg of activeSegments(); track seg.id) {
+        <div class="segment-card">
+          <div class="segment-header">
+            <span class="segment-name">{{ seg.name }}</span>
+            <span class="segment-count">{{
+              seg.usersCount.toLocaleString()
+            }}</span>
+          </div>
+          <div class="segment-desc">{{ seg.description }}</div>
+          <div class="segment-actions">
+            <button class="btn-xs" (click)="viewSegmentUsers(seg.id)">
+              Ver
+            </button>
+            <button class="btn-xs" (click)="testSegment(seg.id)">Probar</button>
+          </div>
+        </div>
+        } @empty {
+        <div class="empty-card">Sin segmentos</div>
+        }
+      </div>
+    </div>
+
+    <div class="templates-section">
+      <div class="section-header">
+        <h2>Plantillas Populares</h2>
+        <button class="btn-text" (click)="createTemplate()">+ Crear</button>
+      </div>
+      <div class="templates-list">
+        @for (tmpl of topTemplates(); track tmpl.id) {
+        <div class="template-card">
+          <div class="template-header">
+            <span class="template-category">{{
+              getCategoryLabel(tmpl.category)
+            }}</span>
+            <span class="template-usage">{{ tmpl.usageCount }} usos</span>
+          </div>
+          <div class="template-name">{{ tmpl.name }}</div>
+          <div class="template-preview">
+            <div class="preview-title">{{ tmpl.titleTemplate }}</div>
+            <div class="preview-message">{{ tmpl.messageTemplate }}</div>
+          </div>
+          <button class="btn-use" (click)="useTemplate(tmpl.id)">
+            Usar Plantilla
+          </button>
+        </div>
+        } @empty {
+        <div class="empty-card">Sin plantillas</div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>

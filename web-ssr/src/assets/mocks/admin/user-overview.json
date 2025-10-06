@@ -1,0 +1,14 @@
+{
+  "totalUsers": 21750,
+  "activeUsers": 18450,
+  "newUsersThisMonth": 2250,
+  "avgLTV": 650.0,
+  "avgChurnRate": 12.6,
+  "avgSessionDuration": 24,
+  "dauMauRatio": 0.349,
+  "conversionRate": 18.4,
+  "highRiskUsers": 3845,
+  "retentionRate7d": 49.8,
+  "retentionRate30d": 34.6,
+  "retentionRate90d": 24.1
+}

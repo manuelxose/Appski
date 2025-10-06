@@ -1,0 +1,15 @@
+[
+  { "day": 0, "retentionRate": 100.0, "users": 15427 },
+  { "day": 1, "retentionRate": 78.5, "users": 12110 },
+  { "day": 2, "retentionRate": 68.2, "users": 10521 },
+  { "day": 3, "retentionRate": 62.4, "users": 9626 },
+  { "day": 4, "retentionRate": 58.1, "users": 8963 },
+  { "day": 5, "retentionRate": 54.8, "users": 8454 },
+  { "day": 6, "retentionRate": 52.1, "users": 8037 },
+  { "day": 7, "retentionRate": 49.8, "users": 7682 },
+  { "day": 14, "retentionRate": 42.5, "users": 6556 },
+  { "day": 21, "retentionRate": 38.2, "users": 5893 },
+  { "day": 30, "retentionRate": 34.6, "users": 5338 },
+  { "day": 60, "retentionRate": 28.3, "users": 4366 },
+  { "day": 90, "retentionRate": 24.1, "users": 3718 }
+]

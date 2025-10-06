@@ -1,0 +1,389 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="page-header">
+    <div class="breadcrumbs">
+      <span class="breadcrumb-item">Admin</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item">CRM</span>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-item current">Reseñas y Reputación</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="exportReviews()">
+        📊 Exportar
+      </button>
+      <button class="btn-secondary" (click)="approveSelected()">
+        ✅ Aprobar Selección
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">⭐</div>
+      <div class="stat-content">
+        <div class="stat-label">Rating Medio</div>
+        <div class="stat-value">{{ avgRating().toFixed(2) }}/5</div>
+        <div class="stat-sublabel">
+          {{ getRatingStars(avgRating()) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📝</div>
+      <div class="stat-content">
+        <div class="stat-label">Pendientes Moderación</div>
+        <div class="stat-value">{{ pendingReviews() }}</div>
+        <div class="stat-sublabel">{{ stats().totalReviews }} total</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">😊</div>
+      <div class="stat-content">
+        <div class="stat-label">Reseñas Positivas</div>
+        <div class="stat-value">{{ positiveReviews() }}</div>
+        <div class="stat-sublabel">
+          {{ stats().sentimentDistribution.positive }}%
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🚩</div>
+      <div class="stat-content">
+        <div class="stat-label">Marcadas</div>
+        <div class="stat-value">{{ flaggedReviews() }}</div>
+        <div class="stat-sublabel">Requieren revisión</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading & Error States -->
+  @if (isLoading()) {
+  <div class="loading-state">Cargando reseñas...</div>
+  } @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+  } @else {
+  <!-- Filters -->
+  <div class="filters-row">
+    <div class="filter-group">
+      <span class="filter-label">Estado</span>
+      <div class="button-group">
+        <button
+          [class.active]="selectedStatus() === 'all'"
+          (click)="selectedStatus.set('all')"
+        >
+          Todas
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'pending'"
+          (click)="selectedStatus.set('pending')"
+        >
+          Pendientes
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'approved'"
+          (click)="selectedStatus.set('approved')"
+        >
+          Aprobadas
+        </button>
+        <button
+          [class.active]="selectedStatus() === 'flagged'"
+          (click)="selectedStatus.set('flagged')"
+        >
+          Marcadas
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label for="rating-filter">Rating</label>
+      <select
+        id="rating-filter"
+        [value]="selectedRating()"
+        (change)="
+          selectedRating.set(
+            $any($event.target).value === 'all'
+              ? 'all'
+              : +$any($event.target).value
+          )
+        "
+        class="filter-select"
+      >
+        <option value="all">Todos</option>
+        <option [value]="5">5 estrellas</option>
+        <option [value]="4">4 estrellas</option>
+        <option [value]="3">3 estrellas</option>
+        <option [value]="2">2 estrellas</option>
+        <option [value]="1">1 estrella</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="sentiment-filter">Sentimiento</label>
+      <select
+        id="sentiment-filter"
+        [value]="selectedSentiment()"
+        (change)="selectedSentiment.set($any($event.target).value)"
+        class="filter-select"
+      >
+        <option value="all">Todos</option>
+        <option value="positive">Positivo</option>
+        <option value="neutral">Neutral</option>
+        <option value="negative">Negativo</option>
+      </select>
+    </div>
+
+    <div class="filter-group search-group">
+      <input
+        type="text"
+        placeholder="Buscar reseñas..."
+        [value]="searchTerm()"
+        (input)="searchTerm.set($any($event.target).value)"
+        class="search-input"
+      />
+    </div>
+  </div>
+
+  <!-- Reviews Table -->
+  <div class="table-header">
+    <h2>Reseñas ({{ filteredReviews().length }})</h2>
+    <div class="table-actions">
+      <button class="btn-text" (click)="loadReviewsData()">
+        🔄 Actualizar
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Estación</th>
+          <th>Reseña</th>
+          <th>Rating</th>
+          <th>Sentimiento</th>
+          <th>Estado</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (review of filteredReviews(); track review.id) {
+        <tr>
+          <td>
+            <div class="customer-name">{{ review.customerName }}</div>
+            <div class="visit-date">
+              Visitó: {{ formatDate(review.visitDate) }}
+            </div>
+          </td>
+          <td>
+            <div class="station-name">{{ review.stationName }}</div>
+          </td>
+          <td>
+            <div class="review-content">
+              <div class="review-title">{{ review.title }}</div>
+              <div class="review-comment">{{ review.comment }}</div>
+              @if (review.photos && review.photos.length > 0) {
+              <div class="review-photos">
+                📷 {{ review.photos.length }} fotos
+              </div>
+              } @if (review.helpful + review.notHelpful > 0) {
+              <div class="helpful-info">
+                👍 {{ review.helpful }} · 👎 {{ review.notHelpful }} ({{
+                  getHelpfulPercentage(review).toFixed(0)
+                }}% útil)
+              </div>
+              }
+            </div>
+          </td>
+          <td>
+            <div class="rating-cell" [class]="getRatingClass(review.rating)">
+              <div class="rating-value">{{ review.rating }}/5</div>
+              <div class="rating-stars">
+                {{ getRatingStars(review.rating) }}
+              </div>
+            </div>
+          </td>
+          <td>
+            <div
+              class="sentiment-badge"
+              [class]="getSentimentClass(review.sentiment)"
+            >
+              <span class="sentiment-icon">{{
+                getSentimentIcon(review.sentiment)
+              }}</span>
+              {{ getSentimentLabel(review.sentiment) }}
+            </div>
+          </td>
+          <td>
+            <span
+              class="status-badge"
+              [class]="getStatusClass(review.status)"
+              >{{ getStatusLabel(review.status) }}</span
+            >
+          </td>
+          <td>
+            <div class="date-info">{{ formatDate(review.createdAt) }}</div>
+          </td>
+          <td>
+            <div class="actions-menu">
+              <button
+                class="btn-action"
+                (click)="viewReview(review.id)"
+                title="Ver"
+              >
+                👁️
+              </button>
+              @if (review.status === 'pending') {
+              <button
+                class="btn-action primary"
+                (click)="approveReview(review.id)"
+                title="Aprobar"
+              >
+                ✅
+              </button>
+              <button
+                class="btn-action"
+                (click)="rejectReview(review.id)"
+                title="Rechazar"
+              >
+                ❌
+              </button>
+              } @if (review.status === 'approved' && !review.response) {
+              <button
+                class="btn-action"
+                (click)="respondToReview(review.id)"
+                title="Responder"
+              >
+                💬
+              </button>
+              }
+              <button
+                class="btn-action"
+                (click)="flagReview(review.id)"
+                title="Marcar"
+              >
+                🚩
+              </button>
+            </div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="8" class="empty-state">
+            No hay reseñas que coincidan con los filtros
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Station Reputations -->
+  <div class="reputations-section">
+    <div class="section-header">
+      <h2>Reputación por Estación</h2>
+      <button class="btn-text" (click)="exportReputationReport()">
+        📊 Informe
+      </button>
+    </div>
+
+    <div class="reputations-grid">
+      @for (station of topRatedStations(); track station.stationId) {
+      <div class="reputation-card">
+        <div class="reputation-header">
+          <div class="station-info">
+            <div class="station-name">{{ station.stationName }}</div>
+            <div class="station-reviews">
+              {{ station.totalReviews }} reseñas
+            </div>
+          </div>
+          <div class="reputation-trend" [class]="getTrendClass(station.trend)">
+            <span class="trend-icon">{{ getTrendIcon(station.trend) }}</span>
+          </div>
+        </div>
+
+        <div class="reputation-rating">
+          <div class="rating-value">{{ station.avgRating.toFixed(2) }}</div>
+          <div class="rating-stars">
+            {{ getRatingStars(station.avgRating) }}
+          </div>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-item">
+            <span class="category-label">{{ getCategoryLabel("snow") }}</span>
+            <div class="category-bar">
+              <div
+                class="category-fill"
+                [style.width.%]="(station.categories.snow / 5) * 100"
+              ></div>
+            </div>
+            <span class="category-value">{{
+              station.categories.snow.toFixed(1)
+            }}</span>
+          </div>
+          <div class="category-item">
+            <span class="category-label">{{
+              getCategoryLabel("facilities")
+            }}</span>
+            <div class="category-bar">
+              <div
+                class="category-fill"
+                [style.width.%]="(station.categories.facilities / 5) * 100"
+              ></div>
+            </div>
+            <span class="category-value">{{
+              station.categories.facilities.toFixed(1)
+            }}</span>
+          </div>
+          <div class="category-item">
+            <span class="category-label">{{
+              getCategoryLabel("service")
+            }}</span>
+            <div class="category-bar">
+              <div
+                class="category-fill"
+                [style.width.%]="(station.categories.service / 5) * 100"
+              ></div>
+            </div>
+            <span class="category-value">{{
+              station.categories.service.toFixed(1)
+            }}</span>
+          </div>
+          <div class="category-item">
+            <span class="category-label">{{
+              getCategoryLabel("valueForMoney")
+            }}</span>
+            <div class="category-bar">
+              <div
+                class="category-fill"
+                [style.width.%]="(station.categories.valueForMoney / 5) * 100"
+              ></div>
+            </div>
+            <span class="category-value">{{
+              station.categories.valueForMoney.toFixed(1)
+            }}</span>
+          </div>
+        </div>
+
+        <button
+          class="btn-text-sm"
+          (click)="viewStationDetails(station.stationId)"
+        >
+          Ver Detalles
+        </button>
+      </div>
+      } @empty {
+      <div class="empty-state-card">No hay datos de reputación</div>
+      }
+    </div>
+  </div>
+  }
+</div>

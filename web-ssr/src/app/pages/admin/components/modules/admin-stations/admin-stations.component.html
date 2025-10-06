@@ -60,7 +60,7 @@
 
     <app-admin-filters
       [fields]="filterFields"
-      (filterChange)="onFilterChange($event)"
+      (valuesChange)="onFilterChange($event)"
       (filterReset)="onFilterReset()"
     />
   </div>
@@ -82,10 +82,9 @@
     />
 
     <app-admin-pagination
-      [currentPage]="currentPage()"
-      [totalPages]="totalPages()"
+      [page]="currentPage()"
+      [total]="totalStations()"
       [pageSize]="pageSize()"
-      [totalItems]="totalStations()"
       (pageChange)="onPageChange($event)"
       (pageSizeChange)="onPageSizeChange($event)"
     />
@@ -99,14 +98,12 @@
     title="No hay estaciones"
     description="No se encontraron estaciones con los filtros aplicados"
     [actionLabel]="
-      searchQuery() || Object.keys(activeFilters()).length > 0
+      searchQuery() || hasFilters()
         ? 'Limpiar filtros'
         : 'Crear primera estación'
     "
     (primaryAction)="
-      searchQuery() || Object.keys(activeFilters()).length > 0
-        ? onFilterReset()
-        : openCreateModal()
+      searchQuery() || hasFilters() ? onFilterReset() : openCreateModal()
     "
   />
   }

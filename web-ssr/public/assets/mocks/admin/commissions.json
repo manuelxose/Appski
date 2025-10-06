@@ -1,0 +1,186 @@
+{
+  "commissions": [
+    {
+      "id": "COM-2025-001",
+      "partnerId": "partner-001",
+      "partnerName": "Hotel Pirineos S.L.",
+      "bookingId": "booking-001",
+      "bookingDate": "2025-01-15",
+      "serviceName": "Habitación Doble Superior + Desayuno",
+      "serviceType": "lodging",
+      "bookingAmount": 450.0,
+      "commissionRate": 12.0,
+      "commissionAmount": 54.0,
+      "status": "paid",
+      "approvedAt": "2025-01-16T10:00:00Z",
+      "paidAt": "2025-02-01T14:30:00Z",
+      "paymentId": "PAY-2025-001"
+    },
+    {
+      "id": "COM-2025-002",
+      "partnerId": "partner-002",
+      "partnerName": "Ski Rent Pro",
+      "bookingId": "booking-002",
+      "bookingDate": "2025-01-18",
+      "serviceName": "Alquiler Equipo Completo - 3 días",
+      "serviceType": "rental",
+      "bookingAmount": 120.0,
+      "commissionRate": 15.0,
+      "commissionAmount": 18.0,
+      "status": "paid",
+      "approvedAt": "2025-01-19T09:00:00Z",
+      "paidAt": "2025-02-01T14:30:00Z",
+      "paymentId": "PAY-2025-002"
+    },
+    {
+      "id": "COM-2025-003",
+      "partnerId": "partner-003",
+      "partnerName": "Escuela Valle Blanco",
+      "bookingId": "booking-003",
+      "bookingDate": "2025-01-20",
+      "serviceName": "Clases Particulares Esquí - 5 horas",
+      "serviceType": "lessons",
+      "bookingAmount": 280.0,
+      "commissionRate": 10.0,
+      "commissionAmount": 28.0,
+      "status": "approved",
+      "approvedAt": "2025-01-21T11:30:00Z"
+    },
+    {
+      "id": "COM-2025-004",
+      "partnerId": "partner-001",
+      "partnerName": "Hotel Pirineos S.L.",
+      "bookingId": "booking-004",
+      "bookingDate": "2025-01-22",
+      "serviceName": "Suite Familiar - 2 noches",
+      "serviceType": "lodging",
+      "bookingAmount": 680.0,
+      "commissionRate": 12.0,
+      "commissionAmount": 81.6,
+      "status": "approved",
+      "approvedAt": "2025-01-23T10:00:00Z"
+    },
+    {
+      "id": "COM-2025-005",
+      "partnerId": "partner-004",
+      "partnerName": "Transfer Montaña Express",
+      "bookingId": "booking-005",
+      "bookingDate": "2025-01-25",
+      "serviceName": "Transfer Aeropuerto-Estación (Ida y Vuelta)",
+      "serviceType": "transport",
+      "bookingAmount": 85.0,
+      "commissionRate": 8.0,
+      "commissionAmount": 6.8,
+      "status": "pending",
+      "notes": "Servicio programado para el 2025-02-05"
+    },
+    {
+      "id": "COM-2025-006",
+      "partnerId": "partner-002",
+      "partnerName": "Ski Rent Pro",
+      "bookingId": "booking-006",
+      "bookingDate": "2025-01-28",
+      "serviceName": "Alquiler Snowboard + Botas - 7 días",
+      "serviceType": "rental",
+      "bookingAmount": 195.0,
+      "commissionRate": 15.0,
+      "commissionAmount": 29.25,
+      "status": "pending"
+    },
+    {
+      "id": "COM-2025-007",
+      "partnerId": "partner-003",
+      "partnerName": "Escuela Valle Blanco",
+      "bookingId": "booking-007",
+      "bookingDate": "2025-02-01",
+      "serviceName": "Curso Snowboard Principiantes - 3 días",
+      "serviceType": "lessons",
+      "bookingAmount": 340.0,
+      "commissionRate": 10.0,
+      "commissionAmount": 34.0,
+      "status": "pending"
+    },
+    {
+      "id": "COM-2025-008",
+      "partnerId": "partner-005",
+      "partnerName": "Tienda La Cumbre",
+      "bookingId": "booking-008",
+      "bookingDate": "2025-02-03",
+      "serviceName": "Pack Ropa Técnica Esquí (Chaqueta + Pantalón)",
+      "serviceType": "other",
+      "bookingAmount": 320.0,
+      "commissionRate": 18.0,
+      "commissionAmount": 57.6,
+      "status": "approved",
+      "approvedAt": "2025-02-04T09:15:00Z"
+    },
+    {
+      "id": "COM-2025-009",
+      "partnerId": "partner-001",
+      "partnerName": "Hotel Pirineos S.L.",
+      "bookingId": "booking-009",
+      "bookingDate": "2025-02-05",
+      "serviceName": "Habitación Triple + Media Pensión - 4 noches",
+      "serviceType": "lodging",
+      "bookingAmount": 890.0,
+      "commissionRate": 12.0,
+      "commissionAmount": 106.8,
+      "status": "pending"
+    },
+    {
+      "id": "COM-2025-010",
+      "partnerId": "partner-004",
+      "partnerName": "Transfer Montaña Express",
+      "bookingId": "booking-010",
+      "bookingDate": "2025-02-08",
+      "serviceName": "Transfer Privado Estación-Ciudad (4 pax)",
+      "serviceType": "transport",
+      "bookingAmount": 120.0,
+      "commissionRate": 8.0,
+      "commissionAmount": 9.6,
+      "status": "cancelled",
+      "notes": "Cancelado por el cliente - reembolso completo"
+    }
+  ],
+  "stats": {
+    "totalCommissions": 10,
+    "totalAmount": 425.65,
+    "pendingAmount": 237.65,
+    "approvedAmount": 116.0,
+    "paidAmount": 72.0,
+    "avgCommissionRate": 11.8,
+    "topPartner": "Hotel Pirineos S.L."
+  },
+  "byType": [
+    {
+      "type": "Alojamiento",
+      "count": 4,
+      "totalAmount": 242.4,
+      "avgRate": 12.0
+    },
+    {
+      "type": "Alquiler",
+      "count": 2,
+      "totalAmount": 47.25,
+      "avgRate": 15.0
+    },
+    {
+      "type": "Clases",
+      "count": 2,
+      "totalAmount": 62.0,
+      "avgRate": 10.0
+    },
+    {
+      "type": "Transporte",
+      "count": 2,
+      "totalAmount": 16.4,
+      "avgRate": 8.0
+    },
+    {
+      "type": "Otros",
+      "count": 1,
+      "totalAmount": 57.6,
+      "avgRate": 18.0
+    }
+  ]
+}

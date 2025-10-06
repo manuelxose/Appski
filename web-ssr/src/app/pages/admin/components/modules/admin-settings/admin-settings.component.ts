@@ -12,12 +12,9 @@ import {
   PaymentSettings,
   NotificationSettings,
   PremiumSettings,
-  PremiumPlan,
   UserSettings,
-  UserRole,
-  SeoSettings,
+  SEOSettings,
   IntegrationSettings,
-  Webhook,
   SecuritySettings,
   LegalSettings,
 } from "./admin-settings.models";
@@ -115,77 +112,70 @@ export class AdminSettingsComponent implements OnInit {
   });
 
   userSettings = signal<UserSettings>({
-    roles: [],
-    enablePublicRegistration: true,
+    allowRegistration: true,
     requireEmailVerification: true,
     requirePhoneVerification: false,
-    allowSocialLogin: true,
-    enabledSocialProviders: ["google", "facebook"],
     passwordMinLength: 8,
     passwordRequireUppercase: true,
     passwordRequireNumbers: true,
     passwordRequireSymbols: false,
-    sessionTimeoutMinutes: 60,
     maxLoginAttempts: 5,
+    lockoutDurationMinutes: 30,
+    sessionTimeoutMinutes: 60,
+    enableSocialLogin: true,
+    googleClientId: "",
+    facebookAppId: "",
+    appleClientId: "",
   });
 
-  seoSettings = signal<SeoSettings>({
-    defaultMetaTitle: "",
-    defaultMetaDescription: "",
-    defaultKeywords: [],
-    ogDefaultImage: "",
-    twitterCard: "summary_large_image",
+  seoSettings = signal<SEOSettings>({
+    siteName: "",
+    siteDescription: "",
+    siteKeywords: [],
+    defaultOGImage: "",
+    twitterHandle: "",
     googleAnalyticsId: "",
-    googleSearchConsoleId: "",
     googleTagManagerId: "",
     facebookPixelId: "",
     enableSitemap: true,
-    sitemapFrequency: "weekly",
-    robotsTxt: "",
+    enableRobotsTxt: true,
+    enableStructuredData: true,
   });
 
   integrationSettings = signal<IntegrationSettings>({
     googleMapsApiKey: "",
-    googlePlacesApiKey: "",
-    weatherApiKey: "",
+    mapboxAccessToken: "",
     cloudinaryCloudName: "",
     cloudinaryApiKey: "",
     cloudinaryApiSecret: "",
-    webhooks: [],
-    enableWebhooks: false,
+    s3AccessKey: "",
+    s3SecretKey: "",
+    s3Bucket: "",
+    s3Region: "",
   });
 
   securitySettings = signal<SecuritySettings>({
-    enable2FA: false,
-    force2FAForAdmins: true,
-    sessionTimeout: 3600,
-    maxLoginAttempts: 5,
-    lockoutDurationMinutes: 30,
-    ipWhitelist: [],
-    enableCors: true,
-    corsAllowedOrigins: ["*"],
+    enableTwoFactor: false,
+    enableRecaptcha: false,
+    recaptchaSiteKey: "",
+    recaptchaSecretKey: "",
     enableRateLimiting: true,
-    rateLimitRequests: 100,
-    rateLimitWindow: 60,
-    enableSsl: true,
-    sslCertificate: "",
-    sslPrivateKey: "",
+    maxRequestsPerMinute: 100,
+    enableCORS: true,
+    allowedOrigins: ["*"],
+    enableCSP: false,
+    cspPolicy: "",
   });
 
   legalSettings = signal<LegalSettings>({
-    termsOfService: "",
-    privacyPolicy: "",
-    cookiePolicy: "",
-    companyName: "",
-    companyAddress: "",
-    companyPhone: "",
-    companyEmail: "",
-    taxId: "",
-    registrationNumber: "",
-    enableCookieConsent: true,
-    cookieConsentMessage: "",
+    privacyPolicyUrl: "",
+    termsOfServiceUrl: "",
+    cookiePolicyUrl: "",
     gdprCompliant: true,
+    cookieConsentEnabled: true,
     dataRetentionDays: 730,
+    enableDataExport: true,
+    enableDataDeletion: true,
   });
 
   // Breadcrumbs
@@ -330,8 +320,10 @@ export class AdminSettingsComponent implements OnInit {
   }
 
   // Integration Settings Helpers
+  // TODO: Webhooks require extension of IntegrationSettings interface
+  /*
   addWebhook(): void {
-    const newWebhook: Webhook = {
+    const newWebhook = {
       id: `webhook-${Date.now()}`,
       name: "",
       url: "",
@@ -342,27 +334,30 @@ export class AdminSettingsComponent implements OnInit {
 
     this.integrationSettings.update((settings) => ({
       ...settings,
-      webhooks: [...settings.webhooks, newWebhook],
+      webhooks: [...(settings.webhooks || []), newWebhook],
     }));
   }
 
   removeWebhook(id: string): void {
     this.integrationSettings.update((settings) => ({
       ...settings,
-      webhooks: settings.webhooks.filter((w) => w.id !== id),
+      webhooks: (settings.webhooks || []).filter((w: any) => w.id !== id),
     }));
   }
+  */
 
   generateWebhookSecret(): string {
     return "whsec_" + Math.random().toString(36).substring(2, 15);
   }
 
   // Security Settings Helpers
+  // TODO: IP Whitelist requires extension of SecuritySettings interface
+  /*
   addToIpWhitelist(ip: string): void {
-    if (ip && !this.securitySettings().ipWhitelist.includes(ip)) {
+    if (ip && !(this.securitySettings().ipWhitelist || []).includes(ip)) {
       this.securitySettings.update((settings) => ({
         ...settings,
-        ipWhitelist: [...settings.ipWhitelist, ip],
+        ipWhitelist: [...(settings.ipWhitelist || []), ip],
       }));
     }
   }
@@ -370,9 +365,10 @@ export class AdminSettingsComponent implements OnInit {
   removeFromIpWhitelist(ip: string): void {
     this.securitySettings.update((settings) => ({
       ...settings,
-      ipWhitelist: settings.ipWhitelist.filter((item) => item !== ip),
+      ipWhitelist: (settings.ipWhitelist || []).filter((item: string) => item !== ip),
     }));
   }
+  */
 
   testSmtpConnection(): void {
     console.log("Testing SMTP connection...");

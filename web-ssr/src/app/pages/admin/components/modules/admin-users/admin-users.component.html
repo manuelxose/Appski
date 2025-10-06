@@ -67,7 +67,7 @@
 
     <app-admin-filters
       [fields]="filterFields"
-      (filterChange)="onFilterChange($event)"
+      (valuesChange)="onFilterChange($event)"
       (filterReset)="onFilterReset()"
     />
   </div>
@@ -89,10 +89,9 @@
     />
 
     <app-admin-pagination
-      [currentPage]="currentPage()"
-      [totalPages]="totalPages()"
+      [page]="currentPage()"
+      [total]="totalUsers()"
       [pageSize]="pageSize()"
-      [totalItems]="totalUsers()"
       (pageChange)="onPageChange($event)"
       (pageSizeChange)="onPageSizeChange($event)"
     />
@@ -106,14 +105,10 @@
     title="No hay usuarios"
     description="No se encontraron usuarios con los filtros aplicados"
     [actionLabel]="
-      searchQuery() || Object.keys(activeFilters()).length > 0
-        ? 'Limpiar filtros'
-        : 'Crear primer usuario'
+      searchQuery() || hasFilters() ? 'Limpiar filtros' : 'Crear primer usuario'
     "
     (primaryAction)="
-      searchQuery() || Object.keys(activeFilters()).length > 0
-        ? onFilterReset()
-        : openCreateModal()
+      searchQuery() || hasFilters() ? onFilterReset() : openCreateModal()
     "
   />
   }

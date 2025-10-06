@@ -151,6 +151,114 @@ export const routes: Routes = [
           ).then((m) => m.AdminAnalyticsFinancialComponent),
       },
       {
+        path: "analytics/users",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-users/admin-analytics-users.component"
+          ).then((m) => m.AdminAnalyticsUsersComponent),
+      },
+      {
+        path: "analytics/stations",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-stations/admin-analytics-stations.component"
+          ).then((m) => m.AdminAnalyticsStationsComponent),
+      },
+      {
+        path: "analytics/bookings",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-bookings/admin-analytics-bookings.component"
+          ).then((m) => m.AdminAnalyticsBookingsComponent),
+      },
+      {
+        path: "analytics/marketing",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-analytics-marketing/admin-analytics-marketing.component"
+          ).then((m) => m.AdminAnalyticsMarketingComponent),
+      },
+      {
+        path: "invoices",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-invoices/admin-invoices.component"
+          ).then((m) => m.AdminInvoicesComponent),
+      },
+      {
+        path: "commissions",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-commissions/admin-commissions.component"
+          ).then((m) => m.AdminCommissionsComponent),
+      },
+      {
+        path: "financial-reports",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-financial-reports/admin-financial-reports.component"
+          ).then((m) => m.AdminFinancialReportsComponent),
+      },
+      // Grupo D - CRM (Email, Campañas, Soporte, Reseñas, Push)
+      {
+        path: "email-marketing",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-email-marketing/admin-email-marketing.component"
+          ).then((m) => m.AdminEmailMarketingComponent),
+      },
+      {
+        path: "campaigns",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-campaigns/admin-campaigns.component"
+          ).then((m) => m.AdminCampaignsComponent),
+      },
+      {
+        path: "support",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-support/admin-support.component"
+          ).then((m) => m.AdminSupportComponent),
+      },
+      {
+        path: "reviews",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-reviews/admin-reviews.component"
+          ).then((m) => m.AdminReviewsComponent),
+      },
+      {
+        path: "push-notifications",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-push-notifications/admin-push-notifications.component"
+          ).then((m) => m.AdminPushNotificationsComponent),
+      },
+      // Grupo E - Operaciones (Inventario, Mantenimiento, Incidentes, Planificación)
+      {
+        path: "inventory",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-inventory/admin-inventory.component"
+          ).then((m) => m.AdminInventoryComponent),
+      },
+      {
+        path: "maintenance",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-maintenance/admin-maintenance.component"
+          ).then((m) => m.AdminMaintenanceComponent),
+      },
+      {
+        path: "incidents",
+        loadComponent: () =>
+          import(
+            "./pages/admin/components/modules/admin-incidents/admin-incidents.component"
+          ).then((m) => m.AdminIncidentsComponent),
+      },
+      // Grupo B - Gestión
+      {
         path: "users",
         loadComponent: () =>
           import(

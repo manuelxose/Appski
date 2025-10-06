@@ -1,0 +1,256 @@
+/* Admin Maintenance Specific Styles */
+@import url("../admin-analytics-stations/admin-analytics-stations.component.css");
+
+/* Work Order ID */
+.wo-id {
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  color: var(--neutral-700);
+}
+
+/* Work Order Title */
+.wo-title {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+.wo-description {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Asset Info */
+.asset-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.asset-icon {
+  font-size: 1.25rem;
+}
+
+/* Date Info */
+.date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.days-until {
+  font-size: 0.75rem;
+}
+
+/* Cost Info */
+.cost-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.actual-cost {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+
+/* Assets List */
+.assets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.asset-card {
+  padding: 1rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.asset-card:hover {
+  background: var(--neutral-100);
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+}
+
+.asset-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.asset-type-icon {
+  font-size: 2rem;
+}
+.asset-details {
+  flex: 1;
+}
+.asset-name {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+.asset-category {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-top: 0.125rem;
+}
+
+.asset-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+.stat-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* Schedules List */
+.schedules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.schedule-item {
+  padding: 0.75rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  border-left: 4px solid var(--yellow-500);
+  transition: all 0.2s ease;
+}
+.schedule-item:hover {
+  background: var(--neutral-100);
+}
+.schedule-item.schedule-overdue {
+  border-left-color: var(--red-500);
+  background: var(--red-50);
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.schedule-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-700);
+}
+.schedule-task {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+.schedule-asset {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-bottom: 0.5rem;
+}
+.schedule-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+.schedule-meta span::after {
+  content: "•";
+  margin-left: 0.5rem;
+  color: var(--neutral-400);
+}
+.schedule-meta span:last-child::after {
+  content: none;
+}
+
+/* Alert */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid;
+}
+.alert-danger {
+  background: var(--red-50);
+  border-color: var(--red-200);
+}
+.alert-icon {
+  font-size: 2rem;
+}
+.alert-content {
+  flex: 1;
+}
+.alert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--red-800);
+  margin-bottom: 0.25rem;
+}
+.alert-message {
+  font-size: 0.875rem;
+  color: var(--red-700);
+}
+
+/* Bottom Grid */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Filter Select Small */
+.filter-select-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: 6px;
+  background: white;
+  color: var(--neutral-900);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-select-sm:hover {
+  border-color: var(--primary-400);
+}
+.filter-select-sm:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+  .asset-stats {
+    grid-template-columns: 1fr;
+  }
+}

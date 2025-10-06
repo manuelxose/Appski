@@ -1,0 +1,119 @@
+[
+  {
+    "category": "Edad",
+    "segments": [
+      {
+        "label": "18-24",
+        "value": 4280,
+        "percentage": 19.7,
+        "color": "#EF4444"
+      },
+      {
+        "label": "25-34",
+        "value": 7540,
+        "percentage": 34.7,
+        "color": "#F59E0B"
+      },
+      {
+        "label": "35-44",
+        "value": 5890,
+        "percentage": 27.1,
+        "color": "#10B981"
+      },
+      {
+        "label": "45-54",
+        "value": 2820,
+        "percentage": 13.0,
+        "color": "#3B82F6"
+      },
+      { "label": "55+", "value": 1220, "percentage": 5.6, "color": "#8B5CF6" }
+    ]
+  },
+  {
+    "category": "Género",
+    "segments": [
+      {
+        "label": "Masculino",
+        "value": 11850,
+        "percentage": 54.5,
+        "color": "#3B82F6"
+      },
+      {
+        "label": "Femenino",
+        "value": 9240,
+        "percentage": 42.5,
+        "color": "#EC4899"
+      },
+      {
+        "label": "Otro/Prefiero no decir",
+        "value": 660,
+        "percentage": 3.0,
+        "color": "#6B7280"
+      }
+    ]
+  },
+  {
+    "category": "Ubicación",
+    "segments": [
+      {
+        "label": "Madrid",
+        "value": 5680,
+        "percentage": 26.1,
+        "color": "#EF4444"
+      },
+      {
+        "label": "Barcelona",
+        "value": 4920,
+        "percentage": 22.6,
+        "color": "#F59E0B"
+      },
+      {
+        "label": "Cataluña (otros)",
+        "value": 3450,
+        "percentage": 15.9,
+        "color": "#10B981"
+      },
+      {
+        "label": "País Vasco",
+        "value": 2780,
+        "percentage": 12.8,
+        "color": "#3B82F6"
+      },
+      {
+        "label": "Aragón",
+        "value": 2340,
+        "percentage": 10.8,
+        "color": "#8B5CF6"
+      },
+      {
+        "label": "Otras regiones",
+        "value": 2580,
+        "percentage": 11.9,
+        "color": "#6B7280"
+      }
+    ]
+  },
+  {
+    "category": "Dispositivo",
+    "segments": [
+      {
+        "label": "Móvil",
+        "value": 12890,
+        "percentage": 59.3,
+        "color": "#10B981"
+      },
+      {
+        "label": "Desktop",
+        "value": 7120,
+        "percentage": 32.7,
+        "color": "#3B82F6"
+      },
+      {
+        "label": "Tablet",
+        "value": 1740,
+        "percentage": 8.0,
+        "color": "#F59E0B"
+      }
+    ]
+  }
+]

@@ -732,7 +732,7 @@
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [(ngModel)]="userSettings().enablePublicRegistration"
+              [(ngModel)]="userSettings().allowRegistration"
             />
             <span>Permitir Registro Público</span>
           </label>
@@ -762,7 +762,7 @@
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [(ngModel)]="userSettings().allowSocialLogin"
+              [(ngModel)]="userSettings().enableSocialLogin"
             />
             <span>Permitir Login Social</span>
           </label>
@@ -799,35 +799,23 @@
         </div>
       </div>
 
-      @if (userSettings().allowSocialLogin) {
+      @if (userSettings().enableSocialLogin) {
       <div class="social-providers">
         <h3>Proveedores Sociales Habilitados</h3>
         <div class="checkbox-group">
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [checked]="
-                userSettings().enabledSocialProviders.includes('google')
-              "
+              [checked]="!!userSettings().googleClientId"
             />
             <span>🔵 Google</span>
           </label>
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              [checked]="
-                userSettings().enabledSocialProviders.includes('facebook')
-              "
-            />
+            <input type="checkbox" [checked]="!!userSettings().facebookAppId" />
             <span>🔵 Facebook</span>
           </label>
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              [checked]="
-                userSettings().enabledSocialProviders.includes('apple')
-              "
-            />
+            <input type="checkbox" [checked]="!!userSettings().appleClientId" />
             <span>⚫ Apple</span>
           </label>
         </div>
@@ -842,6 +830,8 @@
       <h2 class="section-title">Configuración SEO</h2>
 
       <div class="form-grid">
+        <!-- TODO: defaultMetaTitle y defaultMetaDescription no están en SEOSettings interface -->
+        <!--
         <div class="form-group full-width">
           <label for="defaultMetaTitle">Meta Title Predeterminado</label>
           <input
@@ -871,17 +861,20 @@
             {{ seoSettings().defaultMetaDescription.length }}/160 caracteres
           </p>
         </div>
+        -->
 
         <div class="form-group">
-          <label for="ogDefaultImage">Open Graph Imagen Predeterminada</label>
+          <label for="defaultOGImage">Open Graph Imagen Predeterminada</label>
           <input
             type="url"
-            id="ogDefaultImage"
-            [(ngModel)]="seoSettings().ogDefaultImage"
+            id="defaultOGImage"
+            [(ngModel)]="seoSettings().defaultOGImage"
             placeholder="https://example.com/og-image.jpg"
           />
         </div>
 
+        <!-- TODO: twitterCard no está en SEOSettings interface -->
+        <!--
         <div class="form-group">
           <label for="twitterCard">Tipo de Twitter Card</label>
           <select id="twitterCard" [(ngModel)]="seoSettings().twitterCard">
@@ -889,6 +882,7 @@
             <option value="summary_large_image">Summary Large Image</option>
           </select>
         </div>
+        -->
 
         <div class="form-group">
           <label for="googleAnalyticsId">Google Analytics ID</label>
@@ -900,6 +894,8 @@
           />
         </div>
 
+        <!-- TODO: googleSearchConsoleId no está en SEOSettings interface -->
+        <!--
         <div class="form-group">
           <label for="googleSearchConsoleId">Google Search Console ID</label>
           <input
@@ -909,6 +905,7 @@
             placeholder="verification_code"
           />
         </div>
+        -->
 
         <div class="form-group">
           <label for="googleTagManagerId">Google Tag Manager ID</label>
@@ -930,6 +927,8 @@
           />
         </div>
 
+        <!-- TODO: sitemapFrequency no está en SEOSettings interface -->
+        <!--
         <div class="form-group">
           <label for="sitemapFrequency">Frecuencia del Sitemap</label>
           <select
@@ -941,6 +940,7 @@
             <option value="monthly">Mensual</option>
           </select>
         </div>
+        -->
 
         <div class="form-group">
           <label class="checkbox-label">
@@ -949,6 +949,8 @@
           </label>
         </div>
 
+        <!-- TODO: robotsTxt no está en SEOSettings interface -->
+        <!--
         <div class="form-group full-width">
           <label for="robotsTxt">Contenido de robots.txt</label>
           <textarea
@@ -958,6 +960,7 @@
             placeholder="User-agent: *&#10;Disallow: /admin/&#10;Sitemap: https://example.com/sitemap.xml"
           ></textarea>
         </div>
+        -->
       </div>
     </div>
     }
@@ -979,11 +982,11 @@
         </div>
 
         <div class="form-group">
-          <label for="googlePlacesApiKey">Google Places API Key</label>
+          <label for="googlePlacesApiKey">Google Maps API Key</label>
           <input
             type="text"
             id="googlePlacesApiKey"
-            [(ngModel)]="integrationSettings().googlePlacesApiKey"
+            [(ngModel)]="integrationSettings().googleMapsApiKey"
             placeholder="AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
           />
         </div>
@@ -993,7 +996,6 @@
           <input
             type="text"
             id="weatherApiKey"
-            [(ngModel)]="integrationSettings().weatherApiKey"
             placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
           />
         </div>
@@ -1030,63 +1032,11 @@
 
         <div class="form-group full-width">
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              [(ngModel)]="integrationSettings().enableWebhooks"
-            />
+            <input type="checkbox" />
             <span>Habilitar Webhooks</span>
           </label>
         </div>
       </div>
-
-      @if (integrationSettings().enableWebhooks) {
-      <div class="webhooks-section">
-        <div class="section-header">
-          <h3>Webhooks Configurados</h3>
-          <button class="btn btn-primary btn-sm" (click)="addWebhook()">
-            ➕ Agregar Webhook
-          </button>
-        </div>
-
-        @for (webhook of integrationSettings().webhooks; track webhook.id) {
-        <div class="webhook-card">
-          <div class="webhook-header">
-            <input
-              type="text"
-              [(ngModel)]="webhook.name"
-              placeholder="Nombre del webhook"
-              class="webhook-name"
-            />
-            <button class="btn-icon" (click)="removeWebhook(webhook.id)">
-              🗑️
-            </button>
-          </div>
-          <div class="webhook-body">
-            <input
-              type="url"
-              [(ngModel)]="webhook.url"
-              placeholder="https://example.com/webhook"
-              class="webhook-url"
-            />
-            <div class="webhook-secret">
-              <span class="secret-label">Secret:</span>
-              <code>{{ webhook.secret }}</code>
-            </div>
-            <label class="checkbox-label">
-              <input type="checkbox" [(ngModel)]="webhook.active" />
-              <span>Activo</span>
-            </label>
-            <button
-              class="btn btn-secondary btn-sm"
-              (click)="testWebhook(webhook.id)"
-            >
-              🧪 Probar
-            </button>
-          </div>
-        </div>
-        }
-      </div>
-      }
     </div>
     }
 
@@ -1097,13 +1047,13 @@
 
       <div class="form-grid">
         <div class="form-group">
-          <label for="sessionTimeout">Timeout de Sesión (segundos)</label>
+          <label for="sessionTimeout">Timeout de Sesión (minutos)</label>
           <input
             type="number"
             id="sessionTimeout"
-            [(ngModel)]="securitySettings().sessionTimeout"
-            min="300"
-            max="86400"
+            [(ngModel)]="userSettings().sessionTimeoutMinutes"
+            min="5"
+            max="1440"
           />
         </div>
 
@@ -1112,7 +1062,7 @@
           <input
             type="number"
             id="maxLoginAttempts"
-            [(ngModel)]="securitySettings().maxLoginAttempts"
+            [(ngModel)]="userSettings().maxLoginAttempts"
             min="3"
             max="10"
           />
@@ -1125,18 +1075,18 @@
           <input
             type="number"
             id="lockoutDurationMinutes"
-            [(ngModel)]="securitySettings().lockoutDurationMinutes"
+            [(ngModel)]="userSettings().lockoutDurationMinutes"
             min="5"
             max="1440"
           />
         </div>
 
         <div class="form-group">
-          <label for="rateLimitRequests">Rate Limit: Requests</label>
+          <label for="rateLimitRequests">Rate Limit: Requests por Minuto</label>
           <input
             type="number"
             id="rateLimitRequests"
-            [(ngModel)]="securitySettings().rateLimitRequests"
+            [(ngModel)]="securitySettings().maxRequestsPerMinute"
             min="10"
             max="1000"
           />
@@ -1144,28 +1094,22 @@
 
         <div class="form-group">
           <label for="rateLimitWindow">Rate Limit: Ventana (segundos)</label>
-          <input
-            type="number"
-            id="rateLimitWindow"
-            [(ngModel)]="securitySettings().rateLimitWindow"
-            min="1"
-            max="3600"
-          />
-        </div>
-
-        <div class="form-group full-width">
-          <label class="checkbox-label">
-            <input type="checkbox" [(ngModel)]="securitySettings().enable2FA" />
-            <span>Habilitar 2FA (Autenticación de Dos Factores)</span>
-          </label>
+          <input type="number" id="rateLimitWindow" min="1" max="3600" />
         </div>
 
         <div class="form-group full-width">
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [(ngModel)]="securitySettings().force2FAForAdmins"
+              [(ngModel)]="securitySettings().enableTwoFactor"
             />
+            <span>Habilitar 2FA (Autenticación de Dos Factores)</span>
+          </label>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input type="checkbox" />
             <span>Forzar 2FA para Administradores</span>
           </label>
         </div>
@@ -1174,7 +1118,7 @@
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [(ngModel)]="securitySettings().enableCors"
+              [(ngModel)]="securitySettings().enableCORS"
             />
             <span>Habilitar CORS</span>
           </label>
@@ -1192,16 +1136,18 @@
 
         <div class="form-group full-width">
           <label class="checkbox-label">
-            <input type="checkbox" [(ngModel)]="securitySettings().enableSsl" />
+            <input type="checkbox" />
             <span>Forzar SSL/HTTPS</span>
           </label>
         </div>
       </div>
 
+      <!-- TODO: IP Whitelist no está soportado en SecuritySettings interface -->
+      <!--
       <div class="ip-whitelist-section">
         <h3>IP Whitelist</h3>
         <div class="ip-list">
-          @for (ip of securitySettings().ipWhitelist; track ip) {
+          @for (ip of []; track ip) {
           <div class="ip-item">
             <code>{{ ip }}</code>
             <button class="btn-icon" (click)="removeFromIpWhitelist(ip)">
@@ -1220,10 +1166,12 @@
           </button>
         </div>
       </div>
+      -->
     </div>
-    }
+    } }
 
     <!-- LEGAL TAB -->
+
     @if (activeTab() === 'legal') {
     <div class="settings-section">
       <h2 class="section-title">Configuración Legal</h2>
@@ -1234,7 +1182,6 @@
           <input
             type="text"
             id="companyName"
-            [(ngModel)]="legalSettings().companyName"
             placeholder="Nieve Platform S.L."
           />
         </div>
@@ -1244,49 +1191,28 @@
           <input
             type="text"
             id="companyAddress"
-            [(ngModel)]="legalSettings().companyAddress"
             placeholder="C/ Principal 123, Madrid"
           />
         </div>
 
         <div class="form-group">
           <label for="companyPhone">Teléfono</label>
-          <input
-            type="tel"
-            id="companyPhone"
-            [(ngModel)]="legalSettings().companyPhone"
-            placeholder="+34 900 000 000"
-          />
+          <input type="tel" id="companyPhone" placeholder="+34 900 000 000" />
         </div>
 
         <div class="form-group">
           <label for="companyEmail">Email</label>
-          <input
-            type="email"
-            id="companyEmail"
-            [(ngModel)]="legalSettings().companyEmail"
-            placeholder="legal@nieve.com"
-          />
+          <input type="email" id="companyEmail" placeholder="legal@nieve.com" />
         </div>
 
         <div class="form-group">
           <label for="taxId">CIF/NIF</label>
-          <input
-            type="text"
-            id="taxId"
-            [(ngModel)]="legalSettings().taxId"
-            placeholder="B12345678"
-          />
+          <input type="text" id="taxId" placeholder="B12345678" />
         </div>
 
         <div class="form-group">
           <label for="registrationNumber">Número de Registro</label>
-          <input
-            type="text"
-            id="registrationNumber"
-            [(ngModel)]="legalSettings().registrationNumber"
-            placeholder="RM 12345"
-          />
+          <input type="text" id="registrationNumber" placeholder="RM 12345" />
         </div>
 
         <div class="form-group">
@@ -1304,7 +1230,7 @@
           <label class="checkbox-label">
             <input
               type="checkbox"
-              [(ngModel)]="legalSettings().enableCookieConsent"
+              [(ngModel)]="legalSettings().cookieConsentEnabled"
             />
             <span>Habilitar Banner de Cookies</span>
           </label>
@@ -1320,14 +1246,13 @@
           </label>
         </div>
 
-        @if (legalSettings().enableCookieConsent) {
+        @if (legalSettings().cookieConsentEnabled) {
         <div class="form-group full-width">
           <label for="cookieConsentMessage"
             >Mensaje de Consentimiento de Cookies</label
           >
           <textarea
             id="cookieConsentMessage"
-            [(ngModel)]="legalSettings().cookieConsentMessage"
             rows="3"
             placeholder="Usamos cookies para mejorar tu experiencia..."
           ></textarea>
@@ -1335,58 +1260,58 @@
         }
 
         <div class="form-group full-width">
-          <label for="termsOfService">Términos de Servicio</label>
-          <textarea
+          <label for="termsOfService">Términos de Servicio URL</label>
+          <input
+            type="url"
             id="termsOfService"
-            [(ngModel)]="legalSettings().termsOfService"
-            rows="10"
-            placeholder="Escribe aquí los términos de servicio..."
-          ></textarea>
+            [(ngModel)]="legalSettings().termsOfServiceUrl"
+            placeholder="https://nieve.com/terms"
+          />
         </div>
 
         <div class="form-group full-width">
-          <label for="privacyPolicy">Política de Privacidad</label>
-          <textarea
+          <label for="privacyPolicy">Política de Privacidad URL</label>
+          <input
+            type="url"
             id="privacyPolicy"
-            [(ngModel)]="legalSettings().privacyPolicy"
-            rows="10"
-            placeholder="Escribe aquí la política de privacidad..."
-          ></textarea>
+            [(ngModel)]="legalSettings().privacyPolicyUrl"
+            placeholder="https://nieve.com/privacy"
+          />
         </div>
 
         <div class="form-group full-width">
-          <label for="cookiePolicy">Política de Cookies</label>
-          <textarea
+          <label for="cookiePolicy">Política de Cookies URL</label>
+          <input
+            type="url"
             id="cookiePolicy"
-            [(ngModel)]="legalSettings().cookiePolicy"
-            rows="10"
-            placeholder="Escribe aquí la política de cookies..."
-          ></textarea>
+            [(ngModel)]="legalSettings().cookiePolicyUrl"
+            placeholder="https://nieve.com/cookies"
+          />
         </div>
       </div>
     </div>
-    } }
-  </div>
+    }
 
-  <!-- Footer Actions -->
-  <div class="settings-footer">
-    <button
-      class="btn btn-secondary"
-      (click)="resetCurrentTab()"
-      [disabled]="isSaving()"
-    >
-      🔄 Reiniciar
-    </button>
-    <button
-      class="btn btn-primary"
-      (click)="saveCurrentTab()"
-      [disabled]="isSaving()"
-    >
-      @if (isSaving()) {
-      <span>💾 Guardando...</span>
-      } @else {
-      <span>💾 Guardar Cambios</span>
-      }
-    </button>
+    <!-- Footer Actions -->
+    <div class="settings-footer">
+      <button
+        class="btn btn-secondary"
+        (click)="resetCurrentTab()"
+        [disabled]="isSaving()"
+      >
+        🔄 Reiniciar
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="saveCurrentTab()"
+        [disabled]="isSaving()"
+      >
+        @if (isSaving()) {
+        <span>💾 Guardando...</span>
+        } @else {
+        <span>💾 Guardar Cambios</span>
+        }
+      </button>
+    </div>
   </div>
 </div>

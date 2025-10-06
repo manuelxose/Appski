@@ -14,7 +14,6 @@ import {
 } from "../../shared/admin-filters/admin-filters.component";
 import { AdminSearchBarComponent } from "../../shared/admin-search-bar/admin-search-bar.component";
 import { AdminStatCardComponent } from "../../shared/admin-stat-card/admin-stat-card.component";
-import { AdminBadgeComponent } from "../../shared/admin-badge/admin-badge.component";
 import {
   AdminBreadcrumbsComponent,
   BreadcrumbItem,
@@ -46,7 +45,6 @@ import { User, UserFormData } from "./admin-users.models";
     AdminFiltersComponent,
     AdminSearchBarComponent,
     AdminStatCardComponent,
-    AdminBadgeComponent,
     AdminBreadcrumbsComponent,
     AdminModalComponent,
     AdminConfirmDialogComponent,
@@ -95,8 +93,8 @@ export class AdminUsersComponent {
 
   // Breadcrumbs
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: "Admin", url: "/admin" },
-    { label: "Usuarios", url: "/admin/users" },
+    { label: "Admin", path: "/admin" },
+    { label: "Usuarios", path: "/admin/users" },
   ];
 
   // Stats
@@ -155,12 +153,11 @@ export class AdminUsersComponent {
   });
 
   // Table Configuration
-  readonly tableColumns: TableColumn<User>[] = [
+  readonly tableColumns: TableColumn[] = [
     {
       key: "firstName",
       label: "Nombre",
       sortable: true,
-      formatter: (user) => `${user.firstName} ${user.lastName}`,
     },
     { key: "email", label: "Email", sortable: true },
     { key: "phone", label: "Teléfono", sortable: false },
@@ -168,20 +165,18 @@ export class AdminUsersComponent {
       key: "role",
       label: "Rol",
       sortable: true,
-      formatter: (user) => this.formatRole(user.role),
     },
     {
       key: "status",
       label: "Estado",
       sortable: true,
-      type: "badge",
-      formatter: (user) => user.status,
+      format: "badge",
     },
     {
       key: "createdAt",
       label: "Fecha registro",
       sortable: true,
-      formatter: (user) => new Date(user.createdAt).toLocaleDateString("es-ES"),
+      format: "date",
     },
   ];
 
@@ -229,8 +224,9 @@ export class AdminUsersComponent {
   async loadUsers(): Promise<void> {
     this.isLoading.set(true);
     try {
-      await this.operationsService.loadUsers();
-      this.users.set(this.operationsService.users());
+      const response = await fetch("/assets/mocks/admin/users.json");
+      const data: User[] = await response.json();
+      this.users.set(data);
     } catch (error) {
       console.error("Error loading users:", error);
     } finally {
@@ -249,6 +245,10 @@ export class AdminUsersComponent {
     this.currentPage.set(1);
   }
 
+  hasFilters(): boolean {
+    return Object.keys(this.activeFilters()).length > 0;
+  }
+
   onFilterReset(): void {
     this.activeFilters.set({});
     this.currentPage.set(1);
@@ -265,7 +265,8 @@ export class AdminUsersComponent {
   }
 
   // Selection
-  onSelectionChange(userIds: string[]): void {
+  onSelectionChange(users: User[]): void {
+    const userIds = users.map((u) => u.id);
     this.selectedUsers.set(userIds);
   }
 
@@ -286,14 +287,8 @@ export class AdminUsersComponent {
     const formData = this.userForm();
 
     try {
-      await this.operationsService.createUser({
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        role: formData.role,
-        status: formData.status,
-      });
+      // TODO: Implement API call when backend is ready
+      console.log("Creating user:", formData);
 
       this.showCreateModal.set(false);
       await this.loadUsers();
@@ -324,14 +319,8 @@ export class AdminUsersComponent {
     if (!userId) return;
 
     try {
-      await this.operationsService.updateUser(userId, {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        role: formData.role,
-        status: formData.status,
-      });
+      // TODO: Implement API call when backend is ready
+      console.log("Updating user:", userId, formData);
 
       this.showEditModal.set(false);
       this.editingUserId.set(null);
@@ -352,7 +341,9 @@ export class AdminUsersComponent {
     if (!userId) return;
 
     try {
-      await this.operationsService.deleteUser(userId);
+      // TODO: Implement API call when backend is ready
+      console.log("Deleting user:", userId);
+
       this.showDeleteConfirm.set(false);
       this.editingUserId.set(null);
       await this.loadUsers();
@@ -371,9 +362,8 @@ export class AdminUsersComponent {
     const userIds = this.selectedUsers();
 
     try {
-      await Promise.all(
-        userIds.map((id) => this.operationsService.deleteUser(id))
-      );
+      // TODO: Implement API call when backend is ready
+      console.log("Bulk deleting users:", userIds);
 
       this.showBulkDeleteConfirm.set(false);
       this.selectedUsers.set([]);

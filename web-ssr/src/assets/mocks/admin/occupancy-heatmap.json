@@ -1,0 +1,200 @@
+{
+  "data": [
+    {
+      "date": "2025-01-06",
+      "dayOfWeek": 1,
+      "weekOfMonth": 1,
+      "occupancy": 78,
+      "bookings": 245
+    },
+    {
+      "date": "2025-01-07",
+      "dayOfWeek": 2,
+      "weekOfMonth": 1,
+      "occupancy": 82,
+      "bookings": 268
+    },
+    {
+      "date": "2025-01-08",
+      "dayOfWeek": 3,
+      "weekOfMonth": 1,
+      "occupancy": 85,
+      "bookings": 285
+    },
+    {
+      "date": "2025-01-09",
+      "dayOfWeek": 4,
+      "weekOfMonth": 1,
+      "occupancy": 88,
+      "bookings": 298
+    },
+    {
+      "date": "2025-01-10",
+      "dayOfWeek": 5,
+      "weekOfMonth": 1,
+      "occupancy": 95,
+      "bookings": 342
+    },
+    {
+      "date": "2025-01-11",
+      "dayOfWeek": 6,
+      "weekOfMonth": 1,
+      "occupancy": 98,
+      "bookings": 385
+    },
+    {
+      "date": "2025-01-12",
+      "dayOfWeek": 0,
+      "weekOfMonth": 1,
+      "occupancy": 96,
+      "bookings": 368
+    },
+    {
+      "date": "2025-01-13",
+      "dayOfWeek": 1,
+      "weekOfMonth": 2,
+      "occupancy": 75,
+      "bookings": 232
+    },
+    {
+      "date": "2025-01-14",
+      "dayOfWeek": 2,
+      "weekOfMonth": 2,
+      "occupancy": 79,
+      "bookings": 248
+    },
+    {
+      "date": "2025-01-15",
+      "dayOfWeek": 3,
+      "weekOfMonth": 2,
+      "occupancy": 81,
+      "bookings": 265
+    },
+    {
+      "date": "2025-01-16",
+      "dayOfWeek": 4,
+      "weekOfMonth": 2,
+      "occupancy": 84,
+      "bookings": 278
+    },
+    {
+      "date": "2025-01-17",
+      "dayOfWeek": 5,
+      "weekOfMonth": 2,
+      "occupancy": 92,
+      "bookings": 325
+    },
+    {
+      "date": "2025-01-18",
+      "dayOfWeek": 6,
+      "weekOfMonth": 2,
+      "occupancy": 97,
+      "bookings": 372
+    },
+    {
+      "date": "2025-01-19",
+      "dayOfWeek": 0,
+      "weekOfMonth": 2,
+      "occupancy": 95,
+      "bookings": 355
+    },
+    {
+      "date": "2025-01-20",
+      "dayOfWeek": 1,
+      "weekOfMonth": 3,
+      "occupancy": 72,
+      "bookings": 218
+    },
+    {
+      "date": "2025-01-21",
+      "dayOfWeek": 2,
+      "weekOfMonth": 3,
+      "occupancy": 76,
+      "bookings": 235
+    },
+    {
+      "date": "2025-01-22",
+      "dayOfWeek": 3,
+      "weekOfMonth": 3,
+      "occupancy": 80,
+      "bookings": 254
+    },
+    {
+      "date": "2025-01-23",
+      "dayOfWeek": 4,
+      "weekOfMonth": 3,
+      "occupancy": 83,
+      "bookings": 272
+    },
+    {
+      "date": "2025-01-24",
+      "dayOfWeek": 5,
+      "weekOfMonth": 3,
+      "occupancy": 90,
+      "bookings": 312
+    },
+    {
+      "date": "2025-01-25",
+      "dayOfWeek": 6,
+      "weekOfMonth": 3,
+      "occupancy": 96,
+      "bookings": 365
+    },
+    {
+      "date": "2025-01-26",
+      "dayOfWeek": 0,
+      "weekOfMonth": 3,
+      "occupancy": 94,
+      "bookings": 348
+    },
+    {
+      "date": "2025-01-27",
+      "dayOfWeek": 1,
+      "weekOfMonth": 4,
+      "occupancy": 70,
+      "bookings": 205
+    },
+    {
+      "date": "2025-01-28",
+      "dayOfWeek": 2,
+      "weekOfMonth": 4,
+      "occupancy": 74,
+      "bookings": 222
+    },
+    {
+      "date": "2025-01-29",
+      "dayOfWeek": 3,
+      "weekOfMonth": 4,
+      "occupancy": 78,
+      "bookings": 242
+    },
+    {
+      "date": "2025-01-30",
+      "dayOfWeek": 4,
+      "weekOfMonth": 4,
+      "occupancy": 82,
+      "bookings": 265
+    },
+    {
+      "date": "2025-01-31",
+      "dayOfWeek": 5,
+      "weekOfMonth": 4,
+      "occupancy": 89,
+      "bookings": 305
+    },
+    {
+      "date": "2025-02-01",
+      "dayOfWeek": 6,
+      "weekOfMonth": 5,
+      "occupancy": 95,
+      "bookings": 358
+    },
+    {
+      "date": "2025-02-02",
+      "dayOfWeek": 0,
+      "weekOfMonth": 5,
+      "occupancy": 93,
+      "bookings": 342
+    }
+  ]
+}

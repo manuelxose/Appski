@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Sierra Nevada",
+    "bookings": 1247,
+    "revenue": 124700,
+    "growth": 15.3
+  },
+  {
+    "name": "Baqueira Beret",
+    "bookings": 1098,
+    "revenue": 142800,
+    "growth": 12.7
+  },
+  { "name": "Formigal", "bookings": 876, "revenue": 98400, "growth": 8.9 }
+]

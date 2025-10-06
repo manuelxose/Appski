@@ -1,0 +1,382 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1 class="admin-title">🚨 Gestión de Incidentes</h1>
+      <p class="admin-subtitle">
+        Registro y seguimiento de incidentes operativos, accidentes y problemas
+        de seguridad
+      </p>
+    </div>
+    <div class="admin-header-actions">
+      <button class="btn-secondary" (click)="generateIncidentReport()">
+        📊 Generar Informe
+      </button>
+      <button class="btn-secondary" (click)="exportIncidentsData()">
+        📥 Exportar Datos
+      </button>
+      <button class="btn-primary" (click)="createIncident()">
+        ➕ Reportar Incidente
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Incidentes"
+      [value]="totalIncidents()"
+      icon="📋"
+      trend="neutral"
+    />
+    <app-admin-stat-card
+      label="Incidentes Abiertos"
+      [value]="openIncidents()"
+      icon="🔓"
+      [trend]="openIncidents() > 5 ? 'down' : 'neutral'"
+    />
+    <app-admin-stat-card
+      label="Incidentes Críticos"
+      [value]="criticalIncidents()"
+      icon="🚨"
+      [trend]="criticalIncidents() > 0 ? 'down' : 'up'"
+    />
+    <app-admin-stat-card
+      label="Tiempo Medio Resolución"
+      [value]="formatDuration(averageResolutionTime())"
+      icon="⏱️"
+      trend="down"
+    />
+  </div>
+
+  <!-- Critical Incidents Alert -->
+  @if (activeCriticalIncidents().length > 0) {
+  <div class="alert alert-critical mb-6">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-content">
+      <h3 class="alert-title">Incidentes Críticos Activos</h3>
+      <p class="alert-message">
+        Hay {{ activeCriticalIncidents().length }} incidentes críticos que
+        requieren atención inmediata.
+      </p>
+    </div>
+    <button
+      class="btn-secondary btn-sm"
+      (click)="selectedSeverity.set('critical')"
+    >
+      Ver Incidentes
+    </button>
+  </div>
+  }
+
+  <!-- Filters -->
+  <div class="card mb-6">
+    <div class="card-body">
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="category-filter">Categoría</label>
+          <select
+            id="category-filter"
+            class="filter-select"
+            [value]="selectedCategory()"
+            (change)="selectedCategory.set($any($event.target).value)"
+          >
+            <option value="all">Todas las categorías</option>
+            <option value="accident">🚑 Accidente</option>
+            <option value="equipment-failure">⚙️ Avería Equipo</option>
+            <option value="safety">⚠️ Seguridad</option>
+            <option value="weather">🌨️ Climatología</option>
+            <option value="infrastructure">🏗️ Infraestructura</option>
+            <option value="other">📋 Otro</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="severity-filter">Gravedad</label>
+          <select
+            id="severity-filter"
+            class="filter-select"
+            [value]="selectedSeverity()"
+            (change)="selectedSeverity.set($any($event.target).value)"
+          >
+            <option value="all">Todas las gravedades</option>
+            <option value="critical">🔴 Crítico</option>
+            <option value="high">🟠 Alto</option>
+            <option value="medium">🟡 Medio</option>
+            <option value="low">🔵 Bajo</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="status-filter">Estado</label>
+          <select
+            id="status-filter"
+            class="filter-select"
+            [value]="selectedStatus()"
+            (change)="selectedStatus.set($any($event.target).value)"
+          >
+            <option value="all">Todos los estados</option>
+            <option value="open">Abierto</option>
+            <option value="in-progress">En Progreso</option>
+            <option value="resolved">Resuelto</option>
+            <option value="closed">Cerrado</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="search-filter">Buscar</label>
+          <input
+            id="search-filter"
+            type="text"
+            class="filter-input"
+            placeholder="Título, ubicación..."
+            [value]="searchTerm()"
+            (input)="searchTerm.set($any($event.target).value)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incidents Table -->
+  <div class="card mb-6">
+    <div class="card-header">
+      <h2 class="card-title">
+        📋 Incidentes Registrados ({{ filteredIncidents().length }})
+      </h2>
+    </div>
+    <div class="card-body p-0">
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Categoría</th>
+              <th>Gravedad</th>
+              <th>Estado</th>
+              <th>Ubicación</th>
+              <th>Reportado</th>
+              <th>Asignado a</th>
+              <th>Tiempo Resolución</th>
+              <th class="actions-column">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (incident of filteredIncidents(); track incident.id) {
+            <tr
+              [ngClass]="{
+                'incident-critical': incident.severity === 'critical'
+              }"
+            >
+              <td>
+                <code class="incident-id">{{ incident.id }}</code>
+              </td>
+              <td>
+                <div class="incident-title">{{ incident.title }}</div>
+                @if (incident.description) {
+                <div class="incident-description">
+                  {{ incident.description }}
+                </div>
+                } @if (incident.injuries) {
+                <span class="badge bg-red-50 border-red-300 text-red-700 mt-1">
+                  🚑 Con lesiones
+                </span>
+                }
+              </td>
+              <td>
+                <span class="badge bg-blue-50 border-blue-200 text-blue-700">
+                  {{ getCategoryIcon(incident.category) }}
+                  {{ getCategoryLabel(incident.category) }}
+                </span>
+              </td>
+              <td>
+                <span
+                  class="badge"
+                  [ngClass]="getSeverityClass(incident.severity)"
+                >
+                  {{ getSeverityLabel(incident.severity) }}
+                </span>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="getStatusClass(incident.status)">
+                  {{ getStatusLabel(incident.status) }}
+                </span>
+              </td>
+              <td>{{ incident.location }}</td>
+              <td>
+                <div class="date-info">
+                  <div>{{ formatDate(incident.reportedDate) }}</div>
+                  <div class="time-since">
+                    {{ getTimeSinceReport(incident.reportedDate) }}
+                  </div>
+                </div>
+              </td>
+              <td>
+                @if (incident.assignedTo) {
+                <span>{{ incident.assignedTo }}</span>
+                } @else {
+                <button
+                  class="btn-link btn-sm"
+                  (click)="assignIncident(incident.id)"
+                >
+                  Asignar
+                </button>
+                }
+              </td>
+              <td>
+                @if (incident.resolutionTime) {
+                <span class="resolution-time">{{
+                  formatDuration(incident.resolutionTime)
+                }}</span>
+                } @else if (incident.status === 'open' || incident.status ===
+                'in-progress') {
+                <span class="text-orange-600">En curso...</span>
+                } @else {
+                <span class="text-gray-400">—</span>
+                }
+              </td>
+              <td class="actions-column">
+                <button
+                  class="btn-icon"
+                  (click)="viewIncidentDetails(incident.id)"
+                  title="Ver detalles"
+                >
+                  👁️
+                </button>
+                @if (incident.status !== 'closed') {
+                <button
+                  class="btn-icon"
+                  (click)="updateIncidentStatus(incident.id, 'resolved')"
+                  title="Resolver"
+                >
+                  ✅
+                </button>
+                }
+              </td>
+            </tr>
+            } @empty {
+            <tr>
+              <td colspan="10" class="empty-state">
+                No se encontraron incidentes con los filtros seleccionados
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Grid: Stats by Category + Recent Metrics -->
+  <div class="bottom-grid">
+    <!-- Stats by Category -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📊 Estadísticas por Categoría</h2>
+      </div>
+      <div class="card-body">
+        <div class="stats-list">
+          @for (stat of stats(); track stat.category) {
+          <div class="stat-category-card">
+            <div class="stat-header">
+              <span class="category-icon">{{
+                getCategoryIcon(stat.category)
+              }}</span>
+              <div class="category-info">
+                <div class="category-name">
+                  {{ getCategoryLabel(stat.category) }}
+                </div>
+                <div class="category-total">
+                  {{ stat.totalIncidents }} incidentes
+                </div>
+              </div>
+            </div>
+            <div class="stat-metrics">
+              <div class="metric">
+                <span class="metric-label">Críticos:</span>
+                <span
+                  class="metric-value"
+                  [ngClass]="
+                    stat.criticalIncidents > 0
+                      ? 'text-red-600'
+                      : 'text-gray-600'
+                  "
+                >
+                  {{ stat.criticalIncidents }}
+                </span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Resueltos:</span>
+                <span class="metric-value text-green-600">{{
+                  stat.resolved
+                }}</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Abiertos:</span>
+                <span
+                  class="metric-value"
+                  [ngClass]="
+                    stat.open > 0 ? 'text-orange-600' : 'text-gray-600'
+                  "
+                >
+                  {{ stat.open }}
+                </span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Tiempo medio:</span>
+                <span class="metric-value">{{
+                  formatDuration(stat.averageResolutionTime)
+                }}</span>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Metrics -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📈 Métricas Recientes</h2>
+      </div>
+      <div class="card-body">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon">📅</div>
+            <div class="metric-content">
+              <div class="metric-label">Últimos 7 días</div>
+              <div class="metric-value">{{ recentIncidents() }} incidentes</div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon">🚑</div>
+            <div class="metric-content">
+              <div class="metric-label">Con lesiones</div>
+              <div class="metric-value text-red-600">
+                {{ totalInjuries() }} casos
+              </div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-label">Coste total</div>
+              <div class="metric-value">{{ formatCurrency(totalCost()) }}</div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-label">Resolución media</div>
+              <div class="metric-value">
+                {{ formatDuration(averageResolutionTime()) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

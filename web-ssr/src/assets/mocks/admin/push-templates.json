@@ -1,0 +1,55 @@
+{
+  "templates": [
+    {
+      "id": "tmpl-001",
+      "name": "Alerta de Nevada",
+      "category": "weather",
+      "titleTemplate": "¡Nevada en {{stationName}}!",
+      "messageTemplate": "{{stationName}} ha recibido {{snowAmount}}cm de nieve fresca. Condiciones {{condition}}.",
+      "variables": ["stationName", "snowAmount", "condition"],
+      "deepLinkTemplate": "/weather/{{stationSlug}}",
+      "usageCount": 45
+    },
+    {
+      "id": "tmpl-002",
+      "name": "Confirmación Reserva",
+      "category": "booking",
+      "titleTemplate": "Reserva confirmada",
+      "messageTemplate": "Tu reserva en {{stationName}} para el {{date}} ha sido confirmada. Ref: {{bookingRef}}",
+      "variables": ["stationName", "date", "bookingRef"],
+      "deepLinkTemplate": "/bookings/{{bookingId}}",
+      "usageCount": 892
+    },
+    {
+      "id": "tmpl-003",
+      "name": "Promoción Flash",
+      "category": "promotion",
+      "titleTemplate": "¡Oferta Flash!",
+      "messageTemplate": "{{discountPercent}}% descuento en {{product}}. Solo {{timeLimit}}.",
+      "variables": ["discountPercent", "product", "timeLimit"],
+      "deepLinkTemplate": "/offers/{{offerId}}",
+      "imageUrl": "/templates/flash-sale.jpg",
+      "usageCount": 234
+    },
+    {
+      "id": "tmpl-004",
+      "name": "Recordatorio Expiración",
+      "category": "alert",
+      "titleTemplate": "Tu {{itemType}} expira pronto",
+      "messageTemplate": "Tu {{itemType}} expira en {{timeRemaining}}. {{actionText}}.",
+      "variables": ["itemType", "timeRemaining", "actionText"],
+      "deepLinkTemplate": "{{actionUrl}}",
+      "usageCount": 156
+    },
+    {
+      "id": "tmpl-005",
+      "name": "Reactivación Usuario",
+      "category": "engagement",
+      "titleTemplate": "¡Te echamos de menos!",
+      "messageTemplate": "Han pasado {{daysSinceLastVisit}} días. {{incentive}} te espera.",
+      "variables": ["daysSinceLastVisit", "incentive"],
+      "deepLinkTemplate": "/app/home",
+      "usageCount": 67
+    }
+  ]
+}

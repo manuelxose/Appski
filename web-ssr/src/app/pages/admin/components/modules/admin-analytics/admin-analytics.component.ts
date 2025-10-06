@@ -49,8 +49,8 @@ export class AdminAnalyticsComponent implements OnInit {
 
   // Breadcrumbs
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: "Admin", url: "/admin" },
-    { label: "Analíticas", url: "/admin/analytics" },
+    { label: "Admin", path: "/admin" },
+    { label: "Analíticas", path: "/admin/analytics" },
   ];
 
   // General KPIs
@@ -77,30 +77,34 @@ export class AdminAnalyticsComponent implements OnInit {
     const users = this.userKPIs();
     const bookings = this.bookingKPIs();
 
+    if (!general || !financial || !users || !bookings) {
+      return [];
+    }
+
     return [
       {
         label: "Ingresos Totales",
-        value: financial.revenue,
+        value: financial.totalPayments,
         trend:
-          financial.revenueGrowth > 0 ? ("up" as const) : ("down" as const),
-        change: financial.revenueGrowth,
+          financial.trends.revenue > 0 ? ("up" as const) : ("down" as const),
+        change: financial.trends.revenue,
         icon: "💰",
         variant: "success" as const,
         valueFormat: "currency" as const,
       },
       {
         label: "Reservas Activas",
-        value: bookings.activeBookings,
-        trend: bookings.bookingGrowth > 0 ? ("up" as const) : ("down" as const),
-        change: bookings.bookingGrowth,
+        value: bookings.confirmedBookings,
+        trend: bookings.trends.total > 0 ? ("up" as const) : ("down" as const),
+        change: bookings.trends.total,
         icon: "📋",
         variant: "primary" as const,
       },
       {
         label: "Nuevos Usuarios",
-        value: users.newUsers,
-        trend: users.userGrowth > 0 ? ("up" as const) : ("down" as const),
-        change: users.userGrowth,
+        value: users.newUsersThisMonth,
+        trend: users.trends.new > 0 ? ("up" as const) : ("down" as const),
+        change: users.trends.new,
         icon: "👥",
         variant: "info" as const,
       },
@@ -108,14 +112,14 @@ export class AdminAnalyticsComponent implements OnInit {
         label: "Tasa Conversión",
         value: general.conversionRate,
         trend: general.conversionRate > 3 ? ("up" as const) : ("down" as const),
-        change: 0.5,
+        change: general.trends.conversion,
         icon: "📈",
         variant: "warning" as const,
         suffix: "%",
       },
       {
         label: "Ticket Medio",
-        value: financial.averageOrderValue,
+        value: general.averageTicket,
         trend: "up" as const,
         change: 8.2,
         icon: "🎫",
@@ -126,7 +130,7 @@ export class AdminAnalyticsComponent implements OnInit {
         label: "Usuarios Activos",
         value: users.activeUsers,
         trend: "up" as const,
-        change: 12.5,
+        change: users.trends.active,
         icon: "✅",
         variant: "success" as const,
       },
@@ -134,46 +138,23 @@ export class AdminAnalyticsComponent implements OnInit {
   });
 
   // Top Performing Stats
-  readonly topPerformingStations = signal([
-    { name: "Sierra Nevada", bookings: 1247, revenue: 124700, growth: 15.3 },
-    { name: "Baqueira Beret", bookings: 1098, revenue: 142800, growth: 12.7 },
-    { name: "Formigal", bookings: 876, revenue: 98400, growth: 8.9 },
-  ]);
+  readonly topPerformingStations = signal<
+    Array<{ name: string; bookings: number; revenue: number; growth: number }>
+  >([]);
 
-  readonly topServices = signal([
-    { name: "Forfaits", bookings: 2156, revenue: 215600, percentage: 45 },
-    { name: "Paquetes", bookings: 987, revenue: 197400, percentage: 30 },
-    { name: "Clases", bookings: 654, revenue: 98100, percentage: 15 },
-    { name: "Alquiler", bookings: 424, revenue: 42400, percentage: 10 },
-  ]);
+  readonly topServices = signal<
+    Array<{
+      name: string;
+      bookings: number;
+      revenue: number;
+      percentage: number;
+    }>
+  >([]);
 
   // Recent Activity
-  readonly recentActivity = signal([
-    {
-      type: "booking",
-      message: "Nueva reserva: Sierra Nevada - Juan García",
-      time: "Hace 5 minutos",
-      icon: "📋",
-    },
-    {
-      type: "user",
-      message: "Nuevo registro: María López",
-      time: "Hace 12 minutos",
-      icon: "👤",
-    },
-    {
-      type: "payment",
-      message: "Pago confirmado: 240.00€",
-      time: "Hace 25 minutos",
-      icon: "💳",
-    },
-    {
-      type: "review",
-      message: "Nueva valoración 5★ - Baqueira Beret",
-      time: "Hace 1 hora",
-      icon: "⭐",
-    },
-  ]);
+  readonly recentActivity = signal<
+    Array<{ type: string; message: string; time: string; icon: string }>
+  >([]);
 
   ngOnInit(): void {
     this.loadAnalytics();
@@ -182,8 +163,13 @@ export class AdminAnalyticsComponent implements OnInit {
   async loadAnalytics(): Promise<void> {
     this.isLoading.set(true);
     try {
-      await this.analyticsService.loadKPIDashboard();
-      await this.analyticsService.loadCohortRetention();
+      await Promise.all([
+        this.analyticsService.loadKPIDashboard(),
+        this.analyticsService.loadCohortRetention(),
+        this.loadTopStations(),
+        this.loadTopServices(),
+        this.loadRecentActivity(),
+      ]);
 
       // TODO: Load chart data when ApexCharts is integrated
       this.loadChartData();
@@ -192,6 +178,30 @@ export class AdminAnalyticsComponent implements OnInit {
     } finally {
       this.isLoading.set(false);
     }
+  }
+
+  private async loadTopStations(): Promise<void> {
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/top-stations.json"
+    );
+    const data = await response.json();
+    this.topPerformingStations.set(data);
+  }
+
+  private async loadTopServices(): Promise<void> {
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/top-services.json"
+    );
+    const data = await response.json();
+    this.topServices.set(data);
+  }
+
+  private async loadRecentActivity(): Promise<void> {
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/recent-activity.json"
+    );
+    const data = await response.json();
+    this.recentActivity.set(data);
   }
 
   private loadChartData(): void {

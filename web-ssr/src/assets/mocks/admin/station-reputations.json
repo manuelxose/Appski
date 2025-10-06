@@ -1,0 +1,43 @@
+{
+  "stations": [
+    {
+      "stationId": "st-001",
+      "stationName": "Sierra Nevada",
+      "totalReviews": 124,
+      "avgRating": 4.5,
+      "trend": "up",
+      "categories": {
+        "snow": 4.7,
+        "facilities": 4.6,
+        "service": 4.3,
+        "valueForMoney": 4.4
+      }
+    },
+    {
+      "stationId": "st-002",
+      "stationName": "Baqueira Beret",
+      "totalReviews": 98,
+      "avgRating": 4.2,
+      "trend": "stable",
+      "categories": {
+        "snow": 4.8,
+        "facilities": 4.5,
+        "service": 3.8,
+        "valueForMoney": 3.6
+      }
+    },
+    {
+      "stationId": "st-003",
+      "stationName": "Formigal",
+      "totalReviews": 87,
+      "avgRating": 3.8,
+      "trend": "down",
+      "categories": {
+        "snow": 4.1,
+        "facilities": 3.9,
+        "service": 3.6,
+        "valueForMoney": 3.5
+      }
+    }
+  ]
+}

@@ -48,8 +48,7 @@
       [trend]="stat.trend"
       [icon]="stat.icon"
       [variant]="stat.variant"
-      [valueFormat]="stat.valueFormat"
-      [suffix]="stat.suffix"
+      [format]="stat.valueFormat || 'number'"
     />
     }
   </div>
@@ -215,13 +214,13 @@
         <div class="metrics-grid">
           <div class="metric-item">
             <div class="metric-label">CTR Promedio</div>
-            <div class="metric-value">{{ marketingKPIs()?.averageCTR }}%</div>
+            <div class="metric-value">{{ marketingKPIs()?.ctr }}%</div>
             <div class="metric-trend positive">+0.8%</div>
           </div>
           <div class="metric-item">
             <div class="metric-label">CPA</div>
             <div class="metric-value">
-              {{ marketingKPIs()?.costPerAcquisition?.toFixed(2) }} €
+              {{ marketingKPIs()?.cpa?.toFixed(2) }} €
             </div>
             <div class="metric-trend negative">-2.1%</div>
           </div>
@@ -233,7 +232,7 @@
           <div class="metric-item">
             <div class="metric-label">Impresiones</div>
             <div class="metric-value">
-              {{ marketingKPIs()?.totalImpressions?.toLocaleString() }}
+              {{ marketingKPIs()?.impressions?.toLocaleString() }}
             </div>
             <div class="metric-trend positive">+12%</div>
           </div>

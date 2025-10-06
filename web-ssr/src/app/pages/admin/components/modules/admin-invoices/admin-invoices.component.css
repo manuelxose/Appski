@@ -1,0 +1,351 @@
+/* Import base admin styles */
+@import url("../admin-analytics-stations/admin-analytics-stations.component.css");
+
+/* ========================================
+   Invoice-Specific Styles
+   ======================================== */
+
+/* Invoice Number */
+.invoice-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.invoice-number .number {
+  font-family: "SF Mono", "Monaco", "Cascadia Code", monospace;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-warning {
+  background: var(--yellow-100);
+  color: var(--yellow-700);
+}
+
+.badge-primary {
+  background: var(--primary-100);
+  color: var(--primary-700);
+}
+
+.badge-neutral {
+  background: var(--neutral-200);
+  color: var(--neutral-700);
+}
+
+/* Client Info */
+.client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.client-name {
+  font-weight: 500;
+  color: var(--neutral-900);
+}
+
+.client-tax-id {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-family: "SF Mono", monospace;
+}
+
+/* Due Date */
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overdue-badge {
+  display: inline-flex;
+  padding: 2px 6px;
+  background: var(--red-100);
+  color: var(--red-700);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Amount Total */
+.amount-total {
+  font-weight: 600;
+  color: var(--neutral-900);
+  font-size: 15px;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-draft {
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+}
+
+.status-sent {
+  background: var(--primary-100);
+  color: var(--primary-700);
+}
+
+.status-paid {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.status-overdue {
+  background: var(--red-100);
+  color: var(--red-700);
+}
+
+.status-cancelled {
+  background: var(--neutral-200);
+  color: var(--neutral-600);
+  text-decoration: line-through;
+}
+
+/* Actions Menu */
+.actions-menu {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 16px;
+}
+
+.btn-icon:hover {
+  background: var(--neutral-100);
+  transform: scale(1.1);
+}
+
+.btn-icon:active {
+  transform: scale(0.95);
+}
+
+/* Tax Summary */
+.tax-summary-section {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--neutral-50);
+  border-radius: 12px;
+}
+
+.tax-summary-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.tax-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.tax-card {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tax-card:hover {
+  border-color: var(--primary-300);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.tax-period {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-600);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-100);
+}
+
+.tax-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tax-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tax-stat .label {
+  font-size: 13px;
+  color: var(--neutral-600);
+}
+
+.tax-stat .value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  font-family: "SF Mono", monospace;
+}
+
+.tax-stat.highlight {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.tax-stat.highlight .label {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.tax-stat.highlight .value {
+  font-size: 18px;
+  color: var(--primary-600);
+}
+
+/* Series Management */
+.series-section {
+  margin-top: 32px;
+}
+
+.series-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.series-card {
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.series-card:hover {
+  border-color: var(--primary-300);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.series-card.inactive {
+  opacity: 0.6;
+  border-color: var(--neutral-300);
+}
+
+.series-card.inactive:hover {
+  opacity: 0.8;
+}
+
+.series-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.series-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "SF Mono", monospace;
+}
+
+.series-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.series-body {
+  padding-left: 60px;
+}
+
+.series-description {
+  font-size: 14px;
+  color: var(--neutral-600);
+  margin: 0 0 12px 0;
+}
+
+.series-counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--neutral-50);
+  border-radius: 6px;
+}
+
+.series-counter .label {
+  font-size: 13px;
+  color: var(--neutral-600);
+}
+
+.series-counter .value {
+  font-family: "SF Mono", monospace;
+  font-weight: 600;
+  color: var(--primary-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tax-summary-grid,
+  .series-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-menu {
+    flex-wrap: wrap;
+  }
+
+  .series-body {
+    padding-left: 0;
+  }
+}

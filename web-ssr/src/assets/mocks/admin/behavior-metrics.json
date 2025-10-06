@@ -1,0 +1,72 @@
+[
+  {
+    "metric": "Páginas por sesión",
+    "value": 5.8,
+    "change": 0.4,
+    "changePercent": 7.4,
+    "trend": "up"
+  },
+  {
+    "metric": "Tasa de rebote",
+    "value": 28.5,
+    "change": -2.3,
+    "changePercent": -7.5,
+    "trend": "down"
+  },
+  {
+    "metric": "Sesiones por día",
+    "value": 2.7,
+    "change": 0.3,
+    "changePercent": 12.5,
+    "trend": "up"
+  },
+  {
+    "metric": "Tiempo en sitio (min)",
+    "value": 12.4,
+    "change": 1.1,
+    "changePercent": 9.7,
+    "trend": "up"
+  },
+  {
+    "metric": "Búsquedas internas",
+    "value": 3.2,
+    "change": 0.2,
+    "changePercent": 6.7,
+    "trend": "up"
+  },
+  {
+    "metric": "Interacción con contenido",
+    "value": 68.5,
+    "change": 4.2,
+    "changePercent": 6.5,
+    "trend": "up"
+  },
+  {
+    "metric": "Compartidos sociales",
+    "value": 1.8,
+    "change": 0.0,
+    "changePercent": 0.0,
+    "trend": "neutral"
+  },
+  {
+    "metric": "Favoritos guardados",
+    "value": 4.3,
+    "change": 0.6,
+    "changePercent": 16.3,
+    "trend": "up"
+  },
+  {
+    "metric": "Formularios completados",
+    "value": 42.8,
+    "change": -1.5,
+    "changePercent": -3.4,
+    "trend": "down"
+  },
+  {
+    "metric": "Descargas de contenido",
+    "value": 2.1,
+    "change": 0.3,
+    "changePercent": 16.7,
+    "trend": "up"
+  }
+]
