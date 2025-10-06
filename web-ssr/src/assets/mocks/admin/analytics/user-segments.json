@@ -1,0 +1,52 @@
+[
+  {
+    "id": "power",
+    "name": "Power Users",
+    "description": "> 10 sesiones/mes, alto engagement",
+    "userCount": 2340,
+    "percentage": 5.1,
+    "avgLTV": 485.2,
+    "avgEngagement": 9.5,
+    "color": "#10b981"
+  },
+  {
+    "id": "active",
+    "name": "Usuarios Activos",
+    "description": "3-10 sesiones/mes",
+    "userCount": 12456,
+    "percentage": 27.3,
+    "avgLTV": 298.5,
+    "avgEngagement": 7.8,
+    "color": "#3b82f6"
+  },
+  {
+    "id": "occasional",
+    "name": "Ocasionales",
+    "description": "1-2 sesiones/mes",
+    "userCount": 18567,
+    "percentage": 40.7,
+    "avgLTV": 142.3,
+    "avgEngagement": 5.2,
+    "color": "#f59e0b"
+  },
+  {
+    "id": "at_risk",
+    "name": "En Riesgo",
+    "description": "Sin actividad en 14+ días",
+    "userCount": 8923,
+    "percentage": 19.5,
+    "avgLTV": 85.6,
+    "avgEngagement": 3.1,
+    "color": "#ef4444"
+  },
+  {
+    "id": "churned",
+    "name": "Abandonados",
+    "description": "Sin actividad en 90+ días",
+    "userCount": 3392,
+    "percentage": 7.4,
+    "avgLTV": 32.1,
+    "avgEngagement": 0.5,
+    "color": "#6b7280"
+  }
+]

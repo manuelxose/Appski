@@ -1,0 +1,227 @@
+{
+  "automations": [
+    {
+      "id": "auto-001",
+      "name": "Serie Bienvenida",
+      "type": "welcome",
+      "isActive": true,
+      "trigger": "user_registration",
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "email",
+          "templateId": "tpl-004",
+          "delay": 0,
+          "subject": "¡Bienvenido a Nieve!"
+        },
+        {
+          "id": "step-2",
+          "type": "wait",
+          "duration": 2,
+          "unit": "days"
+        },
+        {
+          "id": "step-3",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "Tu primer forfait con 15% descuento"
+        },
+        {
+          "id": "step-4",
+          "type": "wait",
+          "duration": 5,
+          "unit": "days"
+        },
+        {
+          "id": "step-5",
+          "type": "condition",
+          "field": "hasBooked",
+          "operator": "==",
+          "value": "false"
+        },
+        {
+          "id": "step-6",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "Última oportunidad: 20% en tu primera reserva"
+        }
+      ],
+      "stats": {
+        "triggered": 287,
+        "completed": 189,
+        "conversionRate": 32.8,
+        "totalSteps": 6
+      }
+    },
+    {
+      "id": "auto-002",
+      "name": "Carrito Abandonado",
+      "type": "abandoned_cart",
+      "isActive": true,
+      "trigger": "cart_abandoned_24h",
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "email",
+          "templateId": "tpl-007",
+          "delay": 0,
+          "subject": "Tu forfait te espera 🎿"
+        },
+        {
+          "id": "step-2",
+          "type": "wait",
+          "duration": 12,
+          "unit": "hours"
+        },
+        {
+          "id": "step-3",
+          "type": "condition",
+          "field": "cartStillActive",
+          "operator": "==",
+          "value": "true"
+        },
+        {
+          "id": "step-4",
+          "type": "email",
+          "templateId": "tpl-007",
+          "delay": 0,
+          "subject": "🎁 +10% descuento en tu carrito"
+        }
+      ],
+      "stats": {
+        "triggered": 124,
+        "completed": 67,
+        "conversionRate": 22.6,
+        "totalSteps": 4
+      }
+    },
+    {
+      "id": "auto-003",
+      "name": "Post-Reserva Feedback",
+      "type": "post_booking",
+      "isActive": true,
+      "trigger": "booking_completed_7days",
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "email",
+          "templateId": "tpl-001",
+          "delay": 0,
+          "subject": "¿Cómo fue tu visita?"
+        },
+        {
+          "id": "step-2",
+          "type": "wait",
+          "duration": 3,
+          "unit": "days"
+        },
+        {
+          "id": "step-3",
+          "type": "condition",
+          "field": "hasReviewed",
+          "operator": "==",
+          "value": "false"
+        },
+        {
+          "id": "step-4",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "Comparte tu experiencia y gana 10€"
+        }
+      ],
+      "stats": {
+        "triggered": 412,
+        "completed": 298,
+        "conversionRate": 37.9,
+        "totalSteps": 4
+      }
+    },
+    {
+      "id": "auto-004",
+      "name": "Cumpleaños",
+      "type": "birthday",
+      "isActive": false,
+      "trigger": "user_birthday",
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "🎂 ¡Feliz cumpleaños! Aquí tienes tu regalo"
+        }
+      ],
+      "stats": {
+        "triggered": 0,
+        "completed": 0,
+        "conversionRate": 0,
+        "totalSteps": 1
+      }
+    },
+    {
+      "id": "auto-005",
+      "name": "Reactivación Inactivos",
+      "type": "reengagement",
+      "isActive": true,
+      "trigger": "inactive_90days",
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "Te echamos de menos ❄️"
+        },
+        {
+          "id": "step-2",
+          "type": "wait",
+          "duration": 7,
+          "unit": "days"
+        },
+        {
+          "id": "step-3",
+          "type": "condition",
+          "field": "hasReturned",
+          "operator": "==",
+          "value": "false"
+        },
+        {
+          "id": "step-4",
+          "type": "email",
+          "templateId": "tpl-002",
+          "delay": 0,
+          "subject": "Última oportunidad: 25% descuento especial"
+        },
+        {
+          "id": "step-5",
+          "type": "wait",
+          "duration": 14,
+          "unit": "days"
+        },
+        {
+          "id": "step-6",
+          "type": "condition",
+          "field": "hasReturned",
+          "operator": "==",
+          "value": "false"
+        },
+        {
+          "id": "step-7",
+          "type": "email",
+          "templateId": "tpl-001",
+          "delay": 0,
+          "subject": "Confirmación: ¿Deseas seguir recibiendo emails?"
+        }
+      ],
+      "stats": {
+        "triggered": 156,
+        "completed": 89,
+        "conversionRate": 18.5,
+        "totalSteps": 7
+      }
+    }
+  ]
+}

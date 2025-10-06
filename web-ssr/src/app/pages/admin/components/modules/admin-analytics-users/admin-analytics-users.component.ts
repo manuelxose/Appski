@@ -1,17 +1,6 @@
-import { Component, signal, computed, inject, OnInit } from "@angular/core";
+import { Component, signal, computed, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import {
-  AdminBreadcrumbsComponent,
-  BreadcrumbItem,
-} from "../../shared/admin-breadcrumbs/admin-breadcrumbs.component";
-import { AdminStatCardComponent } from "../../shared/admin-stat-card/admin-stat-card.component";
-import { AdminLoaderComponent } from "../../shared/admin-loader/admin-loader.component";
-import { AdminEmptyStateComponent } from "../../shared/admin-empty-state/admin-empty-state.component";
-import {
-  AdminFiltersComponent,
-  FilterField,
-} from "../../shared/admin-filters/admin-filters.component";
-import { AdminBadgeComponent } from "../../shared/admin-badge/admin-badge.component";
+import { BreadcrumbItem } from "../../shared/admin-breadcrumbs/admin-breadcrumbs.component";
 
 // Interfaces
 interface UserCohort {
@@ -115,15 +104,7 @@ interface UserKPIs {
 @Component({
   selector: "app-admin-analytics-users",
   standalone: true,
-  imports: [
-    CommonModule,
-    AdminBreadcrumbsComponent,
-    AdminStatCardComponent,
-    AdminLoaderComponent,
-    AdminEmptyStateComponent,
-    AdminFiltersComponent,
-    AdminBadgeComponent,
-  ],
+  imports: [CommonModule],
   templateUrl: "./admin-analytics-users.component.html",
   styleUrl: "./admin-analytics-users.component.css",
 })
@@ -182,27 +163,12 @@ export class AdminAnalyticsUsersComponent implements OnInit {
 
   // Breadcrumbs
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: "Dashboard", href: "/admin" },
-    { label: "Analytics", href: "/admin/analytics" },
-    { label: "Usuarios", href: "/admin/analytics/users" },
+    { label: "Dashboard", path: "/admin" },
+    { label: "Analytics", path: "/admin/analytics" },
+    { label: "Usuarios", path: "/admin/analytics/users" },
   ];
 
-  // Filter fields
-  readonly filterFields: FilterField[] = [
-    {
-      key: "segment",
-      label: "Segmento",
-      type: "select",
-      options: [
-        { value: "all", label: "Todos los usuarios" },
-        { value: "new", label: "Nuevos (< 30 días)" },
-        { value: "active", label: "Activos" },
-        { value: "at_risk", label: "En riesgo" },
-        { value: "churned", label: "Abandonados" },
-        { value: "power", label: "Power users" },
-      ],
-    },
-  ];
+  // Filter fields - Custom HTML implementation
 
   // Computed values
   readonly totalUsersFormatted = computed(() =>
@@ -259,234 +225,65 @@ export class AdminAnalyticsUsersComponent implements OnInit {
   }
 
   private async loadKPIs(): Promise<void> {
-    // TODO: Replace with actual API call
-    const mockKPIs: UserKPIs = {
-      totalUsers: 45678,
-      activeUsers: 12456,
-      newUsers: 3421,
-      churnRate: 5.2,
-      retentionRate: 68.5,
-      averageLTV: 245.8,
-      dauMauRatio: 0.42,
-      avgEngagementScore: 7.8,
-    };
-
-    this.kpis.set(mockKPIs);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-kpis.json"
+    );
+    const data: UserKPIs = await response.json();
+    this.kpis.set(data);
   }
 
   private async loadCohorts(): Promise<void> {
-    // TODO: Load from /assets/mocks/admin/analytics/user-cohorts.json
-    const mockCohorts: UserCohort[] = [
-      {
-        cohortMonth: "2024-10",
-        cohortSize: 1250,
-        retention: {
-          month0: 100,
-          month1: 68,
-          month2: 52,
-          month3: 45,
-          month6: 38,
-          month12: 32,
-        },
-      },
-      {
-        cohortMonth: "2024-09",
-        cohortSize: 1180,
-        retention: {
-          month0: 100,
-          month1: 72,
-          month2: 56,
-          month3: 48,
-          month6: 40,
-          month12: 35,
-        },
-      },
-      {
-        cohortMonth: "2024-08",
-        cohortSize: 1320,
-        retention: {
-          month0: 100,
-          month1: 65,
-          month2: 50,
-          month3: 42,
-          month6: 36,
-          month12: 30,
-        },
-      },
-      {
-        cohortMonth: "2024-07",
-        cohortSize: 1420,
-        retention: {
-          month0: 100,
-          month1: 70,
-          month2: 54,
-          month3: 46,
-          month6: 39,
-          month12: 33,
-        },
-      },
-      {
-        cohortMonth: "2024-06",
-        cohortSize: 1560,
-        retention: {
-          month0: 100,
-          month1: 75,
-          month2: 60,
-          month3: 52,
-          month6: 45,
-          month12: 38,
-        },
-      },
-      {
-        cohortMonth: "2024-05",
-        cohortSize: 1280,
-        retention: {
-          month0: 100,
-          month1: 68,
-          month2: 53,
-          month3: 44,
-          month6: 37,
-          month12: 31,
-        },
-      },
-    ];
-
-    this.cohorts.set(mockCohorts);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-cohorts.json"
+    );
+    const data: UserCohort[] = await response.json();
+    this.cohorts.set(data);
   }
 
   private async loadRetentionMetrics(): Promise<void> {
-    const mockRetention: RetentionMetrics = {
-      day7: 72.5,
-      day30: 58.3,
-      day90: 42.1,
-      trend: "up",
-    };
-
-    this.retentionMetrics.set(mockRetention);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-retention.json"
+    );
+    const data: RetentionMetrics = await response.json();
+    this.retentionMetrics.set(data);
   }
 
   private async loadChurnData(): Promise<void> {
-    const mockChurn: ChurnData = {
-      totalChurned: 2380,
-      churnRate: 5.2,
-      churnedThisMonth: 245,
-      predictedChurn: 312,
-      reasons: [
-        { reason: "Precio alto", percentage: 32, count: 762 },
-        { reason: "Falta de uso", percentage: 28, count: 666 },
-        { reason: "Mejor alternativa", percentage: 18, count: 428 },
-        { reason: "Mala experiencia", percentage: 12, count: 286 },
-        { reason: "Otros", percentage: 10, count: 238 },
-      ],
-    };
-
-    this.churnData.set(mockChurn);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-churn.json"
+    );
+    const data: ChurnData = await response.json();
+    this.churnData.set(data);
   }
 
   private async loadLTVMetrics(): Promise<void> {
-    const mockLTV: LTVMetrics = {
-      averageLTV: 245.8,
-      ltv30: 85.2,
-      ltv90: 156.4,
-      ltv365: 245.8,
-      ltvBySegment: [
-        { segment: "Power Users", ltv: 485.2, count: 2340, percentage: 5 },
-        { segment: "Activos", ltv: 298.5, count: 12456, percentage: 27 },
-        { segment: "Ocasionales", ltv: 142.3, count: 18567, percentage: 41 },
-        { segment: "En Riesgo", ltv: 85.6, count: 8923, percentage: 20 },
-        { segment: "Inactivos", ltv: 32.1, count: 3392, percentage: 7 },
-      ],
-    };
-
-    this.ltvMetrics.set(mockLTV);
+    const response = await fetch("/assets/mocks/admin/analytics/user-ltv.json");
+    const data: LTVMetrics = await response.json();
+    this.ltvMetrics.set(data);
   }
 
   private async loadUserSegments(): Promise<void> {
-    const mockSegments: UserSegment[] = [
-      {
-        id: "power",
-        name: "Power Users",
-        description: "> 10 sesiones/mes, alto engagement",
-        userCount: 2340,
-        percentage: 5.1,
-        avgLTV: 485.2,
-        avgEngagement: 9.5,
-        color: "#10b981",
-      },
-      {
-        id: "active",
-        name: "Usuarios Activos",
-        description: "3-10 sesiones/mes",
-        userCount: 12456,
-        percentage: 27.3,
-        avgLTV: 298.5,
-        avgEngagement: 7.8,
-        color: "#3b82f6",
-      },
-      {
-        id: "occasional",
-        name: "Ocasionales",
-        description: "1-2 sesiones/mes",
-        userCount: 18567,
-        percentage: 40.7,
-        avgLTV: 142.3,
-        avgEngagement: 5.2,
-        color: "#f59e0b",
-      },
-      {
-        id: "at_risk",
-        name: "En Riesgo",
-        description: "Sin actividad en 14+ días",
-        userCount: 8923,
-        percentage: 19.5,
-        avgLTV: 85.6,
-        avgEngagement: 3.1,
-        color: "#ef4444",
-      },
-      {
-        id: "churned",
-        name: "Abandonados",
-        description: "Sin actividad en 90+ días",
-        userCount: 3392,
-        percentage: 7.4,
-        avgLTV: 32.1,
-        avgEngagement: 0.5,
-        color: "#6b7280",
-      },
-    ];
-
-    this.userSegments.set(mockSegments);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-segments.json"
+    );
+    const data: UserSegment[] = await response.json();
+    this.userSegments.set(data);
   }
 
   private async loadEngagementMetrics(): Promise<void> {
-    const mockEngagement: EngagementMetrics = {
-      dau: 5234,
-      mau: 12456,
-      dauMauRatio: 0.42,
-      avgSessionDuration: 12.5,
-      avgSessionsPerUser: 4.8,
-      avgTimeOnSite: 35.2,
-    };
-
-    this.engagementMetrics.set(mockEngagement);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-engagement.json"
+    );
+    const data: EngagementMetrics = await response.json();
+    this.engagementMetrics.set(data);
   }
 
   private async loadJourneyData(): Promise<void> {
-    const mockJourney: JourneyStep[] = [
-      { step: "Visitantes", users: 50000, percentage: 100, dropoff: 0 },
-      { step: "Registro", users: 12500, percentage: 25, dropoff: 75 },
-      { step: "Primer Login", users: 10000, percentage: 20, dropoff: 20 },
-      { step: "Exploración", users: 7500, percentage: 15, dropoff: 25 },
-      { step: "Primera Reserva", users: 3750, percentage: 7.5, dropoff: 50 },
-      {
-        step: "Cliente Recurrente",
-        users: 1875,
-        percentage: 3.75,
-        dropoff: 50,
-      },
-    ];
-
-    this.journeySteps.set(mockJourney);
+    const response = await fetch(
+      "/assets/mocks/admin/analytics/user-journey.json"
+    );
+    const data: JourneyStep[] = await response.json();
+    this.journeySteps.set(data);
   }
 
   // Filter handlers

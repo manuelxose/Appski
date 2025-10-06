@@ -18,51 +18,103 @@ export interface KPIDashboard {
 }
 
 export interface GeneralKPIs {
-  totalUsers: MetricWithChange;
-  activeUsers: MetricWithChange;
-  totalBookings: MetricWithChange;
-  revenue: MetricWithChange;
-  conversion: MetricWithChange;
-  traffic: MetricWithChange;
+  totalUsers: number;
+  activeUsers: number;
+  totalBookings: number;
+  totalRevenue: number;
+  conversionRate: number;
+  averageTicket: number;
+  trends: {
+    users: number;
+    bookings: number;
+    revenue: number;
+    conversion: number;
+  };
 }
 
 export interface FinancialKPIs {
-  mrr: MetricWithChange; // Monthly Recurring Revenue
-  arr: MetricWithChange; // Annual Recurring Revenue
-  arpu: MetricWithChange; // Average Revenue Per User
-  ltv: MetricWithChange; // Lifetime Value
-  cac: MetricWithChange; // Customer Acquisition Cost
-  ltvCacRatio: MetricWithChange;
-  churnRate: MetricWithChange;
-  grossMargin: MetricWithChange;
-  netMargin: MetricWithChange;
+  totalPayments: number;
+  pendingPayments: number;
+  refundedAmount: number;
+  netRevenue: number;
+  commissionRate: number;
+  totalCommissions: number;
+  monthlyRevenue: number;
+  yearlyRevenue: number;
+  trends: {
+    payments: number;
+    refunds: number;
+    revenue: number;
+    commissions: number;
+  };
 }
 
 export interface UserKPIs {
-  newUsers: MetricWithChange;
-  activeDAU: MetricWithChange; // Daily Active Users
-  activeMAU: MetricWithChange; // Monthly Active Users
-  retention: MetricWithChange;
-  conversionToPremium: MetricWithChange;
-  engagementScore: MetricWithChange;
+  totalUsers: number;
+  activeUsers: number;
+  inactiveUsers: number;
+  newUsersThisMonth: number;
+  newUsersToday: number;
+  usersByRole: {
+    admin: number;
+    manager: number;
+    user: number;
+  };
+  usersByStatus: {
+    active: number;
+    inactive: number;
+    suspended: number;
+  };
+  trends: {
+    total: number;
+    active: number;
+    new: number;
+  };
 }
 
 export interface BookingKPIs {
-  totalBookings: MetricWithChange;
-  conversionRate: MetricWithChange;
-  confirmationRate: MetricWithChange;
-  cancellationRate: MetricWithChange;
-  averageBookingValue: MetricWithChange;
-  leadTime: MetricWithChange; // Tiempo promedio de anticipación
+  totalBookings: number;
+  confirmedBookings: number;
+  pendingBookings: number;
+  cancelledBookings: number;
+  completedBookings: number;
+  averageBookingValue: number;
+  bookingsByService: {
+    skipass: number;
+    class: number;
+    equipment: number;
+    package: number;
+  };
+  bookingsByStatus: {
+    pending: number;
+    confirmed: number;
+    cancelled: number;
+    completed: number;
+  };
+  trends: {
+    total: number;
+    confirmed: number;
+    cancelled: number;
+    revenue: number;
+  };
 }
 
 export interface MarketingKPIs {
-  organicTraffic: MetricWithChange;
-  paidTraffic: MetricWithChange;
-  emailOpenRate: MetricWithChange;
-  emailClickRate: MetricWithChange;
-  socialEngagement: MetricWithChange;
-  adROAS: MetricWithChange; // Return on Ad Spend
+  impressions: number;
+  clicks: number;
+  ctr: number; // Click-through rate
+  conversions: number;
+  conversionRate: number;
+  cpa: number; // Cost per acquisition
+  roi: number; // Return on investment
+  adSpend: number;
+  revenue: number;
+  trends: {
+    impressions: number;
+    ctr: number;
+    conversions: number;
+    roi: number;
+  };
 }
 
 export interface MetricWithChange {

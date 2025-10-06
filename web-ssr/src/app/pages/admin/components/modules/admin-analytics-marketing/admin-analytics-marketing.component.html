@@ -1,0 +1,214 @@
+<!-- HEADER - Reutiliza estructura de B4/B5 -->
+<div class="page-header">
+  <div class="header-content">
+    <nav class="breadcrumbs">
+      <a href="/admin">Admin</a>
+      <span class="separator">/</span>
+      <a href="/admin/analytics">Analytics</a>
+      <span class="separator">/</span>
+      <span class="current">Marketing</span>
+    </nav>
+
+    <div class="header-title-section">
+      <h1 class="page-title">Analítica de Marketing</h1>
+      <p class="page-description">Tráfico, conversión, CAC y ROI por canal</p>
+    </div>
+
+    <div class="header-actions">
+      <button
+        class="btn-secondary"
+        (click)="refreshData()"
+        [disabled]="isLoading()"
+      >
+        <span class="material-icons">refresh</span><span>Actualizar</span>
+      </button>
+      <button class="btn-secondary" (click)="exportMarketingAnalytics('excel')">
+        <span class="material-icons">download</span><span>Exportar</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Periodo</label>
+      <div class="filter-tabs">
+        <button
+          [class.active]="timeRange() === '7d'"
+          (click)="setTimeRange('7d')"
+        >
+          7d
+        </button>
+        <button
+          [class.active]="timeRange() === '30d'"
+          (click)="setTimeRange('30d')"
+        >
+          30d
+        </button>
+        <button
+          [class.active]="timeRange() === '90d'"
+          (click)="setTimeRange('90d')"
+        >
+          90d
+        </button>
+        <button
+          [class.active]="timeRange() === '1y'"
+          (click)="setTimeRange('1y')"
+        >
+          1y
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@if (isLoading()) {
+<div class="loading-state">
+  <div class="spinner"></div>
+  <p>Cargando...</p>
+</div>
+} @if (error()) {
+<div class="error-state">
+  <span class="material-icons">error_outline</span>
+  <h3>{{ error() }}</h3>
+  <button class="btn-primary" (click)="refreshData()">Reintentar</button>
+</div>
+} @if (!isLoading() && !error()) {
+<div class="analytics-container">
+  <!-- STATS -->
+  <div class="overview-stats">
+    <div class="stat-card stat-primary">
+      <div class="stat-icon">
+        <span class="material-icons">visibility</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Sesiones Totales</div>
+        <div class="stat-value">{{ formatNumber(totalSessions()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-info">
+      <div class="stat-icon"><span class="material-icons">people</span></div>
+      <div class="stat-content">
+        <div class="stat-label">Usuarios Únicos</div>
+        <div class="stat-value">{{ formatNumber(totalUsers()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-success">
+      <div class="stat-icon"><span class="material-icons">euro</span></div>
+      <div class="stat-content">
+        <div class="stat-label">Revenue Total</div>
+        <div class="stat-value">{{ formatCurrency(totalRevenue()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-warning">
+      <div class="stat-icon"><span class="material-icons">paid</span></div>
+      <div class="stat-content">
+        <div class="stat-label">Inversión Total</div>
+        <div class="stat-value">{{ formatCurrency(totalSpend()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card" [class]="getROIClass(overallROI())">
+      <div class="stat-icon">
+        <span class="material-icons">trending_up</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">ROI General</div>
+        <div class="stat-value">{{ formatPercent(overallROI(), true) }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAFFIC SOURCES -->
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Fuentes de Tráfico</h2>
+    </div>
+
+    <div class="sources-grid">
+      @for (source of trafficSources(); track source.source) {
+      <div class="source-card" [style.border-left-color]="source.color">
+        <div class="source-header">
+          <span class="material-icons">{{ getSourceIcon(source.source) }}</span>
+          <h3>{{ source.label }}</h3>
+        </div>
+        <div class="source-metrics">
+          <div class="metric">
+            <span class="metric-label">Sesiones</span>
+            <span class="metric-value">{{
+              formatNumber(source.sessions)
+            }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Conversiones</span>
+            <span class="metric-value">{{
+              formatNumber(source.conversions)
+            }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Tasa Conversión</span>
+            <span class="metric-value">{{
+              formatPercent(source.conversionRate, false)
+            }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Revenue</span>
+            <span class="metric-value">{{
+              formatCurrency(source.revenue)
+            }}</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- CAMPAIGNS -->
+  @if (campaigns().length > 0) {
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Campañas Activas</h2>
+    </div>
+
+    <div class="table-responsive">
+      <table class="campaigns-table">
+        <thead>
+          <tr>
+            <th>Campaña</th>
+            <th>Canal</th>
+            <th>Estado</th>
+            <th>Presupuesto</th>
+            <th>Gastado</th>
+            <th>Conversiones</th>
+            <th>Revenue</th>
+            <th>ROI</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (campaign of campaigns(); track campaign.id) {
+          <tr>
+            <td>{{ campaign.name }}</td>
+            <td>{{ campaign.channel }}</td>
+            <td>
+              <span [class]="getCampaignStatusClass(campaign.status)">{{
+                getCampaignStatusLabel(campaign.status)
+              }}</span>
+            </td>
+            <td>{{ formatCurrency(campaign.budget) }}</td>
+            <td>{{ formatCurrency(campaign.spend) }}</td>
+            <td>{{ formatNumber(campaign.conversions) }}</td>
+            <td>{{ formatCurrency(campaign.revenue) }}</td>
+            <td [class]="getROIClass(campaign.roi)">
+              {{ formatPercent(campaign.roi, true) }}
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+  }
+</div>
+}

@@ -1,0 +1,13 @@
+{
+  "totalChurned": 2380,
+  "churnRate": 5.2,
+  "churnedThisMonth": 245,
+  "predictedChurn": 312,
+  "reasons": [
+    { "reason": "Precio alto", "percentage": 32, "count": 762 },
+    { "reason": "Falta de uso", "percentage": 28, "count": 666 },
+    { "reason": "Mejor alternativa", "percentage": 18, "count": 428 },
+    { "reason": "Mala experiencia", "percentage": 12, "count": 286 },
+    { "reason": "Otros", "percentage": 10, "count": 238 }
+  ]
+}

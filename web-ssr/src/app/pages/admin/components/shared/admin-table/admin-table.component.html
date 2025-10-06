@@ -78,7 +78,7 @@
           <!-- Data cells -->
           @for (column of columns(); track column.key) {
           <td [style.text-align]="column.align || 'left'">
-            {{ formatCell(row[column.key], column.format) }}
+            {{ formatCell($any(row)[column.key], column.format) }}
           </td>
           }
 

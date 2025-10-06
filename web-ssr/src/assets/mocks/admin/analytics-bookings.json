@@ -1,0 +1,136 @@
+{
+  "typeDistribution": [
+    {
+      "type": "forfait",
+      "label": "Forfaits",
+      "count": 3850,
+      "revenue": 1248500,
+      "percentage": 42.5,
+      "avgValue": 324.29,
+      "color": "#7C3AED"
+    },
+    {
+      "type": "alojamiento",
+      "label": "Alojamientos",
+      "count": 2140,
+      "revenue": 856000,
+      "percentage": 23.6,
+      "avgValue": 400.0,
+      "color": "#2563EB"
+    },
+    {
+      "type": "alquiler",
+      "label": "Alquiler de Equipos",
+      "count": 1680,
+      "revenue": 235200,
+      "percentage": 18.5,
+      "avgValue": 140.0,
+      "color": "#10B981"
+    },
+    {
+      "type": "clases",
+      "label": "Clases de Esquí",
+      "count": 890,
+      "revenue": 133500,
+      "percentage": 9.8,
+      "avgValue": 150.0,
+      "color": "#F59E0B"
+    },
+    {
+      "type": "paquete",
+      "label": "Paquetes Completos",
+      "count": 510,
+      "revenue": 382500,
+      "percentage": 5.6,
+      "avgValue": 750.0,
+      "color": "#EF4444"
+    }
+  ],
+  "statusDistribution": [
+    {
+      "status": "confirmed",
+      "count": 6240,
+      "percentage": 68.9
+    },
+    {
+      "status": "pending",
+      "count": 1580,
+      "percentage": 17.4
+    },
+    {
+      "status": "completed",
+      "count": 950,
+      "percentage": 10.5
+    },
+    {
+      "status": "cancelled",
+      "count": 290,
+      "percentage": 3.2
+    }
+  ],
+  "demandForecast": [
+    {
+      "date": "2025-10-15",
+      "predictedBookings": 285,
+      "confidence": 87.5
+    },
+    {
+      "date": "2025-10-22",
+      "predictedBookings": 312,
+      "confidence": 84.2
+    },
+    {
+      "date": "2025-10-29",
+      "predictedBookings": 340,
+      "confidence": 81.8
+    },
+    {
+      "date": "2025-11-05",
+      "predictedBookings": 420,
+      "confidence": 79.3
+    },
+    {
+      "date": "2025-11-12",
+      "predictedBookings": 580,
+      "confidence": 76.5
+    }
+  ],
+  "priceElasticity": {
+    "priceChange": -10.0,
+    "demandChange": 15.3,
+    "elasticity": -1.53,
+    "optimalPrice": 295.0
+  },
+  "leadTimeDistribution": [
+    {
+      "range": "0-7 días",
+      "bookings": 1240,
+      "percentage": 13.7,
+      "avgValue": 280.5
+    },
+    {
+      "range": "8-30 días",
+      "bookings": 3450,
+      "percentage": 38.1,
+      "avgValue": 325.75
+    },
+    {
+      "range": "31-60 días",
+      "bookings": 2890,
+      "percentage": 31.9,
+      "avgValue": 342.2
+    },
+    {
+      "range": "61-90 días",
+      "bookings": 980,
+      "percentage": 10.8,
+      "avgValue": 368.9
+    },
+    {
+      "range": "+90 días",
+      "bookings": 510,
+      "percentage": 5.6,
+      "avgValue": 405.5
+    }
+  ]
+}

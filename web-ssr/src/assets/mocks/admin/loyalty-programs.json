@@ -1,0 +1,81 @@
+{
+  "programs": [
+    {
+      "id": "tier-001",
+      "name": "Nivel Bronce",
+      "tier": "bronze",
+      "minPoints": 0,
+      "maxPoints": 999,
+      "benefits": [
+        "5% descuento en forfaits",
+        "Prioridad baja en reservas",
+        "Newsletter mensual exclusiva",
+        "Acceso a eventos especiales"
+      ],
+      "discountPercentage": 5,
+      "currentMembers": 584,
+      "rewardsGiven": 127,
+      "isActive": true
+    },
+    {
+      "id": "tier-002",
+      "name": "Nivel Plata",
+      "tier": "silver",
+      "minPoints": 1000,
+      "maxPoints": 2499,
+      "benefits": [
+        "10% descuento en forfaits",
+        "Prioridad media en reservas",
+        "Early access a ofertas flash",
+        "1 invitación amigo con 15% descuento",
+        "Upgrade gratis en alojamiento (sujeto a disponibilidad)"
+      ],
+      "discountPercentage": 10,
+      "currentMembers": 412,
+      "rewardsGiven": 289,
+      "isActive": true
+    },
+    {
+      "id": "tier-003",
+      "name": "Nivel Oro",
+      "tier": "gold",
+      "minPoints": 2500,
+      "maxPoints": 4999,
+      "benefits": [
+        "15% descuento en forfaits",
+        "Prioridad alta en reservas",
+        "Acceso spa gratuito (2 usos por temporada)",
+        "2 invitaciones amigos con 20% descuento",
+        "Late check-out gratis",
+        "Servicio de conserjería personalizado",
+        "Acceso a zona VIP en cafeterías"
+      ],
+      "discountPercentage": 15,
+      "currentMembers": 298,
+      "rewardsGiven": 456,
+      "isActive": true
+    },
+    {
+      "id": "tier-004",
+      "name": "Nivel Platino",
+      "tier": "platinum",
+      "minPoints": 5000,
+      "benefits": [
+        "20% descuento en forfaits",
+        "Reservas garantizadas incluso en temporada alta",
+        "Forfait de 1 día gratis por temporada",
+        "Acceso ilimitado spa y circuito termal",
+        "Parking VIP gratuito",
+        "5 invitaciones amigos con 25% descuento",
+        "Experiencia exclusiva: Heliesquí o cena en refugio",
+        "Gestor de cuenta personal",
+        "Upgrade automático a suite",
+        "Acceso salón VIP exclusivo"
+      ],
+      "discountPercentage": 20,
+      "currentMembers": 162,
+      "rewardsGiven": 892,
+      "isActive": true
+    }
+  ]
+}

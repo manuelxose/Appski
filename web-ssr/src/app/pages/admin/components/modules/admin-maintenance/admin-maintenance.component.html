@@ -1,0 +1,373 @@
+<div class="admin-page">
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1 class="admin-title">🔧 Gestión de Mantenimiento</h1>
+      <p class="admin-subtitle">
+        Control de equipos, órdenes de trabajo y programación de mantenimientos
+      </p>
+    </div>
+    <div class="admin-header-actions">
+      <button class="btn-secondary" (click)="generateMaintenanceReport()">
+        📊 Generar Informe
+      </button>
+      <button class="btn-secondary" (click)="exportMaintenanceData()">
+        📥 Exportar Datos
+      </button>
+      <button class="btn-primary" (click)="createWorkOrder()">
+        ➕ Nueva Orden de Trabajo
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <app-admin-stat-card
+      label="Total Equipos"
+      [value]="totalAssets()"
+      icon="⚙️"
+      trend="neutral"
+    />
+    <app-admin-stat-card
+      label="Equipos Operativos"
+      [value]="operationalAssets()"
+      icon="✅"
+      trend="up"
+    />
+    <app-admin-stat-card
+      label="Órdenes Activas"
+      [value]="activeWorkOrders()"
+      icon="🔧"
+      [trend]="activeWorkOrders() > 10 ? 'down' : 'neutral'"
+    />
+    <app-admin-stat-card
+      label="Mantenimientos Atrasados"
+      [value]="overdueSchedules()"
+      icon="⚠️"
+      [trend]="overdueSchedules() > 0 ? 'down' : 'neutral'"
+    />
+  </div>
+
+  <!-- Urgent Work Orders Alert -->
+  @if (urgentWorkOrders().length > 0) {
+  <div class="alert alert-danger mb-6">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-content">
+      <h3 class="alert-title">Órdenes de Trabajo Urgentes</h3>
+      <p class="alert-message">
+        Hay {{ urgentWorkOrders().length }} órdenes de trabajo urgentes que
+        requieren atención inmediata.
+      </p>
+    </div>
+    <button
+      class="btn-secondary btn-sm"
+      (click)="selectedPriority.set('urgent')"
+    >
+      Ver Órdenes
+    </button>
+  </div>
+  }
+
+  <!-- Filters -->
+  <div class="card mb-6">
+    <div class="card-body">
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="status-filter">Estado</label>
+          <select
+            id="status-filter"
+            class="filter-select"
+            [value]="selectedStatus()"
+            (change)="selectedStatus.set($any($event.target).value)"
+          >
+            <option value="all">Todos los estados</option>
+            <option value="pending">Pendiente</option>
+            <option value="in-progress">En Progreso</option>
+            <option value="completed">Completado</option>
+            <option value="cancelled">Cancelado</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="priority-filter">Prioridad</label>
+          <select
+            id="priority-filter"
+            class="filter-select"
+            [value]="selectedPriority()"
+            (change)="selectedPriority.set($any($event.target).value)"
+          >
+            <option value="all">Todas las prioridades</option>
+            <option value="urgent">🚨 Urgente</option>
+            <option value="high">⚠️ Alta</option>
+            <option value="medium">📋 Media</option>
+            <option value="low">📝 Baja</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="search-filter">Buscar</label>
+          <input
+            id="search-filter"
+            type="text"
+            class="filter-input"
+            placeholder="Título, equipo, técnico..."
+            [value]="searchTerm()"
+            (input)="searchTerm.set($any($event.target).value)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Orders Table -->
+  <div class="card mb-6">
+    <div class="card-header">
+      <h2 class="card-title">
+        🔧 Órdenes de Trabajo ({{ filteredWorkOrders().length }})
+      </h2>
+    </div>
+    <div class="card-body p-0">
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Equipo</th>
+              <th>Tipo</th>
+              <th>Prioridad</th>
+              <th>Estado</th>
+              <th>Asignado a</th>
+              <th>Programado</th>
+              <th>Coste Est.</th>
+              <th class="actions-column">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (wo of filteredWorkOrders(); track wo.id) {
+            <tr>
+              <td>
+                <code class="wo-id">{{ wo.id }}</code>
+              </td>
+              <td>
+                <div class="wo-title">{{ wo.title }}</div>
+                @if (wo.description) {
+                <div class="wo-description">{{ wo.description }}</div>
+                }
+              </td>
+              <td>
+                <div class="asset-info">
+                  <span class="asset-icon">{{
+                    getAssetTypeIcon(
+                      wo.assetName.includes("Telesilla")
+                        ? "chairlift"
+                        : wo.assetName.includes("Cañón")
+                        ? "snowgun"
+                        : "groomer"
+                    )
+                  }}</span>
+                  <span>{{ wo.assetName }}</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge bg-blue-50 border-blue-200 text-blue-700">
+                  {{ getWorkOrderTypeIcon(wo.type) }}
+                  {{ getWorkOrderTypeLabel(wo.type) }}
+                </span>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="getPriorityClass(wo.priority)">
+                  {{ getPriorityLabel(wo.priority) }}
+                </span>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="getStatusClass(wo.status)">
+                  {{ getStatusLabel(wo.status) }}
+                </span>
+              </td>
+              <td>{{ wo.assignedTo }}</td>
+              <td>
+                <div class="date-info">
+                  <div>{{ formatDate(wo.scheduledDate) }}</div>
+                  @if (wo.status !== 'completed' && wo.status !== 'cancelled') {
+                  <div class="days-until">
+                    @if (getDaysUntil(wo.scheduledDate) < 0) {
+                    <span class="text-red-600"
+                      >{{ -getDaysUntil(wo.scheduledDate) }} días atrasado</span
+                    >
+                    } @else if (getDaysUntil(wo.scheduledDate) === 0) {
+                    <span class="text-orange-600">Hoy</span>
+                    } @else {
+                    <span class="text-gray-600"
+                      >en {{ getDaysUntil(wo.scheduledDate) }} días</span
+                    >
+                    }
+                  </div>
+                  }
+                </div>
+              </td>
+              <td>
+                <div class="cost-info">
+                  <div>{{ formatCurrency(wo.estimatedCost) }}</div>
+                  @if (wo.actualCost && wo.status === 'completed') {
+                  <div class="actual-cost">
+                    Real: {{ formatCurrency(wo.actualCost) }}
+                  </div>
+                  }
+                </div>
+              </td>
+              <td class="actions-column">
+                @if (wo.status === 'in-progress') {
+                <button
+                  class="btn-icon"
+                  (click)="completeWorkOrder(wo.id)"
+                  title="Completar"
+                >
+                  ✅
+                </button>
+                }
+                <button
+                  class="btn-icon"
+                  (click)="editWorkOrder(wo.id)"
+                  title="Editar"
+                >
+                  ✏️
+                </button>
+              </td>
+            </tr>
+            } @empty {
+            <tr>
+              <td colspan="10" class="empty-state">
+                No se encontraron órdenes de trabajo con los filtros
+                seleccionados
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Grid: Assets + Upcoming Schedules -->
+  <div class="bottom-grid">
+    <!-- Assets by Type -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">⚙️ Equipos por Tipo</h2>
+        <select
+          class="filter-select-sm"
+          [value]="selectedAssetType()"
+          (change)="selectedAssetType.set($any($event.target).value)"
+        >
+          <option value="all">Todos</option>
+          <option value="chairlift">🚡 Telesillas</option>
+          <option value="snowgun">❄️ Cañones</option>
+          <option value="groomer">🚜 Pisapistas</option>
+          <option value="building">🏢 Edificios</option>
+          <option value="infrastructure">🏗️ Infraestructura</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="assets-list">
+          @for (asset of filteredAssets(); track asset.id) {
+          <div class="asset-card">
+            <div class="asset-header">
+              <span class="asset-type-icon">{{
+                getAssetTypeIcon(asset.type)
+              }}</span>
+              <div class="asset-details">
+                <div class="asset-name">{{ asset.name }}</div>
+                <div class="asset-category">{{ asset.category }}</div>
+              </div>
+              <span class="badge" [ngClass]="getStatusClass(asset.status)">
+                {{ getStatusLabel(asset.status) }}
+              </span>
+            </div>
+            <div class="asset-stats">
+              <div class="stat">
+                <span class="stat-label">Último mant.:</span>
+                <span class="stat-value">{{
+                  formatDate(asset.lastMaintenanceDate)
+                }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Próximo:</span>
+                <span class="stat-value">{{
+                  formatDate(asset.nextMaintenanceDate)
+                }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">MTBF:</span>
+                <span class="stat-value">{{ asset.mtbf }} días</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Coste total:</span>
+                <span class="stat-value">{{
+                  formatCurrency(asset.totalMaintenanceCost)
+                }}</span>
+              </div>
+            </div>
+            <button
+              class="btn-link btn-sm"
+              (click)="viewAssetHistory(asset.id)"
+            >
+              📊 Ver Historial
+            </button>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Schedules -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📅 Próximos Mantenimientos Programados</h2>
+      </div>
+      <div class="card-body">
+        <div class="schedules-list">
+          @for (schedule of upcomingSchedules(); track schedule.id) {
+          <div
+            class="schedule-item"
+            [ngClass]="{ 'schedule-overdue': schedule.status === 'overdue' }"
+          >
+            <div class="schedule-header">
+              <span
+                class="badge"
+                [ngClass]="
+                  schedule.status === 'overdue'
+                    ? 'bg-red-50 border-red-300 text-red-700'
+                    : 'bg-yellow-50 border-yellow-200 text-yellow-700'
+                "
+              >
+                {{ getStatusLabel(schedule.status) }}
+              </span>
+              <span class="schedule-date">{{
+                formatDate(schedule.nextDue)
+              }}</span>
+            </div>
+            <div class="schedule-task">{{ schedule.taskName }}</div>
+            <div class="schedule-asset">{{ schedule.assetName }}</div>
+            <div class="schedule-meta">
+              <span>Asignado: {{ schedule.assignedTo }}</span>
+              <span>Duración: {{ schedule.estimatedDuration }}h</span>
+              <span>
+                @if (schedule.status === 'overdue') {
+                <span class="text-red-600"
+                  >{{ -getDaysUntil(schedule.nextDue) }} días atrasado</span
+                >
+                } @else {
+                <span class="text-gray-600"
+                  >en {{ getDaysUntil(schedule.nextDue) }} días</span
+                >
+                }
+              </span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

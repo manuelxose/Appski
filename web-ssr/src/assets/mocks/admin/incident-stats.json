@@ -1,0 +1,42 @@
+[
+  {
+    "category": "accident",
+    "totalIncidents": 2,
+    "criticalIncidents": 0,
+    "averageResolutionTime": 32.5,
+    "resolved": 2,
+    "open": 0
+  },
+  {
+    "category": "equipment-failure",
+    "totalIncidents": 3,
+    "criticalIncidents": 1,
+    "averageResolutionTime": 205.0,
+    "resolved": 2,
+    "open": 1
+  },
+  {
+    "category": "safety",
+    "totalIncidents": 2,
+    "criticalIncidents": 0,
+    "averageResolutionTime": 52.5,
+    "resolved": 2,
+    "open": 0
+  },
+  {
+    "category": "weather",
+    "totalIncidents": 1,
+    "criticalIncidents": 0,
+    "averageResolutionTime": 270.0,
+    "resolved": 1,
+    "open": 0
+  },
+  {
+    "category": "infrastructure",
+    "totalIncidents": 2,
+    "criticalIncidents": 0,
+    "averageResolutionTime": 262.5,
+    "resolved": 2,
+    "open": 0
+  }
+]

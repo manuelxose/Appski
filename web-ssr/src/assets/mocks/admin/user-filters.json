@@ -1,0 +1,20 @@
+{
+  "timeRanges": [
+    { "id": "7d", "label": "7 días", "days": 7 },
+    { "id": "30d", "label": "30 días", "days": 30 },
+    { "id": "90d", "label": "90 días", "days": 90 },
+    { "id": "all", "label": "Todo el tiempo", "days": null }
+  ],
+  "segmentTypes": [
+    { "id": "all", "label": "Todos los segmentos" },
+    { "id": "value", "label": "Por valor" },
+    { "id": "behavior", "label": "Por comportamiento" },
+    { "id": "demographics", "label": "Por demografía" },
+    { "id": "lifecycle", "label": "Por ciclo de vida" }
+  ],
+  "comparisonPeriods": [
+    { "id": "mom", "label": "Mes anterior" },
+    { "id": "yoy", "label": "Año anterior" },
+    { "id": "custom", "label": "Período personalizado" }
+  ]
+}

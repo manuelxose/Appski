@@ -1,0 +1,196 @@
+/* Admin Incidents Specific Styles */
+@import url("../admin-analytics-stations/admin-analytics-stations.component.css");
+
+/* Incident ID */
+.incident-id {
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  color: var(--neutral-700);
+}
+
+/* Incident Title */
+.incident-title {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+.incident-description {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Critical Incident Row */
+.incident-critical {
+  background: var(--red-50) !important;
+  border-left: 4px solid var(--red-500);
+}
+.incident-critical:hover {
+  background: var(--red-100) !important;
+}
+
+/* Date Info */
+.date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.time-since {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+
+/* Resolution Time */
+.resolution-time {
+  font-weight: 600;
+  color: var(--green-600);
+}
+
+/* Alert Critical */
+.alert-critical {
+  background: var(--red-50);
+  border-color: var(--red-200);
+  animation: pulse-critical 2s ease-in-out infinite;
+}
+@keyframes pulse-critical {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Stats List */
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.stat-category-card {
+  padding: 1rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.stat-category-card:hover {
+  background: var(--neutral-100);
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.category-icon {
+  font-size: 2rem;
+}
+.category-info {
+  flex: 1;
+}
+.category-name {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+.category-total {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-top: 0.125rem;
+}
+
+.stat-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+}
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+.metric-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.metric-card:hover {
+  background: var(--neutral-100);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+}
+.metric-icon {
+  font-size: 2rem;
+}
+.metric-content {
+  flex: 1;
+}
+.metric-content .metric-label {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+  margin-bottom: 0.25rem;
+}
+.metric-content .metric-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+/* Bottom Grid */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-metrics {
+    grid-template-columns: 1fr;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,6 @@
 /* Admin Sidebar - Modern Design System */
 
+/* Sidebar principal */
 .admin-sidebar {
   position: fixed;
   left: 0;
@@ -8,11 +9,42 @@
   width: var(--sidebar-width);
   background: white;
   border-right: 1px solid var(--neutral-200);
-  display: flex;
-  flex-direction: column;
-  transition: width var(--transition-slow);
   z-index: var(--z-sticky);
   box-shadow: var(--shadow-sm);
+}
+.sidebar-nav {
+  flex: 1;
+  padding: var(--space-4) 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Group Title */
+.nav-group-title {
+  padding: var(--space-4) var(--space-4) var(--space-2) var(--space-4);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-500);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-top: var(--space-4);
+}
+
+.nav-group-title:first-child {
+  margin-top: 0;
+}
+
+/* Nav Items */
+/* Nav Items */
+.nav-item {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: background var(--transition-base);
 }
 
 .admin-sidebar.collapsed {

@@ -1,0 +1,50 @@
+[
+  {
+    "segment": "Usuarios Premium",
+    "avgLTV": 1250.0,
+    "avgRevenue": 1450.0,
+    "avgLifespan": 24,
+    "acquisitionCost": 180.0,
+    "ltvcac": 6.9
+  },
+  {
+    "segment": "Power Users",
+    "avgLTV": 850.0,
+    "avgRevenue": 980.0,
+    "avgLifespan": 18,
+    "acquisitionCost": 150.0,
+    "ltvcac": 5.7
+  },
+  {
+    "segment": "Usuarios Regulares",
+    "avgLTV": 420.0,
+    "avgRevenue": 485.0,
+    "avgLifespan": 12,
+    "acquisitionCost": 120.0,
+    "ltvcac": 3.5
+  },
+  {
+    "segment": "Usuarios Ocasionales",
+    "avgLTV": 180.0,
+    "avgRevenue": 205.0,
+    "avgLifespan": 8,
+    "acquisitionCost": 100.0,
+    "ltvcac": 1.8
+  },
+  {
+    "segment": "Usuarios de Prueba",
+    "avgLTV": 45.0,
+    "avgRevenue": 52.0,
+    "avgLifespan": 3,
+    "acquisitionCost": 80.0,
+    "ltvcac": 0.6
+  },
+  {
+    "segment": "Usuarios Inactivos",
+    "avgLTV": 12.0,
+    "avgRevenue": 14.0,
+    "avgLifespan": 1,
+    "acquisitionCost": 60.0,
+    "ltvcac": 0.2
+  }
+]

@@ -23,13 +23,7 @@ import { AdminModalComponent } from "../../shared/admin-modal/admin-modal.compon
 import { AdminConfirmDialogComponent } from "../../shared/admin-confirm-dialog/admin-confirm-dialog.component";
 import { AdminLoaderComponent } from "../../shared/admin-loader/admin-loader.component";
 import { AdminEmptyStateComponent } from "../../shared/admin-empty-state/admin-empty-state.component";
-import {
-  Lodging,
-  LodgingOwner,
-  LodgingStats,
-  Room,
-  LodgingFormData,
-} from "./admin-lodgings.models";
+import { Lodging, LodgingFormData } from "./admin-lodgings.models";
 
 @Component({
   selector: "app-admin-lodgings",
@@ -201,21 +195,44 @@ export class AdminLodgingsComponent implements OnInit {
   ];
 
   readonly tableActions: TableAction[] = [
-    { id: "edit", label: "Editar", icon: "edit", variant: "primary" },
-    { id: "rooms", label: "Habitaciones", icon: "bed", variant: "secondary" },
     {
-      id: "calendar",
+      label: "Editar",
+      icon: "edit",
+      variant: "primary",
+      handler: () => {
+        /* TODO */
+      },
+    },
+    {
+      label: "Habitaciones",
+      icon: "bed",
+      variant: "secondary",
+      handler: () => {
+        /* TODO */
+      },
+    },
+    {
       label: "Calendario",
       icon: "calendar",
       variant: "secondary",
+      handler: () => {
+        /* TODO */
+      },
     },
-    { id: "delete", label: "Eliminar", icon: "delete", variant: "danger" },
+    {
+      label: "Eliminar",
+      icon: "delete",
+      variant: "danger",
+      handler: () => {
+        /* TODO */
+      },
+    },
   ];
 
   // Filter fields
   readonly filterFields: FilterField[] = [
     {
-      id: "type",
+      key: "type",
       label: "Tipo",
       type: "select",
       options: [
@@ -227,7 +244,7 @@ export class AdminLodgingsComponent implements OnInit {
       ],
     },
     {
-      id: "station",
+      key: "station",
       label: "Estación",
       type: "select",
       options: [
@@ -238,7 +255,7 @@ export class AdminLodgingsComponent implements OnInit {
       ],
     },
     {
-      id: "status",
+      key: "status",
       label: "Estado",
       type: "select",
       options: [

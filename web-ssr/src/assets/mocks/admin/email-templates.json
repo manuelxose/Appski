@@ -1,0 +1,84 @@
+{
+  "templates": [
+    {
+      "id": "tpl-001",
+      "name": "Newsletter Básico",
+      "category": "newsletter",
+      "description": "Template limpio para envíos semanales de noticias",
+      "thumbnail": "📰",
+      "timesUsed": 24,
+      "lastUsed": "2025-12-02T08:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-002",
+      "name": "Promoción Flash",
+      "category": "promotional",
+      "description": "Diseño llamativo para ofertas por tiempo limitado",
+      "thumbnail": "⚡",
+      "timesUsed": 18,
+      "lastUsed": "2025-11-28T10:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-003",
+      "name": "Confirmación Reserva",
+      "category": "transactional",
+      "description": "Email automático de confirmación de pedido",
+      "thumbnail": "✅",
+      "timesUsed": 1894,
+      "lastUsed": "2025-12-02T18:45:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-004",
+      "name": "Bienvenida",
+      "category": "automated",
+      "description": "Email de bienvenida para nuevos usuarios",
+      "thumbnail": "👋",
+      "timesUsed": 287,
+      "lastUsed": "2025-12-01T09:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-005",
+      "name": "Navidad 2025",
+      "category": "seasonal",
+      "description": "Diseño especial temática navideña",
+      "thumbnail": "🎄",
+      "timesUsed": 0,
+      "lastUsed": null,
+      "isActive": true
+    },
+    {
+      "id": "tpl-006",
+      "name": "Alerta Meteorológica",
+      "category": "newsletter",
+      "description": "Avisos urgentes de condiciones climáticas",
+      "thumbnail": "⚠️",
+      "timesUsed": 12,
+      "lastUsed": "2025-11-25T07:30:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-007",
+      "name": "Carrito Abandonado",
+      "category": "automated",
+      "description": "Recordatorio con incentivo para finalizar compra",
+      "thumbnail": "🛒",
+      "timesUsed": 124,
+      "lastUsed": "2025-12-03T14:30:00Z",
+      "isActive": true
+    },
+    {
+      "id": "tpl-008",
+      "name": "Black Friday",
+      "category": "promotional",
+      "description": "Template especial para campañas Black Friday",
+      "thumbnail": "🔥",
+      "timesUsed": 3,
+      "lastUsed": "2024-11-29T06:00:00Z",
+      "isActive": true
+    }
+  ]
+}

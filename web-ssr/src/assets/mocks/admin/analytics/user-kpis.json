@@ -1,0 +1,10 @@
+{
+  "totalUsers": 45678,
+  "activeUsers": 12456,
+  "newUsers": 3421,
+  "churnRate": 5.2,
+  "retentionRate": 68.5,
+  "averageLTV": 245.8,
+  "dauMauRatio": 0.42,
+  "avgEngagementScore": 7.8
+}

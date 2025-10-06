@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cat-001",
+    "name": "Esquís",
+    "slug": "ski",
+    "totalProducts": 5,
+    "totalStockValue": 64840.0,
+    "averageUtilizationRate": 82.4,
+    "icon": "⛷️"
+  },
+  {
+    "id": "cat-002",
+    "name": "Snowboards",
+    "slug": "snowboard",
+    "totalProducts": 4,
+    "totalStockValue": 38455.0,
+    "averageUtilizationRate": 76.8,
+    "icon": "🏂"
+  },
+  {
+    "id": "cat-003",
+    "name": "Botas",
+    "slug": "boots",
+    "totalProducts": 3,
+    "totalStockValue": 9960.0,
+    "averageUtilizationRate": 88.6,
+    "icon": "🥾"
+  },
+  {
+    "id": "cat-004",
+    "name": "Cascos",
+    "slug": "helmet",
+    "totalProducts": 3,
+    "totalStockValue": 10135.0,
+    "averageUtilizationRate": 91.2,
+    "icon": "🪖"
+  },
+  {
+    "id": "cat-005",
+    "name": "Bastones",
+    "slug": "poles",
+    "totalProducts": 3,
+    "totalStockValue": 2448.0,
+    "averageUtilizationRate": 68.5,
+    "icon": "🎿"
+  },
+  {
+    "id": "cat-006",
+    "name": "Ropa",
+    "slug": "clothing",
+    "totalProducts": 3,
+    "totalStockValue": 21190.0,
+    "averageUtilizationRate": 72.3,
+    "icon": "🧥"
+  }
+]

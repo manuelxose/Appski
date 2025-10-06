@@ -1,0 +1,153 @@
+{
+  "balanceSheet": {
+    "period": "2025-Q1",
+    "currentAssets": 450000,
+    "fixedAssets": 1250000,
+    "totalAssets": 1700000,
+    "currentLiabilities": 280000,
+    "longTermLiabilities": 620000,
+    "totalLiabilities": 900000,
+    "equity": 800000,
+    "generatedAt": "2025-02-10T10:00:00Z"
+  },
+  "incomeStatement": {
+    "period": "2025-Q1",
+    "operatingRevenue": 850000,
+    "otherRevenue": 45000,
+    "totalRevenue": 895000,
+    "costOfSales": 320000,
+    "operatingExpenses": 280000,
+    "financialExpenses": 35000,
+    "taxes": 78000,
+    "totalExpenses": 713000,
+    "grossProfit": 575000,
+    "operatingProfit": 260000,
+    "netProfit": 182000,
+    "grossMargin": 64.2,
+    "operatingMargin": 29.1,
+    "netMargin": 20.3,
+    "generatedAt": "2025-02-10T10:00:00Z"
+  },
+  "cashFlow": {
+    "period": "2025-Q1",
+    "operatingCashFlow": 215000,
+    "investingCashFlow": -85000,
+    "financingCashFlow": -45000,
+    "netCashChange": 85000,
+    "beginningBalance": 320000,
+    "endingBalance": 405000,
+    "generatedAt": "2025-02-10T10:00:00Z"
+  },
+  "revenueBreakdown": [
+    {
+      "category": "Forfaits",
+      "amount": 425000,
+      "percentage": 47.5,
+      "growth": 18.5
+    },
+    {
+      "category": "Alojamiento",
+      "amount": 250000,
+      "percentage": 27.9,
+      "growth": 12.3
+    },
+    {
+      "category": "Alquiler Equipamiento",
+      "amount": 120000,
+      "percentage": 13.4,
+      "growth": 8.7
+    },
+    {
+      "category": "Clases y Escuela",
+      "amount": 65000,
+      "percentage": 7.3,
+      "growth": 22.1
+    },
+    {
+      "category": "Otros Servicios",
+      "amount": 35000,
+      "percentage": 3.9,
+      "growth": -5.2
+    }
+  ],
+  "costBreakdown": [
+    {
+      "category": "Personal",
+      "amount": 285000,
+      "percentage": 40.0,
+      "trend": "stable"
+    },
+    {
+      "category": "Mantenimiento Pistas",
+      "amount": 180000,
+      "percentage": 25.2,
+      "trend": "up"
+    },
+    {
+      "category": "Suministros y Energía",
+      "amount": 95000,
+      "percentage": 13.3,
+      "trend": "down"
+    },
+    {
+      "category": "Marketing",
+      "amount": 75000,
+      "percentage": 10.5,
+      "trend": "up"
+    },
+    {
+      "category": "Seguros y Licencias",
+      "amount": 45000,
+      "percentage": 6.3,
+      "trend": "stable"
+    },
+    {
+      "category": "Otros Gastos",
+      "amount": 33000,
+      "percentage": 4.7,
+      "trend": "down"
+    }
+  ],
+  "taxReports": [
+    {
+      "period": "2025-Q1",
+      "taxType": "IVA",
+      "taxableBase": 739669,
+      "taxRate": 21,
+      "taxAmount": 155331,
+      "isPaid": false,
+      "dueDate": "2025-04-20"
+    },
+    {
+      "period": "2025-Q1",
+      "taxType": "Impuesto Sociedades",
+      "taxableBase": 260000,
+      "taxRate": 25,
+      "taxAmount": 65000,
+      "isPaid": false,
+      "dueDate": "2025-07-25"
+    },
+    {
+      "period": "2024-Q4",
+      "taxType": "IVA",
+      "taxableBase": 145868,
+      "taxRate": 21,
+      "taxAmount": 30632,
+      "isPaid": true,
+      "paidDate": "2025-01-20"
+    }
+  ],
+  "metrics": {
+    "period": "2025-Q1",
+    "roi": 22.8,
+    "roa": 10.7,
+    "roe": 22.8,
+    "currentRatio": 1.61,
+    "quickRatio": 1.43,
+    "cashRatio": 0.91,
+    "assetTurnover": 0.53,
+    "inventoryTurnover": 12.5,
+    "debtToEquity": 1.13,
+    "debtToAssets": 0.53
+  }
+}

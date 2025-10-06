@@ -19,7 +19,7 @@
   <!-- Statistics Cards -->
   <div class="stats-grid">
     <app-admin-stat-card
-      title="Total Alojamientos"
+      label="Total Alojamientos"
       [value]="stats().total"
       [change]="0"
       changeLabel=""
@@ -27,7 +27,7 @@
       variant="primary"
     />
     <app-admin-stat-card
-      title="Activos"
+      label="Activos"
       [value]="stats().active"
       [change]="0"
       changeLabel=""
@@ -35,7 +35,7 @@
       variant="success"
     />
     <app-admin-stat-card
-      title="Ingresos Totales"
+      label="Ingresos Totales"
       [value]="stats().revenue"
       [change]="0"
       changeLabel=""
@@ -44,7 +44,7 @@
       format="currency"
     />
     <app-admin-stat-card
-      title="Ocupación Media"
+      label="Ocupación Media"
       [value]="stats().avgOccupancy + '%'"
       [change]="0"
       changeLabel=""
@@ -57,11 +57,13 @@
   <div class="admin-toolbar">
     <app-admin-search-bar
       placeholder="Buscar por nombre, estación, ciudad o propietario..."
-      (search)="handleSearch($event)"
+      (search)="handleSearch($any($event))"
     />
     <app-admin-filters
       [fields]="filterFields"
-      (filterChange)="handleFilterChange($event.filterId, $event.value)"
+      (filterChange)="
+        handleFilterChange($any($event).filterId, $any($event).value)
+      "
     />
   </div>
 
@@ -97,7 +99,7 @@
     [data]="paginatedLodgings()"
     [actions]="tableActions"
     (rowClick)="handleRowClick($event)"
-    (actionClick)="handleActionClick($event)"
+    (actionClick)="handleActionClick($any($event))"
   >
     <!-- Custom column templates -->
     <ng-template #customColumn let-column="column" let-row="row">
@@ -114,14 +116,14 @@
       <span class="occupancy">{{ row.stats.occupancyRate }}%</span>
       } @if (column.key === 'status') {
       <app-admin-badge
-        [label]="
+        [text]="
           row.status === 'active'
             ? 'Activo'
             : row.status === 'inactive'
             ? 'Inactivo'
             : 'Mantenimiento'
         "
-        [variant]="getStatusColor(row.status)"
+        [variant]="$any(getStatusColor(row.status))"
       />
       }
     </ng-template>
@@ -129,10 +131,9 @@
 
   <!-- Pagination -->
   <app-admin-pagination
-    [currentPage]="currentPage()"
-    [totalPages]="totalPages()"
-    [itemsPerPage]="itemsPerPage()"
-    [totalItems]="filteredLodgings().length"
+    [page]="currentPage()"
+    [total]="totalPages()"
+    [pageSize]="itemsPerPage()"
     (pageChange)="handlePageChange($event)"
   />
   }
@@ -140,6 +141,7 @@
   <!-- Create/Edit Modal -->
   @if (showModal()) {
   <app-admin-modal
+    [open]="true"
     [title]="isEditMode() ? 'Editar Alojamiento' : 'Nuevo Alojamiento'"
     size="lg"
     (close)="closeModal()"
@@ -435,6 +437,7 @@
   <!-- Delete Confirmation Dialog -->
   @if (showDeleteDialog()) {
   <app-admin-confirm-dialog
+    [open]="true"
     title="Eliminar Alojamiento"
     [message]="
       '¿Estás seguro de que quieres eliminar ' +

@@ -1,0 +1,423 @@
+<!-- Header -->
+<div class="admin-header">
+  <div class="breadcrumbs">
+    <span class="breadcrumb-item">Admin</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item">CRM</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item active">Email Marketing</span>
+  </div>
+
+  <div class="header-content">
+    <div class="header-text">
+      <h1>Email Marketing</h1>
+      <p>Campañas, templates, segmentación y automatizaciones</p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="createTemplate()">
+        <span class="icon">📄</span>
+        Nuevo Template
+      </button>
+      <button class="btn-primary" (click)="createCampaign()">
+        <span class="icon">+</span>
+        Nueva Campaña
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="filters-bar">
+  <div class="filters-group">
+    <label>Estado</label>
+    <div class="btn-group">
+      <button
+        [class.active]="selectedStatus() === 'all'"
+        (click)="setStatus('all')"
+      >
+        Todas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'draft'"
+        (click)="setStatus('draft')"
+      >
+        Borradores
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'scheduled'"
+        (click)="setStatus('scheduled')"
+      >
+        Programadas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'sent'"
+        (click)="setStatus('sent')"
+      >
+        Enviadas
+      </button>
+    </div>
+  </div>
+
+  <div class="filters-group">
+    <label>Tipo</label>
+    <select
+      [value]="selectedType()"
+      (change)="setType($any($event.target).value)"
+    >
+      <option value="all">Todos los tipos</option>
+      <option value="newsletter">Newsletter</option>
+      <option value="promotional">Promocional</option>
+      <option value="transactional">Transaccional</option>
+      <option value="automated">Automatizada</option>
+    </select>
+  </div>
+
+  <div class="filters-group">
+    <input
+      type="search"
+      placeholder="Buscar campañas..."
+      [value]="searchTerm()"
+      (input)="setSearchTerm($any($event.target).value)"
+      class="search-input"
+    />
+  </div>
+</div>
+
+<!-- Stats Grid -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">📊</div>
+    <div class="stat-content">
+      <div class="stat-label">Total Campañas</div>
+      <div class="stat-value">{{ totalCampaigns() }}</div>
+      <div class="stat-change positive">
+        {{ formatNumber(totalSent()) }} enviados
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">📬</div>
+    <div class="stat-content">
+      <div class="stat-label">Tasa Apertura</div>
+      <div class="stat-value">{{ formatPercent(avgOpenRate()) }}</div>
+      <div class="stat-change" [class]="getRateClass(avgOpenRate(), 20)">
+        {{ avgOpenRate() >= 20 ? "✓" : "⚠" }} Benchmark: 20%
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">🖱️</div>
+    <div class="stat-content">
+      <div class="stat-label">Tasa Clicks</div>
+      <div class="stat-value">{{ formatPercent(avgClickRate()) }}</div>
+      <div class="stat-change" [class]="getRateClass(avgClickRate(), 3)">
+        {{ avgClickRate() >= 3 ? "✓" : "⚠" }} Benchmark: 3%
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">👥</div>
+    <div class="stat-content">
+      <div class="stat-label">Suscriptores</div>
+      <div class="stat-value">{{ formatNumber(totalSubscribers()) }}</div>
+      <div class="stat-change positive">
+        {{ activeSegments().length }} segmentos
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Campaigns Table -->
+<div class="data-table-container">
+  <div class="table-header">
+    <h2>Campañas de Email</h2>
+    <div class="table-actions">
+      <button class="btn-icon" (click)="refreshData()" title="Actualizar">
+        🔄
+      </button>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Campaña</th>
+        <th>Tipo</th>
+        <th>Segmento</th>
+        <th>Estado</th>
+        <th>Enviados</th>
+        <th>Apertura</th>
+        <th>Clicks</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (isLoading()) {
+      <tr>
+        <td colspan="9" class="loading-cell">
+          <div class="spinner"></div>
+          <span>Cargando campañas...</span>
+        </td>
+      </tr>
+      } @else if (filteredCampaigns().length === 0) {
+      <tr>
+        <td colspan="9" class="empty-cell">No se encontraron campañas</td>
+      </tr>
+      } @else { @for (campaign of filteredCampaigns(); track campaign.id) {
+      <tr>
+        <td>
+          <div class="campaign-info">
+            <div class="campaign-name">
+              <span class="type-icon">{{ getTypeIcon(campaign.type) }}</span>
+              {{ campaign.name }}
+            </div>
+            <div class="campaign-subject">{{ campaign.subject }}</div>
+            @if (campaign.isABTest) {
+            <span class="ab-badge">A/B Test</span>
+            }
+          </div>
+        </td>
+        <td>
+          <span class="type-badge">{{ getTypeLabel(campaign.type) }}</span>
+        </td>
+        <td>
+          <div class="segment-info">
+            <div class="segment-name">{{ campaign.segmentName }}</div>
+            <div class="segment-count">
+              {{ formatNumber(campaign.recipientCount) }} usuarios
+            </div>
+          </div>
+        </td>
+        <td>
+          <span [class]="'status-badge ' + getStatusClass(campaign.status)">
+            {{ getStatusLabel(campaign.status) }}
+          </span>
+        </td>
+        <td>{{ formatNumber(campaign.sent) }}</td>
+        <td>
+          <div class="rate-cell">
+            <span
+              class="rate-value"
+              [class]="getRateClass(campaign.openRate, 20)"
+            >
+              {{ formatPercent(campaign.openRate) }}
+            </span>
+            <div class="rate-bar">
+              <div class="rate-fill" [style.width.%]="campaign.openRate"></div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="rate-cell">
+            <span
+              class="rate-value"
+              [class]="getRateClass(campaign.clickRate, 3)"
+            >
+              {{ formatPercent(campaign.clickRate) }}
+            </span>
+            <div class="rate-bar">
+              <div
+                class="rate-fill"
+                [style.width.%]="campaign.clickRate * 10"
+              ></div>
+            </div>
+          </div>
+        </td>
+        <td>
+          @if (campaign.sentAt) {
+          {{ formatDate(campaign.sentAt) }}
+          } @else if (campaign.scheduledAt) {
+          <span class="scheduled-date">
+            📅 {{ formatDate(campaign.scheduledAt) }}
+          </span>
+          } @else {
+          <span class="no-date">Sin programar</span>
+          }
+        </td>
+        <td>
+          <div class="actions-menu">
+            @if (campaign.status === 'draft') {
+            <button
+              class="btn-action"
+              (click)="sendTestEmail(campaign.id)"
+              title="Test"
+            >
+              🧪
+            </button>
+            <button
+              class="btn-action"
+              (click)="scheduleCampaign(campaign.id)"
+              title="Programar"
+            >
+              📅
+            </button>
+            <button
+              class="btn-action primary"
+              (click)="sendCampaign(campaign.id)"
+              title="Enviar"
+            >
+              📧
+            </button>
+            } @if (campaign.status === 'scheduled') {
+            <button
+              class="btn-action"
+              (click)="editCampaign(campaign.id)"
+              title="Editar"
+            >
+              ✏️
+            </button>
+            } @if (campaign.status === 'sent') {
+            <button
+              class="btn-action"
+              (click)="viewReport(campaign.id)"
+              title="Reporte"
+            >
+              📊
+            </button>
+            <button
+              class="btn-action"
+              (click)="duplicateCampaign(campaign.id)"
+              title="Duplicar"
+            >
+              📋
+            </button>
+            } @if (campaign.status === 'sending') {
+            <button
+              class="btn-action"
+              (click)="pauseCampaign(campaign.id)"
+              title="Pausar"
+            >
+              ⏸️
+            </button>
+            }
+          </div>
+        </td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+</div>
+
+<!-- Templates Grid -->
+<div class="templates-section">
+  <div class="section-header">
+    <h2>Templates de Email</h2>
+    <button class="btn-secondary-sm" (click)="createTemplate()">
+      + Nuevo Template
+    </button>
+  </div>
+
+  <div class="templates-grid">
+    @for (template of activeTemplates().slice(0, 6); track template.id) {
+    <div class="template-card" (click)="editTemplate(template.id)">
+      <div class="template-thumbnail">
+        <div class="template-preview">📄</div>
+      </div>
+      <div class="template-info">
+        <div class="template-name">{{ template.name }}</div>
+        <div class="template-meta">
+          <span class="template-category">{{ template.category }}</span>
+          <span class="template-usage">{{ template.usageCount }} usos</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- Automations -->
+<div class="automations-section">
+  <div class="section-header">
+    <h2>Automatizaciones</h2>
+    <button class="btn-secondary-sm" (click)="createAutomation()">
+      + Nueva Automatización
+    </button>
+  </div>
+
+  <div class="automations-list">
+    @for (automation of activeAutomations(); track automation.id) {
+    <div class="automation-card">
+      <div class="automation-header">
+        <div class="automation-info">
+          <div class="automation-name">
+            <span class="automation-icon">🤖</span>
+            {{ automation.name }}
+          </div>
+          <div class="automation-type">{{ automation.type }}</div>
+        </div>
+        <div class="automation-toggle">
+          <label class="switch">
+            <input
+              type="checkbox"
+              [checked]="automation.status === 'active'"
+              (change)="toggleAutomation(automation.id)"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="automation-stats">
+        <div class="automation-stat">
+          <span class="label">Disparadas</span>
+          <span class="value">{{ formatNumber(automation.triggered) }}</span>
+        </div>
+        <div class="automation-stat">
+          <span class="label">Completadas</span>
+          <span class="value">{{ formatNumber(automation.completed) }}</span>
+        </div>
+        <div class="automation-stat">
+          <span class="label">Conversión</span>
+          <span class="value">{{
+            formatPercent(automation.conversionRate)
+          }}</span>
+        </div>
+        <div class="automation-stat">
+          <span class="label">Pasos</span>
+          <span class="value">{{ automation.steps.length }}</span>
+        </div>
+      </div>
+
+      <div class="automation-actions">
+        <button class="btn-text" (click)="editAutomation(automation.id)">
+          ✏️ Editar flujo
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- Segments -->
+<div class="segments-section">
+  <div class="section-header">
+    <h2>Segmentos de Usuarios</h2>
+    <button class="btn-secondary-sm" (click)="createSegment()">
+      + Nuevo Segmento
+    </button>
+  </div>
+
+  <div class="segments-grid">
+    @for (segment of activeSegments().slice(0, 4); track segment.id) {
+    <div class="segment-card" (click)="editSegment(segment.id)">
+      <div class="segment-header">
+        <span class="segment-icon">👥</span>
+        <div class="segment-name">{{ segment.name }}</div>
+      </div>
+      <div class="segment-description">{{ segment.description }}</div>
+      <div class="segment-count">
+        <span class="count">{{ formatNumber(segment.userCount) }}</span>
+        <span class="label">usuarios</span>
+      </div>
+      <div class="segment-updated">
+        Actualizado: {{ formatDateShort(segment.lastUpdatedAt) }}
+      </div>
+    </div>
+    }
+  </div>
+</div>

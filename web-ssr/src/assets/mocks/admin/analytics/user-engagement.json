@@ -1,0 +1,8 @@
+{
+  "dau": 5234,
+  "mau": 12456,
+  "dauMauRatio": 0.42,
+  "avgSessionDuration": 12.5,
+  "avgSessionsPerUser": 4.8,
+  "avgTimeOnSite": 35.2
+}

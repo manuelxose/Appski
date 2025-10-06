@@ -1,12 +1,9 @@
-import { Component, computed, inject, OnInit, signal } from "@angular/core";
+import { Component, computed, OnInit, signal } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
-import { AdminTableComponent } from "../../shared/admin-table/admin-table.component";
 import { AdminPaginationComponent } from "../../shared/admin-pagination/admin-pagination.component";
-import { AdminFiltersComponent } from "../../shared/admin-filters/admin-filters.component";
 import { AdminSearchBarComponent } from "../../shared/admin-search-bar/admin-search-bar.component";
-import { AdminStatCardComponent } from "../../shared/admin-stat-card/admin-stat-card.component";
 import { AdminBadgeComponent } from "../../shared/admin-badge/admin-badge.component";
 import { AdminBreadcrumbsComponent } from "../../shared/admin-breadcrumbs/admin-breadcrumbs.component";
 import { AdminToastComponent } from "../../shared/admin-toast/admin-toast.component";
@@ -16,9 +13,7 @@ import { AdminModalComponent } from "../../shared/admin-modal/admin-modal.compon
 import { AdminConfirmDialogComponent } from "../../shared/admin-confirm-dialog/admin-confirm-dialog.component";
 import { AdminDateRangePickerComponent } from "../../shared/admin-date-range-picker/admin-date-range-picker.component";
 
-import { FinancialService } from "../../../../../services/admin/financial.service";
 import type {
-  Payment,
   Invoice,
   Payout,
   Refund,
@@ -33,11 +28,8 @@ import type {
   imports: [
     CommonModule,
     FormsModule,
-    AdminTableComponent,
     AdminPaginationComponent,
-    AdminFiltersComponent,
     AdminSearchBarComponent,
-    AdminStatCardComponent,
     AdminBadgeComponent,
     AdminBreadcrumbsComponent,
     AdminToastComponent,
@@ -51,8 +43,6 @@ import type {
   styleUrl: "./admin-payments.component.css",
 })
 export class AdminPaymentsComponent implements OnInit {
-  private readonly financialService = inject(FinancialService);
-
   // State
   readonly isLoading = signal(false);
   readonly activeTab = signal<"payments" | "invoices" | "refunds" | "payouts">(
@@ -122,11 +112,13 @@ export class AdminPaymentsComponent implements OnInit {
     {
       id: "PAY001",
       bookingId: "BK001",
+      userId: "USR001",
       amount: 450.0,
       currency: "EUR",
       status: "completed",
-      method: "credit_card",
-      processedAt: "2024-01-15T10:30:00Z",
+      method: "card",
+      createdAt: "2024-01-15T10:30:00Z",
+      completedAt: "2024-01-15T10:30:00Z",
       customerName: "Carlos Martínez",
       stationName: "Sierra Nevada",
       invoiceNumber: "INV-2024-001",
@@ -134,22 +126,25 @@ export class AdminPaymentsComponent implements OnInit {
     {
       id: "PAY002",
       bookingId: "BK002",
+      userId: "USR002",
       amount: 320.0,
       currency: "EUR",
       status: "pending",
       method: "paypal",
-      processedAt: "2024-01-16T14:20:00Z",
+      createdAt: "2024-01-16T14:20:00Z",
       customerName: "Ana García",
       stationName: "Baqueira Beret",
     },
     {
       id: "PAY003",
       bookingId: "BK003",
+      userId: "USR003",
       amount: 580.0,
       currency: "EUR",
       status: "completed",
       method: "bank_transfer",
-      processedAt: "2024-01-14T09:15:00Z",
+      createdAt: "2024-01-14T09:15:00Z",
+      completedAt: "2024-01-14T09:15:00Z",
       customerName: "Luis Fernández",
       stationName: "Formigal",
       invoiceNumber: "INV-2024-002",
@@ -157,11 +152,13 @@ export class AdminPaymentsComponent implements OnInit {
     {
       id: "PAY004",
       bookingId: "BK004",
+      userId: "USR004",
       amount: 250.0,
       currency: "EUR",
       status: "failed",
-      method: "credit_card",
-      processedAt: "2024-01-17T11:45:00Z",
+      method: "card",
+      createdAt: "2024-01-17T11:45:00Z",
+      failedAt: "2024-01-17T11:45:00Z",
       customerName: "María López",
       stationName: "Sierra Nevada",
     },
@@ -170,32 +167,53 @@ export class AdminPaymentsComponent implements OnInit {
   readonly allInvoices = signal<Invoice[]>([
     {
       id: "INV-2024-001",
-      bookingId: "BK001",
+      invoiceNumber: "INV-2024-001",
+      paymentId: "PAY001",
+      customerId: "USR001",
+      customerName: "Carlos Martínez",
+      customerEmail: "carlos@example.com",
       amount: 450.0,
+      taxAmount: 94.5,
+      totalAmount: 544.5,
       currency: "EUR",
       status: "paid",
-      issueDate: "2024-01-15",
-      dueDate: "2024-01-30",
+      issuedAt: "2024-01-15T00:00:00Z",
+      dueAt: "2024-01-30T00:00:00Z",
       paidAt: "2024-01-15T10:30:00Z",
+      createdAt: "2024-01-15T00:00:00Z",
     },
     {
       id: "INV-2024-002",
-      bookingId: "BK003",
+      invoiceNumber: "INV-2024-002",
+      paymentId: "PAY003",
+      customerId: "USR003",
+      customerName: "Luis Fernández",
+      customerEmail: "luis@example.com",
       amount: 580.0,
+      taxAmount: 121.8,
+      totalAmount: 701.8,
       currency: "EUR",
       status: "paid",
-      issueDate: "2024-01-14",
-      dueDate: "2024-01-29",
+      issuedAt: "2024-01-14T00:00:00Z",
+      dueAt: "2024-01-29T00:00:00Z",
       paidAt: "2024-01-14T09:15:00Z",
+      createdAt: "2024-01-14T00:00:00Z",
     },
     {
       id: "INV-2024-003",
-      bookingId: "BK005",
+      invoiceNumber: "INV-2024-003",
+      paymentId: "PAY005",
+      customerId: "USR005",
+      customerName: "Pedro Gómez",
+      customerEmail: "pedro@example.com",
       amount: 390.0,
+      taxAmount: 81.9,
+      totalAmount: 471.9,
       currency: "EUR",
-      status: "pending",
-      issueDate: "2024-01-18",
-      dueDate: "2024-02-02",
+      status: "sent",
+      issuedAt: "2024-01-18T00:00:00Z",
+      dueAt: "2024-02-02T00:00:00Z",
+      createdAt: "2024-01-18T00:00:00Z",
     },
   ]);
 
@@ -207,8 +225,8 @@ export class AdminPaymentsComponent implements OnInit {
       currency: "EUR",
       reason: "customer_request",
       status: "completed",
-      requestedAt: "2024-01-16T15:00:00Z",
-      processedAt: "2024-01-16T16:30:00Z",
+      createdAt: "2024-01-16T15:00:00Z",
+      completedAt: "2024-01-16T16:30:00Z",
     },
   ]);
 
@@ -216,21 +234,23 @@ export class AdminPaymentsComponent implements OnInit {
     {
       id: "PAYOUT001",
       stationId: "sierra-nevada",
+      stationName: "Sierra Nevada",
       amount: 12500.0,
       currency: "EUR",
       status: "completed",
-      method: "bank_transfer",
-      scheduledAt: "2024-01-10",
-      processedAt: "2024-01-10T09:00:00Z",
+      createdAt: "2024-01-10T00:00:00Z",
+      scheduledAt: "2024-01-10T00:00:00Z",
+      completedAt: "2024-01-10T09:00:00Z",
     },
     {
       id: "PAYOUT002",
       stationId: "baqueira-beret",
+      stationName: "Baqueira Beret",
       amount: 8750.0,
       currency: "EUR",
       status: "pending",
-      method: "bank_transfer",
-      scheduledAt: "2024-01-20",
+      createdAt: "2024-01-20T00:00:00Z",
+      scheduledAt: "2024-01-20T00:00:00Z",
     },
   ]);
 
@@ -246,11 +266,11 @@ export class AdminPaymentsComponent implements OnInit {
 
   readonly methodOptions = [
     { value: "all", label: "Todos los métodos" },
-    { value: "credit_card", label: "Tarjeta de crédito" },
-    { value: "debit_card", label: "Tarjeta de débito" },
+    { value: "card", label: "Tarjeta" },
     { value: "paypal", label: "PayPal" },
     { value: "bank_transfer", label: "Transferencia" },
     { value: "cash", label: "Efectivo" },
+    { value: "bizum", label: "Bizum" },
   ];
 
   // Computed
@@ -282,7 +302,7 @@ export class AdminPaymentsComponent implements OnInit {
     if (range) {
       const { start, end } = range;
       payments = payments.filter((p) => {
-        const date = new Date(p.processedAt);
+        const date = new Date(p.createdAt);
         return date >= start && date <= end;
       });
     }
@@ -307,7 +327,7 @@ export class AdminPaymentsComponent implements OnInit {
     ).length;
     const monthlyRevenue = payments
       .filter((p) => {
-        const date = new Date(p.processedAt);
+        const date = new Date(p.createdAt);
         const now = new Date();
         return (
           date.getMonth() === now.getMonth() &&
@@ -600,11 +620,11 @@ export class AdminPaymentsComponent implements OnInit {
 
   formatMethod(method: PaymentMethod): string {
     const methods: Record<PaymentMethod, string> = {
-      credit_card: "Tarjeta de crédito",
-      debit_card: "Tarjeta de débito",
+      card: "Tarjeta",
       paypal: "PayPal",
       bank_transfer: "Transferencia",
       cash: "Efectivo",
+      bizum: "Bizum",
     };
     return methods[method] || method;
   }
@@ -612,6 +632,7 @@ export class AdminPaymentsComponent implements OnInit {
   formatStatus(status: PaymentStatus): string {
     const statuses: Record<PaymentStatus, string> = {
       pending: "Pendiente",
+      processing: "Procesando",
       completed: "Completado",
       failed: "Fallido",
       refunded: "Reembolsado",
@@ -622,15 +643,16 @@ export class AdminPaymentsComponent implements OnInit {
 
   getStatusBadgeType(
     status: PaymentStatus
-  ): "success" | "warning" | "error" | "info" {
+  ): "success" | "warning" | "danger" | "info" {
     switch (status) {
       case "completed":
         return "success";
       case "pending":
+      case "processing":
         return "warning";
       case "failed":
       case "cancelled":
-        return "error";
+        return "danger";
       case "refunded":
         return "info";
       default:

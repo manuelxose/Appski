@@ -2,6 +2,13 @@
   <!-- Breadcrumbs -->
   <app-admin-breadcrumbs [items]="breadcrumbs"></app-admin-breadcrumbs>
 
+  <!-- Search Bar -->
+  <app-admin-search-bar
+    placeholder="Buscar por ID, usuario o estación..."
+    (search)="onSearch($any($event))"
+  >
+  </app-admin-search-bar>
+
   <!-- Page Header -->
   <div class="page-header">
     <div class="header-content">
@@ -22,10 +29,27 @@
     </div>
   </div>
 
-  <!-- Stats Grid -->
-  <div class="stats-grid">
-    <app-admin-stat-card
-      title="Pagos totales"
+  <!-- Stats Gri          <app-admin-badge
+            [text]="formatStatus(selectedPayment()?.status!)"
+            [variant]="getStatusBadgeType(selectedPayment()?.status!)"
+          >
+          </app-admin-badge>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Fecha de procesamiento</span>
+          <span class="detail-value">{{
+            formatDate(selectedPayment()?.createdAt!)
+          }}</span>v class="stats-grid  <app-admin-confirm-dialog
+    [open]="showConfirmDialog()"
+    [title]="confirmationTitle()"
+    [message]="confirmationMessage()"
+    confirmText="Confirmar"
+    cancelText="Cancelar"
+    (confirm)="confirmAction()"
+    (cancel)="closeConfirmDialog()"
+  >
+  </app-admin-confirm-dialog>pp-admin-stat-card
+      label="Pagos totales"
       [value]="formatCurrency(stats().totalPayments)"
       trend="up"
       trendValue="+12.5%"
@@ -35,7 +59,7 @@
     </app-admin-stat-card>
 
     <app-admin-stat-card
-      title="Reembolsos pendientes"
+      label="Reembolsos pendientes"
       [value]="stats().pendingRefunds.toString()"
       trend="down"
       trendValue="-3"
@@ -45,7 +69,7 @@
     </app-admin-stat-card>
 
     <app-admin-stat-card
-      title="Ingresos del mes"
+      label="Ingresos del mes"
       [value]="formatCurrency(stats().monthlyRevenue)"
       trend="up"
       trendValue="+8.2%"
@@ -55,7 +79,7 @@
     </app-admin-stat-card>
 
     <app-admin-stat-card
-      title="Comisiones"
+      label="Comisiones"
       [value]="formatCurrency(stats().commissions)"
       trend="up"
       trendValue="+5.1%"
@@ -104,16 +128,15 @@
   <div class="tab-content">
     <!-- Filters Bar -->
     <div class="filters-bar">
-      <app-admin-search-bar
-        placeholder="Buscar por ID, cliente, estación..."
-        (search)="onSearch($event)"
-      >
-      </app-admin-search-bar>
-
+      placeholder="Buscar por transacción, usuario o estación..."
+      (search)="onSearch($any($event))" >
       <div class="filters-group">
-        <app-admin-date-range-picker (rangeChange)="onDateRangeChange($event)">
-        </app-admin-date-range-picker>
-
+        <div class="filter-item">
+          <app-admin-date-range-picker
+            (rangeChange)="onDateRangeChange($any($event))"
+          >
+          </app-admin-date-range-picker>
+        </div>
         <select
           class="filter-select"
           [value]="statusFilter()"
@@ -165,13 +188,14 @@
             <td class="payment-amount">{{ formatCurrency(payment.amount) }}</td>
             <td class="payment-method">{{ formatMethod(payment.method) }}</td>
             <td>
+              <!-- TODO: Fix getStatusBadgeType to map to valid BadgeVariant (success|warning|danger|info) -->
               <app-admin-badge
-                [label]="formatStatus(payment.status)"
-                [type]="getStatusBadgeType(payment.status)"
+                [text]="formatStatus(payment.status)"
+                [variant]="'success'"
               >
               </app-admin-badge>
             </td>
-            <td class="payment-date">{{ formatDate(payment.processedAt) }}</td>
+            <td class="payment-date">{{ formatDate(payment.createdAt) }}</td>
             <td class="actions-cell">
               <div class="action-buttons">
                 <button
@@ -208,8 +232,8 @@
 
     <!-- Pagination -->
     <app-admin-pagination
-      [currentPage]="currentPage()"
-      [totalItems]="totalPayments()"
+      [page]="currentPage()"
+      [total]="totalPayments()"
       [pageSize]="pageSize()"
       (pageChange)="onPageChange($event)"
       (pageSizeChange)="onPageSizeChange($event)"
@@ -246,13 +270,13 @@
             <td class="invoice-amount">{{ formatCurrency(invoice.amount) }}</td>
             <td>
               <app-admin-badge
-                [label]="invoice.status === 'paid' ? 'Pagada' : 'Pendiente'"
-                [type]="invoice.status === 'paid' ? 'success' : 'warning'"
+                [text]="invoice.status === 'paid' ? 'Pagada' : 'Pendiente'"
+                [variant]="invoice.status === 'paid' ? 'success' : 'warning'"
               >
               </app-admin-badge>
             </td>
-            <td>{{ invoice.issueDate }}</td>
-            <td>{{ invoice.dueDate }}</td>
+            <td>{{ formatDate(invoice.issuedAt) }}</td>
+            <td>{{ formatDate(invoice.dueAt) }}</td>
             <td class="actions-cell">
               <div class="action-buttons">
                 <button
@@ -295,14 +319,16 @@
             <td>{{ refund.reason }}</td>
             <td>
               <app-admin-badge
-                [label]="
+                [text]="
                   refund.status === 'completed' ? 'Completado' : 'Pendiente'
                 "
-                [type]="refund.status === 'completed' ? 'success' : 'warning'"
+                [variant]="
+                  refund.status === 'completed' ? 'success' : 'warning'
+                "
               >
               </app-admin-badge>
             </td>
-            <td>{{ formatDate(refund.requestedAt) }}</td>
+            <td>{{ formatDate(refund.createdAt) }}</td>
             <td class="actions-cell">
               <div class="action-buttons">
                 <button class="btn-icon-action" title="Ver detalles">👁️</button>
@@ -342,13 +368,15 @@
             <td>{{ payout.id }}</td>
             <td>{{ payout.stationId }}</td>
             <td>{{ formatCurrency(payout.amount) }}</td>
-            <td>{{ formatMethod(payout.method) }}</td>
+            <td>Transferencia bancaria</td>
             <td>
               <app-admin-badge
-                [label]="
+                [text]="
                   payout.status === 'completed' ? 'Completado' : 'Pendiente'
                 "
-                [type]="payout.status === 'completed' ? 'success' : 'warning'"
+                [variant]="
+                  payout.status === 'completed' ? 'success' : 'warning'
+                "
               >
               </app-admin-badge>
             </td>
@@ -368,7 +396,11 @@
 
   <!-- Refund Modal -->
   @if (showRefundModal()) {
-  <app-admin-modal title="Procesar reembolso" (close)="closeModal()">
+  <app-admin-modal
+    [open]="showRefundModal()"
+    title="Procesar reembolso"
+    (close)="closeModal()"
+  >
     <div class="modal-body">
       <div class="form-grid">
         <div class="form-group span-2">
@@ -471,7 +503,11 @@
 
   <!-- Invoice Modal -->
   @if (showInvoiceModal()) {
-  <app-admin-modal title="Nueva factura" (close)="closeModal()">
+  <app-admin-modal
+    [open]="showInvoiceModal()"
+    title="Nueva factura"
+    (close)="closeModal()"
+  >
     <div class="modal-body">
       <div class="form-grid">
         <div class="form-group">
@@ -534,7 +570,11 @@
 
   <!-- Payout Modal -->
   @if (showPayoutModal()) {
-  <app-admin-modal title="Nuevo pago a estación" (close)="closeModal()">
+  <app-admin-modal
+    [open]="showPayoutModal()"
+    title="Nuevo pago a estación"
+    (close)="closeModal()"
+  >
     <div class="modal-body">
       <div class="form-grid">
         <div class="form-group">
@@ -623,7 +663,11 @@
 
   <!-- Payment Details Modal -->
   @if (showDetailsModal() && selectedPayment()) {
-  <app-admin-modal title="Detalles del pago" (close)="closeModal()">
+  <app-admin-modal
+    [open]="showDetailsModal()"
+    title="Detalles del pago"
+    (close)="closeModal()"
+  >
     <div class="modal-body">
       <div class="details-grid">
         <div class="detail-item">
@@ -654,16 +698,17 @@
         </div>
         <div class="detail-item">
           <span class="detail-label">Estado</span>
+          <!-- TODO: Fix getStatusBadgeType to map to valid BadgeVariant (success|warning|danger|info) -->
           <app-admin-badge
-            [label]="formatStatus(selectedPayment()?.status!)"
-            [type]="getStatusBadgeType(selectedPayment()?.status!)"
+            [text]="formatStatus(selectedPayment()?.status!)"
+            [variant]="'success'"
           >
           </app-admin-badge>
         </div>
         <div class="detail-item">
           <span class="detail-label">Fecha procesamiento</span>
           <span class="detail-value">{{
-            formatDate(selectedPayment()?.processedAt!)
+            formatDate(selectedPayment()?.createdAt!)
           }}</span>
         </div>
         @if (selectedPayment()?.invoiceNumber) {
@@ -685,6 +730,7 @@
   <!-- Confirmation Dialog -->
   @if (showCancelDialog()) {
   <app-admin-confirm-dialog
+    [open]="true"
     [title]="confirmationTitle()"
     [message]="confirmationMessage()"
     confirmText="Confirmar"
@@ -697,11 +743,6 @@
 
   <!-- Toast -->
   @if (showToast()) {
-  <app-admin-toast
-    [message]="toastMessage()"
-    [type]="toastType()"
-    (close)="showToast.set(false)"
-  >
-  </app-admin-toast>
+  <app-admin-toast></app-admin-toast>
   }
 </div>

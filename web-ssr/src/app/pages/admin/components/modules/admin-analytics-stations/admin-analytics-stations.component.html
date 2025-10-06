@@ -1,0 +1,401 @@
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-content">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <a href="/admin">Admin</a>
+      <span class="separator">/</span>
+      <a href="/admin/analytics">Analytics</a>
+      <span class="separator">/</span>
+      <span class="current">Estaciones</span>
+    </nav>
+
+    <!-- Título y Descripción -->
+    <div class="header-title-section">
+      <h1 class="page-title">Analítica de Estaciones</h1>
+      <p class="page-description">
+        Rendimiento, comparativas y métricas clave por estación de esquí
+      </p>
+    </div>
+
+    <!-- Acciones -->
+    <div class="header-actions">
+      <button
+        class="btn-secondary"
+        (click)="refreshData()"
+        [disabled]="isLoading()"
+      >
+        <span class="material-icons">refresh</span>
+        <span>Actualizar</span>
+      </button>
+      <button class="btn-secondary" (click)="exportStationsAnalytics('excel')">
+        <span class="material-icons">download</span>
+        <span>Exportar</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Filters Bar -->
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Periodo</label>
+      <div class="filter-tabs">
+        <button
+          [class.active]="timeRange() === '1m'"
+          (click)="setTimeRange('1m')"
+        >
+          1 Mes
+        </button>
+        <button
+          [class.active]="timeRange() === '3m'"
+          (click)="setTimeRange('3m')"
+        >
+          3 Meses
+        </button>
+        <button
+          [class.active]="timeRange() === '6m'"
+          (click)="setTimeRange('6m')"
+        >
+          6 Meses
+        </button>
+        <button
+          [class.active]="timeRange() === '1y'"
+          (click)="setTimeRange('1y')"
+        >
+          1 Año
+        </button>
+        <button
+          [class.active]="timeRange() === 'all'"
+          (click)="setTimeRange('all')"
+        >
+          Todo
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label>Ordenar por</label>
+      <select
+        [value]="sortBy()"
+        (change)="setSortBy($any($event.target).value)"
+      >
+        <option value="revenue">Revenue</option>
+        <option value="bookings">Reservas</option>
+        <option value="rating">Valoración</option>
+        <option value="growth">Crecimiento</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Métrica destacada</label>
+      <select
+        [value]="selectedMetric()"
+        (change)="setMetric($any($event.target).value)"
+      >
+        <option value="revenue">Revenue</option>
+        <option value="bookings">Reservas</option>
+        <option value="occupancy">Ocupación</option>
+        <option value="rating">Valoración</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING STATE -->
+@if (isLoading()) {
+<div class="loading-state">
+  <div class="spinner"></div>
+  <p>Cargando analítica de estaciones...</p>
+</div>
+}
+
+<!-- ERROR STATE -->
+@if (error()) {
+<div class="error-state">
+  <span class="material-icons">error_outline</span>
+  <h3>{{ error() }}</h3>
+  <button class="btn-primary" (click)="refreshData()">Reintentar</button>
+</div>
+}
+
+<!-- MAIN CONTENT -->
+@if (!isLoading() && !error()) {
+<div class="analytics-container">
+  <!-- OVERVIEW STATS -->
+  <div class="overview-stats">
+    <div class="stat-card stat-primary">
+      <div class="stat-icon">
+        <span class="material-icons">location_city</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Total Estaciones</div>
+        <div class="stat-value">{{ totalStations() }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-success">
+      <div class="stat-icon">
+        <span class="material-icons">euro</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Revenue Total</div>
+        <div class="stat-value">{{ formatCurrency(totalRevenue()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-info">
+      <div class="stat-icon">
+        <span class="material-icons">event_available</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Total Reservas</div>
+        <div class="stat-value">{{ formatNumber(totalBookings()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-warning">
+      <div class="stat-icon">
+        <span class="material-icons">groups</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Ocupación Promedio</div>
+        <div class="stat-value">{{ formatPercent(avgOccupancy(), false) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-accent">
+      <div class="stat-icon">
+        <span class="material-icons">star</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Valoración Promedio</div>
+        <div class="stat-value">{{ formatRating(avgRating()) }}</div>
+      </div>
+    </div>
+
+    @if (topStation()) {
+    <div class="stat-card stat-highlight">
+      <div class="stat-icon">
+        <span class="material-icons">emoji_events</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Top Estación</div>
+        <div class="stat-value">{{ topStation()!.stationName }}</div>
+        <div class="stat-subtitle">
+          {{ formatCurrency(topStation()!.totalRevenue) }}
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- STATIONS PERFORMANCE TABLE -->
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Rendimiento por Estación</h2>
+      <p class="section-description">
+        Comparativa de métricas clave entre todas las estaciones
+      </p>
+    </div>
+
+    <div class="table-responsive">
+      <table class="performance-table">
+        <thead>
+          <tr>
+            <th>Ranking</th>
+            <th>Estación</th>
+            <th>Revenue</th>
+            <th>Crecimiento</th>
+            <th>Reservas</th>
+            <th>Ocupación</th>
+            <th>Valoración</th>
+            <th>Conversión</th>
+            <th>Región</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (station of sortedStations(); track station.stationId; let i =
+          $index) {
+          <tr
+            [class.selected]="selectedStation() === station.stationId"
+            (click)="selectStation(station.stationId)"
+          >
+            <td class="rank-cell">
+              @if (i < 3) {
+              <span class="medal medal-{{ i + 1 }}">{{ i + 1 }}</span>
+              } @else {
+              <span class="rank-number">{{ i + 1 }}</span>
+              }
+            </td>
+            <td class="station-cell">
+              <div class="station-info">
+                <div class="station-name">{{ station.stationName }}</div>
+                <div class="station-slug">{{ station.slug }}</div>
+              </div>
+            </td>
+            <td class="revenue-cell">
+              {{ formatCurrency(station.totalRevenue) }}
+            </td>
+            <td class="growth-cell">
+              <span [class]="getTrendClass(station.revenueGrowth)">
+                <span class="material-icons">{{
+                  getTrendIcon(station.revenueGrowth)
+                }}</span>
+                {{ formatPercent(station.revenueGrowth) }}
+              </span>
+            </td>
+            <td>{{ formatNumber(station.totalBookings) }}</td>
+            <td>
+              <div class="occupancy-bar">
+                <div
+                  class="occupancy-fill"
+                  [class]="getOccupancyClass(station.averageOccupancy)"
+                  [style.width.%]="station.averageOccupancy"
+                ></div>
+                <span class="occupancy-text">{{
+                  formatPercent(station.averageOccupancy, false)
+                }}</span>
+              </div>
+            </td>
+            <td class="rating-cell">
+              <div class="rating-display">
+                <span class="rating-value">{{
+                  formatRating(station.averageRating)
+                }}</span>
+                <div class="stars-container">
+                  @for (star of getRatingStars(station.averageRating); track
+                  $index) {
+                  <span class="material-icons star-icon">{{ star }}</span>
+                  }
+                </div>
+                <span class="reviews-count"
+                  >({{ formatNumber(station.totalReviews) }})</span
+                >
+              </div>
+            </td>
+            <td>{{ formatPercent(station.conversionRate, false) }}</td>
+            <td>{{ station.location.region }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SEASONAL TRENDS -->
+  @if (seasonalTrends().length > 0) {
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Tendencias por Temporada</h2>
+      <p class="section-description">
+        Comparativa entre temporadas alta, baja y media
+      </p>
+    </div>
+
+    <div class="seasons-grid">
+      @for (season of seasonalTrends(); track season.season) {
+      <div class="season-card" [class]="getSeasonClass(season.season)">
+        <div class="season-header">
+          <h3>{{ getSeasonLabel(season.season) }}</h3>
+          <span class="season-months">{{ season.months.join(", ") }}</span>
+        </div>
+        <div class="season-metrics">
+          <div class="season-metric">
+            <span class="metric-label">Reservas Promedio</span>
+            <span class="metric-value">{{
+              formatNumber(season.avgBookings)
+            }}</span>
+          </div>
+          <div class="season-metric">
+            <span class="metric-label">Revenue Promedio</span>
+            <span class="metric-value">{{
+              formatCurrency(season.avgRevenue)
+            }}</span>
+          </div>
+          <div class="season-metric">
+            <span class="metric-label">Ocupación Promedio</span>
+            <span class="metric-value">{{
+              formatPercent(season.avgOccupancy, false)
+            }}</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+
+    @if (getBestSeason()) {
+    <div class="insight-card insight-success">
+      <span class="material-icons">insights</span>
+      <div class="insight-content">
+        <strong>Mejor Temporada:</strong>
+        {{ getSeasonLabel(getBestSeason()!.season) }} con
+        {{ formatCurrency(getBestSeason()!.avgRevenue) }} de revenue promedio
+      </div>
+    </div>
+    }
+  </div>
+  }
+
+  <!-- WEATHER IMPACT -->
+  @if (weatherImpact().length > 0) {
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Impacto del Clima en las Ventas</h2>
+      <p class="section-description">
+        Correlación entre nevadas y rendimiento comercial
+      </p>
+    </div>
+
+    <div class="weather-grid">
+      @for (weather of weatherImpact(); track weather.stationId) {
+      <div class="weather-card">
+        @for (station of stationPerformance(); track station.stationId) { @if
+        (station.stationId === weather.stationId) {
+        <h3>{{ station.stationName }}</h3>
+        } }
+        <div class="weather-stats">
+          <div class="weather-stat">
+            <span class="material-icons">ac_unit</span>
+            <div class="stat-info">
+              <span class="stat-value">{{ weather.snowfall }} cm</span>
+              <span class="stat-label">Nevadas</span>
+            </div>
+          </div>
+          <div class="weather-stat">
+            <span class="material-icons">thermostat</span>
+            <div class="stat-info">
+              <span class="stat-value">{{ weather.temperature }}°C</span>
+              <span class="stat-label">Temperatura</span>
+            </div>
+          </div>
+        </div>
+        <div class="correlation-info">
+          <div class="correlation-bar">
+            <div
+              class="correlation-fill"
+              [style.width.%]="(weather.bookingsCorrelation + 1) * 50"
+            ></div>
+          </div>
+          <span class="correlation-label">{{
+            getCorrelationLabel(weather.bookingsCorrelation)
+          }}</span>
+          <span class="correlation-value"
+            >r = {{ weather.bookingsCorrelation.toFixed(2) }}</span
+          >
+        </div>
+        <div class="revenue-impact">
+          <span class="impact-label">Impacto en Revenue:</span>
+          <span
+            class="impact-value"
+            [class]="getTrendClass(weather.revenueImpact)"
+          >
+            {{ formatPercent(weather.revenueImpact) }}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+</div>
+}

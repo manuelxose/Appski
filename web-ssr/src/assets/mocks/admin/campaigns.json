@@ -1,0 +1,152 @@
+{
+  "campaigns": [
+    {
+      "id": "camp-001",
+      "name": "Navidad en la Nieve 2025",
+      "type": "seasonal",
+      "status": "active",
+      "startDate": "2025-12-01T00:00:00Z",
+      "endDate": "2026-01-06T23:59:59Z",
+      "description": "Campaña especial Navidad con paquetes familiares y descuentos en forfaits",
+      "discountCodes": ["NAVIDAD25", "FAMILIA2025"],
+      "packagesIds": ["pkg-001", "pkg-002"],
+      "targetSegment": "Familias y grupos",
+      "budget": 25000,
+      "spent": 18500,
+      "performance": {
+        "impressions": 145000,
+        "clicks": 12400,
+        "conversions": 892,
+        "revenue": 67400,
+        "roi": 264.3
+      }
+    },
+    {
+      "id": "camp-002",
+      "name": "Black Friday Ski Week",
+      "type": "flash",
+      "status": "ended",
+      "startDate": "2024-11-25T00:00:00Z",
+      "endDate": "2024-12-01T23:59:59Z",
+      "description": "Semana Black Friday con hasta 40% descuento en forfaits de temporada",
+      "discountCodes": ["BF2024", "CYBER40"],
+      "targetSegment": "Alta frecuencia",
+      "budget": 15000,
+      "spent": 14200,
+      "performance": {
+        "impressions": 89000,
+        "clicks": 8900,
+        "conversions": 623,
+        "revenue": 52300,
+        "roi": 268.3
+      }
+    },
+    {
+      "id": "camp-003",
+      "name": "Paquete Parejas San Valentín",
+      "type": "package",
+      "status": "scheduled",
+      "startDate": "2026-02-01T00:00:00Z",
+      "endDate": "2026-02-14T23:59:59Z",
+      "description": "Experiencia romántica en la nieve para parejas",
+      "packagesIds": ["pkg-003"],
+      "targetSegment": "Parejas",
+      "budget": 10000,
+      "spent": 0,
+      "performance": {
+        "impressions": 0,
+        "clicks": 0,
+        "conversions": 0,
+        "revenue": 0,
+        "roi": 0
+      }
+    },
+    {
+      "id": "camp-004",
+      "name": "Programa Fidelidad Platinum",
+      "type": "loyalty",
+      "status": "active",
+      "startDate": "2024-09-01T00:00:00Z",
+      "endDate": "2026-08-31T23:59:59Z",
+      "description": "Beneficios exclusivos para miembros Platinum del programa de fidelidad",
+      "targetSegment": "Clientes VIP",
+      "performance": {
+        "impressions": 234000,
+        "clicks": 18900,
+        "conversions": 1456,
+        "revenue": 128500,
+        "roi": 542.0
+      }
+    },
+    {
+      "id": "camp-005",
+      "name": "Flash Sale Fin de Semana",
+      "type": "flash",
+      "status": "paused",
+      "startDate": "2025-12-05T00:00:00Z",
+      "endDate": "2025-12-07T23:59:59Z",
+      "description": "Oferta relámpago: 30% descuento en forfaits de fin de semana",
+      "discountCodes": ["FLASH30"],
+      "targetSegment": "Todos",
+      "budget": 5000,
+      "spent": 2100,
+      "performance": {
+        "impressions": 34000,
+        "clicks": 2800,
+        "conversions": 156,
+        "revenue": 11200,
+        "roi": 433.3
+      }
+    },
+    {
+      "id": "camp-006",
+      "name": "Semana Blanca Escolar",
+      "type": "promotional",
+      "status": "active",
+      "startDate": "2026-02-15T00:00:00Z",
+      "endDate": "2026-02-28T23:59:59Z",
+      "description": "Promoción especial para grupos escolares y academias",
+      "discountCodes": ["ESCOLAR20"],
+      "packagesIds": ["pkg-004"],
+      "targetSegment": "Escuelas y grupos",
+      "budget": 18000,
+      "spent": 6700,
+      "performance": {
+        "impressions": 56000,
+        "clicks": 4200,
+        "conversions": 234,
+        "revenue": 19800,
+        "roi": 195.5
+      }
+    },
+    {
+      "id": "camp-007",
+      "name": "Early Bird Temporada 2026",
+      "type": "seasonal",
+      "status": "draft",
+      "startDate": "2026-06-01T00:00:00Z",
+      "endDate": "2026-08-31T23:59:59Z",
+      "description": "Reserva anticipada con descuentos progresivos hasta 35%",
+      "discountCodes": ["EARLYBIRD35"],
+      "targetSegment": "Planificadores",
+      "budget": 30000,
+      "spent": 0,
+      "performance": {
+        "impressions": 0,
+        "clicks": 0,
+        "conversions": 0,
+        "revenue": 0,
+        "roi": 0
+      }
+    }
+  ],
+  "stats": {
+    "totalActiveCampaigns": 3,
+    "totalRevenue": 278900,
+    "avgROI": 317.8,
+    "activeDiscountCodes": 6,
+    "totalRedemptions": 1847,
+    "loyaltyMembers": 1456,
+    "avgSpendingPerMember": 425.5
+  }
+}

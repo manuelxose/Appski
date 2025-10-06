@@ -1,0 +1,32 @@
+{
+  "quarters": [
+    {
+      "period": "2025-Q1",
+      "totalBase": 19420.0,
+      "totalTax": 4078.2,
+      "totalInvoiced": 23498.2,
+      "invoiceCount": 10
+    },
+    {
+      "period": "2024-Q4",
+      "totalBase": 145680.0,
+      "totalTax": 30592.8,
+      "totalInvoiced": 176272.8,
+      "invoiceCount": 78
+    },
+    {
+      "period": "2024-Q3",
+      "totalBase": 98450.0,
+      "totalTax": 20674.5,
+      "totalInvoiced": 119124.5,
+      "invoiceCount": 52
+    },
+    {
+      "period": "2024-Q2",
+      "totalBase": 125340.0,
+      "totalTax": 26321.4,
+      "totalInvoiced": 151661.4,
+      "invoiceCount": 67
+    }
+  ]
+}

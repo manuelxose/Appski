@@ -23,15 +23,7 @@ import { AdminModalComponent } from "../../shared/admin-modal/admin-modal.compon
 import { AdminConfirmDialogComponent } from "../../shared/admin-confirm-dialog/admin-confirm-dialog.component";
 import { AdminLoaderComponent } from "../../shared/admin-loader/admin-loader.component";
 import { AdminEmptyStateComponent } from "../../shared/admin-empty-state/admin-empty-state.component";
-import {
-  Shop,
-  ShopOwner,
-  ShopStats,
-  OpeningHours,
-  InventoryItem,
-  EquipmentCategory,
-  ShopFormData,
-} from "./admin-shops.models";
+import { Shop, ShopFormData } from "./admin-shops.models";
 
 @Component({
   selector: "app-admin-shops",
@@ -200,26 +192,44 @@ export class AdminShopsComponent implements OnInit {
   ];
 
   readonly tableActions: TableAction[] = [
-    { id: "edit", label: "Editar", icon: "edit", variant: "primary" },
     {
-      id: "inventory",
+      label: "Editar",
+      icon: "edit",
+      variant: "primary",
+      handler: () => {
+        /* Handled by handleActionClick */
+      },
+    },
+    {
       label: "Inventario",
       icon: "inventory",
       variant: "secondary",
+      handler: () => {
+        /* Handled by handleActionClick */
+      },
     },
     {
-      id: "rentals",
       label: "Alquileres",
       icon: "calendar",
       variant: "secondary",
+      handler: () => {
+        /* Handled by handleActionClick */
+      },
     },
-    { id: "delete", label: "Eliminar", icon: "delete", variant: "danger" },
+    {
+      label: "Eliminar",
+      icon: "delete",
+      variant: "danger",
+      handler: () => {
+        /* Handled by handleActionClick */
+      },
+    },
   ];
 
   // Filter fields
   readonly filterFields: FilterField[] = [
     {
-      id: "type",
+      key: "type",
       label: "Tipo",
       type: "select",
       options: [
@@ -230,7 +240,7 @@ export class AdminShopsComponent implements OnInit {
       ],
     },
     {
-      id: "station",
+      key: "station",
       label: "Estación",
       type: "select",
       options: [
@@ -241,7 +251,7 @@ export class AdminShopsComponent implements OnInit {
       ],
     },
     {
-      id: "status",
+      key: "status",
       label: "Estado",
       type: "select",
       options: [
@@ -542,7 +552,7 @@ export class AdminShopsComponent implements OnInit {
   toggleService(service: string): void {
     const current = this.formData().services;
     const updated = current.includes(service)
-      ? current.filter((s) => s !== service)
+      ? current.filter((s: string) => s !== service)
       : [...current, service];
     this.formData.update((form) => ({ ...form, services: updated }));
   }

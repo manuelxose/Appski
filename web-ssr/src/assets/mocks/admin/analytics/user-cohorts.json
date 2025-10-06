@@ -1,0 +1,74 @@
+[
+  {
+    "cohortMonth": "2024-10",
+    "cohortSize": 1250,
+    "retention": {
+      "month0": 100,
+      "month1": 68,
+      "month2": 52,
+      "month3": 45,
+      "month6": 38,
+      "month12": 32
+    }
+  },
+  {
+    "cohortMonth": "2024-09",
+    "cohortSize": 1180,
+    "retention": {
+      "month0": 100,
+      "month1": 72,
+      "month2": 56,
+      "month3": 48,
+      "month6": 40,
+      "month12": 35
+    }
+  },
+  {
+    "cohortMonth": "2024-08",
+    "cohortSize": 1320,
+    "retention": {
+      "month0": 100,
+      "month1": 65,
+      "month2": 50,
+      "month3": 42,
+      "month6": 36,
+      "month12": 30
+    }
+  },
+  {
+    "cohortMonth": "2024-07",
+    "cohortSize": 1420,
+    "retention": {
+      "month0": 100,
+      "month1": 70,
+      "month2": 54,
+      "month3": 46,
+      "month6": 39,
+      "month12": 33
+    }
+  },
+  {
+    "cohortMonth": "2024-06",
+    "cohortSize": 1560,
+    "retention": {
+      "month0": 100,
+      "month1": 75,
+      "month2": 60,
+      "month3": 52,
+      "month6": 45,
+      "month12": 38
+    }
+  },
+  {
+    "cohortMonth": "2024-05",
+    "cohortSize": 1280,
+    "retention": {
+      "month0": 100,
+      "month1": 68,
+      "month2": 53,
+      "month3": 44,
+      "month6": 37,
+      "month12": 31
+    }
+  }
+]

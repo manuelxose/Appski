@@ -1,0 +1,251 @@
+/* Admin Inventory Specific Styles */
+@import url("../admin-analytics-stations/admin-analytics-stations.component.css");
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--neutral-50) 0%,
+    var(--neutral-100) 100%
+  );
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
+}
+.category-icon {
+  font-size: 2.5rem;
+}
+.category-info {
+  flex: 1;
+}
+.category-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.5rem;
+}
+.category-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.stat-item {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+/* Product Info in Table */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.product-icon {
+  font-size: 1.5rem;
+}
+.product-name {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+.product-brand {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-top: 0.125rem;
+}
+.product-size {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+  margin-top: 0.125rem;
+}
+
+/* SKU Code */
+.sku-code {
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  color: var(--neutral-700);
+}
+
+/* Stock Info */
+.stock-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+.stock-quantity {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--neutral-900);
+}
+.stock-range {
+  font-size: 0.875rem;
+  color: var(--neutral-500);
+}
+
+/* Rotation Info */
+.rotation-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rotation-count {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--primary-600);
+}
+.rotation-label {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+
+/* Top Products List */
+.top-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.top-product-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.top-product-item:hover {
+  background: var(--neutral-100);
+  transform: translateX(4px);
+}
+.product-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-500) 0%,
+    var(--primary-600) 100%
+  );
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.product-details {
+  flex: 1;
+}
+.product-meta {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+  margin-top: 0.125rem;
+}
+.product-rentals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.rentals-count {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-600);
+}
+.rentals-label {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+
+/* Movements List */
+.movements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.movement-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.movement-item:hover {
+  background: var(--neutral-100);
+}
+.movement-icon {
+  font-size: 1.5rem;
+}
+.movement-details {
+  flex: 1;
+}
+.movement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.movement-date {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+.movement-product {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+.movement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+}
+.movement-meta span::after {
+  content: "•";
+  margin-left: 0.5rem;
+  color: var(--neutral-400);
+}
+.movement-meta span:last-child::after {
+  content: none;
+}
+
+/* Bottom Grid */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+}

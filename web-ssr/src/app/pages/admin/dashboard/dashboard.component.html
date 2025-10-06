@@ -1,4 +1,4 @@
-<!-- Admin Dashboard - Overview -->
+<!-- Admin Dashboard - Unified Overview -->
 <div class="dashboard">
   <!-- Breadcrumbs -->
   <app-admin-breadcrumbs [items]="[{ label: 'Dashboard', icon: '📊' }]" />
@@ -6,205 +6,101 @@
   <!-- Page Header -->
   <div class="dashboard-header">
     <div>
-      <h1 class="dashboard-title">Dashboard</h1>
-      <p class="dashboard-subtitle">Resumen general de la plataforma</p>
-    </div>
-    <div class="dashboard-actions">
-      <button class="btn-secondary">
-        <svg
-          class="btn-icon"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-          />
-        </svg>
-        <span>Exportar</span>
-      </button>
+      <h1 class="dashboard-title">Panel de Administración</h1>
+      <p class="dashboard-subtitle">
+        Gestión centralizada de 28 módulos · Plataforma Nieve
+      </p>
     </div>
   </div>
 
-  <!-- Metrics Grid -->
-  <div class="metrics-grid">
-    @for (metric of metrics(); track metric.title) {
-    <div class="metric-card" [attr.data-color]="metric.color">
-      <div class="metric-header">
-        <div class="metric-icon">
-          <span class="material-icons">{{ metric.icon }}</span>
-        </div>
-        <div
-          class="metric-change"
-          [class.positive]="metric.change > 0"
-          [class.negative]="metric.change < 0"
-        >
-          <svg
-            class="change-icon"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            @if (metric.change > 0) {
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-            } @else {
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-            }
-          </svg>
-          <span>{{ metric.change > 0 ? "+" : "" }}{{ metric.change }}%</span>
-        </div>
-      </div>
-      <div class="metric-body">
-        <div class="metric-value">{{ metric.value }}</div>
-        <div class="metric-label">{{ metric.title }}</div>
-        <div class="metric-sublabel">{{ metric.changeLabel }}</div>
+  <!-- Quick Stats -->
+  <div class="quick-stats">
+    @for (stat of quickStats(); track stat.label) {
+    <div class="stat-card" [attr.data-color]="stat.color">
+      <div class="stat-icon">{{ stat.icon }}</div>
+      <div class="stat-content">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
       </div>
     </div>
     }
   </div>
 
-  <!-- Content Grid -->
-  <div class="content-grid">
-    <!-- Top Stations -->
-    <div class="card-panel">
-      <div class="panel-header">
-        <div>
-          <h2 class="panel-title">Top Estaciones</h2>
-          <p class="panel-subtitle">Por número de reservas</p>
-        </div>
-        <button class="btn-ghost-sm">Ver todas</button>
-      </div>
-      <div class="panel-content">
-        <div class="stations-list">
-          @for (station of topStations(); track station.name; let i = $index) {
-          <div class="station-item">
-            <div class="station-rank">{{ i + 1 }}</div>
-            <div class="station-info">
-              <div class="station-name">{{ station.name }}</div>
-              <div class="station-stats">
-                <span class="station-bookings"
-                  >{{ station.bookings }} reservas</span
-                >
-                <span class="station-revenue">{{ station.revenue }}</span>
-              </div>
-            </div>
-            <div
-              class="station-change"
-              [class.positive]="station.change > 0"
-              [class.negative]="station.change < 0"
-            >
-              {{ station.change > 0 ? "+" : "" }}{{ station.change }}%
-            </div>
+  <!-- Module Groups -->
+  <div class="module-groups">
+    @for (group of moduleGroups(); track group.id) {
+    <div class="module-group">
+      <!-- Group Header -->
+      <div class="group-header" [attr.data-color]="group.color">
+        <div class="group-title-section">
+          <div class="group-icon">{{ group.icon }}</div>
+          <div>
+            <h2 class="group-title">{{ group.name }}</h2>
+            <p class="group-description">{{ group.description }}</p>
           </div>
-          }
         </div>
+        <div class="group-badge">{{ group.modules.length }} módulos</div>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="modules-grid">
+        @for (module of group.modules; track module.route) {
+        <a [routerLink]="module.route" class="module-card">
+          <div class="module-card-header">
+            <div class="module-icon" [attr.data-color]="module.color">
+              {{ module.icon }}
+            </div>
+            @if (module.count !== undefined) {
+            <div class="module-count">{{ module.count }}</div>
+            }
+          </div>
+
+          <div class="module-card-body">
+            <h3 class="module-title">{{ module.title }}</h3>
+            <p class="module-description">{{ module.description }}</p>
+
+            @if (module.status) {
+            <div class="module-status">
+              <span class="status-dot"></span>
+              <span class="status-text">{{ module.status }}</span>
+            </div>
+            }
+          </div>
+
+          <div class="module-card-footer">
+            <span class="module-link">
+              Abrir módulo
+              <svg
+                class="link-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+        }
       </div>
     </div>
+    }
+  </div>
 
-    <!-- Recent Activity -->
-    <div class="card-panel">
-      <div class="panel-header">
-        <div>
-          <h2 class="panel-title">Actividad Reciente</h2>
-          <p class="panel-subtitle">Últimas acciones en la plataforma</p>
-        </div>
-      </div>
-      <div class="panel-content">
-        <div class="activity-list">
-          @for (activity of recentActivity(); track activity.id) {
-          <div class="activity-item">
-            <div class="activity-icon" [attr.data-type]="activity.type">
-              @switch (activity.type) { @case ('booking') {
-              <span class="material-icons">receipt_long</span>
-              } @case ('user') {
-              <span class="material-icons">person_add</span>
-              } @case ('blog') {
-              <span class="material-icons">article</span>
-              } @case ('station') {
-              <span class="material-icons">terrain</span>
-              } }
-            </div>
-            <div class="activity-content">
-              <div class="activity-title">{{ activity.title }}</div>
-              <div class="activity-description">{{ activity.description }}</div>
-              <div class="activity-meta">
-                <span class="activity-user">{{ activity.user }}</span>
-                <span class="activity-separator">·</span>
-                <span class="activity-time">{{ activity.time }}</span>
-              </div>
-            </div>
-          </div>
-          }
-        </div>
-      </div>
-    </div>
-
-    <!-- Revenue Chart (Placeholder) -->
-    <div class="card-panel panel-span-2">
-      <div class="panel-header">
-        <div>
-          <h2 class="panel-title">Ingresos Mensuales</h2>
-          <p class="panel-subtitle">Últimos 6 meses</p>
-        </div>
-        <div class="chart-legend">
-          <div class="legend-item">
-            <span
-              class="legend-dot"
-              style="background: var(--primary-500)"
-            ></span>
-            <span class="legend-label">Ingresos</span>
-          </div>
-          <div class="legend-item">
-            <span
-              class="legend-dot"
-              style="background: var(--success-500)"
-            ></span>
-            <span class="legend-label">Objetivo</span>
-          </div>
-        </div>
-      </div>
-      <div class="panel-content">
-        <div class="chart-placeholder">
-          <div class="chart-bars">
-            <div class="chart-bar" style="--height: 65%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">Ene</span>
-            </div>
-            <div class="chart-bar" style="--height: 72%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">Feb</span>
-            </div>
-            <div class="chart-bar" style="--height: 58%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">Mar</span>
-            </div>
-            <div class="chart-bar" style="--height: 85%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">Abr</span>
-            </div>
-            <div class="chart-bar" style="--height: 78%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">May</span>
-            </div>
-            <div class="chart-bar" style="--height: 92%">
-              <div class="bar-fill"></div>
-              <span class="bar-label">Jun</span>
-            </div>
-          </div>
-        </div>
+  <!-- System Info -->
+  <div class="system-info">
+    <div class="info-card">
+      <div class="info-icon">ℹ️</div>
+      <div class="info-content">
+        <h3 class="info-title">Estado del Sistema</h3>
+        <p class="info-text">
+          Todos los módulos operativos · Última actualización: Hoy a las 14:30
+        </p>
       </div>
     </div>
   </div>

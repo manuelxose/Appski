@@ -1,0 +1,162 @@
+[
+  {
+    "date": "2024-01-01",
+    "dau": 12450,
+    "mau": 45820,
+    "dauMauRatio": 0.272,
+    "avgSessionDuration": 18,
+    "avgSessionsPerUser": 2.4
+  },
+  {
+    "date": "2024-01-02",
+    "dau": 12680,
+    "mau": 45920,
+    "dauMauRatio": 0.276,
+    "avgSessionDuration": 19,
+    "avgSessionsPerUser": 2.5
+  },
+  {
+    "date": "2024-01-03",
+    "dau": 12920,
+    "mau": 46050,
+    "dauMauRatio": 0.281,
+    "avgSessionDuration": 19,
+    "avgSessionsPerUser": 2.5
+  },
+  {
+    "date": "2024-01-04",
+    "dau": 13150,
+    "mau": 46180,
+    "dauMauRatio": 0.285,
+    "avgSessionDuration": 20,
+    "avgSessionsPerUser": 2.6
+  },
+  {
+    "date": "2024-01-05",
+    "dau": 13390,
+    "mau": 46320,
+    "dauMauRatio": 0.289,
+    "avgSessionDuration": 20,
+    "avgSessionsPerUser": 2.6
+  },
+  {
+    "date": "2024-01-06",
+    "dau": 13620,
+    "mau": 46460,
+    "dauMauRatio": 0.293,
+    "avgSessionDuration": 21,
+    "avgSessionsPerUser": 2.7
+  },
+  {
+    "date": "2024-01-07",
+    "dau": 13860,
+    "mau": 46600,
+    "dauMauRatio": 0.297,
+    "avgSessionDuration": 21,
+    "avgSessionsPerUser": 2.7
+  },
+  {
+    "date": "2024-01-08",
+    "dau": 14090,
+    "mau": 46740,
+    "dauMauRatio": 0.301,
+    "avgSessionDuration": 22,
+    "avgSessionsPerUser": 2.8
+  },
+  {
+    "date": "2024-01-09",
+    "dau": 14330,
+    "mau": 46890,
+    "dauMauRatio": 0.306,
+    "avgSessionDuration": 22,
+    "avgSessionsPerUser": 2.8
+  },
+  {
+    "date": "2024-01-10",
+    "dau": 14560,
+    "mau": 47030,
+    "dauMauRatio": 0.31,
+    "avgSessionDuration": 23,
+    "avgSessionsPerUser": 2.9
+  },
+  {
+    "date": "2024-01-11",
+    "dau": 14800,
+    "mau": 47180,
+    "dauMauRatio": 0.314,
+    "avgSessionDuration": 23,
+    "avgSessionsPerUser": 2.9
+  },
+  {
+    "date": "2024-01-12",
+    "dau": 15030,
+    "mau": 47320,
+    "dauMauRatio": 0.318,
+    "avgSessionDuration": 24,
+    "avgSessionsPerUser": 3.0
+  },
+  {
+    "date": "2024-01-13",
+    "dau": 15270,
+    "mau": 47470,
+    "dauMauRatio": 0.322,
+    "avgSessionDuration": 24,
+    "avgSessionsPerUser": 3.0
+  },
+  {
+    "date": "2024-01-14",
+    "dau": 15500,
+    "mau": 47610,
+    "dauMauRatio": 0.326,
+    "avgSessionDuration": 25,
+    "avgSessionsPerUser": 3.1
+  },
+  {
+    "date": "2024-01-15",
+    "dau": 15740,
+    "mau": 47760,
+    "dauMauRatio": 0.33,
+    "avgSessionDuration": 25,
+    "avgSessionsPerUser": 3.1
+  },
+  {
+    "date": "2024-01-16",
+    "dau": 15970,
+    "mau": 47900,
+    "dauMauRatio": 0.333,
+    "avgSessionDuration": 26,
+    "avgSessionsPerUser": 3.2
+  },
+  {
+    "date": "2024-01-17",
+    "dau": 16210,
+    "mau": 48050,
+    "dauMauRatio": 0.337,
+    "avgSessionDuration": 26,
+    "avgSessionsPerUser": 3.2
+  },
+  {
+    "date": "2024-01-18",
+    "dau": 16440,
+    "mau": 48190,
+    "dauMauRatio": 0.341,
+    "avgSessionDuration": 27,
+    "avgSessionsPerUser": 3.3
+  },
+  {
+    "date": "2024-01-19",
+    "dau": 16680,
+    "mau": 48340,
+    "dauMauRatio": 0.345,
+    "avgSessionDuration": 27,
+    "avgSessionsPerUser": 3.3
+  },
+  {
+    "date": "2024-01-20",
+    "dau": 16910,
+    "mau": 48480,
+    "dauMauRatio": 0.349,
+    "avgSessionDuration": 28,
+    "avgSessionsPerUser": 3.4
+  }
+]

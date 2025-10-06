@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Usuarios Activos (30d)",
+    "value": 18450,
+    "prediction": 19720,
+    "confidence": 87.5,
+    "trend": "up"
+  },
+  {
+    "name": "Tasa de Churn",
+    "value": 12.6,
+    "prediction": 13.4,
+    "confidence": 82.3,
+    "trend": "up"
+  },
+  {
+    "name": "LTV Promedio",
+    "value": 650,
+    "prediction": 720,
+    "confidence": 78.9,
+    "trend": "up"
+  },
+  {
+    "name": "Conversión a Premium",
+    "value": 18.5,
+    "prediction": 20.2,
+    "confidence": 75.4,
+    "trend": "up"
+  },
+  {
+    "name": "Engagement Score",
+    "value": 68,
+    "prediction": 64,
+    "confidence": 71.2,
+    "trend": "down"
+  }
+]

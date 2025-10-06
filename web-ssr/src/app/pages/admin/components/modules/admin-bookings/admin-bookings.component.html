@@ -59,7 +59,7 @@
 
     <app-admin-filters
       [fields]="filterFields"
-      (filterChange)="onFilterChange($event)"
+      (filterChange)="onFilterChange($any($event))"
       (filterReset)="onFilterReset()"
     />
 
@@ -87,10 +87,9 @@
     />
 
     <app-admin-pagination
-      [currentPage]="currentPage()"
-      [totalPages]="totalPages()"
+      [page]="currentPage()"
+      [total]="totalPages()"
       [pageSize]="pageSize()"
-      [totalItems]="totalBookings()"
       (pageChange)="onPageChange($event)"
       (pageSizeChange)="onPageSizeChange($event)"
     />
@@ -104,16 +103,12 @@
     title="No hay reservas"
     description="No se encontraron reservas con los filtros aplicados"
     [actionLabel]="
-      searchQuery() ||
-      Object.keys(activeFilters()).length > 0 ||
-      dateRange().startDate
+      searchQuery() || dateRange().startDate
         ? 'Limpiar filtros'
         : 'Crear primera reserva'
     "
     (primaryAction)="
-      searchQuery() ||
-      Object.keys(activeFilters()).length > 0 ||
-      dateRange().startDate
+      searchQuery() || dateRange().startDate
         ? onFilterReset()
         : openCreateModal()
     "
@@ -317,27 +312,27 @@
         <div class="detail-grid">
           <div class="detail-item">
             <span class="detail-label">Referencia:</span>
-            <span class="detail-value">{{
-              selectedBookingDetails()!.bookingReference
-            }}</span>
+            <span class="detail-value"
+              >REF-{{ selectedBookingDetails()!.id }}</span
+            >
           </div>
           <div class="detail-item">
             <span class="detail-label">Estado:</span>
             <app-admin-badge
-              [label]="getStatusLabel(selectedBookingDetails()!.status)"
+              [text]="getStatusLabel(selectedBookingDetails()!.status)"
               [variant]="getBadgeVariant(selectedBookingDetails()!.status)"
             />
           </div>
           <div class="detail-item">
             <span class="detail-label">Estación:</span>
             <span class="detail-value">{{
-              formatStationName(selectedBookingDetails()!.stationSlug)
+              selectedBookingDetails()!.stationSlug
             }}</span>
           </div>
           <div class="detail-item">
             <span class="detail-label">Servicio:</span>
             <span class="detail-value">{{
-              formatServiceType(selectedBookingDetails()!.serviceType)
+              selectedBookingDetails()!.serviceType
             }}</span>
           </div>
         </div>

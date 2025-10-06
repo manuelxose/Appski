@@ -1,0 +1,412 @@
+[
+  {
+    "id": "INC-2025-001",
+    "title": "Caída esquiador en Pista Principal",
+    "description": "Esquiador perdió el control en zona de hielo y colisionó con protección. Lesiones leves en brazo derecho.",
+    "category": "accident",
+    "severity": "medium",
+    "status": "resolved",
+    "location": "Pista Principal - Sector Medio",
+    "reportedBy": "Patrullero Turno 1",
+    "reportedDate": "2025-10-01T11:30:00Z",
+    "assignedTo": "Responsable Seguridad",
+    "resolvedDate": "2025-10-01T12:15:00Z",
+    "resolutionTime": 45,
+    "affectedPeople": 1,
+    "injuries": true,
+    "actions": [
+      {
+        "id": "act-001",
+        "timestamp": "2025-10-01T11:30:00Z",
+        "performedBy": "Patrullero Turno 1",
+        "action": "Incidente reportado. Asistencia inmediata."
+      },
+      {
+        "id": "act-002",
+        "timestamp": "2025-10-01T11:45:00Z",
+        "performedBy": "Equipo Médico",
+        "action": "Evaluación en sitio. Lesión menor, no requiere evacuación."
+      },
+      {
+        "id": "act-003",
+        "timestamp": "2025-10-01T12:15:00Z",
+        "performedBy": "Responsable Seguridad",
+        "action": "Incidente resuelto. Esquiador atendido y área revisada."
+      }
+    ],
+    "rootCause": "Zona de hielo en curva pronunciada",
+    "preventiveMeasures": "Reforzar señalización y aumentar frecuencia de pisado en zona",
+    "cost": 0
+  },
+  {
+    "id": "INC-2025-002",
+    "title": "Avería Telesilla Valdelinares I - Fallo motor principal",
+    "description": "Motor principal de telesilla se detuvo inesperadamente durante operación. 45 pasajeros evacuados mediante protocolo de emergencia.",
+    "category": "equipment-failure",
+    "severity": "critical",
+    "status": "in-progress",
+    "location": "Telesilla Valdelinares I",
+    "reportedBy": "Operador Telesilla",
+    "reportedDate": "2025-10-02T09:15:00Z",
+    "assignedTo": "Técnico Doppelmayr Certificado",
+    "affectedEquipment": "Motor principal Doppelmayr 4-CLD",
+    "affectedPeople": 45,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-004",
+        "timestamp": "2025-10-02T09:15:00Z",
+        "performedBy": "Operador Telesilla",
+        "action": "Parada de emergencia activada. Protocolo de evacuación iniciado."
+      },
+      {
+        "id": "act-005",
+        "timestamp": "2025-10-02T09:30:00Z",
+        "performedBy": "Equipo Evacuación",
+        "action": "Evacuación manual de 45 pasajeros completada sin incidentes."
+      },
+      {
+        "id": "act-006",
+        "timestamp": "2025-10-02T10:00:00Z",
+        "performedBy": "Técnico Mantenimiento",
+        "action": "Diagnóstico inicial: posible fallo en sistema de refrigeración del motor."
+      },
+      {
+        "id": "act-007",
+        "timestamp": "2025-10-02T14:30:00Z",
+        "performedBy": "Técnico Doppelmayr",
+        "action": "Reparación en progreso. Pieza de repuesto solicitada."
+      }
+    ],
+    "rootCause": "Fallo en bomba de refrigeración del motor",
+    "cost": 8500.0
+  },
+  {
+    "id": "INC-2025-003",
+    "title": "Vientos fuertes superan límite operacional",
+    "description": "Ráfagas de viento alcanzaron 85 km/h, superando límite de 60 km/h para operación segura de telesillas.",
+    "category": "weather",
+    "severity": "high",
+    "status": "closed",
+    "location": "Todas las pistas",
+    "reportedBy": "Estación Meteorológica",
+    "reportedDate": "2025-09-28T13:00:00Z",
+    "assignedTo": "Director Operaciones",
+    "resolvedDate": "2025-09-28T17:30:00Z",
+    "resolutionTime": 270,
+    "affectedPeople": 0,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-008",
+        "timestamp": "2025-09-28T13:00:00Z",
+        "performedBy": "Director Operaciones",
+        "action": "Cierre preventivo de todas las telesillas por vientos fuertes."
+      },
+      {
+        "id": "act-009",
+        "timestamp": "2025-09-28T13:15:00Z",
+        "performedBy": "Operadores",
+        "action": "Evacuación ordenada de últimos pasajeros en telesillas."
+      },
+      {
+        "id": "act-010",
+        "timestamp": "2025-09-28T17:30:00Z",
+        "performedBy": "Director Operaciones",
+        "action": "Condiciones normalizadas. Reapertura gradual de instalaciones."
+      }
+    ],
+    "rootCause": "Condiciones meteorológicas adversas",
+    "preventiveMeasures": "Protocolo de seguridad ejecutado correctamente",
+    "cost": 4500.0
+  },
+  {
+    "id": "INC-2025-004",
+    "title": "Corte eléctrico parcial en Cafetería Principal",
+    "description": "Fallo en cuadro eléctrico causó pérdida de alimentación en zona de cocinas. Servicio interrumpido 2 horas.",
+    "category": "infrastructure",
+    "severity": "medium",
+    "status": "resolved",
+    "location": "Edificio Cafetería Principal",
+    "reportedBy": "Encargado Cafetería",
+    "reportedDate": "2025-09-30T12:00:00Z",
+    "assignedTo": "Electricista Certificado",
+    "resolvedDate": "2025-09-30T14:15:00Z",
+    "resolutionTime": 135,
+    "affectedEquipment": "Cuadro eléctrico zona cocinas",
+    "affectedPeople": 0,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-011",
+        "timestamp": "2025-09-30T12:00:00Z",
+        "performedBy": "Encargado Cafetería",
+        "action": "Reportado corte eléctrico en zona de cocinas."
+      },
+      {
+        "id": "act-012",
+        "timestamp": "2025-09-30T12:30:00Z",
+        "performedBy": "Electricista",
+        "action": "Diagnóstico: magnetotérmico defectuoso en cuadro principal."
+      },
+      {
+        "id": "act-013",
+        "timestamp": "2025-09-30T14:15:00Z",
+        "performedBy": "Electricista",
+        "action": "Magnetotérmico sustituido. Alimentación restablecida."
+      }
+    ],
+    "rootCause": "Magnetotérmico defectuoso por antigüedad",
+    "preventiveMeasures": "Programar revisión completa cuadros eléctricos",
+    "cost": 320.0
+  },
+  {
+    "id": "INC-2025-005",
+    "title": "Detección tardía zona de hielo Pista Norte",
+    "description": "Zona de hielo no señalizada correctamente en Pista Norte Superior causó 3 caídas menores en 1 hora.",
+    "category": "safety",
+    "severity": "high",
+    "status": "resolved",
+    "location": "Pista Norte Superior",
+    "reportedBy": "Patrullero Turno 2",
+    "reportedDate": "2025-09-29T10:30:00Z",
+    "assignedTo": "Jefe Pisteros",
+    "resolvedDate": "2025-09-29T11:45:00Z",
+    "resolutionTime": 75,
+    "affectedPeople": 3,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-014",
+        "timestamp": "2025-09-29T10:30:00Z",
+        "performedBy": "Patrullero Turno 2",
+        "action": "Reportadas múltiples caídas en zona específica."
+      },
+      {
+        "id": "act-015",
+        "timestamp": "2025-09-29T10:45:00Z",
+        "performedBy": "Jefe Pisteros",
+        "action": "Área inspeccionada. Confirmada placa de hielo sin señalizar."
+      },
+      {
+        "id": "act-016",
+        "timestamp": "2025-09-29T11:00:00Z",
+        "performedBy": "Equipo Pisapistas",
+        "action": "Señalización colocada y tratamiento de zona con sal."
+      },
+      {
+        "id": "act-017",
+        "timestamp": "2025-09-29T11:45:00Z",
+        "performedBy": "Jefe Pisteros",
+        "action": "Zona tratada y segura. Incidente cerrado."
+      }
+    ],
+    "rootCause": "Formación nocturna de hielo no detectada en revisión matinal",
+    "preventiveMeasures": "Reforzar protocolos de inspección pre-apertura",
+    "cost": 0
+  },
+  {
+    "id": "INC-2025-006",
+    "title": "Colisión menor entre esquiadores en zona principiantes",
+    "description": "Dos esquiadores novatos colisionaron en zona de debutantes. Sin lesiones graves, atención in situ.",
+    "category": "accident",
+    "severity": "low",
+    "status": "closed",
+    "location": "Zona Debutantes - Telesilla Infantil",
+    "reportedBy": "Monitor Escuela Esquí",
+    "reportedDate": "2025-09-27T15:00:00Z",
+    "assignedTo": "Responsable Seguridad",
+    "resolvedDate": "2025-09-27T15:20:00Z",
+    "resolutionTime": 20,
+    "affectedPeople": 2,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-018",
+        "timestamp": "2025-09-27T15:00:00Z",
+        "performedBy": "Monitor Escuela",
+        "action": "Colisión reportada. Asistencia inmediata."
+      },
+      {
+        "id": "act-019",
+        "timestamp": "2025-09-27T15:10:00Z",
+        "performedBy": "Patrullero",
+        "action": "Evaluación: esquiadores sin lesiones, solo susto."
+      },
+      {
+        "id": "act-020",
+        "timestamp": "2025-09-27T15:20:00Z",
+        "performedBy": "Responsable Seguridad",
+        "action": "Incidente menor cerrado. Recomendaciones dadas a esquiadores."
+      }
+    ],
+    "rootCause": "Falta de experiencia y exceso de velocidad",
+    "preventiveMeasures": "Reforzar presencia de monitores en zona principiantes",
+    "cost": 0
+  },
+  {
+    "id": "INC-2025-007",
+    "title": "Fuga menor en sistema de innivación",
+    "description": "Detectada fuga en tubería principal de agua para innivación. Pérdida estimada 500 litros/hora.",
+    "category": "infrastructure",
+    "severity": "medium",
+    "status": "resolved",
+    "location": "Central Innivación - Tubería Sector Norte",
+    "reportedBy": "Operador Innivación",
+    "reportedDate": "2025-09-26T08:00:00Z",
+    "assignedTo": "Técnico Hydro Snow",
+    "resolvedDate": "2025-09-26T14:30:00Z",
+    "resolutionTime": 390,
+    "affectedEquipment": "Tubería principal Ø100mm",
+    "affectedPeople": 0,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-021",
+        "timestamp": "2025-09-26T08:00:00Z",
+        "performedBy": "Operador Innivación",
+        "action": "Fuga detectada durante inspección rutinaria."
+      },
+      {
+        "id": "act-022",
+        "timestamp": "2025-09-26T09:00:00Z",
+        "performedBy": "Técnico Hydro Snow",
+        "action": "Sector aislado. Diagnóstico: fisura en soldadura."
+      },
+      {
+        "id": "act-023",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "performedBy": "Técnico Hydro Snow",
+        "action": "Soldadura reparada y sector reintegrado. Presión normalizada."
+      }
+    ],
+    "rootCause": "Fisura por dilatación térmica en soldadura antigua",
+    "preventiveMeasures": "Incluir inspección termográfica en mantenimientos",
+    "cost": 850.0
+  },
+  {
+    "id": "INC-2025-008",
+    "title": "Pisapistas atascado en zona de nieve profunda",
+    "description": "Vehículo pisapistas quedó atascado en acumulación de nieve no compactada. Requirió asistencia de segundo vehículo.",
+    "category": "equipment-failure",
+    "severity": "low",
+    "status": "closed",
+    "location": "Pista Este - Zona fuera pista",
+    "reportedBy": "Operador Pisapistas",
+    "reportedDate": "2025-09-25T22:00:00Z",
+    "assignedTo": "Jefe Pisteros",
+    "resolvedDate": "2025-09-25T23:15:00Z",
+    "resolutionTime": 75,
+    "affectedEquipment": "Pisapistas Prinoth Bison X",
+    "affectedPeople": 0,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-024",
+        "timestamp": "2025-09-25T22:00:00Z",
+        "performedBy": "Operador Pisapistas",
+        "action": "Vehículo atascado en nieve profunda. Asistencia requerida."
+      },
+      {
+        "id": "act-025",
+        "timestamp": "2025-09-25T22:30:00Z",
+        "performedBy": "Segundo Operador",
+        "action": "Segundo vehículo en camino con cable de remolque."
+      },
+      {
+        "id": "act-026",
+        "timestamp": "2025-09-25T23:15:00Z",
+        "performedBy": "Jefe Pisteros",
+        "action": "Vehículo liberado. Sin daños. Operación normalizada."
+      }
+    ],
+    "rootCause": "Evaluación incorrecta de profundidad de nieve",
+    "preventiveMeasures": "Formación adicional sobre evaluación de terreno",
+    "cost": 0
+  },
+  {
+    "id": "INC-2025-009",
+    "title": "Alarma antiincendios activada falsamente",
+    "description": "Sistema de alarma antiincendios se activó en Cafetería Principal por vapor de cocina. Evacuación preventiva realizada.",
+    "category": "safety",
+    "severity": "medium",
+    "status": "closed",
+    "location": "Edificio Cafetería Principal",
+    "reportedBy": "Sistema Automático",
+    "reportedDate": "2025-09-24T13:30:00Z",
+    "assignedTo": "Responsable Mantenimiento",
+    "resolvedDate": "2025-09-24T14:00:00Z",
+    "resolutionTime": 30,
+    "affectedPeople": 80,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-027",
+        "timestamp": "2025-09-24T13:30:00Z",
+        "performedBy": "Sistema Automático",
+        "action": "Alarma antiincendios activada en zona cocinas."
+      },
+      {
+        "id": "act-028",
+        "timestamp": "2025-09-24T13:35:00Z",
+        "performedBy": "Personal Cafetería",
+        "action": "Evacuación ordenada de 80 personas completada."
+      },
+      {
+        "id": "act-029",
+        "timestamp": "2025-09-24T13:45:00Z",
+        "performedBy": "Técnico PCI",
+        "action": "Inspección completada: falsa alarma por vapor de cocina."
+      },
+      {
+        "id": "act-030",
+        "timestamp": "2025-09-24T14:00:00Z",
+        "performedBy": "Responsable Mantenimiento",
+        "action": "Sistema rearmed. Personas reingresaron. Detector reubicado."
+      }
+    ],
+    "rootCause": "Detector de humo mal ubicado cerca de zona de cocción",
+    "preventiveMeasures": "Reubicación de detector y calibración de sensibilidad",
+    "cost": 180.0
+  },
+  {
+    "id": "INC-2025-010",
+    "title": "Cañón de nieve con boquillas obstruidas",
+    "description": "Cañón de nieve Sector Sur 3 produciendo nieve irregular por obstrucción en sistema de boquillas.",
+    "category": "equipment-failure",
+    "severity": "low",
+    "status": "resolved",
+    "location": "Pista Sur - Cañón Sur 3",
+    "reportedBy": "Operador Innivación",
+    "reportedDate": "2025-09-23T06:00:00Z",
+    "assignedTo": "David López",
+    "resolvedDate": "2025-09-23T08:30:00Z",
+    "resolutionTime": 150,
+    "affectedEquipment": "Cañón de nieve Snow Factory SF-M200",
+    "affectedPeople": 0,
+    "injuries": false,
+    "actions": [
+      {
+        "id": "act-031",
+        "timestamp": "2025-09-23T06:00:00Z",
+        "performedBy": "Operador Innivación",
+        "action": "Detectada producción irregular de nieve en cañón Sur 3."
+      },
+      {
+        "id": "act-032",
+        "timestamp": "2025-09-23T07:00:00Z",
+        "performedBy": "David López",
+        "action": "Inspección: boquillas obstruidas por impurezas en agua."
+      },
+      {
+        "id": "act-033",
+        "timestamp": "2025-09-23T08:30:00Z",
+        "performedBy": "David López",
+        "action": "Limpieza de boquillas completada. Producción normalizada."
+      }
+    ],
+    "rootCause": "Filtros de agua insuficientes en sistema de alimentación",
+    "preventiveMeasures": "Instalación de filtros adicionales en línea de agua",
+    "cost": 120.0
+  }
+]

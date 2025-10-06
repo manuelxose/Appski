@@ -1,0 +1,314 @@
+<!-- Header -->
+<div class="admin-header">
+  <div class="breadcrumbs">
+    <span class="breadcrumb-item">Admin</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item">Financiero</span>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-item active">Facturación</span>
+  </div>
+
+  <div class="header-content">
+    <div class="header-text">
+      <h1>Facturación</h1>
+      <p>Gestión de facturas, series y recordatorios</p>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="refreshData()">
+        <span class="icon">🔄</span>
+        Actualizar
+      </button>
+      <button class="btn-primary" (click)="createInvoice()">
+        <span class="icon">+</span>
+        Nueva Factura
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="filters-bar">
+  <div class="filters-group">
+    <label>Estado</label>
+    <div class="btn-group">
+      <button
+        [class.active]="selectedStatus() === 'all'"
+        (click)="setStatus('all')"
+      >
+        Todas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'draft'"
+        (click)="setStatus('draft')"
+      >
+        Borradores
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'sent'"
+        (click)="setStatus('sent')"
+      >
+        Enviadas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'paid'"
+        (click)="setStatus('paid')"
+      >
+        Pagadas
+      </button>
+      <button
+        [class.active]="selectedStatus() === 'overdue'"
+        (click)="setStatus('overdue')"
+      >
+        Vencidas
+      </button>
+    </div>
+  </div>
+
+  <div class="filters-group">
+    <label>Serie</label>
+    <select
+      [value]="selectedSeries()"
+      (change)="setSeries($any($event.target).value)"
+    >
+      <option value="all">Todas las series</option>
+      @for (s of activeSeries(); track s.code) {
+      <option [value]="s.code">{{ s.name }} ({{ s.prefix }})</option>
+      }
+    </select>
+  </div>
+
+  <div class="filters-group">
+    <input
+      type="search"
+      placeholder="Buscar por número, cliente..."
+      [value]="searchTerm()"
+      (input)="setSearchTerm($any($event.target).value)"
+      class="search-input"
+    />
+  </div>
+</div>
+
+<!-- Stats Grid -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">📊</div>
+    <div class="stat-content">
+      <div class="stat-label">Total Facturas</div>
+      <div class="stat-value">{{ totalInvoices() }}</div>
+      <div class="stat-change positive">
+        {{ formatCurrency(totalAmount()) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">✅</div>
+    <div class="stat-content">
+      <div class="stat-label">Cobrado</div>
+      <div class="stat-value">{{ formatCurrency(paidAmount()) }}</div>
+      <div class="stat-change">
+        {{ formatPercent(collectionRate()) }} tasa cobro
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">⏳</div>
+    <div class="stat-content">
+      <div class="stat-label">Pendiente</div>
+      <div class="stat-value">{{ formatCurrency(pendingAmount()) }}</div>
+      <div class="stat-change neutral">{{ sentInvoicesCount() }} facturas</div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">⚠️</div>
+    <div class="stat-content">
+      <div class="stat-label">Vencidas</div>
+      <div class="stat-value">{{ formatCurrency(overdueAmount()) }}</div>
+      <div class="stat-change negative">
+        {{ overdueInvoices().length }} facturas
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Invoices Table -->
+<div class="data-table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Número</th>
+        <th>Cliente</th>
+        <th>Fecha Emisión</th>
+        <th>Vencimiento</th>
+        <th>Base</th>
+        <th>IVA</th>
+        <th>Total</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (isLoading()) {
+      <tr>
+        <td colspan="9" class="loading-cell">
+          <div class="spinner"></div>
+          <span>Cargando facturas...</span>
+        </td>
+      </tr>
+      } @else if (error()) {
+      <tr>
+        <td colspan="9" class="error-cell">
+          {{ error() }}
+        </td>
+      </tr>
+      } @else if (filteredInvoices().length === 0) {
+      <tr>
+        <td colspan="9" class="empty-cell">No se encontraron facturas</td>
+      </tr>
+      } @else { @for (invoice of filteredInvoices(); track invoice.id) {
+      <tr>
+        <td>
+          <div class="invoice-number">
+            <span class="number">{{ invoice.number }}</span>
+            @if (invoice.type === 'rectificative') {
+            <span class="badge badge-warning">REC</span>
+            }
+          </div>
+        </td>
+        <td>
+          <div class="client-info">
+            <div class="client-name">{{ invoice.clientName }}</div>
+            <div class="client-tax-id">{{ invoice.clientTaxId }}</div>
+          </div>
+        </td>
+        <td>{{ formatDate(invoice.issueDate) }}</td>
+        <td>
+          <div class="due-date">
+            {{ formatDate(invoice.dueDate) }}
+            @if (invoice.status === 'overdue') {
+            <span class="overdue-badge"> +{{ getDaysOverdue(invoice) }}d </span>
+            }
+          </div>
+        </td>
+        <td>{{ formatCurrency(invoice.subtotal) }}</td>
+        <td>{{ formatCurrency(invoice.taxAmount) }}</td>
+        <td class="amount-total">{{ formatCurrency(invoice.total) }}</td>
+        <td>
+          <span [class]="'status-badge ' + getStatusClass(invoice.status)">
+            {{ getStatusLabel(invoice.status) }}
+          </span>
+        </td>
+        <td>
+          <div class="actions-menu">
+            @if (invoice.status === 'draft') {
+            <button
+              class="btn-icon"
+              (click)="sendInvoice(invoice.id)"
+              title="Enviar"
+            >
+              📧
+            </button>
+            } @if (invoice.status === 'sent' || invoice.status === 'overdue') {
+            <button
+              class="btn-icon"
+              (click)="markAsPaid(invoice.id)"
+              title="Marcar como pagada"
+            >
+              ✅
+            </button>
+            } @if (canSendReminder(invoice)) {
+            <button
+              class="btn-icon"
+              (click)="sendReminder(invoice.id)"
+              title="Enviar recordatorio"
+            >
+              🔔
+            </button>
+            }
+            <button
+              class="btn-icon"
+              (click)="downloadPDF(invoice.id)"
+              title="Descargar PDF"
+            >
+              📄
+            </button>
+            @if (invoice.status === 'paid' && !invoice.parentInvoiceId) {
+            <button
+              class="btn-icon"
+              (click)="createRectificative(invoice.id)"
+              title="Crear rectificativa"
+            >
+              ↩️
+            </button>
+            }
+          </div>
+        </td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+</div>
+
+<!-- Tax Summary -->
+<div class="tax-summary-section">
+  <h2>Resumen Fiscal</h2>
+  <div class="tax-summary-grid">
+    @for (quarter of taxSummary(); track quarter.period) {
+    <div class="tax-card">
+      <div class="tax-period">{{ quarter.period }}</div>
+      <div class="tax-stats">
+        <div class="tax-stat">
+          <span class="label">Base Imponible</span>
+          <span class="value">{{ formatCurrency(quarter.totalBase) }}</span>
+        </div>
+        <div class="tax-stat">
+          <span class="label">IVA (21%)</span>
+          <span class="value">{{ formatCurrency(quarter.totalTax) }}</span>
+        </div>
+        <div class="tax-stat highlight">
+          <span class="label">Total Facturado</span>
+          <span class="value">{{ formatCurrency(quarter.totalInvoiced) }}</span>
+        </div>
+        <div class="tax-stat">
+          <span class="label">Facturas</span>
+          <span class="value">{{ quarter.invoiceCount }}</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- Series Management -->
+<div class="series-section">
+  <h2>Series de Facturación</h2>
+  <div class="series-grid">
+    @for (s of series(); track s.code) {
+    <div class="series-card" [class.inactive]="!s.isActive">
+      <div class="series-header">
+        <span class="series-prefix">{{ s.prefix }}</span>
+        <span class="series-name">{{ s.name }}</span>
+        @if (s.isDefault) {
+        <span class="badge badge-primary">Por defecto</span>
+        } @if (!s.isActive) {
+        <span class="badge badge-neutral">Inactiva</span>
+        }
+      </div>
+      <div class="series-body">
+        <p class="series-description">{{ s.description }}</p>
+        <div class="series-counter">
+          <span class="label">Próximo número:</span>
+          <span class="value"
+            >{{ s.prefix }}-{{
+              s.currentNumber.toString().padStart(4, "0")
+            }}</span
+          >
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

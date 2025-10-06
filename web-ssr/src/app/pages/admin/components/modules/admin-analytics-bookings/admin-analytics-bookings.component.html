@@ -1,0 +1,289 @@
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-content">
+    <nav class="breadcrumbs">
+      <a href="/admin">Admin</a>
+      <span class="separator">/</span>
+      <a href="/admin/analytics">Analytics</a>
+      <span class="separator">/</span>
+      <span class="current">Reservas</span>
+    </nav>
+
+    <div class="header-title-section">
+      <h1 class="page-title">Analítica de Reservas</h1>
+      <p class="page-description">
+        Distribución, ocupación y forecast de demanda
+      </p>
+    </div>
+
+    <div class="header-actions">
+      <button
+        class="btn-secondary"
+        (click)="refreshData()"
+        [disabled]="isLoading()"
+      >
+        <span class="material-icons">refresh</span>
+        <span>Actualizar</span>
+      </button>
+      <button class="btn-secondary" (click)="exportBookingsAnalytics('excel')">
+        <span class="material-icons">download</span>
+        <span>Exportar</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="filters-bar">
+    <div class="filter-group">
+      <label>Periodo</label>
+      <div class="filter-tabs">
+        <button
+          [class.active]="timeRange() === '7d'"
+          (click)="setTimeRange('7d')"
+        >
+          7 Días
+        </button>
+        <button
+          [class.active]="timeRange() === '30d'"
+          (click)="setTimeRange('30d')"
+        >
+          30 Días
+        </button>
+        <button
+          [class.active]="timeRange() === '90d'"
+          (click)="setTimeRange('90d')"
+        >
+          90 Días
+        </button>
+        <button
+          [class.active]="timeRange() === '1y'"
+          (click)="setTimeRange('1y')"
+        >
+          1 Año
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING -->
+@if (isLoading()) {
+<div class="loading-state">
+  <div class="spinner"></div>
+  <p>Cargando analítica de reservas...</p>
+</div>
+}
+
+<!-- ERROR -->
+@if (error()) {
+<div class="error-state">
+  <span class="material-icons">error_outline</span>
+  <h3>{{ error() }}</h3>
+  <button class="btn-primary" (click)="refreshData()">Reintentar</button>
+</div>
+}
+
+<!-- CONTENT -->
+@if (!isLoading() && !error()) {
+<div class="analytics-container">
+  <!-- STATS -->
+  <div class="overview-stats">
+    <div class="stat-card stat-primary">
+      <div class="stat-icon">
+        <span class="material-icons">event_available</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Total Reservas</div>
+        <div class="stat-value">{{ formatNumber(totalBookings()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-success">
+      <div class="stat-icon">
+        <span class="material-icons">euro</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Revenue Total</div>
+        <div class="stat-value">{{ formatCurrency(totalRevenue()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-info">
+      <div class="stat-icon">
+        <span class="material-icons">shopping_cart</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Valor Promedio</div>
+        <div class="stat-value">{{ formatCurrency(avgBookingValue()) }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-accent">
+      <div class="stat-icon">
+        <span class="material-icons">check_circle</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Tasa de Confirmación</div>
+        <div class="stat-value">
+          {{ formatPercent(conversionRate(), false) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card stat-danger">
+      <div class="stat-icon">
+        <span class="material-icons">cancel</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Tasa de Cancelación</div>
+        <div class="stat-value">
+          {{ formatPercent(cancellationRate(), false) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE DISTRIBUTION -->
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Distribución por Tipo de Reserva</h2>
+    </div>
+
+    <div class="type-grid">
+      @for (type of typeDistribution(); track type.type) {
+      <div
+        class="type-card"
+        (click)="selectType(type.type)"
+        [class.selected]="selectedType() === type.type"
+      >
+        <div class="type-header" [style.background]="type.color">
+          <h3>{{ type.label }}</h3>
+        </div>
+        <div class="type-metrics">
+          <div class="metric">
+            <span class="metric-label">Reservas</span>
+            <span class="metric-value">{{ formatNumber(type.count) }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Revenue</span>
+            <span class="metric-value">{{ formatCurrency(type.revenue) }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Valor Promedio</span>
+            <span class="metric-value">{{
+              formatCurrency(type.avgValue)
+            }}</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">% del Total</span>
+            <span class="metric-value">{{
+              formatPercent(type.percentage, false)
+            }}</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- OCCUPANCY HEATMAP -->
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Calendario de Ocupación</h2>
+      <p class="section-description">
+        Mapa de calor de reservas por día y semana
+      </p>
+    </div>
+
+    <div class="heatmap-container">
+      <div class="heatmap-grid">
+        @for (cell of occupancyHeatmap(); track cell.date) {
+        <div
+          class="heatmap-cell"
+          [class]="getOccupancyClass(cell.occupancy)"
+          [title]="cell.date + ': ' + cell.occupancy + '% ocupación'"
+        >
+          <span class="cell-value">{{ cell.occupancy }}%</span>
+        </div>
+        }
+      </div>
+      <div class="heatmap-legend">
+        <span>Baja</span>
+        <div class="legend-gradient"></div>
+        <span>Alta</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMAND FORECAST -->
+  @if (demandForecast().length > 0) {
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Forecast de Demanda</h2>
+      <p class="section-description">
+        Predicción de reservas para próximos períodos
+      </p>
+    </div>
+
+    <div class="forecast-list">
+      @for (forecast of demandForecast(); track forecast.date) {
+      <div class="forecast-item">
+        <div class="forecast-date">{{ forecast.date }}</div>
+        <div class="forecast-bar">
+          <div
+            class="forecast-fill"
+            [style.width.%]="forecast.confidence"
+          ></div>
+          <span class="forecast-value"
+            >{{ formatNumber(forecast.predictedBookings) }} reservas</span
+          >
+        </div>
+        <div class="forecast-confidence">
+          {{ formatPercent(forecast.confidence, false) }} confianza
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+
+  <!-- LEAD TIME -->
+  @if (leadTimeDistribution().length > 0) {
+  <div class="section-card">
+    <div class="section-header">
+      <h2>Tiempo de Antelación (Lead Time)</h2>
+      <p class="section-description">
+        Distribución de reservas según antelación
+      </p>
+    </div>
+
+    <div class="leadtime-grid">
+      @for (leadtime of leadTimeDistribution(); track leadtime.range) {
+      <div class="leadtime-card">
+        <h3>{{ leadtime.range }}</h3>
+        <div class="leadtime-stats">
+          <div class="stat">
+            <span class="stat-label">Reservas</span>
+            <span class="stat-value">{{
+              formatNumber(leadtime.bookings)
+            }}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Porcentaje</span>
+            <span class="stat-value">{{
+              formatPercent(leadtime.percentage, false)
+            }}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Valor Promedio</span>
+            <span class="stat-value">{{
+              formatCurrency(leadtime.avgValue)
+            }}</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  }
+</div>
+}

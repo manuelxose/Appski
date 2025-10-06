@@ -1,0 +1,128 @@
+{
+  "packages": [
+    {
+      "id": "pkg-001",
+      "name": "Familia Completa Navidad",
+      "description": "Forfait familiar 4 personas + alojamiento 3 noches + clases grupales",
+      "type": "family",
+      "includes": [
+        "4 Forfaits temporada baja (3 días)",
+        "Alojamiento familiar (4 personas, 3 noches)",
+        "4 Clases grupales nivel iniciación",
+        "Seguro de esquí incluido",
+        "Parking gratuito"
+      ],
+      "price": 899,
+      "originalPrice": 1299,
+      "discount": 31,
+      "availableFrom": "2025-12-01T00:00:00Z",
+      "availableTo": "2026-01-06T23:59:59Z",
+      "maxBookings": 50,
+      "currentBookings": 38,
+      "status": "active"
+    },
+    {
+      "id": "pkg-002",
+      "name": "Escapada Romántica",
+      "description": "Fin de semana especial para parejas con forfaits y spa",
+      "type": "couple",
+      "includes": [
+        "2 Forfaits fin de semana (2 días)",
+        "Suite romántica (2 noches)",
+        "Cena especial en restaurante de montaña",
+        "Acceso spa y circuito termal (2 personas)",
+        "Copa de cava de bienvenida"
+      ],
+      "price": 549,
+      "originalPrice": 749,
+      "discount": 27,
+      "availableFrom": "2026-02-01T00:00:00Z",
+      "availableTo": "2026-02-14T23:59:59Z",
+      "maxBookings": 30,
+      "currentBookings": 12,
+      "status": "active"
+    },
+    {
+      "id": "pkg-003",
+      "name": "Grupo Amigos (8 personas)",
+      "description": "Paquete perfecto para grupos de amigos con alojamiento compartido",
+      "type": "group",
+      "includes": [
+        "8 Forfaits semana completa (5 días)",
+        "2 Apartamentos (4 personas cada uno, 6 noches)",
+        "Alquiler de material de esquí (8 equipos completos)",
+        "Barbacoa en refugio de montaña",
+        "Guía experto para ruta fuera pista (1 día)"
+      ],
+      "price": 2499,
+      "originalPrice": 3499,
+      "discount": 29,
+      "availableFrom": "2025-12-15T00:00:00Z",
+      "availableTo": "2026-03-15T23:59:59Z",
+      "maxBookings": 20,
+      "currentBookings": 14,
+      "status": "active"
+    },
+    {
+      "id": "pkg-004",
+      "name": "Escuela de Esquí Intensiva",
+      "description": "Pack completo de aprendizaje para principiantes",
+      "type": "beginner",
+      "includes": [
+        "Forfait 5 días temporada baja",
+        "10 Clases particulares (2 horas cada una)",
+        "Alquiler material completo (casco, esquís, botas)",
+        "Manual de esquí en español",
+        "Acceso zona principiantes ilimitado"
+      ],
+      "price": 449,
+      "originalPrice": 629,
+      "discount": 29,
+      "availableFrom": "2026-02-15T00:00:00Z",
+      "availableTo": "2026-02-28T23:59:59Z",
+      "maxBookings": 100,
+      "currentBookings": 67,
+      "status": "active"
+    },
+    {
+      "id": "pkg-005",
+      "name": "Freeride Extremo",
+      "description": "Experiencia completa de freeride y fuera pista para expertos",
+      "type": "advanced",
+      "includes": [
+        "Forfait 7 días alta temporada",
+        "Equipo freeride completo (fat skis, ARVA, pala, sonda)",
+        "Guía certificado de alta montaña (3 días)",
+        "Formación ARVA y seguridad avalanchas",
+        "Fotos y vídeo profesional de la jornada"
+      ],
+      "price": 1199,
+      "originalPrice": 1599,
+      "discount": 25,
+      "availableFrom": "2026-01-15T00:00:00Z",
+      "availableTo": "2026-03-31T23:59:59Z",
+      "maxBookings": 15,
+      "currentBookings": 9,
+      "status": "active"
+    },
+    {
+      "id": "pkg-006",
+      "name": "Weekend Express",
+      "description": "Fin de semana rápido con todo incluido",
+      "type": "couple",
+      "includes": [
+        "2 Forfaits fin de semana",
+        "Habitación doble (1 noche)",
+        "Desayuno buffet y cena incluidos"
+      ],
+      "price": 299,
+      "originalPrice": 399,
+      "discount": 25,
+      "availableFrom": "2025-11-01T00:00:00Z",
+      "validTo": "2026-04-30T23:59:59Z",
+      "maxBookings": 100,
+      "currentBookings": 100,
+      "status": "full"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  { "step": "Visitantes", "users": 50000, "percentage": 100, "dropoff": 0 },
+  { "step": "Registro", "users": 12500, "percentage": 25, "dropoff": 75 },
+  { "step": "Primer Login", "users": 10000, "percentage": 20, "dropoff": 20 },
+  { "step": "Exploración", "users": 7500, "percentage": 15, "dropoff": 25 },
+  {
+    "step": "Primera Reserva",
+    "users": 3750,
+    "percentage": 7.5,
+    "dropoff": 50
+  },
+  {
+    "step": "Cliente Recurrente",
+    "users": 1875,
+    "percentage": 3.75,
+    "dropoff": 50
+  }
+]

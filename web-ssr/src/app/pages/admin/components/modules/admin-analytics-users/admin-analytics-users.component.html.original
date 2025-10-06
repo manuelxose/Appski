@@ -1,0 +1,791 @@
+<!-- Admin Analytics Users Component - PLACEHOLDER -->
+<!-- TODO: This component requires 65+ missing properties and methods -->
+<!-- Original HTML saved in admin-analytics-users.component.html.backup -->
+
+<div class="admin-analytics-users">
+  <div class="page-header">
+    <h1>Analítica de Usuarios</h1>
+    <p class="help-text">
+      ⚠️ Este componente está en desarrollo. Requiere implementar:
+    </p>
+    <ul style="color: var(--warning-600); padding: 1rem;">
+      <li>Signals: timeRange, selectedSegment, totalUsers, avgLTV, overallChurnRate, dauMauRatio, etc.</li>
+      <li>Métodos: exportUserAnalytics, setTimeRange, selectSegment, getChurnSeverityClass, etc.</li>
+      <li>Tipos: EngagementMetrics debe ser array[], cohortData, churnMetrics, ltvData, etc.</li>
+      <li>Math.abs() debe manejarse en el componente, no en el template</li>
+    </ul>
+    <p style="padding: 1rem;">
+      Ver <code>admin-analytics-users.component.html.backup</code> para el HTML original.
+    </p>
+  </div>
+</div>
+
+<div class="admin-analytics-users">
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <div class="breadcrumb">
+        <a href="/admin" class="breadcrumb-item">Admin</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/admin/analytics" class="breadcrumb-item">Analytics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-item active">Usuarios</span>
+      </div>
+      <div class="header-top">
+        <h1 class="page-title">Analítica de Usuarios</h1>
+        <div class="header-actions">
+          <button 
+            class="btn-secondary"
+            (click)="refreshData()"
+            [disabled]="isLoading()">
+            <i class="icon-refresh" [class.spinning]="isLoading()"></i>
+            Actualizar
+          </button>
+          <button 
+            class="btn-primary"
+            (click)="exportUserAnalytics('pdf')">
+            <i class="icon-download"></i>
+            Exportar
+          </button>
+        </div>
+      </div>
+      <p class="page-description">
+        Análisis de comportamiento, retención, churn y lifetime value de usuarios
+      </p>
+    </div>
+
+    <!-- Filters Bar -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label class="filter-label">Período:</label>
+        <div class="filter-tabs">
+          <button 
+            class="filter-tab"
+            [class.active]="timeRange() === '7d'"
+            (click)="setTimeRange('7d')">
+            7 días
+          </button>
+          <button 
+            class="filter-tab"
+            [class.active]="timeRange() === '30d'"
+            (click)="setTimeRange('30d')">
+            30 días
+          </button>
+          <button 
+            class="filter-tab"
+            [class.active]="timeRange() === '90d'"
+            (click)="setTimeRange('90d')">
+            90 días
+          </button>
+          <button 
+            class="filter-tab"
+            [class.active]="timeRange() === 'all'"
+            (click)="setTimeRange('all')">
+            Todo
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Segmento:</label>
+        <select 
+          class="filter-select"
+          [value]="selectedSegment() || ''"
+          (change)="selectSegment($any($event.target).value || null)">
+          <option value="">Todos los segmentos</option>
+          @for (segment of userSegments(); track segment.id) {
+            <option [value]="segment.id">{{ segment.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <button 
+          class="filter-toggle"
+          [class.active]="comparisonMode()"
+          (click)="toggleComparisonMode()">
+          <i class="icon-chart-line"></i>
+          Comparar períodos
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  @if (isLoading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Cargando analítica de usuarios...</p>
+    </div>
+  }
+
+  <!-- Error State -->
+  @if (error(); as errorMessage) {
+    <div class="error-state">
+      <div class="error-icon">⚠️</div>
+      <h3>Error al cargar datos</h3>
+      <p>{{ errorMessage }}</p>
+      <button class="btn-primary" (click)="refreshData()">
+        Reintentar
+      </button>
+    </div>
+  }
+
+  <!-- Main Content -->
+  @if (!isLoading() && !error()) {
+    <!-- Overview KPIs -->
+    <section class="overview-section">
+      <h2 class="section-title">Métricas Generales</h2>
+      <div class="stats-grid">
+        <div class="stat-card primary">
+          <div class="stat-icon">
+            <i class="icon-users"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">Total Usuarios</div>
+            <div class="stat-value">{{ formatNumber(totalUsers()) }}</div>
+            <div class="stat-change positive">
+              <i class="icon-trending-up"></i>
+              +12% vs mes anterior
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card success">
+          <div class="stat-icon">
+            <i class="icon-euro"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">LTV Promedio</div>
+            <div class="stat-value">{{ formatCurrency(avgLTV()) }}</div>
+            <div class="stat-change positive">
+              <i class="icon-trending-up"></i>
+              +8% vs mes anterior
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card warning">
+          <div class="stat-icon">
+            <i class="icon-user-x"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">Tasa de Churn</div>
+            <div class="stat-value">{{ formatPercent(overallChurnRate()) }}</div>
+            <div class="stat-change negative">
+              <i class="icon-trending-down"></i>
+              +2.3% vs mes anterior
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card info">
+          <div class="stat-icon">
+            <i class="icon-activity"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">DAU/MAU Ratio</div>
+            <div class="stat-value">{{ formatPercent(dauMauRatio()) }}</div>
+            <div class="stat-change positive">
+              <i class="icon-trending-up"></i>
+              +5% vs mes anterior
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card accent">
+          <div class="stat-icon">
+            <i class="icon-funnel"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">Conversión</div>
+            <div class="stat-value">{{ formatPercent(conversionRate()) }}</div>
+            <div class="stat-change neutral">
+              <i class="icon-minus"></i>
+              Sin cambios
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card danger">
+          <div class="stat-icon">
+            <i class="icon-alert-triangle"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-label">Usuarios en Riesgo</div>
+            <div class="stat-value">{{ formatNumber(highRiskUsers()) }}</div>
+            <div class="stat-change negative">
+              <i class="icon-trending-up"></i>
+              +15% vs mes anterior
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Segments -->
+    <section class="segments-section">
+      <div class="section-header">
+        <h2 class="section-title">Segmentos de Usuarios</h2>
+        <p class="section-description">
+          Análisis por comportamiento, valor y demografía
+        </p>
+      </div>
+
+      <div class="segments-grid">
+        @for (segment of userSegments(); track segment.id) {
+          <div 
+            class="segment-card"
+            [class.selected]="selectedSegment() === segment.id"
+            (click)="selectSegment(segment.id)">
+            <div class="segment-header">
+              <div class="segment-color" [style.background-color]="segment.color"></div>
+              <h3 class="segment-name">{{ segment.name }}</h3>
+            </div>
+            <div class="segment-metrics">
+              <div class="segment-metric">
+                <div class="metric-label">Usuarios</div>
+                <div class="metric-value">{{ formatNumber(segment.count) }}</div>
+                <div class="metric-percentage">{{ formatPercent(segment.percentage) }}</div>
+              </div>
+              <div class="segment-metric">
+                <div class="metric-label">LTV</div>
+                <div class="metric-value">{{ formatCurrency(segment.avgLTV) }}</div>
+              </div>
+              <div class="segment-metric">
+                <div class="metric-label">Sesión</div>
+                <div class="metric-value">{{ formatDuration(segment.avgSessionDuration) }}</div>
+              </div>
+              <div class="segment-metric">
+                <div class="metric-label">Churn</div>
+                <div class="metric-value" [class]="getChurnSeverityClass(segment.churnRate)">
+                  {{ formatPercent(segment.churnRate) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Cohort Retention Analysis -->
+    <section class="cohort-section">
+      <div class="section-header">
+        <h2 class="section-title">Análisis de Cohortes</h2>
+        <p class="section-description">
+          Retención de usuarios agrupados por fecha de registro
+        </p>
+      </div>
+
+      <div class="cohort-table-wrapper">
+        <table class="cohort-table">
+          <thead>
+            <tr>
+              <th class="cohort-header">Cohorte</th>
+              <th class="cohort-header">Usuarios</th>
+              <th class="cohort-header">Mes 0</th>
+              <th class="cohort-header">Mes 1</th>
+              <th class="cohort-header">Mes 2</th>
+              <th class="cohort-header">Mes 3</th>
+              <th class="cohort-header">Mes 4</th>
+              <th class="cohort-header">Mes 5</th>
+              <th class="cohort-header">Mes 6</th>
+              <th class="cohort-header">Mes 7</th>
+              <th class="cohort-header">Mes 8</th>
+              <th class="cohort-header">Mes 9</th>
+              <th class="cohort-header">Mes 10</th>
+              <th class="cohort-header">Mes 11</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (cohort of cohortData(); track cohort.cohortName) {
+              <tr class="cohort-row">
+                <td class="cohort-name">
+                  <div class="name-label">{{ cohort.cohortName }}</div>
+                  <div class="date-label">{{ cohort.cohortDate }}</div>
+                </td>
+                <td class="cohort-size">{{ formatNumber(cohort.initialSize) }}</td>
+                @for (rate of cohort.retentionRates; track $index) {
+                  <td 
+                    class="cohort-cell"
+                    [style.background-color]="getHeatmapColor(rate)"
+                    [class.empty]="rate === 0">
+                    @if (rate > 0) {
+                      {{ formatPercent(rate) }}
+                    } @else {
+                      —
+                    }
+                  </td>
+                }
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cohort-insights">
+        <div class="insight-card success">
+          <h4>Mejor Cohorte</h4>
+          <p class="insight-value">{{ getBestRetainingCohort() }}</p>
+          <p class="insight-detail">Mayor retención a 90 días</p>
+        </div>
+        <div class="insight-card warning">
+          <h4>Cohorte en Riesgo</h4>
+          <p class="insight-value">{{ getWorstRetainingCohort() }}</p>
+          <p class="insight-detail">Requiere atención urgente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retention Curves -->
+    <section class="retention-curves-section">
+      <div class="section-header">
+        <h2 class="section-title">Curvas de Retención</h2>
+        <p class="section-description">
+          Evolución de retención en períodos de 7, 30 y 90 días
+        </p>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-color curve-7d"></span>
+            <span class="legend-label">7 días</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color curve-30d"></span>
+            <span class="legend-label">30 días</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color curve-90d"></span>
+            <span class="legend-label">90 días</span>
+          </div>
+        </div>
+
+        <div class="chart-area">
+          <div class="chart-y-axis">
+            <div class="y-label">100%</div>
+            <div class="y-label">75%</div>
+            <div class="y-label">50%</div>
+            <div class="y-label">25%</div>
+            <div class="y-label">0%</div>
+          </div>
+          <div class="chart-plot">
+            <!-- SVG or Canvas for retention curves -->
+            <svg class="retention-chart" viewBox="0 0 800 400">
+              <!-- Grid lines -->
+              <line x1="0" y1="0" x2="800" y2="0" class="grid-line" />
+              <line x1="0" y1="100" x2="800" y2="100" class="grid-line" />
+              <line x1="0" y1="200" x2="800" y2="200" class="grid-line" />
+              <line x1="0" y1="300" x2="800" y2="300" class="grid-line" />
+              <line x1="0" y1="400" x2="800" y2="400" class="grid-line" />
+              
+              <!-- Retention curves - Static visualization placeholder -->
+              <polyline 
+                points="0,80 100,120 200,160 300,200 400,240 500,280 600,320 700,360 800,380"
+                class="retention-curve curve-7d"
+                fill="none"
+                stroke="var(--primary-500)"
+                stroke-width="3" />
+              <polyline 
+                points="0,80 100,140 200,200 300,260 400,300 500,340 600,360 700,370 800,385"
+                class="retention-curve curve-30d"
+                fill="none"
+                stroke="var(--success-500)"
+                stroke-width="3" />
+              <polyline 
+                points="0,80 100,160 200,240 300,300 400,340 500,360 600,370 700,380 800,390"
+                class="retention-curve curve-90d"
+                fill="none"
+                stroke="var(--warning-500)"
+                stroke-width="3" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="chart-x-axis">
+          <div class="x-label">Día 0</div>
+          <div class="x-label">Día 30</div>
+          <div class="x-label">Día 60</div>
+          <div class="x-label">Día 90</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Churn Analysis -->
+    <section class="churn-section">
+      <div class="section-header">
+        <h2 class="section-title">Análisis de Churn</h2>
+        <p class="section-description">
+          Tasa de abandono y razones principales
+        </p>
+      </div>
+
+      <div class="churn-grid">
+        <!-- Churn Rate Trend -->
+        <div class="churn-card trend-card">
+          <h3 class="card-title">Tendencia de Churn</h3>
+          <div class="trend-chart">
+            @for (metric of churnMetrics(); track metric.month) {
+              <div class="trend-bar">
+                <div 
+                  class="bar-fill"
+                  [style.height.%]="metric.churnRate"
+                  [class]="getChurnSeverityClass(metric.churnRate)">
+                </div>
+                <div class="bar-label">{{ metric.month }}</div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Churn Reasons -->
+        <div class="churn-card reasons-card">
+          <h3 class="card-title">Principales Razones</h3>
+          <div class="reasons-list">
+            @for (reason of getTopChurnReasons(); track reason.reason) {
+              <div class="reason-item">
+                <div class="reason-bar-wrapper">
+                  <div class="reason-label">{{ reason.reason }}</div>
+                  <div class="reason-bar">
+                    <div 
+                      class="reason-fill"
+                      [style.width.%]="reason.percentage">
+                    </div>
+                  </div>
+                </div>
+                <div class="reason-stats">
+                  <span class="reason-count">{{ formatNumber(reason.count) }}</span>
+                  <span class="reason-percentage">{{ formatPercent(reason.percentage) }}</span>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Churn Metrics -->
+        <div class="churn-card metrics-card">
+          <h3 class="card-title">Métricas de Churn</h3>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-label">Tasa Actual</span>
+              <span class="metric-value" [class]="getChurnSeverityClass(overallChurnRate())">
+                {{ formatPercent(overallChurnRate()) }}
+              </span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Tendencia</span>
+              <span class="metric-value negative">
+                {{ getTrendIcon(getChurnTrend()) }} {{ formatPercent(Math.abs(getChurnTrend())) }}
+              </span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Predicción 30d</span>
+              <span class="metric-value warning">
+                {{ formatPercent(getPredictedChurn()) }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LTV Analysis -->
+    <section class="ltv-section">
+      <div class="section-header">
+        <h2 class="section-title">Lifetime Value (LTV)</h2>
+        <p class="section-description">
+          Valor del cliente por segmento y CAC ratio
+        </p>
+      </div>
+
+      <div class="ltv-grid">
+        @for (data of ltvData(); track data.segment) {
+          <div class="ltv-card">
+            <h3 class="ltv-segment">{{ data.segment }}</h3>
+            <div class="ltv-main">
+              <div class="ltv-value">{{ formatCurrency(data.avgLTV) }}</div>
+              <div class="ltv-label">LTV Promedio</div>
+            </div>
+            <div class="ltv-metrics">
+              <div class="ltv-metric">
+                <span class="metric-label">Revenue</span>
+                <span class="metric-value">{{ formatCurrency(data.avgRevenue) }}</span>
+              </div>
+              <div class="ltv-metric">
+                <span class="metric-label">Lifespan</span>
+                <span class="metric-value">{{ data.avgLifespan }} meses</span>
+              </div>
+              <div class="ltv-metric">
+                <span class="metric-label">CAC</span>
+                <span class="metric-value">{{ formatCurrency(data.acquisitionCost) }}</span>
+              </div>
+              <div class="ltv-metric">
+                <span class="metric-label">LTV:CAC</span>
+                <span 
+                  class="metric-value"
+                  [class.success]="data.ltvcac >= 3"
+                  [class.warning]="data.ltvcac >= 1 && data.ltvcac < 3"
+                  [class.danger]="data.ltvcac < 1">
+                  {{ data.ltvcac.toFixed(1) }}:1
+                </span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="ltv-insights">
+        <div class="insight-card success">
+          <h4>Mejor Segmento</h4>
+          <p class="insight-value">{{ getHighestLTVSegment() }}</p>
+          <p class="insight-detail">Mayor retorno de inversión</p>
+        </div>
+        <div class="insight-card info">
+          <h4>Crecimiento LTV</h4>
+          <p class="insight-value">{{ formatPercent(getLTVGrowth()) }}</p>
+          <p class="insight-detail">vs período anterior</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement Metrics -->
+    <section class="engagement-section">
+      <div class="section-header">
+        <h2 class="section-title">Métricas de Engagement</h2>
+        <p class="section-description">
+          DAU, MAU, duración de sesión y actividad
+        </p>
+      </div>
+
+      <div class="engagement-grid">
+        <!-- DAU/MAU Chart -->
+        <div class="engagement-card chart-card">
+          <h3 class="card-title">DAU/MAU Ratio</h3>
+          <div class="ratio-chart">
+            @for (metric of engagementMetrics(); track metric.date) {
+              <div class="ratio-bar">
+                <div 
+                  class="bar-dau"
+                  [style.height.%]="(metric.dauMauRatio * 100)"
+                  [title]="'DAU: ' + formatNumber(metric.dau) + ' | MAU: ' + formatNumber(metric.mau)">
+                </div>
+                @if ($index % 10 === 0) {
+                  <div class="bar-label">{{ metric.date }}</div>
+                }
+              </div>
+            }
+          </div>
+          <div class="chart-stats">
+            <div class="stat">
+              <span class="stat-label">DAU Actual</span>
+              <span class="stat-value">{{ formatNumber(engagementMetrics()[engagementMetrics().length - 1]?.dau || 0) }}</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">MAU Actual</span>
+              <span class="stat-value">{{ formatNumber(engagementMetrics()[engagementMetrics().length - 1]?.mau || 0) }}</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Ratio</span>
+              <span class="stat-value success">{{ formatPercent(dauMauRatio()) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session Duration -->
+        <div class="engagement-card duration-card">
+          <h3 class="card-title">Duración de Sesión</h3>
+          <div class="duration-chart">
+            @for (metric of engagementMetrics(); track metric.date) {
+              <div class="duration-bar">
+                <div 
+                  class="bar-fill"
+                  [style.height.%]="(metric.avgSessionDuration / 60) * 100"
+                  [title]="formatDuration(metric.avgSessionDuration)">
+                </div>
+              </div>
+            }
+          </div>
+          <div class="duration-stats">
+            <div class="stat-large">
+              <div class="stat-value">{{ formatDuration(avgSessionDuration()) }}</div>
+              <div class="stat-label">Promedio</div>
+            </div>
+            <div class="stat-change positive">
+              <i class="icon-trending-up"></i>
+              +8% vs mes anterior
+            </div>
+          </div>
+        </div>
+
+        <!-- Behavior Metrics -->
+        <div class="engagement-card behavior-card">
+          <h3 class="card-title">Métricas de Comportamiento</h3>
+          <div class="behavior-list">
+            @for (behavior of behaviorMetrics(); track behavior.metric) {
+              <div class="behavior-item">
+                <div class="behavior-info">
+                  <span class="behavior-label">{{ behavior.metric }}</span>
+                  <span class="behavior-value">{{ formatNumber(behavior.value) }}</span>
+                </div>
+                <div class="behavior-trend" [class]="getTrendClass(behavior.trend)">
+                  {{ getTrendIcon(behavior.trend) }}
+                  {{ formatPercent(Math.abs(behavior.changePercent)) }}
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="engagement-insights">
+        <div class="insight-card info">
+          <h4>Calidad de Engagement</h4>
+          <p class="insight-value">{{ getSessionQuality() }}/100</p>
+          <p class="insight-detail">Score de engagement</p>
+        </div>
+        <div class="insight-card accent">
+          <h4>Hora Pico</h4>
+          <p class="insight-value">{{ getPeakActivityTime() }}</p>
+          <p class="insight-detail">Mayor actividad</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Journey Funnel -->
+    <section class="journey-section">
+      <div class="section-header">
+        <h2 class="section-title">Journey de Usuario</h2>
+        <p class="section-description">
+          Embudo de conversión y puntos de abandono
+        </p>
+      </div>
+
+      <div class="journey-funnel">
+        @for (step of userJourney(); track step.step) {
+          <div class="funnel-step">
+            <div class="step-bar" [style.width.%]="step.percentage">
+              <div class="step-content">
+                <div class="step-name">{{ step.step }}</div>
+                <div class="step-stats">
+                  <span class="step-users">{{ formatNumber(step.users) }} usuarios</span>
+                  <span class="step-percentage">{{ formatPercent(step.percentage) }}</span>
+                </div>
+              </div>
+            </div>
+            @if ($index < userJourney().length - 1) {
+              <div class="step-conversion">
+                <span class="conversion-rate success">
+                  {{ formatPercent(step.conversionRate) }} conversión
+                </span>
+                @if (step.dropoffRate > 20) {
+                  <span class="dropoff-rate danger">
+                    {{ formatPercent(step.dropoffRate) }} abandono
+                  </span>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="journey-insights">
+        <div class="insight-card warning">
+          <h4>Punto Crítico</h4>
+          <p class="insight-value">{{ getDropoffStep() }}</p>
+          <p class="insight-detail">Mayor tasa de abandono</p>
+        </div>
+        <div class="insight-card info">
+          <h4>Optimización</h4>
+          <p class="insight-value">{{ getConversionOptimization() }}</p>
+          <p class="insight-detail">Oportunidad de mejora</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activity Heatmap -->
+    <section class="heatmap-section">
+      <div class="section-header">
+        <h2 class="section-title">Mapa de Actividad</h2>
+        <p class="section-description">
+          Actividad de usuarios por día y hora
+        </p>
+      </div>
+
+      <div class="heatmap-wrapper">
+        <div class="heatmap-grid">
+          <div class="heatmap-y-axis">
+            <div class="y-label">Lunes</div>
+            <div class="y-label">Martes</div>
+            <div class="y-label">Miércoles</div>
+            <div class="y-label">Jueves</div>
+            <div class="y-label">Viernes</div>
+            <div class="y-label">Sábado</div>
+            <div class="y-label">Domingo</div>
+          </div>
+          <div class="heatmap-cells">
+            @for (cell of activityHeatmap(); track cell.day + cell.hour) {
+              <div 
+                class="heatmap-cell"
+                [style.background-color]="getHeatmapColor(cell.activity)"
+                [title]="cell.day + ' ' + cell.hour + ':00 - ' + formatNumber(cell.activity) + ' usuarios'">
+              </div>
+            }
+          </div>
+        </div>
+        <div class="heatmap-x-axis">
+          @for (hour of [0, 3, 6, 9, 12, 15, 18, 21]; track hour) {
+            <div class="x-label">{{ hour }}:00</div>
+          }
+        </div>
+        <div class="heatmap-legend">
+          <span class="legend-label">Menos activo</span>
+          <div class="legend-gradient"></div>
+          <span class="legend-label">Más activo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Predictive Analytics -->
+    <section class="predictive-section">
+      <div class="section-header">
+        <h2 class="section-title">Analítica Predictiva</h2>
+        <p class="section-description">
+          Predicciones basadas en machine learning
+        </p>
+      </div>
+
+      <div class="predictive-grid">
+        @for (metric of predictiveMetrics(); track metric.name) {
+          <div class="predictive-card">
+            <h3 class="predictive-name">{{ metric.name }}</h3>
+            <div class="predictive-comparison">
+              <div class="value-column">
+                <div class="value-label">Actual</div>
+                <div class="value-number">{{ formatNumber(metric.value) }}</div>
+              </div>
+              <div class="arrow-column">
+                <i [class]="'icon-arrow-' + metric.trend"></i>
+              </div>
+              <div class="value-column">
+                <div class="value-label">Predicción</div>
+                <div class="value-number" [class]="getTrendClass(metric.trend)">
+                  {{ formatNumber(metric.prediction) }}
+                </div>
+              </div>
+            </div>
+            <div class="predictive-confidence">
+              <div class="confidence-bar">
+                <div 
+                  class="confidence-fill"
+                  [style.width.%]="metric.confidence">
+                </div>
+              </div>
+              <span class="confidence-label">{{ formatPercent(metric.confidence) }} confianza</span>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  }
+</div>

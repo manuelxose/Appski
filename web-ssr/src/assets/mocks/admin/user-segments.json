@@ -1,0 +1,62 @@
+[
+  {
+    "id": "premium_users",
+    "name": "Usuarios Premium",
+    "count": 2847,
+    "percentage": 18.5,
+    "avgLTV": 1250.0,
+    "avgSessionDuration": 32,
+    "churnRate": 5.2,
+    "color": "#7C3AED"
+  },
+  {
+    "id": "power_users",
+    "name": "Power Users",
+    "count": 4523,
+    "percentage": 29.3,
+    "avgLTV": 850.0,
+    "avgSessionDuration": 28,
+    "churnRate": 8.5,
+    "color": "#2563EB"
+  },
+  {
+    "id": "regular_users",
+    "name": "Usuarios Regulares",
+    "count": 5689,
+    "percentage": 36.9,
+    "avgLTV": 420.0,
+    "avgSessionDuration": 18,
+    "churnRate": 12.3,
+    "color": "#10B981"
+  },
+  {
+    "id": "occasional_users",
+    "name": "Usuarios Ocasionales",
+    "count": 1834,
+    "percentage": 11.9,
+    "avgLTV": 180.0,
+    "avgSessionDuration": 12,
+    "churnRate": 18.7,
+    "color": "#F59E0B"
+  },
+  {
+    "id": "trial_users",
+    "name": "Usuarios de Prueba",
+    "count": 389,
+    "percentage": 2.5,
+    "avgLTV": 45.0,
+    "avgSessionDuration": 8,
+    "churnRate": 42.1,
+    "color": "#EF4444"
+  },
+  {
+    "id": "dormant_users",
+    "name": "Usuarios Inactivos",
+    "count": 145,
+    "percentage": 0.9,
+    "avgLTV": 12.0,
+    "avgSessionDuration": 3,
+    "churnRate": 78.5,
+    "color": "#6B7280"
+  }
+]
