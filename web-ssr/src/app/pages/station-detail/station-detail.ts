@@ -5,6 +5,7 @@ import {
   OnInit,
   inject,
 } from "@angular/core";
+import { Router } from "@angular/router";
 import { ActivatedRoute, Params } from "@angular/router";
 import { SiteHeaderComponent } from "../../components/site-header/site-header.component";
 import { SiteFooterComponent } from "../../components/site-footer/site-footer.component";
@@ -37,6 +38,7 @@ import { StationDetailDataService } from "./services/station-detail.data.service
 export class StationDetail implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly dataService = inject(StationDetailDataService);
+  private readonly router = inject(Router);
 
   // State signals
   slug = signal<string>("");
@@ -88,6 +90,14 @@ export class StationDetail implements OnInit {
       this.slug.set(slug);
       await this.loadStationData(slug);
     });
+  }
+
+  // Navega a la página weather con el slug actual
+  goToWeather(): void {
+    const slug = this.slug();
+    if (slug) {
+      this.router.navigate(["/estacion", slug, "tiempo"]);
+    }
   }
 
   private async loadStationData(slug: string): Promise<void> {
