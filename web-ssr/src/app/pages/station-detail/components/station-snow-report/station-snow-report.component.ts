@@ -1,5 +1,11 @@
 import { NgClass } from "@angular/common";
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  inject,
+} from "@angular/core";
+import { Router } from "@angular/router";
 import {
   SnowReport,
   SnowQuality,
@@ -18,7 +24,27 @@ export type { SnowReport, SnowQuality, Visibility };
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StationSnowReportComponent {
+  private readonly router = inject(Router);
   snowReport = input.required<SnowReport>();
+  goToWeather = input<() => void>();
+  stationSlug = input<string>();
+
+  // Navega al parte completo usando el slug si está disponible
+  goToWeatherHandler(): void {
+    const goToWeatherFn = this.goToWeather();
+    if (goToWeatherFn) {
+      goToWeatherFn();
+    } else if (this.stationSlug()) {
+      // Usa router si está disponible
+      if (this.router) {
+        this.router.navigate(["/estacion", this.stationSlug(), "tiempo"]);
+      } else {
+        window.location.href = `/estacion/${this.stationSlug()}/tiempo`;
+      }
+    } else {
+      window.location.href = "/meteorologia";
+    }
+  }
 
   getQualityLabel(quality: string): string {
     const labels = {
