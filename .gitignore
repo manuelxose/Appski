@@ -44,3 +44,20 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 .angular
+
+# === AI agents/skills tooling + graphify (local-only, never in remote) ===
+.claude/
+.codex/
+.copilot/
+.agents/
+.planning/
+.ai/
+.agentic/
+.agentic-platform-backups/
+graphify-out/
+AGENTS.md
+CLAUDE.md
+AI_GUIDE.md
+copilot-instructions.md
+.mcp.json
+mcp.json
