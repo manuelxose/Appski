@@ -1,0 +1,387 @@
+{
+  "driver": "integration-http",
+  "ranAt": "2026-11-16T19:06:54.279Z",
+  "total": 60,
+  "passed": 60,
+  "failed": 0,
+  "exitCode": 0,
+  "checks": [
+    {
+      "name": "[GET /stations] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.911Z\",\"updatedAt\":\"2026-11-16T19:06:47.911Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /stations] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /stations/baqueira-beret] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.924Z\",\"updatedAt\":\"2026-11-16T19:06:47.924Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /stations/baqueira-beret] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/report] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"station\":{\"slug\":\"baqueira-beret\",\"name\":\"Baqueira Beret\",\"country\":\"ES\",\"region\":\"Pirineo Catalán\",\"lat\":42.6999,\"lng\":0.9367,\"altitudeBa"
+      }
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/report] procedencia completa",
+      "ok": true,
+      "detail": "editorial-report"
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/forecast] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T19:06:47.959Z\",\"updatedAt\":null,"
+      }
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/forecast] procedencia completa",
+      "ok": true,
+      "detail": "copernicus-c3s"
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/alerts] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T19:06:47.968Z\",\"updatedAt\":null,\"st"
+      }
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/alerts] procedencia completa",
+      "ok": true,
+      "detail": "meteofrance"
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/webcams] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"blocked\",\"reason\":\"license-prohibits\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:06:47.977Z\",\"updatedA"
+      }
+    },
+    {
+      "name": "[GET /stations/baqueira-beret/webcams] procedencia completa",
+      "ok": true,
+      "detail": "editorial-report"
+    },
+    {
+      "name": "[GET /avalanche] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-yet-published\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:06:47.982Z\",\"updatedA"
+      }
+    },
+    {
+      "name": "[GET /avalanche] procedencia completa",
+      "ok": true,
+      "detail": "editorial-report"
+    },
+    {
+      "name": "[GET /rankings/nieve] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.992Z\",\"updatedAt"
+      }
+    },
+    {
+      "name": "[GET /rankings/nieve] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /rankings/km] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.997Z\",\"updatedAt"
+      }
+    },
+    {
+      "name": "[GET /rankings/km] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /season-dates] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.002Z\",\"updatedAt\":\"2026-11-16T19:06:48.002Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /season-dates] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /search?q=baqueira] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.010Z\",\"updatedAt\":\"2026-11-16T19:06:48.010Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /search?q=baqueira] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /config] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.022Z\",\"updatedAt\":\"2026-11-16T19:06:48.022Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /config] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /admin/reports] => 200",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.030Z\",\"updatedAt\":\"2026-11-16T19:06:48.030Z\",\"s"
+      }
+    },
+    {
+      "name": "[GET /admin/reports] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[POST /admin/reports] => 201",
+      "ok": true,
+      "detail": {
+        "status": 201,
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.061Z\",\"updatedAt\":\"2026-11-16T19:06:48.061Z\",\"s"
+      }
+    },
+    {
+      "name": "[POST /admin/reports] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[PUT /admin/stations/port-aine] => 201",
+      "ok": true,
+      "detail": {
+        "status": 201,
+        "body": "{\"status\":\"ok\",\"created\":true,\"station\":{\"slug\":\"port-aine\",\"name\":\"Port Ainé\",\"country\":\"ES\",\"region\":\"Pirineo Catalán\",\"lat\":42.52,\"lng\":1"
+      }
+    },
+    {
+      "name": "[PUT /admin/stations/port-aine] procedencia completa",
+      "ok": true,
+      "detail": "editorial-stations"
+    },
+    {
+      "name": "[GET /config sin token] => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "[GET /admin/reports sin token] => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "[POST /admin/reports sin token] => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "[PUT /admin/stations/baqueira-beret sin token] => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "los rechazos NO cambian el conteo de registros",
+      "ok": true,
+      "detail": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "400 pageSize=101 => 400",
+      "ok": true,
+      "detail": 400
+    },
+    {
+      "name": "400 pageSize=101 con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "400 pageSize=101 con fields[]",
+      "ok": true,
+      "detail": [
+        {
+          "field": "pageSize",
+          "message": "must be an integer between 1 and 100"
+        }
+      ]
+    },
+    {
+      "name": "400 query desconocida => 400",
+      "ok": true,
+      "detail": 400
+    },
+    {
+      "name": "400 query desconocida con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "400 query desconocida con fields[]",
+      "ok": true,
+      "detail": [
+        {
+          "field": "lima",
+          "message": "unknown query parameter (allowed: country, region, discipline, status, snowMin, sort, sortDir, page, pageSize)"
+        }
+      ]
+    },
+    {
+      "name": "404 slug => 404",
+      "ok": true,
+      "detail": 404
+    },
+    {
+      "name": "404 slug con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "404 report => 404",
+      "ok": true,
+      "detail": 404
+    },
+    {
+      "name": "404 report con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "404 alerts => 404",
+      "ok": true,
+      "detail": 404
+    },
+    {
+      "name": "404 alerts con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "404 webcams => 404",
+      "ok": true,
+      "detail": 404
+    },
+    {
+      "name": "404 webcams con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "400 search sin q => 400",
+      "ok": true,
+      "detail": 400
+    },
+    {
+      "name": "400 search sin q con procedencia",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "400 search sin q con fields[]",
+      "ok": true,
+      "detail": [
+        {
+          "field": "q",
+          "message": "is required (non-empty search string)"
+        }
+      ]
+    },
+    {
+      "name": "escritura con centinela => 400",
+      "ok": true,
+      "detail": {
+        "status": 400,
+        "fields": [
+          {
+            "field": "snow.baseCm",
+            "message": "must be an integer >= 0 or null (never a negative sentinel)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "el rechazo NO cambia el conteo EN DISCO",
+      "ok": true,
+      "detail": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "forecast: estado tipado sin proveedor",
+      "ok": true,
+      "detail": "no_data"
+    },
+    {
+      "name": "forecast: NO inventa datos",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "alerts: sin alertas inventadas",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "webcams: bloqueado por licencia, sin enlaces",
+      "ok": true,
+      "detail": {
+        "status": "blocked",
+        "grants": 0
+      }
+    },
+    {
+      "name": "/config no expone nombres de variables de entorno ni el token",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "/config declara proveedores",
+      "ok": true,
+      "detail": 22
+    }
+  ]
+}

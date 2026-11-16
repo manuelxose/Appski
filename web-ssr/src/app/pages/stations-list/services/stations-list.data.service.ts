@@ -2,321 +2,193 @@
  * ==============================================
  * STATIONS LIST DATA SERVICE
  * ==============================================
- * Orquesta datos de la página Stations List (estaciones, filtros, ordenación).
- * Estrategia: Mock por defecto en DEV, API en PROD.
+ * Directorio de estaciones contra el BORDE REAL (`/api/snow/v1/stations`).
+ *
+ * Antes: `USE_MOCK_DATA: true` + `fetch` a `/assets/mocks/stations-list/*`, con
+ * filtros y orden RE-APLICADOS en el cliente sobre datos ficticios.
+ *
+ * Ahora:
+ *  - el filtrado, el orden y la paginación los hace el BORDE (query real); el
+ *    cliente NO re-filtra en memoria lo que el servidor ya filtró;
+ *  - la ausencia de parte es `null` (nunca 0 cm) y la UI la pinta como
+ *    "sin datos";
+ *  - ningún valor de relleno (precio, imagen, pistas) se inventa: va `null` y
+ *    el componente lo oculta.
  */
-
-import { Injectable, inject, PLATFORM_ID } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { isPlatformBrowser } from "@angular/common";
-import { firstValueFrom } from "rxjs";
-import { map } from "rxjs/operators";
-import {
-  StationsListPageData,
-  Station,
+import { Injectable, inject } from "@angular/core";
+import type { StationDetailDto } from "../../../snow/models/dto";
+import { SnowApi } from "../../../snow/client/snow-api.service";
+import type { StationQuery } from "../../../snow/client/snow-endpoints";
+import type {
+  FilterOption,
   FilterOptions,
-  StationFilters,
   SortConfig,
-  ApiResponse,
+  SortOption,
+  Station,
+  StationFilters,
+  StationStatus,
+  StationsListPageData,
 } from "../models/stations-list.models";
 
-/**
- * Configuración del servicio (mock vs API).
- * Cambiar USE_MOCK_DATA a false cuando API esté lista.
- */
-const CONFIG = {
-  USE_MOCK_DATA: true, // ⚠️ Cambiar a false para usar API real
-  API_BASE_URL: "/api/v1", // Base URL de la API
-  MOCK_PATH: "/assets/mocks/stations-list", // Path de mocks (también soporta pages/stations-list/mocks/)
-};
+/** Tope del borde (`pageSize ≤ 100`). */
+const PAGE_SIZE = 100;
+/** Guarda contra un maestro patológico: 10 páginas = 1000 estaciones. */
+const MAX_PAGES = 10;
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable({ providedIn: "root" })
 export class StationsListDataService {
-  private readonly http = CONFIG.USE_MOCK_DATA ? null : inject(HttpClient);
-  private readonly platformId = inject(PLATFORM_ID);
-  private readonly isBrowser = isPlatformBrowser(this.platformId);
+  private readonly api = inject(SnowApi);
 
-  private getBaseUrl(): string {
-    if (this.isBrowser && typeof window !== "undefined") {
-      return window.location.origin;
-    }
-    return `http://localhost:${process.env["PORT"] || "4000"}`;
-  }
-
-  // ==================== PUBLIC API ====================
-
-  /**
-   * Carga todos los datos de la página Stations List.
-   * @returns Promise con datos completos de la página
-   */
-  async loadStationsListPageData(): Promise<StationsListPageData> {
-    if (CONFIG.USE_MOCK_DATA) {
-      return this.loadMockData();
-    }
-    return this.loadApiData();
-  }
-
-  /**
-   * Carga solo el listado de estaciones.
-   * @param filters Filtros opcionales
-   * @param sort Configuración de ordenación opcional
-   * @returns Promise con array de estaciones
-   */
-  async loadStations(
+  /** Carga el directorio + opciones de filtro derivadas del maestro real. */
+  async loadStationsListPageData(
     filters?: StationFilters,
-    sort?: SortConfig
-  ): Promise<Station[]> {
-    if (CONFIG.USE_MOCK_DATA) {
-      const data = await this.loadMockData();
-      let stations = data.stations;
+    sort?: SortConfig,
+  ): Promise<StationsListPageData> {
+    const stations = await this.loadStations(filters, sort);
+    const filterOptions = await this.loadFilterOptions();
+    return {
+      stations,
+      filterOptions,
+      // Sin datos no hay estadísticas: se omite en vez de afirmar 0.
+      ...(stations.length > 0
+        ? {
+            stats: {
+              totalStations: stations.length,
+              openStations: stations.filter((s) => s.status === "open").length,
+              // Se promedia sólo sobre observaciones EXISTENTES (ausencia ≠ 0).
+              avgSnowBase: average(stations.map((s) => s.snowBase).filter((v): v is number => v !== null)),
+            },
+          }
+        : {}),
+    };
+  }
 
-      // Aplicar filtros si existen
-      if (filters) {
-        stations = this.applyFilters(stations, filters);
-      }
+  /** Directorio: recorre las páginas del borde con los filtros de la UI. */
+  async loadStations(filters?: StationFilters, sort?: SortConfig): Promise<Station[]> {
+    const query: StationQuery = {
+      ...toBorderQuery(filters),
+      ...toBorderSort(sort),
+      pageSize: PAGE_SIZE,
+    };
+    const first = await this.api.stations({ ...query, page: 1 });
+    // Red/5xx o `no_data`: la página muestra su estado; aquí no se inventa nada.
+    if (!first.ok || first.body.status !== "ok") return [];
 
-      // Aplicar ordenación si existe
-      if (sort) {
-        stations = this.applySort(stations, sort);
-      }
-
-      return stations;
+    const rows: StationDetailDto[] = [...first.body.stations];
+    const { totalPages } = first.body.pagination;
+    for (let page = 2; page <= totalPages && page <= MAX_PAGES; page++) {
+      const next = await this.api.stations({ ...query, page });
+      if (!next.ok || next.body.status !== "ok") break;
+      rows.push(...next.body.stations);
     }
-
-    if (!this.http) throw new Error("HttpClient not available");
-
-    // En API real, enviar filtros y sort como query params
-    const params = this.buildQueryParams(filters, sort);
-    return firstValueFrom(
-      this.http
-        .get<ApiResponse<Station[]>>(`${CONFIG.API_BASE_URL}/stations`, {
-          params,
-        })
-        .pipe(map((res) => res.data))
-    );
+    return rows.map(toPageStation);
   }
 
   /**
-   * Carga opciones de filtros disponibles.
-   * @returns Promise con opciones de filtros
+   * Opciones de filtro derivadas del MAESTRO REAL. No hay endpoint de
+   * "filter-options" y fabricar opciones de servicios sería inventar datos.
    */
   async loadFilterOptions(): Promise<FilterOptions> {
-    if (CONFIG.USE_MOCK_DATA) {
-      const data = await this.loadMockData();
-      return data.filterOptions;
-    }
+    const res = await this.api.stations({ pageSize: PAGE_SIZE });
+    const rows = res.ok && res.body.status === "ok" ? res.body.stations : [];
 
-    if (!this.http) throw new Error("HttpClient not available");
-    return firstValueFrom(
-      this.http
-        .get<ApiResponse<FilterOptions>>(
-          `${CONFIG.API_BASE_URL}/stations/filter-options`
-        )
-        .pipe(map((res) => res.data))
-    );
+    const regions: FilterOption[] = uniqueSorted(rows.map((s) => s.region)).map((r) => ({ value: r, label: r }));
+    const stationTypes: FilterOption[] = uniqueSorted(rows.map((s) => s.discipline)).map((d) => ({
+      value: d,
+      label: d === "alpine" ? "Esquí alpino" : "Esquí nórdico",
+    }));
+    const statusOptions: FilterOption[] = [
+      { value: "open", label: "Abierta" },
+      { value: "closed", label: "Cerrada" },
+      { value: "unknown", label: "Sin confirmar" },
+    ];
+
+    return {
+      regions,
+      stationTypes,
+      // El borde no expone servicios por estación: NO se inventan opciones.
+      services: [],
+      statusOptions,
+    };
   }
 
-  /**
-   * Busca estaciones por texto.
-   * @param query Texto de búsqueda
-   * @returns Promise con estaciones que coinciden
-   */
+  /** Búsqueda por texto: la hace el borde (`/v1/search`); `q` vacío ⇒ sin resultados. */
   async searchStations(query: string): Promise<Station[]> {
-    if (CONFIG.USE_MOCK_DATA) {
-      const data = await this.loadMockData();
-      const lowerQuery = query.toLowerCase();
-      return data.stations.filter(
-        (s) =>
-          s.name.toLowerCase().includes(lowerQuery) ||
-          s.location.toLowerCase().includes(lowerQuery)
-      );
-    }
-
-    if (!this.http) throw new Error("HttpClient not available");
-    return firstValueFrom(
-      this.http
-        .get<ApiResponse<Station[]>>(`${CONFIG.API_BASE_URL}/stations/search`, {
-          params: { q: query },
-        })
-        .pipe(map((res) => res.data))
-    );
-  }
-
-  // ==================== PRIVATE METHODS ====================
-
-  /**
-   * Carga datos desde mock JSON.
-   * @private
-   */
-  private async loadMockData(): Promise<StationsListPageData> {
-    const baseUrl = this.getBaseUrl();
-
-    // Intentar primero desde assets (producción), luego pages (desarrollo)
-    try {
-      const response = await fetch(
-        `${baseUrl}${CONFIG.MOCK_PATH}/stations-list-page.mock.json`
-      );
-      if (response.ok) {
-        return response.json();
-      }
-    } catch {
-      // Intentar ruta alternativa
-    }
-
-    // Ruta alternativa (desarrollo)
-    const response = await fetch(
-      `${baseUrl}/pages/stations-list/mocks/stations-list-page.mock.json`
-    );
-    if (!response.ok) {
-      throw new Error(
-        `Failed to load mock data: ${response.status} ${response.statusText}`
-      );
-    }
-    return response.json();
-  }
-
-  /**
-   * Carga datos desde API real.
-   * @private
-   */
-  private async loadApiData(): Promise<StationsListPageData> {
-    if (!this.http) throw new Error("HttpClient not available");
-    return firstValueFrom(
-      this.http
-        .get<ApiResponse<StationsListPageData>>(
-          `${CONFIG.API_BASE_URL}/stations/page-data`
-        )
-        .pipe(map((res) => res.data))
-    );
-  }
-
-  /**
-   * Aplica filtros al array de estaciones (solo para modo mock).
-   * @private
-   */
-  private applyFilters(
-    stations: Station[],
-    filters: StationFilters
-  ): Station[] {
-    return stations.filter((station) => {
-      // Filtro por región
-      if (filters.region && station.region !== filters.region) {
-        return false;
-      }
-
-      // Filtro por tipo
-      if (filters.type && station.type !== filters.type) {
-        return false;
-      }
-
-      // Filtro por altitud mínima
-      if (filters.minAltitude && station.altitude.base < filters.minAltitude) {
-        return false;
-      }
-
-      // Filtro por nieve mínima
-      if (filters.snowMin && station.snowBase < filters.snowMin) {
-        return false;
-      }
-
-      // Filtro por estado
-      if (filters.status && station.status !== filters.status) {
-        return false;
-      }
-
-      // Filtro por servicios (todos los seleccionados deben estar presentes)
-      if (
-        filters.services.length > 0 &&
-        !filters.services.every((service) => station.features.includes(service))
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-  }
-
-  /**
-   * Aplica ordenación al array de estaciones (solo para modo mock).
-   * @private
-   */
-  private applySort(stations: Station[], sort: SortConfig): Station[] {
-    const sorted = [...stations];
-    const multiplier = sort.direction === "asc" ? 1 : -1;
-
-    sorted.sort((a, b) => {
-      switch (sort.field) {
-        case "name":
-          return multiplier * a.name.localeCompare(b.name);
-        case "snowBase":
-          return multiplier * (a.snowBase - b.snowBase);
-        case "price":
-          return multiplier * (a.price.adult - b.price.adult);
-        case "altitude":
-          return multiplier * (a.altitude.base - b.altitude.base);
-        case "slopesOpen":
-          return multiplier * (a.slopesOpen - b.slopesOpen);
-        default:
-          return 0; // relevance = orden original
-      }
-    });
-
-    return sorted;
-  }
-
-  /**
-   * Construye query params para llamadas a API.
-   * @private
-   */
-  private buildQueryParams(
-    filters?: StationFilters,
-    sort?: SortConfig
-  ): Record<string, string> {
-    const params: Record<string, string> = {};
-
-    if (filters) {
-      if (filters.region) params["region"] = filters.region;
-      if (filters.type) params["type"] = filters.type;
-      if (filters.minAltitude)
-        params["minAltitude"] = filters.minAltitude.toString();
-      if (filters.snowMin) params["snowMin"] = filters.snowMin.toString();
-      if (filters.status) params["status"] = filters.status;
-      if (filters.services.length > 0)
-        params["services"] = filters.services.join(",");
-    }
-
-    if (sort) {
-      params["sortBy"] = sort.field;
-      params["sortDir"] = sort.direction;
-    }
-
-    return params;
+    const res = await this.api.search(query);
+    if (!res.ok || res.body.status !== "ok") return [];
+    return res.body.stations.map(toPageStation);
   }
 }
 
-/**
- * ==============================================
- * CÓMO CAMBIAR DE MOCK A API REAL
- * ==============================================
- *
- * 1. Cambiar CONFIG.USE_MOCK_DATA a false
- * 2. Configurar CONFIG.API_BASE_URL con tu endpoint (o usar environment.apiUrl)
- * 3. Asegurarse de que API devuelve contratos de stations-list.models.ts
- * 4. La API debe soportar filtros y ordenación via query params:
- *    - GET /api/v1/stations?region=pyrenees&snowMin=100&sortBy=name&sortDir=asc
- * 5. Verificar que HttpClient esté configurado en app.config.ts
- * 6. Añadir interceptores si es necesario (auth, cache, error handling)
- *
- * Ejemplo con environment:
- *
- * import { environment } from '../../../environments/environment';
- * const CONFIG = {
- *   USE_MOCK_DATA: !environment.production,
- *   API_BASE_URL: environment.apiBaseUrl,
- *   ...
- * };
- *
- * ==============================================
- */
+// ---------------------------------------------------------------------------
+// Mapeo contrato del borde → modelo de la página
+// ---------------------------------------------------------------------------
+
+/** Filtros de la UI → query del borde. Lo que el borde no admite no se envía. */
+function toBorderQuery(f: StationFilters | undefined): Partial<StationQuery> {
+  if (!f) return {};
+  const q: { -readonly [K in keyof StationQuery]?: StationQuery[K] } = {};
+  if (f.region) q.region = f.region;
+  if (f.type) q.discipline = f.type === "nordic" ? "nordic" : "alpine";
+  if (f.status === "open" || f.status === "closed") q.status = f.status;
+  // `snowMin` 0 significa "sin filtro" en la UI: no se envía.
+  if (f.snowMin > 0) q.snowMin = f.snowMin;
+  return q;
+}
+
+function toBorderSort(s: SortConfig | undefined): Partial<StationQuery> {
+  if (!s) return {};
+  const map: Record<SortOption, StationQuery["sort"] | null> = {
+    name: "name",
+    snowBase: "snow",
+    altitude: "altitude",
+    // El borde no ordena por precio/pistas: se mantiene el orden por nombre.
+    price: null,
+    slopesOpen: null,
+    relevance: null,
+  };
+  const sort = map[s.field];
+  return sort === null ? {} : { sort, sortDir: s.direction };
+}
+
+function toPageStation(d: StationDetailDto): Station {
+  return {
+    id: d.slug,
+    slug: d.slug,
+    name: d.name,
+    // Se pinta el nombre REAL del maestro (la `Region` del mock era un enum ficticio).
+    region: d.region,
+    location: d.region,
+    image: "", // el borde no sirve imágenes
+    status: toStatus(d.season),
+    type: d.discipline,
+    // Ausencia de parte ⇒ `null`, NUNCA 0 cm.
+    snowBase: d.snow?.baseCm ?? null,
+    snowTop: null,
+    snowNew24h: null,
+    // El directorio no trae estado operativo por estación: sin dato, sin relleno.
+    liftsOpen: null,
+    liftsTotal: null,
+    slopesOpen: null,
+    slopesTotal: null,
+    altitude: { base: d.altitudeBaseM, top: d.altitudeTopM },
+    price: null,
+    features: [],
+    lastUpdate: d.snow?.updatedAt ?? d.snow?.observedAt,
+  };
+}
+
+function toStatus(season: StationDetailDto["season"]): StationStatus {
+  if (season === "open") return "open";
+  if (season === "closed") return "closed";
+  return "seasonal"; // `unknown` = temporada sin confirmar
+}
+
+function average(values: readonly number[]): number {
+  if (values.length === 0) return 0;
+  return Math.round(values.reduce((a, b) => a + b, 0) / values.length);
+}
+
+function uniqueSorted(values: readonly string[]): string[] {
+  return [...new Set(values.filter((v) => v.trim().length > 0))].sort((a, b) => a.localeCompare(b));
+}

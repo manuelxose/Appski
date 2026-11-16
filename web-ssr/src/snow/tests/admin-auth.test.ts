@@ -153,3 +153,51 @@ test('C26e: SNOW_ADMIN_TOKEN sin definir => admin DESHABILITADO (401), nunca abi
     assert.strictEqual(reportCount(dir), before, 'sin token no debe persistirse nada');
   });
 });
+
+test('C26f: cabecera authorization vacía => 401', async () => {
+  await withApp(async ({ base }) => {
+    const res = await fetch(`${base}/v1/admin/reports`, { headers: { authorization: '' } });
+    assert.strictEqual(res.status, 401, 'authorization vacío debe rechazar');
+  }, { token: TOKEN });
+});
+
+test('C26g: token solo whitespace => 401 y NO persiste', async () => {
+  await withApp(async ({ base, dir }) => {
+    const before = reportCount(dir);
+    const get = await fetch(`${base}/v1/admin/reports`, { headers: { authorization: '   ' } });
+    assert.strictEqual(get.status, 401, 'authorization solo whitespace debe rechazar');
+    const post = await fetch(`${base}/v1/admin/reports`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', authorization: ' \t ' },
+      body: JSON.stringify(validPayload()),
+    });
+    assert.strictEqual(post.status, 401, 'un token solo whitespace no debe escribir');
+    assert.strictEqual(reportCount(dir), before, 'un rechazo no debe persistir nada');
+  }, { token: TOKEN });
+});
+
+test('C26h: formato erróneo (sin esquema Bearer / Bearer sin valor / separador no espacio) => 401', async () => {
+  await withApp(async ({ base }) => {
+    const malformed = [TOKEN, `Token ${TOKEN}`, 'Bearer', 'Bearer ', `Bearer  ${TOKEN}`, `Bearer\t${TOKEN}`];
+    for (const h of malformed) {
+      const res = await fetch(`${base}/v1/admin/reports`, { headers: { authorization: h } });
+      assert.strictEqual(res.status, 401, `formato '${JSON.stringify(h)}' debe rechazar`);
+    }
+  }, { token: TOKEN });
+});
+
+test('C26i: esquema bearer en minúsculas => 401 (comparación case-sensitive)', async () => {
+  await withApp(async ({ base }) => {
+    const res = await fetch(`${base}/v1/admin/reports`, { headers: { authorization: `bearer ${TOKEN}` } });
+    assert.strictEqual(res.status, 401, 'bearer minúsculas no es el esquema admitido');
+  }, { token: TOKEN });
+});
+
+test('C26j: Basic auth => 401', async () => {
+  await withApp(async ({ base }) => {
+    const res = await fetch(`${base}/v1/admin/reports`, {
+      headers: { authorization: `Basic ${Buffer.from(TOKEN).toString('base64')}` },
+    });
+    assert.strictEqual(res.status, 401, 'Basic no es el esquema admitido');
+  }, { token: TOKEN });
+});

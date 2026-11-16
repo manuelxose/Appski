@@ -47,7 +47,7 @@
     <!-- Snow Base -->
     <div class="text-center p-4 bg-blue-50 rounded-lg">
       <div class="text-3xl md:text-4xl font-bold text-blue-600">
-        {{ snowReport().snowBase }}
+        {{ snowReport().snowBase ?? "—" }}
       </div>
       <div class="text-sm text-slate-600 mt-1">
         <span data-i18n="snow.base">Base</span> (cm)
@@ -57,7 +57,7 @@
     <!-- Snow Top -->
     <div class="text-center p-4 bg-blue-50 rounded-lg">
       <div class="text-3xl md:text-4xl font-bold text-blue-600">
-        {{ snowReport().snowTop }}
+        {{ snowReport().snowTop ?? "—" }}
       </div>
       <div class="text-sm text-slate-600 mt-1">
         <span data-i18n="snow.top">Cima</span> (cm)
@@ -88,7 +88,7 @@
           <span data-i18n="snow.new_24h">Última 24h</span>
         </div>
         <div class="text-2xl font-bold text-green-600">
-          {{ snowReport().snowNew24h }} cm
+          {{ snowReport().snowNew24h ?? "—" }} cm
         </div>
       </div>
       <span class="text-3xl">☃️</span>
@@ -102,7 +102,7 @@
           <span data-i18n="snow.new_48h">Últimas 48h</span>
         </div>
         <div class="text-2xl font-bold text-green-600">
-          {{ snowReport().snowNew48h }} cm
+          {{ snowReport().snowNew48h ?? "—" }} cm
         </div>
       </div>
       <span class="text-3xl">🌨️</span>
@@ -116,7 +116,7 @@
           <span data-i18n="snow.new_7days">Últimos 7 días</span>
         </div>
         <div class="text-2xl font-bold text-green-600">
-          {{ snowReport().snowNew7days }} cm
+          {{ snowReport().snowNew7days ?? "—" }} cm
         </div>
       </div>
       <span class="text-3xl">❄️</span>
@@ -134,12 +134,12 @@
             <span data-i18n="weather.temperature">Temperatura</span>
           </div>
           <div class="text-2xl font-bold text-slate-900">
-            {{ snowReport().temperature.current }}°C
+            {{ snowReport().temperature.current ?? "—" }}°C
           </div>
         </div>
       </div>
       <div class="text-sm text-slate-600">
-        Min: {{ snowReport().temperature.min }}°C · Max:
+        Min: {{ snowReport().temperature.min ?? "—" }}°C · Max:
         {{ snowReport().temperature.max }}°C
       </div>
     </div>
@@ -153,7 +153,7 @@
             <span data-i18n="weather.wind">Viento</span>
           </div>
           <div class="text-2xl font-bold text-slate-900">
-            {{ snowReport().wind.speed }} km/h
+            {{ snowReport().wind.speed ?? "—" }} km/h
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@
   </div>
 
   <!-- Alert banner if conditions are exceptional -->
-  @if (snowReport().snowNew24h > 20) {
+  @if ((snowReport().snowNew24h ?? 0) > 20) {
   <div
     class="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-lg flex items-start gap-3"
   >

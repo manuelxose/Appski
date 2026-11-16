@@ -15,3 +15,34 @@ export const RATE_LIMITS: Readonly<Partial<Record<ProviderId, RateLimit>>> = {
   osm: { requestsPerMinute: 10, maxConcurrent: 1, verified: false, note: 'unverified: Overpass/Nominatim tienen política propia; NO se usan en runtime' },
   protomaps: { requestsPerMinute: 600, maxConcurrent: 8, verified: true, note: 'autohospedado: el límite es el del bucket propio' },
 };
+
+/**
+ * Límite de tasa REAL del borde (antiabuso), distinto de `RATE_LIMITS` (que es la
+ * tabla de cuotas de proveedores externos para telemetría). Ventana fija por
+ * clave `cliente#bucket`, en memoria y por proceso: cada `createSnowRouter`
+ * recibe una instancia nueva (aislamiento en tests). 429 con `Retry-After`.
+ */
+export interface RateLimitWindow {
+  readonly windowMs: number;
+  readonly max: number;
+}
+
+export class RateLimiter {
+  private readonly hits = new Map<string, { count: number; windowStart: number }>();
+
+  constructor(private readonly window: RateLimitWindow) {}
+
+  /** Registra el intento y decide si está permitido. */
+  allow(key: string, now: number = Date.now()): { allowed: boolean; retryAfterMs: number } {
+    const s = this.hits.get(key);
+    if (!s || now - s.windowStart >= this.window.windowMs) {
+      this.hits.set(key, { count: 1, windowStart: now });
+      return { allowed: true, retryAfterMs: 0 };
+    }
+    s.count += 1;
+    if (s.count > this.window.max) {
+      return { allowed: false, retryAfterMs: this.window.windowMs - (now - s.windowStart) };
+    }
+    return { allowed: true, retryAfterMs: 0 };
+  }
+}

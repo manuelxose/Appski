@@ -82,8 +82,8 @@
           <div class="flex items-center gap-2">
             <span class="text-2xl">🏔️</span>
             <span class="text-sm"
-              >{{ station().altitude.base }}m -
-              {{ station().altitude.top }}m</span
+              >{{ station().altitude.base ?? "—" }}m -
+              {{ station().altitude.top ?? "—" }}m</span
             >
           </div>
 
@@ -93,7 +93,7 @@
           >
             <span class="text-sm">Forfait desde</span>
             <span class="text-2xl font-bold"
-              >{{ station().price.currency }}{{ station().price.adult }}</span
+              >{{ station().price?.currency }}{{ station().price?.adult ?? "—" }}</span
             >
             <span class="text-sm">/día</span>
           </div>

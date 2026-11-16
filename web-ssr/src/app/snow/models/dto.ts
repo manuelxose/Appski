@@ -31,6 +31,13 @@ export type {
   ProvenanceDto,
   ReportPayload,
   SnowReportDto,
+  // Directorio/ficha con nieve OBSERVADA, temporada y paginación (t3). Se
+  // RE-EXPORTAN del dominio; no se copian para no tener dos fuentes de verdad.
+  SnowObservationDto,
+  StationDetailDto,
+  StationListDto,
+  PaginationDto,
+  AlertsDto,
 } from "../../../snow/models/dto";
 
 export type { StationSummary } from "../../../snow/models/station";

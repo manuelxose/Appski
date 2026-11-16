@@ -1,0 +1,143 @@
+{
+  "driver": "reviewer-security-bundle",
+  "ranAt": "2026-11-16T19:08:25.823Z",
+  "total": 22,
+  "passed": 22,
+  "failed": 0,
+  "exitCode": 0,
+  "checks": [
+    {
+      "name": "GET /v1/stations => 200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "POST /admin/reports sin cabecera => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports token vacío => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports solo whitespace => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports token sin esquema => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports esquema erróneo => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports Bearer sin valor => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports bearer minúsculas => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "POST /admin/reports Basic => 401",
+      "ok": true,
+      "detail": 401
+    },
+    {
+      "name": "los 401 NO cambian el conteo de partes",
+      "ok": true,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "name": "POST con snow.baseCm=-99 => 400 nombrando snow.baseCm",
+      "ok": true,
+      "detail": {
+        "status": 400,
+        "fields": [
+          {
+            "field": "snow.baseCm",
+            "message": "must be an integer >= 0 or null (never a negative sentinel)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST JSON malformado => 400 sin stack",
+      "ok": true,
+      "detail": 400
+    },
+    {
+      "name": "POST >64kb => 413 sin stack",
+      "ok": true,
+      "detail": 413
+    },
+    {
+      "name": "los rechazos 400/413 NO cambian el conteo EN DISCO",
+      "ok": true,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "name": "GET /config => 200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "/config no filtra nombres de env ni token",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "/config sin stack",
+      "ok": true,
+      "detail": "stack"
+    },
+    {
+      "name": "20 escrituras admin autenticadas dentro del límite => 200",
+      "ok": true,
+      "detail": "20"
+    },
+    {
+      "name": "21ª escritura admin => 429 con Retry-After",
+      "ok": true,
+      "detail": {
+        "status": 429,
+        "retryAfter": "60"
+      }
+    },
+    {
+      "name": "100 lecturas costosas dentro del límite => 200",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "name": "101ª lectura costosa => 429",
+      "ok": true,
+      "detail": 429
+    },
+    {
+      "name": "null explícito se conserva como null (nunca 0)",
+      "ok": true,
+      "detail": {
+        "baseCm": null,
+        "midCm": null,
+        "topCm": null,
+        "newSnow24hCm": null,
+        "quality": null
+      }
+    }
+  ]
+}

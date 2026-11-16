@@ -1,7 +1,7 @@
-# EXECUTION-STATE — SNOW-01 (runtime recovery)
+# EXECUTION-STATE — SNOW-02 (backend operativo, persistencia y APIs)
 
-**Última actualización:** 2026-11-16 · **Rama:** `feat/snow-01-runtime-recovery`
-**Estado:** PASS con limitaciones declaradas · **Merge a `master`: NO AUTORIZADO**
+**Última actualización:** 2026-11-16 · **Rama:** `feat/snow-02-operational-backend`
+**Estado:** revisión independiente **PASS** · **Merge a `master`: NO AUTORIZADO**
 
 ---
 
@@ -9,107 +9,72 @@
 
 | Dato | Valor |
 |---|---|
-| Commit base | `9b503604f802abc4c373fee8b7ba36181e31e0df` (HEAD de `master` al empezar) |
-| Rama actual | `feat/snow-01-runtime-recovery` |
-| HEAD de la rama | `9b503604f802abc4c373fee8b7ba36181e31e0df` — **sin commits propios** |
-| Commits creados en el hito | **0** |
-| Cambios no commitados | 8 modificados (`git diff --stat` = 83 insertions / 16 deletions) + untracked `docs/`, `scripts/`, `web-ssr/src/snow/`, `web-ssr/src/app/snow/`, `web-ssr/public/assets/i18n/` |
+| Commit base | `9b503604f802abc4c373fee8b7ba36181e31e0df` (HEAD de `master`) |
+| Rama actual | `feat/snow-02-operational-backend` |
+| HEAD de la rama | `baec0c865e44e08590e4209eb56d87539b847821` |
+| Commits por delante de `master` | 4 (`7277cc8` núcleo snow · `f033696` conexión SSR · `02b82e1` docs/REA · `baec0c8` gitignore) — trabajo del hito anterior |
+| **Commits creados en SNOW-02** | **0** |
+| Cambios SNOW-02 sin commit | 36 modificados + untracked (`docs/snow/`, `scripts/snow02/`, `web-ssr/src/snow/store/json-store/*`, `web-ssr/src/snow/models/persistence.ts`, `web-ssr/src/snow/server/{query,station-query,snow.errors}.ts`, `web-ssr/src/snow/tests/*`, `web-ssr/src/snow/cache/rate-limit.ts`, `web-ssr/src/app/snow/client/*`, data services de stations-list/station-detail/weather) |
 
-Ficheros modificados (sin commit):
-
-```
-tsconfig.base.json
-web-ssr/src/app/app.routes.server.ts
-web-ssr/src/app/app.routes.ts
-web-ssr/src/app/pages/station-detail/services/station-detail.data.service.ts
-web-ssr/src/app/pages/stations-list/services/stations-list.data.service.ts
-web-ssr/src/app/pages/weather/services/meteo-data.service.ts
-web-ssr/src/app/pages/weather/services/snow-data.service.ts
-web-ssr/src/server.ts
-```
+> **Pendiente de entrega:** todo el hito vive en el árbol de trabajo sin commit. Debe
+> sellarse en un commit con identidad de contenido antes de cualquier integración o merge.
 
 ---
 
-## 2. Funciones DEMOSTRADAS (con ejecución real)
+## 2. Funciones DEMOSTRADAS (re-ejecutadas por el revisor independiente)
 
 | Función | Evidencia | Estado |
 |---|---|---|
-| Build Angular SSR de producción | `npx nx build web-ssr --configuration=production` → **exit 0**; `--skip-nx-cache` → **exit 0** (revisor); `dist/web-ssr/server/server.mjs` existe, `browser/` con 234 ficheros | DEMOSTRADO |
 | Type-check de aplicación | `tsc -p web-ssr/tsconfig.app.json --noEmit` → **exit 0** | DEMOSTRADO |
-| Arranque del servidor Express SSR | `PORT=4010 node dist/web-ssr/server/server.mjs` → "Node Express server listening on http://localhost:4010"; repetido en :4011 por el revisor | DEMOSTRADO |
-| Renderizado SSR de `/`, `/nieve`, `/nieve/estaciones`, `/nieve/estaciones/baqueira-beret` | 200 + `<h1>` correcto por HTTP directo; SSR confirmado con JS deshabilitado (`ng-server-context="ssr"`, `ng-version="20.2.4"`, 805 chars en `/nieve/estaciones`) | DEMOSTRADO |
-| Hidratación en Chrome real (desktop 1440×900 y móvil 390×844) | 8 capturas + `qa-results.json`; 11–16 JS + 1 CSS por página, todos 200, cero 404 de JS/CSS | DEMOSTRADO |
-| Navegación por clic dentro del módulo | `qa-clicks.json`: `/nieve` → directorio → detalle → volver, 0 document requests, 0 errores de consola | DEMOSTRADO |
-| Bootstrap del seed editorial | `bootstrapStore()` en `file-io.ts` invocado por `createSnowRouter()`; tests B1–B5; `/api/snow/v1/stations` → 200 con 3 estaciones | DEMOSTRADO |
-| Honestidad de datos (sin cifras inventadas) | Directorio: 3/3 "SIN DATOS"; detalle: "Temporada cerrada — sin parte publicado"; dashboard 3 catálogo / 0 con parte / 3 sin dato | DEMOSTRADO |
-| Guard admin fail-closed | Sin `SNOW_ADMIN_TOKEN`: `/api/snow/v1/config` → 401, `/api/snow/v1/admin/reports` → 401; rutas públicas 200 | DEMOSTRADO |
-| No regresión repo | 61/61 PASS exit 0 (56 baseline + 5 nuevos B1–B5) | DEMOSTRADO |
-| No regresión frontend | 70/70 PASS exit 0 (build-client → tsc → build-client → node --test) | DEMOSTRADO |
-| Correcciones preservadas | `app.routes.server.ts:12` `RenderMode.Server`; `editorial.test.ts` C24a/C24a2/C24b–f pasan | DEMOSTRADO |
+| Esquema SQL invariantes | `node scripts/snow/check-schema.mjs` → 8/8 «all invariants hold», exit 0 | DEMOSTRADO |
+| Build producción sin caché | `npx nx build web-ssr --configuration=production --skip-nx-cache` → exit 0 (62.5 s) | DEMOSTRADO |
+| Suite completa `snow/tests` | 123/123 pass, 0 fail, `LEAK_GUARD_OK`, exit 0 (TMP aislado) | DEMOSTRADO |
+| 15 endpoints v1 por HTTP (bundle real) | `integration-http.mjs` 60/60 · `captain-http-verify.mjs` 68/68 | DEMOSTRADO |
+| Persistencia tras SIGKILL (F1) | `persistence-restart.mjs` 18/18: `liftsOpen === 12`, atribución y ranking tras reinicio | DEMOSTRADO |
+| Matriz adversarial | `adversarial.mjs` 14/14 (404/400/413/null≠0/centinelas/draft/futuro) | DEMOSTRADO |
+| Seguridad admin | `security-http-verify.mjs` 51/51 · sonda propia del revisor `reviewer-security-bundle.mjs` 22/22 (auth 8×401, 400/413 sin stack, 429 con Retry-After, /config sin nombres de env, rechazos sin efecto) | DEMOSTRADO |
+| Contratos Angular ↔ backend | `api-client.test.mjs` 6/6 (cliente sin rutas inventadas ni rutas admin) | DEMOSTRADO |
+| Honestidad de datos | sin cifras inventadas, `null ≠ 0`, estados `no_data`/`not_configured`/`blocked`/`stale`, ningún mock como dato real en nieve | DEMOSTRADO |
 
 ---
 
-## 3. Funciones PENDIENTES (no demostradas en este hito)
+## 3. Funciones PENDIENTES (no demostradas / no conectadas)
 
 | Pendiente | Motivo | Estado |
 |---|---|---|
-| Enlace desde la portada `/` al módulo `/nieve` | `qa-nav.json`: 40 anchors en `/`, **0** hacia `/nieve` | PENDIENTE (fuera de alcance SNOW-01) |
-| Partes de nieve reales (espesores, pistas, remontes) | Pretemporada; `snow-reports.json` y `osm-derived.json` vacíos a propósito | PENDIENTE (dato de dominio, no de runtime) |
-| Providers externos en vivo (cadena de fallback real, rate-limit real, circuit-breaker real) | Sin llamadas a proveedores externos; solo tests unitarios | UNVERIFIED en vivo |
-| Navegador real en `/nieve/comparar`, `/nieve/webcams`, `/nieve/mapa` | No se recorrieron en Chrome en este hito | UNVERIFIED en navegador (compilan en build) |
-| Imágenes de estaciones de la portada (4 × 404) | `/assets/images/stations/{sierra-nevada,baqueira,formigal,cerler}.jpg` ausentes; deuda previa del shell legacy | PENDIENTE |
-| Budget CSS `admin-analytics-stations` y bailout CommonJS de `leaflet` | Warnings del build | PENDIENTE (no bloqueante) |
-| Aislamiento de seguridad (lectura / secretos / red) | No medido | SECURITY PARTIAL (no realizado) |
-| Commit del trabajo | Todo en árbol de trabajo | PENDIENTE |
+| `home`, `planner`, `blog-list`, `blog-article`, `lodging-*`, `rental-marketplace`, `premium`, `shop-detail`, `account`, `admin` (resto) | Dominios fuera del alcance nieve v1; siguen con mock (R2/R4 de SNOW-02) | NO CONECTADO (declarado) |
+| Proveedores externos en vivo (AEMET/Météo-France/C3S/CLMS) | Sin credenciales; `forecast`/`avalanche`/`alerts` degradan a `not_configured`/`no_data` | UNVERIFIED en vivo |
+| Radar e histórico de webcam | Sin endpoint en v1 ⇒ `unavailable` explícito en el cliente | PENDIENTE |
+| Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
+| Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
+| **Commit del trabajo SNOW-02** | Todo en árbol de trabajo | **PENDIENTE (bloquea integración)** |
+| Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
 
 ---
 
-## 4. Dependencias del siguiente hito
+## 4. Hallazgos cerrados (revisión t7)
 
-1. **Commit de entrada:** el siguiente hito debe partir de un commit en
-   `feat/snow-01-runtime-recovery` que capture los 8 modificados + untracked; hoy no existe.
-   Sin commit no hay identidad de contenido para una revisión content-bound.
-2. **Datos reales de operador:** para poblar `snow-reports.json` hacen falta fuentes de
-   operador autorizadas (`authorizations.ts`). Sin ellas, la UI debe seguir diciendo "SIN DATOS".
-3. **Enlace portada → `/nieve`:** depende de una decisión de producto sobre el shell legacy
-   (`/` y `/estaciones` se mantienen sin cambios por decisión del capitán, ver comentario en
-   `app.routes.ts:320-323`).
-4. **Providers externos:** requieren red y credenciales por nombre de variable de entorno
-   (`SNOW_ADMIN_TOKEN` y las que declare el registro de providers); nunca valores en claro.
-5. **Puerto 4000:** está ocupado por un proceso `node` previo (PID 40940) en este host; el
-   siguiente hito debe elegir puerto explícito o liberar el proceso.
+| ID | Severidad | Estado | Evidencia |
+|---|---|---|---|
+| C1/B2 centinela `-99` aceptado | ALTA | **CORREGIDO** — 400 tipado, no persiste | `adversarial` #9, `integration-http`, sonda propia |
+| C3/B4 `stale` por antigüedad recién escrito | ALTA | **CORREGIDO** — `editorialFreshness(observedAt, capturedAt, now)` | `station-query.ts:257`, suite |
+| C5 visibilidad decidida por reloj | ALTA | **CORREGIDO** — `listPublished` filtra por `mood`, no por reloj | `parte-futuro.test.ts`, `adversarial` #11 |
+| C4/B1 `/config` filtraba nombres de env | MEDIA | **CORREGIDO** — `redactConfig()` en el borde | `security-hardening` C29a, sonda propia |
+| B3 `PUT` = reemplazo total | MEDIA | **POR DISEÑO** — upsert de documento completo, fail-closed | `parseStationUpsert` |
+| Observación: `observedAt` futuro etiquetado `stale` en directorio/ranking vs `live` en `/report` | BAJA | Documentado; no bloquea (visibilidad coherente) | informe §8 |
 
 ---
 
 ## 5. Evidencias verificables
 
-| Evidencia | Ubicación | Comprobación |
-|---|---|---|
-| Informe completo del hito | `docs/snow/SNOW-01-RUNTIME-REPORT.md` | lectura directa |
-| Capturas desktop + móvil | `docs/snow/captures-snow01/snow01-*.png` (8 ficheros) | existen, tamaños en el informe §7 |
-| Captura del revisor | `docs/snow/captures-snow01/reviewer-nieve-estaciones.png` (47.598 B) | existe |
-| Consola / red / DOM por ruta y vista | `docs/snow/captures-snow01/qa-results.json` | JSON válido con `desktop`/`mobile` |
-| SSR sin JS, deep link, anchors de la portada | `docs/snow/captures-snow01/qa-nav.json` | 40 anchors, 0 `/nieve` |
-| Navegación por clic | `docs/snow/captures-snow01/qa-clicks.json` | 3 clics + history.back, 0 errores |
-| Drivers reproducibles | `run-browser-qa.mjs`, `run-ssr-nav.mjs`, `run-clicks.mjs`, `summarize.mjs` | reejecutables contra :4010 y CDP :9222 |
-| Artefactos de build | `dist/web-ssr/server/server.mjs`, `dist/web-ssr/browser/` | 325 ficheros totales en `dist/web-ssr` |
-| Tests de bootstrap | `web-ssr/src/snow/tests/bootstrap.test.ts` (B1–B5) | 5 tests |
-| Bootstrap del seed | `web-ssr/src/snow/store/json-store/file-io.ts` (`bootstrapStore`) + `web-ssr/src/snow/server/index.ts:23` | lectura directa |
-| Fixes del build | `snow-compare.component.ts:57` (`?? ''`), `skeleton.component.ts:21` (`label()`) | lectura directa |
-| Render mode | `web-ssr/src/app/app.routes.server.ts:12` (`RenderMode.Server`) | lectura directa |
-| **Capturas post-fix (posteriores a la revisión)** | `docs/snow/captures-snow01/snow01-postfix-detalle-{desktop,mobile}.png` | `labelEnganosa=false`, estados honestos presentes |
-| **Script de captura post-fix** | `scripts/snow-01-postfix-capture.mjs` | reejecutable: `node scripts/snow-01-postfix-capture.mjs <baseUrl>` |
-| **Arreglo de integridad de datos** | `station-state.component.ts` y `snow-station-detail.component.ts` | `updatedAt ?? observedAt` → `updatedAt ?? null` (ver informe §13.2) |
-
-### 5.1 Nota sobre la re-ejecución (medido tras la revisión)
-
-- El build **debe** ejecutarse con `--skip-nx-cache`; sin esa bandera Nx puede devolver `exit 0`
-  desde caché sin compilar (informe §13.3).
-- La suite del repo debe ejecutarse con `TMP`/`TEMP` **aislado** si en la máquina corre otro
-  proceso que escribe en `%TEMP%`: en este host, un proceso ajeno
-  (`workspace/embarcarte`, `check-marea-customer-recovery.mjs`) crea directorios temporales cada
-  pocos segundos y hace que `leak-guard` falle **sin que falle ningún test** (informe §13.4).
-  Con `%TEMP%` aislado: `LEAK_GUARD_OK`, 61/61, exit 0.
+| Evidencia | Ubicación |
+|---|---|
+| Informe de entrega y revisión | `docs/snow/SNOW-02-BACKEND-REPORT.md` |
+| Arquitectura e inventario | `docs/snow/SNOW-02-ARCHITECTURE.md` |
+| Evidencia cruda de drivers | `docs/snow/snow02-evidence/{integration-http,persistence-restart,adversarial,captain-http-verify,reviewer-security-bundle}.json` |
+| Sonda propia del revisor | `docs/snow/snow02-evidence/reviewer-security-bundle.mjs` |
+| Hallazgos de seguridad | `docs/snow/snow02-evidence/security-findings.md` |
+| Drivers reproducibles | `scripts/snow02/{integration-http,persistence-restart,adversarial,security-http-verify,captain-http-verify}.mjs` |
 
 ---
 
@@ -117,37 +82,18 @@ web-ssr/src/server.ts
 
 **MERGE A `master`: NO AUTORIZADO.**
 
-- No hay merge, fast-forward, tag ni push realizados por este hito.
-- La rama `feat/snow-01-runtime-recovery` contiene los commits del hito; `master` permanece en
-  `9b503604f802abc4c373fee8b7ba36181e31e0df`.
-- La revisión independiente (t4) emitió **PASS** sobre lo que verificó, pero un PASS de
-  revisión **no** es autorización de merge (política ENGINE-01 §4 y ENGINE-02 §6).
-- El merge a `master` requiere **autorización explícita del usuario**.
+- No hay merge, fast-forward, tag ni push realizados por SNOW-02.
+- La rama `feat/snow-02-operational-backend` está 4 commits por delante de `master` (hito
+  anterior); el trabajo de SNOW-02 está **sin commit** en el árbol de trabajo.
+- La revisión independiente (t7) emitió **PASS**, pero un PASS de revisión **no** autoriza
+  el merge (ENGINE-01 §4, ENGINE-02 §6).
+- El merge a `master` requiere **autorización explícita del usuario**, y además exige antes
+  sellar el trabajo SNOW-02 en un commit con identidad de contenido.
 
-### Condiciones que el usuario debería ver antes de autorizar
+### Condiciones antes de autorizar un merge
 
-1. ~~Commit del trabajo en la rama con identidad de contenido.~~ **Hecho**: ver §1/§7.
-2. ~~Re-ejecución del build sin caché y de las dos suites desde ese commit.~~ **Hecho**: ver §5.1
-   y el informe §13.5 (build exit 0, 61/61, 70/70).
-3. Decisión sobre las 4 imágenes 404 de la portada y sobre el enlace portada → `/nieve`.
-4. Decisión sobre los warnings de budget CSS y de `leaflet`.
-
----
-
-## 7. Cambios realizados por el coordinador DESPUÉS de la revisión independiente
-
-La revisión (t4) cerró con PASS. Posteriormente el coordinador verificó por su cuenta y encontró
-un defecto **no reportado por ningún agente**, que ya está corregido:
-
-| Fichero | Cambio | Motivo |
-|---|---|---|
-| `web-ssr/src/app/snow/client/ui/station-state.component.ts` | `updatedAt ?? observedAt` → `updatedAt ?? null` | «Último parte conocido» aparecía en estaciones **sin parte** |
-| `web-ssr/src/app/snow/pages/station/snow-station-detail.component.ts` | `updatedAt ?? observedAt` → `updatedAt ?? null` | «Última actualización» era el instante de la petición |
-
-Verificación del arreglo: `tsc` exit 0 · build `--skip-nx-cache` exit 0 · SSR sin las frases
-engañosas (`False`/`False`) y con los estados honestos (`Sin datos`/`Temporada cerrada`
-presentes) · 61/61 y 70/70 · capturas post-fix en navegador real.
-
-> Consecuencia: las capturas de §5 tomadas **antes** de este arreglo muestran la etiqueta
-> engañosa. Las capturas `snow01-postfix-*.png` son las que representan el estado actual del
-> código.
+1. **Commit del trabajo SNOW-02** con identidad de contenido (hoy pendiente).
+2. Re-ejecución de `tsc`, `check-schema`, `nx build --skip-nx-cache`, suite completa y los
+   4 drivers desde ese commit (gate determinista ENGINE-04).
+3. Decisión de producto sobre los mocks restantes (home/planner/blog/lodging/rental/
+   premium/shop-detail/account/admin) — declarados fuera de alcance nieve v1.

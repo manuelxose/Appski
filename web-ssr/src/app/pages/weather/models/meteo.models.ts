@@ -14,9 +14,9 @@ export interface SkiStation {
   region: string; // "Valle de Arán", "Huesca", etc.
   country: string; // "España", "Andorra", etc.
   altitudes: {
-    base: number; // metros
-    mid: number; // metros
-    top: number; // metros
+    base: number | null; // metros (`null` = no publicada por el maestro)
+    mid: number | null; // el maestro no publica cota media
+    top: number | null;
   };
   location: {
     lat: number;

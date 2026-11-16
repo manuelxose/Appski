@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-11-16T19:07:25.482Z",
+  "server": "dist/web-ssr/server/server.mjs",
+  "total": 68,
+  "passed": 68,
+  "failed": 0,
+  "results": [
+    {
+      "name": "GET /v1/stations => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "GET /v1/stations trae stations[]",
+      "ok": true,
+      "detail": "len=3"
+    },
+    {
+      "name": "GET /v1/stations con procedencia completa",
+      "ok": true,
+      "detail": "{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:07:24.741Z\",\"updatedAt\":\"2026-11-16T19:07:24.741Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshne"
+    },
+    {
+      "name": "GET /v1/stations filtrado/ordenado/paginado => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "filtro country=ES sólo devuelve ES",
+      "ok": true,
+      "detail": "[\"baqueira-beret\",\"formigal-panticosa\"]"
+    },
+    {
+      "name": "paginación presente y coherente",
+      "ok": true,
+      "detail": "{\"page\":1,\"pageSize\":2,\"total\":2,\"totalPages\":1,\"hasNext\":false,\"hasPrev\":false}"
+    },
+    {
+      "name": "pageSize fuera de tope => 400 tipado",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"pageSize\",\"message\":\"must be an integer between 1 and 100\"}],\""
+    },
+    {
+      "name": "country inválido => 400",
+      "ok": true,
+      "detail": "status=400"
+    },
+    {
+      "name": "query no declarada => 400",
+      "ok": true,
+      "detail": "status=400"
+    },
+    {
+      "name": "GET /v1/search?q= => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "GET /v1/search sin q => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"q\",\"message\":\"is required (non-empty search string)\"}],\"proven"
+    },
+    {
+      "name": "GET /v1/stations/:slug => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "slug desconocido => 404 con procedencia",
+      "ok": true,
+      "detail": "status=404"
+    },
+    {
+      "name": "GET /report => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "/report sin parte => status no_data (no 0, no null→0)",
+      "ok": true,
+      "detail": "status=no_data reason=outside-season"
+    },
+    {
+      "name": "/report expone noDataFields",
+      "ok": true,
+      "detail": "{\"operational\":null,\"snow\":null,\"noDataFields\":[\"operational\",\"snow\"]}"
+    },
+    {
+      "name": "/report no inventa cifras",
+      "ok": true,
+      "detail": "{\"operational\":null,\"snow\":null,\"noDataFields\":[\"operational\",\"snow\"]}"
+    },
+    {
+      "name": "GET /forecast => estado tipado not_configured/no_data",
+      "ok": true,
+      "detail": "status=200 body=no_data"
+    },
+    {
+      "name": "/forecast con procedencia",
+      "ok": true,
+      "detail": "{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T19:07:24.837Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"all"
+    },
+    {
+      "name": "GET /alerts existe => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "/alerts no inventa alertas",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "/alerts estado tipado de indisponibilidad",
+      "ok": true,
+      "detail": "status=no_data"
+    },
+    {
+      "name": "/alerts con procedencia",
+      "ok": true,
+      "detail": "{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T19:07:24.848Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"allowe"
+    },
+    {
+      "name": "GET /webcams => 200 blocked/license",
+      "ok": true,
+      "detail": "status=200 body=blocked"
+    },
+    {
+      "name": "/webcams sin enlaces no autorizados",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "GET /avalanche => estado tipado",
+      "ok": true,
+      "detail": "status=200 body=no_data"
+    },
+    {
+      "name": "GET /rankings/nieve => 200 con estado",
+      "ok": true,
+      "detail": "status=200 body=no_data"
+    },
+    {
+      "name": "GET /rankings/nieve sin datos inventados",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "GET /rankings/km => 200 con estado",
+      "ok": true,
+      "detail": "status=200 body=no_data"
+    },
+    {
+      "name": "GET /rankings/km sin datos inventados",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "GET /season-dates => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "temporada sin confirmar NO se presenta como confirmada",
+      "ok": true,
+      "detail": "[{\"slug\":\"baqueira-beret\",\"name\":\"Baqueira Beret\",\"seasonOpen\":null,\"seasonClose\":null,\"confirmed\":false,\"state\":\"unknown\"},{\"slug\":\"formigal-panticosa\",\"name\":"
+    },
+    {
+      "name": "GET /config sin token => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"Bearer\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"Bearer wrong\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"Basic snow02-c\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"bearer snow02-\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /config con token \"Bearer snow02-\" => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "GET /admin/reports con token => 200",
+      "ok": true,
+      "detail": "reports=0"
+    },
+    {
+      "name": "GET /config con token => 200 y estado de fuentes",
+      "ok": true,
+      "detail": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:07:24.959Z\",\"updatedAt\":\"2026-11-16T19:07:24.959Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
+    },
+    {
+      "name": "el token NO aparece en /config",
+      "ok": true,
+      "detail": "search token in body"
+    },
+    {
+      "name": "POST /admin/reports rechaza sin token => 401",
+      "ok": true,
+      "detail": "status=401 body={\"error\":\"unauthorized\"}"
+    },
+    {
+      "name": "POST /admin/reports rechaza token inválido => 401",
+      "ok": true,
+      "detail": "status=401 body={\"error\":\"unauthorized\"}"
+    },
+    {
+      "name": "POST /admin/reports rechaza token vacío => 401",
+      "ok": true,
+      "detail": "status=401 body={\"error\":\"unauthorized\"}"
+    },
+    {
+      "name": "POST /admin/reports rechaza JSON malformado => 400",
+      "ok": true,
+      "detail": "status=400 body={\"error\":\"invalid\",\"message\":\"malformed JSON body\"}"
+    },
+    {
+      "name": "POST /admin/reports rechaza author vacío => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"author\",\"message\":\"is required (non-empty human operator)\"}],\"provenance\":{\"source"
+    },
+    {
+      "name": "POST /admin/reports rechaza sourceUrl no http => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"sourceUrl\",\"message\":\"is required and must be a valid http/https URL\"}],\"provenanc"
+    },
+    {
+      "name": "POST /admin/reports rechaza observedAt no ISO => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"observedAt\",\"message\":\"is required and must be ISO 8601\"}],\"provenance\":{\"source\":"
+    },
+    {
+      "name": "POST /admin/reports rechaza confidence fuera de rango => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"confidence\",\"message\":\"is required and must be a number in [0,1]\"}],\"provenance\":{"
+    },
+    {
+      "name": "POST /admin/reports rechaza avalancheLevel fuera de 1..5 => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"avalancheLevel\",\"message\":\"must be integer 1..5 or null\"}],\"provenance\":{\"source\":"
+    },
+    {
+      "name": "POST /admin/reports rechaza centinela negativo (-99) => 400",
+      "ok": true,
+      "detail": "status=400 body={\"status\":\"invalid\",\"error\":\"invalid\",\"fields\":[{\"field\":\"snow.baseCm\",\"message\":\"must be an integer >= 0 or null (never a negative sentinel"
+    },
+    {
+      "name": "PUT /admin/stations sin token => 401",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "los rechazos NO crearon registros",
+      "ok": true,
+      "detail": "before=0 after=0"
+    },
+    {
+      "name": "POST /admin/reports autorizado => 201",
+      "ok": true,
+      "detail": "status=201 body={\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:07:25.099Z\",\"updatedAt\":\"2026-11-16T19:07:25.099Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
+    },
+    {
+      "name": "el 201 devuelve el parte con id interno",
+      "ok": true,
+      "detail": "id=2943496e-b9d4-402f-b146-413085c9c1b0"
+    },
+    {
+      "name": "el parte está en DISCO tras la escritura",
+      "ok": true,
+      "detail": "ficheros=osm-derived.json,snow-reports.json,stations.json"
+    },
+    {
+      "name": "el token canario NO se escribe en disco",
+      "ok": true,
+      "detail": "search token in store"
+    },
+    {
+      "name": "tras reinicio: lista de partes => 200",
+      "ok": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "tras reinicio: el parte sigue en la lista",
+      "ok": true,
+      "detail": "ids=2943496e-b9d4-402f-b146-413085c9c1b0"
+    },
+    {
+      "name": "tras reinicio: /report => 200 ok",
+      "ok": true,
+      "detail": "status=200 body=ok"
+    },
+    {
+      "name": "F1: liftsOpen === 12 tras reinicio",
+      "ok": true,
+      "detail": "liftsOpen=12"
+    },
+    {
+      "name": "F1: atribución completa tras reinicio",
+      "ok": true,
+      "detail": "{\"author\":\"Servicio de nieve Baqueira\",\"sourceUrl\":\"https://www.baqueira.es/parte-de-nieve\",\"capturedAt\":\"2026-11-16T19:07:25.091Z\",\"confidence\":1}"
+    },
+    {
+      "name": "null no convertido en 0: enviado=60/90/120 se conserva y ausente newSnow24hCm es null",
+      "ok": true,
+      "detail": "{\"baseCm\":60,\"midCm\":90,\"topCm\":120,\"newSnow24hCm\":null,\"quality\":\"powder\"}"
+    },
+    {
+      "name": "tras reinicio: ranking nieve usa el dato escrito",
+      "ok": true,
+      "detail": "[{\"stationSlug\":\"baqueira-beret\",\"baseCm\":60,\"observedAt\":\"2026-11-16T08:00:00.000Z\",\"updatedAt\":\"2026-11-16T19:07:25.091Z\",\"status\":\"live\"}]"
+    },
+    {
+      "name": "PUT /admin/stations parcial => 400 declarando reemplazo total",
+      "ok": true,
+      "detail": "status=400 fields=[{\"field\":\"body\",\"message\":\"PUT replaces the whole station resource (no merge): send every required field (slug,name,country,region,discipline,lat,lng,seasonConfirmed)\"},{\"field\":\"slug\",\"message\":\"is "
+    },
+    {
+      "name": "PUT /admin/stations completo => 200",
+      "ok": true,
+      "detail": "status=200 body={\"status\":\"ok\",\"created\":false,\"station\":{\"slug\":\"baqueira-beret\",\"name\":\"Baqueira Beret\",\"country\":\"ES\",\"region\":\"Pirineo Catalán\",\"lat\":42.6999,\"lng\":0.9367,\"altitudeBaseM\":1500,\"altitudeTopM\":2610,"
+    },
+    {
+      "name": "errores no filtran stack/credenciales",
+      "ok": true,
+      "detail": "filtrado="
+    }
+  ]
+}

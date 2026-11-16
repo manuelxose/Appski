@@ -13,12 +13,24 @@
  * `classifyHttp` devuelve `ok: true` con el cuerpo tal cual y sólo marca
  * `ok: false` cuando hubo fallo de red, 5xx o un 404 de estación.
  */
-import type { NoDataReason, StationSummary } from "../models/dto";
+import type {
+  AlertsDto,
+  ForecastBundle,
+  ImageGrant,
+  NoDataReason,
+  ProvenanceDto,
+  SnowObservationDto,
+  SnowReportDto,
+  StationDetailDto,
+  StationListDto,
+  StationSummary,
+} from "../models/dto";
 
 /** Rutas públicas que consume el cliente (las `admin: true` quedan fuera). */
 export const SNOW_ENDPOINTS = {
   stations: "/api/snow/v1/stations",
   search: "/api/snow/v1/search",
+  alerts: (slug: string) => `/api/snow/v1/stations/${encodeURIComponent(slug)}/alerts`,
   report: (slug: string) => `/api/snow/v1/stations/${encodeURIComponent(slug)}/report`,
   forecast: (slug: string) => `/api/snow/v1/stations/${encodeURIComponent(slug)}/forecast`,
   webcams: (slug: string) => `/api/snow/v1/stations/${encodeURIComponent(slug)}/webcams`,
@@ -31,27 +43,72 @@ export const SNOW_ENDPOINTS = {
 
 export type SnowEndpointKey = keyof typeof SNOW_ENDPOINTS;
 
-/** Respuesta de `GET /v1/stations` y de `/v1/search` (`SnowService.listStations`). */
-export interface StationListDto {
-  readonly status: "ok";
-  readonly stations: readonly StationSummary[];
+/**
+ * Filtros/orden/paginación del directorio, EXACTAMENTE los que el borde acepta
+ * (`/v1/stations`, SNOW-02 §4.1). Un parámetro fuera de esta lista lo rechaza el
+ * borde con 400: el cliente no puede inventarse el contrato.
+ */
+export interface StationQuery {
+  readonly country?: "ES" | "AD" | "FR" | "PT";
+  readonly region?: string;
+  readonly discipline?: "alpine" | "nordic";
+  readonly status?: "open" | "closed" | "unknown";
+  readonly snowMin?: number;
+  readonly sort?: "name" | "region" | "altitude" | "snow";
+  readonly sortDir?: "asc" | "desc";
+  /** 1-based. */
+  readonly page?: number;
+  /** 1..100 (tope del borde). */
+  readonly pageSize?: number;
 }
+
+export const MAX_PAGE_SIZE = 100;
 
 /**
- * `status` en el listado: el servicio hoy devuelve siempre `'ok'`, pero el borde
- * puede degradar. Se tipa como opcional para no fingir una garantía que el
- * contrato no da.
+ * Respuesta de `GET /v1/stations`: paginada y con `provenance` (t3). El tipo
+ * `StationListDto` del borde define la forma; aquí sólo se declara la vista.
  */
-export interface StationListResponse {
-  readonly status?: "ok" | "no_data";
-  readonly reason?: NoDataReason;
-  readonly stations?: readonly StationSummary[];
-}
+export type StationListResponse = StationListDto;
 
-/** Respuesta de `GET /v1/stations/:slug`. */
-export interface StationResponse {
-  readonly status: "ok";
-  readonly station: StationSummary;
+/**
+ * Respuesta de `GET /v1/stations/:slug` (ficha con `season` + nieve observada).
+ * `status` es `'ok'` o, si el fichero faltara, el borde responde 404 tipado.
+ */
+export type StationResponse = { readonly status: "ok"; readonly station: StationDetailDto };
+
+/** Alias de compatibilidad con el nombre anterior (`/search` reutiliza el borde). */
+export type SearchStationResponse = { readonly status: "ok" | "no_data"; readonly stations: readonly StationDetailDto[] };
+
+/** Respuesta de `GET /v1/stations/:slug/alerts` (sin proveedor ⇒ `alerts: []`). */
+export type AlertsResponse = AlertsDto;
+
+/** Re-export de lo que consume la UI, sin duplicar dominio. */
+export type { StationDetailDto, StationListDto, SnowObservationDto, AlertsDto };
+export type StationReportResponse = SnowReportDto;
+
+/**
+ * Respuesta de `GET /v1/stations/:slug/forecast`: `data` SÓLO existe con
+ * `ok`/`stale`. Se tipa `data` opcional para que nadie lea cifras sin
+ * discriminar el estado (el borde nunca manda `data` degradado).
+ */
+export type ForecastResponse =
+  | {
+      readonly status: "ok" | "stale";
+      readonly data?: ForecastBundle;
+      readonly provenance: ProvenanceDto;
+    }
+  | {
+      readonly status: "no_data" | "not_configured" | "blocked";
+      readonly reason?: NoDataReason;
+      readonly provenance: ProvenanceDto;
+    };
+
+/** Respuesta de `GET /v1/stations/:slug/webcams`: siempre `blocked` en v1. */
+export interface WebcamsResponse {
+  readonly status: "blocked";
+  readonly reason: NoDataReason;
+  readonly provenance: ProvenanceDto;
+  readonly grants: readonly ImageGrant[];
 }
 
 /** Respuesta de `GET /v1/rankings/nieve`. */

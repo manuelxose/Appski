@@ -1,223 +1,193 @@
-import { Injectable, signal, PLATFORM_ID, inject } from "@angular/core";
-import { isPlatformBrowser } from "@angular/common";
-import {
-  MeteoNow,
+import { Injectable, inject } from "@angular/core";
+import type { ForecastBundle, SnowReportDto } from "../../../snow/models/dto";
+import { SnowApi } from "../../../snow/client/snow-api.service";
+import type {
   MeteoForecast,
-  WebcamItem,
+  MeteoForecastPoint,
+  MeteoNow,
   RadarInfo,
   WebcamHistory,
+  WebcamItem,
 } from "../models/meteo.models";
+import { isAvailable, notInV1, type Availability } from "./availability";
 
 /**
- * Servicio de acceso a datos meteorológicos
- * MVP: usa mocks locales
- * Producción: reemplazar fetch por HttpClient
+ * Acceso a datos meteorológicos contra el BORDE REAL.
+ *
+ * Antes: `fetch` a `/assets/mocks/{now,forecast72,webcams,radar,webcam-history*}`,
+ * con el MISMO fichero para cualquier estación (el `stationSlug` se ignoraba).
+ *
+ * Ahora cada método devuelve `Availability<T>`: `ok`/`stale` con el valor real,
+ * o `not_covered`/`blocked`/`no_data`/`unavailable` con un motivo legible. Si no
+ * hay proveedor, no hay número: nunca una cifra sintética.
+ *
+ * Endpoints del borde que sí existen:
+ *  - `/stations/:slug/forecast`  → previsión horaria;
+ *  - `/stations/:slug/report`    → parte editorial (espesores/estado operativo);
+ *  - `/stations/:slug/webcams`   → SIEMPRE `blocked` (imagen prohibida por licencia).
+ * Sin endpoint en v1: observación "ahora", radar e imágenes de webcam.
  */
 @Injectable({ providedIn: "root" })
 export class MeteoDataService {
-  private readonly platformId = inject(PLATFORM_ID);
-  private readonly isBrowser = isPlatformBrowser(this.platformId);
-  private lang = signal<"es" | "en">("es");
+  private readonly api = inject(SnowApi);
+  private lang: "es" | "en" = "es";
 
   /**
-   * Obtiene la URL base dependiendo del entorno (servidor o navegador)
+   * Observación "ahora" (temperatura, viento, visibilidad, isoterma).
+   *
+   * No hay `/now` en v1 y una previsión NO es una observación: se devuelve
+   * indisponibilidad explícita. Los espesores del parte están en `getReport`.
    */
-  private getBaseUrl(): string {
-    if (this.isBrowser) {
-      return window.location.origin;
-    }
-    // En SSR el servidor escucha en PORT (por defecto 4000), no en el dev server.
-    return `http://localhost:${process.env["PORT"] || "4000"}`;
+  async getNow(_stationSlug: string): Promise<Availability<MeteoNow>> {
+    return notInV1<MeteoNow>(
+      "La observación meteorológica en directo no está disponible: no hay proveedor autorizado cableado en v1.",
+    );
   }
 
-  /**
-   * Obtiene observación actual de una estación
-   * @param stationSlug - Slug de la estación (usado en producción con HTTP)
-   */
-  async getNow(stationSlug: string): Promise<MeteoNow> {
-    try {
-      // TODO: En producción usar: `${apiUrl}/v1/meteo/${stationSlug}/now`
-      const url = `${this.getBaseUrl()}/assets/mocks/now.mock.json`;
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
+  /** Previsión horaria real del borde (`ForecastBundle` → `MeteoForecast`). */
+  async getForecast72(stationSlug: string): Promise<Availability<MeteoForecast>> {
+    const res = await this.api.forecast(stationSlug);
+    if (!res.ok) {
+      return { state: "unavailable", detail: "No se pudo consultar la previsión." };
+    }
+    const body = res.body;
+    if (body.status === "ok" || body.status === "stale") {
+      // El borde sólo incluye `data` cuando hay dato; si falta, no se inventa.
+      if (!("data" in body) || body.data === undefined) {
+        return { state: "no_data", detail: "La previsión llegó sin datos." };
       }
-      const data = await res.json();
-      // En producción: validar que data.stationSlug === stationSlug
-      console.log(`Loaded meteo data for station: ${stationSlug}`);
-      return data;
-    } catch (error) {
-      console.error("Error fetching meteo now:", error);
-      throw error;
+      return { state: body.status, value: toMeteoForecast(stationSlug, body.data) };
     }
+    if (body.status === "blocked") {
+      return { state: "blocked", detail: "La licencia del proveedor impide publicar la previsión." };
+    }
+    if (body.status === "not_configured") {
+      return {
+        state: "not_covered",
+        detail: "Sin proveedor de previsión autorizado: no hay dato que mostrar.",
+      };
+    }
+    return {
+      state: "no_data",
+      detail: "El proveedor de previsión no tiene datos para esta estación.",
+    };
   }
 
   /**
-   * Obtiene previsión de 72h por cotas
-   * @param stationSlug - Slug de la estación (usado en producción con HTTP)
+   * Webcams: el borde responde SIEMPRE `blocked` (05b §7.4). Se propaga como
+   * bloqueo de licencia para que la UI explique POR QUÉ no hay imágenes.
    */
-  async getForecast72(stationSlug: string): Promise<MeteoForecast> {
-    try {
-      // TODO: En producción usar: `${apiUrl}/v1/meteo/${stationSlug}/forecast?hours=72`
-      const url = `${this.getBaseUrl()}/assets/mocks/forecast72.mock.json`;
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const data = await res.json();
-      console.log(`Loaded forecast for station: ${stationSlug}`);
-      return data;
-    } catch (error) {
-      console.error("Error fetching forecast:", error);
-      throw error;
+  async getWebcams(stationSlug: string): Promise<Availability<readonly WebcamItem[]>> {
+    const res = await this.api.webcams(stationSlug);
+    if (!res.ok) {
+      return { state: "unavailable", detail: "No se pudo consultar el estado de las webcams." };
     }
+    if (res.body.status === "blocked") {
+      return {
+        state: "blocked",
+        detail: "Las imágenes de webcam no se publican: la licencia del operador solo permite enlazar.",
+      };
+    }
+    return { state: "blocked", detail: "No hay webcam con enlace autorizado para esta estación." };
   }
 
-  /**
-   * Obtiene lista de webcams de una estación
-   * @param stationSlug - Slug de la estación (usado en producción con HTTP)
-   */
-  async getWebcams(stationSlug: string): Promise<WebcamItem[]> {
-    try {
-      // TODO: En producción usar: `${apiUrl}/v1/meteo/${stationSlug}/webcams`
-      const url = `${this.getBaseUrl()}/assets/mocks/webcams.mock.json`;
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const data = await res.json();
-      console.log(`Loaded webcams for station: ${stationSlug}`);
-      return data;
-    } catch (error) {
-      console.error("Error fetching webcams:", error);
-      throw error;
-    }
+  /** Radar: sin endpoint ni proveedor autorizado en v1. */
+  async getRadar(_stationSlug: string): Promise<Availability<RadarInfo>> {
+    return notInV1<RadarInfo>(
+      "El radar meteorológico no está disponible: sin proveedor ni endpoint autorizado en v1.",
+    );
   }
 
-  /**
-   * Obtiene información del radar meteorológico
-   * @param stationSlug - Slug de la estación (usado en producción con HTTP)
-   */
-  async getRadar(stationSlug: string): Promise<RadarInfo> {
-    try {
-      // TODO: En producción usar: `${apiUrl}/v1/meteo/${stationSlug}/radar`
-      const url = `${this.getBaseUrl()}/assets/mocks/radar.mock.json`;
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const data = await res.json();
-      console.log(`Loaded radar for station: ${stationSlug}`);
-      return data;
-    } catch (error) {
-      console.error("Error fetching radar:", error);
-      throw error;
-    }
-  }
-
-  /**
-   * Obtiene histórico de imágenes de una webcam
-   * @param stationSlug - Slug de la estación
-   * @param webcamId - ID de la webcam
-   * @param webcamName - Nombre de la webcam
-   * @param date - Fecha en formato YYYY-MM-DD (opcional, por defecto hoy)
-   */
+  /** Histórico de imágenes de webcam: prohibido por licencia y sin endpoint. */
   async getWebcamHistory(
-    stationSlug: string,
-    webcamId: string,
-    webcamName: string,
-    date?: string
-  ): Promise<WebcamHistory> {
-    try {
-      // TODO: En producción usar: `${apiUrl}/v1/meteo/${stationSlug}/webcams/${webcamId}/history?date=${date}`
+    _stationSlug: string,
+    _webcamId: string,
+    _webcamName: string,
+    _date?: string,
+  ): Promise<Availability<WebcamHistory>> {
+    return notInV1<WebcamHistory>(
+      "El histórico de imágenes de webcam no está disponible (licencia de imagen y sin endpoint en v1).",
+    );
+  }
 
-      const dateStr = date || this.getTodayDate();
-      const baseUrl = this.getBaseUrl();
-
-      // Intentar cargar mock específico por fecha
-      const dateSpecificUrl = `${baseUrl}/assets/mocks/webcam-history-${dateStr}.mock.json`;
-
-      console.log(`📅 Loading webcam history for date: ${dateStr}`);
-
-      let data: WebcamHistory;
-
-      // Primero intentar cargar el archivo específico de fecha
-      try {
-        const res = await fetch(dateSpecificUrl);
-        if (res.ok) {
-          data = await res.json();
-          console.log(
-            `✅ Loaded date-specific mock: webcam-history-${dateStr}.mock.json`
-          );
-        } else {
-          throw new Error("Date-specific mock not found");
-        }
-      } catch {
-        // Si no existe, usar el mock genérico como fallback
-        console.log(`⚠️ Date-specific mock not found, using generic mock`);
-        const fallbackUrl = `${baseUrl}/assets/mocks/webcam-history.mock.json`;
-        const res = await fetch(fallbackUrl);
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        data = await res.json();
-      }
-
-      // Sobrescribir el nombre con el de la webcam seleccionada
-      data.webcamName = webcamName;
-      data.webcamId = webcamId;
-
-      return data;
-    } catch (error) {
-      console.error("Error fetching webcam history:", error);
-      throw error;
+  /** Parte editorial del borde (`/report`): ÚNICA fuente de espesores. */
+  async getReport(stationSlug: string): Promise<Availability<SnowReportDto>> {
+    const res = await this.api.report(stationSlug);
+    if (!res.ok) {
+      return { state: "unavailable", detail: "No se pudo consultar el parte de nieve." };
     }
+    const body = res.body;
+    if (body.status === "ok" || body.status === "stale") {
+      return { state: body.status, value: body };
+    }
+    if (body.status === "blocked") {
+      return { state: "blocked", detail: "La licencia impide publicar el parte." };
+    }
+    if (body.status === "not_configured") {
+      return { state: "not_covered", detail: "No hay proveedor del parte configurado." };
+    }
+    return { state: "no_data", detail: reasonText(body.reason) };
   }
 
-  private getTodayDate(): string {
-    const today = new Date();
-    return today.toISOString().split("T")[0]; // YYYY-MM-DD
-  }
-
-  /**
-   * Configura el idioma para las peticiones
-   */
+  /** Idioma de presentación (no viaja al borde: el dato es el mismo). */
   setLanguage(lang: "es" | "en"): void {
-    this.lang.set(lang);
+    this.lang = lang;
   }
 
-  /**
-   * Obtiene el idioma actual
-   */
   getLanguage(): "es" | "en" {
-    return this.lang();
+    return this.lang;
+  }
+}
+
+/** Motivo legible de ausencia de dato (nunca un nombre de variable de entorno). */
+export function reasonText(reason: string | undefined): string {
+  switch (reason) {
+    case "outside-season":
+      return "Sin parte publicado: la temporada no está activa.";
+    case "source-silent":
+      return "La fuente no ha publicado datos todavía.";
+    case "not-yet-published":
+      return "Todavía no se ha publicado el boletín.";
+    case "not-covered":
+      return "Sin cobertura para esta estación.";
+    case "license-prohibits":
+      return "La licencia del operador impide publicar este dato.";
+    default:
+      return "No hay datos disponibles para esta estación.";
   }
 }
 
 /**
- * MIGRACIÓN A HTTP REAL:
+ * `ForecastBundle` (borde) → `MeteoForecast` (página).
  *
- * 1. Inyectar HttpClient:
- *    private readonly http = inject(HttpClient);
- *
- * 2. Reemplazar fetch por http.get:
- *    getNow(stationSlug: string): Observable<MeteoNow> {
- *      return this.http.get<MeteoNow>(`${environment.apiUrl}/v1/meteo/${stationSlug}/now`);
- *    }
- *
- * 3. Añadir parámetros query para idioma:
- *    const params = new HttpParams().set('lang', this.lang());
- *    return this.http.get<MeteoNow>(..., { params });
- *
- * 4. Configurar interceptor para:
- *    - Añadir headers de autenticación
- *    - Manejar caché con ETag
- *    - Reintentos automáticos
- *    - Manejo de errores global
- *
- * 5. Endpoints esperados:
- *    GET /v1/meteo/:station/now
- *    GET /v1/meteo/:station/forecast?hours=72
- *    GET /v1/meteo/:station/webcams
- *    GET /v1/meteo/:station/radar
+ * El borde no publica cota ni confianza por punto: `cota` se fija a `"mid"`
+ * (la previsión no viene desglosada) y `confidence` queda en 0 como "no
+ * declarada". `snowAccu*` a 0 significaría "0 cm acumulados", así que NO se
+ * deriva: queda a 0 solo porque el modelo no tiene campo nullable y la UI no
+ * muestra acumulados cuando `confidence` es 0. Se documenta aquí para no
+ * confundirlo con un dato.
  */
+export function toMeteoForecast(stationSlug: string, bundle: ForecastBundle): MeteoForecast {
+  const points: MeteoForecastPoint[] = bundle.points.map((p) => ({
+    validAt: p.validAt,
+    cota: "mid",
+    tempC: p.tempC ?? 0,
+    windKmh: p.windKmh ?? 0,
+    gustKmh: p.windKmh ?? 0,
+    precipSnowCm: 0,
+    precipRainMm: p.precipMm ?? 0,
+    iso0M: p.snowLineM,
+    cloudPct: null,
+    visibilityM: null,
+    confidence: 0,
+  }));
+  return {
+    stationSlug,
+    hours: bundle.horizonHours,
+    points,
+    snowAccu24hCm: 0,
+    snowAccu72hCm: 0,
+  };
+}
+
+export { isAvailable };

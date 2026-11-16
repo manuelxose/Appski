@@ -14,15 +14,45 @@ import { Injectable, inject } from "@angular/core";
 import { firstValueFrom } from "rxjs";
 import type { SnowReportDto } from "../models/dto";
 import {
+  MAX_PAGE_SIZE,
   SNOW_ENDPOINTS,
   classifyHttp,
+  type AlertsResponse,
   type FetchOutcome,
+  type ForecastResponse,
+  type WebcamsResponse,
   type RankingKmResponse,
   type RankingNieveResponse,
+  type SearchStationResponse,
   type SeasonDatesResponse,
   type StationListResponse,
+  type StationQuery,
   type StationResponse,
 } from "./snow-endpoints";
+
+/**
+ * Serializa SÓLO los parámetros que el contrato declara, y nunca `undefined`.
+ * Enviar una clave desconocida o vacía haría que el borde respondiera 400.
+ */
+export function stationQueryString(q: StationQuery): string {
+  const p = new URLSearchParams();
+  if (q.country) p.set("country", q.country);
+  if (q.region && q.region.trim().length > 0) p.set("region", q.region.trim());
+  if (q.discipline) p.set("discipline", q.discipline);
+  if (q.status) p.set("status", q.status);
+  if (typeof q.snowMin === "number" && Number.isFinite(q.snowMin) && q.snowMin >= 0) {
+    p.set("snowMin", String(q.snowMin));
+  }
+  if (q.sort) p.set("sort", q.sort);
+  if (q.sortDir) p.set("sortDir", q.sortDir);
+  if (typeof q.page === "number" && Number.isFinite(q.page)) {
+    p.set("page", String(Math.max(1, Math.trunc(q.page))));
+  }
+  if (typeof q.pageSize === "number" && Number.isFinite(q.pageSize)) {
+    p.set("pageSize", String(Math.min(MAX_PAGE_SIZE, Math.max(1, Math.trunc(q.pageSize)))));
+  }
+  return p.toString();
+}
 
 @Injectable({ providedIn: "root" })
 export class SnowApi {
@@ -33,20 +63,49 @@ export class SnowApi {
     return this.get<SnowReportDto>(SNOW_ENDPOINTS.report(slug));
   }
 
-  /** `GET /v1/stations` — maestro público (sin datos meteorológicos). */
-  stations(): Promise<FetchOutcome<StationListResponse>> {
-    return this.get<StationListResponse>(SNOW_ENDPOINTS.stations);
+  /**
+   * `GET /v1/stations` — directorio PAGINADO con nieve observada.
+   *
+   * Los filtros/orden/paginación viajan como query REAL: el borde los valida y
+   * filtra; el cliente no re-filtra en memoria (filtrar en cliente lo que el
+   * borde ya filtraba fue el defecto del camino mock). `pageSize` se acota a
+   * 1..100 y `page` a ≥1 antes de enviar, para no provocar un 400 evitable.
+   */
+  stations(query: StationQuery = {}): Promise<FetchOutcome<StationListResponse>> {
+    const qs = stationQueryString(query);
+    return this.get<StationListResponse>(qs ? `${SNOW_ENDPOINTS.stations}?${qs}` : SNOW_ENDPOINTS.stations);
   }
 
-  /** `GET /v1/stations/:slug` — ficha del maestro; 404 si no existe. */
+  /** `GET /v1/stations/:slug` — ficha con `season` y nieve observada; 404 si no existe. */
   station(slug: string): Promise<FetchOutcome<StationResponse>> {
     return this.get<StationResponse>(SNOW_ENDPOINTS.station(slug));
   }
 
-  /** `GET /v1/search?q=` — el servidor filtra; el cliente sólo normaliza. */
-  search(q: string): Promise<FetchOutcome<StationListResponse>> {
-    const query = new URLSearchParams({ q }).toString();
-    return this.get<StationListResponse>(`${SNOW_ENDPOINTS.search}?${query}`);
+  /** `GET /v1/stations/:slug/alerts` — sin proveedor A1/A2 ⇒ `alerts: []` tipado. */
+  alerts(slug: string): Promise<FetchOutcome<AlertsResponse>> {
+    return this.get<AlertsResponse>(SNOW_ENDPOINTS.alerts(slug));
+  }
+
+  /** `GET /v1/stations/:slug/forecast` — sin proveedor ⇒ `not_configured` (es un DATO). */
+  forecast(slug: string): Promise<FetchOutcome<ForecastResponse>> {
+    return this.get<ForecastResponse>(SNOW_ENDPOINTS.forecast(slug));
+  }
+
+  /** `GET /v1/stations/:slug/webcams` — siempre `blocked` (la imagen está prohibida). */
+  webcams(slug: string): Promise<FetchOutcome<WebcamsResponse>> {
+    return this.get<WebcamsResponse>(SNOW_ENDPOINTS.webcams(slug));
+  }
+
+  /** `GET /v1/search?q=` — `q` es OBLIGATORIO en el borde (sin él ⇒ 400). */
+  async search(q: string): Promise<FetchOutcome<SearchStationResponse>> {
+    const trimmed = q.trim();
+    if (trimmed.length === 0) {
+      // No se llama al borde con una query que sabe inválida: se devuelve un
+      // resultado vacío explícito, que la UI pinta como "sin resultados".
+      return { ok: true, body: { status: "no_data", stations: [] }, httpStatus: 200 };
+    }
+    const query = new URLSearchParams({ q: trimmed }).toString();
+    return this.get<SearchStationResponse>(`${SNOW_ENDPOINTS.search}?${query}`);
   }
 
   /** `GET /v1/rankings/nieve` — puede llegar `status: 'no_data'` (es un dato). */

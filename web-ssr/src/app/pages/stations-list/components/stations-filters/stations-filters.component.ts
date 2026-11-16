@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import type { StationFilters } from "../../models/stations-list.models";
 
@@ -14,6 +14,9 @@ export type { StationFilters };
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StationsFiltersComponent {
+  /** Opciones de filtro REALES (regiones/tipos del maestro del borde). */
+  readonly regionOptions = input<ReadonlyArray<{ value: string; label: string }>>([{ value: "", label: "Todas las regiones" }]);
+
   // Outputs para emitir eventos al padre
   filtersChanged = output<StationFilters>();
   filtersReset = output<void>();
@@ -26,35 +29,20 @@ export class StationsFiltersComponent {
   selectedServices: StationFilters["services"] = [];
   selectedStatus: StationFilters["status"] = "";
 
-  // Opciones de filtros
-  regions = [
-    { value: "", label: "Todas las regiones" },
-    { value: "pyrenees", label: "Pirineos" },
-    { value: "sierra-nevada", label: "Sierra Nevada" },
-    { value: "sistema-central", label: "Sistema Central" },
-    { value: "cordillera-cantabrica", label: "Cordillera Cantábrica" },
-    { value: "sistema-iberico", label: "Sistema Ibérico" },
-  ];
-
-  stationTypes = [
+  /**
+   * Opciones de filtro: salen del MAESTRO REAL del borde, no de listas fijas.
+   * El padre las inyecta tras `GET /v1/stations` (ver `stations-list.ts`). Una
+   * lista hardcodeada aquí ofrecía comarcas ("Sierra Nevada", "Sistema Ibérico")
+   * que no son regiones del maestro y no filtraban nada.
+   */
+  regions: ReadonlyArray<{ value: string; label: string }> = [{ value: "", label: "Todas las regiones" }];
+  stationTypes: ReadonlyArray<{ value: string; label: string }> = [
     { value: "", label: "Todos los tipos" },
     { value: "alpine", label: "Alpino" },
     { value: "nordic", label: "Nórdico" },
-    { value: "freeride", label: "Freeride" },
-    { value: "family", label: "Familiar" },
   ];
-
-  services: Array<{
-    value: StationFilters["services"][number];
-    label: string;
-  }> = [
-    { value: "ski-school", label: "Escuela de esquí" },
-    { value: "equipment-rental", label: "Alquiler de material" },
-    { value: "restaurant", label: "Restaurantes" },
-    { value: "parking", label: "Parking" },
-    { value: "kids-area", label: "Zona infantil" },
-    { value: "snow-park", label: "Snow park" },
-  ];
+  /** El borde no publica servicios por estación: no se ofrecen opciones. */
+  services: ReadonlyArray<{ value: StationFilters["services"][number]; label: string }> = [];
 
   statusOptions = [
     { value: "", label: "Cualquier estado" },
