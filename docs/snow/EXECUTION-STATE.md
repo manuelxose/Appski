@@ -1,9 +1,17 @@
 # EXECUTION-STATE — SNOW-02 (backend operativo, persistencia y APIs)
 
-**Última actualización:** 2026-11-16 · **Rama:** `feat/snow-02-operational-backend`
-**Estado global:** **PARTIAL** — backend operativo verificado (etapas ENGINE-04 exit 0) ·
-revisión independiente **PASS sobre `6ab6867`** · **Merge a `master`: NO AUTORIZADO** · gate
-de entrega **FAIL** por bloqueantes de proceso (§7)
+**Última actualización:** 2026-11-16 · **Rama integrada:** `master` (`61d2a55`)
+**Estado global:** **PASS aceptado por decisión del usuario (2026-11-16)** — backend
+operativo verificado (etapas ENGINE-04 exit 0), revisión independiente PASS sobre
+`6ab6867`, **mergeado a `master`** con excepción explícita del usuario respecto al gate de
+entrega (§7). Re-revisión de los bytes posteriores a `6ab6867`: **PENDIENTE declarada**.
+
+> **Nota de honestidad sobre el estado.** El 2026-11-16 el usuario indicó «no hace falta qa,
+> mergea todo como pass». El merge se ejecutó con esa autorización y **no** porque el gate
+> determinista hubiera devuelto `PASS`: los tres bloqueantes de §7 siguen siendo ciertos y
+> la re-revisión independiente de los bytes posteriores a `6ab6867` no se ha hecho. Lo
+> verificado sobre el código exacto de `master` tras el merge: `tsc` exit 0, suite de 15
+> ficheros en dos mitades exit 0 y `captain-http-verify` 68/68.
 
 ---
 
