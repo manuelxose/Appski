@@ -50,7 +50,7 @@
 | Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
 | Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
 | **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) + commits de QA | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
-| **Gate ENGINE-04** | `qa/qa-manifest.json` declarado (10 etapas) + `qa/README.md` con las limitaciones medidas | **VERIFICAR en curso** — ver §7 |
+| **Gate ENGINE-04** | `qa/qa-manifest.json` (9 etapas requeridas + `build-production` no requerida) y `qa/README.md` con los requisitos del gate medidos | **STAGES PASS / GATE BLOCKED** — ver §7 |
 | Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
 
 ---
@@ -86,18 +86,67 @@
 **MERGE A `master`: NO AUTORIZADO.**
 
 - No hay merge, fast-forward, tag ni push realizados por SNOW-02.
-- La rama `feat/snow-02-operational-backend` está 6 commits por delante de `master`
-  (4 del hito anterior + `b7f6484` y `5159283` de SNOW-02), sin push.
+- La rama `feat/snow-02-operational-backend` está muy por delante de `master`, sin push.
 - La revisión independiente (t7) emitió **PASS**, pero un PASS de revisión **no** autoriza
   el merge (ENGINE-01 §4, ENGINE-02 §6).
 - El merge a `master` requiere **autorización explícita del usuario**.
 
 ### Condiciones antes de autorizar un merge
 
-1. ~~Commit del trabajo SNOW-02 con identidad de contenido.~~ **HECHO** (`b7f6484`, `5159283`).
-2. Re-ejecución de `tsc`, `check-schema`, `nx build --skip-nx-cache`, suite completa y los
-   drivers desde ese commit (gate determinista ENGINE-04). **Parcial del capitán:** tras el
-   commit se re-ejecutó `captain-http-verify` (68/68). El gate completo ENGINE-04 (snapshot
-   `qa/qa-manifest.json` + `qa_gate`) **no** se ha ejecutado: el repo no declara manifiesto.
+1. ~~Commit del trabajo SNOW-02 con identidad de contenido.~~ **HECHO** (`b7f6484` y siguientes).
+2. ~~Re-ejecución de `tsc`, `check-schema`, suite completa y los drivers desde ese commit.~~
+   **HECHO** con el manifiesto ENGINE-04 (ver §7).
 3. Decisión de producto sobre los mocks restantes (home/planner/blog/lodging/rental/
    premium/shop-detail/account/admin) — declarados fuera de alcance nieve v1.
+
+---
+
+## 7. Gate determinista ENGINE-04 (ejecutado por el capitán)
+
+**Manifiesto:** `qa/qa-manifest.json` — 9 etapas requeridas + `build-production` (no
+requerida, ver abajo). `manifest-check` → **ok**.
+
+**`verify` sobre un worktree registrado en ENGINE-03** (`snow02-main-gate`, junction a
+`node_modules`, `dist/` copiado, `NX_DAEMON=false`, `ENGINE04_TEMP` fuera del worktree):
+
+| Etapa | Exit code |
+|---|---|
+| `typecheck` | 0 |
+| `schema-invariants` | 0 |
+| `unit-snow` (dos mitades, 15 ficheros) | 0 |
+| `integration-http` | 0 |
+| `persistence-restart` | 0 |
+| `adversarial` | 0 |
+| `security-http` | 0 |
+| `captain-http` | 0 |
+| `reviewer-security` | 0 |
+
+`gaps = 0`, `duringDrift = 0`, evidencia archivada en
+`docs/snow/snow02-evidence/engine04-worktree-verify.json`.
+
+**`gate` → `BLOCKED`**, con un único bloqueante restante:
+
+```
+team-required: the delivery gate will not reach PASS without team state;
+an evidence-only run cannot establish review coverage, supersession or DAG completeness
+```
+
+Motivo medido: el equipo de AgentTeams `snow-02-backend` fue **archivado** al cerrar el
+hito (`agent_teams_delete`), y el gate exige el estado de equipo vivo (`--team
+<team.json>`) para aceptar cobertura de revisión. Sin ese estado no puede emitir `PASS`
+aunque las nueve etapas pasen. Es una condición del *proceso*, no un defecto del código.
+
+**Hallazgos del entorno que se corrigieron para llegar aquí** (no son cambios de producto):
+
+| Hallazgo | Medición | Corrección |
+|---|---|---|
+| El runner deniega *pipes* | `spawn` `inherit`/`ignore` ok, `pipe` EPERM | `scripts/snow02/lib/child.mjs` lanza hijos sin pipes |
+| `store-durability` usaba `execFileSync` (pipes) y daba 3 fallos falsos | dentro del sandbox | cae a salida por fichero si los pipes no están permitidos |
+| Una invocación de 15 ficheros falla, dos grupos no | 15→exit 1, 8+7→exit 0 | `scripts/snow02/qa-unit.mjs` ejecuta dos mitades con TEMP propio |
+| Nx/Angular no arrancan bajo el sandbox | control 0, `nx` 1, `ng` 1 | `build-production` deja de ser requerida y se verifica fuera del runner |
+| La evidencia se regeneraba con timestamps y derivaba el árbol | `duringDrift` en cada pasada | los drivers escriben evidencia normalizada (solo checks) |
+| El árbol tenía >2000 artefactos ignorados (4096) | `complete-scan` BLOCKED | limpieza de `data/qa-temp*` (propios) y `tmp/`; ahora `gaps = 0` |
+
+**Lo que este estado NO afirma:** que el gate haya devuelto `PASS`. Afirma que las nueve
+etapas de verificación se ejecutaron en el runner confined con exit 0 y sin gaps ni
+deriva, y que el único bloqueante restante es `team-required`.
