@@ -16,12 +16,12 @@
  * Uso: node scripts/snow02/security-http-verify.mjs
  * Salida: exit 0 sólo si todos los checks pasan.
  */
-import { spawn } from 'node:child_process';
 import { createServer } from 'node:net';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnNoPipe, waitUntilReady } from './lib/child.mjs';
 
 const ROOT = resolve(fileURLToPath(new URL('../..', import.meta.url)));
 // Rutas RELATIVAS desde ROOT (el `cwd` del proceso hijo): es exactamente la forma
@@ -58,35 +58,34 @@ function freePort() {
 }
 
 async function startServer(port, dataDir) {
-  const child = spawn(
+  // Sin pipes: el runner confined de ENGINE-04 deniega crear pipes (EPERM medido).
+  const child = spawnNoPipe(
     process.execPath,
     ['--experimental-transform-types', '--import', LOADER, SERVER],
     {
       cwd: ROOT,
       env: { ...process.env, PORT: String(port), SNOW_DATA_DIR: dataDir, SNOW_ADMIN_TOKEN: TOKEN, NODE_ENV: 'production' },
-      stdio: ['ignore', 'pipe', 'pipe'],
+      stdio: 'ignore',
     },
   );
-  let log = '';
-  child.stdout.on('data', (d) => (log += String(d)));
-  child.stderr.on('data', (d) => (log += String(d)));
   const base = `http://127.0.0.1:${port}`;
-  for (let i = 0; i < 120; i += 1) {
-    try {
+  await waitUntilReady(
+    async () => {
       const r = await fetch(`${base}/api/snow/v1/stations`);
-      if (r.status > 0) return { child, base, getLog: () => log };
-    } catch {
-      /* aún no escucha */
-    }
-    await new Promise((r) => setTimeout(r, 250));
-  }
-  child.kill('SIGKILL');
-  throw new Error(`servidor no arrancó. log=${log.slice(-800)}`);
+      return r.status > 0 ? true : null;
+    },
+    {
+      timeoutMs: 30_000,
+      onDead: () => (child.exited ? new Error('el servidor terminó antes de escuchar') : null),
+    },
+  );
+  return { child, base, getLog: () => '(stdio no capturado en contexto confined)' };
 }
 
 async function stopServer(srv) {
+  if (!srv?.child || srv.child.exited) return;
   srv.child.kill('SIGKILL');
-  await new Promise((r) => srv.child.once('exit', r));
+  await srv.child.wait();
 }
 
 async function getJson(url, init) {
