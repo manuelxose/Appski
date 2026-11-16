@@ -14,7 +14,7 @@
 import test from 'node:test';
 import assert from 'node:assert';
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { closeSync, mkdtempSync, openSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -44,15 +44,48 @@ function repoUrl(path) {
   return JSON.stringify(pathToFileURL(path).href);
 }
 
-/** Ejecuta un script ESM en un proceso node NUEVO y devuelve su stdout (JSON). */
+/**
+ * Ejecuta un script ESM en un proceso node NUEVO y devuelve su stdout (JSON).
+ *
+ * Nace de un defecto REAL medido: con `execFileSync` (stdio pipeado), dentro del
+ * sandbox de Windows del runner de verificación el spawn falla con `EPERM` y los
+ * tests D1/D2/D5 se reportaban como fallo de persistencia cuando el fallo era del
+ * entorno. Si los pipes no están permitidos, se vuelca la salida a un fichero
+ * (descriptor heredado) y se lee de disco: el proceso sigue siendo NUEVO y sin
+ * estado compartido, que es lo que el test debe demostrar.
+ */
 function runInFreshProcess(source) {
-  const out = execFileSync(
-    process.execPath,
-    // `--import` exige un specifier ESM: en Windows una ruta `C:\...` no vale.
-    ['--experimental-transform-types', '--no-warnings', '--import', pathToFileURL(LOADER).href, '--input-type=module', '-e', source],
-    { cwd: REPO_ROOT, encoding: 'utf8' },
-  );
-  return JSON.parse(out.trim());
+  const args = [
+    '--experimental-transform-types',
+    '--no-warnings',
+    '--import',
+    pathToFileURL(LOADER).href,
+    '--input-type=module',
+    '-e',
+    source,
+  ];
+  try {
+    const out = execFileSync(process.execPath, args, { cwd: REPO_ROOT, encoding: 'utf8' });
+    return JSON.parse(out.trim());
+  } catch (error) {
+    if (error?.code !== 'EPERM') throw error;
+    const sink = awaitableTempFile();
+    const fd = openSync(sink, 'w');
+    try {
+      execFileSync(process.execPath, args, { cwd: REPO_ROOT, stdio: ['ignore', fd, fd] });
+    } finally {
+      closeSync(fd);
+    }
+    const raw = readFileSync(sink, 'utf8');
+    return JSON.parse(raw.trim());
+  }
+}
+
+/** Fichero temporal para la salida del proceso hijo (ruta única por invocación). */
+function awaitableTempFile() {
+  const dir = mkdtempSync(join(tmpdir(), 'snow-store-out-'));
+  dirs.push(dir);
+  return join(dir, 'stdout.json');
 }
 
 const STATION = {

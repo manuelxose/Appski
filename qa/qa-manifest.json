@@ -5,6 +5,14 @@
   "stack": "node",
   "stages": [
     {
+      "id": "confined-diagnostics",
+      "kind": "static-analysis",
+      "required": false,
+      "timeoutMs": 900000,
+      "description": "DIAGNÓSTICO (no decide la entrega): capacidades del sandbox y arranque de Nx/Angular y de la suite en varios entornos de hilos. Se ejecuta con --stages confined-diagnostics.",
+      "argv": ["node", "scripts/snow02/confined-identity.mjs", "--suite"]
+    },
+    {
       "id": "typecheck",
       "kind": "typecheck",
       "required": true,
@@ -29,29 +37,8 @@
       "kind": "unit",
       "required": true,
       "timeoutMs": 600000,
-      "argv": [
-        "node",
-        "--experimental-transform-types",
-        "--import",
-        "./scripts/snow/ts-loader.mjs",
-        "--test",
-        "--test-isolation=none",
-        "web-ssr/src/snow/tests/a11y.test.ts",
-        "web-ssr/src/snow/tests/admin-auth.test.ts",
-        "web-ssr/src/snow/tests/bootstrap.test.ts",
-        "web-ssr/src/snow/tests/chains-and-time.test.ts",
-        "web-ssr/src/snow/tests/degradation.test.ts",
-        "web-ssr/src/snow/tests/editorial-payload.test.ts",
-        "web-ssr/src/snow/tests/editorial.test.ts",
-        "web-ssr/src/snow/tests/execution.test.ts",
-        "web-ssr/src/snow/tests/http-contract.test.ts",
-        "web-ssr/src/snow/tests/leak-guard.test.ts",
-        "web-ssr/src/snow/tests/not-found.test.ts",
-        "web-ssr/src/snow/tests/parte-futuro.test.ts",
-        "web-ssr/src/snow/tests/security-hardening.test.ts",
-        "web-ssr/src/snow/tests/store-durability.test.ts",
-        "web-ssr/src/snow/tests/store-migration.test.ts"
-      ]
+      "description": "Suite node:test del módulo de nieve en dos mitades equilibradas (cobertura idéntica): dentro del runner confined una invocación de los 15 ficheros termina con exit 1 mientras las mismas piezas en dos grupos terminan 0 (medido con scripts/snow02/confined-identity.mjs).",
+      "argv": ["node", "scripts/snow02/qa-unit.mjs"]
     },
     {
       "id": "build-production",

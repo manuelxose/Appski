@@ -1,21 +1,21 @@
 {
   "driver": "persistence-restart",
-  "ranAt": "2026-11-16T19:44:06.635Z",
+  "ranAt": "2026-11-16T19:53:27.482Z",
   "total": 18,
   "passed": 18,
   "failed": 0,
   "exitCode": 0,
   "log": [
-    "arranque#1 pid=undefined puerto=55713 dir=C:\\Users\\Admin\\AppData\\Local\\Temp\\snow02-e04\\snow02-persist-y0EaOY",
+    "arranque#1 pid=undefined puerto=53181 dir=C:\\Users\\Admin\\AppData\\Local\\Temp\\engine-04-temp\\run-31568-1794858806279\\dsh-mOrFOt\\snow02-persist-XdLvfr",
     "SIGKILL: {\"code\":null,\"signal\":\"SIGKILL\"}",
-    "arranque#2 pid=undefined puerto=55718 (mismo dir=true)"
+    "arranque#2 pid=undefined puerto=53185 (mismo dir=true)"
   ],
   "checks": [
     {
       "name": "arranque#1 del bundle construido",
       "ok": true,
       "detail": {
-        "port": 55713
+        "port": 53181
       }
     },
     {
@@ -30,13 +30,13 @@
       "ok": true,
       "detail": {
         "status": 201,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:44:06.258Z\",\"updatedAt\":\"2026-11-16T19:44:06.258Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:53:27.102Z\",\"updatedAt\":\"2026-11-16T19:53:27.102Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
       }
     },
     {
       "name": "la respuesta trae id de parte",
       "ok": true,
-      "detail": "2bbe1844-466e-4d13-8bf0-acb5a2c7d1be"
+      "detail": "8f744f53-9feb-4681-8f62-9cf676b64067"
     },
     {
       "name": "el fichero existe y es JSON",
@@ -50,7 +50,7 @@
       "name": "el parte está EN DISCO antes del reinicio",
       "ok": true,
       "detail": {
-        "id": "2bbe1844-466e-4d13-8bf0-acb5a2c7d1be"
+        "id": "8f744f53-9feb-4681-8f62-9cf676b64067"
       }
     },
     {
@@ -64,7 +64,7 @@
       "detail": {
         "author": "operador-persistencia-t5",
         "sourceUrl": "https://www.baqueira.es/parte-de-nieve",
-        "capturedAt": "2026-11-16T19:44:06.250Z",
+        "capturedAt": "2026-11-16T19:53:27.095Z",
         "confidence": 0.87
       }
     },
@@ -112,7 +112,7 @@
       "detail": {
         "author": "operador-persistencia-t5",
         "sourceUrl": "https://www.baqueira.es/parte-de-nieve",
-        "capturedAt": "2026-11-16T19:44:06.250Z",
+        "capturedAt": "2026-11-16T19:53:27.095Z",
         "confidence": 0.87
       }
     },
@@ -121,8 +121,8 @@
       "ok": true,
       "detail": {
         "source": "editorial-report",
-        "observedAt": "2026-11-16T19:44:06.250Z",
-        "updatedAt": "2026-11-16T19:44:06.250Z",
+        "observedAt": "2026-11-16T19:53:27.095Z",
+        "updatedAt": "2026-11-16T19:53:27.095Z",
         "status": "live",
         "licenseStatus": "allowed",
         "freshness": 0,
@@ -143,7 +143,7 @@
         "stationSlug": "baqueira-beret",
         "baseCm": 60,
         "observedAt": "2026-11-16T08:00:00.000Z",
-        "updatedAt": "2026-11-16T19:44:06.250Z",
+        "updatedAt": "2026-11-16T19:53:27.095Z",
         "status": "live"
       }
     },
@@ -155,7 +155,7 @@
           "stationSlug": "baqueira-beret",
           "baseCm": 60,
           "observedAt": "2026-11-16T08:00:00.000Z",
-          "updatedAt": "2026-11-16T19:44:06.250Z",
+          "updatedAt": "2026-11-16T19:53:27.095Z",
           "status": "live"
         }
       ]

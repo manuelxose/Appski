@@ -13,27 +13,49 @@
  * forma explícita desde el llamador.
  */
 import { spawn } from 'node:child_process';
+import { openSync, closeSync } from 'node:fs';
 
 /**
  * Lanza un hijo sin pipes. Devuelve un asa con:
  *   - `exited` / `exitCode()`: si terminó y con qué código
  *   - `kill(signal)`: termina el proceso
  *   - `wait()`: promesa que resuelve en el cierre
+ *
+ * `logPath` (opcional) redirige stdout+stderr a ese fichero. Es la alternativa a los
+ * pipes cuando hace falta conservar la salida dentro de un sandbox que los deniega.
  */
-export function spawnNoPipe(command, args, { cwd, env, stdio = 'ignore' } = {}) {
+export function spawnNoPipe(command, args, { cwd, env, stdio = 'ignore', logPath } = {}) {
+  let outFd = null;
+  let stream = stdio === 'inherit' ? 'inherit' : ['ignore', 'ignore', 'ignore'];
+  if (logPath) {
+    outFd = openSync(logPath, 'w');
+    stream = ['ignore', outFd, outFd];
+  }
   const child = spawn(command, args, {
     cwd,
     env: env ?? process.env,
-    stdio: stdio === 'inherit' ? 'inherit' : ['ignore', 'ignore', 'ignore'],
+    stdio: stream,
     windowsHide: true,
   });
   let exit = null;
   const closed = new Promise((resolve) => {
+    const closeFd = () => {
+      if (outFd !== null) {
+        try {
+          closeSync(outFd);
+        } catch {
+          /* ya cerrado */
+        }
+        outFd = null;
+      }
+    };
     child.on('error', (error) => {
+      closeFd();
       exit = { code: null, signal: null, error: String(error?.code ?? error) };
       resolve(exit);
     });
     child.on('exit', (code, signal) => {
+      closeFd();
       exit = { code, signal, error: null };
       resolve(exit);
     });
