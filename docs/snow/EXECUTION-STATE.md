@@ -1,7 +1,9 @@
 # EXECUTION-STATE — SNOW-02 (backend operativo, persistencia y APIs)
 
 **Última actualización:** 2026-11-16 · **Rama:** `feat/snow-02-operational-backend`
-**Estado:** revisión independiente **PASS** · **Merge a `master`: NO AUTORIZADO**
+**Estado global:** **PARTIAL** — backend operativo verificado (etapas ENGINE-04 exit 0) ·
+revisión independiente **PASS sobre `6ab6867`** · **Merge a `master`: NO AUTORIZADO** · gate
+de entrega **FAIL** por bloqueantes de proceso (§7)
 
 ---
 
@@ -50,7 +52,8 @@
 | Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
 | Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
 | **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) + commits de QA | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
-| **Gate ENGINE-04** | `qa/qa-manifest.json` (9 etapas requeridas + `build-production` no requerida) y `qa/README.md` con los requisitos del gate medidos | **STAGES PASS / GATE BLOCKED** — ver §7 |
+| **Gate ENGINE-04** | `qa/qa-manifest.json` (9 etapas requeridas + `build-production` no requerida) y `qa/README.md` con los requisitos del gate medidos | **STAGES PASS / GATE FAIL — bloqueantes reales, ver §7** |
+| **Re-revisión tras los arreglos de QA** | La revisión independiente (t7) juzgó los bytes de `6ab6867`; después se modificaron `store-durability.test.ts`, `scripts/snow02/*` y el manifiesto | **PENDIENTE — bloquea el PASS del gate** |
 | Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
 
 ---
@@ -124,17 +127,35 @@ requerida, ver abajo). `manifest-check` → **ok**.
 `gaps = 0`, `duringDrift = 0`, evidencia archivada en
 `docs/snow/snow02-evidence/engine04-worktree-verify.json`.
 
-**`gate` → `BLOCKED`**, con un único bloqueante restante:
+**`gate` → `FAIL`** con tres bloqueantes y una lista de contradicciones de *binding*.
+Ninguno de los tres es un fallo de las etapas; los tres son consecuencias medidas de haber
+cerrado el equipo y de haber corregido los arreglos de QA después de la revisión:
 
-```
-team-required: the delivery gate will not reach PASS without team state;
-an evidence-only run cannot establish review coverage, supersession or DAG completeness
-```
+1. **`trusted-repository-context` / `evidence-repository-identity`** — `worktree path does
+   not resolve`. La evidencia se produjo en un worktree registrado en ENGINE-03
+   (`snow02-main-gate`) que después se retiró con el propio toolkit
+   (`parallel-dev.mjs remove`). El worktree principal nunca estuvo registrado y, en este
+   host, el motor no reconoce el clon principal como raíz de worktree (`assertWorktreeRoot`
+   → `Not a registered worktree root`), así que no existe un contenedor válido para emitir
+   un `PASS` de entrega sobre el árbol principal.
+2. **`change-set-present`** — `evidence carries no valid changed set`. Un `verify` con
+   `--baseline` igual al `HEAD` del worktree registrado no tiene cambio que reconstruir;
+   el que sí lo tenía (`--baseline master`) entraba en contradicción
+   `trusted-baseline: evidence asserts baseline master but the lifecycle baseline is HEAD`.
+3. **`binding-current:<t7>`** — el revisor juzgó los bytes de `6ab6867`; después se
+   modificaron, entre otros, `web-ssr/src/snow/tests/store-durability.test.ts`,
+   `scripts/snow02/*` y `qa/qa-manifest.json`. La revisión ya **no** casa con lo entregado
+   y hace falta una **re-revisión independiente** de esos bytes.
 
-Motivo medido: el equipo de AgentTeams `snow-02-backend` fue **archivado** al cerrar el
-hito (`agent_teams_delete`), y el gate exige el estado de equipo vivo (`--team
-<team.json>`) para aceptar cobertura de revisión. Sin ese estado no puede emitir `PASS`
-aunque las nueve etapas pasen. Es una condición del *proceso*, no un defecto del código.
+El estado `team-required` **sí** se satisfizo aportando el estado de AgentTeams archivado
+(`--team` con las 8 tareas y la revisión t7 con `reviewedArtifacts`), pero eso no exime de
+los tres bloqueantes anteriores. Por eso el resultado final es **FAIL**, no `BLOCKED`:
+hay contradicciones determinadas, no solo evidencia incompleta.
+
+**Qué sigue pendiente para un gate `PASS` (ni el capitán ni ningún miembro pueden acortarlo):**
+(a) un worktree registrado y **vivo** cuyo `baseline` sea el commit base de la entrega;
+(b) una **re-revisión independiente** de los bytes actuales con `verdict=pass`; (c) el
+estado de equipo de esa revisión aportado al gate con `--team`.
 
 **Hallazgos del entorno que se corrigieron para llegar aquí** (no son cambios de producto):
 
@@ -148,5 +169,5 @@ aunque las nueve etapas pasen. Es una condición del *proceso*, no un defecto de
 | El árbol tenía >2000 artefactos ignorados (4096) | `complete-scan` BLOCKED | limpieza de `data/qa-temp*` (propios) y `tmp/`; ahora `gaps = 0` |
 
 **Lo que este estado NO afirma:** que el gate haya devuelto `PASS`. Afirma que las nueve
-etapas de verificación se ejecutaron en el runner confined con exit 0 y sin gaps ni
-deriva, y que el único bloqueante restante es `team-required`.
+etapas se ejecutaron en el runner confined con exit 0, sin gaps ni deriva, y enumera con
+exactitud los bloqueantes que impiden el `PASS`.
