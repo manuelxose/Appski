@@ -26,8 +26,8 @@ export class MeteoDataService {
     if (this.isBrowser) {
       return window.location.origin;
     }
-    // En SSR usamos localhost:4200 por defecto (dev server)
-    return "http://localhost:4200";
+    // En SSR el servidor escucha en PORT (por defecto 4000), no en el dev server.
+    return `http://localhost:${process.env["PORT"] || "4000"}`;
   }
 
   /**

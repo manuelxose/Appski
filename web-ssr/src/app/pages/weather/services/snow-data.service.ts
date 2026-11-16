@@ -26,8 +26,8 @@ export class SnowDataService {
     if (this.isBrowser && typeof window !== "undefined") {
       return window.location.origin;
     }
-    // Fallback para SSR
-    return "http://localhost:4200";
+    // Fallback para SSR: el servidor escucha en PORT (por defecto 4000).
+    return `http://localhost:${process.env["PORT"] || "4000"}`;
   }
 
   /**

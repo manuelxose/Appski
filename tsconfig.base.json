@@ -23,7 +23,10 @@
       "@nieve/maps": ["maps/src/index.ts"],
       "@nieve/seo": ["seo/src/index.ts"],
       "@nieve/state": ["state/src/index.ts"],
-      "@nieve/ui-design-system": ["ui-design-system/src/index.ts"]
+      "@nieve/ui-design-system": ["ui-design-system/src/index.ts"],
+      "@nieve/snow": ["web-ssr/src/snow/index.ts"],
+      "@nieve/snow/contracts": ["web-ssr/src/snow/contracts/index.ts"],
+      "@nieve/snow/models": ["web-ssr/src/snow/models/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

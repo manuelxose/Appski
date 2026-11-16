@@ -1,0 +1,73 @@
+{
+  "snow": {
+    "common": {
+      "nodata": "Sin datos disponibles",
+      "retry": "Reintentar",
+      "loading": "Cargando…",
+      "unitCm": "cm",
+      "unitKm": "km",
+      "minutesAgo": "hace {{n}} min",
+      "hoursAgo": "hace {{n}} h",
+      "daysAgo": "hace {{n}} días",
+      "justNow": "hace un momento",
+      "openInNew": "abre en el sitio del titular"
+    },
+    "reason": {
+      "outside-season": "Temporada cerrada — sin parte publicado",
+      "source-silent": "La estación no ha publicado parte hoy",
+      "not-yet-published": "Pendiente de publicación por la fuente",
+      "not-covered": "Sin cobertura de datos para esta estación",
+      "license-prohibits": "No disponible por condiciones de uso de la fuente"
+    },
+    "status": {
+      "open": { "label": "Abierta", "glyph": "▲" },
+      "closed": { "label": "Cerrada", "glyph": "▼" },
+      "unknown": { "label": "Sin datos", "glyph": "?" },
+      "stale": { "label": "Desfasado", "glyph": "◔" },
+      "blocked": { "label": "No disponible", "glyph": "⊘" },
+      "openDepthUnknown": "Abierta, espesor sin publicar"
+    },
+    "provenance": {
+      "editorial": "Parte de estación · fuente: {{operator}} · actualizado {{date}}",
+      "official": "{{attribution}}",
+      "absent": "—"
+    },
+    "evidence": {
+      "latestReport": "Último parte conocido: {{date}}"
+    },
+    "lastReport": {
+      "any": "Último parte con datos",
+      "none": "Sin partes registrados"
+    },
+    "error": {
+      "requestFailed": "No hemos podido cargar {{what}}.",
+      "requestFailedNoRetry": "No hemos podido cargar {{what}}. Vuelve más tarde.",
+      "requestedUrl": "Ruta: {{url}}",
+      "codeLabel": "Código"
+    },
+    "webcam": {
+      "link": "Webcam de {{station}} · {{camera}} (abre en el sitio del titular, © {{operator}})",
+      "noGrants": "No hay cámaras con enlace autorizado para esta zona todavía.",
+      "blocked": "Las imágenes de cámara las publica el operador; aquí solo aparecen los enlaces necesarios."
+    },
+    "notFound": {
+      "title": "No encontramos esta página",
+      "description": "La dirección no existe o ha cambiado. Comprueba el enlace o vuelve a empezar desde aquí.",
+      "home": "Ir al inicio",
+      "dashboard": "Ver el parte de nieve",
+      "explorer": "Buscar una estación",
+      "oldLink": "Si has llegado desde un enlace antiguo, la dirección puede haber cambiado de nombre.",
+      "technical": "Detalles técnicos",
+      "alternatives": "Accesos alternativos",
+      "noSuggestions": {
+        "outside-season": "No te ofrecemos estaciones sugeridas porque hoy no hay partes publicados.",
+        "source-silent": "No te ofrecemos estaciones sugeridas: ninguna estación ha publicado parte hoy.",
+        "not-yet-published": "No te ofrecemos estaciones sugeridas: los partes de hoy todavía no se han publicado.",
+        "not-covered": "No te ofrecemos estaciones sugeridas: no hay estaciones con datos disponibles hoy.",
+        "license-prohibits": "No te ofrecemos estaciones sugeridas porque las fuentes disponibles no permiten publicarlas aquí.",
+        "reporting-failed": "No te ofrecemos estaciones sugeridas: no hemos podido consultar qué partes hay hoy."
+      },
+      "suggest": "Estaciones con parte:"
+    }
+  }
+}

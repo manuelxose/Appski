@@ -28,7 +28,7 @@ export class StationDetailDataService {
     if (this.isBrowser && typeof window !== "undefined") {
       return window.location.origin;
     }
-    return "http://localhost:4200";
+    return `http://localhost:${process.env["PORT"] || "4000"}`;
   }
 
   /**

@@ -316,4 +316,67 @@ export const routes: Routes = [
       },
     ],
   },
+  // ===== Módulo nieve (t14) =====
+  // Decisión del capitán (U1/U4): TODO el producto de nieve vive bajo `nieve/*`.
+  // No se sustituyen `/` ni `/estaciones`: las páginas existentes siguen igual y
+  // se reconectarán en un hito posterior. Cada pantalla es `RenderMode.Server`
+  // (app.routes.server.ts) para que el HTML inicial traiga contenido real.
+  {
+    path: "nieve",
+    children: [
+      {
+        path: "",
+        loadComponent: () =>
+          import("./snow/pages/dashboard/snow-dashboard.component").then(
+            (m) => m.SnowDashboardComponent
+          ),
+      },
+      {
+        path: "estaciones",
+        loadComponent: () =>
+          import("./snow/pages/explorer/snow-explorer.component").then(
+            (m) => m.SnowExplorerComponent
+          ),
+      },
+      {
+        path: "estaciones/:slug",
+        loadComponent: () =>
+          import("./snow/pages/station/snow-station-detail.component").then(
+            (m) => m.SnowStationDetailComponent
+          ),
+      },
+      {
+        path: "comparar",
+        loadComponent: () =>
+          import("./snow/pages/compare/snow-compare.component").then(
+            (m) => m.SnowCompareComponent
+          ),
+      },
+      {
+        path: "webcams",
+        loadComponent: () =>
+          import("./snow/pages/webcams/snow-webcams.component").then(
+            (m) => m.SnowWebcamsComponent
+          ),
+      },
+      {
+        path: "mapa",
+        loadComponent: () =>
+          import("./snow/pages/map/snow-map.component").then(
+            (m) => m.SnowMapComponent
+          ),
+      },
+    ],
+  },
+  // Catch-all REAL (F21 / 07-ux-ui.md §11). Último y en el nivel raíz: dentro de
+  // `admin` sólo capturaría URLs de admin sin emparejar. La referencia redirige
+  // en silencio a /estaciones-esqui/ (defecto E23); aquí se responde con una
+  // página de error explícita que no inventa datos.
+  {
+    path: "**",
+    loadComponent: () =>
+      import("./snow/pages/not-found/snow-not-found.component").then(
+        (m) => m.SnowNotFoundComponent
+      ),
+  },
 ];
