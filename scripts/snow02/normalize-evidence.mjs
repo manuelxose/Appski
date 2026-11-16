@@ -17,7 +17,11 @@ import { join } from 'node:path';
 const dir = process.argv[2] ?? join(process.cwd(), 'docs/snow/snow02-evidence');
 
 /** Extrae de un JSON de driver el resumen estable, o null si no es un driver. */
-function stableSummary(data) {
+/**
+ * Resume un JSON de driver en su forma ESTABLE (sólo check + PASS/FAIL y recuentos).
+ * Devuelve `null` si el JSON no tiene la forma de un driver.
+ */
+export function stableSummary(data) {
   if (Array.isArray(data?.results) && typeof data?.total === 'number') {
     return {
       kind: 'driver-checks',
@@ -49,6 +53,7 @@ function stableSummary(data) {
 }
 
 const changed = [];
+if (process.argv[1] && process.argv[1].replace(/\\\\/g,'/').endsWith('normalize-evidence.mjs')) {
 for (const name of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const path = join(dir, name);
   const before = readFileSync(path, 'utf8');
@@ -68,3 +73,4 @@ for (const name of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
 }
 
 console.log(`EVIDENCE normalized=${changed.length}${changed.length ? ` :: ${changed.join(', ')}` : ''}`);
+}

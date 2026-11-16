@@ -20,6 +20,7 @@
  * Evidencia: docs/snow/snow02-evidence/reviewer-security-bundle.json
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { stableSummary } from '../../../scripts/snow02/normalize-evidence.mjs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -169,6 +170,6 @@ const summary = {
   checks: results,
 };
 mkdirSync(HERE, { recursive: true });
-writeFileSync(OUT, JSON.stringify(summary, null, 2) + '\n', 'utf8');
+writeFileSync(OUT, JSON.stringify(stableSummary(summary) ?? summary, null, 2) + '\n', 'utf8');
 console.log(`\nchecks=${summary.total} passed=${summary.passed} failed=${summary.failed}`);
 process.exit(summary.exitCode);

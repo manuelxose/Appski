@@ -23,6 +23,7 @@
  *   docs/snow/snow02-evidence/adversarial.json
  */
 import { writeFileSync, mkdirSync } from 'node:fs';
+import { stableSummary } from './normalize-evidence.mjs';
 import { join, resolve } from 'node:path';
 import { ROOT, authHeaders, cleanupDir, http, startBundle, stopBundle, tempDataDir } from './lib/server.mjs';
 
@@ -270,7 +271,7 @@ const summary = {
   cases: results,
 };
 mkdirSync(EVIDENCE_DIR, { recursive: true });
-writeFileSync(EVIDENCE_FILE, JSON.stringify(summary, null, 2) + '\n', 'utf8');
+writeFileSync(EVIDENCE_FILE, JSON.stringify(stableSummary(summary) ?? summary, null, 2) + '\n', 'utf8');
 console.log(`\ncases=${summary.total} passed=${summary.passed} failed=${summary.failed}`);
 console.log(`evidencia: ${EVIDENCE_FILE}`);
 process.exit(summary.exitCode);

@@ -17,6 +17,7 @@
  * Evidencia: docs/snow/snow02-evidence/integration-http.json
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { stableSummary } from './normalize-evidence.mjs';
 import { join, resolve } from 'node:path';
 import {
   ROOT,
@@ -196,7 +197,7 @@ const summary = {
   checks: results,
 };
 mkdirSync(EVIDENCE_DIR, { recursive: true });
-writeFileSync(EVIDENCE_FILE, JSON.stringify(summary, null, 2) + '\n', 'utf8');
+writeFileSync(EVIDENCE_FILE, JSON.stringify(stableSummary(summary) ?? summary, null, 2) + '\n', 'utf8');
 console.log(`\nchecks=${summary.total} passed=${summary.passed} failed=${summary.failed}`);
 console.log(`evidencia: ${EVIDENCE_FILE}`);
 process.exit(summary.exitCode);
