@@ -1,0 +1,1292 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Infonieve.es - Parte de Nieve, Meteo y Webcams de las estaciones de esquí</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Conoce el estado de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal a través de las webcams, partes de nieve y las previsiones meteorológicas; y las webcams de las estaciones del resto del planeta">
+<meta name="Keywords" content="portada, estado de las estaciones, meteo, el tiempo, previsiones, webcams">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Infonieve.es - Parte de Nieve, Meteo y Webcams de las estaciones de esquí">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Conoce el estado de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal a través de las webcams, partes de nieve y las previsiones meteorológicas; y las webcams de las estaciones del resto del planeta">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'HOME' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_zona', 'home');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+<link href="https://www.infonieve.es/" rel="canonical">
+
+<meta property="fb:admins" content="100000359225354">
+
+<link rel="stylesheet" type="text/css" href="apps/fancybox/jquery.fancybox.min_v460.css">
+<script src="apps/fancybox/jquery.fancybox.min_v460.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$("[data-fancybox]").fancybox({
+			loop : false,
+			lang : 'es',
+  			preload: false,
+			buttons : ['zoom','fullScreen','close']
+		});
+		/*
+		$("[data-fancybox-video]").fancybox({
+			autoDimensions: false,
+			autoSize: false,
+			width: 1080,
+			height: 607.5,
+			loop : false,
+			hash : 'tw_videoplayer',
+			lang : 'es',
+			buttons : ['fullScreen','close'],
+			onUpdate : function( instance, current ) {
+				var width,
+				height,
+				ratio = 16 / 9,
+				video = current.$content;
+				if ( video ) {
+					video.hide();
+					width  = current.$slide.width();
+					height = current.$slide.height() - 200;
+					if ( height * ratio > width ) { height = width / ratio;
+					} else { width = height * ratio; }
+					video.css({
+						width  : width,
+						height : height,
+						'max-width': '800px',
+						'max-height': '450px'
+					}).show();
+				}
+			},
+			afterShow : function( instance, current ) {
+				var video = current.$content.find('video');
+				var ide = video.attr('id');
+				video.attr('id',ide+'fancy');
+				var myVideo = document.getElementById(ide+'fancy');
+				if (myVideo.paused) { myVideo.play(); }
+			}
+		});
+		*/
+	});
+</script>
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611100101/pubads_impl.js" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación" style=""></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Infonieve.es&amp;url=https%3A%2F%2Fwww.infonieve.es%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación" style=""></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="">
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+<div class="div_l_fila"><div class=""><div class="div_m_fila box_l_ancho_porc_60"><div class=""><div class="box_l_ancho_var_roba_right box_l_alto_fijo_roba box_m_ancho_var_roba_right box_m_alto_fijo_roba"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_mapapaises">
+    	<div class="box_pastilla_tit">ESTACIONES DE ESQUÍ</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+                <div class="box_mapapaises_img">
+                	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 105 76.02" preserveAspectRatio="xMidYMin meet">
+						<g>
+							<a xlink:href="estaciones-esqui/pais/espana/" xlink:title="Estaciones de esquí de España">
+								<polygon id="box_mapapaises_pais_1" rel="1" points="13.6,5.6 14.7,5.9 15.7,6.2 16.6,6.9 17.6,7.4 18.7,7.6 19.8,7.3 20.9,7.3 22,7.3 23.2,7.3 24.3,7.3 25.4,7.2 26.5,7.1 27.6,6.8 28.7,7.1 29.8,7.4 30.9,7.5 32,7.6 33.1,7.9 34.2,8.2 35.3,8.4 36.5,8.6 37.6,8.8 38.7,8.9 39.8,8.9 40.9,8.7 42,8.4 43.1,8.2 44.2,8.3 45.3,8 46.4,8.3 47.4,8.7 48.5,9 49.6,9.3 50.5,8.8 51.6,8.7 52.7,8.9 53.8,9.2 54.9,9.6 56,9.8 57.1,9.7 58.2,9.5 59.3,9.1 59.9,9.9 61,10.2 62.1,10.5 62,11.4 62.1,12.3 62.8,12.3 63.2,12.1 63.9,12.5 
+									65,12.9 66,13.3 67.2,13.4 68,14 68.9,14.7 70.1,14.6 71.1,14.5 72.1,15.1 73.1,15.7 74.2,15.6 75.3,15.6 76.4,15.7 77.5,15.7 78.6,15.5 78.9,14.4 79.8,14.5 80.9,14.8 82,15.1 83.1,15.4 84,16 84.3,17 84.6,18.1 85.6,18.1 86.7,17.6 87.7,18 88.6,18.6 89.6,18.7 90.6,18.3 91.8,18.6 92.9,18.8 94,19 94.8,18.3 95.9,18 97,17.9 98.1,18.2 98.8,19 98,19.5 97.8,20.5 98.4,21.4 98.4,22.5 97.5,23.2 96.6,24 95.6,24.5 94.6,25 93.6,25.5 92.6,26 91.6,26.6 90.7,27.3 89.9,28 88.9,28.5 87.8,28.7 86.7,29 85.6,29.2 
+									84.5,29.5 83.4,29.9 82.4,30.2 81.3,30.6 80.5,31.3 79.6,32.1 78.9,32.9 79.7,33.5 79.5,34.1 78.5,34.6 77.6,35.1 77,36 76.3,37 75.7,37.9 74.9,38.8 74.2,39.6 73.5,40.5 72.8,41.4 72.2,42.3 71.6,43.3 71,44.3 70.7,45.3 70.8,46.4 71.2,47.5 71.5,48.6 72,49.6 72.7,50.5 73.6,51.1 74.6,51.6 74.1,52.3 73.2,53 72.2,53.6 71.2,54.1 70.3,54.7 69.5,55.5 69,56.5 68.3,57.3 68,58.3 67.6,59.4 67.1,60.4 67,61.4 67.2,62.2 66.1,62.4 65,62.4 63.8,62.4 62.8,62.7 61.8,63.3 60.8,63.9 60,64.6 59.3,65.5 58.8,66.5 
+									58.3,67.5 57.7,68.5 57,69.3 56.1,69.4 55,69 53.9,69.1 52.9,69.5 51.9,69.9 50.8,69.7 49.6,69.6 48.5,69.6 47.4,69.8 46.3,69.9 45.2,69.7 44.1,69.6 43,69.6 41.8,69.7 40.7,69.8 39.6,69.9 38.6,70.3 37.7,71.1 36.9,71.9 35.8,71.9 34.7,72 33.6,72.4 32.7,73 32.1,73.9 31.6,74.9 30.9,75.5 30,76 28.9,75.8 27.9,75.3 26.9,74.7 26.2,74 25.5,73.1 25.1,72 24.7,71.1 23.9,70.4 24.2,69.4 25,68.6 24.6,68.2 23.7,68.7 23,67.8 22.1,67.2 21.2,66.5 20.3,65.9 20,65 19.1,65.6 18,65.6 16.9,65.7 16,65.5 15.8,64.4 
+									15.5,63.2 15.4,62.2 15.9,61.1 16.5,60.2 17.2,59.3 18.1,58.7 19.1,58.2 19.5,57.1 18.7,56.8 17.9,56.2 17.2,55.3 16.6,54.4 16.9,53.3 17.2,52.2 18,51.5 18.8,50.7 19.2,49.6 18.8,48.6 17.8,48.2 17.2,47.2 16.8,46.2 16.4,45.2 15.6,44.4 15.6,43.8 16.7,43.7 17.8,43.7 18.9,43.3 19.5,42.4 19.9,41.3 20,40.2 19.3,39.3 19.5,38.5 20.4,37.8 20.5,36.8 20.5,35.7 20.6,34.6 20.5,33.5 20.3,32.4 19.9,31.3 20.7,30.6 21.4,29.8 22.2,29 23.1,28.4 24.1,27.8 24.9,27 25.2,26 24.5,25.2 23.5,24.9 22.7,24.6 22.6,23.5 
+									22.1,22.5 21,22.4 20,22.3 18.8,22.3 17.8,22.1 17.2,23 16.1,23.4 15,23.4 13.9,23 12.8,23 11.7,23.1 10.6,23.5 9.8,23.1 10.4,22.1 10.1,21.1 9.2,20.5 8.1,20.9 7,21.2 6,21.7 5.1,22.4 4.7,21.7 5,20.8 5.7,19.9 5.7,19.2 5.6,18.6 5.4,17.7 5.2,16.7 4.8,15.8 3.7,16.2 3.7,15.5 4.3,14.5 3.3,14.2 2.4,13.5 2,12.6 2.2,11.5 3.1,10.8 4,10.2 5,9.8 6.1,9.9 7.2,9.7 8.3,9.2 9.3,8.7 9.4,7.8 9.9,7.1 10.9,6.5 12,6.2 13.1,5.9"></polygon>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/andorra/" xlink:title="Estaciones de esquí de Andorra">
+								<polygon id="box_mapapaises_pais_2" rel="2" points="86.5,17.1 85.5,17.6 84.8,17.6 84.6,16.5 85.1,16.2 86.4,16.5 86.6,16.8"></polygon>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/pirineo-frances/" xlink:title="Estaciones de esquí de Pirineo Francés">
+								<polygon id="box_mapapaises_pais_3" rel="3" points="105,0 105,6.9 103.7,7.1 102.7,8.1 98.6,10.7 96.9,13.4 96.8,14.2 97.2,16.6 98,17.8 96.5,17.5 95.8,17.5 94.3,18 93.8,18.6 90.5,17.9 88.9,18.5 88.5,17.9 86.9,17.2 87.1,16.7 86.7,16.2 85.1,15.8 84.5,16.1 84,15.4 82.8,15.1 79.3,14 78.7,13.9 78.4,14.1 78.1,15.4 75.4,15.3 74.9,15.1 73.1,15.4 71.1,14.1 68.9,14.3 67.5,13 66.2,12.9 63.6,11.9 63.2,11.5 62.8,11.9 62.4,12 62.3,11.6 62.7,10.9 62.5,10.2 62,9.9 60.2,9.6 59.7,9 60.9,8.7 62.1,7.4 63.1,3 63.6,0"></polygon>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/portugal/" xlink:title="Estaciones de esquí de Portugal">
+								<polygon id="box_mapapaises_pais_4" rel="4" points="2.1,54.5 1.9,53.4 2.4,52.7 3.3,52.2 3.9,51.2 3.9,50.2 4.7,49.4 5.2,48.7 4.1,49.1 3.4,49.9 2.8,50.8 2.2,51.8 1.1,52 0,51.9 0.1,50.8 0.4,49.7 0.5,48.6 0.9,47.5 1,46.5 1.8,45.8 2.5,44.8 3,43.8 3.4,42.8 3.9,41.8 4.4,40.7 4.9,39.7 4.6,38.7 4.8,37.6 5.1,36.5 5.4,35.4 5.8,34.3 6.2,33.3 6.3,32.2 6.3,31 6.2,29.9 5.8,28.9 5.6,27.8 5.4,26.6 5.2,25.5 5.4,24.6 4.6,24.1 5.2,23.2 5.9,22.3 6.9,21.7 8,21.4 9,21 9.8,21.6 9.5,22.5 9.6,23.5 10.5,24 11.5,23.6 12.6,23.4 
+									13.7,23.3 14.8,23.7 15.9,23.8 17,23.4 17.8,22.7 18.7,22.7 19.8,22.7 20.9,22.7 22,22.8 22.2,23.9 22.3,25 23.4,25.3 24.4,25.7 24.6,26.5 23.9,27.3 22.9,28 22,28.6 21.2,29.3 20.4,30.2 19.6,30.9 19.7,31.9 20,33 20.2,34.1 20.2,35.2 20,36.3 20.2,37.4 19.3,38.1 18.6,38.9 19.1,39.9 19.5,40.8 19.2,41.9 18.7,42.9 17.7,43.3 16.6,43.3 15.5,43.3 14.8,43.9 15.4,44.8 16.3,45.6 16.5,46.7 17,47.7 17.7,48.6 18.7,49 18.6,50 18,50.9 17.2,51.7 16.6,52.6 16.4,53.7 16.4,54.8 17,55.7 17.7,56.6 18.5,57.2 
+									18.9,57.7 18.1,58.3 17.2,58.9 16.5,59.8 15.8,60.6 15.2,61.6 15,62.7 15.2,63.8 15.4,64.9 15.4,65.9 14.4,66.3 13.4,66.8 12.4,67.3 11.3,67.2 10.3,66.7 9.1,66.6 8,66.5 6.9,66.3 5.8,66.6 4.7,66.7 3.9,67 4.3,66 4.8,64.9 5.2,63.9 5.2,62.7 5.3,61.6 5.3,60.5 5,59.4 4.9,58.4 5.2,57.3 5.2,56.2 4.9,55.1 5.7,55 6.1,54.5 5.2,53.9 4.1,53.9 3,54.2"></polygon>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/espana/" xlink:title="Estaciones de esquí de España">
+								<text x="46" y="41" id="box_mapapaises_texto_1" rel="1" onmouseover="pastilla_mapapaises_in(1)" onmouseout="pastilla_mapapaises_out(1)">ESPAÑA</text>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/andorra/" xlink:title="Estaciones de esquí de Andorra">
+								<text x="85" y="22.5" id="box_mapapaises_texto_2" rel="2" onmouseover="pastilla_mapapaises_in(2)" onmouseout="pastilla_mapapaises_out(2)">ANDORRA</text>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/pirineo-frances/" xlink:title="Estaciones de esquí de Pirineo Francés">
+								<text x="81" y="10" id="box_mapapaises_texto_3" rel="3" onmouseover="pastilla_mapapaises_in(3)" onmouseout="pastilla_mapapaises_out(3)">PIRINEO FRANCÉS</text>
+							</a>
+							<a xlink:href="estaciones-esqui/pais/portugal/" xlink:title="Estaciones de esquí de Portugal">
+								<text x="10" y="46" transform="rotate(270 10 43.5)" id="box_mapapaises_texto_4" rel="4" onmouseover="pastilla_mapapaises_in(4)" onmouseout="pastilla_mapapaises_out(4)">PORTUGAL</text>
+							</a>
+						</g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_fijo_roba_right box_l_alto_fijo_roba box_m_ancho_fijo_roba_right box_m_alto_fijo_roba"><div class=""><div class="boxpad"><div class="box"><div class="box_banpub">
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_m_fila box_l_ancho_porc_40"><div class=""><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_contadores">
+		<ul>
+			<li class="box_contadores_cams">
+				<a href="sala-de-webcams/" title="Mira en tiempo real el estado de las estaciones de esquí de todo el mundo">
+					<span class="box_contadores_img"><i class="imagen"></i></span>
+					<span class="box_contadores_tit"><strong>753 WEBCAMS</strong></span>
+					<span class="box_contadores_txt">EN 183 ESTACIONES</span>
+				</a>
+			</li>
+			<li class="box_contadores_parte box_contadores_noborde_r">
+				<a href="parte-de-nieve/" title="Consulta el estado de apertura de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">
+					<span class="box_contadores_img"><i class="imagen"></i></span>
+					<span class="box_contadores_tit"><strong>PARTE DE NIEVE ACTUALIZADO</strong></span>
+					<span class="box_contadores_txt">DE 94 ESTACIONES</span>
+				</a>
+			</li>
+			<li class="box_contadores_meteo box_contadores_noborde_b">
+				<a href="meteo/" title="Consulta la previsión del tiempo en las estaciones de esquí para los próximos días">
+					<span class="box_contadores_img"><i class="imagen"></i></span>
+					<span class="box_contadores_tit"><strong>PREVISIÓN METEO</strong></span>
+					<span class="box_contadores_txt">PARA 94 ESTACIONES</span>
+				</a>
+			</li>			<li class="box_contadores_actu box_contadores_noborde_b box_contadores_noborde_r">
+				<div>
+					<span class="box_contadores_img"><i class="imagen"></i></span>
+					<span class="box_contadores_tit"><strong>ÚLTIMA ACTUALIZACIÓN</strong></span>
+					<span class="box_contadores_txt">LUNES 16/11/2026 05:45</span>
+				</div>
+			</li>		</ul>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_pastilla_conlink box_fechas">
+    	<div class="box_pastilla_tit">PRÓXIMAS APERTURAS</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<ul class="box_pastilla_list">					<li>
+						<div>
+							<span class="box_fechas_tit"><strong>Miércoles 25/11/2026</strong><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+							<span class="box_fechas_txt">Luz Ardiden</span>
+						</div>
+					</li>					<li>
+						<div>
+							<span class="box_fechas_tit"><strong>Viernes 27/11/2026</strong><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+							<span class="box_fechas_txt">Cauterets Lys, Cerler, Formigal, Angles, Manzaneda, Panticosa</span>
+						</div>
+					</li>					<li>
+						<div>
+							<span class="box_fechas_tit"><strong>Sábado 28/11/2026</strong><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+							<span class="box_fechas_txt">Baqueira Beret, La Rabassa, Larra-Belagua, Sierra Nevada, Valdezcaray</span>
+						</div>
+					</li>					<li>
+						<div>
+							<span class="box_fechas_tit"><strong>Martes 01/12/2026</strong><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+							<span class="box_fechas_txt">San Isidro, Leitariegos</span>
+						</div>
+					</li>				</ul>
+            </div>
+        </div>
+    	<div class="box_pastilla_link"><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fecha de apertura y cierre de la temporada de las estaciones de ski">VER TODAS LAS FECHAS</a></div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_40 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_slidewebcams">
+		<div class="box_slidewebcams_cont">
+			<div id="slidewc_home1" class="webcams_slider webcams_slider_multi ">
+				<ul>					<li class="webcams_slider_sel">
+						<a href="estacion-esqui/sierra-nevada/webcams/" title="Webcams de Sierra Nevada (Sistema Penibético)">
+							<img src="https://webtvhotspot.feratel.com/hotspot/35/15113/3.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="slidewc_home1_wc_3049" alt="Webcam en Montebajo - TQ El Puente II, Sierra Nevada (Sistema Penibético)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_3049" class="webcam webcams_slider_img" style="background-image:url(https://webtvhotspot.feratel.com/hotspot/35/15113/3.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);" title="Webcam en Montebajo - TQ El Puente II, Sierra Nevada (Sistema Penibético)"></span>
+							<span class="webcams_slider_caption">Sierra Nevada (Sistema Penibético)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.feratel.com/" target="_blank" class="track_feratel-com_ExternalLink_slide-webcams">© feratel.com</a></span>
+					</li>					<li>
+						<a href="estacion-esqui/font-romeu-pyrenees-2000/webcams/" title="Webcams de Font-Romeu Pyrénées 2000 (Neiges Catalanes)">
+							<img src="https://www.infonieve.es/webcams/fontromeu-calme-sud_2026-11-16-14-02-697.jpg" class="webcam" loading="lazy" rel="slidewc_home1_wc_1366" alt="Webcam en Font Romeu - La Calme, Font-Romeu Pyrénées 2000 (Neiges Catalanes)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_1366" class="webcam webcams_slider_img" style="background-image:url(https://www.infonieve.es/webcams/fontromeu-calme-sud_2026-11-16-14-02-697.jpg);" title="Webcam en Font Romeu - La Calme, Font-Romeu Pyrénées 2000 (Neiges Catalanes)"></span>
+							<span class="webcams_slider_caption">Font-Romeu Pyrénées 2000 (Neiges Catalanes)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.webcam-hd.com/" target="_blank" class="track_webcam-hd-com_ExternalLink_slide-webcams">© webcam-hd.com</a></span>
+					</li>					<li>
+						<a href="estacion-esqui/formigal/webcams/" title="Webcams de Formigal (Pirineo Aragonés)">
+							<img src="https://www.infonieve.es/webcams/formigal-garmet-panoramica_2026-11-16-14-00-840.jpg" class="webcam" loading="lazy" rel="slidewc_home1_wc_3231" alt="Webcam en Garmet - Ts Garmet, Formigal (Pirineo Aragonés)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_3231" class="webcam webcams_slider_img" style="background-image:url(https://www.infonieve.es/webcams/formigal-garmet-panoramica_2026-11-16-14-00-840.jpg);" title="Webcam en Garmet - Ts Garmet, Formigal (Pirineo Aragonés)"></span>
+							<span class="webcams_slider_caption">Formigal (Pirineo Aragonés)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.feratel.com/" target="_blank" class="track_feratel-com_ExternalLink_slide-webcams">© feratel.com</a></span>
+					</li>					<li>
+						<a href="estacion-esqui/peyragudes/webcams/" title="Webcams de Peyragudes (Hautes Pyrénées)">
+							<img src="https://www.infonieve.es/webcams/peyragudes-peyresourde-front_2026-11-16-14-02-616.jpg" class="webcam" loading="lazy" rel="slidewc_home1_wc_1295" alt="Webcam en Peyresourde - Front de Neige, Peyragudes (Hautes Pyrénées)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_1295" class="webcam webcams_slider_img" style="background-image:url(https://www.infonieve.es/webcams/peyragudes-peyresourde-front_2026-11-16-14-02-616.jpg);" title="Webcam en Peyresourde - Front de Neige, Peyragudes (Hautes Pyrénées)"></span>
+							<span class="webcams_slider_caption">Peyragudes (Hautes Pyrénées)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.skaping.com/" target="_blank" class="track_skaping-com_ExternalLink_slide-webcams">© skaping.com</a></span>
+					</li>					<li>
+						<a href="estacion-esqui/valdezcaray/webcams/" title="Webcams de Valdezcaray (Sistema Ibérico)">
+							<img src="https://www.valdezcaray.es/webcam/Principal/principal.jpg?intmp=1794835136" class="webcam" loading="lazy" rel="slidewc_home1_wc_270" alt="Webcam en Rehoyo, Valdezcaray (Sistema Ibérico)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_270" class="webcam webcams_slider_img" style="background-image:url(https://www.valdezcaray.es/webcam/Principal/principal.jpg?intmp=1794835136);" title="Webcam en Rehoyo, Valdezcaray (Sistema Ibérico)"></span>
+							<span class="webcams_slider_caption">Valdezcaray (Sistema Ibérico)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.valdezcaray.es/" target="_blank" class="track_valdezcaray-es_ExternalLink_slide-webcams">© valdezcaray.es</a></span>
+					</li>					<li>
+						<a href="estacion-esqui/cerler/webcams/" title="Webcams de Cerler (Pirineo Aragonés)">
+							<img src="https://webtvhotspot.feratel.com/hotspot/35/15082/1.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="slidewc_home1_wc_3012" alt="Webcam en Castanesa - El Troc, Cerler (Pirineo Aragonés)" onerror="webcam_def(this);">
+							<span id="slidewc_home1_wc_3012" class="webcam webcams_slider_img" style="background-image:url(https://webtvhotspot.feratel.com/hotspot/35/15082/1.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);" title="Webcam en Castanesa - El Troc, Cerler (Pirineo Aragonés)"></span>
+							<span class="webcams_slider_caption">Cerler (Pirineo Aragonés)</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.feratel.com/" target="_blank" class="track_feratel-com_ExternalLink_slide-webcams">© feratel.com</a></span>
+					</li>				</ul>
+			<div class="webcams_slider_nav webcams_slider_nav_left"><i rel="slidewc_home1"><svg viewBox="0 0 16000 16000"><polyline points="11040,1920 4960,8000 11040,14080 "></polyline></svg></i></div><div class="webcams_slider_nav webcams_slider_nav_right"><i rel="slidewc_home1"><svg viewBox="0 0 16000 16000"><polyline points="4960,1920 11040,8000 4960,14080 "></polyline></svg></i></div></div>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_60 box_l_alto_fijo_roba box_m_ancho_porc_50"><div class=""><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">		<div class="pastilla pastilla_viajes box_viajes_pastilla" rel-num-l="1" rel-num-m="" rel-num-s="1" rel-pastilla="20" rel-estacion="" rel-idioma="" rel-anterior="S" rel-num-ant="1"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=1&amp;pastilla=20&amp;vm=1&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_meteo">
+    	<div class="box_pastilla_tit">EL TIEMPO</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<a href="meteo/" class="box_meteo_link" title="Previsión meteorológica para los próximos días en las estaciones de esquí" style="background-image:url(files/meteo/meteo-estaciones_1.png?intmp=2026111614);"></a>
+            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila"><div class=""><div class="div_m_fila box_l_ancho_porc_50"><div class=""><div class="box_l_ancho_fijo_roba_left box_l_alto_fijo_roba box_m_ancho_fijo_roba_left box_m_alto_fijo_roba"><div class=""><div class="boxpad"><div class="box"><div class="box_banpub">
+		<!-- /1020536/Infonieve_robapaginas_secundario -->
+		<div id="div-banpub-Infonieve_robapaginas_secundario">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_secundario'); });
+		</script>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_var_roba_left box_m_ancho_var_roba_left box_s_ancho_porc_100"><div class=""><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_roba box_s_ancho_porc_50"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_nevando">
+		<a href="sala-de-webcams/donde-esta-nevando/" title="Mira las webcams de las estaciones donde está nevando ahora">
+			<span class="box_nevando_tit">ESTÁ<br>NEVANDO</span>
+			<span class="box_nevando_img"><i class="imagen"></i></span>
+			<span class="box_nevando_txt">Mira las webcams donde está nevando ahora mismo</span>
+		</a>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_roba box_s_ancho_porc_50"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_webmasters">
+		<a href="recursos/" title="Inserta en tu web o blog toda la información con nuestos Widgets y APIs">
+			<span class="box_webmasters_tit">WEBMASTER<br>TOOLS</span>
+			<span class="box_webmasters_img"><i class="imagen"></i></span>
+			<span class="box_webmasters_txt">¿Quieres poner GRATIS toda esta inforación en tu web?</span>
+		</a>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_m_fila box_l_ancho_porc_50"><div class=""><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_pastilla_linktit box_tops">
+    	<div class="box_pastilla_tit"><a href="parte-de-nieve/top-nieve/" title="Estaciones de esquí con mayor espesor de nieve acumulado">ESTACIONES CON MÁS NIEVE</a></div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<ul class="box_pastilla_listlinks">					<li class="box_tops_noinfo">
+						<span>sin datos</span>
+					</li>				</ul>
+            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_50 box_l_alto_fijo_roba box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_pastilla_linktit box_tops">
+    	<div class="box_pastilla_tit"><a href="parte-de-nieve/top-km/" title="Estaciones de esquí con mayor longitud de pistas abiertas">ESTACIONES CON MÁS KM</a></div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<ul class="box_pastilla_listlinks">					<li class="box_tops_noinfo">
+						<span>sin datos</span>
+					</li>				</ul>
+            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_100 box_m_ancho_porc_100"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_murotw">
+    	<div class="box_pastilla_tit">
+			<span class="box_murotw_titlinks">
+				<a href="muro-social/" class="tooltip" data-tooltip="Actualidad #infonieve" title="Muro social de Infonieve.es"><i class="imagen box_murotw_tit_social"></i></a>
+				<a href="https://twitter.com/infonieve" class="tooltip track_twitter-com_ExternalLink_muro-social" data-tooltip="Twitter" title="Infonieve.es en Twitter" target="_blank"><i class="imagen box_murotw_tit_tw"></i></a>
+			</span>
+			#infonieve
+		</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<ul class="box_murotw_columnas_l_3 box_murotw_columnas_m_2">				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/infonieve" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="infonieve.es en Twitter">@infonieve</a>
+									<a href="https://x.com/infonieve/status/2120461314950832567" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/infonieve/status/2120461314950832567" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">11/11/26 11:19</a>
+								</div>								<div class="box_murotw_texto"><div>🔴LIVE : Nevando en cotas altas de <a href="https://x.com/hashtag/SierraNevada?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#SierraNevada</a> ❄, con mucho viento 🌬  
+·  
+🎥 <a href="https://x.com/websierranevada" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@websierranevada</a> [10:49 11/11/2026]</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_video box_murotw_media_elem_1">
+									<a href="javascript:;" data-fancybox="tw_2120461314950832567" data-src="#social_tweet_video_2120461314950832567" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/infonieve&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;infonieve.es en Twitter&quot;&gt;@infonieve&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2120461314950832567&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2120461314950832567&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;11/11/26 11:19&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;🔴LIVE : Nevando en cotas altas de &lt;a href=&quot;https://x.com/hashtag/SierraNevada?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;SierraNevada&lt;/a&gt; ❄, con mucho viento 🌬  
+&amp;middot;  
+🎥 &lt;a href=&quot;https://x.com/websierranevada&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064websierranevada&lt;/a&gt; [10:49 11/11/2026]&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2120461314950832567&amp;media=1&amp;thumb=1);"><i class="imagen"></i></span></a>
+								</div>
+								<div id="social_tweet_video_2120461314950832567" style="display:none;">
+									<div class="box_murotw_player">
+										<video id="video_social_tweet_video_2120461314950832567" src="//www.infonieve.es/muro-social/media.php?id=2120461314950832567&amp;media=1" poster="//www.infonieve.es/muro-social/media.php?id=2120461314950832567&amp;media=1&amp;thumb=1" preload="none" controls="">
+											Tu navegador no soporta vídeo.
+										</video>
+									</div>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/alexmegapc" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Àlex Van der Laan en Twitter">@alexmegapc</a>
+									<a href="https://x.com/alexmegapc/status/2118278291152937036" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/alexmegapc/status/2118278291152937036" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">5/11/26 10:44</a>
+								</div>								<div class="box_murotw_texto"><div>Així tenim avui <a href="https://x.com/hashtag/lamolina?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#lamolina</a> <a href="https://x.com/Pirineu365" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@Pirineu365</a> <a href="https://x.com/hashtag/meteo?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#meteo</a></div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2118303588476973161&amp;media=1&amp;size=large" data-fancybox="tw_2118303588476973161" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/alexmegapc&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;&amp;Agrave;lex Van der Laan en Twitter&quot;&gt;@alexmegapc&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/alexmegapc/status/2118278291152937036&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/alexmegapc/status/2118278291152937036&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;5/11/26 10:44&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Aix&amp;iacute; tenim avui &lt;a href=&quot;https://x.com/hashtag/lamolina?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;lamolina&lt;/a&gt; &lt;a href=&quot;https://x.com/Pirineu365&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064Pirineu365&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/meteo?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;meteo&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118303588476973161&amp;media=1&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/Meteo_Pyrenees" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Météo Pyrénées en Twitter">@Meteo_Pyrenees</a>
+									<a href="https://x.com/Meteo_Pyrenees/status/2118233511614112114" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/Meteo_Pyrenees/status/2118233511614112114" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">5/11/26 07:46</a>
+								</div>								<div class="box_murotw_texto"><div>Averses du matin ❄️Font Romeu</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_video box_murotw_media_elem_1">
+									<a href="javascript:;" data-fancybox="tw_2118260572978643013" data-src="#social_tweet_video_2118260572978643013" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Meteo_Pyrenees&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;M&amp;eacute;t&amp;eacute;o Pyr&amp;eacute;n&amp;eacute;es en Twitter&quot;&gt;@Meteo_Pyrenees&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Meteo_Pyrenees/status/2118233511614112114&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Meteo_Pyrenees/status/2118233511614112114&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;5/11/26 07:46&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Averses du matin ❄️Font Romeu&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118260572978643013&amp;media=1&amp;thumb=1);"><i class="imagen"></i></span></a>
+								</div>
+								<div id="social_tweet_video_2118260572978643013" style="display:none;">
+									<div class="box_murotw_player">
+										<video id="video_social_tweet_video_2118260572978643013" src="//www.infonieve.es/muro-social/media.php?id=2118260572978643013&amp;media=1" poster="//www.infonieve.es/muro-social/media.php?id=2118260572978643013&amp;media=1&amp;thumb=1" preload="none" controls="">
+											Tu navegador no soporta vídeo.
+										</video>
+									</div>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/sanisidronieve" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Estación Invernal San Isidro - Oficial en Twitter">@sanisidronieve</a>
+									<a href="https://x.com/sanisidronieve/status/2118106768698224859" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/sanisidronieve/status/2118106768698224859" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 23:23</a>
+								</div>								<div class="box_murotw_texto"><div>Paisajes de hoy mismo, de la que sale el sol  en <a href="https://x.com/hashtag/SanIsidroOficial?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#SanIsidroOficial</a> <a href="https://x.com/diputacionleon" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@diputacionleon</a>  
+ℹ️ Les recordamos que MAÑANA 5 de noviembre sale a la venta el forfait anual prepago  <a href="https://www.nieveleonsanisidro.com" target="_blank" rel="nofollow" class="track_nieveleonsanisidro-com_ExternalLink_TwitterLink">nieveleonsanisidro.com</a> 
+<a href="https://x.com/hashtag/NosVemosEnPistas?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#NosVemosEnPistas</a> <a href="https://x.com/Atudem_es" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@Atudem_es</a></div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_4">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=1&amp;size=large" data-fancybox="tw_2118260483983626717" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/sanisidronieve&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Estaci&amp;oacute;n Invernal San Isidro - Oficial en Twitter&quot;&gt;@sanisidronieve&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 23:23&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Paisajes de hoy mismo, de la que sale el sol  en &lt;a href=&quot;https://x.com/hashtag/SanIsidroOficial?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;SanIsidroOficial&lt;/a&gt; &lt;a href=&quot;https://x.com/diputacionleon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064diputacionleon&lt;/a&gt;  
+ℹ️ Les recordamos que MA&amp;Ntilde;ANA 5 de noviembre sale a la venta el forfait anual prepago  &lt;a href=&quot;https://www.nieveleonsanisidro.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_nieveleonsanisidro-com_ExternalLink_TwitterLink&quot;&gt;nieveleonsanisidro.com&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/hashtag/NosVemosEnPistas?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;NosVemosEnPistas&lt;/a&gt; &lt;a href=&quot;https://x.com/Atudem_es&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064Atudem_es&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=1&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=2&amp;size=large" data-fancybox="tw_2118260483983626717" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/sanisidronieve&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Estaci&amp;oacute;n Invernal San Isidro - Oficial en Twitter&quot;&gt;@sanisidronieve&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 23:23&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Paisajes de hoy mismo, de la que sale el sol  en &lt;a href=&quot;https://x.com/hashtag/SanIsidroOficial?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;SanIsidroOficial&lt;/a&gt; &lt;a href=&quot;https://x.com/diputacionleon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064diputacionleon&lt;/a&gt;  
+ℹ️ Les recordamos que MA&amp;Ntilde;ANA 5 de noviembre sale a la venta el forfait anual prepago  &lt;a href=&quot;https://www.nieveleonsanisidro.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_nieveleonsanisidro-com_ExternalLink_TwitterLink&quot;&gt;nieveleonsanisidro.com&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/hashtag/NosVemosEnPistas?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;NosVemosEnPistas&lt;/a&gt; &lt;a href=&quot;https://x.com/Atudem_es&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064Atudem_es&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=2&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_3">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=3&amp;size=large" data-fancybox="tw_2118260483983626717" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/sanisidronieve&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Estaci&amp;oacute;n Invernal San Isidro - Oficial en Twitter&quot;&gt;@sanisidronieve&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 23:23&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Paisajes de hoy mismo, de la que sale el sol  en &lt;a href=&quot;https://x.com/hashtag/SanIsidroOficial?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;SanIsidroOficial&lt;/a&gt; &lt;a href=&quot;https://x.com/diputacionleon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064diputacionleon&lt;/a&gt;  
+ℹ️ Les recordamos que MA&amp;Ntilde;ANA 5 de noviembre sale a la venta el forfait anual prepago  &lt;a href=&quot;https://www.nieveleonsanisidro.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_nieveleonsanisidro-com_ExternalLink_TwitterLink&quot;&gt;nieveleonsanisidro.com&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/hashtag/NosVemosEnPistas?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;NosVemosEnPistas&lt;/a&gt; &lt;a href=&quot;https://x.com/Atudem_es&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064Atudem_es&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=3&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_4">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=4&amp;size=large" data-fancybox="tw_2118260483983626717" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/sanisidronieve&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Estaci&amp;oacute;n Invernal San Isidro - Oficial en Twitter&quot;&gt;@sanisidronieve&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/sanisidronieve/status/2118106768698224859&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 23:23&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Paisajes de hoy mismo, de la que sale el sol  en &lt;a href=&quot;https://x.com/hashtag/SanIsidroOficial?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;SanIsidroOficial&lt;/a&gt; &lt;a href=&quot;https://x.com/diputacionleon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064diputacionleon&lt;/a&gt;  
+ℹ️ Les recordamos que MA&amp;Ntilde;ANA 5 de noviembre sale a la venta el forfait anual prepago  &lt;a href=&quot;https://www.nieveleonsanisidro.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_nieveleonsanisidro-com_ExternalLink_TwitterLink&quot;&gt;nieveleonsanisidro.com&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/hashtag/NosVemosEnPistas?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;NosVemosEnPistas&lt;/a&gt; &lt;a href=&quot;https://x.com/Atudem_es&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064Atudem_es&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2118260483983626717&amp;media=4&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/P4Estacions" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Projecte 4 Estacions en Twitter">@P4Estacions</a>
+									<a href="https://x.com/P4Estacions/status/2117912004736213133" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/P4Estacions/status/2117912004736213133" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 10:29</a>
+								</div>								<div class="box_murotw_texto"><div>❄️ Des de la càmera de Boí Taüll - Cap de Mulleres també trobem un paisatge plenament hivernal. 
+ 
+<a href="https://x.com/hashtag/Projecte4Estacions?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#Projecte4Estacions</a></div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117913914553806960&amp;media=1&amp;size=large" data-fancybox="tw_2117913914553806960" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/P4Estacions&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Projecte 4 Estacions en Twitter&quot;&gt;@P4Estacions&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117912004736213133&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117912004736213133&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 10:29&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;❄️ Des de la c&amp;agrave;mera de Bo&amp;iacute; Ta&amp;uuml;ll - Cap de Mulleres tamb&amp;eacute; trobem un paisatge plenament hivernal. 
+ 
+&lt;a href=&quot;https://x.com/hashtag/Projecte4Estacions?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Projecte4Estacions&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117913914553806960&amp;media=1&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/Pirineu365" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="PIRINEU365 en Twitter">@Pirineu365</a>
+									<a href="https://x.com/Pirineu365/status/2117906971395498205" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/Pirineu365/status/2117906971395498205" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 10:09</a>
+								</div>								<div class="box_murotw_texto"><div>Al Ripollès també ha arribat la neu! ❄️ Així tenim #ValldeNúria i <a href="https://x.com/hashtag/Vallter?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#Vallter</a> ara mateix  
+ 
+📷 4/11/26</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_2">								<div class="box_murotw_media_elem box_murotw_video box_murotw_media_elem_1">
+									<a href="javascript:;" data-fancybox="tw_2117910175709331914" data-src="#social_tweet_video_2117910175709331914" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117906971395498205&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117906971395498205&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 10:09&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Al Ripoll&amp;egrave;s tamb&amp;eacute; ha arribat la neu! ❄️ Aix&amp;iacute; tenim #ValldeN&amp;uacute;ria i &lt;a href=&quot;https://x.com/hashtag/Vallter?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Vallter&lt;/a&gt; ara mateix  
+ 
+📷 4/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117910175709331914&amp;media=1&amp;thumb=1);"><i class="imagen"></i></span></a>
+								</div>
+								<div id="social_tweet_video_2117910175709331914" style="display:none;">
+									<div class="box_murotw_player">
+										<video id="video_social_tweet_video_2117910175709331914" src="//www.infonieve.es/muro-social/media.php?id=2117910175709331914&amp;media=1" poster="//www.infonieve.es/muro-social/media.php?id=2117910175709331914&amp;media=1&amp;thumb=1" preload="none" controls="">
+											Tu navegador no soporta vídeo.
+										</video>
+									</div>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117910175709331914&amp;media=2&amp;size=large" data-fancybox="tw_2117910175709331914" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117906971395498205&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117906971395498205&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 10:09&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Al Ripoll&amp;egrave;s tamb&amp;eacute; ha arribat la neu! ❄️ Aix&amp;iacute; tenim #ValldeN&amp;uacute;ria i &lt;a href=&quot;https://x.com/hashtag/Vallter?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Vallter&lt;/a&gt; ara mateix  
+ 
+📷 4/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117910175709331914&amp;media=2&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/meteobenas" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Dani Mora en Twitter">@meteobenas</a>
+									<a href="https://x.com/infonieve/status/2117881848625848456" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/infonieve/status/2117881848625848456" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 08:08</a>
+								</div>								<div class="box_murotw_cita">
+									<div class="box_murotw_cita_cont">📍 Cerler</div>
+								</div>								<div class="box_murotw_texto"><div>Buenos días desde el Gallinero <a href="https://x.com/infonieve" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@infonieve</a> :</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_3">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=1&amp;size=large" data-fancybox="tw_2117881848625848456" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/meteobenas&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Dani Mora en Twitter&quot;&gt;@meteobenas&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 08:08&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Buenos d&amp;iacute;as desde el Gallinero &lt;a href=&quot;https://x.com/infonieve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064infonieve&lt;/a&gt; :&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=1&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=2&amp;size=large" data-fancybox="tw_2117881848625848456" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/meteobenas&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Dani Mora en Twitter&quot;&gt;@meteobenas&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 08:08&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Buenos d&amp;iacute;as desde el Gallinero &lt;a href=&quot;https://x.com/infonieve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064infonieve&lt;/a&gt; :&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=2&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_3">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=3&amp;size=large" data-fancybox="tw_2117881848625848456" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/meteobenas&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Dani Mora en Twitter&quot;&gt;@meteobenas&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/infonieve/status/2117881848625848456&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 08:08&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Buenos d&amp;iacute;as desde el Gallinero &lt;a href=&quot;https://x.com/infonieve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064infonieve&lt;/a&gt; :&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881848625848456&amp;media=3&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/P4Estacions" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Projecte 4 Estacions en Twitter">@P4Estacions</a>
+									<a href="https://x.com/P4Estacions/status/2117864628818719020" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/P4Estacions/status/2117864628818719020" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 07:20</a>
+								</div>								<div class="box_murotw_texto"><div>Comencem el dia amb un paisatge hivernal 🥶  a diferents punts del Pirineu després de la nevada d'ahir 
+ 
+Imatges d'hivern avançat des del Port del Comte, Tuixent la Vansa, Boí-Taüll i Lles de Cerdanya. 
+ 
+Totes les càmeres ▶️ <a href="https://app.projecte4estacions.com/v2/" target="_blank" rel="nofollow" class="track_app-projecte4estacions-com_ExternalLink_TwitterLink">app.projecte4estacions.com/v2/</a></div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_4">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=1&amp;size=large" data-fancybox="tw_2117881749329850433" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/P4Estacions&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Projecte 4 Estacions en Twitter&quot;&gt;@P4Estacions&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 07:20&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Comencem el dia amb un paisatge hivernal 🥶  a diferents punts del Pirineu despr&amp;eacute;s de la nevada d'ahir 
+ 
+Imatges d'hivern avan&amp;ccedil;at des del Port del Comte, Tuixent la Vansa, Bo&amp;iacute;-Ta&amp;uuml;ll i Lles de Cerdanya. 
+ 
+Totes les c&amp;agrave;meres ▶️ &lt;a href=&quot;https://app.projecte4estacions.com/v2/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_app-projecte4estacions-com_ExternalLink_TwitterLink&quot;&gt;app.projecte4estacions.com/v2/&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=1&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=2&amp;size=large" data-fancybox="tw_2117881749329850433" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/P4Estacions&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Projecte 4 Estacions en Twitter&quot;&gt;@P4Estacions&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 07:20&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Comencem el dia amb un paisatge hivernal 🥶  a diferents punts del Pirineu despr&amp;eacute;s de la nevada d'ahir 
+ 
+Imatges d'hivern avan&amp;ccedil;at des del Port del Comte, Tuixent la Vansa, Bo&amp;iacute;-Ta&amp;uuml;ll i Lles de Cerdanya. 
+ 
+Totes les c&amp;agrave;meres ▶️ &lt;a href=&quot;https://app.projecte4estacions.com/v2/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_app-projecte4estacions-com_ExternalLink_TwitterLink&quot;&gt;app.projecte4estacions.com/v2/&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=2&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_3">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=3&amp;size=large" data-fancybox="tw_2117881749329850433" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/P4Estacions&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Projecte 4 Estacions en Twitter&quot;&gt;@P4Estacions&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 07:20&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Comencem el dia amb un paisatge hivernal 🥶  a diferents punts del Pirineu despr&amp;eacute;s de la nevada d'ahir 
+ 
+Imatges d'hivern avan&amp;ccedil;at des del Port del Comte, Tuixent la Vansa, Bo&amp;iacute;-Ta&amp;uuml;ll i Lles de Cerdanya. 
+ 
+Totes les c&amp;agrave;meres ▶️ &lt;a href=&quot;https://app.projecte4estacions.com/v2/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_app-projecte4estacions-com_ExternalLink_TwitterLink&quot;&gt;app.projecte4estacions.com/v2/&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=3&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_4">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=4&amp;size=large" data-fancybox="tw_2117881749329850433" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/P4Estacions&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Projecte 4 Estacions en Twitter&quot;&gt;@P4Estacions&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/P4Estacions/status/2117864628818719020&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 07:20&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Comencem el dia amb un paisatge hivernal 🥶  a diferents punts del Pirineu despr&amp;eacute;s de la nevada d'ahir 
+ 
+Imatges d'hivern avan&amp;ccedil;at des del Port del Comte, Tuixent la Vansa, Bo&amp;iacute;-Ta&amp;uuml;ll i Lles de Cerdanya. 
+ 
+Totes les c&amp;agrave;meres ▶️ &lt;a href=&quot;https://app.projecte4estacions.com/v2/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_app-projecte4estacions-com_ExternalLink_TwitterLink&quot;&gt;app.projecte4estacions.com/v2/&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881749329850433&amp;media=4&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/MeteoElpito" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Elpito meteo en Twitter">@MeteoElpito</a>
+									<a href="https://x.com/MeteoElpito/status/2117852812155756796" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/MeteoElpito/status/2117852812155756796" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">4/11/26 06:33</a>
+								</div>								<div class="box_murotw_texto"><div>Nevadeta a Vallter aquestes darreres hores. 
+ 
+Imatge de les 6h del sector Marmotes via cam.</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117881685706457437&amp;media=1&amp;size=large" data-fancybox="tw_2117881685706457437" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/MeteoElpito&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Elpito meteo en Twitter&quot;&gt;@MeteoElpito&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/MeteoElpito/status/2117852812155756796&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/MeteoElpito/status/2117852812155756796&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;4/11/26 06:33&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Nevadeta a Vallter aquestes darreres hores. 
+ 
+Imatge de les 6h del sector Marmotes via cam.&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117881685706457437&amp;media=1&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/ibericam" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Ibericam en Twitter">@ibericam</a>
+									<a href="https://x.com/ibericam/status/2117670083527106790" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/ibericam/status/2117670083527106790" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">3/11/26 18:27</a>
+								</div>								<div class="box_murotw_texto"><div>Primera <a href="https://x.com/hashtag/nieve?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#nieve</a> de la temporada  <a href="https://x.com/hashtag/Valdelinares?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#Valdelinares</a> <a href="https://x.com/hashtag/Javalambre?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#Javalambre</a> <a href="https://x.com/hashtag/teruel?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#teruel</a> 
+ 
+<a href="https://x.com/AEMET_Aragon" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@AEMET_Aragon</a> <a href="https://x.com/eltiempo_atv" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@eltiempo_atv</a> <a href="https://x.com/ElTiempoes" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@ElTiempoes</a> <a href="https://x.com/meteo_aragon" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@meteo_aragon</a> 
+<a href="https://x.com/meteobenas" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@meteobenas</a> <a href="https://x.com/MeteoredES" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@MeteoredES</a> <a href="https://x.com/RAM_meteo" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@RAM_meteo</a> 
+<a href="https://x.com/ElTiempo_tve" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@ElTiempo_tve</a> <a href="https://x.com/ElTiempoA3" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@ElTiempoA3</a> <a href="https://x.com/VicenteAupi" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@VicenteAupi</a> 
+<a href="https://x.com/CarlosDezaDeza" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@CarlosDezaDeza</a> <a href="https://x.com/EFerroviario" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_mention">@EFerroviario</a></div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_4">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=1&amp;size=large" data-fancybox="tw_2117704170148929598" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/ibericam&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Ibericam en Twitter&quot;&gt;@ibericam&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 18:27&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Primera &lt;a href=&quot;https://x.com/hashtag/nieve?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;nieve&lt;/a&gt; de la temporada  &lt;a href=&quot;https://x.com/hashtag/Valdelinares?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Valdelinares&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/Javalambre?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Javalambre&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/teruel?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;teruel&lt;/a&gt; 
+ 
+&lt;a href=&quot;https://x.com/AEMET_Aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064AEMET_Aragon&lt;/a&gt; &lt;a href=&quot;https://x.com/eltiempo_atv&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064eltiempo_atv&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoes&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoes&lt;/a&gt; &lt;a href=&quot;https://x.com/meteo_aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteo_aragon&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/meteobenas&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteobenas&lt;/a&gt; &lt;a href=&quot;https://x.com/MeteoredES&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064MeteoredES&lt;/a&gt; &lt;a href=&quot;https://x.com/RAM_meteo&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064RAM_meteo&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/ElTiempo_tve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempo_tve&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoA3&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoA3&lt;/a&gt; &lt;a href=&quot;https://x.com/VicenteAupi&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064VicenteAupi&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/CarlosDezaDeza&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064CarlosDezaDeza&lt;/a&gt; &lt;a href=&quot;https://x.com/EFerroviario&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064EFerroviario&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=1&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=2&amp;size=large" data-fancybox="tw_2117704170148929598" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/ibericam&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Ibericam en Twitter&quot;&gt;@ibericam&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 18:27&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Primera &lt;a href=&quot;https://x.com/hashtag/nieve?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;nieve&lt;/a&gt; de la temporada  &lt;a href=&quot;https://x.com/hashtag/Valdelinares?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Valdelinares&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/Javalambre?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Javalambre&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/teruel?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;teruel&lt;/a&gt; 
+ 
+&lt;a href=&quot;https://x.com/AEMET_Aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064AEMET_Aragon&lt;/a&gt; &lt;a href=&quot;https://x.com/eltiempo_atv&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064eltiempo_atv&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoes&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoes&lt;/a&gt; &lt;a href=&quot;https://x.com/meteo_aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteo_aragon&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/meteobenas&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteobenas&lt;/a&gt; &lt;a href=&quot;https://x.com/MeteoredES&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064MeteoredES&lt;/a&gt; &lt;a href=&quot;https://x.com/RAM_meteo&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064RAM_meteo&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/ElTiempo_tve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempo_tve&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoA3&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoA3&lt;/a&gt; &lt;a href=&quot;https://x.com/VicenteAupi&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064VicenteAupi&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/CarlosDezaDeza&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064CarlosDezaDeza&lt;/a&gt; &lt;a href=&quot;https://x.com/EFerroviario&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064EFerroviario&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=2&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_video box_murotw_media_elem_3">
+									<a href="javascript:;" data-fancybox="tw_2117704170148929598" data-src="#social_tweet_video_2117704170148929598" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/ibericam&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Ibericam en Twitter&quot;&gt;@ibericam&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 18:27&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Primera &lt;a href=&quot;https://x.com/hashtag/nieve?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;nieve&lt;/a&gt; de la temporada  &lt;a href=&quot;https://x.com/hashtag/Valdelinares?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Valdelinares&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/Javalambre?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Javalambre&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/teruel?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;teruel&lt;/a&gt; 
+ 
+&lt;a href=&quot;https://x.com/AEMET_Aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064AEMET_Aragon&lt;/a&gt; &lt;a href=&quot;https://x.com/eltiempo_atv&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064eltiempo_atv&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoes&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoes&lt;/a&gt; &lt;a href=&quot;https://x.com/meteo_aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteo_aragon&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/meteobenas&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteobenas&lt;/a&gt; &lt;a href=&quot;https://x.com/MeteoredES&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064MeteoredES&lt;/a&gt; &lt;a href=&quot;https://x.com/RAM_meteo&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064RAM_meteo&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/ElTiempo_tve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempo_tve&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoA3&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoA3&lt;/a&gt; &lt;a href=&quot;https://x.com/VicenteAupi&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064VicenteAupi&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/CarlosDezaDeza&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064CarlosDezaDeza&lt;/a&gt; &lt;a href=&quot;https://x.com/EFerroviario&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064EFerroviario&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=3&amp;thumb=1);"><i class="imagen"></i></span></a>
+								</div>
+								<div id="social_tweet_video_2117704170148929598" style="display:none;">
+									<div class="box_murotw_player">
+										<video id="video_social_tweet_video_2117704170148929598" src="//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=3" poster="//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=3&amp;thumb=1" preload="none" controls="">
+											Tu navegador no soporta vídeo.
+										</video>
+									</div>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_4">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=4&amp;size=large" data-fancybox="tw_2117704170148929598" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/ibericam&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Ibericam en Twitter&quot;&gt;@ibericam&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/ibericam/status/2117670083527106790&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 18:27&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Primera &lt;a href=&quot;https://x.com/hashtag/nieve?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;nieve&lt;/a&gt; de la temporada  &lt;a href=&quot;https://x.com/hashtag/Valdelinares?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Valdelinares&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/Javalambre?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;Javalambre&lt;/a&gt; &lt;a href=&quot;https://x.com/hashtag/teruel?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;teruel&lt;/a&gt; 
+ 
+&lt;a href=&quot;https://x.com/AEMET_Aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064AEMET_Aragon&lt;/a&gt; &lt;a href=&quot;https://x.com/eltiempo_atv&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064eltiempo_atv&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoes&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoes&lt;/a&gt; &lt;a href=&quot;https://x.com/meteo_aragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteo_aragon&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/meteobenas&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064meteobenas&lt;/a&gt; &lt;a href=&quot;https://x.com/MeteoredES&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064MeteoredES&lt;/a&gt; &lt;a href=&quot;https://x.com/RAM_meteo&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064RAM_meteo&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/ElTiempo_tve&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempo_tve&lt;/a&gt; &lt;a href=&quot;https://x.com/ElTiempoA3&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064ElTiempoA3&lt;/a&gt; &lt;a href=&quot;https://x.com/VicenteAupi&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064VicenteAupi&lt;/a&gt; 
+&lt;a href=&quot;https://x.com/CarlosDezaDeza&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064CarlosDezaDeza&lt;/a&gt; &lt;a href=&quot;https://x.com/EFerroviario&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_mention&quot;&gt;&amp;#064EFerroviario&lt;/a&gt;&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117704170148929598&amp;media=4&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/candanchuesqui" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="Candanchú en Twitter">@candanchuesqui</a>
+									<a href="https://x.com/candanchuesqui/status/2117668609233494434" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/candanchuesqui/status/2117668609233494434" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">3/11/26 18:21</a>
+								</div>								<div class="box_murotw_texto"><div>Acaba de caer nieve en Candanchú y el atardecer de hoy en Tuca Blanca es de los que gustan. 😏</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_1">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117697394284404956&amp;media=1&amp;size=large" data-fancybox="tw_2117697394284404956" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/candanchuesqui&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;Candanch&amp;uacute; en Twitter&quot;&gt;@candanchuesqui&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/candanchuesqui/status/2117668609233494434&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/candanchuesqui/status/2117668609233494434&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 18:21&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Acaba de caer nieve en Candanch&amp;uacute; y el atardecer de hoy en Tuca Blanca es de los que gustan. 😏&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117697394284404956&amp;media=1&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				<li class="box_murotw_conmedia">
+					<div class="box_murotw_tweet">
+						<div class="box_murotw_tweet_cont redondeado">
+							<div class="box_murotw_tweet_cap">
+								<div class="box_murotw_author">
+									<a href="https://twitter.com/Pirineu365" class="box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author" target="_blank" title="PIRINEU365 en Twitter">@Pirineu365</a>
+									<a href="https://x.com/Pirineu365/status/2117660523848507596" class="box_murotw_author_link track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter"><i class="imagen"></i></a>
+									<a href="https://x.com/Pirineu365/status/2117660523848507596" class="box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link" target="_blank" title="Ver en Twitter">3/11/26 17:49</a>
+								</div>								<div class="box_murotw_texto"><div>Ja la tenim aquí 🥹 Així tenim ara mateix <a href="https://x.com/hashtag/LaMolina?src=hash" target="_blank" rel="nofollow" class="track_twitter-com_ExternalLink_hashtag">#LaMolina</a> #PortAiné #EspotEsquí i #BoíTaüll ❄️ 
+ 
+🔴 3/11/26</div></div>
+							</div>							<div class="box_murotw_media box_murotw_media_4">								<div class="box_murotw_media_elem box_murotw_media_elem_1">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=1&amp;size=large" data-fancybox="tw_2117697325091156450" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 17:49&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Ja la tenim aqu&amp;iacute; 🥹 Aix&amp;iacute; tenim ara mateix &lt;a href=&quot;https://x.com/hashtag/LaMolina?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;LaMolina&lt;/a&gt; #PortAin&amp;eacute; #EspotEsqu&amp;iacute; i #Bo&amp;iacute;Ta&amp;uuml;ll ❄️ 
+ 
+🔴 3/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=1&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_2">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=2&amp;size=large" data-fancybox="tw_2117697325091156450" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 17:49&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Ja la tenim aqu&amp;iacute; 🥹 Aix&amp;iacute; tenim ara mateix &lt;a href=&quot;https://x.com/hashtag/LaMolina?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;LaMolina&lt;/a&gt; #PortAin&amp;eacute; #EspotEsqu&amp;iacute; i #Bo&amp;iacute;Ta&amp;uuml;ll ❄️ 
+ 
+🔴 3/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=2&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_3">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=3&amp;size=large" data-fancybox="tw_2117697325091156450" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 17:49&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Ja la tenim aqu&amp;iacute; 🥹 Aix&amp;iacute; tenim ara mateix &lt;a href=&quot;https://x.com/hashtag/LaMolina?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;LaMolina&lt;/a&gt; #PortAin&amp;eacute; #EspotEsqu&amp;iacute; i #Bo&amp;iacute;Ta&amp;uuml;ll ❄️ 
+ 
+🔴 3/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=3&amp;size=small);"></span></a>
+								</div>								<div class="box_murotw_media_elem box_murotw_media_elem_4">
+									<a href="//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=4&amp;size=large" data-fancybox="tw_2117697325091156450" data-caption="								&lt;div class=&quot;box_murotw_fancycap&quot;&gt;
+									&lt;a href=&quot;https://twitter.com/Pirineu365&quot; class=&quot;box_murotw_author_nombre track_twitter-com_ExternalLink_tuit-author&quot; target=&quot;_blank&quot; title=&quot;PIRINEU365 en Twitter&quot;&gt;@Pirineu365&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_link track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;&lt;i class=&quot;imagen&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+									&lt;a href=&quot;https://x.com/Pirineu365/status/2117660523848507596&quot; class=&quot;box_murotw_author_fecha track_twitter-com_ExternalLink_tuit-link&quot; target=&quot;_blank&quot; title=&quot;Ver en Twitter&quot;&gt;3/11/26 17:49&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;box_murotw_fancytweet&quot;&gt;Ja la tenim aqu&amp;iacute; 🥹 Aix&amp;iacute; tenim ara mateix &lt;a href=&quot;https://x.com/hashtag/LaMolina?src=hash&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;track_twitter-com_ExternalLink_hashtag&quot;&gt;&amp;#35;LaMolina&lt;/a&gt; #PortAin&amp;eacute; #EspotEsqu&amp;iacute; i #Bo&amp;iacute;Ta&amp;uuml;ll ❄️ 
+ 
+🔴 3/11/26&lt;/div&gt;"><span style="background-image:url(//www.infonieve.es/muro-social/media.php?id=2117697325091156450&amp;media=4&amp;size=small);"></span></a>
+								</div>							</div>						</div>
+					</div>
+				</li>				</ul>
+				<div class="clear"></div>
+            </div>
+        </div>
+		<div class="clear"></div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_25 box_l_alto_fijo_350 box_m_ancho_porc_30 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_pastilla box_actividades">
+    	<div class="box_pastilla_tit">ACTIVIDADES</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<ul>
+					<li class="box_actividades_snowparks">
+						<a href="parte-de-nieve/snowparks/" title="Consulta el estado de apertura de los parques de nieve y zonas de freestyle de las estaciones de esquí">
+							<span class="box_actividades_img"><i class="imagen"></i></span>
+							<span class="box_actividades_tit"><strong>SNOWPARKS</strong></span>
+						</a>
+					</li>
+					<li class="box_actividades_skimo box_actividades_noborde_r">
+						<a href="parte-de-nieve/skimo/" title="Consulta el estado de apertura de los itinerarios de esquí de montaña en las estaciones de esquí">
+							<span class="box_actividades_img"><i class="imagen"></i></span>
+							<span class="box_actividades_tit"><strong>ESQUÍ DE MONTAÑA</strong></span>
+						</a>
+					</li>
+					<li class="box_actividades_raquetas box_actividades_noborde_b">
+						<a href="parte-de-nieve/itinerarios-raquetas/" title="Consulta el estado de apertura de los recorridos de raquetas en las estaciones de esquí">
+							<span class="box_actividades_img"><i class="imagen"></i></span>
+							<span class="box_actividades_tit"><strong>RAQUETAS</strong></span>
+						</a>
+					</li>
+					<li class="box_actividades_trineos box_actividades_noborde_b box_actividades_noborde_r">
+						<a href="parte-de-nieve/pistas-trineos/" title="Consulta el estado de apertura de las pistas de trineos en las estaciones de esquí">
+							<span class="box_actividades_img"><i class="imagen"></i></span>
+							<span class="box_actividades_tit"><strong>PISTAS DE TRINEOS</strong></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_75 box_l_alto_fijo_350 box_m_ancho_porc_70 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_partes">
+    	<div class="box_pastilla_tit">
+			<span class="box_partes_btn">
+				<a href="parte-de-nieve/publicar/" class="tooltip" title="Publicar tu propio parte de nieve" data-tooltip="publicar parte"><i class="imagen box_partes_btn_add"></i></a>
+				<a href="parte-de-nieve/usuarios/" class="tooltip" title="Partes de nieve publicados por los usuarios" data-tooltip="ver todos"><i class="imagen box_partes_btn_all"></i></a>
+			</span>
+			ÚLTIMOS PARTES DE USUARIOS
+		</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">				<div class="box_partes_noparte">
+					<div><b>No hay partes de nieve recientes publicados por los usuarios</b></div>
+					<div>Si has estado recientemente en una estación de esquí,</div>
+					<div><a href="parte-de-nieve/publicar/" class="redondeado" title="Si has estado recientemente en una estación de esquí, publica tu parte de nieve">PUBLICA TU PARTE DE NIEVE</a></div>
+				</div>            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_100 box_l_alto_fijo_350 box_m_ancho_porc_100 box_m_alto_fijo_350"><div class=""><div class="boxpad"><div class="box">		<div class="pastilla box_articulos">			<div id="nevarticulos_home1" class="slider_contenido slider_contenido_show_nav_s slider_contenido_show_nav_m slider_contenido_show_nav_m_noprev" data-num="8" data-columnas-l="4" data-columnas-m="2" data-filas-l="2" data-filas-m="2" data-filas-s="4" data-num-max-m="2" data-num-act-m="0">
+				<ul>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/noticias/art/71609/la-justicia-rechaza-indemnizar-a-una-esquiadora-por-un-supuesto-canonazo-en-soldeu/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Rechazada la indemnización a una esquiadora por un supuesto &amp;#039;cañonazo&amp;#039; en Soldeu" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/161126/1106518_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Rechazada la indemnización a una esquiadora por un supuesto 'cañonazo' en Soldeu</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Noticias</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/EsquiPro/art/71524/el-catalogo-esqui-pro-2027-ya-disponible/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="El Catálogo Esquí Pro 2027, ya disponible" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/011126/1105329_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>El Catálogo Esquí Pro 2027, ya disponible</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Esquí Pro</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/EsquiPro/art/71281/conjunto-interior-viking-primeone-man-set/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Conjunto interior Viking Primeone Man Set" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/090926/1099603_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Conjunto interior Viking Primeone Man Set</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Esquí Pro</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/noticias/art/71577/asi-esta-cambiando-la-forma-de-entrar-a-las-pistas-esqui/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Así está cambiando la forma de entrar a las pistas de esquí" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/111126/1106249_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Así está cambiando la forma de entrar a las pistas de esquí</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Noticias</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/reportajes/art/71496/Lo-que-sorprende-a-un-esquiador-de-los-Pirineos-cuando-visita-los-Alpes/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Lo que sorprende a un esquiador de los Pirineos cuando visita los Alpes" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/091126/1106094-Si-en-los-Alpes-italianos-la-policia-patrulla-por-las-pistas-de-esqui-Foto-IST_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Lo que sorprende a un esquiador de los Pirineos cuando visita los Alpes</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Reportajes</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/reportajes/art/71432/Pirineos-o-Alpes-que-viaje-de-esqui-te-conviene-mas/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Pirineos o Alpes: ¿qué viaje de esquí te conviene más?" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/161026/1103575-Estacion-de-Les-Arcs-en-los-Alpes-Foto-IST_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Pirineos o Alpes: ¿qué viaje de esquí te conviene más?</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Reportajes</b>, el 16/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/discoverysnow/art/71365/alpe-dhuez-disfrutando-del-paraiso-blanco/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Esquí en Isère, Alpes franceses: disfrutando del paraíso blanco" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/121126/1106296_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Esquí en Isère, Alpes franceses: disfrutando del paraíso blanco</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Discovery Snow</b>, el 15/11/2026</span>
+							</span>
+						</a>
+					</li>					<li class="slider_contenido_width_m_2 slider_contenido_height_m_2 slider_contenido_width_l_4 slider_contenido_height_l_2">
+						<a href="https://www.nevasport.com/noticias/art/71607/pinheiro-braathen-firma-un-doble-doblete-en-la-copa-del-mundo-de-esqui/" class="redondeado track_nevasport-com_ExternalLink_ArticulosList" title="Pinheiro Braathen firma en Levi un doble doblete en la Copa del Mundo de esquí" target="_blank">
+							<span class="box_articulos_img" style="background-image:url(https://www.nevasport.com/fotos/151126/1106499_tn640x.jpg);"></span>
+							<span class="box_articulos_cap">
+								<span class="box_articulos_tit"><b>Pinheiro Braathen firma en Levi un doble doblete en la Copa del Mundo de esquí</b></span>
+								<span class="box_articulos_info fuentepeque">Publicado en <b>Noticias</b>, el 15/11/2026</span>
+							</span>
+						</a>
+					</li>				</ul>
+			<div class="clear"></div><div class="slider_contenido_nav"><a class="slider_contenido_nav_prev" rel="nevarticulos_home1"><i class="imagen"></i></a><a class="slider_contenido_nav_next" rel="nevarticulos_home1"><i class="imagen"></i></a></div></div>		</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class=""><div class=""><div class="boxpad"><div class="box">		<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="" rel-idioma="" rel-anterior="S" rel-num-ant="1"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=1&amp;pastilla=17&amp;vm=1&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div>
+
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+</body></html>

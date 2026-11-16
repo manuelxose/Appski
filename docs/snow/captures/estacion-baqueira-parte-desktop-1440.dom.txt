@@ -1,0 +1,784 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Parte de Nieve de Baqueira Beret - Infonieve.es</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Parte de nieve, datos de apertura de pistas y remontes, espesor y estado actual de la nieve en la estación de esquí de Baqueira Beret">
+<meta name="Keywords" content="baqueira beret, parte, nieve, estado, actual, parte de nieve">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+<link href="https://www.infonieve.es/estacion-esqui/baqueira-beret/parte-de-nieve/" rel="canonical">
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Parte de Nieve de Baqueira Beret - Infonieve.es">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Parte de nieve, datos de apertura de pistas y remontes, espesor y estado actual de la nieve en la estación de esquí de Baqueira Beret">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'/estacion-esqui', 'nivel_ruta2':'/baqueira-beret', 'nivel_ruta3':'/parte-de-nieve' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_pais', '1');
+googletag.pubads().setTargeting('in_cordill', '5');
+googletag.pubads().setTargeting('estacion', '16');
+googletag.pubads().setTargeting('in_zona', 'estacion_parte');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+<script type="text/javascript">
+	var consent_gads_estacion = 16;
+</script>
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611100101/pubads_impl.js" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación" style=""></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l no_tooltip">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2Festacion-esqui%2Fbaqueira-beret%2Fparte-de-nieve%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Parte+de+Nieve+de+Baqueira+Beret&amp;url=https%3A%2F%2Fwww.infonieve.es%2Festacion-esqui%2Fbaqueira-beret%2Fparte-de-nieve%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2Festacion-esqui%2Fbaqueira-beret%2Fparte-de-nieve%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita<div class="botonera botonera_notick center"><a href="javascript:;" onclick="favoritas_add(this);" rel="16">Añadir Baqueira Beret a Favoritas</a></div>								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación" style=""></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="encabezado_bread">
+		<div id="breadcrumb">
+		<div class="wrap">
+			<ol class="breadcrumb">
+			<li class="breadcrumb_home"><a href="./" title="Infonieve.es - Portada"><i class="imagen"></i></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="estaciones-esqui/" itemprop="url" title="Estaciones de esquí alpino de España, Andorra, Pirineo Francés y Portugal"><span itemprop="title">ESTACIONES</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="estaciones-esqui/pais/espana/" itemprop="url" title="Estaciones de esquí alpino de España"><span itemprop="title">ESPAÑA</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="estaciones-esqui/pirineo-catalan/" itemprop="url" title="Estaciones de esquí alpino de Pirineo Catalán"><span itemprop="title">PIRINEO CATALÁN</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="estacion-esqui/baqueira-beret/" itemprop="url" title="Estación de esquí de Baqueira Beret"><span itemprop="title">BAQUEIRA BERET</span></a></li><li><span>PARTE DE NIEVE</span></li>			</ol>
+		</div>
+	</div>
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+
+<div class="encabezado encabezado_bread encabezado_estacion">
+
+	<div class="encabezado_titulo">
+		<div>
+			<h1><span>Baqueira Beret</span></h1>
+			<h3>Parte de Nieve</h3>
+						<div class="encabezado_estacion_fav"><a id="estacion_fav_btn" rel="16" class="redondeado tooltip encabezado_estacion_fav_off" title="Estación favorita" data-tooltip="Añadir a favoritas"><i class="imagen"></i><span>FAV</span></a></div>
+		</div>
+	</div>
+
+	<div id="submenu" class="submenu">
+		<div class="submenu_overflow_none">
+			<nav class="dragscroll">
+				<ul>
+					<li><a href="estacion-esqui/baqueira-beret/" title="Estación de esquí de Baqueira Beret">La estación</a></li>
+					<li class="selec"><a href="estacion-esqui/baqueira-beret/parte-de-nieve/" title="Datos de apertura de pistas y remontes, y estado de la nieve de la estación de esquí de Baqueira Beret">Parte de Nieve</a></li>
+					<li><a href="estacion-esqui/baqueira-beret/webcams/" title="Webcams de la estación de esquí de Baqueira Beret">Webcams</a></li>
+					<li><a href="estacion-esqui/baqueira-beret/meteo/" title="Previsión meteorológica para la estación de esquí de Baqueira Beret">El Tiempo</a></li>
+					<li><a href="estacion-esqui/baqueira-beret/plano-de-pistas/" title="Mapa de pistas de la estación de esquí de Baqueira Beret">Plano de Pistas</a></li>
+					<li><a href="estacion-esqui/baqueira-beret/ficha-tecnica/" title="Ficha técnica de la estación de esquí de Baqueira Beret">Ficha Técnica</a></li>
+				</ul>
+			</nav>
+		<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+	</div>
+
+	<div class="encabezado_roba">
+		<div class="box_banpub">
+			
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+			</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+
+<div class="pad_box">
+	<div class="box">
+		<div class="submenu submenuextra">
+			<div class="submenu_overflow_none">
+				<nav class="dragscroll">
+					<ul>
+						<li class="selec"><a href="estacion-esqui/baqueira-beret/parte-de-nieve/" title="Parte de nieve actual de Baqueira Beret">Parte de nieve actual</a></li>
+						<li><a href="estacion-esqui/baqueira-beret/partes-usuarios/" title="Partes de nieve publicados por los usuarios de Baqueira Beret">Partes de usuarios</a></li>
+						<li><a href="estacion-esqui/baqueira-beret/partes-publicar/" title="Si has estado recientemente en Baqueira Beret, publica tu parte de nieve">Publicar parte</a></li>						<li><a href="estacion-esqui/baqueira-beret/historico-nieve/" title="Datos históricos de nieve y apertura de pistas y remontes de Baqueira Beret">Histórico de apertura y nieve</a></li>
+					</ul>
+				</nav>
+			<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+		</div>
+	</div>
+</div>
+
+<div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_100 box_m_ancho_porc_100"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_est_parteestado">		<div class="">
+			<div class="box_est_parteestado_estado redondeado" style="background-color: #FA8574;">CERRADA</div>
+			<div class="box_est_parteestado_fecha">
+				<div class="fondogrisclaro redondeado">
+					<span class="box_est_parteestado_dia">Lunes 16/11/2026</span>
+					<span class="box_est_parteestado_actu fuentegris fuentemini">Actualizado el 16/11/26 05:45</span>
+					<span class="clear"></span>
+				</div>
+			</div>			<div class="clear"></div>
+		</div>		<div class="pad12 margen_top16 redondeado fondogrisclaro"><strong>Observaciones: </strong>Estación cerrada por fin de temporada.</div>	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila"><div class=""><div class="div_m_fila box_l_ancho_porc_60"><div class=""><div class="box_l_ancho_porc_100 box_m_ancho_porc_100"><div class=""><div class="boxpad"><div class="box">		<div class="pastilla box_est_partedet">
+			<div class="box_est_partedet_fila fuenteazul fuentegrande"><b>ESTADO DE LA NIEVE</b></div>
+			<div class="box_est_partedet_datosnieve box_est_partedet_cont box_est_partedet_bloques4 margen_bot16 redondeado fondogrisclaro">
+                <div>
+					<div class="box_est_partedet_tit"><strong>Espesor Mínimo</strong></div>
+					<div class="box_est_partedet_dato fuentemega"><b class="fuenteazul">-</b><span class="fuentemini">cm</span></div>
+				</div>
+                <div>
+					<div class="box_est_partedet_tit"><strong>Espesor Máximo</strong></div>
+					<div class="box_est_partedet_dato fuentemega"><b class="fuenteazul">-</b><span class="fuentemini">cm</span></div>
+				</div>
+                <div>
+					<div class="box_est_partedet_tit"><strong>Calidad</strong></div>
+					<div class="box_est_partedet_nieve fuentemaxi fuenteazul"><b>-</b></div>
+				</div>
+                <div class="box_est_partedet_aludes">
+					<div class="box_est_partedet_tit"><strong>Peligro de Aludes</strong></div>
+					<div><div class="box_est_partedet_aludesno fuentemini">sin información</div></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box_est_partedet_fila fuenteazul fuentegrande"><b>PISTAS Y REMONTES</b></div>
+			<div class="box_est_partedet_datosgeneral box_est_partedet_cont box_est_partedet_bloques3 margen_bot16 redondeado fondogrisclaro">				<div>
+					<div class="box_est_partedet_tit"><strong>Remontes</strong></div>
+					<div class="dato_circulo ">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/36</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div>
+					<div class="box_est_partedet_tit"><strong>Pistas</strong></div>
+					<div class="dato_circulo ">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/131</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="box_est_partedet_tit"><strong>Kilómetros</strong></div>
+					<div class="dato_circulo ">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/173</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div class="clear"></div>
+			</div>
+			<div class="box_est_partedet_fila fuenteazul fuentegrande"><b>DESGLOSE DE PISTAS POR TIPO</b></div>
+			<div class="box_est_partedet_datospistas box_est_partedet_cont box_est_partedet_bloques5 redondeado fondogrisclaro">				<div>
+					<div class="box_est_partedet_tit"><strong>Verdes</strong></div>
+					<div class="dato_circulo dato_circulo_peque  dato_circulo_verdes">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/6</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div>
+					<div class="box_est_partedet_tit"><strong>Azules</strong></div>
+					<div class="dato_circulo dato_circulo_peque  dato_circulo_azules">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/48</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div>
+					<div class="box_est_partedet_tit"><strong>Rojas</strong></div>
+					<div class="dato_circulo dato_circulo_peque  dato_circulo_rojas">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/55</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div>
+					<div class="box_est_partedet_tit"><strong>Negras</strong></div>
+					<div class="dato_circulo dato_circulo_peque  dato_circulo_negras">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/18</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div>
+					<div class="box_est_partedet_tit"><strong>Itinerarios</strong></div>
+					<div class="dato_circulo dato_circulo_peque  dato_circulo_espec">
+						<div class="dato_circulo_dato">-</div>
+						<div class="dato_circulo_leyenda">/4</div>
+						<div class="dato_circulo_slice">
+							<div class="dato_circulo_bar" style=" -webkit-transform: rotate(0.00deg); -moz-transform: rotate(0.00deg); -ms-transform: rotate(0.00deg); -o-transform: rotate(0.00deg); transform: rotate(0.00deg); "></div>
+							<div class="dato_circulo_fill"></div>
+						</div>
+					</div>
+				</div>				<div class="clear"></div>
+			</div>			<div class="box_est_partedet_fila fuenteazul fuentegrande margen_top16"><b>ACTIVIDADES</b></div>
+			<div class="box_est_partedet_actividades redondeado fondogrisclaro pad12">
+				<div class="table">					<div class="tr">
+						<div class="td tdx1"><i class="imagen" title="Esquí de fondo" style="background-image:url(images/partes/icon_fondo.svg);"></i></div>
+						<div class="td tdx2"><strong>Esquí de fondo</strong></div>
+						<div class="td tdx3"></div>
+						<div class="td tdx4"><i class="imagen" title="Cerrado" style="background-image: url(images/iconos/icon_partenieve_status_0.svg?v=2);"></i></div>
+					</div>				</div>
+			</div>			<div class="box_est_partedet_fila fuenteazul fuentegrande margen_top16"><b>SECTORES</b></div>
+			<div class="box_est_partedet_actividades redondeado fondogrisclaro pad12">
+				<div class="table">					<div class="tr">
+						<div class="td tdx1"><i class="imagen" title="Baqueira" style="background-image:url(images/partes/icon_mountain.svg);"></i></div>
+						<div class="td tdx2"><strong>Baqueira</strong></div>
+						<div class="td tdx3"></div>
+						<div class="td tdx4"><i class="imagen" title="Cerrado" style="background-image: url(images/iconos/icon_partenieve_status_0.svg?v=2);"></i></div>
+					</div>					<div class="tr">
+						<div class="td tdx1"><i class="imagen" title="Beret" style="background-image:url(images/partes/icon_mountain.svg);"></i></div>
+						<div class="td tdx2"><strong>Beret</strong></div>
+						<div class="td tdx3"></div>
+						<div class="td tdx4"><i class="imagen" title="Cerrado" style="background-image: url(images/iconos/icon_partenieve_status_0.svg?v=2);"></i></div>
+					</div>					<div class="tr">
+						<div class="td tdx1"><i class="imagen" title="Bonaigua" style="background-image:url(images/partes/icon_mountain.svg);"></i></div>
+						<div class="td tdx2"><strong>Bonaigua</strong></div>
+						<div class="td tdx3"></div>
+						<div class="td tdx4"><i class="imagen" title="Cerrado" style="background-image: url(images/iconos/icon_partenieve_status_0.svg?v=2);"></i></div>
+					</div>					<div class="tr">
+						<div class="td tdx1"><i class="imagen" title="Baciver" style="background-image:url(images/partes/icon_mountain.svg);"></i></div>
+						<div class="td tdx2"><strong>Baciver</strong></div>
+						<div class="td tdx3"></div>
+						<div class="td tdx4"><i class="imagen" title="Cerrado" style="background-image: url(images/iconos/icon_partenieve_status_0.svg?v=2);"></i></div>
+					</div>				</div>
+			</div>		</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_100 box_l_alto_fijo_100 box_m_ancho_porc_100 box_m_alto_fijo_100"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_est_meteo">
+		<div class="box_est_meteo_datos">			<span>
+				<b>Hoy</b><br>
+				<i class="imagen" style="background-image:url(images/meteo/svg-white/d2000.svg);"></i><br>
+				-4º / 11º
+			</span>			<span>
+				<b>Mañana</b><br>
+				<i class="imagen" style="background-image:url(images/meteo/svg-white/d3110.svg);"></i><br>
+				0º / 12º
+			</span>			<span>
+				<b>Miércoles</b><br>
+				<i class="imagen" style="background-image:url(images/meteo/svg-white/d2000.svg);"></i><br>
+				-1º / 9º
+			</span>			<div class="clear"></div>
+		</div>
+		<div class="box_est_meteo_link"><a href="estacion-esqui/baqueira-beret/meteo/" title="Previsión del tiempo para los próximos días en Baqueira Beret"><span>PREVISIÓN METEO</span></a></div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_m_fila box_l_ancho_porc_40"><div class=""><div class="box_l_ancho_porc_100 box_l_alto_fijo_300 box_m_ancho_var_roba_right box_m_alto_fijo_roba"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_slidewebcams box_slidewebcams_contit">
+		<div class="box_slidewebcams_tit"><a href="estacion-esqui/baqueira-beret/webcams/" title="Ver todas las webcams de Baqueira Beret">WEBCAMS EN DIRECTO (21)</a></div>
+		<div class="box_slidewebcams_cont">
+			<div id="wslide_ficha_parte" class="webcams_slider webcams_slider_mono ">
+				<ul>					<li>
+						<a href="estacion-esqui/baqueira-beret/webcams/" title="Webcams de Baqueira Beret">
+							<img src="https://www.infonieve.es/webcams/baqueira-bonaigua-port_2026-11-16-14-00-383.jpg" class="webcam" loading="lazy" rel="wslide_ficha_parte_wc_3211" alt="Webcam en Bonaigua - Cap del Port" onerror="webcam_def(this);">
+							<span id="wslide_ficha_parte_wc_3211" class="webcam webcams_slider_img" style="background-image:url(https://www.infonieve.es/webcams/baqueira-bonaigua-port_2026-11-16-14-00-383.jpg);" title="Webcam en Bonaigua - Cap del Port"></span>
+							<span class="webcams_slider_caption">Bonaigua - Cap del Port</span>
+						</a>
+						<span class="webcams_slider_author"><a href="http://www.roundshot.com/" target="_blank" class="track_roundshot-com_ExternalLink_baqueira-beret">© roundshot.com</a></span>
+					</li>				</ul>
+			</div>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_100"><div class=""><div class="box_l_ancho_fijo_roba_left box_l_alto_fijo_roba box_m_ancho_fijo_roba_right box_m_alto_fijo_roba"><div class=""><div class="boxpad"><div class="box"><div class="box_banpub">
+		<!-- /1020536/Infonieve_robapaginas_secundario -->
+		<div id="div-banpub-Infonieve_robapaginas_secundario">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_secundario'); });
+		</script>
+		</div>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_var_roba_left box_l_alto_fijo_roba box_m_ancho_porc_100 box_m_alto_fijo_100"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_est_fechas">
+    	<div class="box_pastilla_tit center">FECHAS TEMPORADA</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">
+				<div class="box_est_fechas_img"><i class="imagen"></i></div>
+				<div class="box_est_fechas_cont">
+					<div class="box_est_fechas_txt"><strong>APERTURA</strong><br>28/11/2026<br><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i><span class="fuentepeque fuente10 fuente_em">Apertura sin confirmar</span></div>
+					<div class="box_est_fechas_txt"><strong>CIERRE</strong><br>04/04/2027</div>
+				</div>
+				<div class="clear"></div>
+            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila"><div class=""><div class="div_m_fila box_l_ancho_porc_60"><div class=""><div class="box_l_ancho_porc_100 box_l_alto_fijo_250 box_m_ancho_porc_100 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_partes">
+    	<div class="box_pastilla_tit">
+			<span class="box_partes_btn">
+				<a href="estacion-esqui/baqueira-beret/partes-publicar/" class="tooltip" title="Publicar tu propio parte de nieve de Baqueira Beret" data-tooltip="publicar parte"><i class="imagen box_partes_btn_add"></i></a>
+				<a href="estacion-esqui/baqueira-beret/partes-usuarios/" class="tooltip" title="Partes de nieve de los usuarios de la estación de esquí de Baqueira Beret" data-tooltip="ver todos"><i class="imagen box_partes_btn_all"></i></a>
+			</span>
+			PARTES DE NIEVE DE USUARIOS
+		</div>
+        <div class="box_pastilla_cont">
+        	<div class="box_pastilla">				<div class="box_partes_noparte">
+					<div><b>No hay partes de nieve recientes publicados por los usuarios</b></div>					<div>Si has estado recientemente en Baqueira Beret,</div>
+					<div><a href="estacion-esqui/baqueira-beret/partes-publicar/" class="redondeado" title="Si has estado recientemente en Baqueira Beret, publica tu parte de nieve">PUBLICA TU PARTE DE NIEVE</a></div>				</div>            </div>
+        </div>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_m_fila box_l_ancho_porc_40"><div class=""><div class="box_l_ancho_porc_50 box_l_alto_fijo_250 box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_contadores box_contadores_estacion">
+		<ul>			<li class="">
+				<a href="estacion-esqui/baqueira-beret/webcams/" title="Webcams de la estación de esquí de Baqueira Beret">
+					<span class="box_contadores_img"><i class="imagen" style="background-image:url(images/iconos/icono_cam_dark.svg);"></i></span>
+					<span class="box_contadores_tit"><strong>WEBCAMS</strong></span>
+				</a>
+			</li>			<li class="box_contadores_noborde_r">
+				<a href="estacion-esqui/baqueira-beret/meteo/" title="Previsión del tiempo para la estación de esquí de Baqueira Beret">
+					<span class="box_contadores_img"><i class="imagen" style="background-image:url(images/iconos/icono_meteo_dark.svg);"></i></span>
+					<span class="box_contadores_tit"><strong>PREVISIÓN METEO</strong></span>
+				</a>
+			</li>			<li class="box_contadores_noborde_b">
+				<a href="estacion-esqui/baqueira-beret/ficha-tecnica/" title="Datos técnicos de la estación de esquí de Baqueira Beret">
+					<span class="box_contadores_img"><i class="imagen" style="background-image:url(images/iconos/icono_ficha_dark.svg);"></i></span>
+					<span class="box_contadores_tit"><strong>FICHA TÉCNICA</strong></span>
+				</a>
+			</li>			<li class="box_contadores_noborde_b box_contadores_noborde_r">
+				<a href="estacion-esqui/baqueira-beret/plano-de-pistas/" title="Mapa de pistas de la estación de esquí de Baqueira Beret">
+					<span class="box_contadores_img"><i class="imagen" style="background-image:url(images/iconos/icono_plano_dark.svg);"></i></span>
+					<span class="box_contadores_tit"><strong>PLANO DE PISTAS</strong></span>
+				</a>
+			</li>		</ul>
+	</div></div></div><div class="clear"></div></div></div><div class="box_l_ancho_porc_50 box_l_alto_fijo_250 box_m_ancho_porc_50 box_m_alto_fijo_250"><div class=""><div class="boxpad"><div class="box">	<div class="pastilla box_est_publicar">
+		<a href="estacion-esqui/baqueira-beret/partes-publicar/" title="Publica tu valoración del estado de las pistas y la nieve.">
+			<span class="box_est_publicar_tit">¿HAS ESTADO RECIENTEMENTE EN BAQUEIRA BERET?</span>
+			<span class="box_est_publicar_img"><i class="imagen"></i></span>
+			<span class="box_est_publicar_txt">Comenta aquí cómo estaba la estación</span>
+		</a>
+	</div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div><div class="div_l_fila div_m_fila"><div class=""><div class="box_l_ancho_porc_100 box_m_ancho_porc_100"><div class=""><div class="boxpad"><div class="box">		<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="16" rel-idioma="" rel-anterior="L" rel-num-ant="3"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=3&amp;pastilla=17&amp;vm=0&amp;estaciones=16&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div></div></div><div class="clear"></div></div></div><div class="clear"></div></div></div>
+
+
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+</body></html>
