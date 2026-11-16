@@ -9,8 +9,10 @@ cualquier entrega pueda validarse de forma determinista y content-bound.
 # 1. Validar el manifiesto
 node $DSH_HOME/engine-04/tools/qa-evidence.mjs manifest-check --worktree .
 
-# 2. Ejecutar todas las etapas y escribir la evidencia fuera del árbol de trabajo
-node $DSH_HOME/engine-04/tools/qa-evidence.mjs verify --worktree . --baseline master --out <evidencia>.json
+# 2. Ejecutar todas las etapas y escribir la evidencia fuera del árbol de trabajo.
+#    El worktree DEBE estar registrado con ENGINE-03 (lifecycle record) o el gate
+#    no puede establecer identidad de repositorio.
+node $DSH_HOME/engine-04/tools/qa-evidence.mjs verify --worktree <worktree> --workspace-root <workspace> --baseline <commit> --out <evidencia>.json
 
 # 3. Auditar y decidir el gate
 node $DSH_HOME/engine-04/tools/qa-evidence.mjs audit --evidence <evidencia>.json
@@ -20,6 +22,23 @@ node $DSH_HOME/engine-04/tools/qa-evidence.mjs gate --evidence <evidencia>.json
 El gate devuelve `PASS` sólo si cada etapa requerida se ejecutó de verdad (argv, cwd,
 exit code y duración registrados), terminó con 0, el árbol no cambió durante la
 ejecución y la evidencia de revisión sigue casando con los bytes entregados.
+
+### Requisitos de contexto del gate (medidos, no supuestos)
+
+1. **Worktree registrado en ENGINE-03.** Sin `record` de ciclo de vida el gate responde
+   `BLOCKED` con `trusted-repository-context`; el registro lo crea
+   `parallel-dev.mjs create`/`adopt`, no un fichero a mano.
+2. **`--baseline` igual al `baseline` del registro**, si no aparece la contradicción
+   `trusted-baseline`. Para verificar el cambio real entregado, el registro debe apuntar
+   al commit base de la entrega.
+3. **`--team <team.json>`** con el estado de AgentTeams; sin él, `team-required` bloquea
+   aunque todas las etapas pasen.
+4. **Escaneo completo.** El motor recorre el worktree hasta un tope de 2000 artefactos
+   (excluye `.git`, `node_modules`, `dist`, `coverage`, `.nx` si está en la lista de
+   segmentos). Un worktree con cachés locales pesadas produce `complete-scan` y el gate
+   queda `BLOCKED`: no es un fallo del código, es scope parcial.
+5. **`dist/` y `node_modules/` presentes en el worktree verificado**: las etapas
+   `integration-*` arrancan el bundle construido y `typecheck` usa `node_modules`.
 
 ## Etapas declaradas
 

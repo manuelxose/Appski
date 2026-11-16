@@ -5,17 +5,6 @@
   "stack": "node",
   "stages": [
     {
-      "id": "confined-diagnostics",
-      "kind": "static-analysis",
-      "required": false,
-      "timeoutMs": 300000,
-      "description": "DIAGNOSTICO (no decide la entrega): cadena completa del sandbox -> codec, bundle y evidencia.",
-      "argv": [
-        "node",
-        "scripts/snow02/confined-identity.mjs"
-      ]
-    },
-    {
       "id": "typecheck",
       "kind": "typecheck",
       "required": true,
