@@ -1,6 +1,6 @@
 {
   "driver": "integration-http",
-  "ranAt": "2026-11-16T19:06:54.279Z",
+  "ranAt": "2026-11-16T19:39:37.757Z",
   "total": 60,
   "passed": 60,
   "failed": 0,
@@ -11,7 +11,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.911Z\",\"updatedAt\":\"2026-11-16T19:06:47.911Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.458Z\",\"updatedAt\":\"2026-11-16T19:39:31.458Z\",\"s"
       }
     },
     {
@@ -24,7 +24,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.924Z\",\"updatedAt\":\"2026-11-16T19:06:47.924Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.469Z\",\"updatedAt\":\"2026-11-16T19:39:31.469Z\",\"s"
       }
     },
     {
@@ -50,7 +50,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T19:06:47.959Z\",\"updatedAt\":null,"
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T19:39:31.490Z\",\"updatedAt\":null,"
       }
     },
     {
@@ -63,7 +63,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T19:06:47.968Z\",\"updatedAt\":null,\"st"
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-covered\",\"provenance\":{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T19:39:31.500Z\",\"updatedAt\":null,\"st"
       }
     },
     {
@@ -76,7 +76,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"blocked\",\"reason\":\"license-prohibits\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:06:47.977Z\",\"updatedA"
+        "body": "{\"status\":\"blocked\",\"reason\":\"license-prohibits\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:39:31.504Z\",\"updatedA"
       }
     },
     {
@@ -89,7 +89,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"no_data\",\"reason\":\"not-yet-published\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:06:47.982Z\",\"updatedA"
+        "body": "{\"status\":\"no_data\",\"reason\":\"not-yet-published\",\"provenance\":{\"source\":\"editorial-report\",\"observedAt\":\"2026-11-16T19:39:31.506Z\",\"updatedA"
       }
     },
     {
@@ -102,7 +102,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.992Z\",\"updatedAt"
+        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.513Z\",\"updatedAt"
       }
     },
     {
@@ -115,7 +115,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:47.997Z\",\"updatedAt"
+        "body": "{\"status\":\"no_data\",\"reason\":\"outside-season\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.517Z\",\"updatedAt"
       }
     },
     {
@@ -128,7 +128,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.002Z\",\"updatedAt\":\"2026-11-16T19:06:48.002Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.522Z\",\"updatedAt\":\"2026-11-16T19:39:31.522Z\",\"s"
       }
     },
     {
@@ -141,7 +141,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.010Z\",\"updatedAt\":\"2026-11-16T19:06:48.010Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.530Z\",\"updatedAt\":\"2026-11-16T19:39:31.530Z\",\"s"
       }
     },
     {
@@ -154,7 +154,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.022Z\",\"updatedAt\":\"2026-11-16T19:06:48.022Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.537Z\",\"updatedAt\":\"2026-11-16T19:39:31.537Z\",\"s"
       }
     },
     {
@@ -167,7 +167,7 @@
       "ok": true,
       "detail": {
         "status": 200,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.030Z\",\"updatedAt\":\"2026-11-16T19:06:48.030Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.547Z\",\"updatedAt\":\"2026-11-16T19:39:31.547Z\",\"s"
       }
     },
     {
@@ -180,7 +180,7 @@
       "ok": true,
       "detail": {
         "status": 201,
-        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:06:48.061Z\",\"updatedAt\":\"2026-11-16T19:06:48.061Z\",\"s"
+        "body": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:39:31.575Z\",\"updatedAt\":\"2026-11-16T19:39:31.575Z\",\"s"
       }
     },
     {

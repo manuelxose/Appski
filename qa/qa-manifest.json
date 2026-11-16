@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "engine-04-manifest/1",
+  "id": "appski-web-ssr-snow",
+  "description": "Verificación reproducible del monolito Nx/Angular-SSR y del módulo de nieve (web-ssr/src/snow). Cada etapa es un argv; no hay shell ni interpolación. Las etapas de test se enumeran con nombres de fichero explícitos (node --test no acepta directorios aquí) y usan --test-isolation=none porque el aislamiento por proceso abre stdio pipeado, denegado por el sandbox de Windows.",
+  "stack": "node",
+  "stages": [
+    {
+      "id": "typecheck",
+      "kind": "typecheck",
+      "required": true,
+      "timeoutMs": 300000,
+      "argv": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "web-ssr/tsconfig.app.json",
+        "--noEmit"
+      ]
+    },
+    {
+      "id": "schema-invariants",
+      "kind": "contract",
+      "required": true,
+      "timeoutMs": 120000,
+      "argv": ["node", "scripts/snow/check-schema.mjs"]
+    },
+    {
+      "id": "unit-snow",
+      "kind": "unit",
+      "required": true,
+      "timeoutMs": 600000,
+      "argv": [
+        "node",
+        "--experimental-transform-types",
+        "--import",
+        "./scripts/snow/ts-loader.mjs",
+        "--test",
+        "--test-isolation=none",
+        "web-ssr/src/snow/tests/a11y.test.ts",
+        "web-ssr/src/snow/tests/admin-auth.test.ts",
+        "web-ssr/src/snow/tests/bootstrap.test.ts",
+        "web-ssr/src/snow/tests/chains-and-time.test.ts",
+        "web-ssr/src/snow/tests/degradation.test.ts",
+        "web-ssr/src/snow/tests/editorial-payload.test.ts",
+        "web-ssr/src/snow/tests/editorial.test.ts",
+        "web-ssr/src/snow/tests/execution.test.ts",
+        "web-ssr/src/snow/tests/http-contract.test.ts",
+        "web-ssr/src/snow/tests/leak-guard.test.ts",
+        "web-ssr/src/snow/tests/not-found.test.ts",
+        "web-ssr/src/snow/tests/parte-futuro.test.ts",
+        "web-ssr/src/snow/tests/security-hardening.test.ts",
+        "web-ssr/src/snow/tests/store-durability.test.ts",
+        "web-ssr/src/snow/tests/store-migration.test.ts"
+      ]
+    },
+    {
+      "id": "build-production",
+      "kind": "build",
+      "required": true,
+      "timeoutMs": 900000,
+      "argv": [
+        "npx",
+        "nx",
+        "build",
+        "web-ssr",
+        "--configuration=production",
+        "--skip-nx-cache"
+      ]
+    },
+    {
+      "id": "integration-http",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "scripts/snow02/integration-http.mjs"]
+    },
+    {
+      "id": "persistence-restart",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "scripts/snow02/persistence-restart.mjs"]
+    },
+    {
+      "id": "adversarial",
+      "kind": "regression",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "scripts/snow02/adversarial.mjs"]
+    },
+    {
+      "id": "security-http",
+      "kind": "security",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "scripts/snow02/security-http-verify.mjs"]
+    },
+    {
+      "id": "captain-http",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "scripts/snow02/captain-http-verify.mjs"]
+    },
+    {
+      "id": "reviewer-security",
+      "kind": "security",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": ["node", "docs/snow/snow02-evidence/reviewer-security-bundle.mjs"]
+    }
+  ]
+}

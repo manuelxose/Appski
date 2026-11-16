@@ -72,10 +72,10 @@ export async function startBundle({ dataDir, port, token = CANARY_TOKEN, timeout
   for (const k of ['AEMET_API_KEY', 'METEOFRANCE_API_KEY', 'C3S_API_KEY', 'CLMS_API_KEY', 'PROTOMAPS_BASE_URL']) {
     delete env[k];
   }
-  const child = spawn(process.execPath, [bundle], { cwd: ROOT, env, stdio: ['ignore', 'pipe', 'pipe'] });
-  let log = '';
-  child.stdout.on('data', (d) => (log += String(d)));
-  child.stderr.on('data', (d) => (log += String(d)));
+  // stdio 'inherit': los drivers se invocan también desde un runner confined cuyo
+  // spawn con pipes puede denegarse; heredar los descriptores del padre funciona.
+  const child = spawn(process.execPath, [bundle], { cwd: ROOT, env, stdio: 'inherit' });
+  const log = '(stdio heredado: la salida del bundle va a la consola del runner)';
 
   const base = `http://127.0.0.1:${chosen}`;
   const deadline = Date.now() + timeoutMs;
