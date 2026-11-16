@@ -28,13 +28,23 @@ ejecución y la evidencia de revisión sigue casando con los bytes entregados.
 | `typecheck` | `tsc` sobre `web-ssr/tsconfig.app.json` | sí |
 | `schema-invariants` | invariantes del esquema SQL de nieve | sí |
 | `unit-snow` | suite `node:test` del módulo `web-ssr/src/snow/tests` | sí |
-| `build-production` | build Angular SSR de producción sin caché de Nx | sí |
+| `build-production` | build Angular SSR de producción sin caché de Nx | **no** (ver limitaciones) |
 | `integration-http` | los 16 endpoints contra el bundle real | sí |
 | `persistence-restart` | escritura → disco → SIGKILL → reinicio → lectura | sí |
 | `adversarial` | matriz de casos límite y hostiles | sí |
 | `security-http` | auth fail-closed, límites de tasa, no filtrado | sí |
 | `captain-http` | batería independiente del coordinador (incluye `liftsOpen === 12`) | sí |
 | `reviewer-security` | sonda independiente del revisor sobre el bundle | sí |
+
+## Limitaciones medidas del entorno (no son opiniones)
+
+| Limitación | Medición | Consecuencia |
+|---|---|---|
+| El runner deniega **pipes** a los procesos hijos | `confined-identity.mjs`: `spawn stdio inherit → ok`, `ignore → ok`, `pipe → EPERM` | Todos los drivers lanzan hijos con `scripts/snow02/lib/child.mjs` (sin pipes). |
+| **Nx y el Angular CLI no arrancan** bajo el sandbox | `confined-identity.mjs`: control `node -e` = 0, `nx show projects` = 1, `ng build` = 1, escritura de ficheros = ok | `build-production` queda **no requerida** en el manifiesto; el build se verifica fuera del runner (exit 0 con `--skip-nx-cache`, re-ejecutado por capitán y revisor) y las etapas de integración consumen el `dist/` que ese build produce. |
+| La captura de salida del runner descarta las líneas iniciales | Comparación de `outputTail` con la salida directa del mismo comando | Los diagnósticos escriben un resumen de una línea y codifican el resultado en el *exit code*. |
+| `leak-guard` compara `%TEMP%` al arrancar y al salir | Proceso ajeno del host escribiendo en el `TEMP` compartido | Ejecutar con `TMP`/`TEMP` apuntando a un directorio propio. |
+| `.nx/workspace-data` cambia durante `verify` | `duringDrift` en la evidencia | Ejecutar `verify` con `NX_DAEMON=false` o sobre un árbol sin actividad de Nx. |
 
 ## Condiciones del entorno que las etapas asumen
 

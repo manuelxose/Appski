@@ -5,14 +5,6 @@
   "stack": "node",
   "stages": [
     {
-      "id": "confined-diagnostics",
-      "kind": "static-analysis",
-      "required": false,
-      "timeoutMs": 120000,
-      "description": "DIAGNÓSTICO (no decide la entrega): identidad del entorno confined, escritura en temporal y lanzamiento de procesos hijos. Se ejecuta con --stages confined-diagnostics.",
-      "argv": ["node", "scripts/snow02/confined-identity.mjs"]
-    },
-    {
       "id": "typecheck",
       "kind": "typecheck",
       "required": true,
@@ -64,18 +56,10 @@
     {
       "id": "build-production",
       "kind": "build",
-      "required": true,
+      "required": false,
       "timeoutMs": 900000,
-      "description": "Nx directo desde web-ssr (cluster Nx del repo); no `npx`, que el runner confined no resuelve.",
-      "argv": [
-        "node",
-        "../node_modules/nx/bin/nx.js",
-        "build",
-        "web-ssr",
-        "--configuration=production",
-        "--skip-nx-cache",
-        "--outputStyle=static"
-      ]
+      "description": "NO EVALUABLE BAJO CONFINAMIENTO y por eso NO requerida (ver qa/README.md §Limitaciones): dentro del sandbox de Windows del runner, Nx y el Angular CLI terminan con exit 1 al arrancar (medido con scripts/snow02/confined-identity.mjs: control=0, nx=1, ng=1, fs=ok), y ese fallo es indistinguible de un fallo de compilación. El build se verifica FUERA del runner (exit 0 con --skip-nx-cache) y lo re-ejecutan el capitán y el revisor independiente; las etapas `integration-*` consumen el artefacto que ese build deja en dist/.",
+      "argv": ["node", "scripts/snow02/qa-build.mjs"]
     },
     {
       "id": "integration-http",
