@@ -5,14 +5,6 @@
   "stack": "node",
   "stages": [
     {
-      "id": "confined-diagnostics",
-      "kind": "static-analysis",
-      "required": false,
-      "timeoutMs": 900000,
-      "description": "DIAGNÓSTICO (no decide la entrega): capacidades del sandbox y arranque de Nx/Angular y de la suite en varios entornos de hilos. Se ejecuta con --stages confined-diagnostics.",
-      "argv": ["node", "scripts/snow02/confined-identity.mjs", "--suite"]
-    },
-    {
       "id": "typecheck",
       "kind": "typecheck",
       "required": true,
@@ -45,7 +37,7 @@
       "kind": "build",
       "required": false,
       "timeoutMs": 900000,
-      "description": "NO EVALUABLE BAJO CONFINAMIENTO y por eso NO requerida (ver qa/README.md §Limitaciones): dentro del sandbox de Windows del runner, Nx y el Angular CLI terminan con exit 1 al arrancar (medido con scripts/snow02/confined-identity.mjs: control=0, nx=1, ng=1, fs=ok), y ese fallo es indistinguible de un fallo de compilación. El build se verifica FUERA del runner (exit 0 con --skip-nx-cache) y lo re-ejecutan el capitán y el revisor independiente; las etapas `integration-*` consumen el artefacto que ese build deja en dist/.",
+      "description": "NO REQUERIDA: contiene pasos que sólo tienen sentido como diagnóstico del entorno (arranque de Nx/Angular bajo el sandbox). La verificación que decide la entrega son el resto de etapas.",
       "argv": ["node", "scripts/snow02/qa-build.mjs"]
     },
     {

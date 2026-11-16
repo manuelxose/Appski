@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T19:53:45.816Z",
+  "generatedAt": "2026-11-16T20:04:57.216Z",
   "server": "dist/web-ssr/server/server.mjs",
   "total": 68,
   "passed": 68,
@@ -18,7 +18,7 @@
     {
       "name": "GET /v1/stations con procedencia completa",
       "ok": true,
-      "detail": "{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:53:44.948Z\",\"updatedAt\":\"2026-11-16T19:53:44.948Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshne"
+      "detail": "{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T20:04:56.464Z\",\"updatedAt\":\"2026-11-16T20:04:56.464Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshne"
     },
     {
       "name": "GET /v1/stations filtrado/ordenado/paginado => 200",
@@ -98,7 +98,7 @@
     {
       "name": "/forecast con procedencia",
       "ok": true,
-      "detail": "{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T19:53:45.076Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"all"
+      "detail": "{\"source\":\"copernicus-c3s\",\"observedAt\":\"2026-11-16T20:04:56.548Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"all"
     },
     {
       "name": "GET /alerts existe => 200",
@@ -118,7 +118,7 @@
     {
       "name": "/alerts con procedencia",
       "ok": true,
-      "detail": "{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T19:53:45.092Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"allowe"
+      "detail": "{\"source\":\"meteofrance\",\"observedAt\":\"2026-11-16T20:04:56.559Z\",\"updatedAt\":null,\"status\":\"live\",\"licenseStatus\":\"allowe"
     },
     {
       "name": "GET /webcams => 200 blocked/license",
@@ -208,7 +208,7 @@
     {
       "name": "GET /config con token => 200 y estado de fuentes",
       "ok": true,
-      "detail": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:53:45.263Z\",\"updatedAt\":\"2026-11-16T19:53:45.263Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
+      "detail": "{\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T20:04:56.708Z\",\"updatedAt\":\"2026-11-16T20:04:56.708Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
     },
     {
       "name": "el token NO aparece en /config",
@@ -278,12 +278,12 @@
     {
       "name": "POST /admin/reports autorizado => 201",
       "ok": true,
-      "detail": "status=201 body={\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:53:45.445Z\",\"updatedAt\":\"2026-11-16T19:53:45.445Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
+      "detail": "status=201 body={\"status\":\"ok\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T20:04:56.836Z\",\"updatedAt\":\"2026-11-16T20:04:56.836Z\",\"status\":\"live\",\"licenseStatus\":\"allowed\",\"freshness\":0,\"autho"
     },
     {
       "name": "el 201 devuelve el parte con id interno",
       "ok": true,
-      "detail": "id=f62c1234-6670-4552-b618-de3d2b1f84d5"
+      "detail": "id=e117e862-1810-4800-91dc-61de565bb200"
     },
     {
       "name": "el parte está en DISCO tras la escritura",
@@ -303,7 +303,7 @@
     {
       "name": "tras reinicio: el parte sigue en la lista",
       "ok": true,
-      "detail": "ids=f62c1234-6670-4552-b618-de3d2b1f84d5"
+      "detail": "ids=e117e862-1810-4800-91dc-61de565bb200"
     },
     {
       "name": "tras reinicio: /report => 200 ok",
@@ -318,7 +318,7 @@
     {
       "name": "F1: atribución completa tras reinicio",
       "ok": true,
-      "detail": "{\"author\":\"Servicio de nieve Baqueira\",\"sourceUrl\":\"https://www.baqueira.es/parte-de-nieve\",\"capturedAt\":\"2026-11-16T19:53:45.437Z\",\"confidence\":1}"
+      "detail": "{\"author\":\"Servicio de nieve Baqueira\",\"sourceUrl\":\"https://www.baqueira.es/parte-de-nieve\",\"capturedAt\":\"2026-11-16T20:04:56.829Z\",\"confidence\":1}"
     },
     {
       "name": "null no convertido en 0: enviado=60/90/120 se conserva y ausente newSnow24hCm es null",
@@ -328,7 +328,7 @@
     {
       "name": "tras reinicio: ranking nieve usa el dato escrito",
       "ok": true,
-      "detail": "[{\"stationSlug\":\"baqueira-beret\",\"baseCm\":60,\"observedAt\":\"2026-11-16T08:00:00.000Z\",\"updatedAt\":\"2026-11-16T19:53:45.437Z\",\"status\":\"live\"}]"
+      "detail": "[{\"stationSlug\":\"baqueira-beret\",\"baseCm\":60,\"observedAt\":\"2026-11-16T08:00:00.000Z\",\"updatedAt\":\"2026-11-16T20:04:56.829Z\",\"status\":\"live\"}]"
     },
     {
       "name": "PUT /admin/stations parcial => 400 declarando reemplazo total",

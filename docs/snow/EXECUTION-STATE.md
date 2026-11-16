@@ -49,7 +49,8 @@
 | Radar e histórico de webcam | Sin endpoint en v1 ⇒ `unavailable` explícito en el cliente | PENDIENTE |
 | Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
 | Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
-| **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
+| **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) + commits de QA | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
+| **Gate ENGINE-04** | `qa/qa-manifest.json` declarado (10 etapas) + `qa/README.md` con las limitaciones medidas | **VERIFICAR en curso** — ver §7 |
 | Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
 
 ---
