@@ -11,13 +11,15 @@
 |---|---|
 | Commit base | `9b503604f802abc4c373fee8b7ba36181e31e0df` (HEAD de `master`) |
 | Rama actual | `feat/snow-02-operational-backend` |
-| HEAD de la rama | `baec0c865e44e08590e4209eb56d87539b847821` |
-| Commits por delante de `master` | 4 (`7277cc8` núcleo snow · `f033696` conexión SSR · `02b82e1` docs/REA · `baec0c8` gitignore) — trabajo del hito anterior |
-| **Commits creados en SNOW-02** | **0** |
-| Cambios SNOW-02 sin commit | 36 modificados + untracked (`docs/snow/`, `scripts/snow02/`, `web-ssr/src/snow/store/json-store/*`, `web-ssr/src/snow/models/persistence.ts`, `web-ssr/src/snow/server/{query,station-query,snow.errors}.ts`, `web-ssr/src/snow/tests/*`, `web-ssr/src/snow/cache/rate-limit.ts`, `web-ssr/src/app/snow/client/*`, data services de stations-list/station-detail/weather) |
+| HEAD de la rama (pre-commit del hito) | `baec0c865e44e08590e4209eb56d87539b847821` |
+| Commits por delante de `master` (hito anterior) | 4 (`7277cc8` núcleo snow · `f033696` conexión SSR · `02b82e1` docs/REA · `baec0c8` gitignore) |
+| **Commits creados en SNOW-02** | **2** — `b7f6484` (implementación completa del hito) y `5159283` (evidencia HTTP post-commit) |
+| Árbol tras el commit | **limpio** (`git status --porcelain` vacío); `data/` y `.agent-teams/` ignorados por `.gitignore:65-66` |
 
-> **Pendiente de entrega:** todo el hito vive en el árbol de trabajo sin commit. Debe
-> sellarse en un commit con identidad de contenido antes de cualquier integración o merge.
+> **Sellado y re-verificado:** tras el commit se re-ejecutó el driver del capitán contra
+> el bundle reconstruido → `checks=68 passed=68 failed=0`. La evidencia cruda de esa
+> pasada quedó en `docs/snow/snow02-evidence/captain-http-verify.json` (commit `5159283`).
+> El commit es **local**: no hay push ni merge.
 
 ---
 
@@ -47,7 +49,7 @@
 | Radar e histórico de webcam | Sin endpoint en v1 ⇒ `unavailable` explícito en el cliente | PENDIENTE |
 | Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
 | Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
-| **Commit del trabajo SNOW-02** | Todo en árbol de trabajo | **PENDIENTE (bloquea integración)** |
+| **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
 | Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
 
 ---
@@ -83,17 +85,18 @@
 **MERGE A `master`: NO AUTORIZADO.**
 
 - No hay merge, fast-forward, tag ni push realizados por SNOW-02.
-- La rama `feat/snow-02-operational-backend` está 4 commits por delante de `master` (hito
-  anterior); el trabajo de SNOW-02 está **sin commit** en el árbol de trabajo.
+- La rama `feat/snow-02-operational-backend` está 6 commits por delante de `master`
+  (4 del hito anterior + `b7f6484` y `5159283` de SNOW-02), sin push.
 - La revisión independiente (t7) emitió **PASS**, pero un PASS de revisión **no** autoriza
   el merge (ENGINE-01 §4, ENGINE-02 §6).
-- El merge a `master` requiere **autorización explícita del usuario**, y además exige antes
-  sellar el trabajo SNOW-02 en un commit con identidad de contenido.
+- El merge a `master` requiere **autorización explícita del usuario**.
 
 ### Condiciones antes de autorizar un merge
 
-1. **Commit del trabajo SNOW-02** con identidad de contenido (hoy pendiente).
+1. ~~Commit del trabajo SNOW-02 con identidad de contenido.~~ **HECHO** (`b7f6484`, `5159283`).
 2. Re-ejecución de `tsc`, `check-schema`, `nx build --skip-nx-cache`, suite completa y los
-   4 drivers desde ese commit (gate determinista ENGINE-04).
+   drivers desde ese commit (gate determinista ENGINE-04). **Parcial del capitán:** tras el
+   commit se re-ejecutó `captain-http-verify` (68/68). El gate completo ENGINE-04 (snapshot
+   `qa/qa-manifest.json` + `qa_gate`) **no** se ha ejecutado: el repo no declara manifiesto.
 3. Decisión de producto sobre los mocks restantes (home/planner/blog/lodging/rental/
    premium/shop-detail/account/admin) — declarados fuera de alcance nieve v1.
