@@ -5,8 +5,9 @@ import {
   OnInit,
   inject,
 } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { ActivatedRoute, Params } from "@angular/router";
+import type { StationDetailDto } from "../../snow/models/dto";
 import { SiteHeaderComponent } from "../../components/site-header/site-header.component";
 import { SiteFooterComponent } from "../../components/site-footer/site-footer.component";
 import { StationHeroComponent } from "./components/station-hero/station-hero.component";
@@ -20,7 +21,10 @@ import {
   DailyForecast,
   StationInfo,
 } from "./models/station-detail.models";
-import { StationDetailDataService } from "./services/station-detail.data.service";
+import {
+  StationDetailDataService,
+  type StationReportState,
+} from "./services/station-detail.data.service";
 
 @Component({
   selector: "app-station-detail",
@@ -30,6 +34,7 @@ import { StationDetailDataService } from "./services/station-detail.data.service
     StationHeroComponent,
     StationSnowReportComponent,
     StationLiftsSlopesComponent,
+    RouterLink,
   ],
   templateUrl: "./station-detail.html",
   styleUrl: "./station-detail.css",
@@ -43,6 +48,12 @@ export class StationDetail implements OnInit {
   // State signals
   slug = signal<string>("");
   isLoading = signal<boolean>(true);
+  /** `true` si el borde respondió 404 para el slug pedido. */
+  notFound = signal<boolean>(false);
+  /** Estado REAL del parte declarado por el borde. */
+  reportState = signal<StationReportState | null>(null);
+  /** DTO del maestro tal como lo sirve el borde (región, disciplina, web reales). */
+  station = signal<StationDetailDto | null>(null);
 
   // Data signals - initialized with empty data
   stationData = signal<StationHeroData>({
@@ -52,21 +63,21 @@ export class StationDetail implements OnInit {
     location: "",
     heroImage: "",
     status: "closed",
-    price: { adult: 0, currency: "€" },
-    altitude: { base: 0, top: 0 },
+    price: null,
+    altitude: { base: null, top: null },
   });
 
   snowReport = signal<SnowReport>({
-    snowBase: 0,
-    snowTop: 0,
-    snowNew24h: 0,
-    snowNew48h: 0,
-    snowNew7days: 0,
-    snowQuality: "packed-powder",
+    snowBase: null,
+    snowTop: null,
+    snowNew24h: null,
+    snowNew48h: null,
+    snowNew7days: null,
+    snowQuality: null,
     lastSnowfall: "",
-    temperature: { current: 0, min: 0, max: 0 },
-    wind: { speed: 0, direction: "N" },
-    visibility: "good",
+    temperature: { current: null, min: null, max: null },
+    wind: { speed: null, direction: "" },
+    visibility: "unknown",
     updatedAt: "",
   });
 
@@ -103,15 +114,26 @@ export class StationDetail implements OnInit {
   private async loadStationData(slug: string): Promise<void> {
     try {
       this.isLoading.set(true);
-      const data = await this.dataService.loadStationDetail(slug);
+      const result = await this.dataService.loadStationDetail(slug);
 
-      // Update all signals with loaded data
+      // 404 del borde: NO se rellena con datos de otra estación (el mock anterior
+      // caía a baqueira-beret.mock.json y mostraba un parte ajeno como propio).
+      if (!result.found) {
+        this.notFound.set(true);
+        this.isLoading.set(false);
+        return;
+      }
+
+      this.station.set(result.station);
+      const data = result.data;
       this.stationData.set(data.hero);
       this.snowReport.set(data.snowReport);
       this.liftsSlopesData.set(data.liftsSlopes);
       this.webcams.set(data.webcams);
       this.forecast.set(data.forecast);
       this.stationInfo.set(data.info);
+      // Estado REAL del parte (no_data/not_configured/blocked/stale).
+      this.reportState.set(result.reportState);
 
       this.isLoading.set(false);
     } catch (error) {

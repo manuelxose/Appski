@@ -43,9 +43,17 @@ export class StationsList implements OnInit {
   isLoading = signal<boolean>(false);
   mobileFiltersOpen = signal<boolean>(false);
   currentFilters = signal<StationFilters | undefined>(undefined);
+  /** Regiones REALES del maestro (del borde): no se ofrecen comarcas ficticias. */
+  regionOptions = signal<ReadonlyArray<{ value: string; label: string }>>([
+    { value: "", label: "Todas las regiones" },
+  ]);
+  /** `true` ⇒ el borde no devolvió filas: se dice, no se finge una lista. */
+  unavailable = signal<boolean>(false);
 
   async ngOnInit(): Promise<void> {
     await this.loadStations();
+    const options = await this.dataService.loadFilterOptions();
+    this.regionOptions.set([{ value: "", label: "Todas las regiones" }, ...options.regions]);
   }
 
   private async loadStations(): Promise<void> {
@@ -60,8 +68,12 @@ export class StationsList implements OnInit {
         sortConfig
       );
       this.filteredStations.set(stations);
+      // Lista vacía viene del borde (no_data o filtro sin resultados).
+      this.unavailable.set(stations.length === 0);
     } catch (error) {
       console.error("Error loading stations:", error);
+      this.filteredStations.set([]);
+      this.unavailable.set(true);
     } finally {
       this.isLoading.set(false);
     }

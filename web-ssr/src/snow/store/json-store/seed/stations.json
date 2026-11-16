@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "",
+  "records": [
+    {
+      "slug": "baqueira-beret",
+      "name": "Baqueira Beret",
+      "country": "ES",
+      "region": "Pirineo Catalán",
+      "discipline": "alpine",
+      "lat": 42.6999,
+      "lng": 0.9367,
+      "altitudeBaseM": 1500,
+      "altitudeTopM": 2610,
+      "website": "https://www.baqueira.es/",
+      "seasonOpen": null,
+      "seasonClose": null,
+      "seasonConfirmed": false
+    },
+    {
+      "slug": "formigal-panticosa",
+      "name": "Formigal-Panticosa",
+      "country": "ES",
+      "region": "Pirineo Aragonés",
+      "discipline": "alpine",
+      "lat": 42.7625,
+      "lng": -0.3927,
+      "altitudeBaseM": 1510,
+      "altitudeTopM": 2250,
+      "website": "https://www.formigal-panticosa.com/",
+      "seasonOpen": null,
+      "seasonClose": null,
+      "seasonConfirmed": false
+    },
+    {
+      "slug": "grandvalira",
+      "name": "Grandvalira",
+      "country": "AD",
+      "region": "Pirineo Andorrano",
+      "discipline": "alpine",
+      "lat": 42.5449,
+      "lng": 1.6007,
+      "altitudeBaseM": 1710,
+      "altitudeTopM": 2640,
+      "website": "https://www.grandvalira.com/",
+      "seasonOpen": null,
+      "seasonClose": null,
+      "seasonConfirmed": false
+    }
+  ]
+}

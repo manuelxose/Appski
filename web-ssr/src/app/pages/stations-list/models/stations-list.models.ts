@@ -68,7 +68,7 @@ export interface Station {
   /** Nombre de la estación */
   name: string;
   /** Región geográfica */
-  region: Region;
+  region: string;
   /** Ubicación detallada */
   location: string;
   /** URL de imagen */
@@ -76,35 +76,38 @@ export interface Station {
   /** Estado actual */
   status: StationStatus;
   /** Tipo de estación */
-  type?: StationType;
+  type?: StationType | string;
   /** Nieve base en cm */
-  snowBase: number;
+  snowBase: number | null;
   /** Nieve cima en cm */
-  snowTop: number;
+  snowTop: number | null;
   /** Nieve nueva 24h en cm */
-  snowNew24h: number;
+  snowNew24h: number | null;
   /** Remontes abiertos */
-  liftsOpen: number;
+  liftsOpen: number | null;
   /** Remontes totales */
-  liftsTotal: number;
+  liftsTotal: number | null;
   /** Pistas abiertas */
-  slopesOpen: number;
+  slopesOpen: number | null;
   /** Pistas totales */
-  slopesTotal: number;
+  slopesTotal: number | null;
   /** Altitudes */
   altitude: {
     /** Altitud base en m */
-    base: number;
+    base: number | null;
     /** Altitud cima en m */
-    top: number;
+    top: number | null;
   };
-  /** Precio forfait */
+  /**
+   * Precio forfait. El borde NO publica tarifas ⇒ `null` (ausencia explícita,
+   * nunca 0 €). El componente oculta el bloque cuando no hay dato.
+   */
   price: {
     /** Precio adulto */
     adult: number;
     /** Moneda */
     currency: string;
-  };
+  } | null;
   /** Servicios disponibles */
   features: StationService[];
   /** Temperatura actual en °C (opcional) */

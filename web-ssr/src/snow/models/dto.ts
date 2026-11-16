@@ -1,0 +1,163 @@
+import type { LicenseStatus, NoDataReason } from '../contracts/provider-contracts';
+import type { OperationalStatus, SnowDepthReport, WeatherAlertItem } from '../contracts/data-type-map';
+import type { StationSummary } from './station';
+
+/** DTO del borde: lo único que cruza al navegador (02 §3.2). */
+export interface ProvenanceDto {
+  readonly source: string;
+  readonly observedAt: string;
+  readonly updatedAt: string | null;
+  readonly status: 'live' | 'cached' | 'stale' | 'degraded';
+  readonly licenseStatus: LicenseStatus;
+  readonly freshness: number;
+  readonly authorization: {
+    readonly registryRef: string;
+    readonly licenseId: string;
+    readonly commercialUse: boolean;
+    readonly storageAllowed: boolean;
+    readonly attributionRequired: boolean;
+  };
+  readonly attribution: string | null;
+}
+
+export interface ReportPayload {
+  readonly operational: OperationalStatus | null;
+  readonly snow: SnowDepthReport | null;
+  /** Nunca 0 como "sin dato": ausencia = null + reason. */
+  readonly noDataFields: readonly (keyof ReportPayload)[];
+}
+
+/**
+ * Procedencia editorial del parte (05b §7.3): el lector debe poder ver que es
+ * "reportado por un operador, desde una URL, a una hora". Presente SOLO cuando
+ * el dato viene de `editorial-report`; ausente (propiedad omitida) en el resto.
+ */
+export interface EditorialSourceDto {
+  readonly sourceUrl: string;
+  readonly author: string;
+  readonly capturedAt: string;
+  readonly confidence: number;
+}
+
+export interface SnowReportDto {
+  readonly station: StationSummary;
+  readonly report: ReportPayload;
+  readonly provenance: ProvenanceDto;
+  readonly status: 'ok' | 'stale' | 'no_data' | 'not_configured' | 'blocked';
+  readonly reason?: NoDataReason;
+  /** Editorial (05b §7.3): presentes SOLO si provenance.source === 'editorial-report'. */
+  readonly sourceUrl?: string;
+  readonly author?: string;
+  readonly capturedAt?: string;
+  readonly confidence?: number;
+}
+
+// ---------------------------------------------------------------------------
+// Observación de nieve del maestro (filtro/orden `snowMin` y `sort=snow`)
+// ---------------------------------------------------------------------------
+
+/**
+ * Nieve OBSERVADA de una estación en el directorio. `null` en vez de esta forma
+ * significa "sin parte publicado": nunca 0 cm. `status: 'stale'` es un dato
+ * caducado, y el cliente debe rotularlo como tal (no como actual).
+ */
+export interface SnowObservationDto {
+  readonly baseCm: number;
+  readonly observedAt: string;
+  readonly updatedAt: string | null;
+  readonly source: string;
+  readonly status: 'live' | 'stale';
+  readonly reason: NoDataReason | null;
+}
+
+export interface StationDetailDto extends StationSummary {
+  /** Estado de temporada (`MM-DD` sin confirmar ⇒ `unknown`). */
+  readonly season: 'open' | 'closed' | 'unknown';
+  /** Nieve observada o `null` (sin parte). Ausencia ≠ 0. */
+  readonly snow: SnowObservationDto | null;
+}
+
+export interface PaginationDto {
+  readonly page: number;
+  readonly pageSize: number;
+  readonly total: number;
+  readonly totalPages: number;
+  readonly hasNext: boolean;
+  readonly hasPrev: boolean;
+}
+
+export interface StationListDto {
+  readonly status: 'ok' | 'no_data';
+  /** Motivo cuando no hay ninguna estación que cumplir el filtro. */
+  readonly reason?: NoDataReason;
+  readonly provenance: ProvenanceDto;
+  readonly stations: readonly StationDetailDto[];
+  readonly pagination: PaginationDto;
+  /** Parámetros ya validados que se aplicaron (eco explícito, no inferencia). */
+  readonly filters: {
+    readonly country: string | null;
+    readonly region: string | null;
+    readonly discipline: string | null;
+    readonly status: string | null;
+    readonly snowMin: number | null;
+    readonly sort: string;
+    readonly sortDir: string;
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Estado de fuentes (GET /v1/config, admin)
+// ---------------------------------------------------------------------------
+
+export type BreakerState = 'closed' | 'open' | 'half_open';
+export type SourceEffect =
+  | 'serves'
+  | 'terminal-no-data'
+  | 'not-configured'
+  | 'always-blocked'
+  | 'not-wired-in-v1';
+
+export interface SourceStatusDto {
+  readonly id: string;
+  readonly declaredInRegistry: boolean;
+  readonly configured: boolean;
+  readonly missingEnv: readonly string[];
+  readonly requiredEnv: readonly string[];
+  readonly provides: readonly string[];
+  readonly dataTypes: readonly string[];
+  readonly breaker: { readonly state: BreakerState; readonly failures: number; readonly openUntil: string | null };
+  readonly rateLimit: { readonly requestsPerMinute: number; readonly maxConcurrent: number; readonly verified: boolean } | null;
+  readonly licenseStatus: LicenseStatus;
+  readonly effect: SourceEffect;
+}
+
+export interface ConfigDto {
+  readonly status: 'ok';
+  readonly provenance: ProvenanceDto;
+  readonly providers: readonly SourceStatusDto[];
+  readonly breaker: readonly { readonly id: string; readonly open: boolean; readonly failures: number }[];
+  readonly rateLimits: Readonly<Record<string, { readonly requestsPerMinute: number; readonly verified: boolean }>>;
+  /** Limitaciones declaradas del borde v1 (no errores). */
+  readonly limitations: readonly { readonly dataType: string; readonly reason: NoDataReason; readonly detail: string }[];
+}
+
+// ---------------------------------------------------------------------------
+// Alertas meteorológicas (GET /v1/stations/:slug/alerts)
+// ---------------------------------------------------------------------------
+
+/**
+ * Alertas de una estación. Sin proveedor A1/A2 autorizado (AEMET/Météo-France)
+ * el estado es `not_configured` o `no_data` y `alerts` queda VACÍO: nunca se
+ * inventan avisos. Con dato: `ok`/`stale` y cada aviso con su procedencia y si
+ * su ventana de validez sigue vigente (`expired: false` solo si `validUntil` es
+ * futuro).
+ */
+export interface AlertsDto {
+  readonly status: 'ok' | 'stale' | 'no_data' | 'not_configured' | 'blocked';
+  readonly reason?: NoDataReason;
+  readonly provenance: ProvenanceDto;
+  readonly alerts: readonly (WeatherAlertItem & {
+    readonly provenance: ProvenanceDto;
+    readonly expired: boolean;
+  })[];
+}

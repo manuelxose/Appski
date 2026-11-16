@@ -1,0 +1,1182 @@
+{
+  "desktop": {
+    "portada": {
+      "file": "snow01-portada-desktop.png",
+      "bytes": 302885,
+      "console": [
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/sierra-nevada.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/baqueira.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/formigal.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/cerler.jpg"
+        }
+      ],
+      "http": [
+        {
+          "url": "http://localhost:4010/",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        }
+      ],
+      "badStatus": [
+        {
+          "url": "http://localhost:4010/assets/images/stations/sierra-nevada.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/baqueira.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/formigal.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/cerler.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        }
+      ],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-BZP35BHY.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-SOQV3A7O.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-OAWQKRZ4.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/",
+        "h1": "Información de nieve en tiempo real",
+        "bodyLen": 4588,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "❄️\nSnowHub\nSKI COMPANION\nEstaciones\nTiempo\nPlanificador\nBlog\nAlojamientos\nAlquiler\n⭐\nPremium\nNEW\nES\nMG\n❄️\n🎿\n⛷️\n🏔️\nInformación de nieve en tiempo real\n\nCondiciones actualizadas de 50+ estaciones de esquí en España\n\n Buscar estación por nombre, región o condiciones\nBuscar\nFILTRAR POR CONDICIONES:\n✅\nAbiertas\n❄️\nNieve fresca\n☁️\nNieve polvo\n☀️\nBuen tiempo\n🏔️\n+100cm base\n🚡\nTodos remontes\nTiempo\nLa Plataforma de Nieve Más Completa\n\nConectamos esquiadores con las mejores experiencias en las montañas\n\n🎿\n+5 este año\n\n50+\n\nEstaciones de Esquí\n\n👥\n+15% vs año anterior\n\n1.2M\n\nUsuarios Activos\n\n⚡\nActualización continua\n\n24/7\n\nDatos en Tiempo Real\n\n🏠\n+120 nuevos\n\n500+\n\nAlojamientos Disponibles\n\nExplorar Estaciones\nEstaciones destacadas\n\nLas mejores condiciones de nieve ahora mismo\n\nABIERTA\n❄️ Nieve fresca\n❄️\n-3°\nSierra Nevada\n\nAndalucía\n\n120\nBASE CM\n170\nCIMA CM\n15\nNUEVA 24H\n🚡\n18\n/20\n⛷️\n88\n/110\nVer más →\nABIERTA\n❄️ Nieve polvo\n❄️\n-5°\nBaqueira Beret\n\nVal d'Aran\n\n150\nBASE CM\n200\nCIMA CM\n25\nNUEVA 24H\n🚡\n30\n/35\n⛷️\n142\n/165\nVer más →\nABIERTA\n❄️ Nieve polvo\n❄️\n-4°\nFormigal\n\nHuesca\n\n135\nBASE CM\n185\nCIMA CM\n20\nNUEVA 24H\n🚡\n19\n/23\n⛷️\n137\n/146\nVer más →\nABIERTA\n❄️ Nieve fresca\n❄️\n-2°\nCerler\n\nHuesca\n\n"
+      }
+    },
+    "nieve-dashboard": {
+      "file": "snow01-nieve-dashboard-desktop.png",
+      "bytes": 42173,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UNNLXRFX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve",
+        "h1": "Parte de nieve",
+        "bodyLen": 552,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Parte de nieve\n\nEstado de apertura, espesores y previsión de las estaciones de España, Andorra, Pirineo francés y Portugal. Cada dato indica su fuente; si no hay parte, se dice.\n\nResumen de hoy\n3\nestaciones en el catálogo\n0\ncon parte publicado\n3\nsin dato\n\n? Temporada cerrada — sin parte publicado\n\nAccesos\nExplorar todas las estaciones\nComparar estaciones\nWebcams\nMapa de estaciones\nEstaciones del catálogo\nBaqueira Beret\nPirineo Catalán · ES\n? Sin dato\nFormigal-Panticosa\nPirineo Aragonés · ES\n? Sin dato\nGrandvalira\nPirineo Andorrano · AD\n? Sin dato"
+      }
+    },
+    "nieve-estaciones": {
+      "file": "snow01-nieve-estaciones-desktop.png",
+      "bytes": 56418,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve/estaciones",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-TMRCQXX4.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-R7T2BXVM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UT5MEFAZ.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-QEH3W6CT.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-LQCIS7DE.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve/estaciones",
+        "h1": "Estaciones de esquí y de fondo",
+        "bodyLen": 898,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Estaciones de esquí y de fondo\n\nExplora las estaciones por país, sistema montañoso, estado de apertura y espesor de nieve. Cada dato indica de dónde viene.\n\nBuscar estación\nPaís\nTodos\nEspaña\nAndorra\nSistema montañoso\nTodos\nPirineo Andorrano\nPirineo Aragonés\nPirineo Catalán\nModalidad\nTodas\nEsquí alpino\nEsquí de fondo\nEstado\nTodos\nAbierta\nCerrada\nSin datos\nNo disponible\nEspesor mínimo (cm)\nOrdenar por\nNombre\nEspesor base\nKm abiertos\nEstado\nQuitar filtros\n\n1–3 de 3 estaciones\n\nEstaciones de esquí con su estado y espesor\nEstación\tEstado\tPistas / Circuitos\tKm abiertos\tEspesor base\tActualizado\nBaqueira Beret\nPirineo Catalán\n\t\n?\nSIN DATOS\n\t\n? Sin datos disponibles\n\t\n? Sin datos disponibles\n\t—\nFormigal-Panticosa\nPirineo Aragonés\n\t\n?\nSIN DATOS\n\t\n? Sin datos disponibles\n\t\n? Sin datos disponibles\n\t—\nGrandvalira\nPirineo Andorrano\n\t\n?\nSIN DATOS\n\t\n? Sin datos disponibles\n\t\n? Sin datos disponibles\n\t—"
+      }
+    },
+    "nieve-detalle": {
+      "file": "snow01-nieve-detalle-desktop.png",
+      "bytes": 46359,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CSJTNEF6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-6DBRD7SM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-R7T2BXVM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UT5MEFAZ.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+        "h1": "Baqueira Beret",
+        "bodyLen": 673,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Baqueira Beret\n\nPirineo Catalán · España · 1.500 m – 2.610 m\n\nParte de nieve\n◉\nParte de estación · fuente: operador\n· hace un momento\n?\nSin datos\n\n?\nTemporada cerrada — sin parte publicado\n\nÚltimo parte conocido: 16/11/2026, 16:54 (Europe/Madrid)\n\nWebcams\n\nLas imágenes de cámara las publica el operador; aquí solo aparecen los enlaces necesarios. No se incrustan ni se copian.\n\nNo hay cámaras con enlace autorizado para esta estación todavía.\n\nFicha\nIdentificador\nbaqueira-beret\nPaís\nEspaña\nSistema montañoso\nPirineo Catalán\nModalidad\nEsquí alpino\nÚltima actualización\n16/11/2026, 16:54 (Europe/Madrid)\nSitio del operador\nhttps://www.baqueira.es/\n← Volver a la exploradora"
+      }
+    }
+  },
+  "mobile": {
+    "portada": {
+      "file": "snow01-portada-mobile.png",
+      "bytes": 286090,
+      "console": [
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/sierra-nevada.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/baqueira.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/formigal.jpg"
+        },
+        {
+          "type": "log.error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "url": "http://localhost:4010/assets/images/stations/cerler.jpg"
+        }
+      ],
+      "http": [
+        {
+          "url": "http://localhost:4010/",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        },
+        {
+          "url": "http://localhost:4010/assets/mocks/home/home-page.mock.json",
+          "status": 200,
+          "mime": "application/json",
+          "type": "Fetch",
+          "resource": "Fetch"
+        }
+      ],
+      "badStatus": [
+        {
+          "url": "http://localhost:4010/assets/images/stations/sierra-nevada.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/baqueira.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/formigal.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        },
+        {
+          "url": "http://localhost:4010/assets/images/stations/cerler.jpg",
+          "status": 404,
+          "mime": "text/html",
+          "type": "Image",
+          "resource": "Image"
+        }
+      ],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-BZP35BHY.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-SOQV3A7O.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-OAWQKRZ4.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/",
+        "h1": "Información de nieve en tiempo real",
+        "bodyLen": 4477,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "❄️\nMG\n❄️\n🎿\n⛷️\n🏔️\nInformación de nieve en tiempo real\n\nCondiciones actualizadas de 50+ estaciones de esquí en España\n\n Buscar estación por nombre, región o condiciones\nFILTRAR POR CONDICIONES:\n✅\nAbiertas\n❄️\nNieve fresca\n☁️\nNieve polvo\n☀️\nBuen tiempo\n🏔️\n+100cm base\n🚡\nTodos remontes\nLa Plataforma de Nieve Más Completa\n\nConectamos esquiadores con las mejores experiencias en las montañas\n\n🎿\n+5 este año\n\n50+\n\nEstaciones de Esquí\n\n👥\n+15% vs año anterior\n\n1.2M\n\nUsuarios Activos\n\n⚡\nActualización continua\n\n24/7\n\nDatos en Tiempo Real\n\n🏠\n+120 nuevos\n\n500+\n\nAlojamientos Disponibles\n\nExplorar Estaciones\nEstaciones destacadas\n\nLas mejores condiciones de nieve ahora mismo\n\nABIERTA\n❄️ Nieve fresca\n❄️\n-3°\nSierra Nevada\n\nAndalucía\n\n120\nBASE CM\n170\nCIMA CM\n15\nNUEVA 24H\n🚡\n18\n/20\n⛷️\n88\n/110\nVer más →\nABIERTA\n❄️ Nieve polvo\n❄️\n-5°\nBaqueira Beret\n\nVal d'Aran\n\n150\nBASE CM\n200\nCIMA CM\n25\nNUEVA 24H\n🚡\n30\n/35\n⛷️\n142\n/165\nVer más →\nABIERTA\n❄️ Nieve polvo\n❄️\n-4°\nFormigal\n\nHuesca\n\n135\nBASE CM\n185\nCIMA CM\n20\nNUEVA 24H\n🚡\n19\n/23\n⛷️\n137\n/146\nVer más →\nABIERTA\n❄️ Nieve fresca\n❄️\n-2°\nCerler\n\nHuesca\n\n110\nBASE CM\n160\nCIMA CM\n10\nNUEVA 24H\n🚡\n16\n/18\n⛷️\n68\n/77\nVer más →\nVer todas las estaciones\nTodo lo que necesit"
+      }
+    },
+    "nieve-dashboard": {
+      "file": "snow01-nieve-dashboard-mobile.png",
+      "bytes": 95629,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UNNLXRFX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve",
+        "h1": "Parte de nieve",
+        "bodyLen": 552,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Parte de nieve\n\nEstado de apertura, espesores y previsión de las estaciones de España, Andorra, Pirineo francés y Portugal. Cada dato indica su fuente; si no hay parte, se dice.\n\nResumen de hoy\n3\nestaciones en el catálogo\n0\ncon parte publicado\n3\nsin dato\n\n? Temporada cerrada — sin parte publicado\n\nAccesos\nExplorar todas las estaciones\nComparar estaciones\nWebcams\nMapa de estaciones\nEstaciones del catálogo\nBaqueira Beret\nPirineo Catalán · ES\n? Sin dato\nFormigal-Panticosa\nPirineo Aragonés · ES\n? Sin dato\nGrandvalira\nPirineo Andorrano · AD\n? Sin dato"
+      }
+    },
+    "nieve-estaciones": {
+      "file": "snow01-nieve-estaciones-mobile.png",
+      "bytes": 119876,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve/estaciones",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-TMRCQXX4.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UT5MEFAZ.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-R7T2BXVM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-LQCIS7DE.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-QEH3W6CT.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve/estaciones",
+        "h1": "Estaciones de esquí y de fondo",
+        "bodyLen": 805,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Estaciones de esquí y de fondo\n\nExplora las estaciones por país, sistema montañoso, estado de apertura y espesor de nieve. Cada dato indica de dónde viene.\n\nBuscar estación\nPaís\nTodos\nEspaña\nAndorra\nSistema montañoso\nTodos\nPirineo Andorrano\nPirineo Aragonés\nPirineo Catalán\nModalidad\nTodas\nEsquí alpino\nEsquí de fondo\nEstado\nTodos\nAbierta\nCerrada\nSin datos\nNo disponible\nEspesor mínimo (cm)\nOrdenar por\nNombre\nEspesor base\nKm abiertos\nEstado\nQuitar filtros\n\n1–3 de 3 estaciones\n\nEstaciones de esquí con su estado y espesor\nBaqueira Beret\nPirineo Catalán\n?\nSIN DATOS\n? Sin datos disponibles\n? Sin datos disponibles\n—\nFormigal-Panticosa\nPirineo Aragonés\n?\nSIN DATOS\n? Sin datos disponibles\n? Sin datos disponibles\n—\nGrandvalira\nPirineo Andorrano\n?\nSIN DATOS\n? Sin datos disponibles\n? Sin datos disponibles\n—"
+      }
+    },
+    "nieve-detalle": {
+      "file": "snow01-nieve-detalle-mobile.png",
+      "bytes": 111093,
+      "console": [],
+      "http": [
+        {
+          "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+          "status": 200,
+          "mime": "text/html",
+          "type": "Document",
+          "resource": "Document"
+        }
+      ],
+      "badStatus": [],
+      "jsCss": [
+        {
+          "url": "http://localhost:4010/chunk-CKSR34W2.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-KRJSPJ55.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UR7G45EV.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-FPPZ4BUR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GAL4ENT6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/polyfills-5CFQRCPP.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/styles-RKTB7AYQ.css",
+          "status": 200,
+          "mime": "text/css",
+          "type": "Stylesheet",
+          "resource": "Stylesheet"
+        },
+        {
+          "url": "http://localhost:4010/main-G2AD6GTR.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-NMOEPB7K.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-CSJTNEF6.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-6DBRD7SM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-UT5MEFAZ.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-IYR2WUUX.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-R7T2BXVM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-GLGTM2BH.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        },
+        {
+          "url": "http://localhost:4010/chunk-ZAHNLGSM.js",
+          "status": 200,
+          "mime": "application/javascript",
+          "type": "Script",
+          "resource": "Script"
+        }
+      ],
+      "dom": {
+        "title": "SnowHub - Tu Portal de Esquí",
+        "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+        "h1": "Baqueira Beret",
+        "bodyLen": 673,
+        "ssrBeforeJs": null,
+        "hasNgServer": true,
+        "text": "Baqueira Beret\n\nPirineo Catalán · España · 1.500 m – 2.610 m\n\nParte de nieve\n◉\nParte de estación · fuente: operador\n· hace un momento\n?\nSin datos\n\n?\nTemporada cerrada — sin parte publicado\n\nÚltimo parte conocido: 16/11/2026, 16:54 (Europe/Madrid)\n\nWebcams\n\nLas imágenes de cámara las publica el operador; aquí solo aparecen los enlaces necesarios. No se incrustan ni se copian.\n\nNo hay cámaras con enlace autorizado para esta estación todavía.\n\nFicha\nIdentificador\nbaqueira-beret\nPaís\nEspaña\nSistema montañoso\nPirineo Catalán\nModalidad\nEsquí alpino\nÚltima actualización\n16/11/2026, 16:54 (Europe/Madrid)\nSitio del operador\nhttps://www.baqueira.es/\n← Volver a la exploradora"
+      }
+    }
+  }
+}

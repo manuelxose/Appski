@@ -1,0 +1,22 @@
+{
+  "kind": "driver-cases",
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    "PASS slug inexistente => 404 con provenance",
+    "PASS slug inexistente en /report => 404 (no 200 vacío)",
+    "PASS pageSize=101 => 400 nombrando pageSize",
+    "PASS page=9999 => 200 sin filas, hasNext=false y totalPages coherente con total",
+    "PASS query repetida => 400",
+    "PASS query desconocida => 400 (no se ignora)",
+    "PASS body no-JSON => 400 sin stack",
+    "PASS body > 64kb => 413",
+    "PASS PUT con clave extra => 400 nombrando la clave",
+    "PASS null explícito se conserva como null (nunca 0)",
+    "PASS operational.liftsOpen=-99 => 400",
+    "PASS snow.baseCm=-99 => 400",
+    "PASS borrador invisible en público y visible en /admin/reports",
+    "PASS observedAt futuro => parte visible (no se descarta por reloj)"
+  ]
+}

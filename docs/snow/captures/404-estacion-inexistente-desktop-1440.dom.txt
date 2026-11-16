@@ -1,0 +1,1694 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Estaciones de esquí - Infonieve.es</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Listado de todas las estaciones de esquí alpino de España, Andorra, Pirineo Francés y Portugal">
+<meta name="Keywords" content="estaciones esqui, estaciones ski, estaciones, esqui, listado, todas las estaciones">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Estaciones de esquí - Infonieve.es">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Listado de todas las estaciones de esquí alpino de España, Andorra, Pirineo Francés y Portugal">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'/estaciones-esqui' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_zona', 'estaciones');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611120201/pubads_impl.js?cb=122882268" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación"></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación"></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l no_tooltip">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Estaciones+de+esqu%C3%AD&amp;url=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación"></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="encabezado_bread">
+		<div id="breadcrumb">
+		<div class="wrap">
+			<ol class="breadcrumb">
+			<li class="breadcrumb_home"><a href="./" title="Infonieve.es - Portada"><i class="imagen"></i></a></li><li><span>ESTACIONES DE ESQUÍ</span></li>			</ol>
+		</div>
+	</div>
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+<div class="encabezado encabezado_bread">
+
+	<div class="encabezado_titulo">
+		<div>
+			<h1><span>Estaciones de esquí</span></h1>
+			<h3>Listado de las estaciones de esquí alpino de España, Andorra, Pirineo Francés y Portugal</h3>
+		</div>
+	</div>
+
+	<div id="submenu" class="submenu">
+		<div class="submenu_overflow_none">
+			<nav class="dragscroll">
+				<ul>
+					<li class="selec"><a href="estaciones-esqui/" title="Todas las estaciones de esquí de la Península Ibérica">Listado de estaciones</a></li>
+					<li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">Fechas de inicio y fin de temporada</a></li>
+				</ul>
+			</nav>
+		<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+	</div>
+
+	<div class="encabezado_roba">
+		<div class="box_banpub">
+			
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+			</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+				<div class="listado_pais">
+			<a href="estaciones-esqui/pais/espana/" title="Estaciones de esquí de España">ESPAÑA</a>
+		</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/pirineo-catalan/" title="Estaciones de esquí de Pirineo Catalán">Pirineo Catalán</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/alp-2500/" title="Estación de Esquí de Alp 2500">
+					
+					<span class="fuentegrande"><strong>Alp 2500</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/alp-2500/parte-de-nieve/" title="Parte de nieve de Alp 2500"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/alp-2500/" title="Estación de Esquí de Alp 2500"><strong>-</strong>/145<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/alp-2500/" title="Estación de Esquí de Alp 2500"><strong>-</strong>/154</a>
+				<a class="td tdx5" href="estacion-esqui/alp-2500/" title="Estación de Esquí de Alp 2500"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/alp-2500/meteo/" title="Previsión del tiempo para Alp 2500">-</a>
+				<a class="td tdx7" href="estacion-esqui/alp-2500/webcams/" title="Webcams de la estación de esquí de Alp 2500"><span class="redondeado">29<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/alp-2500/" title="Estación de Esquí de Alp 2500"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>La Molina</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/la-molina/parte-de-nieve/" title="Parte de nieve de La Molina"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina"><strong>-</strong>/71<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina"><strong>-</strong>/66</a>
+				<a class="td tdx5" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/la-molina/meteo/" title="Previsión del tiempo para La Molina"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/la-molina/webcams/" title="Webcams de la estación de esquí de La Molina"><span class="redondeado">7<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/masella/" title="Estación de Esquí de Masella">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Masella</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/masella/parte-de-nieve/" title="Parte de nieve de Masella"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/masella/" title="Estación de Esquí de Masella"><strong>-</strong>/74<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/masella/" title="Estación de Esquí de Masella"><strong>-</strong>/88</a>
+				<a class="td tdx5" href="estacion-esqui/masella/" title="Estación de Esquí de Masella"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/masella/meteo/" title="Previsión del tiempo para Masella"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/masella/webcams/" title="Webcams de la estación de esquí de Masella"><span class="redondeado">22<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/masella/" title="Estación de Esquí de Masella"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret">
+					
+					<span class="fuentegrande"><strong>Baqueira Beret</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/baqueira-beret/parte-de-nieve/" title="Parte de nieve de Baqueira Beret"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret"><strong>-</strong>/173<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret"><strong>-</strong>/131</a>
+				<a class="td tdx5" href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/baqueira-beret/meteo/" title="Previsión del tiempo para Baqueira Beret"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/baqueira-beret/webcams/" title="Webcams de la estación de esquí de Baqueira Beret"><span class="redondeado">21<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll">
+					
+					<span class="fuentegrande"><strong>Boí Taüll</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/boi-taull/parte-de-nieve/" title="Parte de nieve de Boí Taüll"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll"><strong>-</strong>/45<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll"><strong>-</strong>/43</a>
+				<a class="td tdx5" href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/boi-taull/meteo/" title="Previsión del tiempo para Boí Taüll"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-5º</span>/<span class="tempmax">6º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/boi-taull/webcams/" title="Webcams de la estación de esquí de Boí Taüll"><span class="redondeado">12<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/espot/" title="Estación de Esquí de Espot">
+					
+					<span class="fuentegrande"><strong>Espot</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/espot/parte-de-nieve/" title="Parte de nieve de Espot"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/espot/" title="Estación de Esquí de Espot"><strong>-</strong>/25<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/espot/" title="Estación de Esquí de Espot"><strong>-</strong>/22</a>
+				<a class="td tdx5" href="estacion-esqui/espot/" title="Estación de Esquí de Espot"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/espot/meteo/" title="Previsión del tiempo para Espot"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/espot/webcams/" title="Webcams de la estación de esquí de Espot"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/espot/" title="Estación de Esquí de Espot"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé">
+					
+					<span class="fuentegrande"><strong>Port Ainé</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/port-aine/parte-de-nieve/" title="Parte de nieve de Port Ainé"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé"><strong>-</strong>/27<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé"><strong>-</strong>/25</a>
+				<a class="td tdx5" href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/port-aine/meteo/" title="Previsión del tiempo para Port Ainé"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/port-aine/webcams/" title="Webcams de la estación de esquí de Port Ainé"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte">
+					
+					<span class="fuentegrande"><strong>Port del Comte</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/port-del-comte/parte-de-nieve/" title="Parte de nieve de Port del Comte"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte"><strong>-</strong>/42,75<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte"><strong>-</strong>/29</a>
+				<a class="td tdx5" href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/port-del-comte/meteo/" title="Previsión del tiempo para Port del Comte"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/port-del-comte/webcams/" title="Webcams de la estación de esquí de Port del Comte"><span class="redondeado">9<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán">
+					
+					<span class="fuentegrande"><strong>Tavascán</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/tavascan/parte-de-nieve/" title="Parte de nieve de Tavascán"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán"><strong>-</strong>/7<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán"><strong>-</strong>/7</a>
+				<a class="td tdx5" href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/tavascan/meteo/" title="Previsión del tiempo para Tavascán"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/tavascan/webcams/" title="Webcams de la estación de esquí de Tavascán"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria">
+					
+					<span class="fuentegrande"><strong>Vall de Nuria</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/vall-de-nuria/parte-de-nieve/" title="Parte de nieve de Vall de Nuria"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria"><strong>-</strong>/8<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria"><strong>-</strong>/11</a>
+				<a class="td tdx5" href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/vall-de-nuria/meteo/" title="Previsión del tiempo para Vall de Nuria"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">7º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/vall-de-nuria/webcams/" title="Webcams de la estación de esquí de Vall de Nuria"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter">
+					
+					<span class="fuentegrande"><strong>Vallter</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/vallter/parte-de-nieve/" title="Parte de nieve de Vallter"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter"><strong>-</strong>/14<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter"><strong>-</strong>/14</a>
+				<a class="td tdx5" href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/vallter/meteo/" title="Previsión del tiempo para Vallter"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/vallter/webcams/" title="Webcams de la estación de esquí de Vallter"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/pirineo-aragones/" title="Estaciones de esquí de Pirineo Aragonés">Pirineo Aragonés</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/100k-astun-candanchu/" title="Estación de Esquí de 100K Astún - Candanchú">
+					
+					<span class="fuentegrande"><strong>100K Astún - Candanchú</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/100k-astun-candanchu/parte-de-nieve/" title="Parte de nieve de 100K Astún - Candanchú"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/100k-astun-candanchu/" title="Estación de Esquí de 100K Astún - Candanchú"><strong>-</strong>/101<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/100k-astun-candanchu/" title="Estación de Esquí de 100K Astún - Candanchú"><strong>-</strong>/116</a>
+				<a class="td tdx5" href="estacion-esqui/100k-astun-candanchu/" title="Estación de Esquí de 100K Astún - Candanchú"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/100k-astun-candanchu/meteo/" title="Previsión del tiempo para 100K Astún - Candanchú">-</a>
+				<a class="td tdx7" href="estacion-esqui/100k-astun-candanchu/webcams/" title="Webcams de la estación de esquí de 100K Astún - Candanchú"><span class="redondeado">25<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/100k-astun-candanchu/" title="Estación de Esquí de 100K Astún - Candanchú"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/astun/" title="Estación de Esquí de Astún">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Astún</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/astun/parte-de-nieve/" title="Parte de nieve de Astún"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/astun/" title="Estación de Esquí de Astún"><strong>-</strong>/50,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/astun/" title="Estación de Esquí de Astún"><strong>-</strong>/59</a>
+				<a class="td tdx5" href="estacion-esqui/astun/" title="Estación de Esquí de Astún"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/astun/meteo/" title="Previsión del tiempo para Astún"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d3000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">6º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/astun/webcams/" title="Webcams de la estación de esquí de Astún"><span class="redondeado">15<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/astun/" title="Estación de Esquí de Astún"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Candanchú</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/candanchu/parte-de-nieve/" title="Parte de nieve de Candanchú"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú"><strong>-</strong>/50,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú"><strong>-</strong>/57</a>
+				<a class="td tdx5" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/candanchu/meteo/" title="Previsión del tiempo para Candanchú"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">7º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/candanchu/webcams/" title="Webcams de la estación de esquí de Candanchú"><span class="redondeado">10<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler">
+					
+					<span class="fuentegrande"><strong>Cerler</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/cerler/parte-de-nieve/" title="Parte de nieve de Cerler"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler"><strong>-</strong>/81<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler"><strong>-</strong>/75</a>
+				<a class="td tdx5" href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/cerler/meteo/" title="Previsión del tiempo para Cerler"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/cerler/webcams/" title="Webcams de la estación de esquí de Cerler"><span class="redondeado">11<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/formigal-panticosa/" title="Estación de Esquí de Formigal - Panticosa">
+					
+					<span class="fuentegrande"><strong>Formigal - Panticosa</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/formigal-panticosa/parte-de-nieve/" title="Parte de nieve de Formigal - Panticosa"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/formigal-panticosa/" title="Estación de Esquí de Formigal - Panticosa"><strong>-</strong>/182<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/formigal-panticosa/" title="Estación de Esquí de Formigal - Panticosa"><strong>-</strong>/147</a>
+				<a class="td tdx5" href="estacion-esqui/formigal-panticosa/" title="Estación de Esquí de Formigal - Panticosa"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/formigal-panticosa/meteo/" title="Previsión del tiempo para Formigal - Panticosa">-</a>
+				<a class="td tdx7" href="estacion-esqui/formigal-panticosa/webcams/" title="Webcams de la estación de esquí de Formigal - Panticosa"><span class="redondeado">24<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/formigal-panticosa/" title="Estación de Esquí de Formigal - Panticosa"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Formigal</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/formigal/parte-de-nieve/" title="Parte de nieve de Formigal"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal"><strong>-</strong>/143<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal"><strong>-</strong>/101</a>
+				<a class="td tdx5" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/formigal/meteo/" title="Previsión del tiempo para Formigal"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/formigal/webcams/" title="Webcams de la estación de esquí de Formigal"><span class="redondeado">13<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Panticosa</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/panticosa/parte-de-nieve/" title="Parte de nieve de Panticosa"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa"><strong>-</strong>/39<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa"><strong>-</strong>/46</a>
+				<a class="td tdx5" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/panticosa/meteo/" title="Previsión del tiempo para Panticosa"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2110.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/panticosa/webcams/" title="Webcams de la estación de esquí de Panticosa"><span class="redondeado">11<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/cordillera-cantabrica/" title="Estaciones de esquí de Cordillera Cantábrica">Cordillera Cantábrica</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo">
+					
+					<span class="fuentegrande"><strong>Alto Campoo</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/alto-campoo/parte-de-nieve/" title="Parte de nieve de Alto Campoo"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo"><strong>-</strong>/27,65<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo"><strong>-</strong>/21</a>
+				<a class="td tdx5" href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/alto-campoo/meteo/" title="Previsión del tiempo para Alto Campoo"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">13º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/alto-campoo/webcams/" title="Webcams de la estación de esquí de Alto Campoo"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno">
+					
+					<span class="fuentegrande"><strong>Fuentes de Invierno</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/fuentes-de-invierno/parte-de-nieve/" title="Parte de nieve de Fuentes de Invierno"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno"><strong>-</strong>/8,76<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno"><strong>-</strong>/15</a>
+				<a class="td tdx5" href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/fuentes-de-invierno/meteo/" title="Previsión del tiempo para Fuentes de Invierno"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">4º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/fuentes-de-invierno/webcams/" title="Webcams de la estación de esquí de Fuentes de Invierno"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda">
+					
+					<span class="fuentegrande"><strong>Manzaneda</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/manzaneda/parte-de-nieve/" title="Parte de nieve de Manzaneda"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda"><strong>-</strong>/15,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda"><strong>-</strong>/20</a>
+				<a class="td tdx5" href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/manzaneda/meteo/" title="Previsión del tiempo para Manzaneda"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2100.svg);"></i><br><span class="tempmin">5º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/manzaneda/webcams/" title="Webcams de la estación de esquí de Manzaneda"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro">
+					
+					<span class="fuentegrande"><strong>San Isidro</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/san-isidro/parte-de-nieve/" title="Parte de nieve de San Isidro"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro"><strong>-</strong>/31,1<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro"><strong>-</strong>/32</a>
+				<a class="td tdx5" href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/san-isidro/meteo/" title="Previsión del tiempo para San Isidro"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/san-isidro/webcams/" title="Webcams de la estación de esquí de San Isidro"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares">
+					
+					<span class="fuentegrande"><strong>Valgrande-Pajares</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/valgrande-pajares/parte-de-nieve/" title="Parte de nieve de Valgrande-Pajares"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares"><strong>-</strong>/22,58<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares"><strong>-</strong>/38</a>
+				<a class="td tdx5" href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/valgrande-pajares/meteo/" title="Previsión del tiempo para Valgrande-Pajares"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">4º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/valgrande-pajares/webcams/" title="Webcams de la estación de esquí de Valgrande-Pajares"><span class="redondeado">5<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos">
+					
+					<span class="fuentegrande"><strong>Valle Laciana - Leitariegos</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/valle-laciana-leitariegos/parte-de-nieve/" title="Parte de nieve de Valle Laciana - Leitariegos"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos"><strong>-</strong>/8,02<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos"><strong>-</strong>/15</a>
+				<a class="td tdx5" href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/valle-laciana-leitariegos/meteo/" title="Previsión del tiempo para Valle Laciana - Leitariegos"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2100.svg);"></i><br><span class="tempmin">4º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/valle-laciana-leitariegos/webcams/" title="Webcams de la estación de esquí de Valle Laciana - Leitariegos"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/sistema-iberico/" title="Estaciones de esquí de Sistema Ibérico">Sistema Ibérico</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre">
+					
+					<span class="fuentegrande"><strong>Javalambre</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/javalambre/parte-de-nieve/" title="Parte de nieve de Javalambre"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre"><strong>-</strong>/15<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre"><strong>-</strong>/18</a>
+				<a class="td tdx5" href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/javalambre/meteo/" title="Previsión del tiempo para Javalambre"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d6000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/javalambre/webcams/" title="Webcams de la estación de esquí de Javalambre"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés">
+					
+					<span class="fuentegrande"><strong>Punto de Nieve Santa Inés</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/punto-de-nieve-santa-ines/parte-de-nieve/" title="Parte de nieve de Punto de Nieve Santa Inés"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés"><strong>-</strong>/1,8<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés"><strong>-</strong>/3</a>
+				<a class="td tdx5" href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/punto-de-nieve-santa-ines/meteo/" title="Previsión del tiempo para Punto de Nieve Santa Inés"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">6º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/punto-de-nieve-santa-ines/webcams/" title="Webcams de la estación de esquí de Punto de Nieve Santa Inés"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares">
+					
+					<span class="fuentegrande"><strong>Valdelinares</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/valdelinares/parte-de-nieve/" title="Parte de nieve de Valdelinares"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares"><strong>-</strong>/17<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares"><strong>-</strong>/13</a>
+				<a class="td tdx5" href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/valdelinares/meteo/" title="Previsión del tiempo para Valdelinares"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">2º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/valdelinares/webcams/" title="Webcams de la estación de esquí de Valdelinares"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray">
+					
+					<span class="fuentegrande"><strong>Valdezcaray</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/valdezcaray/parte-de-nieve/" title="Parte de nieve de Valdezcaray"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray"><strong>-</strong>/22,35<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray"><strong>-</strong>/26</a>
+				<a class="td tdx5" href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/valdezcaray/meteo/" title="Previsión del tiempo para Valdezcaray"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/valdezcaray/webcams/" title="Webcams de la estación de esquí de Valdezcaray"><span class="redondeado">5<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/sistema-central/" title="Estaciones de esquí de Sistema Central">Sistema Central</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla">
+					
+					<span class="fuentegrande"><strong>La Pinilla</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/la-pinilla/parte-de-nieve/" title="Parte de nieve de La Pinilla"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla"><strong>-</strong>/15,62<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla"><strong>-</strong>/22</a>
+				<a class="td tdx5" href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/la-pinilla/meteo/" title="Previsión del tiempo para La Pinilla"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/la-pinilla/webcams/" title="Webcams de la estación de esquí de La Pinilla"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada">
+					
+					<span class="fuentegrande"><strong>Puerto de Navacerrada</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/puerto-de-navacerrada/parte-de-nieve/" title="Parte de nieve de Puerto de Navacerrada"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada"><strong>-</strong>/5,13<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada"><strong>-</strong>/8</a>
+				<a class="td tdx5" href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/puerto-de-navacerrada/meteo/" title="Previsión del tiempo para Puerto de Navacerrada"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d3000.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/puerto-de-navacerrada/webcams/" title="Webcams de la estación de esquí de Puerto de Navacerrada"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar">
+					
+					<span class="fuentegrande"><strong>Sierra de Béjar</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/sierra-de-bejar/parte-de-nieve/" title="Parte de nieve de Sierra de Béjar"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar"><strong>-</strong>/17,66<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar"><strong>-</strong>/19</a>
+				<a class="td tdx5" href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/sierra-de-bejar/meteo/" title="Previsión del tiempo para Sierra de Béjar"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">6º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/sierra-de-bejar/webcams/" title="Webcams de la estación de esquí de Sierra de Béjar"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí">
+					
+					<span class="fuentegrande"><strong>Valdesquí</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/valdesqui/parte-de-nieve/" title="Parte de nieve de Valdesquí"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí"><strong>-</strong>/23,3<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí"><strong>-</strong>/28</a>
+				<a class="td tdx5" href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/valdesqui/meteo/" title="Previsión del tiempo para Valdesquí"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/valdesqui/webcams/" title="Webcams de la estación de esquí de Valdesquí"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/sistema-penibetico/" title="Estaciones de esquí de Sistema Penibético">Sistema Penibético</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada">
+					
+					<span class="fuentegrande"><strong>Sierra Nevada</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/sierra-nevada/parte-de-nieve/" title="Parte de nieve de Sierra Nevada"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada"><strong>-</strong>/112,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada"><strong>-</strong>/140</a>
+				<a class="td tdx5" href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/sierra-nevada/meteo/" title="Previsión del tiempo para Sierra Nevada"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/sierra-nevada/webcams/" title="Webcams de la estación de esquí de Sierra Nevada"><span class="redondeado">21<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_pais">
+			<a href="estaciones-esqui/pais/andorra/" title="Estaciones de esquí de Andorra">ANDORRA</a>
+		</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/andorra/" title="Estaciones de esquí de Andorra">Andorra</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira">
+					
+					<span class="fuentegrande"><strong>Grandvalira</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/grandvalira/parte-de-nieve/" title="Parte de nieve de Grandvalira"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira"><strong>-</strong>/215<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira"><strong>-</strong>/142</a>
+				<a class="td tdx5" href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/grandvalira/meteo/" title="Previsión del tiempo para Grandvalira"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/grandvalira/webcams/" title="Webcams de la estación de esquí de Grandvalira"><span class="redondeado">39<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís">
+					
+					<span class="fuentegrande"><strong>Ordino Arcalís</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/ordino-arcalis/parte-de-nieve/" title="Parte de nieve de Ordino Arcalís"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís"><strong>-</strong>/30,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís"><strong>-</strong>/27</a>
+				<a class="td tdx5" href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/ordino-arcalis/meteo/" title="Previsión del tiempo para Ordino Arcalís"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/ordino-arcalis/webcams/" title="Webcams de la estación de esquí de Ordino Arcalís"><span class="redondeado">10<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal">
+					
+					<span class="fuentegrande"><strong>Pal Arinsal</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/pal-arinsal/parte-de-nieve/" title="Parte de nieve de Pal Arinsal"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal"><strong>-</strong>/63<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal"><strong>-</strong>/47</a>
+				<a class="td tdx5" href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/pal-arinsal/meteo/" title="Previsión del tiempo para Pal Arinsal"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/pal-arinsal/webcams/" title="Webcams de la estación de esquí de Pal Arinsal"><span class="redondeado">23<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro">
+					
+					<span class="fuentegrande"><strong>Ski Canaro</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/ski-canaro/parte-de-nieve/" title="Parte de nieve de Ski Canaro"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro"><strong>-</strong>/0,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro"><strong>-</strong>/2</a>
+				<a class="td tdx5" href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/ski-canaro/meteo/" title="Previsión del tiempo para Ski Canaro"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d3000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/ski-canaro/webcams/" title="Webcams de la estación de esquí de Ski Canaro"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_pais">
+			<a href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de esquí de Pirineo Francés">PIRINEO FRANCÉS</a>
+		</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/pyrenees-atlantiques/" title="Estaciones de esquí de Pyrénées Atlantiques">Pyrénées Atlantiques</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste">
+					
+					<span class="fuentegrande"><strong>Artouste</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/artouste/parte-de-nieve/" title="Parte de nieve de Artouste"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste"><strong>-</strong>/17<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste"><strong>-</strong>/15</a>
+				<a class="td tdx5" href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/artouste/meteo/" title="Previsión del tiempo para Artouste"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/artouste/webcams/" title="Webcams de la estación de esquí de Artouste"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette">
+					
+					<span class="fuentegrande"><strong>Gourette</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/gourette/parte-de-nieve/" title="Parte de nieve de Gourette"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette"><strong>-</strong>/42<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette"><strong>-</strong>/34</a>
+				<a class="td tdx5" href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/gourette/meteo/" title="Previsión del tiempo para Gourette"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/gourette/webcams/" title="Webcams de la estación de esquí de Gourette"><span class="redondeado">7<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin">
+					
+					<span class="fuentegrande"><strong>La Pierre Saint-Martin</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/la-pierre-saint-martin/parte-de-nieve/" title="Parte de nieve de La Pierre Saint-Martin"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin"><strong>-</strong>/26<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin"><strong>-</strong>/26</a>
+				<a class="td tdx5" href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/la-pierre-saint-martin/meteo/" title="Previsión del tiempo para La Pierre Saint-Martin"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/la-pierre-saint-martin/webcams/" title="Webcams de la estación de esquí de La Pierre Saint-Martin"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/hautes-pyrenees/" title="Estaciones de esquí de Hautes Pyrénées">Hautes Pyrénées</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/cauterets/" title="Estación de Esquí de Cauterets">
+					
+					<span class="fuentegrande"><strong>Cauterets</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/cauterets/parte-de-nieve/" title="Parte de nieve de Cauterets"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/cauterets/" title="Estación de Esquí de Cauterets"><strong>-</strong>/40<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/cauterets/" title="Estación de Esquí de Cauterets"><strong>-</strong>/25</a>
+				<a class="td tdx5" href="estacion-esqui/cauterets/" title="Estación de Esquí de Cauterets"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/cauterets/meteo/" title="Previsión del tiempo para Cauterets">-</a>
+				<a class="td tdx7" href="estacion-esqui/cauterets/webcams/" title="Webcams de la estación de esquí de Cauterets"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/cauterets/" title="Estación de Esquí de Cauterets"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Cauterets Cirque du Lys</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/cauterets-cirque-du-lys/parte-de-nieve/" title="Parte de nieve de Cauterets Cirque du Lys"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys"><strong>-</strong>/36<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys"><strong>-</strong>/22</a>
+				<a class="td tdx5" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/cauterets-cirque-du-lys/meteo/" title="Previsión del tiempo para Cauterets Cirque du Lys"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/cauterets-cirque-du-lys/webcams/" title="Webcams de la estación de esquí de Cauterets Cirque du Lys"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 list_estacion_dominio" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne">
+					<span class="list_estacion_dominio_icono"><i class="imagen"></i></span>
+					<span class="fuentegrande"><strong>Cauterets Pont d´Espagne</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/cauterets-pont-despagne/parte-de-nieve/" title="Parte de nieve de Cauterets Pont d´Espagne"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne"><strong>-</strong>/4<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne"><strong>-</strong>/3</a>
+				<a class="td tdx5" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/cauterets-pont-despagne/meteo/" title="Previsión del tiempo para Cauterets Pont d´Espagne"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/cauterets-pont-despagne/webcams/" title="Webcams de la estación de esquí de Cauterets Pont d´Espagne"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre">
+					
+					<span class="fuentegrande"><strong>Gavarnie-Gèdre</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/gavarnie-gedre/parte-de-nieve/" title="Parte de nieve de Gavarnie-Gèdre"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre"><strong>-</strong>/32<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre"><strong>-</strong>/24</a>
+				<a class="td tdx5" href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/gavarnie-gedre/meteo/" title="Previsión del tiempo para Gavarnie-Gèdre"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">5º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/gavarnie-gedre/webcams/" title="Webcams de la estación de esquí de Gavarnie-Gèdre"><span class="redondeado">8<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet">
+					
+					<span class="fuentegrande"><strong>Grand Tourmalet</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/grand-tourmalet/parte-de-nieve/" title="Parte de nieve de Grand Tourmalet"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet"><strong>-</strong>/100<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet"><strong>-</strong>/51</a>
+				<a class="td tdx5" href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/grand-tourmalet/meteo/" title="Previsión del tiempo para Grand Tourmalet"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/grand-tourmalet/webcams/" title="Webcams de la estación de esquí de Grand Tourmalet"><span class="redondeado">22<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam">
+					
+					<span class="fuentegrande"><strong>Hautacam</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/hautacam/parte-de-nieve/" title="Parte de nieve de Hautacam"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam"><strong>-</strong>/4<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam"><strong>-</strong>/4</a>
+				<a class="td tdx5" href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/hautacam/meteo/" title="Previsión del tiempo para Hautacam"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">0º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/hautacam/webcams/" title="Webcams de la estación de esquí de Hautacam"><span class="redondeado">8<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden">
+					
+					<span class="fuentegrande"><strong>Luz Ardiden</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/luz-ardiden/parte-de-nieve/" title="Parte de nieve de Luz Ardiden"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden"><strong>-</strong>/60<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden"><strong>-</strong>/29</a>
+				<a class="td tdx5" href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/luz-ardiden/meteo/" title="Previsión del tiempo para Luz Ardiden"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-5º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/luz-ardiden/webcams/" title="Webcams de la estación de esquí de Luz Ardiden"><span class="redondeado">8<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes">
+					
+					<span class="fuentegrande"><strong>Peyragudes</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/peyragudes/parte-de-nieve/" title="Parte de nieve de Peyragudes"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes"><strong>-</strong>/60<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes"><strong>-</strong>/45</a>
+				<a class="td tdx5" href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/peyragudes/meteo/" title="Previsión del tiempo para Peyragudes"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/peyragudes/webcams/" title="Webcams de la estación de esquí de Peyragudes"><span class="redondeado">11<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly">
+					
+					<span class="fuentegrande"><strong>Piau-Engaly</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/piau-engaly/parte-de-nieve/" title="Parte de nieve de Piau-Engaly"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly"><strong>-</strong>/65<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly"><strong>-</strong>/40</a>
+				<a class="td tdx5" href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/piau-engaly/meteo/" title="Previsión del tiempo para Piau-Engaly"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">8º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/piau-engaly/webcams/" title="Webcams de la estación de esquí de Piau-Engaly"><span class="redondeado">14<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary">
+					
+					<span class="fuentegrande"><strong>Saint-Lary</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/saint-lary/parte-de-nieve/" title="Parte de nieve de Saint-Lary"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary"><strong>-</strong>/100<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary"><strong>-</strong>/59</a>
+				<a class="td tdx5" href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/saint-lary/meteo/" title="Previsión del tiempo para Saint-Lary"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-4º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/saint-lary/webcams/" title="Webcams de la estación de esquí de Saint-Lary"><span class="redondeado">7<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron">
+					
+					<span class="fuentegrande"><strong>Val Louron</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/val-louron/parte-de-nieve/" title="Parte de nieve de Val Louron"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron"><strong>-</strong>/22<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron"><strong>-</strong>/22</a>
+				<a class="td tdx5" href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/val-louron/meteo/" title="Previsión del tiempo para Val Louron"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">0º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/val-louron/webcams/" title="Webcams de la estación de esquí de Val Louron"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/haute-garonne/" title="Estaciones de esquí de Haute Garonne">Haute Garonne</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil">
+					
+					<span class="fuentegrande"><strong>Bourg d´Oueil</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/bourg-doueil/parte-de-nieve/" title="Parte de nieve de Bourg d´Oueil"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil"><strong>-</strong>/5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil"><strong>-</strong>/6</a>
+				<a class="td tdx5" href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/bourg-doueil/meteo/" title="Previsión del tiempo para Bourg d´Oueil"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">3º</span>/<span class="tempmax">13º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/bourg-doueil/webcams/" title="Webcams de la estación de esquí de Bourg d´Oueil"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis">
+					
+					<span class="fuentegrande"><strong>Le Mourtis</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/le-mourtis/parte-de-nieve/" title="Parte de nieve de Le Mourtis"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis"><strong>-</strong>/23<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis"><strong>-</strong>/15</a>
+				<a class="td tdx5" href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/le-mourtis/meteo/" title="Previsión del tiempo para Le Mourtis"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">0º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/le-mourtis/webcams/" title="Webcams de la estación de esquí de Le Mourtis"><span class="redondeado">2<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères">
+					
+					<span class="fuentegrande"><strong>Luchon - Superbagnères</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/luchon-superbagneres/parte-de-nieve/" title="Parte de nieve de Luchon - Superbagnères"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères"><strong>-</strong>/33<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères"><strong>-</strong>/28</a>
+				<a class="td tdx5" href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/luchon-superbagneres/meteo/" title="Previsión del tiempo para Luchon - Superbagnères"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/luchon-superbagneres/webcams/" title="Webcams de la estación de esquí de Luchon - Superbagnères"><span class="redondeado">7<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/ariege-pyrenees/" title="Estaciones de esquí de Ariège Pyrénées">Ariège Pyrénées</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères">
+					
+					<span class="fuentegrande"><strong>Ascou-Pailhères</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/ascou-pailheres/parte-de-nieve/" title="Parte de nieve de Ascou-Pailhères"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères"><strong>-</strong>/17<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères"><strong>-</strong>/20</a>
+				<a class="td tdx5" href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/ascou-pailheres/meteo/" title="Previsión del tiempo para Ascou-Pailhères"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">0º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/ascou-pailheres/webcams/" title="Webcams de la estación de esquí de Ascou-Pailhères"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines">
+					
+					<span class="fuentegrande"><strong>Ax 3 Domaines</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/ax-3-domaines/parte-de-nieve/" title="Parte de nieve de Ax 3 Domaines"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines"><strong>-</strong>/80<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines"><strong>-</strong>/38</a>
+				<a class="td tdx5" href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/ax-3-domaines/meteo/" title="Previsión del tiempo para Ax 3 Domaines"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">13º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/ax-3-domaines/webcams/" title="Webcams de la estación de esquí de Ax 3 Domaines"><span class="redondeado">15<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige">
+					
+					<span class="fuentegrande"><strong>Goulier Neige</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/goulier-neige/parte-de-nieve/" title="Parte de nieve de Goulier Neige"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige"><strong>-</strong>/8<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige"><strong>-</strong>/9</a>
+				<a class="td tdx5" href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/goulier-neige/meteo/" title="Previsión del tiempo para Goulier Neige"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/goulier-neige/webcams/" title="Webcams de la estación de esquí de Goulier Neige"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet">
+					
+					<span class="fuentegrande"><strong>Guzet</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/guzet/parte-de-nieve/" title="Parte de nieve de Guzet"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet"><strong>-</strong>/40<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet"><strong>-</strong>/31</a>
+				<a class="td tdx5" href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/guzet/meteo/" title="Previsión del tiempo para Guzet"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-1º</span>/<span class="tempmax">14º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/guzet/webcams/" title="Webcams de la estación de esquí de Guzet"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes">
+					
+					<span class="fuentegrande"><strong>Les Monts d´Olmes</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/les-monts-dolmes/parte-de-nieve/" title="Parte de nieve de Les Monts d´Olmes"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes"><strong>-</strong>/15<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes"><strong>-</strong>/21</a>
+				<a class="td tdx5" href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/les-monts-dolmes/meteo/" title="Previsión del tiempo para Les Monts d´Olmes"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">12º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/les-monts-dolmes/webcams/" title="Webcams de la estación de esquí de Les Monts d´Olmes"><span class="redondeado">7<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan">
+					
+					<span class="fuentegrande"><strong>Mijanès-Donezan</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/mijanes-donezan/parte-de-nieve/" title="Parte de nieve de Mijanès-Donezan"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan"><strong>-</strong>/12<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan"><strong>-</strong>/15</a>
+				<a class="td tdx5" href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/mijanes-donezan/meteo/" title="Previsión del tiempo para Mijanès-Donezan"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">0º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/mijanes-donezan/webcams/" title="Webcams de la estación de esquí de Mijanès-Donezan"><span class="redondeado">0<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/aude/" title="Estaciones de esquí de Aude">Aude</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac">
+					
+					<span class="fuentegrande"><strong>Camurac</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/camurac/parte-de-nieve/" title="Parte de nieve de Camurac"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac"><strong>-</strong>/15<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac"><strong>-</strong>/11</a>
+				<a class="td tdx5" href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/camurac/meteo/" title="Previsión del tiempo para Camurac"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">2º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/camurac/webcams/" title="Webcams de la estación de esquí de Camurac"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/neiges-catalanes/" title="Estaciones de esquí de Neiges Catalanes">Neiges Catalanes</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze">
+					
+					<span class="fuentegrande"><strong>Cambre d´Aze</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/cambre-daze/parte-de-nieve/" title="Parte de nieve de Cambre d´Aze"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze"><strong>-</strong>/24<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze"><strong>-</strong>/24</a>
+				<a class="td tdx5" href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/cambre-daze/meteo/" title="Previsión del tiempo para Cambre d´Aze"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/cambre-daze/webcams/" title="Webcams de la estación de esquí de Cambre d´Aze"><span class="redondeado">5<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000">
+					
+					<span class="fuentegrande"><strong>Font-Romeu Pyrénées 2000</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/font-romeu-pyrenees-2000/parte-de-nieve/" title="Parte de nieve de Font-Romeu Pyrénées 2000"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000"><strong>-</strong>/43<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000"><strong>-</strong>/41</a>
+				<a class="td tdx5" href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/font-romeu-pyrenees-2000/meteo/" title="Previsión del tiempo para Font-Romeu Pyrénées 2000"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">9º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/font-romeu-pyrenees-2000/webcams/" title="Webcams de la estación de esquí de Font-Romeu Pyrénées 2000"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères">
+					
+					<span class="fuentegrande"><strong>Formiguères</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/formigueres/parte-de-nieve/" title="Parte de nieve de Formiguères"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères"><strong>-</strong>/25<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères"><strong>-</strong>/20</a>
+				<a class="td tdx5" href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/formigueres/meteo/" title="Previsión del tiempo para Formiguères"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/formigueres/webcams/" title="Webcams de la estación de esquí de Formiguères"><span class="redondeado">6<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane">
+					
+					<span class="fuentegrande"><strong>La Quillane</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/la-quillane/parte-de-nieve/" title="Parte de nieve de La Quillane"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane"><strong>-</strong>/2,5<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane"><strong>-</strong>/5</a>
+				<a class="td tdx5" href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/la-quillane/meteo/" title="Previsión del tiempo para La Quillane"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/la-quillane/webcams/" title="Webcams de la estación de esquí de La Quillane"><span class="redondeado">1<br><span class="fuentemicro">WEBCAM</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles">
+					
+					<span class="fuentegrande"><strong>Les Angles</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/les-angles/parte-de-nieve/" title="Parte de nieve de Les Angles"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles"><strong>-</strong>/55<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles"><strong>-</strong>/45</a>
+				<a class="td tdx5" href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/les-angles/meteo/" title="Previsión del tiempo para Les Angles"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d1000.svg);"></i><br><span class="tempmin">-2º</span>/<span class="tempmax">10º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/les-angles/webcams/" title="Webcams de la estación de esquí de Les Angles"><span class="redondeado">8<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles"><i class="imagen"></i></a>
+			</div>			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens">
+					
+					<span class="fuentegrande"><strong>Porté-Puymorens</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/porte-puymorens/parte-de-nieve/" title="Parte de nieve de Porté-Puymorens"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens"><strong>-</strong>/50<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens"><strong>-</strong>/32</a>
+				<a class="td tdx5" href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/porte-puymorens/meteo/" title="Previsión del tiempo para Porté-Puymorens"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d0000.svg);"></i><br><span class="tempmin">-3º</span>/<span class="tempmax">11º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/porte-puymorens/webcams/" title="Webcams de la estación de esquí de Porté-Puymorens"><span class="redondeado">4<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>		<div class="listado_pais">
+			<a href="estaciones-esqui/pais/portugal/" title="Estaciones de esquí de Portugal">PORTUGAL</a>
+		</div>		<div class="listado_cord">
+			<a href="estaciones-esqui/portugal/" title="Estaciones de esquí de Portugal">Portugal</a>
+		</div>	<div class="table list_estaciones">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Estación</div>
+				<div class="th tdx2">Estado</div>
+				<div class="th tdx3">Km. abiertos</div>
+				<div class="th tdx4">Pistas</div>
+				<div class="th tdx5">Nieve</div>
+				<div class="th tdx6">Meteo</div>
+				<div class="th tdx7">Webcams</div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<a class="td tdx1 " href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela">
+					
+					<span class="fuentegrande"><strong>Serra da Estrela</strong></span>
+					<span class="fuentemicro fuentegris">Actualizado el Lunes 16 de Noviembre</span>
+				</a>
+				<a class="td tdx2" href="estacion-esqui/serra-da-estrela/parte-de-nieve/" title="Parte de nieve de Serra da Estrela"><span class="redondeado" style="background-color:#FA8574;" title="Cerrada"><span class="list_estaciones_largo">Cerrada</span><span class="list_estaciones_corto">C</span></span></a>
+				<a class="td tdx3" href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela"><strong>-</strong>/12<br><span class="fuentemicro">KM</span></a>
+				<a class="td tdx4" href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela"><strong>-</strong>/19</a>
+				<a class="td tdx5" href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela"><strong>-</strong> <span class="fuentemicro">CM</span></a>
+				<a class="td tdx6" href="estacion-esqui/serra-da-estrela/meteo/" title="Previsión del tiempo para Serra da Estrela"><span class="fuentepeque"><i class="imagen" style="background-image:url(images/meteo/svg-dark/d2100.svg);"></i><br><span class="tempmin">1º</span>/<span class="tempmax">7º</span></span></a>
+				<a class="td tdx7" href="estacion-esqui/serra-da-estrela/webcams/" title="Webcams de la estación de esquí de Serra da Estrela"><span class="redondeado">3<br><span class="fuentemicro">WEBCAMS</span></span></a>
+				<a class="td tdxgo" href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela"><i class="imagen"></i></a>
+			</div>		</div>
+	</div>	</div>
+</div>
+
+
+<div class="pad_box">
+	<div class="box">
+				<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="" rel-idioma="" rel-anterior="L" rel-num-ant="3"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=3&amp;pastilla=17&amp;vm=0&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div>	</div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+			<div class="listado_cord listado_cerradas">
+			<span>Otras estaciones cerradas o no operativas</span>
+		</div>	<div class="list_actividades list_cerradas">		<div class="list_actividades_cont">
+			<ul>	<li>
+		<a href="estacion-esqui/lunada/" class="table" title="Estación de Esquí de Lunada">
+			<span class="tbody">
+				<span class="tr">
+					<span class="td tdx1">
+						<span class="fuentegrande"><strong>Lunada</strong></span>
+						<span class="fuentemicro fuentegris">Cordillera Cantábrica</span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</li>	<li>
+		<a href="estacion-esqui/puigmal-2900/" class="table" title="Estación de Esquí de Puigmal 2900">
+			<span class="tbody">
+				<span class="tr">
+					<span class="td tdx1">
+						<span class="fuentegrande"><strong>Puigmal 2900</strong></span>
+						<span class="fuentemicro fuentegris">Neiges Catalanes</span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</li>	<li>
+		<a href="estacion-esqui/puyvalador/" class="table" title="Estación de Esquí de Puyvalador">
+			<span class="tbody">
+				<span class="tr">
+					<span class="td tdx1">
+						<span class="fuentegrande"><strong>Puyvalador</strong></span>
+						<span class="fuentemicro fuentegris">Neiges Catalanes</span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</li>	<li>
+		<a href="estacion-esqui/vallnord/" class="table" title="Estación de Esquí de Vallnord">
+			<span class="tbody">
+				<span class="tr">
+					<span class="td tdx1">
+						<span class="fuentegrande"><strong>Vallnord</strong></span>
+						<span class="fuentemicro fuentegris">Andorra</span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</li>			</ul>
+		</div>
+	</div>	
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+</div></div></body></html>

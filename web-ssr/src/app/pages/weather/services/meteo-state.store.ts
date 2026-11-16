@@ -11,6 +11,7 @@ import {
 import { MeteoDataService } from "./meteo-data.service";
 import { MeteoMapperService } from "./meteo-mapper.service";
 import { StationsService } from "./stations.service";
+import { isAvailable, type Availability } from "./availability";
 
 /**
  * Estado global de datos meteorológicos usando Signals
@@ -26,6 +27,15 @@ export class MeteoStateStore {
   private readonly _forecast = signal<MeteoForecast | null>(null);
   private readonly _webcams = signal<WebcamItem[]>([]);
   private readonly _radar = signal<RadarInfo | null>(null);
+
+  /**
+   * Estado de DISPONIBILIDAD de cada fuente. Son datos: la UI los rotula
+   * ("sin proveedor", "licencia", "no disponible en v1") en vez de pintar cifras.
+   */
+  readonly nowState = signal<Availability<unknown> | null>(null);
+  readonly forecastState = signal<Availability<unknown> | null>(null);
+  readonly webcamsState = signal<Availability<unknown> | null>(null);
+  readonly radarState = signal<Availability<unknown> | null>(null);
 
   // Estado UI
   private readonly _selectedCota = signal<Cota>("mid");
@@ -48,6 +58,16 @@ export class MeteoStateStore {
     const slug = this._stationSlug();
     return slug ? this.stationsService.getStationBySlug(slug) : null;
   });
+
+  /**
+   * Carga el catálogo del borde (una vez) y devuelve la estación pedida.
+   * `Promise<SkiStation|null>`: `null` ⇒ el slug no está en el maestro.
+   */
+  async loadStationCatalog(slug: string): Promise<SkiStation | null> {
+    await this.stationsService.ensureLoaded();
+    this._stationSlug.set(slug);
+    return this.stationsService.getStationBySlug(slug);
+  }
 
   readonly stationName = computed<string>(() => {
     const station = this.station();
@@ -114,7 +134,9 @@ export class MeteoStateStore {
     this._stationSlug.set(stationSlug);
 
     try {
-      // Cargar todos los datos en paralelo
+      // Cargar todos los datos en paralelo. Cada uno llega como `Availability`:
+      // se guarda el valor SÓLO si está disponible y el estado siempre, para que
+      // la UI distinga "sin proveedor" de "hay dato".
       const [now, forecast, webcams, radar] = await Promise.all([
         this.dataService.getNow(stationSlug),
         this.dataService.getForecast72(stationSlug),
@@ -122,10 +144,14 @@ export class MeteoStateStore {
         this.dataService.getRadar(stationSlug),
       ]);
 
-      this._now.set(now);
-      this._forecast.set(forecast);
-      this._webcams.set(webcams);
-      this._radar.set(radar);
+      this.nowState.set(now);
+      this.forecastState.set(forecast);
+      this.webcamsState.set(webcams);
+      this.radarState.set(radar);
+      this._now.set(isAvailable(now) ? now.value : null);
+      this._forecast.set(isAvailable(forecast) ? forecast.value : null);
+      this._webcams.set(isAvailable(webcams) ? [...webcams.value] : []);
+      this._radar.set(isAvailable(radar) ? radar.value : null);
     } catch (error) {
       const message =
         error instanceof Error
@@ -147,7 +173,8 @@ export class MeteoStateStore {
 
     try {
       const now = await this.dataService.getNow(slug);
-      this._now.set(now);
+      this.nowState.set(now);
+      this._now.set(isAvailable(now) ? now.value : null);
     } catch (error) {
       console.error("Error refreshing now:", error);
     }
@@ -162,7 +189,8 @@ export class MeteoStateStore {
 
     try {
       const forecast = await this.dataService.getForecast72(slug);
-      this._forecast.set(forecast);
+      this.forecastState.set(forecast);
+      this._forecast.set(isAvailable(forecast) ? forecast.value : null);
     } catch (error) {
       console.error("Error refreshing forecast:", error);
     }

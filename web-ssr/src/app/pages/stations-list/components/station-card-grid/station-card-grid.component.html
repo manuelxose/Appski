@@ -52,7 +52,7 @@
         class="absolute bottom-3 left-3 bg-white px-3 py-1 rounded-lg shadow-md"
       >
         <div class="text-sm font-bold text-slate-900">
-          {{ station.price.currency }}{{ station.price.adult }}
+          {{ station.price?.currency }}{{ station.price?.adult ?? "—" }}
           <span class="text-xs font-normal text-slate-600">/día</span>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <div class="grid grid-cols-3 gap-4 mb-4">
         <div class="text-center">
           <div class="text-2xl font-bold text-blue-600">
-            {{ station.snowBase }}
+            {{ station.snowBase ?? "—" }}
           </div>
           <div class="text-xs text-slate-600" data-i18n="snow.base">
             Base cm
@@ -80,20 +80,20 @@
         </div>
         <div class="text-center">
           <div class="text-2xl font-bold text-blue-600">
-            {{ station.snowTop }}
+            {{ station.snowTop ?? "—" }}
           </div>
           <div class="text-xs text-slate-600" data-i18n="snow.top">Cima cm</div>
         </div>
         <div class="text-center">
           <div
             class="text-2xl font-bold"
-            [class.text-green-500]="station.snowNew24h > 10"
+            [class.text-green-500]="(station.snowNew24h ?? 0) > 10"
             [class.text-yellow-500]="
-              station.snowNew24h > 5 && station.snowNew24h <= 10
+              (station.snowNew24h ?? 0) > 5 && (station.snowNew24h ?? 0) <= 10
             "
-            [class.text-slate-400]="station.snowNew24h <= 5"
+            [class.text-slate-400]="(station.snowNew24h ?? 0) <= 5"
           >
-            {{ station.snowNew24h }}
+            {{ station.snowNew24h ?? "—" }}
           </div>
           <div class="text-xs text-slate-600" data-i18n="snow.new">
             Nueva 24h
@@ -116,7 +116,7 @@
       <!-- Altitude -->
       <div class="flex items-center justify-between text-xs text-slate-500">
         <span
-          >🏔️ {{ station.altitude.base }}m - {{ station.altitude.top }}m</span
+          >🏔️ {{ station.altitude.base ?? "—" }}m - {{ station.altitude.top ?? "—" }}m</span
         >
       </div>
 

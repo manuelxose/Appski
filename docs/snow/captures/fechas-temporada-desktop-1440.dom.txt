@@ -1,0 +1,1095 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Fecha de apertura y cierre de la temporada de esquí - Infonieve.es</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Listado con las fechas de inicio y finalización de la Temporada 2026-2027 en las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">
+<meta name="Keywords" content="fecha, inicio, apertura, cierre, fin, finalizacion, temporada, invierno">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Fecha de apertura y cierre de la temporada de esquí - Infonieve.es">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Listado con las fechas de inicio y finalización de la Temporada 2026-2027 en las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'/estaciones-esqui', 'nivel_ruta2':'/fecha-inicio-fin-temporada' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_zona', 'fechas_temporada');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+<script type="text/javascript">
+	$(function(){
+		"use strict";
+		$(".list_fechas .thead .th a").click(function(e){
+			e.preventDefault();
+			$.post( 'estaciones-esqui/fecha-inicio-fin-temporada/', { sort: 1, orden: $(this).attr('rel') })
+				.done(function( data ) {
+					window.location='estaciones-esqui/fecha-inicio-fin-temporada/';
+			});
+		});
+	});
+</script>
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611050101/pubads_impl.js?cb=122882195" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación"></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación"></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l no_tooltip">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2Ffecha-inicio-fin-temporada%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Fecha+de+apertura+y+cierre+de+la+temporada+de+esqu%C3%AD&amp;url=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2Ffecha-inicio-fin-temporada%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2Festaciones-esqui%2Ffecha-inicio-fin-temporada%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación"></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="encabezado_bread">
+		<div id="breadcrumb">
+		<div class="wrap">
+			<ol class="breadcrumb">
+			<li class="breadcrumb_home"><a href="./" title="Infonieve.es - Portada"><i class="imagen"></i></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="estaciones-esqui/" itemprop="url" title="Estaciones de esquí alpino de España, Andorra, Pirineo Francés y Portugal"><span itemprop="title">ESTACIONES DE ESQUÍ</span></a></li><li><span>FECHAS DE INICIO Y FIN DE LA TEMPORADA</span></li>			</ol>
+		</div>
+	</div>
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+
+<div class="encabezado encabezado_bread">
+
+	<div class="encabezado_titulo">
+		<div>
+			<h1><span>Fechas de apertura y cierre</span></h1>
+			<h3>Listado de las fechas de inicio y finalización de la Temporada 2026-2027 en las estaciones de esquí</h3>
+		</div>
+	</div>
+
+	<div id="submenu" class="submenu">
+		<div class="submenu_overflow_none">
+			<nav class="dragscroll">
+				<ul>
+					<li><a href="estaciones-esqui/" title="Todas las estaciones de esquí de la Península Ibérica">Listado de estaciones</a></li>
+					<li class="selec"><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">Fechas de inicio y fin de temporada</a></li>
+				</ul>
+			</nav>
+		<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+	</div>
+
+	<div class="encabezado_roba">
+		<div class="box_banpub">
+			
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+			</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+			<div class="table list_fechas">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1 "><a rel="nombre" title="Ordenar por el nombre de la estación">Estación</a></div>
+				<div class="th tdx2 list_fechas_sel"><a rel="ini" title="Ordenar por la fecha de apertura"><span>Fecha de Apertura</span></a></div>
+				<div class="th tdx3 "><a rel="fin" title="Ordenar por la fecha de cierre"><span>Fecha de Cierre</span></a></div>
+				<div class="th tdxgo"></div>
+			</div>
+		</div>
+		<div class="tbody">			<a class="tr" href="estacion-esqui/luz-ardiden/" title="Estación de Esquí de Luz Ardiden">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Luz Ardiden</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">25 de Noviembre de 2026</span> <span class="list_solocorto">25/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/cauterets-cirque-du-lys/" title="Estación de Esquí de Cauterets Cirque du Lys">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Cauterets Cirque du Lys</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">18 de Abril de 2027</span> <span class="list_solocorto">18/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/manzaneda/" title="Estación de Esquí de Manzaneda">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Manzaneda</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">11 de Abril de 2027</span> <span class="list_solocorto">11/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/cerler/" title="Estación de Esquí de Cerler">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Cerler</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/formigal/" title="Estación de Esquí de Formigal">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Formigal</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/les-angles/" title="Estación de Esquí de Les Angles">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Les Angles</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/panticosa/" title="Estación de Esquí de Panticosa">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Panticosa</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">27 de Noviembre de 2026</span> <span class="list_solocorto">27/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/sierra-nevada/" title="Estación de Esquí de Sierra Nevada">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Sierra Nevada</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">28 de Noviembre de 2026</span> <span class="list_solocorto">28/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">18 de Abril de 2027</span> <span class="list_solocorto">18/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/baqueira-beret/" title="Estación de Esquí de Baqueira Beret">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Baqueira Beret</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">28 de Noviembre de 2026</span> <span class="list_solocorto">28/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/valdezcaray/" title="Estación de Esquí de Valdezcaray">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Valdezcaray</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">28 de Noviembre de 2026</span> <span class="list_solocorto">28/11/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/san-isidro/" title="Estación de Esquí de San Isidro">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>San Isidro</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">1 de Diciembre de 2026</span> <span class="list_solocorto">01/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/valle-laciana-leitariegos/" title="Estación de Esquí de Valle Laciana - Leitariegos">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Valle Laciana - Leitariegos</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">1 de Diciembre de 2026</span> <span class="list_solocorto">01/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/boi-taull/" title="Estación de Esquí de Boí Taüll">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Boí Taüll</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/grandvalira/" title="Estación de Esquí de Grandvalira">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Grandvalira</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/la-molina/" title="Estación de Esquí de La Molina">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>La Molina</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/ordino-arcalis/" title="Estación de Esquí de Ordino Arcalís">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Ordino Arcalís</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/pal-arinsal/" title="Estación de Esquí de Pal Arinsal">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Pal Arinsal</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/piau-engaly/" title="Estación de Esquí de Piau-Engaly">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Piau-Engaly</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/port-aine/" title="Estación de Esquí de Port Ainé">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Port Ainé</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/vall-de-nuria/" title="Estación de Esquí de Vall de Nuria">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Vall de Nuria</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/vallter/" title="Estación de Esquí de Vallter">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Vallter</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/font-romeu-pyrenees-2000/" title="Estación de Esquí de Font-Romeu Pyrénées 2000">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Font-Romeu Pyrénées 2000</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/luchon-superbagneres/" title="Estación de Esquí de Luchon - Superbagnères">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Luchon - Superbagnères</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/saint-lary/" title="Estación de Esquí de Saint-Lary">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Saint-Lary</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/formigueres/" title="Estación de Esquí de Formiguères">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Formiguères</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">28 de Marzo de 2027</span> <span class="list_solocorto">28/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/porte-puymorens/" title="Estación de Esquí de Porté-Puymorens">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Porté-Puymorens</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">28 de Marzo de 2027</span> <span class="list_solocorto">28/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/cambre-daze/" title="Estación de Esquí de Cambre d´Aze">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Cambre d´Aze</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">4 de Diciembre de 2026</span> <span class="list_solocorto">04/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">14 de Marzo de 2027</span> <span class="list_solocorto">14/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/gourette/" title="Estación de Esquí de Gourette">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Gourette</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">11 de Abril de 2027</span> <span class="list_solocorto">11/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/la-pierre-saint-martin/" title="Estación de Esquí de La Pierre Saint-Martin">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>La Pierre Saint-Martin</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">11 de Abril de 2027</span> <span class="list_solocorto">11/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/espot/" title="Estación de Esquí de Espot">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Espot</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">4 de Abril de 2027</span> <span class="list_solocorto">04/04/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/ax-3-domaines/" title="Estación de Esquí de Ax 3 Domaines">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Ax 3 Domaines</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/grand-tourmalet/" title="Estación de Esquí de Grand Tourmalet">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Grand Tourmalet</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/peyragudes/" title="Estación de Esquí de Peyragudes">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Peyragudes</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">29 de Marzo de 2027</span> <span class="list_solocorto">29/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/valdelinares/" title="Estación de Esquí de Valdelinares">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Valdelinares</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">5 de Diciembre de 2026</span> <span class="list_solocorto">05/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">28 de Marzo de 2027</span> <span class="list_solocorto">28/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/le-mourtis/" title="Estación de Esquí de Le Mourtis">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Le Mourtis</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">18 de Diciembre de 2026</span> <span class="list_solocorto">18/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">7 de Marzo de 2027</span> <span class="list_solocorto">07/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/ascou-pailheres/" title="Estación de Esquí de Ascou-Pailhères">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Ascou-Pailhères</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/camurac/" title="Estación de Esquí de Camurac">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Camurac</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/cauterets-pont-despagne/" title="Estación de Esquí de Cauterets Pont d´Espagne">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Cauterets Pont d´Espagne</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/guzet/" title="Estación de Esquí de Guzet">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Guzet</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/javalambre/" title="Estación de Esquí de Javalambre">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Javalambre</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/les-monts-dolmes/" title="Estación de Esquí de Les Monts d´Olmes">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Les Monts d´Olmes</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/val-louron/" title="Estación de Esquí de Val Louron">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Val Louron</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">21 de Marzo de 2027</span> <span class="list_solocorto">21/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/gavarnie-gedre/" title="Estación de Esquí de Gavarnie-Gèdre">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Gavarnie-Gèdre</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">14 de Marzo de 2027</span> <span class="list_solocorto">14/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/mijanes-donezan/" title="Estación de Esquí de Mijanès-Donezan">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Mijanès-Donezan</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">14 de Marzo de 2027</span> <span class="list_solocorto">14/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/artouste/" title="Estación de Esquí de Artouste">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Artouste</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">7 de Marzo de 2027</span> <span class="list_solocorto">07/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/bourg-doueil/" title="Estación de Esquí de Bourg d´Oueil">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Bourg d´Oueil</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">7 de Marzo de 2027</span> <span class="list_solocorto">07/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/hautacam/" title="Estación de Esquí de Hautacam">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Hautacam</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto">7 de Marzo de 2027</span> <span class="list_solocorto">07/03/2027</span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/goulier-neige/" title="Estación de Esquí de Goulier Neige">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Goulier Neige</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto">19 de Diciembre de 2026</span> <span class="list_solocorto">19/12/2026</span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/alto-campoo/" title="Estación de Esquí de Alto Campoo">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Alto Campoo</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/astun/" title="Estación de Esquí de Astún">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Astún</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/candanchu/" title="Estación de Esquí de Candanchú">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Candanchú</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/fuentes-de-invierno/" title="Estación de Esquí de Fuentes de Invierno">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Fuentes de Invierno</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/la-pinilla/" title="Estación de Esquí de La Pinilla">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>La Pinilla</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/la-quillane/" title="Estación de Esquí de La Quillane">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>La Quillane</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/masella/" title="Estación de Esquí de Masella">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Masella</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/port-del-comte/" title="Estación de Esquí de Port del Comte">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Port del Comte</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/puerto-de-navacerrada/" title="Estación de Esquí de Puerto de Navacerrada">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Puerto de Navacerrada</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/punto-de-nieve-santa-ines/" title="Estación de Esquí de Punto de Nieve Santa Inés">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Punto de Nieve Santa Inés</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/serra-da-estrela/" title="Estación de Esquí de Serra da Estrela">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Serra da Estrela</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/sierra-de-bejar/" title="Estación de Esquí de Sierra de Béjar">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Sierra de Béjar</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/ski-canaro/" title="Estación de Esquí de Ski Canaro">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Ski Canaro</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/tavascan/" title="Estación de Esquí de Tavascán">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Tavascán</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/valdesqui/" title="Estación de Esquí de Valdesquí">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Valdesquí</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>			<a class="tr" href="estacion-esqui/valgrande-pajares/" title="Estación de Esquí de Valgrande-Pajares">
+				<span class="td tdx1">
+					<span class="fuentegrande"><strong>Valgrande-Pajares</strong></span>
+				</span>
+				<span class="td tdx2"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdx3"><span class="list_nocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span> <span class="list_solocorto"><span class="fuentepeque fuente10 fuente_em">sin determinar</span></span></span>
+				<span class="td tdxgo"><i class="imagen"></i></span>
+			</a>		</div>
+	</div>	</div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+		<div class="box_leyenda box_leyenda_fechas">
+			<div class="box_leyenda_tit">Leyenda:</div>
+			<div class="box_leyenda_cont">
+				<span><i class="imagen icono_fechas_apertura icono_fechas_estado_1" title="Apertura confirmada"></i>Apertura confirmada</span>
+				<span><i class="imagen icono_fechas_apertura icono_fechas_estado_0" title="Fecha programada sobre calendario, apertura no confirmada"></i>Fecha programada sobre calendario, apertura no confirmada</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+		<div class="listado_cord">
+			<span>Histórico de apertura de las temporadas anteriores</span>
+		</div>
+			<div class="table table_nohover list_temporadas">
+		<div class="thead">
+			<div class="tr">
+				<div class="th tdx1">Temporada</div>
+				<div class="th tdx2"><span>Fecha de Apertura</span></div>
+				<div class="th tdx3"><span>Fecha de Cierre</span></div>
+			</div>
+		</div>
+		<div class="tbody">			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2009-2010</strong></span>
+				<span class="td tdx2">03/12/2009<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">02/05/2010<br><span class="fuentepeque">Masella, Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2010-2011</strong></span>
+				<span class="td tdx2">20/11/2010<br><span class="fuentepeque">Grandvalira, La Molina, Masella</span></span>
+				<span class="td tdx3">01/05/2011<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2011-2012</strong></span>
+				<span class="td tdx2">26/11/2011<br><span class="fuentepeque">Sierra Nevada</span></span>
+				<span class="td tdx3">01/05/2012<br><span class="fuentepeque">Manzaneda, Masella</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2012-2013</strong></span>
+				<span class="td tdx2">29/11/2012<br><span class="fuentepeque">Sierra Nevada</span></span>
+				<span class="td tdx3">02/06/2013<br><span class="fuentepeque">Porté-Puymorens</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2013-2014</strong></span>
+				<span class="td tdx2">21/11/2013<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">04/05/2014<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2014-2015</strong></span>
+				<span class="td tdx2">29/11/2014<br><span class="fuentepeque">Sierra Nevada</span></span>
+				<span class="td tdx3">03/05/2015<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2015-2016</strong></span>
+				<span class="td tdx2">24/11/2015<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">15/05/2016<br><span class="fuentepeque">Serra da Estrela</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2016-2017</strong></span>
+				<span class="td tdx2">25/11/2016<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">01/05/2017<br><span class="fuentepeque">Masella</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2017-2018</strong></span>
+				<span class="td tdx2">10/11/2017<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">13/05/2018<br><span class="fuentepeque">Serra da Estrela</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2018-2019</strong></span>
+				<span class="td tdx2">01/11/2018<br><span class="fuentepeque">Alto Campoo, Masella, Punto de Nieve Santa Inés, Serra da Estrela</span></span>
+				<span class="td tdx3">05/05/2019<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2019-2020</strong></span>
+				<span class="td tdx2">13/11/2019<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">15/03/2020<br><span class="fuentepeque">La Quillane, Peyragudes, Piau-Engaly</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2020-2021</strong></span>
+				<span class="td tdx2">06/12/2020<br><span class="fuentepeque">Punto de Nieve Santa Inés</span></span>
+				<span class="td tdx3">18/04/2021<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2021-2022</strong></span>
+				<span class="td tdx2">20/11/2021<br><span class="fuentepeque">Porté-Puymorens</span></span>
+				<span class="td tdx3">26/04/2022<br><span class="fuentepeque">Valdesquí</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2022-2023</strong></span>
+				<span class="td tdx2">26/11/2022<br><span class="fuentepeque">Baqueira Beret</span></span>
+				<span class="td tdx3">23/04/2023<br><span class="fuentepeque">Cauterets Cirque du Lys</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2023-2024</strong></span>
+				<span class="td tdx2">24/11/2023<br><span class="fuentepeque">Ordino Arcalís</span></span>
+				<span class="td tdx3">28/04/2024<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2024-2025</strong></span>
+				<span class="td tdx2">06/12/2024<br><span class="fuentepeque">Boí Taüll</span></span>
+				<span class="td tdx3">04/05/2025<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>			<div class="tr">
+				<span class="td tdx1"><strong>Temporada 2025-2026</strong></span>
+				<span class="td tdx2">26/11/2025<br><span class="fuentepeque">Masella</span></span>
+				<span class="td tdx3">03/05/2026<br><span class="fuentepeque">Sierra Nevada</span></span>
+			</div>		</div>
+	</div>	</div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+				<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="" rel-idioma="" rel-anterior="L" rel-num-ant="3"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=3&amp;pastilla=17&amp;vm=0&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div>	</div>
+</div>
+
+
+
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+</body></html>

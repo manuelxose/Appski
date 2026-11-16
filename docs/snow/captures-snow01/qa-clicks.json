@@ -1,0 +1,42 @@
+{
+  "entry": {
+    "url": "http://localhost:4010/nieve",
+    "h1": "Parte de nieve"
+  },
+  "click_dashboard_to_estaciones": {
+    "label": "dashboard -> estaciones",
+    "clickedText": "Explorar todas las estaciones",
+    "clickedHref": "/nieve/estaciones",
+    "hrefBefore": "http://localhost:4010/nieve",
+    "hrefAfter": "http://localhost:4010/nieve/estaciones",
+    "h1": "Estaciones de esquí y de fondo",
+    "documentRequestsAfter": [],
+    "console": []
+  },
+  "click_estaciones_to_detalle": {
+    "label": "estaciones -> detalle baqueira",
+    "clickedText": "Baqueira Beret",
+    "clickedHref": "/nieve/estaciones/baqueira-beret",
+    "hrefBefore": "http://localhost:4010/nieve/estaciones",
+    "hrefAfter": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+    "h1": "Baqueira Beret",
+    "documentRequestsAfter": [],
+    "console": []
+  },
+  "click_detalle_back": {
+    "label": "detalle -> estaciones (volver)",
+    "clickedText": "← Volver a la exploradora",
+    "clickedHref": "/nieve/estaciones",
+    "hrefBefore": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+    "hrefAfter": "http://localhost:4010/nieve/estaciones",
+    "h1": "Estaciones de esquí y de fondo",
+    "documentRequestsAfter": [],
+    "console": []
+  },
+  "history_back": {
+    "from": "http://localhost:4010/nieve/estaciones",
+    "to": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+    "h1": "Baqueira Beret",
+    "console": []
+  }
+}

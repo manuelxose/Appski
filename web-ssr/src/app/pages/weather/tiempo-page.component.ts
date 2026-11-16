@@ -14,6 +14,7 @@ import { Subject, takeUntil } from "rxjs";
 import { MeteoStateStore } from "./services/meteo-state.store";
 import { SnowDataService } from "./services/snow-data.service";
 import { MeteoDataService } from "./services/meteo-data.service";
+import { isAvailable, type Availability } from "./services/availability";
 
 // Components
 import { SiteHeaderComponent } from "../../components/site-header/site-header.component";
@@ -105,7 +106,16 @@ type Tab = "now" | "forecast" | "snow" | "webcams" | "radar";
         </div>
 
         <div class="container mx-auto px-4 py-8">
-          @if (store.isLoading()) {
+          <!-- Estado de FUENTES (son datos, no errores): sin proveedor autorizado
+               la página lo dice en vez de pintar cifras de ejemplo. -->
+          @if (!store.isLoading() && !store.error() && !store.hasData()) {
+          <app-tiempo-error-state
+            [title]="'Sin datos meteorológicos disponibles'"
+            [message]="availabilityMessage()"
+            [showRetry]="true"
+            (retry)="handleRetry()"
+          />
+          } @else if (store.isLoading()) {
           <app-tiempo-skeleton />
           } @else if (store.error()) {
           <app-tiempo-error-state
@@ -114,7 +124,16 @@ type Tab = "now" | "forecast" | "snow" | "webcams" | "radar";
             (retry)="handleRetry()"
           />
           } @else if (store.hasData()) {
-          <!-- Summary Cards -->
+          <!-- Avisos de indisponibilidad por fuente (sin bloquear la pantalla). -->
+          @if (webcamsUnavailable()) {
+          <div class="section-spacing">
+            <app-tiempo-error-state
+              [title]="'Webcams no disponibles'"
+              [message]="webcamsUnavailable()!"
+              [showRetry]="false"
+            />
+          </div>
+          }
           @if (store.summaries().length > 0) {
           <div class="section-spacing">
             <app-tiempo-snow-summary [summaries]="store.summaries()" />
@@ -682,12 +701,38 @@ export class TiempoPageComponent implements OnInit, OnDestroy {
   // Usar el nombre de estación del store (ahora dinámico desde StationsService)
   readonly stationName = this.store.stationName;
 
+  /** Motivo de indisponibilidad de las webcams (texto del borde), o `null` si hay dato. */
+  readonly webcamsUnavailable = computed<string | null>(() => {
+    const s = this.store.webcamsState();
+    return s !== null && !isAvailable(s) ? s.detail : null;
+  });
+
+  /**
+   * Texto del estado "sin datos" de la página. Prioriza el motivo REAL de la
+   * fuente de previsión (es la que sostiene la pantalla) y, si tampoco hay,
+   * explica que la observación en directo no existe en v1.
+   */
+  availabilityMessage(): string {
+    const fc = this.store.forecastState();
+    if (fc !== null && !isAvailable(fc)) return fc.detail;
+    const now = this.store.nowState();
+    if (now !== null && !isAvailable(now)) return now.detail;
+    return "No hay datos publicados para esta estación.";
+  }
+
   async ngOnInit(): Promise<void> {
     this.route.params.pipe(takeUntil(this.destroy$)).subscribe((params) => {
       const slug = params["slug"] || "baqueira-beret";
-      this.store.loadStation(slug);
+      // Catálogo real del borde: si el slug no existe, no se inventa la estación.
+      void this.store.loadStationCatalog(slug).then((station) => {
+        this.stationMissing.set(station === null);
+        if (station !== null) this.store.loadStation(slug);
+      });
     });
   }
+
+  /** `true` si el slug pedido no está en el maestro del borde. */
+  readonly stationMissing = signal<boolean>(false);
 
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -719,17 +764,35 @@ export class TiempoPageComponent implements OnInit, OnDestroy {
         this.snowService.getSeasonChartData(slug),
       ]);
 
-      this.snowConditions.set(conditions);
-      this._detailedForecast.set(detailed);
-      this._weekForecast.set(week);
-      this._seasonStats.set(stats);
-      this.seasonCharts.set(charts);
+      // Sólo se guarda el VALOR si el borde lo dio; el estado se guarda SIEMPRE
+      // para que la UI rotule "sin proveedor / licencia / no disponible en v1".
+      this.snowConditions.set(isAvailable(conditions) ? conditions.value : null);
+      this._detailedForecast.set(isAvailable(detailed) ? [...detailed.value] : []);
+      this._weekForecast.set(isAvailable(week) ? [...week.value] : []);
+      this._seasonStats.set(isAvailable(stats) ? stats.value : null);
+      this.seasonCharts.set(isAvailable(charts) ? charts.value : null);
+      this.snowStates.set({
+        conditions,
+        detailed,
+        week,
+        stats,
+        charts,
+      });
     } catch (error) {
       console.error("Error loading snow data:", error);
     } finally {
       this.snowDataLoading.set(false);
     }
   }
+
+  /** Estados de las 5 fuentes de la pestaña Nieve (son DATOS, no errores). */
+  readonly snowStates = signal<{
+    conditions: Availability<unknown>;
+    detailed: Availability<unknown>;
+    week: Availability<unknown>;
+    stats: Availability<unknown>;
+    charts: Availability<unknown>;
+  } | null>(null);
 
   handleCotaChange(cota: Cota): void {
     this.store.selectCota(cota);
@@ -763,7 +826,9 @@ export class TiempoPageComponent implements OnInit, OnDestroy {
         webcamName,
         date
       );
-      this.selectedWebcamHistory.set(history);
+      // Sin endpoint/permiso la historia queda `null` y el modal muestra su
+      // estado vacío; nunca una galería inventada.
+      this.selectedWebcamHistory.set(isAvailable(history) ? history.value : null);
     } catch (error) {
       console.error("Error loading webcam history:", error);
       this.selectedWebcamHistory.set(null);
