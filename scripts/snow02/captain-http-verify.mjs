@@ -51,19 +51,18 @@ function freePort() {
 }
 
 async function startServer(port, dataDir) {
+  // stdio 'inherit': los drivers se invocan también desde un runner confined cuyo
+  // spawn con pipes puede denegarse (EPERM); heredar descriptores funciona.
   const child = spawn(process.execPath, [SERVER], {
     cwd: ROOT,
     env: { ...process.env, PORT: String(port), SNOW_DATA_DIR: dataDir, SNOW_ADMIN_TOKEN: TOKEN, NODE_ENV: 'production' },
-    stdio: ['ignore', 'pipe', 'pipe'],
+    stdio: 'inherit',
   });
-  let log = '';
-  child.stdout.on('data', (d) => (log += String(d)));
-  child.stderr.on('data', (d) => (log += String(d)));
   const base = `http://127.0.0.1:${port}`;
   for (let i = 0; i < 120; i += 1) {
     try {
       const r = await fetch(`${base}/api/snow/v1/stations`);
-      if (r.status > 0) return { child, base, getLog: () => log };
+      if (r.status > 0) return { child, base };
     } catch {
       /* aún no escucha */
     }

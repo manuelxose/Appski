@@ -15,12 +15,12 @@
  *   const srv = await startBundle({ dataDir: dir });
  *   ...  await killBundle(srv);  const again = await startBundle({ dataDir: dir, port: srv.port });
  */
-import { spawn } from 'node:child_process';
 import { createServer } from 'node:net';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnNoPipe, waitUntilReady } from './child.mjs';
 
 export const ROOT = resolve(fileURLToPath(new URL('../../..', import.meta.url)));
 export const BUNDLE = 'dist/web-ssr/server/server.mjs';
@@ -72,33 +72,30 @@ export async function startBundle({ dataDir, port, token = CANARY_TOKEN, timeout
   for (const k of ['AEMET_API_KEY', 'METEOFRANCE_API_KEY', 'C3S_API_KEY', 'CLMS_API_KEY', 'PROTOMAPS_BASE_URL']) {
     delete env[k];
   }
-  // stdio 'inherit': los drivers se invocan también desde un runner confined cuyo
-  // spawn con pipes puede denegarse; heredar los descriptores del padre funciona.
-  const child = spawn(process.execPath, [bundle], { cwd: ROOT, env, stdio: 'inherit' });
-  const log = '(stdio heredado: la salida del bundle va a la consola del runner)';
+  // Sin pipes: el runner confined de ENGINE-04 deniega crearlos (EPERM). Se usa el
+  // lanzador que hereda/ignora descriptores (ver lib/child.mjs y la medición en
+  // scripts/snow02/confined-identity.mjs).
+  const child = spawnNoPipe(process.execPath, [bundle], { cwd: ROOT, env, stdio: 'ignore' });
 
   const base = `http://127.0.0.1:${chosen}`;
-  const deadline = Date.now() + timeoutMs;
-  while (Date.now() < deadline) {
-    if (child.exitCode !== null) throw new Error(`el bundle terminó antes de escuchar: ${log.slice(-400)}`);
-    try {
+  await waitUntilReady(
+    async () => {
       const r = await fetch(`${base}/api/snow/v1/season-dates`, { signal: AbortSignal.timeout(2000) });
-      if (r.ok) return { child, base, port: chosen, dataDir, token, getLog: () => log };
-    } catch {
-      // aún no escucha
-    }
-    await new Promise((r) => setTimeout(r, 250));
-  }
-  throw new Error(`timeout esperando al bundle en ${base}: ${log.slice(-400)}`);
+      return r.ok ? true : null;
+    },
+    {
+      timeoutMs,
+      onDead: () => (child.exited ? new Error(`el bundle terminó antes de escuchar (${child.exitCode?.()})`) : null),
+    },
+  );
+  return { child, base, port: chosen, dataDir, token, getLog: () => '(stdio no capturado en contexto confined)' };
 }
 
 /** Parada ORDENADA (SIGTERM) y espera al cierre. */
-export function stopBundle(srv) {
-  return new Promise((res) => {
-    if (!srv?.child || srv.child.exitCode !== null) return res();
-    srv.child.once('exit', () => res());
-    srv.child.kill('SIGTERM');
-  });
+export async function stopBundle(srv) {
+  if (!srv?.child || srv.child.exited) return;
+  srv.child.kill('SIGTERM');
+  await srv.child.wait();
 }
 
 /**
@@ -106,12 +103,11 @@ export function stopBundle(srv) {
  * un cierre ordenado ni de un volcado en memoria. En Windows `kill` sin señal
  * equivale a TerminateProcess (mata el proceso sin cleanup).
  */
-export function killBundle(srv) {
-  return new Promise((res) => {
-    if (!srv?.child || srv.child.exitCode !== null) return res({ alreadyExited: true });
-    srv.child.once('exit', (code, signal) => res({ code, signal }));
-    srv.child.kill('SIGKILL');
-  });
+export async function killBundle(srv) {
+  if (!srv?.child || srv.child.exited) return { alreadyExited: true };
+  srv.child.kill('SIGKILL');
+  const info = await srv.child.wait();
+  return { code: info.code, signal: info.signal };
 }
 
 /**

@@ -1,6 +1,6 @@
 {
   "driver": "adversarial",
-  "ranAt": "2026-11-16T19:40:32.659Z",
+  "ranAt": "2026-11-16T19:44:19.594Z",
   "total": 14,
   "passed": 14,
   "failed": 0,
@@ -20,7 +20,7 @@
         "statusBody": "not_found"
       },
       "ok": true,
-      "detail": "{\"status\":\"not_found\",\"error\":\"station-not-found\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:40:20.243Z\",\"updatedAt\":\"2026-11-16T19:40:20.243Z\",\"status"
+      "detail": "{\"status\":\"not_found\",\"error\":\"station-not-found\",\"provenance\":{\"source\":\"editorial-stations\",\"observedAt\":\"2026-11-16T19:44:07.143Z\",\"updatedAt\":\"2026-11-16T19:44:07.143Z\",\"status"
     },
     {
       "id": "1b",
@@ -268,8 +268,8 @@
         "entry": {
           "stationSlug": "grandvalira",
           "baseCm": 77,
-          "observedAt": "2026-11-17T01:40:29.586Z",
-          "updatedAt": "2026-11-16T19:40:32.621Z",
+          "observedAt": "2026-11-17T01:44:16.527Z",
+          "updatedAt": "2026-11-16T19:44:19.549Z",
           "status": "stale"
         }
       }

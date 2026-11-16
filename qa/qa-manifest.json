@@ -5,6 +5,14 @@
   "stack": "node",
   "stages": [
     {
+      "id": "confined-diagnostics",
+      "kind": "static-analysis",
+      "required": false,
+      "timeoutMs": 120000,
+      "description": "DIAGNÓSTICO (no decide la entrega): identidad del entorno confined, escritura en temporal y lanzamiento de procesos hijos. Se ejecuta con --stages confined-diagnostics.",
+      "argv": ["node", "scripts/snow02/confined-identity.mjs"]
+    },
+    {
       "id": "typecheck",
       "kind": "typecheck",
       "required": true,
@@ -58,13 +66,15 @@
       "kind": "build",
       "required": true,
       "timeoutMs": 900000,
+      "description": "Nx directo desde web-ssr (cluster Nx del repo); no `npx`, que el runner confined no resuelve.",
       "argv": [
-        "npx",
-        "nx",
+        "node",
+        "../node_modules/nx/bin/nx.js",
         "build",
         "web-ssr",
         "--configuration=production",
-        "--skip-nx-cache"
+        "--skip-nx-cache",
+        "--outputStyle=static"
       ]
     },
     {
