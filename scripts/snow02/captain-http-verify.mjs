@@ -17,6 +17,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, 
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stableSummary } from './normalize-evidence.mjs';
 
 const ROOT = resolve(fileURLToPath(new URL('../..', import.meta.url)));
 const SERVER = join(ROOT, 'dist', 'web-ssr', 'server', 'server.mjs');
@@ -311,8 +312,6 @@ async function main() {
   }
 
   const summary = {
-    generatedAt: new Date().toISOString(),
-    server: 'dist/web-ssr/server/server.mjs',
     total: results.length,
     passed: results.filter((r) => r.ok).length,
     failed: failures,
@@ -320,7 +319,8 @@ async function main() {
   };
   mkdirSync(outDir, { recursive: true });
   const outFile = join(outDir, 'captain-http-verify.json');
-  writeFileSync(outFile, JSON.stringify(summary, null, 2), 'utf8');
+  // Evidencia ESTABLE (sin timestamps): el árbol no debe derivar durante `verify`.
+  writeFileSync(outFile, JSON.stringify(stableSummary({ ...summary, server: 'dist/web-ssr/server/server.mjs' }) ?? summary, null, 2), 'utf8');
   console.log(`\nchecks=${summary.total} passed=${summary.passed} failed=${summary.failed}`);
   console.log(`evidencia: ${outFile}`);
   process.exit(failures === 0 ? 0 : 1);
