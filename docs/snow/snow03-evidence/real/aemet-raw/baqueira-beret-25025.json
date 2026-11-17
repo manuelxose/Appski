@@ -1,30 +1,17 @@
 {
   "note": "Respuesta AUTÉNTICA de AEMET OpenData (adapter real). Urls redactadas.",
-  "generatedAt": "2026-11-17T10:04:12.150Z",
+  "generatedAt": "2026-11-17T10:09:53.265Z",
   "stationSlug": "baqueira-beret",
   "municipio": "25025",
-  "requestedAt": "2026-11-17T10:02:51.787Z",
+  "requestedAt": "2026-11-17T10:09:33.064Z",
   "attempts": [
-    {
-      "status": "rate_limited",
-      "retryAfterMs": 60000
-    },
     {
       "status": "ok",
       "retryAfterMs": null
     }
   ],
-  "waitedMs": 60000,
+  "waitedMs": 0,
   "http": [
-    {
-      "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/25025?api_key=REDACTED",
-      "httpStatus": 429,
-      "contentType": "text/plain; charset=UTF-8",
-      "bytes": 127,
-      "sha256": "bd66e9822a4b0c2797cb674b6c937f631c654ee70de9c7b56b5de2623a66f835",
-      "elapsedMs": 161,
-      "note": "respuesta de error (cuerpo no se publica)"
-    },
     {
       "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/25025?api_key=REDACTED",
       "httpStatus": 200,
@@ -32,7 +19,7 @@
       "charset": "iso-8859-15",
       "bytes": 175,
       "sha256": "6128cf06a8193eb9c6304f2c36abffc0bfb34201cd1064a230bd588ccd2952da",
-      "elapsedMs": 99
+      "elapsedMs": 236
     },
     {
       "url": "https://opendata.aemet.es/opendata/sh/a41e4733",
@@ -41,7 +28,7 @@
       "charset": "iso-8859-15",
       "bytes": 29916,
       "sha256": "e195c475e18a702193a6ac7e33d9bd99c4a0f71f6818696fa183fd92aa416922",
-      "elapsedMs": 132
+      "elapsedMs": 133
     }
   ],
   "result": {
@@ -55,7 +42,7 @@
       "updatedAt": "2026-11-17T08:09:08.000Z",
       "status": "live",
       "licenseStatus": "allowed-with-attribution",
-      "freshness": 6824,
+      "freshness": 7225,
       "authorization": {
         "registryRef": "05#aemet",
         "licenseId": "aemet-nota-legal",

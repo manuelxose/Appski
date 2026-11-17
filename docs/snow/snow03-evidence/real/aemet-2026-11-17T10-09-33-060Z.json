@@ -1,6 +1,6 @@
 {
   "note": "Verificación REAL end-to-end de AEMET OpenData (SNOW-03b t1). Sin dobles: adapter real contra opendata.aemet.es y el borde /v1/stations/:slug/forecast servido desde fuente. Las URLs se publican REDACTADAS (redactUrl) y se comprueba que la clave no aparece en ningún fichero.",
-  "generatedAt": "2026-11-17T10:05:38.687Z",
+  "generatedAt": "2026-11-17T10:11:15.248Z",
   "adapter": "aemet",
   "dataType": "forecast",
   "endpoint": "prediccion/especifica/municipio/horaria/{id} (dos pasos: sobre → datos)",
@@ -75,11 +75,11 @@
   "rawFiles": [
     {
       "file": "docs\\snow\\snow03-evidence\\real\\aemet-raw\\baqueira-beret-25025.json",
-      "sha256": "2a569a64aaa372d3e93f897284248b4f47dc7a4adbcaf3a3dc95eeba2d9a5483"
+      "sha256": "f9f9953ce27d11bc9ee00d75b5384143c2bd7ed088b960bc091cf5fdc32260c9"
     },
     {
       "file": "docs\\snow\\snow03-evidence\\real\\aemet-raw\\formigal-panticosa-22204.json",
-      "sha256": "12dab4f94d4ff81b757075e11394e118b03ced35335df6b9b7477bab7ddeac63"
+      "sha256": "4f61a0d8ea8c946c95284e394a4f6214a681a0320388f21b89e2fbc2ecc3ff69"
     }
   ],
   "results": [
@@ -121,7 +121,6 @@
         "status": "ok",
         "points": 48,
         "http": [
-          429,
           200,
           200
         ]
@@ -153,8 +152,8 @@
       "ok": true,
       "detail": {
         "observedAt": "2026-11-17T08:09:08.000Z",
-        "requestedAt": "2026-11-17T10:02:51.787Z",
-        "freshnessS": 6824
+        "requestedAt": "2026-11-17T10:09:33.064Z",
+        "freshnessS": 7225
       }
     },
     {
@@ -215,8 +214,8 @@
       "ok": true,
       "detail": {
         "observedAt": "2026-11-17T08:09:08.000Z",
-        "requestedAt": "2026-11-17T10:04:12.154Z",
-        "freshnessS": 6904
+        "requestedAt": "2026-11-17T10:09:53.272Z",
+        "freshnessS": 7245
       }
     },
     {
