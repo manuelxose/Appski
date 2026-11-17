@@ -1,0 +1,51 @@
+{
+  "head" : {
+    "vars" : [ "item", "itemLabel", "coord", "elev", "website" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2963663"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(77.08083333 43.12805556)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.shymbulak.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "fr",
+        "type" : "literal",
+        "value" : "Chimbulak"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113566511"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(77.364166666 43.270277777)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://ak-bulak.kz/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Aq Bulaq"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2664"
+      }
+    } ]
+  }
+}

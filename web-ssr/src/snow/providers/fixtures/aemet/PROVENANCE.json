@@ -1,0 +1,79 @@
+{
+  "note": "⚠️ FIXTURES SINTÉTICAS. Reproducen el formato documentado y las trampas MEDIDAS de AEMET OpenData (ISO-8859-15 con BOM, 200 con cuerpo vacío, 429 con cuerpo HTML, centinela -99, pares {value, periodo}, racha como array plano). No son respuestas capturadas: no había clave AEMET en la sesión que las generó. Los valores NO son un pronóstico real y NO deben usarse como dato operativo; sólo como contrato de formato para el adapter. Generadas por scripts/snow03/capture-aemet-fixtures.mjs.",
+  "synthetic": true,
+  "generatedAt": "2026-11-17T01:27:27.164Z",
+  "records": [
+    {
+      "label": "meta-ok",
+      "file": "meta-ok.json",
+      "synthetic": true,
+      "note": "Paso 1 OK: sobre {estado, datos, metadatos} con la URL del segundo paso.",
+      "bytes": 173,
+      "sha256": "da1f9c05f05f3560b6c365b7bd8418d95b69867ce239d33e9af87a8efea2bff3",
+      "hasBom": true
+    },
+    {
+      "label": "prediccion-2dias",
+      "file": "prediccion-2dias.json",
+      "synthetic": true,
+      "note": "Paso 2: [0].prediccion.dia[] de 2 días × 24 horas, ISO-8859-15 con BOM. `fecha` usa la forma REAL medida contra el servicio (2026-11-16T00:00:00, hora LOCAL sin sufijo).",
+      "bytes": 15992,
+      "sha256": "cee285bc81b48eb75ad32b55c74f42b0d5e775e6e62c3ff379295bef89b57920",
+      "hasBom": true
+    },
+    {
+      "label": "prediccion-periodos-especiales",
+      "file": "prediccion-periodos-especiales.json",
+      "synthetic": true,
+      "note": "Paso 2 con los periodos ESPECIALES de AEMET: \"1901\" (todo el día) en precipitación y probNieve, junto a horas normales. El adapter debe descartarlos con motivo, no inventar la hora.",
+      "bytes": 802,
+      "sha256": "bb301bf95803485039dbc879676c7b32939fb6b47f6665216dcdc62d56f13cb8",
+      "hasBom": true
+    },
+    {
+      "label": "prediccion-centinelas",
+      "file": "prediccion-centinelas.json",
+      "synthetic": true,
+      "note": "Paso 2 con -99 (centinela de «no dato») en temperatura, viento y racha.",
+      "bytes": 1161,
+      "sha256": "3c0ebecf57ea8cff6b325b910af780ef080e261d49781a3a88075c62dc21451c",
+      "hasBom": true
+    },
+    {
+      "label": "paso2-vacio",
+      "file": "paso2-vacio.json",
+      "synthetic": true,
+      "note": "Paso 2 con cuerpo VACÍO (sin clave el servicio responde 200 y 0 bytes).",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hasBom": false
+    },
+    {
+      "label": "paso2-roto",
+      "file": "paso2-roto.json",
+      "synthetic": true,
+      "note": "Paso 2 con JSON truncado (respuesta cortada a mitad de escritura).",
+      "bytes": 47,
+      "sha256": "99e689bde9f3d82417bd8192f2f7b3523ee0cb691832231970867d91947dc2f4",
+      "hasBom": true
+    },
+    {
+      "label": "paso2-objeto",
+      "file": "paso2-objeto.json",
+      "synthetic": true,
+      "note": "Paso 2 con JSON válido pero de forma distinta (no es el array que se espera).",
+      "bytes": 75,
+      "sha256": "afbd0b57a4b00e90f88403c674fe4fdb81589426535ae3f9df4a87cebea018d3",
+      "hasBom": true
+    },
+    {
+      "label": "ratelimit-429",
+      "file": "ratelimit-429.html",
+      "synthetic": true,
+      "note": "Cuerpo HTML LITERAL del 429 de AEMET (límite de uso alcanzado).",
+      "bytes": 209,
+      "sha256": "e9c60307149aa210bb0a8bb4716fafe1d7f806cf49b82fe667ca31898f2baa04",
+      "hasBom": false
+    }
+  ]
+}

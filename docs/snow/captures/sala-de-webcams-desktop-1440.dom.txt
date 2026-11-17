@@ -1,0 +1,1125 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Sala de Webcams de las estaciones de esquí - Infonieve.es</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Echa un vistazo a lo que está ocurriendo en las estaciones de esquí de todo el Mundo a través de las webcams en directo en las pistas">
+<meta name="Keywords" content="webcams, camaras, camara web, directo, live">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Sala de Webcams de las estaciones de esquí - Infonieve.es">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Echa un vistazo a lo que está ocurriendo en las estaciones de esquí de todo el Mundo a través de las webcams en directo en las pistas">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'/sala-de-webcams' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_zona', 'webcams');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611050101/pubads_impl.js?cb=122882195" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación" style=""></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l no_tooltip">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2Fsala-de-webcams%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Sala+de+Webcams+de+las+estaciones+de+esqu%C3%AD&amp;url=https%3A%2F%2Fwww.infonieve.es%2Fsala-de-webcams%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2Fsala-de-webcams%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación" style=""></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="encabezado_bread">
+		<div id="breadcrumb">
+		<div class="wrap">
+			<ol class="breadcrumb">
+			<li class="breadcrumb_home"><a href="./" title="Infonieve.es - Portada"><i class="imagen"></i></a></li><li><span>SALA DE WEBCAMS</span></li>			</ol>
+		</div>
+	</div>
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+
+<div class="encabezado encabezado_bread">
+
+	<div class="encabezado_titulo">
+		<div>
+			<h1><span>Sala de Webcams</span></h1>
+			<h3>En directo desde las principales estaciones de esquí del Mundo</h3>
+		</div>
+	</div>
+
+	<div id="submenu" class="submenu">
+		<div class="submenu_overflow_none">
+			<nav class="dragscroll">
+				<ul>
+					<li class="selec"><a href="sala-de-webcams/" title="Webcams en directo desde las principales estaciones de esquí del Mundo">Sala de Webcams</a></li>
+					<li><a href="sala-de-webcams/donde-esta-nevando/" title="Estaciones de esquí donde está nevando ahora mismo">Donde está nevando?</a></li>
+					<li><a href="sala-de-webcams/tematicas/" title="Webcams de las estaciones por tipo de ubicación">Por temáticas</a></li>
+				</ul>
+			</nav>
+		<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+	</div>
+
+	<div class="encabezado_roba">
+		<div class="box_banpub">
+			
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+			</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+		
+		<div class="listado_pais">
+			<a href="sala-de-webcams/donde-esta-nevando/" title="Ahora mismo está nevando en...">ESTÁ NEVANDO EN...</a>
+		</div>
+		
+		<div class="salawebcams margen_bot8">
+			<ul>
+							<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/formigal/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Formigal">
+							<span class="salawebcams_img">
+								<img src="https://webtvpicture.feratel.com/picture/35/15020.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="nevando_1361" onerror="webcam_def(this);" alt="Formigal, Anayet 2.150">
+								<span class="img" id="nevando_1361" style="background-image: url(https://webtvpicture.feratel.com/picture/35/15020.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Formigal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/formigal/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Formigal">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/formigal-anayet-izas_2026-11-16-14-00-405.jpg" class="webcam" loading="lazy" rel="nevando_2712" onerror="webcam_def(this);" alt="Formigal, Panorámica Sarrios - Izas">
+								<span class="img" id="nevando_2712" style="background-image: url(https://www.infonieve.es/webcams/formigal-anayet-izas_2026-11-16-14-00-405.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Formigal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/astun/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Astún">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/astun-cima-raca_2026-11-16-14-00-868.jpg" class="webcam" loading="lazy" rel="nevando_2457" onerror="webcam_def(this);" alt="Astún, Cima Raca">
+								<span class="img" id="nevando_2457" style="background-image: url(https://www.infonieve.es/webcams/astun-cima-raca_2026-11-16-14-00-868.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Astún</span>
+						</a>
+						<a href="http://www.astun.com/" class="salawebcams_author redondeado track_astun-com_ExternalLink_sala-de-webcams" target="_blank">© astun.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/formigal/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Formigal">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/formigal-picoroyo_2026-11-16-14-00-283.jpg" class="webcam" loading="lazy" rel="nevando_2713" onerror="webcam_def(this);" alt="Formigal, Anayet - Pico Royo">
+								<span class="img" id="nevando_2713" style="background-image: url(https://www.infonieve.es/webcams/formigal-picoroyo_2026-11-16-14-00-283.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Formigal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/ordino-arcalis/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Ordino Arcalís">
+							<span class="salawebcams_img">
+								<img src="https://webtvpicture.feratel.com/picture/35/15030.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="nevando_2968" onerror="webcam_def(this);" alt="Ordino Arcalís, Ts La Coma">
+								<span class="img" id="nevando_2968" style="background-image: url(https://webtvpicture.feratel.com/picture/35/15030.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Ordino Arcalís</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/baqueira-beret/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Baqueira Beret">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/baqueira-tv3_2026-11-16-14-00-784.jpg" class="webcam" loading="lazy" rel="nevando_1532" onerror="webcam_def(this);" alt="Baqueira Beret, Cap de Baqueira">
+								<span class="img" id="nevando_1532" style="background-image: url(https://www.infonieve.es/webcams/baqueira-tv3_2026-11-16-14-00-784.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Baqueira Beret</span>
+						</a>
+						<a href="http://www.3cat.cat/" class="salawebcams_author redondeado track_3cat-cat_ExternalLink_sala-de-webcams" target="_blank">© 3cat.cat</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/ordino-arcalis/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Ordino Arcalís">
+							<span class="salawebcams_img">
+								<img src="https://webtvhotspot.feratel.com/hotspot/35/15030/2.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="nevando_2024" onerror="webcam_def(this);" alt="Ordino Arcalís, Cap de la Coma">
+								<span class="img" id="nevando_2024" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15030/2.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Ordino Arcalís</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_featel-com_ExternalLink_sala-de-webcams" target="_blank">© featel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/cerler/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Cerler">
+							<span class="salawebcams_img">
+								<img src="https://webtvhotspot.feratel.com/hotspot/35/15082/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="nevando_3013" onerror="webcam_def(this);" alt="Cerler, Castanesa - Pico Basibé">
+								<span class="img" id="nevando_3013" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15082/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Cerler</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+							</ul>
+			<div class="clear"></div>
+			<div class="botonera botonera_notick center"><a href="sala-de-webcams/donde-esta-nevando/" title="Ver en que estaciones está nevando ahora mismo">Ver donde está nevando</a></div>
+		</div>
+	</div>
+</div>
+	
+<div class="pad_box">
+	<div class="box">
+			<div class="listado_pais margen_bot8">
+			<a href="sala-de-webcams/cont/europa/" title="Webcams de las estaciones de esquí de Europa">WEBCAMS DE EUROPA</a>
+		</div>
+					<div class="listado_cord">
+			<a href="estaciones-esqui/" title="Webcams de las estaciones de esquí de la Península Ibérica">PENÍNSULA IBÉRICA</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+								<li>
+					<div class="salabloques_cont">
+						<a href="estaciones-esqui/pais/espana/" class="redondeado" title="Webcams de las estaciones de esquí de España">
+							<span class="salabloques_img" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15111/2.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ESPAÑA</span>
+								<span class="salabloques_txt">203 webcams en 30 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+										<li>
+					<div class="salabloques_cont">
+						<a href="estaciones-esqui/pais/andorra/" class="redondeado" title="Webcams de las estaciones de esquí de Andorra">
+							<span class="salabloques_img" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15045/2.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ANDORRA</span>
+								<span class="salabloques_txt">73 webcams en 4 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+										<li>
+					<div class="salabloques_cont">
+						<a href="estaciones-esqui/pais/pirineo-frances/" class="redondeado" title="Webcams de las estaciones de esquí de Pirineo Francés">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/tourmalet-midi-torunaboup_2026-11-16-14-03-299.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">PIRINEO FRANCÉS</span>
+								<span class="salabloques_txt">158 webcams en 29 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+										<li>
+					<div class="salabloques_cont">
+						<a href="estaciones-esqui/pais/portugal/" class="redondeado" title="Webcams de las estaciones de esquí de Portugal">
+							<span class="salabloques_img" style="background-image: url(https://www.meteoestrela.pt/assets/webcam/cam_2.jpg?intmp=1794835753);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">PORTUGAL</span>
+								<span class="salabloques_txt">3 webcams en 1 estación</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									</ul>
+			<div class="clear"></div>
+		</div>
+						<div class="listado_cord">
+			<a href="esqui-de-fondo/" title="Webcams de las estaciones de esquí de fondo de la Península Ibérica">ESQUÍ DE FONDO</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+								<li>
+					<div class="salabloques_cont">
+						<a href="esqui-de-fondo/pais/espana/" class="redondeado" title="Webcams de las estaciones de esquí de España">
+							<span class="salabloques_img" style="background-image: url(https://administracionelectronica.navarra.es/AccesoFicheros/DownloadFile.aspx?CodigoCompleto=camarascarreteras@@@BELAGUA_EL_FERIAL_PK_55.JPG&amp;intmp=1794835753);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ESPAÑA</span>
+								<span class="salabloques_txt">29 webcams en 19 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+										<li>
+					<div class="salabloques_cont">
+						<a href="esqui-de-fondo/pais/andorra/" class="redondeado" title="Webcams de las estaciones de esquí de Andorra">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/larabassa-cota2000_2026-11-16-14-03-357.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ANDORRA</span>
+								<span class="salabloques_txt">2 webcams en 1 estación</span>
+							</span>
+						</a>
+					</div>
+				</li>
+										<li>
+					<div class="salabloques_cont">
+						<a href="esqui-de-fondo/pais/pirineo-frances/" class="redondeado" title="Webcams de las estaciones de esquí de Pirineo Francés">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/beille-espaceluge_2026-11-16-11-33-909.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">PIRINEO FRANCÉS</span>
+								<span class="salabloques_txt">25 webcams en 10 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									</ul>
+			<div class="clear"></div>
+		</div>
+						<div class="listado_cord">
+			<a href="sala-de-webcams/reg/alpes/" title="Webcams de las estaciones de esquí de Alpes">ALPES</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+							<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/alpes-franceses/" class="redondeado" title="Webcams de las estaciones de esquí de Alpes Franceses">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/serrechevalier-monetier_2026-11-16-14-06-969.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ALPES FRANCESES</span>
+								<span class="salabloques_txt">67 webcams en 11 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/alpes-italianos/" class="redondeado" title="Webcams de las estaciones de esquí de Alpes Italianos">
+							<span class="salabloques_img" style="background-image: url(https://www.funiviecampiglio.it/webcam/webcamcampiglio03-800.php?intmp=1794835753);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ALPES ITALIANOS</span>
+								<span class="salabloques_txt">56 webcams en 10 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/suiza/" class="redondeado" title="Webcams de las estaciones de esquí de Suiza">
+							<span class="salabloques_img" style="background-image: url(https://webtvpicture.feratel.com/picture/35/4003.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">SUIZA</span>
+								<span class="salabloques_txt">31 webcams en 9 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/austria/" class="redondeado" title="Webcams de las estaciones de esquí de Austria">
+							<span class="salabloques_img" style="background-image: url(https://webtvpicture.feratel.com/picture/35/5216.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">AUSTRIA</span>
+								<span class="salabloques_txt">74 webcams en 13 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/alemania/" class="redondeado" title="Webcams de las estaciones de esquí de Alemania">
+							<span class="salabloques_img" style="background-image: url(https://webcams.tramino.net/das-hoechste/nebelhorn-berg.jpg?intmp=1794835753);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ALEMANIA</span>
+								<span class="salabloques_txt">24 webcams en 4 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+								</ul>
+			<div class="clear"></div>
+		</div>
+					<div class="listado_pais margen_bot8">
+			<a href="sala-de-webcams/cont/norteamerica/" title="Webcams de las estaciones de esquí de Norteamérica">WEBCAMS DE NORTEAMÉRICA</a>
+		</div>
+					<div class="listado_cord">
+			<a href="sala-de-webcams/reg/norteamerica/" title="Webcams de las estaciones de esquí de Norteamérica">NORTEAMÉRICA</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+							<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/estados-unidos/" class="redondeado" title="Webcams de las estaciones de esquí de Estados Unidos">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/aspen-sundeck_2026-11-16-14-08-733.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">ESTADOS UNIDOS</span>
+								<span class="salabloques_txt">3 webcams en 10 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/canada/" class="redondeado" title="Webcams de las estaciones de esquí de Canadá">
+							<span class="salabloques_img" style="background-image: url(https://cams.skilouise.com/cam2.jpg?intmp=1794835753);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">CANADÁ</span>
+								<span class="salabloques_txt">4 webcams en 6 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+								</ul>
+			<div class="clear"></div>
+		</div>
+					<div class="listado_pais margen_bot8">
+			<a href="sala-de-webcams/cont/hemisferio-sur/" title="Webcams de las estaciones de esquí de Hemisferio Sur">WEBCAMS DE HEMISFERIO SUR</a>
+		</div>
+					<div class="listado_cord">
+			<a href="sala-de-webcams/reg/sudamerica/" title="Webcams de las estaciones de esquí de Sudamérica">SUDAMÉRICA</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+							<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/argentina/" class="redondeado" title="Webcams de las estaciones de esquí de Argentina">
+														<span class="salabloques_cap">
+								<span class="salabloques_tit">ARGENTINA</span>
+								<span class="salabloques_txt">0 webcams en 4 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/chile/" class="redondeado" title="Webcams de las estaciones de esquí de Chile">
+							<span class="salabloques_img" style="background-image: url(https://www.infonieve.es/webcams/vallenevado-fourchette_2026-11-16-14-08-516.jpg);"></span>							<span class="salabloques_cap">
+								<span class="salabloques_tit">CHILE</span>
+								<span class="salabloques_txt">1 webcam en 5 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+								</ul>
+			<div class="clear"></div>
+		</div>
+					<div class="listado_cord">
+			<a href="sala-de-webcams/reg/oceania/" title="Webcams de las estaciones de esquí de Oceanía">OCEANÍA</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+							<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/australia/" class="redondeado" title="Webcams de las estaciones de esquí de Australia">
+														<span class="salabloques_cap">
+								<span class="salabloques_tit">AUSTRALIA</span>
+								<span class="salabloques_txt">0 webcams en 8 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/nueva-zelanda/" class="redondeado" title="Webcams de las estaciones de esquí de Nueva Zelanda">
+														<span class="salabloques_cap">
+								<span class="salabloques_tit">NUEVA ZELANDA</span>
+								<span class="salabloques_txt">0 webcams en 7 estaciones</span>
+							</span>
+						</a>
+					</div>
+				</li>
+								</ul>
+			<div class="clear"></div>
+		</div>
+					<div class="listado_cord">
+			<a href="sala-de-webcams/reg/africa/" title="Webcams de las estaciones de esquí de África">ÁFRICA</a>
+		</div>
+		<div class="salabloques margen_bot8">
+			<ul>
+							<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/lesotho/" class="redondeado" title="Webcams de las estaciones de esquí de Lesotho">
+														<span class="salabloques_cap">
+								<span class="salabloques_tit">LESOTHO</span>
+								<span class="salabloques_txt">0 webcams en 1 estación</span>
+							</span>
+						</a>
+					</div>
+				</li>
+									<li>
+					<div class="salabloques_cont">
+						<a href="sala-de-webcams/estaciones-esqui/sudafrica/" class="redondeado" title="Webcams de las estaciones de esquí de Sudáfrica">
+														<span class="salabloques_cap">
+								<span class="salabloques_tit">SUDÁFRICA</span>
+								<span class="salabloques_txt">0 webcams en 1 estación</span>
+							</span>
+						</a>
+					</div>
+				</li>
+								</ul>
+			<div class="clear"></div>
+		</div>
+				</div>
+</div>
+
+<div class="pad_box">
+	<div class="box">
+		<div class="listado_pais margen_bot8">
+			<a href="sala-de-webcams/tematicas/" title="Webcams por temáticas de las estaciones de esquí del Mundo">WEBCAMS TEMÁTICAS</a>
+		</div>
+				<div class="listado_cord">
+			<a href="sala-de-webcams/tem/snowparks/" title="Webcams de Snowparks">SNOWPARKS</a>
+		</div>
+		<div class="salawebcams margen_bot8">
+			<ul>
+							<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/livigno/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Livigno">
+							<span class="salawebcams_img">
+								<img src="https://webtvpicture.feratel.com/picture/35/6176.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_2813" onerror="webcam_def(this);" alt="Livigno, Snowpark">
+								<span class="img" id="tematica_2813" style="background-image: url(https://webtvpicture.feratel.com/picture/35/6176.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Livigno</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/sierra-nevada/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Sierra Nevada">
+							<span class="salawebcams_img">
+								<img src="https://webtvhotspot.feratel.com/hotspot/35/15113/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_3046" onerror="webcam_def(this);" alt="Sierra Nevada, Montebajo - Ts Loma de Dilar">
+								<span class="img" id="tematica_3046" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15113/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Sierra Nevada</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/pal-arinsal/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Pal Arinsal">
+							<span class="salawebcams_img">
+								<img src="https://webtvhotspot.feratel.com/hotspot/35/15037/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_2782" onerror="webcam_def(this);" alt="Pal Arinsal, Arinsal - Snowpark">
+								<span class="img" id="tematica_2782" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15037/0.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Pal Arinsal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/pal-arinsal/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Pal Arinsal">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/palarinsal-igloo-lacapa_2026-11-16-14-01-890.jpg" class="webcam" loading="lazy" rel="tematica_2783" onerror="webcam_def(this);" alt="Pal Arinsal, Arinsal - Pic Alt de la Capa">
+								<span class="img" id="tematica_2783" style="background-image: url(https://www.infonieve.es/webcams/palarinsal-igloo-lacapa_2026-11-16-14-01-890.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Pal Arinsal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/sierra-nevada/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Sierra Nevada">
+							<span class="salawebcams_img">
+								<img src="https://webtvhotspot.feratel.com/hotspot/35/15113/4.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_3050" onerror="webcam_def(this);" alt="Sierra Nevada, Montebajo - Snowpark">
+								<span class="img" id="tematica_3050" style="background-image: url(https://webtvhotspot.feratel.com/hotspot/35/15113/4.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Sierra Nevada</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/madonna-di-campiglio/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Madonna di Campiglio">
+							<span class="salawebcams_img">
+								<img src="https://www.funiviecampiglio.it/webcam/webcamcampiglio03-800.php?intmp=1794835753" class="webcam" loading="lazy" rel="tematica_1243" onerror="webcam_def(this);" alt="Madonna di Campiglio, Grostè and Snowpark">
+								<span class="img" id="tematica_1243" style="background-image: url(https://www.funiviecampiglio.it/webcam/webcamcampiglio03-800.php?intmp=1794835753);"></span>
+							</span>
+							<span class="salawebcams_cap">Madonna di Campiglio</span>
+						</a>
+						<a href="http://www.funiviecampiglio.it/" class="salawebcams_author redondeado track_funiviecampiglio-it_ExternalLink_sala-de-webcams" target="_blank">© funiviecampiglio.it</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/piau-engaly/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Piau-Engaly">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/piau-snowpark_2026-11-16-14-02-971.jpg" class="webcam" loading="lazy" rel="tematica_626" onerror="webcam_def(this);" alt="Piau-Engaly, Snowpark">
+								<span class="img" id="tematica_626" style="background-image: url(https://www.infonieve.es/webcams/piau-snowpark_2026-11-16-14-02-971.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Piau-Engaly</span>
+						</a>
+						<a href="http://www.viewsurf.com/" class="salawebcams_author redondeado track_viewsurf-com_ExternalLink_sala-de-webcams" target="_blank">© viewsurf.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="estacion-esqui/ax-3-domaines/webcams/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Ax 3 Domaines">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/ax-snowpark_2026-11-16-14-02-337.jpg" class="webcam" loading="lazy" rel="tematica_3083" onerror="webcam_def(this);" alt="Ax 3 Domaines, Snowpark">
+								<span class="img" id="tematica_3083" style="background-image: url(https://www.infonieve.es/webcams/ax-snowpark_2026-11-16-14-02-337.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Ax 3 Domaines</span>
+						</a>
+						<a href="http://www.viewsurf.com/" class="salawebcams_author redondeado track_viewsurf-com_ExternalLink_sala-de-webcams" target="_blank">© viewsurf.com</a>
+					</div>
+				</li>
+							</ul>
+			<div class="clear"></div>
+			<div class="botonera botonera_notick center"><a href="sala-de-webcams/tem/snowparks/" title="Ver todas las webcams en Snowparks">Ver más webcams en Snowparks</a></div>
+		</div>
+				<div class="listado_cord">
+			<a href="sala-de-webcams/tem/glaciares-de-verano/" title="Webcams de Glaciares de Verano">GLACIARES DE VERANO</a>
+		</div>
+		<div class="salawebcams margen_bot8">
+			<ul>
+							<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/cervinia/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Cervinia">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/cervinia-plateaurosa-bottom_2026-11-16-14-04-482.jpg" class="webcam" loading="lazy" rel="tematica_2366" onerror="webcam_def(this);" alt="Cervinia, Plateau Rosa - Bottom">
+								<span class="img" id="tematica_2366" style="background-image: url(https://www.infonieve.es/webcams/cervinia-plateaurosa-bottom_2026-11-16-14-04-482.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Cervinia</span>
+						</a>
+						<a href="http://www.panomax.com/" class="salawebcams_author redondeado track_panomax-com_ExternalLink_sala-de-webcams" target="_blank">© panomax.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/gstaad/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Gstaad">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/gstaad-glacier3000_2026-11-16-14-04-805.jpg" class="webcam" loading="lazy" rel="tematica_1413" onerror="webcam_def(this);" alt="Gstaad, Glacier 3000">
+								<span class="img" id="tematica_1413" style="background-image: url(https://www.infonieve.es/webcams/gstaad-glacier3000_2026-11-16-14-04-805.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Gstaad</span>
+						</a>
+						<a href="http://www.roundshot.com/" class="salawebcams_author redondeado track_roundshot-com_ExternalLink_sala-de-webcams" target="_blank">© roundshot.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/tignes/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Tignes">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/tignes-grandemotte-glacier_2026-11-16-14-07-632.jpg" class="webcam" loading="lazy" rel="tematica_1475" onerror="webcam_def(this);" alt="Tignes, Glacier de la Grande Motte">
+								<span class="img" id="tematica_1475" style="background-image: url(https://www.infonieve.es/webcams/tignes-grandemotte-glacier_2026-11-16-14-07-632.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Tignes</span>
+						</a>
+						<a href="http://www.roundshot.com/" class="salawebcams_author redondeado track_roundshot-com_ExternalLink_sala-de-webcams" target="_blank">© roundshot.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/schladming-dachstein/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Schladming-Dachstein">
+							<span class="salawebcams_img">
+								<img src="https://webtvpicture.feratel.com/picture/35/5422.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_1390" onerror="webcam_def(this);" alt="Schladming-Dachstein, Dachstein Gletscher - Hunerkogel">
+								<span class="img" id="tematica_1390" style="background-image: url(https://webtvpicture.feratel.com/picture/35/5422.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Schladming-Dachstein</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/tignes/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Tignes">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/tignes-grandemotte-vanoise_2026-11-16-14-07-755.jpg" class="webcam" loading="lazy" rel="tematica_1476" onerror="webcam_def(this);" alt="Tignes, Grande Motte - TS Vanoise">
+								<span class="img" id="tematica_1476" style="background-image: url(https://www.infonieve.es/webcams/tignes-grandemotte-vanoise_2026-11-16-14-07-755.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Tignes</span>
+						</a>
+						<a href="http://www.roundshot.com/" class="salawebcams_author redondeado track_roundshot-com_ExternalLink_sala-de-webcams" target="_blank">© roundshot.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/les-diablerets/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Les Diablerets">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/lesdiablerets-glacier-scexrouge_2026-11-16-14-06-702.jpg" class="webcam" loading="lazy" rel="tematica_2282" onerror="webcam_def(this);" alt="Les Diablerets, Glacier 3000">
+								<span class="img" id="tematica_2282" style="background-image: url(https://www.infonieve.es/webcams/lesdiablerets-glacier-scexrouge_2026-11-16-14-06-702.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Les Diablerets</span>
+						</a>
+						<a href="http://www.roundshot.com/" class="salawebcams_author redondeado track_roundshot-com_ExternalLink_sala-de-webcams" target="_blank">© roundshot.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/tignes/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Tignes">
+							<span class="salawebcams_img">
+								<img src="https://www.infonieve.es/webcams/tignes-grandemotte-rosolin_2026-11-16-14-07-164.jpg" class="webcam" loading="lazy" rel="tematica_1477" onerror="webcam_def(this);" alt="Tignes, Glacier - Rosolin">
+								<span class="img" id="tematica_1477" style="background-image: url(https://www.infonieve.es/webcams/tignes-grandemotte-rosolin_2026-11-16-14-07-164.jpg);"></span>
+							</span>
+							<span class="salawebcams_cap">Tignes</span>
+						</a>
+						<a href="http://www.roundshot.com/" class="salawebcams_author redondeado track_roundshot-com_ExternalLink_sala-de-webcams" target="_blank">© roundshot.com</a>
+					</div>
+				</li>
+								<li>
+					<div class="salawebcams_cont">
+						<a href="sala-de-webcams/estacion-esqui/zillertal/" class="salawebcams_link redondeado" title="Webcams de la estación de esquí de Zillertal">
+							<span class="salawebcams_img">
+								<img src="https://webtvpicture.feratel.com/picture/35/5554.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es" class="webcam" loading="lazy" rel="tematica_1394" onerror="webcam_def(this);" alt="Zillertal, Hintertuxer Gletscher - Rastkogel">
+								<span class="img" id="tematica_1394" style="background-image: url(https://webtvpicture.feratel.com/picture/35/5554.jpeg?design=v5&amp;dcsdesign=WTP_infonieve.es);"></span>
+							</span>
+							<span class="salawebcams_cap">Zillertal</span>
+						</a>
+						<a href="http://www.feratel.com/" class="salawebcams_author redondeado track_feratel-com_ExternalLink_sala-de-webcams" target="_blank">© feratel.com</a>
+					</div>
+				</li>
+							</ul>
+			<div class="clear"></div>
+			<div class="botonera botonera_notick center"><a href="sala-de-webcams/tem/glaciares-de-verano/" title="Ver todas las webcams en Glaciares de Verano">Ver más webcams en Glaciares de Verano</a></div>
+		</div>
+			</div>
+</div>
+
+
+<div class="pad_box">
+	<div class="box">
+				<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="" rel-idioma="" rel-anterior="L" rel-num-ant="3"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=3&amp;pastilla=17&amp;vm=0&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div>	</div>
+</div>
+
+
+
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+</body></html>

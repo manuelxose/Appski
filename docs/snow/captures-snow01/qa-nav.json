@@ -1,0 +1,29 @@
+{
+  "ssrNoJs": "{\"h1\":\"Estaciones de esquí y de fondo\",\"hasStations\":true,\"ngServerContext\":\"ssr\",\"innerTextLen\":805,\"hasAppRoot\":true,\"scriptsCount\":5}",
+  "deepLinkF5": {
+    "before": {
+      "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+      "h1": "Baqueira Beret"
+    },
+    "after": "{\"url\":\"http://localhost:4010/nieve/estaciones/baqueira-beret\",\"h1\":\"Baqueira Beret\",\"ngServerContextAfterHydration\":\"ssr\",\"bodyHasBaqueira\":true,\"docStatus\":null}",
+    "docResponse": {
+      "url": "http://localhost:4010/nieve/estaciones/baqueira-beret",
+      "status": 200
+    },
+    "console": []
+  },
+  "linksOnHome": {
+    "total": 40,
+    "snowLinks": []
+  },
+  "clickToNieve": {
+    "label": "home -> /nieve",
+    "error": "element not found",
+    "selectorExpr": "[...document.querySelectorAll('a')].find(a => (a.getAttribute('href')||'').match(/^\\/nieve\\/?$/))"
+  },
+  "clickToEstaciones": {
+    "label": "/nieve -> /nieve/estaciones",
+    "error": "element not found",
+    "selectorExpr": "[...document.querySelectorAll('a')].find(a => (a.getAttribute('href')||'').includes('/nieve/estaciones'))"
+  }
+}

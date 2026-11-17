@@ -1,0 +1,30 @@
+{
+  "kind": "driver-cases",
+  "total": 22,
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    "PASS GET /v1/stations => 200",
+    "PASS POST /admin/reports sin cabecera => 401",
+    "PASS POST /admin/reports token vacío => 401",
+    "PASS POST /admin/reports solo whitespace => 401",
+    "PASS POST /admin/reports token sin esquema => 401",
+    "PASS POST /admin/reports esquema erróneo => 401",
+    "PASS POST /admin/reports Bearer sin valor => 401",
+    "PASS POST /admin/reports bearer minúsculas => 401",
+    "PASS POST /admin/reports Basic => 401",
+    "PASS los 401 NO cambian el conteo de partes",
+    "PASS POST con snow.baseCm=-99 => 400 nombrando snow.baseCm",
+    "PASS POST JSON malformado => 400 sin stack",
+    "PASS POST >64kb => 413 sin stack",
+    "PASS los rechazos 400/413 NO cambian el conteo EN DISCO",
+    "PASS GET /config => 200",
+    "PASS /config no filtra nombres de env ni token",
+    "PASS /config sin stack",
+    "PASS 20 escrituras admin autenticadas dentro del límite => 200",
+    "PASS 21ª escritura admin => 429 con Retry-After",
+    "PASS 100 lecturas costosas dentro del límite => 200",
+    "PASS 101ª lectura costosa => 429",
+    "PASS null explícito se conserva como null (nunca 0)"
+  ]
+}

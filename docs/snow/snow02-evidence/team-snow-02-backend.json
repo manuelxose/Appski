@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "team": "snow-02-backend",
+  "archived": true,
+  "archivedNote": "Equipo archivado con agent_teams_delete al cerrar el hito; este fichero conserva las tareas y el estado de revisión para el gate.",
+  "members": [
+    "backend-architect",
+    "persistence-engineer",
+    "api-integration-engineer",
+    "security-engineer",
+    "independent-reviewer"
+  ],
+  "tasks": {
+    "t1": {
+      "status": "completed",
+      "kind": "work",
+      "owner": "implementer"
+    },
+    "t2": {
+      "status": "completed",
+      "kind": "implementation",
+      "owner": "implementer"
+    },
+    "t3": {
+      "status": "completed",
+      "kind": "implementation",
+      "owner": "implementer"
+    },
+    "t4": {
+      "status": "completed",
+      "kind": "implementation",
+      "owner": "implementer"
+    },
+    "t5": {
+      "status": "completed",
+      "kind": "verification",
+      "owner": "implementer"
+    },
+    "t6": {
+      "status": "completed",
+      "kind": "implementation",
+      "owner": "implementer"
+    },
+    "t7": {
+      "status": "completed",
+      "kind": "review",
+      "verdict": "pass",
+      "owner": "independent-reviewer"
+    },
+    "t8": {
+      "status": "completed",
+      "kind": "repair",
+      "owner": "implementer"
+    }
+  },
+  "lifecycleRecords": [
+    {
+      "id": "snow02-e04-gate",
+      "path": "C:\\Users\\Admin\\Documents\\workspace\\appski-wt-snow02",
+      "branch": "feat/snow-02-e04-gate",
+      "status": "removed"
+    },
+    {
+      "id": "snow02-main-gate",
+      "path": "C:\\Users\\Admin\\Documents\\workspace\\appski-wt-snow02-gate",
+      "branch": "feat/snow-02-main-gate",
+      "status": "removed"
+    }
+  ]
+}

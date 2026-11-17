@@ -8,15 +8,16 @@ export interface Station {
   location: string;
   image: string;
   isOpen: boolean;
-  snowBase: number; // cm
-  snowTop: number; // cm
-  snowFresh: number; // cm en últimas 24h
-  liftsOpen: number;
-  liftsTotal: number;
-  slopesOpen: number;
-  slopesTotal: number;
+  // Cifras del BORDE. `null` = sin dato publicado (NUNCA 0 cm ni estimación).
+  snowBase: number | null; // cm
+  snowTop: number | null; // cm
+  snowFresh: number | null; // cm en últimas 24h
+  liftsOpen: number | null;
+  liftsTotal: number | null;
+  slopesOpen: number | null;
+  slopesTotal: number | null;
   weather?: string; // ☀️, ⛅, ☁️, 🌨️
-  temperature?: number; // °C
+  temperature?: number | null; // °C
 }
 
 @Component({
@@ -37,18 +38,27 @@ export class StationCardComponent {
     };
   }
 
+  /**
+   * Calidad declarada a partir de datos PUBLICADOS. Sin dato (`null`) NO se
+   * presume calidad: se devuelve "sin datos", nunca "condiciones aceptables",
+   * que sería afirmar algo que la fuente no ha dicho.
+   */
   getSnowQuality(): { label: string; color: string } {
     const fresh = this.station().snowFresh;
     const base = this.station().snowBase;
 
-    if (fresh >= 20) {
+    if (fresh !== null && fresh >= 20) {
       return { label: "Nieve polvo", color: "text-blue-600" };
-    } else if (fresh >= 10) {
-      return { label: "Nieve fresca", color: "text-green-600" };
-    } else if (base >= 100) {
-      return { label: "Buenas condiciones", color: "text-cyan-600" };
-    } else {
-      return { label: "Condiciones aceptables", color: "text-slate-600" };
     }
+    if (fresh !== null && fresh >= 10) {
+      return { label: "Nieve fresca", color: "text-green-600" };
+    }
+    if (base !== null && base >= 100) {
+      return { label: "Buenas condiciones", color: "text-cyan-600" };
+    }
+    if (base === null && fresh === null) {
+      return { label: "Sin datos", color: "text-slate-500" };
+    }
+    return { label: "Condiciones aceptables", color: "text-slate-600" };
   }
 }

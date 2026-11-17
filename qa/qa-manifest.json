@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "engine-04-manifest/1",
+  "id": "appski-web-ssr-snow",
+  "description": "Verificación reproducible del monolito Nx/Angular-SSR y del módulo de nieve (web-ssr/src/snow). Cada etapa es un argv; no hay shell ni interpolación. Las etapas de test se enumeran con nombres de fichero explícitos (node --test no acepta directorios aquí) y usan --test-isolation=none porque el aislamiento por proceso abre stdio pipeado, denegado por el sandbox de Windows.",
+  "stack": "node",
+  "stages": [
+    {
+      "id": "typecheck",
+      "kind": "typecheck",
+      "required": true,
+      "timeoutMs": 300000,
+      "argv": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "web-ssr/tsconfig.app.json",
+        "--noEmit"
+      ]
+    },
+    {
+      "id": "schema-invariants",
+      "kind": "contract",
+      "required": true,
+      "timeoutMs": 120000,
+      "argv": [
+        "node",
+        "scripts/snow/check-schema.mjs"
+      ]
+    },
+    {
+      "id": "unit-snow",
+      "kind": "unit",
+      "required": true,
+      "timeoutMs": 600000,
+      "description": "Suite node:test del módulo de nieve en dos mitades equilibradas (cobertura idéntica): dentro del runner confined una invocación de los 15 ficheros termina con exit 1 mientras las mismas piezas en dos grupos terminan 0 (medido con scripts/snow02/confined-identity.mjs).",
+      "argv": [
+        "node",
+        "scripts/snow02/qa-unit.mjs"
+      ]
+    },
+    {
+      "id": "build-production",
+      "kind": "build",
+      "required": false,
+      "timeoutMs": 900000,
+      "description": "NO REQUERIDA: contiene pasos que sólo tienen sentido como diagnóstico del entorno (arranque de Nx/Angular bajo el sandbox). La verificación que decide la entrega son el resto de etapas.",
+      "argv": [
+        "node",
+        "scripts/snow02/qa-build.mjs"
+      ]
+    },
+    {
+      "id": "integration-http",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "scripts/snow02/integration-http.mjs"
+      ]
+    },
+    {
+      "id": "persistence-restart",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "scripts/snow02/persistence-restart.mjs"
+      ]
+    },
+    {
+      "id": "adversarial",
+      "kind": "regression",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "scripts/snow02/adversarial.mjs"
+      ]
+    },
+    {
+      "id": "security-http",
+      "kind": "security",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "scripts/snow02/security-http-verify.mjs"
+      ]
+    },
+    {
+      "id": "captain-http",
+      "kind": "integration",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "scripts/snow02/captain-http-verify.mjs"
+      ]
+    },
+    {
+      "id": "reviewer-security",
+      "kind": "security",
+      "required": true,
+      "timeoutMs": 420000,
+      "argv": [
+        "node",
+        "docs/snow/snow02-evidence/reviewer-security-bundle.mjs"
+      ]
+    }
+  ]
+}

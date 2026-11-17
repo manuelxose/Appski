@@ -1,0 +1,24 @@
+{
+  "key": "osm-ski_resort-es",
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Espa%C3%B1a%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22leisure%22%3D%22ski_resort%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "requestedUrl": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Espa%C3%B1a%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22leisure%22%3D%22ski_resort%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "status": 504,
+  "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+  "bytes": 695,
+  "capturedAt": "2026-11-16T22:35:37.755Z",
+  "source": "network",
+  "userAgent": "appski-snow03-catalog/1.0 (+https://appski.invalid/snow03; contact: ops@appski.invalid)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "timeout",
+      "ms": 240054,
+      "message": "The operation was aborted due to timeout"
+    },
+    {
+      "attempt": 2,
+      "status": 504,
+      "ms": 112030
+    }
+  ]
+}

@@ -1,0 +1,2468 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:03:21Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 9947527287,
+  "lat": 43.5062323,
+  "lon": 6.9508602,
+  "tags": {
+    "name": "Snorkeling - sentier sous-marin",
+    "site": "piste",
+    "sport": "snorkeling"
+  }
+},
+{
+  "type": "way",
+  "id": 440394926,
+  "center": {
+    "lat": 45.9169142,
+    "lon": 6.8729782
+  },
+  "tags": {
+    "name": "Tremplin du Grepon",
+    "oneway": "yes",
+    "piste:grooming": "classic",
+    "piste:type": "ski_jump",
+    "site": "piste",
+    "sport": "ski_jumping",
+    "type": "site"
+  }
+},
+{
+  "type": "way",
+  "id": 585162588,
+  "center": {
+    "lat": 45.9171164,
+    "lon": 6.8729933
+  },
+  "tags": {
+    "name": "Tremplin du Grepon",
+    "oneway": "yes",
+    "piste:grooming": "classic",
+    "piste:type": "ski_jump",
+    "site": "piste",
+    "sport": "ski_jumping",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2754619,
+  "center": {
+    "lat": 45.6359616,
+    "lon": 2.8881632
+  },
+  "tags": {
+    "name": "Domaine Nordique de Pessade",
+    "site": "piste",
+    "type": "site",
+    "website": "http://www.tourisme-lescheires.com/les-activites-nordiques.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 2764548,
+  "center": {
+    "lat": 46.8047674,
+    "lon": 6.4163879
+  },
+  "tags": {
+    "name": "Les Fourgs",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2783292,
+  "center": {
+    "lat": 46.7831788,
+    "lon": 6.1962863
+  },
+  "tags": {
+    "name": "Domaine Nordique Haute-Joux Combe Noire",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2783334,
+  "center": {
+    "lat": 46.6584204,
+    "lon": 6.2764613
+  },
+  "tags": {
+    "name": "Les Charbonnières - Le Lieu",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2783351,
+  "center": {
+    "lat": 46.6799719,
+    "lon": 6.1875159
+  },
+  "tags": {
+    "name": "Site nordique de Mouthe",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2798243,
+  "center": {
+    "lat": 45.0365564,
+    "lon": 5.4975078
+  },
+  "tags": {
+    "name": "Espace Nordique du Haut vercors",
+    "site": "piste",
+    "type": "site",
+    "wikidata": "Q130386455"
+  }
+},
+{
+  "type": "relation",
+  "id": 2798246,
+  "center": {
+    "lat": 45.1057030,
+    "lon": 5.5873918
+  },
+  "tags": {
+    "name": "Lans en Vercors",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2801725,
+  "center": {
+    "lat": 45.1269954,
+    "lon": 5.5115279
+  },
+  "tags": {
+    "name": "Méaudre",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2801730,
+  "center": {
+    "lat": 45.2049581,
+    "lon": 5.5706162
+  },
+  "tags": {
+    "name": "Autrans",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2868907,
+  "center": {
+    "lat": 45.6204193,
+    "lon": 2.8203024
+  },
+  "tags": {
+    "name": "Domaine Nordique de Guéry",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2873910,
+  "center": {
+    "lat": 42.8477978,
+    "lon": -0.1433223
+  },
+  "tags": {
+    "name": "Cauterets Pont d'Espagne",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2877788,
+  "center": {
+    "lat": 42.9705517,
+    "lon": 0.0018124
+  },
+  "tags": {
+    "name": "Hautacam",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2877789,
+  "center": {
+    "lat": 42.8856260,
+    "lon": -0.0700683
+  },
+  "tags": {
+    "name": "Luz-Ardiden",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2878966,
+  "center": {
+    "lat": 42.7260698,
+    "lon": -0.0373920
+  },
+  "tags": {
+    "name": "Gavarnie-Gèdre",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2881648,
+  "center": {
+    "lat": 42.7798583,
+    "lon": 0.4477755
+  },
+  "tags": {
+    "name": "Peyragudes",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2883644,
+  "center": {
+    "lat": 42.8838189,
+    "lon": -0.1454484
+  },
+  "tags": {
+    "name": "Cauterets Cirque du Lys",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2900833,
+  "center": {
+    "lat": 42.8573099,
+    "lon": 0.4941493
+  },
+  "tags": {
+    "name": "Bourg d'Oueil",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.haute-garonne-montagne.com/stations/bourg-doueil-hiver/"
+  }
+},
+{
+  "type": "relation",
+  "id": 2924625,
+  "center": {
+    "lat": 42.9052396,
+    "lon": 0.7717420
+  },
+  "tags": {
+    "name": "Le Mourtis",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.haute-garonne-montagne.com/stations/le-mourtis-hiver/"
+  }
+},
+{
+  "type": "relation",
+  "id": 2924626,
+  "center": {
+    "lat": 42.7677024,
+    "lon": 0.5646585
+  },
+  "tags": {
+    "name": "Superbagnères",
+    "site": "piste",
+    "type": "site",
+    "url": "https://www.haute-garonne-montagne.com/stations/luchon-superbagneres-hiver/",
+    "wikidata": "Q844809",
+    "wikipedia": "fr:Luchon-Superbagnères"
+  }
+},
+{
+  "type": "relation",
+  "id": 2924760,
+  "center": {
+    "lat": 42.7722754,
+    "lon": 1.3056361
+  },
+  "tags": {
+    "name": "Guzet-Neige",
+    "site": "piste",
+    "source": "plan des pistes;bing",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2926602,
+  "center": {
+    "lat": 42.7830266,
+    "lon": 0.3829045
+  },
+  "tags": {
+    "name": "Val-Louron",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2926613,
+  "center": {
+    "lat": 42.8308985,
+    "lon": 0.2627482
+  },
+  "tags": {
+    "name": "Saint-Lary",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2926634,
+  "center": {
+    "lat": 42.7764787,
+    "lon": 0.1628798
+  },
+  "tags": {
+    "name": "Piau-Engaly",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2927196,
+  "center": {
+    "lat": 42.9103829,
+    "lon": 0.1255556
+  },
+  "tags": {
+    "name": "Grand Tourmalet",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2927215,
+  "center": {
+    "lat": 42.6857093,
+    "lon": 1.8098116
+  },
+  "tags": {
+    "name": "Ax 3 Domaines",
+    "old_name": "Ax-Bonascre",
+    "site": "piste",
+    "type": "site",
+    "url": "https://www.ax.ski/fr/"
+  }
+},
+{
+  "type": "relation",
+  "id": 2935724,
+  "center": {
+    "lat": 42.5521399,
+    "lon": 1.7965875
+  },
+  "tags": {
+    "name": "Porté-Puymorens",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2946722,
+  "center": {
+    "lat": 42.5715069,
+    "lon": 2.0518202
+  },
+  "tags": {
+    "name": "Les Angles",
+    "name:ca": "Els Angles",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 2946754,
+  "center": {
+    "lat": 42.5247119,
+    "lon": 2.0325904
+  },
+  "tags": {
+    "name": "Font-Romeu Pyrénées 2000",
+    "name:ca": "Font-Romeu",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3160540,
+  "center": {
+    "lat": 44.9310670,
+    "lon": 6.5594376
+  },
+  "tags": {
+    "name": "Serre-Chevalier",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3161151,
+  "center": {
+    "lat": 46.4043823,
+    "lon": 6.0772311
+  },
+  "tags": {
+    "name": "La Vattay",
+    "operator": "Mont Jura",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site",
+    "wikidata": "Q130382814"
+  }
+},
+{
+  "type": "relation",
+  "id": 3161169,
+  "center": {
+    "lat": 46.4892385,
+    "lon": 6.0886989
+  },
+  "tags": {
+    "name": "Les Rousses",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3161183,
+  "center": {
+    "lat": 46.5289201,
+    "lon": 6.0999429
+  },
+  "tags": {
+    "name": "Le Risoux",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3161196,
+  "center": {
+    "lat": 46.5659896,
+    "lon": 6.1904788
+  },
+  "tags": {
+    "name": "Le Brassus / La Thomassette",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3161203,
+  "center": {
+    "lat": 46.7489231,
+    "lon": 6.3570265
+  },
+  "tags": {
+    "name": "Metabief - Mont d'or",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3164054,
+  "center": {
+    "lat": 44.1190011,
+    "lon": 3.5497645
+  },
+  "tags": {
+    "name": "Prat-Peyrot",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3207144,
+  "center": {
+    "lat": 44.8202984,
+    "lon": 6.4769266
+  },
+  "tags": {
+    "name": "Puy-Saint-Vincent",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3299314,
+  "center": {
+    "lat": 45.1688165,
+    "lon": 5.6319790
+  },
+  "tags": {
+    "name": "Saint-Nizier-du-Moucherotte",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3424095,
+  "center": {
+    "lat": 45.4772428,
+    "lon": 2.8919037
+  },
+  "tags": {
+    "name": "Pertuyzat-Montchal",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3533848,
+  "center": {
+    "lat": 46.8997917,
+    "lon": 6.4064087
+  },
+  "tags": {
+    "name": "Le Larmont",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.espacenordiquejurassien.com/annuaire/site_nordique_de_pontarlier_-_le_larmont~bb17cae35d724a7e387aa22fcfe.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 3545070,
+  "center": {
+    "lat": 45.5168752,
+    "lon": 2.8435552
+  },
+  "tags": {
+    "name": "Super Besse",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3545199,
+  "center": {
+    "lat": 42.0038491,
+    "lon": 9.1260131
+  },
+  "tags": {
+    "name": "Val d'Ese",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3545221,
+  "center": {
+    "lat": 44.1871712,
+    "lon": 7.1472269
+  },
+  "tags": {
+    "name": "Isola 2000",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3545276,
+  "center": {
+    "lat": 45.3288146,
+    "lon": 6.5759263
+  },
+  "tags": {
+    "name": "Les Trois Vallées",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3584930,
+  "center": {
+    "lat": 44.5325400,
+    "lon": 6.6194545
+  },
+  "tags": {
+    "name": "Crévoux",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.crevoux.fr/fr/hiver/montagne/espace-alpin"
+  }
+},
+{
+  "type": "relation",
+  "id": 3619015,
+  "center": {
+    "lat": 44.5806720,
+    "lon": 6.3499696
+  },
+  "tags": {
+    "name": "Réallon",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.reallon-ski.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 3922976,
+  "center": {
+    "lat": 45.6443360,
+    "lon": 6.0504816
+  },
+  "tags": {
+    "name": "Aillon-Margériaz",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3922977,
+  "center": {
+    "lat": 45.6418014,
+    "lon": 6.0258866
+  },
+  "tags": {
+    "name": "Col de Plainpalais",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3923526,
+  "center": {
+    "lat": 44.3409594,
+    "lon": 6.2917742
+  },
+  "tags": {
+    "name": "Chabanon",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3923609,
+  "center": {
+    "lat": 44.3184672,
+    "lon": 6.3858498
+  },
+  "tags": {
+    "name": "Le Grand Puy",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3923653,
+  "center": {
+    "lat": 44.0642407,
+    "lon": 7.2246151
+  },
+  "tags": {
+    "name": "La Colmiane",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3923817,
+  "center": {
+    "lat": 45.2112988,
+    "lon": 6.3514491
+  },
+  "tags": {
+    "name": "Albiez-Montrond",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3947662,
+  "center": {
+    "lat": 42.3925727,
+    "lon": 2.0704059
+  },
+  "tags": {
+    "abandoned": "yes",
+    "disused": "yes",
+    "end_date": "2023",
+    "name": "Puigmal 2900",
+    "name:ca": "Puigmal 2900",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3947770,
+  "center": {
+    "lat": 42.6567959,
+    "lon": 2.0622879
+  },
+  "tags": {
+    "abandoned": "yes",
+    "disused": "yes",
+    "end_date": "2024",
+    "name": "Puyvalador Rieutort",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3958409,
+  "center": {
+    "lat": 42.7226294,
+    "lon": 2.0094398
+  },
+  "tags": {
+    "name": "Mijanès-Donezan",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3958550,
+  "center": {
+    "lat": 42.7275246,
+    "lon": 1.9690204
+  },
+  "tags": {
+    "name": "Ascou",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3959993,
+  "center": {
+    "lat": 44.6235867,
+    "lon": 6.6329389
+  },
+  "tags": {
+    "name": "Risoul",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3961720,
+  "center": {
+    "lat": 44.6161000,
+    "lon": 6.6850000
+  },
+  "tags": {
+    "name": "Vars",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3962216,
+  "center": {
+    "lat": 45.4500000,
+    "lon": 6.5700000
+  },
+  "tags": {
+    "name": "Brides Les Bains",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3962218,
+  "center": {
+    "lat": 45.4294000,
+    "lon": 6.5914000
+  },
+  "tags": {
+    "name": "La Tania",
+    "site": "piste",
+    "sport": "skiing",
+    "tourism": "yes",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3962219,
+  "center": {
+    "lat": 45.3258761,
+    "lon": 6.5328044
+  },
+  "tags": {
+    "name": "Les Ménuires",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 3962222,
+  "center": {
+    "lat": 45.2908911,
+    "lon": 6.5754634
+  },
+  "tags": {
+    "name": "Val Thorens",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4143350,
+  "center": {
+    "lat": 42.9391158,
+    "lon": 0.4539852
+  },
+  "tags": {
+    "name": "Nistos",
+    "site": "piste",
+    "type": "site",
+    "website": "https://nistos-ski.fr/"
+  }
+},
+{
+  "type": "relation",
+  "id": 4522185,
+  "center": {
+    "lat": 44.7725954,
+    "lon": 6.8802268
+  },
+  "tags": {
+    "name": "Queyras - Aiguilles",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4522202,
+  "center": {
+    "lat": 44.8016270,
+    "lon": 6.9467608
+  },
+  "tags": {
+    "name": "Queyras - Haut-Guil (Abriès)",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4626858,
+  "center": {
+    "lat": 42.9739713,
+    "lon": -0.7389668
+  },
+  "tags": {
+    "name": "La Pierre Saint-Martin",
+    "name:eu": "San Martingo Harria",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4631854,
+  "center": {
+    "lat": 42.9447022,
+    "lon": -0.3361612
+  },
+  "tags": {
+    "name": "Gourette",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4631868,
+  "center": {
+    "lat": 42.7791480,
+    "lon": -0.5442946
+  },
+  "tags": {
+    "name": "Candanchu",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4631885,
+  "center": {
+    "lat": 42.8935352,
+    "lon": -0.3849547
+  },
+  "tags": {
+    "name": "Artouste",
+    "site": "piste",
+    "type": "site",
+    "wikidata": "Q2865855",
+    "wikipedia": "fr:Artouste"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638636,
+  "center": {
+    "lat": 42.7921469,
+    "lon": -0.5398630
+  },
+  "tags": {
+    "name": "Le Somport",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638678,
+  "center": {
+    "lat": 42.8366702,
+    "lon": 1.7431736
+  },
+  "tags": {
+    "name": "Les Monts d'Olmes",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638681,
+  "center": {
+    "lat": 42.7359602,
+    "lon": 1.5184296
+  },
+  "tags": {
+    "name": "Goulier-Neige",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638693,
+  "center": {
+    "lat": 42.7796382,
+    "lon": 1.9234725
+  },
+  "tags": {
+    "name": "Camurac",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638698,
+  "center": {
+    "lat": 42.6236272,
+    "lon": 2.0512084
+  },
+  "tags": {
+    "name": "Formiguères",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638704,
+  "center": {
+    "lat": 42.4727743,
+    "lon": 2.1112942
+  },
+  "tags": {
+    "name": "Espace Cambre d'Aze",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4638713,
+  "center": {
+    "lat": 42.5406669,
+    "lon": 2.1088761
+  },
+  "tags": {
+    "name": "La Quillane",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4661006,
+  "center": {
+    "lat": 45.2134279,
+    "lon": 6.4009796
+  },
+  "tags": {
+    "name": "Les Karellis",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4664752,
+  "center": {
+    "lat": 45.1561906,
+    "lon": 6.6547801
+  },
+  "tags": {
+    "name": "Valfréjus",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4664783,
+  "center": {
+    "lat": 45.3625343,
+    "lon": 7.0575260
+  },
+  "tags": {
+    "name": "Bonneval-sur-Arc",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4675075,
+  "center": {
+    "lat": 45.1911293,
+    "lon": 6.7123033
+  },
+  "tags": {
+    "name": "La Norma",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4874561,
+  "center": {
+    "lat": 42.9908211,
+    "lon": -0.2007559
+  },
+  "tags": {
+    "name": "Espace Nordique du Val d'Azun",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5502698,
+  "center": {
+    "lat": 45.5810200,
+    "lon": 6.9118220
+  },
+  "tags": {
+    "name": "Sainte-Foy Tarentaise",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5719103,
+  "center": {
+    "lat": 46.1193289,
+    "lon": 6.1709424
+  },
+  "tags": {
+    "name": "Foyer nordique du Salève",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.fnds.fr"
+  }
+},
+{
+  "type": "relation",
+  "id": 5731035,
+  "center": {
+    "lat": 45.1526096,
+    "lon": 6.4751351
+  },
+  "tags": {
+    "name": "Galibier-Thabor",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5752780,
+  "center": {
+    "lat": 45.6496683,
+    "lon": 6.8507364
+  },
+  "tags": {
+    "name": "La Rosière",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5752851,
+  "center": {
+    "lat": 45.6924714,
+    "lon": 6.9204271
+  },
+  "tags": {
+    "name": "La Thuile ski",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5757130,
+  "center": {
+    "lat": 46.1807086,
+    "lon": 6.4602073
+  },
+  "tags": {
+    "contact:webcam": "http://www.lesbrasses.com/fr/hiver/webcam.php",
+    "name": "Massif des Brasses",
+    "site": "piste",
+    "type": "site",
+    "website": "https://lesbrasses.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 5757153,
+  "center": {
+    "lat": 46.2385477,
+    "lon": 6.4911484
+  },
+  "tags": {
+    "name": "Hirmentaz - Les Habères",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5757156,
+  "center": {
+    "lat": 46.2083615,
+    "lon": 6.6052141
+  },
+  "tags": {
+    "addr:city": "Saint-Jean-d'Aulps",
+    "addr:housenumber": "32",
+    "addr:postcode": "74430",
+    "addr:street": "Route de la Télécabine",
+    "contact:email": "regie@rocdenfer.com",
+    "contact:website": "https://www.rocdenfer.com/index.php",
+    "name": "Roc d'Enfer",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5757942,
+  "center": {
+    "lat": 46.1476422,
+    "lon": 6.5720384
+  },
+  "tags": {
+    "contact:website": "http://www.prazdelys-sommand.com/",
+    "name": "Praz de Lys Sommand",
+    "site": "piste",
+    "type": "site",
+    "wikidata": "Q3401482",
+    "wikipedia": "en:Praz de Lys-Sommand"
+  }
+},
+{
+  "type": "relation",
+  "id": 5759124,
+  "center": {
+    "lat": 46.3508698,
+    "lon": 6.7029663
+  },
+  "tags": {
+    "contact:website": "https://hiver.bernex-tourisme.com/",
+    "fixme": "à réparer",
+    "name": "Bernex",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5759134,
+  "center": {
+    "lat": 46.3805211,
+    "lon": 6.7273018
+  },
+  "tags": {
+    "contact:website": "https://www.leman-mountains-explore.com/decouvrir/les-stations/station-de-thollon-les-memises/",
+    "description": "Station de ski de Thollon-les-Mémises",
+    "name": "Thollon-les-Mémises",
+    "site": "piste",
+    "type": "site",
+    "wikidata": "Q917755",
+    "wikipedia": "fr:Thollon-les-Mémises"
+  }
+},
+{
+  "type": "relation",
+  "id": 5763633,
+  "center": {
+    "lat": 46.2686236,
+    "lon": 6.7025635
+  },
+  "tags": {
+    "contact:website": "http://www.portesdusoleil.com/abondance.html",
+    "name": "Abondance",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5763676,
+  "center": {
+    "lat": 46.2908846,
+    "lon": 6.8056253
+  },
+  "tags": {
+    "name": "La Chapelle d'Abondance",
+    "operator": "SELCA",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993118,
+  "center": {
+    "lat": 45.4511542,
+    "lon": 6.4021945
+  },
+  "tags": {
+    "name": "Le Grand Domaine",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.legranddomaine.fr/"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993384,
+  "center": {
+    "lat": 45.7846068,
+    "lon": 6.5528894
+  },
+  "tags": {
+    "name": "Espace Diamant",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.espacediamant.com"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993391,
+  "center": {
+    "lat": 45.7949841,
+    "lon": 6.6862319
+  },
+  "tags": {
+    "name": "Les Contamines",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993393,
+  "center": {
+    "lat": 45.8840060,
+    "lon": 6.7495254
+  },
+  "tags": {
+    "name": "Les Houches - Saint-Gervais",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993417,
+  "center": {
+    "lat": 45.8883773,
+    "lon": 6.5786285
+  },
+  "tags": {
+    "name": "Les Portes du Mont-Blanc",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5993424,
+  "center": {
+    "lat": 45.8466929,
+    "lon": 6.6574914
+  },
+  "tags": {
+    "name": "Megève",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5994157,
+  "center": {
+    "lat": 45.5078876,
+    "lon": 6.7020793
+  },
+  "tags": {
+    "name": "La Plagne",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5994162,
+  "center": {
+    "lat": 45.5752368,
+    "lon": 6.8064116
+  },
+  "tags": {
+    "name": "Les Arcs",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5994241,
+  "center": {
+    "lat": 45.8840342,
+    "lon": 6.4409807
+  },
+  "tags": {
+    "name": "La Clusaz",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5994252,
+  "center": {
+    "lat": 45.9598587,
+    "lon": 6.4810535
+  },
+  "tags": {
+    "name": "Le Grand-Bornand",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 5994258,
+  "center": {
+    "lat": 46.0296764,
+    "lon": 6.7179213
+  },
+  "tags": {
+    "name": "Le Grand Massif",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6048090,
+  "center": {
+    "lat": 44.6210349,
+    "lon": 6.0851319
+  },
+  "tags": {
+    "name": "Gap-Bayard",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6090461,
+  "center": {
+    "lat": 45.2972767,
+    "lon": 5.7648645
+  },
+  "tags": {
+    "name": "Col de Porte",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6345907,
+  "center": {
+    "lat": 44.7113542,
+    "lon": 6.8734392
+  },
+  "tags": {
+    "name": "Queyras - Molines/Saint-Véran",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6346133,
+  "center": {
+    "lat": 44.7903071,
+    "lon": 6.7317265
+  },
+  "tags": {
+    "name": "Queyras - Arvieux",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6352206,
+  "center": {
+    "lat": 44.6477401,
+    "lon": 6.8007181
+  },
+  "tags": {
+    "name": "Queyras - Ceillac",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6593988,
+  "center": {
+    "lat": 47.8505833,
+    "lon": 6.9157111
+  },
+  "tags": {
+    "name": "Rouge Gazon",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6594018,
+  "center": {
+    "lat": 47.7707565,
+    "lon": 6.7751278
+  },
+  "tags": {
+    "name": "La Planche-des-Belles-Filles",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 6728726,
+  "center": {
+    "lat": 46.1179098,
+    "lon": 6.1675429
+  },
+  "tags": {
+    "name": "Association Téléski du Salève (A.T.S.)",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.teleskidusaleve.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 6960124,
+  "center": {
+    "lat": 45.2366901,
+    "lon": 6.2388632
+  },
+  "tags": {
+    "name": "Les Sybelles",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 8012984,
+  "center": {
+    "lat": 44.6673050,
+    "lon": 5.9071969
+  },
+  "tags": {
+    "name": "Dévoluy",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 8075214,
+  "center": {
+    "lat": 46.3618296,
+    "lon": 6.0063860
+  },
+  "tags": {
+    "name": "Mijoux - La Faucille",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9134314,
+  "center": {
+    "lat": 42.7213378,
+    "lon": 1.6898066
+  },
+  "tags": {
+    "name": "Plateau de Beille",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9227542,
+  "center": {
+    "lat": 45.9516321,
+    "lon": 5.7759782
+  },
+  "tags": {
+    "name": "Sur Lyand",
+    "site": "piste",
+    "type": "site",
+    "website": "https://sur-lyand.hautrhone-tourisme.fr/"
+  }
+},
+{
+  "type": "relation",
+  "id": 9227575,
+  "center": {
+    "lat": 46.0338050,
+    "lon": 5.7014702
+  },
+  "tags": {
+    "name": "Plateau de Retord",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9227579,
+  "center": {
+    "lat": 46.0711978,
+    "lon": 5.6627201
+  },
+  "tags": {
+    "name": "Lachat",
+    "operator": "Centre Montagnard de Lachat",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.ski-lachat.fr/"
+  }
+},
+{
+  "type": "relation",
+  "id": 9227591,
+  "center": {
+    "lat": 45.9834546,
+    "lon": 5.6316578
+  },
+  "tags": {
+    "name": "Terre Ronde - La Praille",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9282437,
+  "center": {
+    "lat": 45.0702562,
+    "lon": 2.5619394
+  },
+  "tags": {
+    "name": "Col de Légal",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9478574,
+  "center": {
+    "lat": 47.8068277,
+    "lon": 6.8524331
+  },
+  "tags": {
+    "name": "Ballon d'Alsace",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.ballondalsace.fr/station-hiver/ski-alpin-ballon-d-alsace.htm"
+  }
+},
+{
+  "type": "relation",
+  "id": 9669912,
+  "center": {
+    "lat": 46.1693043,
+    "lon": 5.8560609
+  },
+  "tags": {
+    "name": "Menthières",
+    "site": "piste",
+    "type": "site",
+    "url": "http://www.monts-jura.com/en/the-resort/the-ski-areas-2.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 10214798,
+  "center": {
+    "lat": 43.9909433,
+    "lon": 7.4046752
+  },
+  "tags": {
+    "name": "Col de Turini/​Camp d'Argent",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10214976,
+  "center": {
+    "lat": 44.1093812,
+    "lon": 7.2990755
+  },
+  "tags": {
+    "name": "Le Boréon",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site",
+    "url": "https://www.puremontagne.fr/fr/activites-et-sites-touristiques/le-boreon"
+  }
+},
+{
+  "type": "relation",
+  "id": 10416164,
+  "center": {
+    "lat": 45.5312036,
+    "lon": 2.7855529
+  },
+  "tags": {
+    "name": "Chastreix-Sancy",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10543444,
+  "center": {
+    "lat": 45.5531126,
+    "lon": 6.5319126
+  },
+  "tags": {
+    "name": "Nâves",
+    "operator": "Nâves-Valmorel",
+    "site": "piste",
+    "type": "site",
+    "url": "https://www.naves-savoie.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 10616936,
+  "center": {
+    "lat": 42.7513920,
+    "lon": 1.8547384
+  },
+  "tags": {
+    "name": "Le Chioula",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.chioula.fr"
+  }
+},
+{
+  "type": "relation",
+  "id": 10781253,
+  "center": {
+    "lat": 48.0732840,
+    "lon": 6.9126186
+  },
+  "tags": {
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10786641,
+  "center": {
+    "lat": 47.7890225,
+    "lon": 6.9173965
+  },
+  "tags": {
+    "name": "Le Schlumpf",
+    "site": "piste",
+    "type": "site",
+    "website": "https://schlumpf.dolleren.fr"
+  }
+},
+{
+  "type": "relation",
+  "id": 10786642,
+  "center": {
+    "lat": 47.8228911,
+    "lon": 7.0288127
+  },
+  "tags": {
+    "name": "Thanner Hubel",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10786643,
+  "center": {
+    "lat": 47.9299820,
+    "lon": 7.0263240
+  },
+  "tags": {
+    "name": "Le Markstein",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10786644,
+  "center": {
+    "lat": 47.8991060,
+    "lon": 7.1108279
+  },
+  "tags": {
+    "name": "Grand Ballon",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 10801131,
+  "center": {
+    "lat": 46.0323527,
+    "lon": 6.4267368
+  },
+  "tags": {
+    "name": "Plateau de Solaison",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 11958914,
+  "center": {
+    "lat": 45.0192129,
+    "lon": 5.9755667
+  },
+  "tags": {
+    "name": "Domaine Alpin du Col d'Ornon",
+    "piste:type": "downhill",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 11960150,
+  "center": {
+    "lat": 45.0073765,
+    "lon": 5.9676395
+  },
+  "tags": {
+    "name": "Domaine Nordique Col d'Ornon",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 12086827,
+  "center": {
+    "lat": 47.9119484,
+    "lon": 6.8646941
+  },
+  "tags": {
+    "name": "Domaine Nordique de Ventron",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 12168453,
+  "center": {
+    "lat": 46.5764474,
+    "lon": 5.9661130
+  },
+  "tags": {
+    "name": "Saint-Laurent-en-Grandvaux",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 12203182,
+  "center": {
+    "lat": 46.2795741,
+    "lon": 6.4861344
+  },
+  "tags": {
+    "name": "Domaine nordique des Moises",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 12211261,
+  "center": {
+    "lat": 46.2899601,
+    "lon": 6.5068629
+  },
+  "tags": {
+    "name": "Stade de neige du Col du Feu",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13134081,
+  "center": {
+    "lat": 46.4972734,
+    "lon": 5.8408895
+  },
+  "tags": {
+    "name": "Nanchez",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13502421,
+  "center": {
+    "lat": 42.5526249,
+    "lon": 2.1593772
+  },
+  "tags": {
+    "name": "Station Nordique du Col de la Llose",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13664042,
+  "center": {
+    "lat": 45.9832404,
+    "lon": 5.6349192
+  },
+  "tags": {
+    "name": "Site nordique de La Praille",
+    "short_name": "La Praille",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.espacenordiquejurassien.com/les-domaines-nordiques/plateau-dhauteville-retord-lachat-sur-ly.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 13681086,
+  "center": {
+    "lat": 46.6031160,
+    "lon": 6.1129681
+  },
+  "tags": {
+    "name": "Chapelle-des-Bois",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13699336,
+  "center": {
+    "lat": 46.2835989,
+    "lon": 5.8488882
+  },
+  "tags": {
+    "name": "La Pesse / Les Bouchoux",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13704653,
+  "center": {
+    "lat": 46.2297072,
+    "lon": 5.7803157
+  },
+  "tags": {
+    "name": "Giron",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.espacenordiquejurassien.com/giron-haut-bugey.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 13705382,
+  "center": {
+    "lat": 46.4174986,
+    "lon": 6.0022499
+  },
+  "tags": {
+    "name": "Lajoux / Massacre",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 13714784,
+  "center": {
+    "lat": 46.5838719,
+    "lon": 6.0574429
+  },
+  "tags": {
+    "name": "Site nordique de Morbier",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.espacenordiquejurassien.com/annuaire/site_nordique_de_morbier~ccb25020b08d9f35c028b706a04.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 13841278,
+  "center": {
+    "lat": 46.9933147,
+    "lon": 4.0286628
+  },
+  "tags": {
+    "name": "Station de Sports d'Hiver du Haut-Folin",
+    "operator": "SKIMO",
+    "site": "piste",
+    "type": "site",
+    "website": "https://skimorvan.wixsite.com/haut-folin"
+  }
+},
+{
+  "type": "relation",
+  "id": 14625284,
+  "center": {
+    "lat": 44.5792455,
+    "lon": 3.0141092
+  },
+  "tags": {
+    "name": "Station de Ski de Brameloup",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 15014025,
+  "center": {
+    "lat": 44.9989154,
+    "lon": 6.1270297
+  },
+  "tags": {
+    "name": "2 alpes parapente",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 15014181,
+  "center": {
+    "lat": 44.9967027,
+    "lon": 6.1470095
+  },
+  "tags": {
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaUHL-QdhRtqz5pabmNggRyjR7XkjCTBahenKqBaSS-NK8qGQmx4AuWzGXV4m1OvYAYs0ZL8mBUFniHOskc7X-yyq5Ys503ZkttAEXP-3WiKiqfpCxeiERGnpz8W9lm4A5B61zJWeAWGi9MzIjjrOApaVNUpcyfhss0ScuFla1sc7-Ajjcc6sFUB3e/s5184/23%",
+    "name": "2 alpes parapente décollage été hiver du diable",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 15099521,
+  "center": {
+    "lat": 44.1796248,
+    "lon": 5.2670845
+  },
+  "tags": {
+    "name": "Mont Serein",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 16863674,
+  "center": {
+    "lat": 44.9746777,
+    "lon": 6.5020657
+  },
+  "tags": {
+    "name": "Site Nordique de Serre Chevalier",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 17247901,
+  "center": {
+    "lat": 44.5910578,
+    "lon": 6.6530110
+  },
+  "tags": {
+    "name": "Forêt Blanche : Vars/Risoul",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 17537236,
+  "center": {
+    "lat": 47.9244427,
+    "lon": 6.9502447
+  },
+  "tags": {
+    "name": "Le Frenz",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 18588269,
+  "center": {
+    "lat": 47.7874348,
+    "lon": 0.2830711
+  },
+  "tags": {
+    "name": "Impasse de la Cochardière",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19325185,
+  "center": {
+    "lat": 44.3504766,
+    "lon": 6.5860157
+  },
+  "tags": {
+    "name": "Pra-Loup 1600",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.praloup.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 19325191,
+  "center": {
+    "lat": 44.3255001,
+    "lon": 6.5744749
+  },
+  "tags": {
+    "name": "Espace Lumière",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19325367,
+  "center": {
+    "lat": 44.3072210,
+    "lon": 6.5696313
+  },
+  "tags": {
+    "name": "Val d'Allos - La Foux",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.valdallos.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 19375113,
+  "center": {
+    "lat": 45.9267505,
+    "lon": 6.8739071
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "piste:grooming": "skating",
+    "piste:oneway": "no",
+    "piste:type": "ice_skate",
+    "site": "piste",
+    "source": "Enquête de terrain et photographie aérienne",
+    "sport": "athletics;running;football;handball;basketball",
+    "surface": "tartan",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19437918,
+  "center": {
+    "lat": 44.2291589,
+    "lon": 6.6054169
+  },
+  "tags": {
+    "name": "Val d'Allos - Le Seignus",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19457712,
+  "center": {
+    "lat": 46.2953268,
+    "lon": 6.8420504
+  },
+  "tags": {
+    "name": "Torgon",
+    "operator": "SETT Sàrl",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19550313,
+  "center": {
+    "lat": 44.3534834,
+    "lon": 6.7054050
+  },
+  "tags": {
+    "name": "Le Sauze 1400 / Le Super-Sauze 1700",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.sauze.com"
+  }
+},
+{
+  "type": "relation",
+  "id": 19751525,
+  "center": {
+    "lat": 45.2366423,
+    "lon": 6.5755097
+  },
+  "tags": {
+    "name": "Orelle",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19757448,
+  "center": {
+    "lat": 45.2635462,
+    "lon": 6.5754634
+  },
+  "tags": {
+    "name": "Val Thorens - Orelle",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 19806623,
+  "center": {
+    "lat": 49.2468408,
+    "lon": 6.1268454
+  },
+  "tags": {
+    "name": "Snoword (Snowhall)",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 20021650,
+  "center": {
+    "lat": 44.4262418,
+    "lon": 6.8665938
+  },
+  "tags": {
+    "name": "Larche",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 20046699,
+  "center": {
+    "lat": 45.4638380,
+    "lon": 6.4163931
+  },
+  "tags": {
+    "name": "Valmorel",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 20105353,
+  "center": {
+    "lat": 45.4319573,
+    "lon": 6.3793908
+  },
+  "tags": {
+    "name": "Saint François Longchamp",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 20194045,
+  "center": {
+    "lat": 44.3827725,
+    "lon": 6.6267182
+  },
+  "tags": {
+    "name": "Barcelonnette",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 20385000,
+  "center": {
+    "lat": 45.8898266,
+    "lon": 6.3966302
+  },
+  "tags": {
+    "name": "Plateau de Beauregard",
+    "site": "piste",
+    "type": "site",
+    "website": "https://skidefondbeauregard.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 21291950,
+  "center": {
+    "lat": 42.4297318,
+    "lon": 2.3926421
+  },
+  "tags": {
+    "abandoned": "yes",
+    "disused": "yes",
+    "end_date": "2001",
+    "name": "Prats de Mollo - Les Fourquets",
+    "site": "piste",
+    "start_date": "1970",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 21301592,
+  "center": {
+    "lat": 44.0180124,
+    "lon": 2.1417697
+  },
+  "tags": {
+    "abandoned": "yes",
+    "disused": "yes",
+    "end_date": "2025",
+    "name": "Cap Découverte",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 21311451,
+  "center": {
+    "lat": 42.9414983,
+    "lon": 0.2871883
+  },
+  "tags": {
+    "abandoned": "site",
+    "name": "Payolle",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 21355703,
+  "center": {
+    "lat": 45.4020348,
+    "lon": 6.6232718
+  },
+  "tags": {
+    "name": "Courchevel",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 21355704,
+  "center": {
+    "lat": 45.3813922,
+    "lon": 6.5737996
+  },
+  "tags": {
+    "name": "Méribel",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 21424829,
+  "center": {
+    "lat": 43.4518804,
+    "lon": 2.4528612
+  },
+  "tags": {
+    "name": "Triby",
+    "site": "piste",
+    "type": "site"
+  }
+}
+
+  ]
+}

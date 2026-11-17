@@ -1,0 +1,27 @@
+{
+  "head" : {
+    "vars" : [ "item", "itemLabel", "coord", "elev", "website" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q533782"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-7.61306 40.3236)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.skiserradaestrela.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de Esquí Vodafone"
+      }
+    } ]
+  }
+}

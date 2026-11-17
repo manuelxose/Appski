@@ -1,0 +1,651 @@
+<!DOCTYPE html><html lang="es" class="cc--light-funky"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>Publica tu parte de nieve - Infonieve.es</title>
+<meta http-equiv="content-language" content="es">
+<meta name="Language" content="Spanish">
+<meta name="Description" content="Si has estado recientemente en una estación, comparte con el resto de visitantes tu valoración sobre el estado de la nieve y las pistas">
+<meta name="Keywords" content="parte de nieve, estado estacion, valoraciones, usuarios, comentarios, reportes">
+<meta name="Distribution" content="Global">
+<meta name="Robots" content="INDEX,FOLLOW,ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<base href="//www.infonieve.es/" target="_top">
+
+<link rel="icon" type="image/png" href="https://www.infonieve.es/images/favicon_infonieve_96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://www.infonieve.es/images/favicon_infonieve.svg"><link rel="shortcut icon" href="https://www.infonieve.es/favicon_infonieve.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infonieve.es/images/apple-touch-icon_infonieve.png">
+
+<meta property="og:image" content="https://www.infonieve.es/images/logo-social_infonieve.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Publica tu parte de nieve - Infonieve.es">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Si has estado recientemente en una estación, comparte con el resto de visitantes tu valoración sobre el estado de la nieve y las pistas">	
+	
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="css/estilos_v460.css" rel="stylesheet" type="text/css">
+<link href="css/estilos.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta_v460.css" rel="stylesheet" type="text/css">
+<link href="css/maqueta.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas_v460.css" rel="stylesheet" type="text/css">
+<link href="css/pastillas.infonieve_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados_v460.css" rel="stylesheet" type="text/css">
+<link href="css/listados.infonieve_v460.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]>
+<link href="css/iexplorer_v460.css" rel="stylesheet" type="text/css" />
+<link href="css/iexplorer.infonieve_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE]>
+<link href="css/iexplorer_all_v460.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/4i3aN5wAweL7i3ADI7BSX4B-/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-hmpOzIrwNV9U5olYi1fEDkIADCL+6vEU2nMaqFORl8aTIbVDVal2OZwsqxY2mbTt"></script><script src="js/jquery.min_v460.js" type="text/javascript"></script>
+<script src="js/dragscroll_v460.js" type="text/javascript"></script>
+<script src="js/funciones.lang_v460.php.js" type="text/javascript"></script>
+<script src="js/funciones.globales_v460.js" type="text/javascript"></script>
+<script src="js/funciones.web_v460.js" type="text/javascript"></script>
+<script src="js/funciones.pastillas_v460.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="apps/cookieconsent/cookieconsent_v460.css">
+<link rel="stylesheet" href="apps/cookieconsent/css-components/light-funky-scheme_v460.css">
+<script type="module" src="apps/cookieconsent/cookieconsent.umd_v460.js"></script>
+<script type="module" src="js/cookieconsent_v460.php.js"></script>
+<script>
+	document.documentElement.classList.add('cc--light-funky');
+</script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	</script>	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1ZZ37QJFPL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1ZZ37QJFPL');
+	</script>
+	<script>
+	  gtag('event', 'Desglose_Contenido', { 'nivel_ruta1':'/parte-de-nieve', 'nivel_ruta2':'/publicar' });
+	</script>	
+
+	<script type="text/javascript">
+		var CFG_cookieconsent_prevent_resize = true;
+	</script>
+		
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	<script type="text/javascript">
+		window.resize_robapaginas_sec=true;
+		window.resize_robapaginas_sec_600=false;
+		window.resize_robapaginas_sec_slot=null;
+		googletag.cmd.push(function() {
+			var map_300x600_lateral = googletag.sizeMapping().
+				addSize([0, 0], []).
+				addSize([1250, 100], [300, 600]).
+				build();
+			var map_robapaginas_secundario = googletag.sizeMapping().
+				addSize([0, 0], [[300, 250], [300, 600]]).
+				addSize([640, 100], [300, 250]).
+				build();
+	
+var Infonieve_robapaginas_principal_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_principal', [300, 250], 'div-banpub-Infonieve_robapaginas_principal').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_principal');
+window.resize_robapaginas_sec_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_secundario', [[300, 250], [300, 600]], 'div-banpub-Infonieve_robapaginas_secundario').defineSizeMapping(map_robapaginas_secundario).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_secundario');
+var Infonieve_robapaginas_extra_slot = googletag.defineSlot('/1020536/Infonieve_robapaginas_extra', [300, 250], 'div-banpub-Infonieve_robapaginas_extra').addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_robapaginas_extra');
+var Infonieve_300x600_lateral_slot = googletag.defineSlot('/1020536/Infonieve_300x600_lateral', [300, 600], 'div-banpub-Infonieve_300x600_lateral').defineSizeMapping(map_300x600_lateral).addService(googletag.pubads());
+googletag.display('div-banpub-Infonieve_300x600_lateral');
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().setPrivacySettings({nonPersonalizedAds: true});
+googletag.pubads().disableInitialLoad();
+googletag.pubads().setTargeting('in_zona', 'partedenieve');
+
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_principal') {
+				if(event.isEmpty) {
+					banner_cabecera_collapse();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_300x600_lateral') {
+				if(!event.isEmpty) {
+					banner_300x600_lateral();
+				}
+			}
+	
+			if(event.slot.getSlotElementId() === 'div-banpub-Infonieve_robapaginas_secundario') {
+				if(!event.isEmpty) {
+					if(event.size[1]==600) {
+						window.resize_robapaginas_sec_600=true;
+					}
+				}
+			}
+	
+		});
+	
+			googletag.enableServices();
+		});
+	</script>
+	
+<!-- HTML HEAD -->
+
+<script src="https://www.google.com/recaptcha/api.js?hl=es"></script>
+<script type="text/javascript">
+	function publicar_parte(){
+		var form = document.formulario;
+		form_reiniciar(form);
+
+		if(form.nombre.value.length < 4)
+			form_add_error(form.nombre,'Debes rellenar tu nombre');
+		if(!ValidarEmail(form.email.value))
+			form_add_error(form.email,'Debes introducir un email válido');
+		if(parseInt(form.estacion[form.estacion.selectedIndex].value) == 0)
+			form_add_error(form.estacion,'Debes seleccionar la estación');
+		if(form.texto.value.length < 10)
+			form_add_error(form.texto,'Debes comentar el estado de la estación');
+
+		if(!$(form).find("#formerrors").data("error")) form.submit();
+	}
+	
+	$(function(){
+		"use strict";
+		$('#valoraciones li span')
+			.hover(function(){
+				var valor=$(this).attr('rel');
+				$('#valoraciones li').removeClass('form_pusers_val_hover_on form_pusers_val_hover_off');
+				for(var i=1;i<=5;i++) {
+					if(i<=valor) $('#valoracion_'+i).addClass('form_pusers_val_hover_on');
+					else $('#valoracion_'+i).addClass('form_pusers_val_hover_off');
+				}
+			},function(){
+				$('#valoraciones li').removeClass('form_pusers_val_hover_on form_pusers_val_hover_off');
+			})
+			.click(function(e){
+				e.preventDefault();
+				var valor=$(this).attr('rel');
+				$('#valoracion').val(valor);
+				$('#valoraciones li').removeClass('form_pusers_val_on form_pusers_val_off');
+				for(var i=1;i<=5;i++) {
+					if(i<=valor) $('#valoracion_'+i).addClass('form_pusers_val_on');
+					else $('#valoracion_'+i).addClass('form_pusers_val_off');
+				}
+			});
+	});
+</script>
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611120201/pubads_impl.js?cb=122882268" async="" fetchpriority="high"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202611100101/gpt" rel="compression-dictionary"></head>
+
+<body class="scroll_l ">
+
+<div id="navbar_nevasport">
+	<div class="wrap">		<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div></div>
+</div>
+
+<div id="header" class="scrolled_l">
+	<header>
+    	<div class="wrap">
+        	<div id="cabecera">
+            	<div id="cab_cont">
+                	
+				                	<div id="barbox">
+                    	<div id="barbox_cont">
+                        	
+							                            <div id="logo" class="scroll_fade_size_l">
+                                <div id="logo_cont"><a href="./" id="logo_image" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a></div>
+                            </div>
+                            
+                            <div id="barbox_tools" class="scroll_fade_size_l">
+                                <ul>
+									                                    <li id="burger"><a title="Menú de navegación">
+                                    	<i>
+                                            <span id="burger_linea1"></span>
+                                            <span id="burger_linea2"></span>
+                                            <span id="burger_linea3"></span>
+                                    	</i>
+                                        <b>MENU</b>
+                                    </a></li>
+																		<li id="barbox_tools_share"><a class="redondeado tooltip tools_ball" title="Compartir esta página en Redes Sociales" rel="barbox_ball_rrss" data-tooltip="Compartir Página"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_social"><a href="muro-social/" class="redondeado tooltip" title="Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más..." data-tooltip="Actualidad #infonieve"><i class="imagen"></i></a></li>
+																			<li id="barbox_tools_fav" class="barbox_tools_fav_off"><a class="redondeado tooltip tools_ball" title="Mis estaciones favoritas" rel="barbox_ball_fav" data-tooltip="Estaciones Favoritas"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+									<li id="barbox_tools_search">
+                               			<a class="redondeado tooltip" title="Buscar estación de esquí" data-tooltip="Buscar Estación"><i class="imagen"></i></a>
+                                        <div id="barbox_search">
+                                            <form name="barbox_form_search" id="barbox_form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="barbox_search_cont">
+                                                    <div id="barbox_search_cont_box"><input type="text" name="query" id="searchbox" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="barbox_search_btn_cont"><input type="submit" id="barbox_search_btn" value="" title="Buscar estación" style=""></div>
+                                                <div id="barbox_search_close_cont"><span id="barbox_search_close" title="Cerrar buscador"><i class="imagen"></i></span></div>
+                                            </form>
+                                        </div>
+                               		</li>
+                                </ul>
+                            </div>
+                            
+                            <div id="barbox_menu" class="scroll_fade_size_l no_tooltip">
+                            	<nav>
+                            		<menu>
+										<ul>
+																						<li id="barbox_head_parte" class="barbox_head">
+												<a href="parte-de-nieve/" class="tooltip" title="" data-tooltip="Parte de Nieve">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>PARTE DE NIEVE</strong></span>
+															<span class="barbox_head_txt">Información actualizada sobre el estado de apertura de las pistas</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_cams" class="barbox_head">
+												<a href="sala-de-webcams/" class="tooltip" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams" data-tooltip="Webcams">
+													<span class="barbox_box">
+														<span class="barbox_head_img"><i class="imagen"></i></span>
+														<span class="barbox_head_cont">
+															<span class="barbox_head_tit"><strong>WEBCAMS</strong></span>
+															<span class="barbox_head_txt">Observa las estaciones en tiempo real a través de sus webcams</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li id="barbox_head_estac"><a href="estaciones-esqui/" class="tooltip" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal" data-tooltip="Estaciones de esquí"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESTACIONES ESQUÍ</strong></span></a></li>
+											<li id="barbox_head_meteo"><a href="meteo/" class="tooltip" title="Previsión del Tiempo en las estaciones de esquí" data-tooltip="El Tiempo"><i class="imagen"></i><span class="barbox_head_tit"><strong>EL TIEMPO</strong></span></a></li>
+											<li id="barbox_head_mapa"><a href="mapa-de-webcams/" class="tooltip" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa" data-tooltip="Mapa de webcams"><i class="imagen"></i><span class="barbox_head_tit"><strong>MAPA DE WEBCAMS</strong></span></a></li>
+											<li id="barbox_head_fondo"><a href="esqui-de-fondo/" class="tooltip" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés" data-tooltip="Esquí de fondo"><i class="imagen"></i><span class="barbox_head_tit"><strong>ESQUÍ DE FONDO</strong></span></a></li>
+										</ul>
+                            		</menu>
+                            	</nav>
+                            </div>
+                            
+                        </div><!-- END barbox_cont -->
+                        <div id="barbox_ball">
+                        	<div id="barbox_ball_cont">
+																<div id="barbox_ball_rrss">
+																		<div class="barbox_ball_tit">COMPARTIR ESTA PÁGINA</div>
+									<div class="barbox_ball_cont">
+										<span id="barbox_ball_rrss_share_fb"><a href="https://www.facebook.com/dialog/share?app_id=1763161047252606&amp;display=page&amp;href=https%3A%2F%2Fwww.infonieve.es%2Fparte-de-nieve%2Fpublicar%2F" target="_blank" class="track_facebook-com_SharePage_NavBar" title="Compartir en Facebook"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_tw"><a href="https://twitter.com/intent/tweet?text=Publica+tu+parte+de+nieve&amp;url=https%3A%2F%2Fwww.infonieve.es%2Fparte-de-nieve%2Fpublicar%2F&amp;via=infonieve" target="_blank" class="track_twitter-com_SharePage_NavBar" title="Compartir en Twitter"><i class="imagen"></i></a></span>
+										<span id="barbox_ball_rrss_share_whatsapp"><a href="whatsapp://send?text=https%3A%2F%2Fwww.infonieve.es%2Fparte-de-nieve%2Fpublicar%2F" target="_blank" class="track_whatsapp_SharePage_NavBar" title="Compartir en Whatsapp"><i class="imagen"></i></a></span>
+									</div>
+								</div>
+																<div id="barbox_ball_fav">
+									Aun no has marcado ninguna estación como favorita								</div>
+                        	</div>
+                        </div><!-- END barbox_ball -->
+                        <div id="barbox_shadow"></div>
+                    </div><!-- END barbox -->
+                    
+				                    <div id="navbox">
+                    	<div id="navbox_cont">
+							                            <div id="menu">
+                                <nav>
+                                    <menu>
+                                        <div id="menu_cont">
+                                            <ul>
+                                                <li id="menu_head_home"><a href="./" title="Infonieve.es - Portada"><span class="menu_box"><i class="imagen"></i><strong>PORTADA</strong></span></a></li>
+                                                <li id="menu_head_parte"><a href="parte-de-nieve/" title="Estado de la nieve, apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>PARTE DE NIEVE</strong></span></a></li>
+                                                <li id="menu_head_cams"><a href="sala-de-webcams/" title="Observa lo que está ocurriendo en las estaciones de esquí de todo el planeta a través de sus webcams"><span class="menu_box"><i class="imagen"></i><strong>WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_estac"><a href="estaciones-esqui/" title="Estaciones de esquí de España, Andorra, Pirineo Francés y Portugal"><span class="menu_box"><i class="imagen"></i><strong>ESTACIONES <b>DE </b>ESQUÍ</strong></span></a></li>
+                                                <li id="menu_head_meteo"><a href="meteo/" title="Previsión del Tiempo en las estaciones de esquí"><span class="menu_box menu_1linea"><i class="imagen"></i><strong>EL TIEMPO</strong></span></a></li>
+                                                <li id="menu_head_mapa"><a href="mapa-de-webcams/" title="Todas las webcams de las estaciones de esquí localizadas geográficamente en un mapa"><span class="menu_box"><i class="imagen"></i><strong>MAPA DE WEBCAMS</strong></span></a></li>
+                                                <li id="menu_head_fondo"><a href="esqui-de-fondo/" title="Estaciones de esquí nórdico de España, Andorra y Pirineo Francés"><span class="menu_box"><i class="imagen"></i><strong>ESQUÍ DE FONDO</strong></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </menu>
+                                </nav>
+                            </div><!-- END menu -->
+                            
+                            <div id="tools">
+                                <div id="tools_cont">
+                                                                        <div id="tools_search">
+                                        <div id="tools_search_box">
+                                            <form name="form_search" id="form_search" action="buscar.php" method="get" accept-charset="utf-8" enctype="multipart/form-data">
+                                                <div id="search_cont">
+                                                    <div id="search_cont_box"><input type="text" name="query" id="search" placeholder="Buscar estación" style=""></div>
+                                                </div>
+                                                <div id="search_btn_cont"><input type="submit" id="search_btn" value="" title="Buscar estación" style=""></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_muro">
+                                        <div id="tools_muro_box">
+                                            <a href="muro-social/" title="Últimas publicaciones de nevadas y estado de las estaciones, fotos, comentarios, actualidad y más...">Actualidad #infonieve</a>
+                                        </div>
+                                    </div>
+                                                                        <div id="tools_social">
+                                        <ul>
+                                            <li id="tools_social_contact"><a href="contacto/" class="redondeado tooltip" title="Contacta con Infonieve.es" data-tooltip="Contactar"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_ig"><a href="https://www.instagram.com/infonieve.es/" class="redondeado tooltip track_instagram-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Instagram" data-tooltip="Instagram"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_tw"><a href="https://twitter.com/infonieve" class="redondeado tooltip track_twitter-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Twitter" data-tooltip="Twitter"><i class="imagen"></i></a></li>
+                                            <li id="tools_social_fb"><a href="https://www.facebook.com/infonieve/" class="redondeado tooltip track_facebook-com_ExternalLink_HeaderMenu" target="_blank" title="Infonieve.es en Facebook" data-tooltip="Facebook"><i class="imagen"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div><!-- END tools -->
+                            
+                                                        <div id="menu_nevasport">
+										<div class="navbar_nevasport_box">
+			<div class="logo_nevasport"><a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_NavbarLogo" title="Nevasport.com"><i class="imagen"></i></a></div>
+			<div class="menu_nevasport">
+				<ul>
+					<li><a title="Información sobre todas las estaciones de esquí del Planeta" href="https://www.nevasport.com/estaciones/" class="track_nevasport-com_ExternalLink_NavbarEstaciones"><span>Estaciones</span></a></li>
+					<li><a title="La comunidad de foros de nieve más grande de internet" href="https://www.nevasport.com/phorum/" class="track_nevasport-com_ExternalLink_NavbarForos"><span>Foros</span></a></li>
+					<li><a title="Actualidad día a día del mundo de la nieve" href="https://www.nevasport.com/noticias/" class="track_nevasport-com_ExternalLink_NavbarNoticias"><span>Noticias</span></a></li>
+					<li><a title="Reportajes sobre los viajes de nuestros usuarios a la nieve" href="https://www.nevasport.com/reportajes/" class="track_nevasport-com_ExternalLink_NavbarReportajes"><span>Reportajes</span></a></li>
+					<li><a title="La visión más personal de nevasport" href="https://www.nevasport.com/blogs/" class="track_nevasport-com_ExternalLink_NavbarBlogs"><span>Blogs</span></a></li>
+					<li><a title="Cientos de destinos para elegir tus próximas vacaciones de esquí" href="https://www.nevasport.com/viajes/" class="track_nevasport-com_ExternalLink_NavbarViajes"><span>Viajes</span></a></li>
+					<li><a title="Fotos de nieve y montaña" href="https://www.nevasport.com/nevamedia/" class="track_nevasport-com_ExternalLink_NavbarFotos"><span>Fotos</span></a></li>
+					<li><a title="Mosaicos de vídeos temáticos" href="https://www.nevasport.com/mosaicos/" class="track_nevasport-com_ExternalLink_NavbarVideos"><span>Vídeos</span></a></li>
+					<li><a title="Todas las referencias de esquís y colecciones para esta y pasadas temporadas" href="https://www.nevasport.com/material/" class="track_nevasport-com_ExternalLink_NavbarMaterial"><span>Material</span></a></li>
+					<!-- <li><a title="Esquí Pro" href="https://www.nevasport.com/EsquiPro/" class="track_nevasport-com_ExternalLink_NavbarEsquiPro"><span>Esquí Pro</span></a></li> -->
+					<li><a title="Las estaciones de esquí en verano. Actividades más allá de la temporada de esquí" href="https://www.nevasport.com/canal/verano/" class="track_nevasport-com_ExternalLink_NavbarVerano"><span>Verano</span></a></li>
+					<li><a class="selected" title="Partes de nieve y webcams / El ojo de las estaciones de esquí" href="http://www.infonieve.es/"><span>Infonieve</span></a></li>
+					<li><a title="Nevalog, monitor de actividad de nevasport" href="https://www.nevasport.com/nevalog/" class="track_nevasport-com_ExternalLink_NavbarNevalog"><span>Nevalog</span></a></li>
+				</ul>
+			</div>
+		</div>                                <div class="clear"></div>
+                            </div>
+                                                
+                        </div><!-- END navbox_cont -->
+                    </div><!-- END navbox -->
+                </div><!-- END cab_cont -->
+            </div><!-- END cabecera -->
+        </div><!-- END wrap -->
+    </header>
+</div><!-- END header -->
+<div id="menu_close"></div>
+
+<div id="header_back"></div>
+
+<div id="bodybox" class="encabezado_bread">
+		<div id="breadcrumb">
+		<div class="wrap">
+			<ol class="breadcrumb">
+			<li class="breadcrumb_home"><a href="./" title="Infonieve.es - Portada"><i class="imagen"></i></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="parte-de-nieve/" itemprop="url" title="Parte de nieve: estado actual de las estaciones de esquí"><span itemprop="title">PARTE DE NIEVE</span></a></li><li><span>PUBLICAR MI PARTE</span></li>			</ol>
+		</div>
+	</div>
+		
+	<div id="contbox">
+		<div class="wrap">
+							
+		<!-- /1020536/Infonieve_300x600_lateral -->
+		<div id="div-banpub-Infonieve_300x600_lateral">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_300x600_lateral'); });
+		</script>
+		</div>
+							<div id="contenido">
+
+<!-- CONTENIDO -->
+
+
+<div class="encabezado encabezado_bread">
+
+	<div class="encabezado_titulo">
+		<div>
+			<h1><span>Publica tu parte de nieve</span></h1>
+			<h3>Valora el estado de la nieve y las pistas de una estación</h3>
+		</div>
+	</div>
+
+	<div id="submenu" class="submenu">
+		<div class="submenu_overflow_none">
+			<nav class="dragscroll">
+				<ul>
+					<li><a href="parte-de-nieve/" title="Estado de la nieve y apertura de pistas y remontes de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">Parte de nieve completo</a></li>
+					<li><a href="parte-de-nieve/top-nieve/" title="Estaciones de esquí con mayor espesor de nieve acumulado">Top Nieve</a></li>
+										<li><a href="parte-de-nieve/top-km/" title="Estaciones de esquí con mayor número de kilómetros de pistas abiertos">Top Km abiertos</a></li>
+										<li><a href="parte-de-nieve/usuarios/" title="Partes de nieve publicados por los usuarios">Partes de usuarios</a></li>
+					<li class="selec"><a href="parte-de-nieve/publicar/" title="Si has estado en una estación, publica tu parte de nieve">Publicar parte</a></li>
+					<li><a href="parte-de-nieve/aludes/" title="Peligro de aludes en las estaciones de esquí">Aludes</a></li>
+				</ul>
+			</nav>
+		<em class="submenu_nav submenu_nav_left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"></path></svg></em><em class="submenu_nav submenu_nav_right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024"><path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"></path></svg></em></div>
+	</div>
+
+	<div class="encabezado_roba">
+		<div class="box_banpub">
+			
+		<!-- /1020536/Infonieve_robapaginas_principal -->
+		<div id="div-banpub-Infonieve_robapaginas_principal">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-banpub-Infonieve_robapaginas_principal'); });
+		</script>
+		</div>
+			</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+
+<div class="pad_box pad_box_s">
+	<div class="box">
+		<div class="fuentegrande pad_bot8"><strong>Si has estado recientemente en una estación, comenta como estaba la nieve y las pistas:</strong></div>
+	</div>
+</div>
+
+
+<div class="pad_box pad_box_s">
+	<div class="box">
+		<form name="formulario" id="formularo" method="post" action="parte-de-nieve/publicar/" accept-charset="utf-8">
+			<div class="table table_nohover table_notable_s form_pusers">
+				<div class="tbody">
+					<div class="tr">
+						<div class="td tdx1"><label for="nombre"><b>Nombre-Alias:</b></label></div>
+						<div class="td tdx2"><input name="nombre" id="nombre" type="text" maxlength="145" value="" style=""></div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1"><label for="email"><b>Email:</b><span class="fuentegris fuentepeque">(NO se hará público)</span></label></div>
+						<div class="td tdx2"><input name="email" id="email" type="email" maxlength="145" value="" style=""></div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1"><label for="estacion"><b>Estación:</b></label></div>
+						<div class="td tdx2">
+							<select name="estacion" id="estacion">
+								<option value="0" selected="selected">Selecciona una estación...</option><optgroup label="España » Pirineo Catalán"><option value="16">Baqueira Beret</option><option value="17">Boí Taüll</option><option value="18">Espot</option><option value="20">La Molina</option><option value="19">Masella</option><option value="21">Port Ainé</option><option value="22">Port del Comte</option><option value="2412">Tavascán</option><option value="23">Vall de Nuria</option><option value="24">Vallter</option></optgroup><optgroup label="España » Pirineo Aragonés"><option value="7">Astún</option><option value="8">Candanchú</option><option value="9">Cerler</option><option value="10">Formigal</option><option value="11">Panticosa</option></optgroup><optgroup label="España » Cordillera Cantábrica"><option value="15">Alto Campoo</option><option value="5448">Fuentes de Invierno</option><option value="25">Manzaneda</option><option value="14">San Isidro</option><option value="13">Valgrande-Pajares</option><option value="955">Valle Laciana - Leitariegos</option></optgroup><optgroup label="España » Sistema Ibérico"><option value="4685">Javalambre</option><option value="4922">Punto de Nieve Santa Inés</option><option value="12">Valdelinares</option><option value="28">Valdezcaray</option></optgroup><optgroup label="España » Sistema Central"><option value="29">La Pinilla</option><option value="26">Puerto de Navacerrada</option><option value="2379">Sierra de Béjar</option><option value="27">Valdesquí</option></optgroup><optgroup label="España » Sistema Penibético"><option value="4">Sierra Nevada</option></optgroup><optgroup label="Andorra » Andorra"><option value="4601">Grandvalira</option><option value="38">Ordino Arcalís</option><option value="39">Pal Arinsal</option><option value="2824">Ski Canaro</option></optgroup><optgroup label="Pirineo Francés » Pyrénées Atlantiques"><option value="1533">Artouste</option><option value="234">Gourette</option><option value="2225">La Pierre Saint-Martin</option></optgroup><optgroup label="Pirineo Francés » Hautes Pyrénées"><option value="1518">Cauterets Cirque du Lys</option><option value="5567">Cauterets Pont d´Espagne</option><option value="1516">Gavarnie-Gèdre</option><option value="236">Grand Tourmalet</option><option value="1520">Hautacam</option><option value="238">Luz Ardiden</option><option value="1334">Peyragudes</option><option value="239">Piau-Engaly</option><option value="240">Saint-Lary</option><option value="1522">Val Louron</option></optgroup><optgroup label="Pirineo Francés » Haute Garonne"><option value="4322">Bourg d´Oueil</option><option value="3511">Le Mourtis</option><option value="1517">Luchon - Superbagnères</option></optgroup><optgroup label="Pirineo Francés » Ariège Pyrénées"><option value="1504">Ascou-Pailhères</option><option value="233">Ax 3 Domaines</option><option value="1500">Goulier Neige</option><option value="1499">Guzet</option><option value="1501">Les Monts d´Olmes</option><option value="1502">Mijanès-Donezan</option></optgroup><optgroup label="Pirineo Francés » Aude"><option value="3512">Camurac</option></optgroup><optgroup label="Pirineo Francés » Neiges Catalanes"><option value="3977">Cambre d´Aze</option><option value="235">Font-Romeu Pyrénées 2000</option><option value="1527">Formiguères</option><option value="1529">La Quillane</option><option value="237">Les Angles</option><option value="1530">Porté-Puymorens</option></optgroup><optgroup label="Portugal » Portugal"><option value="1332">Serra da Estrela</option></optgroup><optgroup label="Estaciones de Esquí de Fondo"><option value="20007">Aransa</option><option value="20016">Balneario de Panticosa</option><option value="20027">Beille</option><option value="20031">Candanchú (Nórdico)</option><option value="20030">Capcir</option><option value="20033">Cauterets Pont d´Espagne (Nordique)</option><option value="20028">Chioula</option><option value="20034">Font-Romeu Pyrénées 2000 (Nordique)</option><option value="20020">Gabardito</option><option value="20009">Guils Fontanera</option><option value="20002">Irati-Abodi</option><option value="20024">Issarbe</option><option value="20032">La Pierre St-Martin (Nordique)</option><option value="20004">La Rabassa - Naturland</option><option value="20003">Larra-Belagua</option><option value="20017">Le Somport</option><option value="20018">Linza</option><option value="20019">Lizara</option><option value="20021">Llanos del Hospital</option><option value="20008">Lles de Cerdanya</option><option value="20025">Nistos</option><option value="20015">Pineta</option><option value="20006">Puerto de Cotos</option><option value="20001">Puerto de la Ragua</option><option value="20005">Puerto de Navafría</option><option value="20010">Sant Joan de l´Erm</option><option value="20013">Tavascán (Nórdico)</option><option value="20011">Tuixent - La Vansa</option><option value="20026">Val d´Azun</option><option value="20012">Virós-Vallferrera</option>							</optgroup></select>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1"><label for="fecha"><b>Fecha:</b><span class="fuentegris fuentepeque">¿Qué día estuviste?</span></label></div>
+						<div class="td tdx2">
+							<select name="fecha" id="fecha">
+								<option value="1794835797" selected="selected">Lunes 16 de Noviembre de 2026</option><option value="1794749397">Domingo 15 de Noviembre de 2026</option><option value="1794662997">Sábado 14 de Noviembre de 2026</option><option value="1794576597">Viernes 13 de Noviembre de 2026</option><option value="1794490197">Jueves 12 de Noviembre de 2026</option><option value="1794403797">Miércoles 11 de Noviembre de 2026</option><option value="1794317397">Martes 10 de Noviembre de 2026</option>							</select>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1 td_valign_top"><label for="texto"><b>Estado de la estación:</b><span class="fuentegris fuentepeque">Comenta cómo se encontraba la nieve y las pistas.</span></label></div>
+						<div class="td tdx2"><textarea name="texto" id="texto" style=""></textarea></div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1"><b>Puntuación:</b><span class="fuentegris fuentepeque">Valoración general del estado de la estación</span></div>
+						<div class="td tdx2">
+													<input type="hidden" name="valoracion" id="valoracion" value="3" style="">
+							<ul id="valoraciones" class="form_pusers_val form_pusers_valor_3">
+								<li id="valoracion_1" class="form_pusers_val_on"><span rel="1" class="tooltip" data-tooltip="Penoso"><i class="imagen"></i></span></li><li id="valoracion_2" class="form_pusers_val_on"><span rel="2" class="tooltip" data-tooltip="Malo"><i class="imagen"></i></span></li><li id="valoracion_3" class="form_pusers_val_on"><span rel="3" class="tooltip" data-tooltip="Aceptable"><i class="imagen"></i></span></li><li id="valoracion_4" class="form_pusers_val_off"><span rel="4" class="tooltip" data-tooltip="Bueno"><i class="imagen"></i></span></li><li id="valoracion_5" class="form_pusers_val_off"><span rel="5" class="tooltip" data-tooltip="Excelente"><i class="imagen"></i></span></li>							</ul>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1"><b>Anti-spam:</b><span class="fuentegris fuentepeque">Marca esta casilla</span></div>
+						<div class="td tdx2">
+							<div class="g-recaptcha" data-sitekey="6LeVUTMUAAAAAFSNXWp1qWlo_tJqhqI37i0tUViq"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-g9y4f1xc9szd" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeVUTMUAAAAAFSNXWp1qWlo_tJqhqI37i0tUViq&amp;co=aHR0cHM6Ly93d3cuaW5mb25pZXZlLmVzOjQ0Mw..&amp;hl=es&amp;v=4i3aN5wAweL7i3ADI7BSX4B-&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;ovv=CADq00gF&amp;cb=irezhstinvcw"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td tdx1 hide_s">&nbsp;</div>
+						<div class="td tdx2">
+							<div class="fuentepeque fuentegris">Al enviar este formulario usted manifiesta que ha leído y acepta la <a href="privacidad/" title="Política de privacidad de datos de infonieve.es" target="_blank">política de privacidad</a>.</div>
+							<div>&nbsp;</div>
+							<div id="formerrors" class="hide alerta"></div>
+							<div class="botonera botonera_notick"><a href="javascript:publicar_parte();">PUBLICAR MI PARTE</a><input name="enviado" type="hidden" id="enviado" value="1" style=""></div>
+							<div>&nbsp;</div>
+							<div class="fuentepeque fuentegris">* Todos los campos son obligatorios</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="pad_box pad_box_s margen_bot16">
+	<div class="box">
+		
+<strong>No hagas comentarios sobre partes de nieve que hayan publicado otros usuarios, publica tu propia valoración.</strong><br>
+Esta herramienta es únicamente para comentar cómo estaban las pistas y la nieve si has estado recientemente en la estación. Para otras consultas o comentarios, utilizad el <a href="contacto/" title="Contactar con Infonieve.es">formulario de contacto</a>.<br>
+No envíes un parte anterior al <strong>Martes 10 de Noviembre de 2026</strong> ya que ha pasado suficiente tiempo como para que las condiciones hayan cambiado considerablemente. Los partes de nieve tendrán una <strong>vigencia de 10 días</strong> a partir de la fecha de estancia en la estación.
+	</div>
+</div>
+
+
+
+<div class="pad_box">
+	<div class="box">
+				<div class="pastilla pastilla_viajes box_viajes_bajocont" rel-num-l="3" rel-num-m="2" rel-num-s="1" rel-pastilla="17" rel-estacion="" rel-idioma="" rel-anterior="L" rel-num-ant="3"><iframe src="https://viajes.infonieve.es/viajes_2k16.php?zona=infonieve&amp;cantidad=3&amp;pastilla=17&amp;vm=0&amp;estaciones=&amp;idioma=" style="width:100%; height:100%;" title="" frameborder="0" scrolling="no" loading="lazy" seamless=""></iframe></div>	</div>
+</div>
+
+
+
+	            <div class="clear"></div>
+            
+			</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+    	<div class="wrap">
+        	<div id="pie">
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="./" title="Infonieve.es - Partes de Nieve, Meteo y Webcams">PORTADA</a></li>
+                        <li><a href="muro-social/" title="Actualidad, fotos de las últimas nevadas, estado de las pistas e información de las estaciones de esquí">#INFONIEVE</a></li>
+                        <li><a href="estaciones-esqui/" title="Estaciones de ski de la Península Ibérica">ESTACIONES DE ESQUÍ</a></li>
+                        <li><a class="piedet" href="estaciones-esqui/pais/espana/" title="Estaciones de ski de España">ESPAÑA</a></li><li><a class="piedet" href="estaciones-esqui/pais/andorra/" title="Estaciones de ski de Andorra">ANDORRA</a></li><li><a class="piedet" href="estaciones-esqui/pais/pirineo-frances/" title="Estaciones de ski de Pirineo Francés">PIRINEO FRANCÉS</a></li><li><a class="piedet" href="estaciones-esqui/pais/portugal/" title="Estaciones de ski de Portugal">PORTUGAL</a></li>                        <li><a href="estaciones-esqui/fecha-inicio-fin-temporada/" title="Fechas de apertura y cierre de la temporada en las estaciones de esquí">FECHAS APERTURA/CIERRE</a></li>
+                        <li><a href="meteo/" title="Previsión del tiempo en las estaciones de ski de la Península Ibérica">EL TIEMPO</a></li>
+                        <li><a href="esqui-de-fondo/" title="Estaciones de ski nórdico y de fondo">ESQUÍ DE FONDO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="parte-de-nieve/" title="Parte de nieve de las estaciones de ski de España, Andorra, Pirineo Francés y Portugal">PARTE DE NIEVE</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/top-nieve/" title="Estaciones de ski con más cantidad de nieve">TOP ESPESORES</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/top-km/" title="Estaciones de ski con más kilómetros de pistas abiertos">TOP KM ABIERTOS</a></li>
+                                                <li><a class="piedet" href="parte-de-nieve/aludes/" title="Nivel de peligro de aludes fuera de pistas en las estaciones de esquí">PELIGRO DE ALUDES</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/usuarios/" title="Partes de nieve recientes publicados por los usuarios">PARTES DE USUARIOS</a></li>
+                        <li><a class="piedet" href="parte-de-nieve/publicar/" title="Has estado recientemente esquiando? Publica tu parte de nieve">PUBLICA TU PARTE</a></li>
+                        <li><a href="parte-de-nieve/snowparks/" title="Estado de apertura de los snowparks y áreas freestyle de las estaciones de ski">SNOWPARKS</a></li>
+                        <li><a href="parte-de-nieve/skimo/" title="Estado de apertura de los itinerarios de esquí de montaña en las estaciones de ski">SKIMO</a></li>
+                        <li><a href="parte-de-nieve/itinerarios-raquetas/" title="Estado de apertura de los recorridos de raquetas de nieve en las estaciones de ski">RAQUETAS</a></li>
+                        <li><a href="parte-de-nieve/pistas-trineos/" title="Estado de apertura de las pistas de trineos en las estaciones de ski">TRINEOS</a></li>
+                    </ul>
+                </div>
+                <div class="pie_s_bloc_left">
+                    <ul>
+                        <li><a href="sala-de-webcams/" title="Webcams de estaciones de ski de todo el planeta">SALA DE WEBCAMS</a></li>
+                                                <li><a class="piedet" href="estaciones-esqui/" title="Webcams de las estaciones de esquí de España, Andorra, Pirineo Francés y Portugal">PENÍNSULA IBÉRICA</a></li>
+                                                <li><a class="piedet" href="sala-de-webcams/reg/alpes/" title="Webcams de la estaciones de ski de Alpes">ALPES</a></li><li><a class="piedet" href="sala-de-webcams/reg/norteamerica/" title="Webcams de la estaciones de ski de Norteamérica">NORTEAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/sudamerica/" title="Webcams de la estaciones de ski de Sudamérica">SUDAMÉRICA</a></li><li><a class="piedet" href="sala-de-webcams/reg/oceania/" title="Webcams de la estaciones de ski de Oceanía">OCEANÍA</a></li><li><a class="piedet" href="sala-de-webcams/reg/africa/" title="Webcams de la estaciones de ski de África">ÁFRICA</a></li>                        <li><a href="sala-de-webcams/donde-esta-nevando/" title="Comprueba donde está nevando ahora mismo">ESTÁ NEVANDO EN...</a></li>
+                        <li><a href="mapa-de-webcams/" title="Todas las webcams posicionadas en un mapa con su punto de emisión">MAPA DE WEBCAMS</a></li>
+                    </ul>
+                </div>
+                <div id="pie_m_extra">
+                    <ul>
+                        <li class="pie_s_padtop">
+                        	<span>PARA TU WEB O APP:</span>
+                        	<a href="recursos/" title="Si tienes una web o una APP, inserta la información de infonieve.es"><i class="imagen"></i>WIDGETS Y APIs</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span>DESARROLLADO POR:</span>
+	                        <a href="http://www.dinartis.com/" title="Dinartis.com - Diseño y desarrollo de páginas web" target="_blank" class="track_dinartis-com_ExternalLink_FooterLinks">DINARTIS.COM</a>
+                        </li>
+                        <li class="pie_l_padtop pie_s_padtop">
+                        	<span><i>MANTEN.</i><em>MANTENIMIENTO</em> TÉCNICO:</span>
+                        	<a href="http://www.berein.com/" title="Berein Internet - Páginas web, Intranet, Aplicaciones TPV, Servidores, Redes..." target="_blank" class="track_berein-com_ExternalLink_FooterLinks">BEREIN.COM</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+    </div>
+    <div id="subfooter">
+    	<div class="wrap">
+        	<div id="subpie">
+            	<div>
+                	<div id="pie_logos">
+                	                		<a href="./" id="pie_logo_infonieve" title="Infonieve.es - Partes de Nieve, Meteo y Webcams"><i class="imagen"></i></a>
+                		<a href="https://www.nevasport.com/" class="track_nevasport-com_ExternalLink_FooterLogo" id="pie_logo_nevasport" title="Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve"><i class="imagen"></i></a>
+						<br>
+                		<a href="https://www.pyreneige.fr/" class="track_pyreneige-fr_ExternalLink_FooterLogo" id="pie_logo_pyreneige" title="[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos"><i class="imagen"></i></a>
+                	                	</div>
+                	<div>© INFONIEVE.es 2003-2026 / ski-cams.com</div>
+                </div>
+                <div id="pie_legal">
+                    <a href="contacto/" title="Contacta con Infonieve.es">Contacto</a>
+                    <a href="publicidad/" title="Anúnciese en infonieve.es">Publicidad</a>
+                    <a href="aviso-legal/" title="Aviso legal">Aviso legal</a>
+                    <a href="privacidad/" title="Política de privacidad">Política de privacidad</a>
+                    <a href="cookies/" title="Política de cookies">Política de cookies</a>
+                </div>
+                <div>
+                	<div>Encuéntranos también en</div>
+                	<div id="pie_rrss">
+                        <a id="pie_rrss_ig" href="https://www.instagram.com/infonieve.es/" target="_blank" class="track_instagram-com_ExternalLink_FooterLogo" title="Infonieve.es en Instagram" data-tooltip="Instagram"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_tw" href="https://twitter.com/infonieve" target="_blank" class="track_twitter-com_ExternalLink_FooterLogo" title="Infonieve.es en Twitter" data-tooltip="Twitter"><span><i class="imagen"></i></span></a>
+                        <a id="pie_rrss_fb" href="https://www.facebook.com/infonieve/" target="_blank" class="track_facebook-com_ExternalLink_FooterLogo" title="Infonieve.es en Facebook" data-tooltip="Facebook"><span><i class="imagen"></i></span></a>
+                    </div>
+                </div>
+                                <div id="pie_patro">
+                    <a href="https://www.esquiades.com/" class="track_esquiades-com_AdLink_FooterLogo" title="Esquiades" target="_blank" rel="sponsored"><img src="images/logo_pie_esquiades.svg" alt="Esquiades"></a>
+                    <a href="https://www.aramon.com/" class="track_aramon-com_AdLink_FooterLogo" title="Aramon" target="_blank" rel="sponsored"><img src="images/logo_pie_aramon_2026.svg" alt="Aramon"></a>
+                    <a href="https://pirineu365.cat/" class="track_pirineu365-cat_AdLink_FooterLogo" title="Pirineu365" target="_blank" rel="sponsored"><img src="images/logo_pie_pirineu365.png" alt="Pirineu365"></a>
+                    <a href="https://www.estiber.com/" class="track_estiber-com_AdLink_FooterLogo" title="Estiber" target="_blank" rel="sponsored"><img src="images/logo_pie_estiber_v2.png" alt="Estiber"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="tooltip"></div>
+
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="El reCAPTCHA caduca dentro de dos minutos" name="c-g9y4f1xc9szd" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=es&amp;v=4i3aN5wAweL7i3ADI7BSX4B-&amp;k=6LeVUTMUAAAAAFSNXWp1qWlo_tJqhqI37i0tUViq&amp;bft=0dAFcWeA6hPchGHMECvsw2OJr5noENQT63S-AEIbY8uAikSmzZpunANk9I1Vp6Gkk42ZHsj1-5dDPRPgndiGTBxo9kjRoVlO2btA" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

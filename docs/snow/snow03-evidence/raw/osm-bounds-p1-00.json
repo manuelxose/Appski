@@ -1,0 +1,18 @@
+{
+  "key": "osm-bounds-p1-00",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B(id%3Awundefined%3Bid%3Arundefined%3Bid%3Anundefined%3B)%3Bout%20ids%20bounds%3B",
+  "requestedUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B(id%3Awundefined%3Bid%3Arundefined%3Bid%3Anundefined%3B)%3Bout%20ids%20bounds%3B",
+  "status": 400,
+  "sha256": "c129137f7c0420d7026395d0621ad526a511fc040b3fe8acd5e453b2c871cd9c",
+  "bytes": 1536,
+  "capturedAt": "2026-11-16T22:57:26.513Z",
+  "source": "network",
+  "userAgent": "appski-snow03-catalog/1.0 (+https://appski.invalid/snow03; contact: ops@appski.invalid)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 400,
+      "ms": 37330
+    }
+  ]
+}

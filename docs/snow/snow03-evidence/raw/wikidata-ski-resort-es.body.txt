@@ -1,0 +1,1697 @@
+{
+  "head" : {
+    "vars" : [ "item", "itemLabel", "coord", "elev", "website" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1502252"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.946666666 42.699166666)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.baqueira.es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Baqueira Beret"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1502252"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.946666666 42.699166666)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2610"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.baqueira.es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Baqueira Beret"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1502252"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.946666666 42.699166666)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.baqueira.es/ca"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Baqueira Beret"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1502252"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.946666666 42.699166666)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2610"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.baqueira.es/ca"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Baqueira Beret"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2859512"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.274594 42.702989)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Panticosa"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2859531"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.64 42.42)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.aransaski.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Estació d'Aransa"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2909884"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.081111111 42.756111111)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Bonabé"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3093482"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.75026 42.738963)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gabardito"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3107623"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.395036 42.764614)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.formigal.com"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Formigal"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3120587"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.84 42.46)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1905"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.guils.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Guils Fontanera"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3120587"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.84 42.46)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2080"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.guils.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Guils Fontanera"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3179913"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.902092 42.351247)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1604"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.masella.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Masella"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3179913"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.902092 42.351247)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2560"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.masella.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Masella"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3179913"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.902092 42.351247)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1604"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.masella.com/en/home"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Masella"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3179913"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.902092 42.351247)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2560"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.masella.com/en/home"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Masella"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3217985"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.8 42.955)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Larra-Belagua"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3227291"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.531957 42.7964)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lesomport.com"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Candanchú-Le Somport"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3257491"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.612216 42.6837)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Llanos del Hospital (estación de esqui de fondo)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3257499"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.66805556 42.43111111)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.lles.net/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Estació de Lles"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q534256"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.39972 37.0953)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.sierranevadaski.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de Sierra Nevada"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q546015"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.499444444 42.631944444)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1940"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Ordino-Arcalís"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q588136"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.52764389 42.788)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://candanchu.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Candanchú"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q613056"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.394683333 43.063686111)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Fuentes de Invierno"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q625867"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.53833333 42.59333333)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1710"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.cerler.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Cerler"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q625867"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.53833333 42.59333333)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2560"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.cerler.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Cerler"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q752368"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.50611111 42.80972222)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Astún (estación de esquí)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3388691"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.109663 42.660891)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "fr",
+        "type" : "literal",
+        "value" : "Pineta"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3389662"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.28431 42.6014)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "pla de Negua"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3398641"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.56194 42.1728)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://portdelcomte.net/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de Port del Comte"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3472549"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.287284 42.417722)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1720"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.santjoandelerm.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Sant Joan de l'Erm"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3516284"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.21956111 42.67855278)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1710"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://tavascan.net/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Tavascán"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3516284"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.21956111 42.67855278)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2560"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://tavascan.net/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Tavascán"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3541934"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.527607 42.214323)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1830"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.tuixent-lavansa.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Tuixent-la Vansa"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3541934"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.527607 42.214323)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2150"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.tuixent-lavansa.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Tuixent-la Vansa"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3553510"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-2.968943131 42.254594961)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2125"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.valdezcaray.es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Valdezcaray"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3560959"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.211929 42.496909)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Estació d'esquí Virós - Vallferrera"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3572035"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-1.023616666 40.111177777)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1650"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.javalambre-valdelinares.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Javalambre"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3572035"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-1.023616666 40.111177777)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2000"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.javalambre-valdelinares.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Javalambre"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3572141"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-0.624155918 40.388674598)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Aramón Valdelinares"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3750961"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.9719 40.799)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.valdesqui.es"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Valdesquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4566905"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.690037 40.354062)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2368"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.sierradebejar-lacovatilla.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de La Covatilla"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1883463"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.92527778 40.29805556)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Madrid Snowzone"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2616429"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.472344 41.203403)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.lapinilla.es"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de La Pinilla"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717343"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(2.1528 42.3983)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1964"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.valldenuria.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Vall de Núria"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717343"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(2.1528 42.3983)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2252"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.valldenuria.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Vall de Núria"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717352"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.21194 42.4283)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Port Ainé"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717359"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(2.25667 42.4233)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.vallter.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Vallter 2000"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717359"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(2.25667 42.4233)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.vallter.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Vallter 2000"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2717381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.08083 42.5506)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.espotesqui.cat/es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Espot Esquí"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2747063"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.869363 42.477882)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2040"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.boitaull.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Boí Taüll Resort"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2747063"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.869363 42.477882)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2751"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.boitaull.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Boí Taüll Resort"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2747063"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.869363 42.477882)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2040"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.boitaull.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Boí Taüll Resort"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2747063"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.869363 42.477882)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2751"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.boitaull.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Boí Taüll Resort"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2821683"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-1.015 42.955876)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "fr",
+        "type" : "literal",
+        "value" : "Abodi Salazar"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q125018983"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-1.770529998 40.343756648)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "centro de esquí en La Mogorrita"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q137039275"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.9499805 42.6995612)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "fr",
+        "type" : "literal",
+        "value" : "station de ski Baqueira Beret"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q137039362"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.6593247 42.5466657)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "fr",
+        "type" : "literal",
+        "value" : "station de ski  Pas de la Casa"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q75077381"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.920844 42.314778)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Estació d'esquí de Coll de Pal"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4736779"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-4.373564 43.037125)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Alto Campoo"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5486448"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.814617 40.987049)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://doblehuella.es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Centro de esquí nórdico Navafría"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5675738"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.96254444 40.82342222)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Valcotos"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5847605"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.654637 43.166344)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de La Lunada"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5847607"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-6.412446604 42.993355235)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de Leitariegos"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5847609"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-3.304046411 42.195674509)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí del Valle del Sol"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6159000"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.775277777 42.978333333)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1450"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.valgrande-pajares.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Valgrande-Pajares"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6159000"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.775277777 42.978333333)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1890"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.valgrande-pajares.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Valgrande-Pajares"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6465552"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(0.81555556 42.67)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "La Tuca"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7400581"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-7.29222222 42.27361111)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1500"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.manzaneda.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Manzaneda"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7400581"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-7.29222222 42.27361111)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1776"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.manzaneda.com/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Manzaneda"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q8842728"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-5.37777778 43.04694444)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Estación de esquí de San Isidro"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11924602"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.094073 42.564263)"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://skipallars.cat/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "ca",
+        "type" : "literal",
+        "value" : "Gran Pallars"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q12384864"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-7.290544444 42.273141666)"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Cabeza de Manzaneda"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1667"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/ca/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2537"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/ca/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1667"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2537"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/en/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1667"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q18180984"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(1.93461 42.3344)"
+      },
+      "elev" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2537"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lamolina.cat/es/"
+      },
+      "itemLabel" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "La Molina"
+      }
+    } ]
+  }
+}

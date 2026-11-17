@@ -1,0 +1,339 @@
+{
+  "note": "Mapa EXPLÍCITO estación → municipio AEMET (código INE de 5 dígitos). Generado por scripts/snow03/build-aemet-municipios.mjs a partir de la relación oficial de municipios del INE. Ningún código está inventado: las estaciones sin municipio verificable no aparecen aquí (`notCovered`) y el adapter devuelve `no_data/not-covered` para ellas.",
+  "source": {
+    "id": "ine-relacion-municipios-codeforspain",
+    "url": "https://raw.githubusercontent.com/codeforspain/ds-organizacion-administrativa/master/data/municipios.json",
+    "sha256": "6a720ef4acd4b5d73d3bb6cf914fb2b26cb250fb6050432954c4cbe31fed4347",
+    "rows": 8132
+  },
+  "generatedAt": "2026-11-17T01:06:19.981Z",
+  "unresolved": [],
+  "notCovered": [
+    {
+      "slug": "estacio-desqui-de-formiguera",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "puigmal-2900",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "abodi-salazar",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "fuentes-de-invierno",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "la-covatilla",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "estacion-de-esqui-de-la-covatilla",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "aramon-javalambre",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "estacion-de-esqui-de-fondo-llanos-del-hospital",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    },
+    {
+      "slug": "grandvalira",
+      "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+    }
+  ],
+  "stations": [
+    {
+      "slug": "alto-campoo",
+      "municipio": "Campoo de Yuso",
+      "code": "39017",
+      "province": "39"
+    },
+    {
+      "slug": "aramon-cerler",
+      "municipio": "Benasque",
+      "code": "22054",
+      "province": "22"
+    },
+    {
+      "slug": "aramon-formigal",
+      "municipio": "Sallent de Gállego",
+      "code": "22204",
+      "province": "22"
+    },
+    {
+      "slug": "aramon-panticosa",
+      "municipio": "Panticosa",
+      "code": "22170",
+      "province": "22"
+    },
+    {
+      "slug": "aramon-valdelinares",
+      "municipio": "Valdelinares",
+      "code": "44244",
+      "province": "44"
+    },
+    {
+      "slug": "astun-estacion-de-esqui",
+      "municipio": "Jaca",
+      "code": "22130",
+      "province": "22"
+    },
+    {
+      "slug": "baqueira-beret",
+      "municipio": "Naut Aran",
+      "code": "25025",
+      "province": "25"
+    },
+    {
+      "slug": "boi-taull-resort",
+      "municipio": "Vall de Boí, La",
+      "code": "25043",
+      "province": "25"
+    },
+    {
+      "slug": "cabeza-de-manzaneda",
+      "municipio": "Manzaneda",
+      "code": "32044",
+      "province": "32"
+    },
+    {
+      "slug": "candanchu",
+      "municipio": "Canfranc",
+      "code": "22078",
+      "province": "22"
+    },
+    {
+      "slug": "candanchu-q588136",
+      "municipio": "Canfranc",
+      "code": "22078",
+      "province": "22"
+    },
+    {
+      "slug": "espot-esqui",
+      "municipio": "Espot",
+      "code": "25082",
+      "province": "25"
+    },
+    {
+      "slug": "estacio-baqueira-beret",
+      "municipio": "Naut Aran",
+      "code": "25025",
+      "province": "25"
+    },
+    {
+      "slug": "estacio-daransa",
+      "municipio": "Das",
+      "code": "17061",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-de-lles",
+      "municipio": "Les",
+      "code": "25121",
+      "province": "25"
+    },
+    {
+      "slug": "estacio-de-muntanya-vall-de-nuria",
+      "municipio": "Queralbs",
+      "code": "17043",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-de-coll-de-pal",
+      "municipio": "Pardines",
+      "code": "17125",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-de-fons-de-guils-fontanera",
+      "municipio": "Guils de Cerdanya",
+      "code": "17082",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-de-font-romeu",
+      "municipio": "Fontanals de Cerdanya",
+      "code": "17069",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-de-masella",
+      "municipio": "Alp",
+      "code": "17006",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-de-puigbalador",
+      "municipio": "Alp",
+      "code": "17006",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-dels-angles",
+      "municipio": "Setcases",
+      "code": "17192",
+      "province": "17"
+    },
+    {
+      "slug": "estacio-desqui-port-del-comte",
+      "municipio": "Odèn",
+      "code": "25148",
+      "province": "25"
+    },
+    {
+      "slug": "estacio-desqui-viros-vallferrera",
+      "municipio": "Sort",
+      "code": "25209",
+      "province": "25"
+    },
+    {
+      "slug": "estacion-de-esqui-de-aramon-cerler",
+      "municipio": "Benasque",
+      "code": "22054",
+      "province": "22"
+    },
+    {
+      "slug": "estacion-de-esqui-de-la-lunada",
+      "municipio": "Cubillos del Sil",
+      "code": "24064",
+      "province": "24"
+    },
+    {
+      "slug": "estacion-de-esqui-de-la-pinilla",
+      "municipio": "Villarejo",
+      "code": "26172",
+      "province": "26"
+    },
+    {
+      "slug": "estacion-de-esqui-de-leitariegos",
+      "municipio": "Villablino",
+      "code": "24202",
+      "province": "24"
+    },
+    {
+      "slug": "estacion-de-esqui-de-san-isidro",
+      "municipio": "Sena de Luna",
+      "code": "24164",
+      "province": "24"
+    },
+    {
+      "slug": "formigal-panticosa",
+      "municipio": "Sallent de Gállego",
+      "code": "22204",
+      "province": "22"
+    },
+    {
+      "slug": "gabardito",
+      "municipio": "Canfranc",
+      "code": "22078",
+      "province": "22"
+    },
+    {
+      "slug": "gran-pallars",
+      "municipio": "Rialp",
+      "code": "25183",
+      "province": "25"
+    },
+    {
+      "slug": "la-molina",
+      "municipio": "Alp",
+      "code": "17006",
+      "province": "17"
+    },
+    {
+      "slug": "la-quillana",
+      "municipio": "Vilaller",
+      "code": "25245",
+      "province": "25"
+    },
+    {
+      "slug": "larra-belagua",
+      "municipio": "Isaba/Izaba",
+      "code": "31128",
+      "province": "31"
+    },
+    {
+      "slug": "le-somport",
+      "municipio": "Canfranc",
+      "code": "22078",
+      "province": "22"
+    },
+    {
+      "slug": "les-angles",
+      "municipio": "Vallfogona de Ripollès",
+      "code": "17170",
+      "province": "17"
+    },
+    {
+      "slug": "madrid-snowzone",
+      "municipio": "Navacerrada",
+      "code": "28093",
+      "province": "28"
+    },
+    {
+      "slug": "masella",
+      "municipio": "Alp",
+      "code": "17006",
+      "province": "17"
+    },
+    {
+      "slug": "pineta",
+      "municipio": "Bielsa",
+      "code": "22057",
+      "province": "22"
+    },
+    {
+      "slug": "pla-dadet",
+      "municipio": "Tremp",
+      "code": "25234",
+      "province": "25"
+    },
+    {
+      "slug": "port-aine",
+      "municipio": "Rialp",
+      "code": "25183",
+      "province": "25"
+    },
+    {
+      "slug": "sant-joan-de-lerm",
+      "municipio": "Senterada",
+      "code": "25202",
+      "province": "25"
+    },
+    {
+      "slug": "tavascan",
+      "municipio": "Alins",
+      "code": "25017",
+      "province": "25"
+    },
+    {
+      "slug": "tuixent-la-vansa",
+      "municipio": "Josa i Tuixén",
+      "code": "25910",
+      "province": "25"
+    },
+    {
+      "slug": "valcotos",
+      "municipio": "Navacerrada",
+      "code": "28093",
+      "province": "28"
+    },
+    {
+      "slug": "valdesqui",
+      "municipio": "Navacerrada",
+      "code": "28093",
+      "province": "28"
+    },
+    {
+      "slug": "valgrande-pajares",
+      "municipio": "Lena",
+      "code": "33033",
+      "province": "33"
+    }
+  ]
+}

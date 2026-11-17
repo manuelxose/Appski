@@ -1,0 +1,53 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T21:53:03Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2671657208,
+  "lat": 42.5357095,
+  "lon": 1.5877034,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector d'Encamp)",
+    "name:ca": "Grandvalira (Sector d'Encamp)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671668745,
+  "lat": 42.5329109,
+  "lon": 1.6987250,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector de Grau Roig)",
+    "name:ca": "Grandvalira (Sector de Grau Roig)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 54858983,
+  "center": {
+    "lat": 42.5411505,
+    "lon": 1.7332791
+  },
+  "tags": {
+    "area": "yes",
+    "highway": "pedestrian",
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector de Pas de la Casa)",
+    "name:ca": "Grandvalira (Sector de Pas de la Casa)",
+    "sport": "skiing"
+  }
+}
+
+  ]
+}

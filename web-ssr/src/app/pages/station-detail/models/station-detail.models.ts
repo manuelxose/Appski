@@ -25,10 +25,10 @@ export interface StationHeroData {
   price: {
     adult: number;
     currency: string;
-  };
+  } | null;
   altitude: {
-    base: number; // m
-    top: number; // m
+    base: number | null; // m
+    top: number | null; // m
   };
   rating?: number; // 0-5
   reviews?: number;
@@ -56,32 +56,32 @@ export type Visibility = "excellent" | "good" | "moderate" | "poor";
  */
 export interface SnowReport {
   /** Nieve base en cm */
-  snowBase: number;
+  snowBase: number | null;
   /** Nieve cima en cm */
-  snowTop: number;
+  snowTop: number | null;
   /** Nieve nueva 24h en cm */
-  snowNew24h: number;
+  snowNew24h: number | null;
   /** Nieve nueva 48h en cm */
-  snowNew48h: number;
+  snowNew48h: number | null;
   /** Nieve nueva 7 días en cm */
-  snowNew7days: number;
+  snowNew7days: number | null;
   /** Calidad de la nieve */
-  snowQuality: SnowQuality;
+  snowQuality: SnowQuality | null;
   /** Última nevada */
   lastSnowfall: string;
   /** Temperaturas en °C */
   temperature: {
-    current: number;
-    min: number;
-    max: number;
+    current: number | null;
+    min: number | null;
+    max: number | null;
   };
   /** Viento */
   wind: {
-    speed: number; // km/h
+    speed: number | null; // km/h
     direction: string; // N, NE, E, SE, S, SW, W, NW
   };
   /** Visibilidad */
-  visibility: Visibility;
+  visibility: Visibility | "unknown";
   /** Fecha de actualización */
   updatedAt: string;
 }
@@ -188,6 +188,10 @@ export interface StationInfo {
     season: number;
     currency: string;
   };
+  /** Web del operador (del maestro editorial); ausente si no la publica. */
+  website?: string;
+  /** Región del maestro (texto real, no un enum de mock). */
+  region?: string;
 }
 
 // ==================== PAGE DATA ====================

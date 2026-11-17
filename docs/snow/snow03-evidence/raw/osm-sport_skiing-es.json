@@ -1,0 +1,18 @@
+{
+  "key": "osm-sport_skiing-es",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Espa%C3%B1a%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22sport%22%3D%22skiing%22%5D%5B%22name%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "requestedUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Espa%C3%B1a%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22sport%22%3D%22skiing%22%5D%5B%22name%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "status": 200,
+  "sha256": "7b8b35bea7fcd685d83ad235f09d207da032113583bc65dcb0218189a784a21e",
+  "bytes": 14741,
+  "capturedAt": "2026-11-16T22:01:22.420Z",
+  "source": "network",
+  "userAgent": "appski-snow03-catalog/1.0 (+https://appski.invalid/snow03; contact: ops@appski.invalid)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "ms": 69418
+    }
+  ]
+}

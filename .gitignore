@@ -60,3 +60,7 @@ AI_GUIDE.md
 copilot-instructions.md
 .mcp.json
 mcp.json
+
+# SNOW-01: estado de runtime y de equipo (no versionar)
+/data/
+.agent-teams/

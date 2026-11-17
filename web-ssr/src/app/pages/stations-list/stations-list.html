@@ -139,6 +139,7 @@
       <!-- Filters Sidebar (Desktop) -->
       <aside class="hidden lg:block">
         <app-stations-filters
+          [regionOptions]="regionOptions()"
           (filtersChanged)="onFiltersChanged($event)"
           (filtersReset)="onFiltersReset()"
         />

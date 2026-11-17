@@ -1,0 +1,545 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:10:29Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1478116384,
+  "lat": 32.8146524,
+  "lon": -16.8765308,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "yes",
+    "description": "Para uso exclusivo de agricultores / For the exclusicve use of farmers\nAlgumas fontes dizem que abriu em 2024 para turistas / Some sources say it opened in 2024 to tourists",
+    "name": "Santana",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3837067471,
+  "lat": 32.7615632,
+  "lon": -16.8054227,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "name": "Larano",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3909359552,
+  "lat": 32.7637458,
+  "lon": -16.8053564,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "name": "Fajã do Larano",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 104203786,
+  "center": {
+    "lat": 41.4319604,
+    "lon": -8.2709216
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "alt_name": "Teleférico de Guimarães (Estação Alta)",
+    "bicycle": "limited",
+    "building": "yes",
+    "email": "geral@turipenha.pt",
+    "fee": "yes",
+    "layer": "1",
+    "manufacturer": "Poma",
+    "manufacturer:wikidata": "Q2103240",
+    "manufacturer:wikipedia": "en:Poma",
+    "name": "Teleférico de Guimarães (Estação da Penha)",
+    "operator": "Turipenha",
+    "phone": "+351 253 515 085",
+    "public_transport": "station",
+    "source:manufacturer": "https://www.remontees-mecaniques.net/bdd/reportage-tcd6-de-guimaraes-poma-4381.html",
+    "tourism": "attraction",
+    "website": "https://www.turipenha.pt/",
+    "wikidata": "Q10379189",
+    "wikipedia": "pt:Teleférico de Guimarães"
+  }
+},
+{
+  "type": "way",
+  "id": 104203806,
+  "center": {
+    "lat": 41.4415079,
+    "lon": -8.2854081
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "alt_name": "Teleférico de Guimarães (Estação Baixa)",
+    "bicycle": "limited",
+    "building": "yes",
+    "email": "geral@turipenha.pt",
+    "fee": "yes",
+    "manufacturer": "Poma",
+    "manufacturer:website": "https://www.poma.net/",
+    "manufacturer:wikidata": "Q2103240",
+    "manufacturer:wikipedia": "en:Poma",
+    "name": "Teleférico de Guimarães (Estação das Hortas)",
+    "operator": "Turipenha",
+    "phone": "+351 253 515 085",
+    "public_transport": "station",
+    "source:manufacturer": "https://www.remontees-mecaniques.net/bdd/reportage-tcd6-de-guimaraes-poma-4381.html",
+    "tourism": "attraction",
+    "website": "https://www.turipenha.pt/",
+    "wheelchair": "limited",
+    "wikidata": "Q10379189",
+    "wikipedia": "pt:Teleférico de Guimarães"
+  }
+},
+{
+  "type": "way",
+  "id": 110361614,
+  "center": {
+    "lat": 32.6471647,
+    "lon": -16.9022995
+  },
+  "tags": {
+    "addr:city": "Funchal",
+    "addr:postcode": "9060-190",
+    "addr:street": "Avenida do Mar e das Comunidades Madeirenses",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "alt_name": "Almirante Reis",
+    "building": "service",
+    "building:levels": "2",
+    "email": "info@madeiracablecar.com",
+    "image": "https://photos.app.goo.gl/FU5nB1LaKTxyfwGW7",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Funchal",
+    "phone": "+351 291 780 280",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://madeiracablecar.com/",
+    "wheelchair": "yes",
+    "wikidata": "Q3289157",
+    "wikimedia_commons": "Category:Teleférico Funchal-Monte",
+    "wikipedia": "pt:Teleférico Funchal-Monte"
+  }
+},
+{
+  "type": "way",
+  "id": 110391764,
+  "center": {
+    "lat": 32.6755739,
+    "lon": -16.9001401
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "service",
+    "building:height": "12",
+    "email": "info@madeiracablecar.com",
+    "image": "https://photos.app.goo.gl/EconzFPr7hm6n2E17",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Monte",
+    "phone": "+351 291 780 280",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://madeiracablecar.com/",
+    "wheelchair": "yes",
+    "wikidata": "Q3289157",
+    "wikimedia_commons": "Category:Teleférico Funchal-Monte",
+    "wikipedia": "pt:Teleférico Funchal-Monte"
+  }
+},
+{
+  "type": "way",
+  "id": 168383603,
+  "center": {
+    "lat": 32.8528452,
+    "lon": -17.2098035
+  },
+  "tags": {
+    "addr:city": "Achadas da Cruz",
+    "addr:postcode": "9270-014",
+    "addr:street": "Caminho do Teleférico",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "yes",
+    "check_date": "2025-01-21",
+    "ele": "451",
+    "name": "Achadas da Cruz",
+    "phone": "+351 291 852 951",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 169107148,
+  "center": {
+    "lat": 32.6518242,
+    "lon": -16.9961301
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "yes",
+    "name": "Fajã das Bebras",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 169107149,
+  "center": {
+    "lat": 32.6526462,
+    "lon": -16.9927237
+  },
+  "tags": {
+    "addr:city": "Câmara de Lobos",
+    "addr:postcode": "9300-145",
+    "addr:street": "Estrada de Santa Clara",
+    "addr:unit": "Sítio do Rancho",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "yes",
+    "name": "Rancho",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 245535932,
+  "center": {
+    "lat": 32.6635226,
+    "lon": -16.8957216
+  },
+  "tags": {
+    "addr:city": "Funchal",
+    "addr:street": "Caminho das Voltas",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "yes",
+    "layer": "1",
+    "manufacturer": "Poma",
+    "manufacturer:website": "https://www.poma.net/",
+    "manufacturer:wikidata": "Q2103240",
+    "manufacturer:wikipedia": "en:Poma",
+    "name": "Jardim Botânico",
+    "name:en": "Botanical Garden",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://www.telefericojardimbotanico.com/",
+    "wikidata": "Q1875811",
+    "wikimedia_commons": "Category:Teleférico do Jardim Botânico da Madeira",
+    "wikipedia": "pt:Teleférico do Jardim Botânico da Madeira"
+  }
+},
+{
+  "type": "way",
+  "id": 332760531,
+  "center": {
+    "lat": 41.1373326,
+    "lon": -8.6162096
+  },
+  "tags": {
+    "addr:city": "Vila Nova de Gaia",
+    "addr:housename": "Estação Baixa - Cais de Gaia",
+    "addr:housenumber": "331",
+    "addr:postcode": "4430-233",
+    "addr:street": "Avenida Ramos Pinto",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "alt_name": "Estação Cais de Gaia;Estação do Cais de Gaia;Estação do Teleférico no Cais de Gaia",
+    "building": "commercial",
+    "building:levels": "2",
+    "building:min_level": "1",
+    "contact:phone": "+351 223 741 440",
+    "contact:website": "https://www.gaiacablecar.com/Teleferico/PT.html",
+    "layer": "1",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Teleférico de Gaia (Estação Baixa)",
+    "public_transport": "station",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source:manufacturer": "https://www.doppelmayr.com/en/reference-projects/8-mgd-teleferico-de-gaia-portugal/",
+    "tourism": "attraction",
+    "wheelchair": "yes",
+    "wikimedia_commons": "Category:Teleférico de Gaia lower station"
+  }
+},
+{
+  "type": "way",
+  "id": 332760565,
+  "center": {
+    "lat": 41.1379120,
+    "lon": -8.6095989
+  },
+  "tags": {
+    "addr:city": "Vila Nova de Gaia",
+    "addr:housename": "Estação Alta - Jardim do Morro",
+    "addr:housenumber": "236",
+    "addr:postcode": "4430-210",
+    "addr:street": "Rua Rocha Leão",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "alt_name": "Estação Jardim do Morro;Estação do Jardim do Morro;Estação do Teleférico no Jardim do Morro",
+    "building": "commercial",
+    "contact:phone": "+351 223 741 440",
+    "contact:website": "https://www.gaiacablecar.com",
+    "layer": "-1",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Teleférico de Gaia (Estação Alta)",
+    "opening_hours": "Mo-Su 10:00-19:00",
+    "public_transport": "station",
+    "source:manufacturer": "https://www.doppelmayr.com/en/reference-projects/8-mgd-teleferico-de-gaia-portugal/",
+    "tourism": "attraction",
+    "wheelchair": "yes",
+    "wikimedia_commons": "Category:Teleférico de Gaia upper station"
+  }
+},
+{
+  "type": "way",
+  "id": 364844392,
+  "center": {
+    "lat": 32.6398814,
+    "lon": -16.8518487
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "yes",
+    "name": "Cristo Rei",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 365592613,
+  "center": {
+    "lat": 32.6386254,
+    "lon": -16.8533042
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "yes",
+    "name": "Praia do Garajau",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 374104069,
+  "center": {
+    "lat": 32.8567509,
+    "lon": -17.2113806
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "service",
+    "name": "Fajã da Quebrada Nova",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 386620745,
+  "center": {
+    "lat": 32.6776408,
+    "lon": -16.8979398
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "top",
+    "building": "yes",
+    "manufacturer": "Poma",
+    "manufacturer:website": "https://www.poma.net/",
+    "manufacturer:wikidata": "Q2103240",
+    "manufacturer:wikipedia": "en:Poma",
+    "name": "Babosas",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://www.telefericojardimbotanico.com/",
+    "wikidata": "Q1875811",
+    "wikimedia_commons": "Category:Teleférico do Jardim Botânico da Madeira",
+    "wikipedia": "pt:Teleférico do Jardim Botânico da Madeira"
+  }
+},
+{
+  "type": "way",
+  "id": 532511742,
+  "center": {
+    "lat": 32.8118377,
+    "lon": -16.8697948
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "yes",
+    "name": "Rocha do Navio",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 599380698,
+  "center": {
+    "lat": 32.6569177,
+    "lon": -17.0258481
+  },
+  "tags": {
+    "access": "permissive",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "aerialway:station": "bottom",
+    "building": "yes",
+    "fee": "yes",
+    "name": "Fajã dos Padres",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 599380713,
+  "center": {
+    "lat": 32.6569647,
+    "lon": -17.0216859
+  },
+  "tags": {
+    "access": "permissive",
+    "aerialway": "station",
+    "aerialway:station": "top",
+    "building": "yes",
+    "fee": "yes",
+    "name": "Quinta Grande",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1270557594,
+  "center": {
+    "lat": 38.7734149,
+    "lon": -9.0914172
+  },
+  "tags": {
+    "addr:postcode": "1990-280",
+    "addr:street": "Passeio das Tágides",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "building": "yes",
+    "check_date": "2026-09-28",
+    "email": "info@telecabinelisboa.pt",
+    "fee": "yes",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Norte",
+    "opening_hours": "11:00-19:00",
+    "operator": "Telecabine Lisboa",
+    "phone": "+351 21 895 6143",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://www.telecabinelisboa.pt/",
+    "wheelchair": "yes",
+    "wikidata": "Q2401546",
+    "wikimedia_commons": "Category:Teleférico da Expo",
+    "wikipedia": "pt:Teleférico do Parque das Nações"
+  }
+},
+{
+  "type": "way",
+  "id": 1270557595,
+  "center": {
+    "lat": 38.7623985,
+    "lon": -9.0923069
+  },
+  "tags": {
+    "addr:street": "Passeio de Neptuno",
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "alt_name": "Telecabine Lisboa Sul",
+    "building": "yes",
+    "fee": "yes",
+    "manufacturer": "Doppelmayr",
+    "manufacturer:wikidata": "Q665486",
+    "manufacturer:wikipedia": "en:Doppelmayr/Garaventa Group",
+    "name": "Sul",
+    "opening_hours": "11:00-19:00",
+    "operator": "Telecabine Lisboa",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://www.telecabinelisboa.pt/",
+    "wheelchair": "yes",
+    "wikidata": "Q2401546",
+    "wikimedia_commons": "Category:Teleférico da Expo",
+    "wikipedia": "pt:Teleférico do Parque das Nações"
+  }
+},
+{
+  "type": "way",
+  "id": 1360972753,
+  "center": {
+    "lat": 38.7429393,
+    "lon": -9.1720909
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "both",
+    "building": "yes",
+    "layer": "1",
+    "manufacturer": "Graffer",
+    "name": "Teleférico",
+    "name:en": "Cable Car",
+    "public_transport": "station",
+    "source:manufacturer": "https://www.remontees-mecaniques.net/bdd/reportage-tb3-jardim-zoologico-graffer-2739.html",
+    "tourism": "attraction",
+    "website": "https://www.zoo.pt/pt/visitar/apresentacoes-e-atracoes/teleferico/",
+    "wheelchair": "no",
+    "wikidata": "Q10379196",
+    "wikimedia_commons": "Category:Teleférico do Jardim Zoológico de Lisboa",
+    "wikipedia": "pt:Teleférico do Jardim Zoológico de Lisboa"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,686 @@
+- document:
+  - link "Nevasport.com":
+    - /url: https://www.nevasport.com/
+  - list:
+    - listitem:
+      - link "Estaciones":
+        - /url: https://www.nevasport.com/estaciones/
+    - listitem:
+      - link "Foros":
+        - /url: https://www.nevasport.com/phorum/
+    - listitem:
+      - link "Noticias":
+        - /url: https://www.nevasport.com/noticias/
+    - listitem:
+      - link "Reportajes":
+        - /url: https://www.nevasport.com/reportajes/
+    - listitem:
+      - link "Blogs":
+        - /url: https://www.nevasport.com/blogs/
+    - listitem:
+      - link "Viajes":
+        - /url: https://www.nevasport.com/viajes/
+    - listitem:
+      - link "Fotos":
+        - /url: https://www.nevasport.com/nevamedia/
+    - listitem:
+      - link "Vídeos":
+        - /url: https://www.nevasport.com/mosaicos/
+    - listitem:
+      - link "Material":
+        - /url: https://www.nevasport.com/material/
+    - listitem:
+      - link "Verano":
+        - /url: https://www.nevasport.com/canal/verano/
+    - listitem:
+      - link "Infonieve":
+        - /url: http://www.infonieve.es/
+    - listitem:
+      - link "Nevalog":
+        - /url: https://www.nevasport.com/nevalog/
+  - banner:
+    - link "Infonieve.es - Partes de Nieve, Meteo y Webcams":
+      - /url: ./
+    - list:
+      - listitem
+      - listitem:
+        - link "Fotos recientes del estado de las estaciones y nevadas, noticias de actualidad y más...":
+          - /url: muro-social/
+      - listitem
+      - listitem:
+        - link "Contacta con Infonieve.es":
+          - /url: contacto/
+      - listitem:
+        - textbox "Buscar estación"
+        - button "Submit"
+    - navigation:
+      - list:
+        - list:
+          - listitem:
+            - link "PARTE DE NIEVE Información actualizada sobre el estado de apertura de las pistas":
+              - /url: parte-de-nieve/
+              - strong: PARTE DE NIEVE
+              - text: Información actualizada sobre el estado de apertura de las pistas
+          - listitem:
+            - link "WEBCAMS Observa las estaciones en tiempo real a través de sus webcams":
+              - /url: sala-de-webcams/
+              - strong: WEBCAMS
+              - text: Observa las estaciones en tiempo real a través de sus webcams
+          - listitem:
+            - link "ESTACIONES ESQUÍ":
+              - /url: estaciones-esqui/
+              - strong: ESTACIONES ESQUÍ
+          - listitem:
+            - link "EL TIEMPO":
+              - /url: meteo/
+              - strong: EL TIEMPO
+          - listitem:
+            - link "MAPA DE WEBCAMS":
+              - /url: mapa-de-webcams/
+              - strong: MAPA DE WEBCAMS
+          - listitem:
+            - link "ESQUÍ DE FONDO":
+              - /url: esqui-de-fondo/
+              - strong: ESQUÍ DE FONDO
+    - navigation:
+      - list:
+        - list:
+          - listitem:
+            - link "PORTADA":
+              - /url: ./
+              - strong: PORTADA
+          - listitem:
+            - link "PARTE DE NIEVE":
+              - /url: parte-de-nieve/
+              - strong: PARTE DE NIEVE
+          - listitem:
+            - link "WEBCAMS":
+              - /url: sala-de-webcams/
+              - strong: WEBCAMS
+          - listitem:
+            - link "ESTACIONES DE ESQUÍ":
+              - /url: estaciones-esqui/
+              - strong: ESTACIONES DE ESQUÍ
+          - listitem:
+            - link "EL TIEMPO":
+              - /url: meteo/
+              - strong: EL TIEMPO
+          - listitem:
+            - link "MAPA DE WEBCAMS":
+              - /url: mapa-de-webcams/
+              - strong: MAPA DE WEBCAMS
+          - listitem:
+            - link "ESQUÍ DE FONDO":
+              - /url: esqui-de-fondo/
+              - strong: ESQUÍ DE FONDO
+    - textbox "Buscar estación"
+    - button "Submit"
+    - 'link "Actualidad #infonieve"':
+      - /url: muro-social/
+    - list:
+      - listitem:
+        - link "Contacta con Infonieve.es":
+          - /url: contacto/
+      - listitem:
+        - link "Infonieve.es en Instagram":
+          - /url: https://www.instagram.com/infonieve.es/
+      - listitem:
+        - link "Infonieve.es en Twitter":
+          - /url: https://twitter.com/infonieve
+      - listitem:
+        - link "Infonieve.es en Facebook":
+          - /url: https://www.facebook.com/infonieve/
+    - link "Nevasport.com":
+      - /url: https://www.nevasport.com/
+    - list:
+      - listitem:
+        - link "Estaciones":
+          - /url: https://www.nevasport.com/estaciones/
+      - listitem:
+        - link "Foros":
+          - /url: https://www.nevasport.com/phorum/
+      - listitem:
+        - link "Noticias":
+          - /url: https://www.nevasport.com/noticias/
+      - listitem:
+        - link "Reportajes":
+          - /url: https://www.nevasport.com/reportajes/
+      - listitem:
+        - link "Blogs":
+          - /url: https://www.nevasport.com/blogs/
+      - listitem:
+        - link "Viajes":
+          - /url: https://www.nevasport.com/viajes/
+      - listitem:
+        - link "Fotos":
+          - /url: https://www.nevasport.com/nevamedia/
+      - listitem:
+        - link "Vídeos":
+          - /url: https://www.nevasport.com/mosaicos/
+      - listitem:
+        - link "Material":
+          - /url: https://www.nevasport.com/material/
+      - listitem:
+        - link "Verano":
+          - /url: https://www.nevasport.com/canal/verano/
+      - listitem:
+        - link "Infonieve":
+          - /url: http://www.infonieve.es/
+      - listitem:
+        - link "Nevalog":
+          - /url: https://www.nevasport.com/nevalog/
+  - text: ESTACIONES DE ESQUÍ
+  - img: ESPAÑA ANDORRA PIRINEO FRANCÉS PORTUGAL
+  - list:
+    - listitem:
+      - link "753 WEBCAMS EN 183 ESTACIONES":
+        - /url: sala-de-webcams/
+        - strong: 753 WEBCAMS
+        - text: EN 183 ESTACIONES
+    - listitem:
+      - link "PARTE DE NIEVE ACTUALIZADO DE 94 ESTACIONES":
+        - /url: parte-de-nieve/
+        - strong: PARTE DE NIEVE ACTUALIZADO
+        - text: DE 94 ESTACIONES
+    - listitem:
+      - link "PREVISIÓN METEO PARA 94 ESTACIONES":
+        - /url: meteo/
+        - strong: PREVISIÓN METEO
+        - text: PARA 94 ESTACIONES
+    - listitem:
+      - strong: ÚLTIMA ACTUALIZACIÓN
+      - text: LUNES 16/11/2026 05:45
+  - text: PRÓXIMAS APERTURAS
+  - list:
+    - listitem:
+      - strong: Miércoles 25/11/2026
+      - text: Luz Ardiden
+    - listitem:
+      - strong: Viernes 27/11/2026
+      - text: Cauterets Lys, Cerler, Formigal, Angles, Manzaneda, Panticosa
+    - listitem:
+      - strong: Sábado 28/11/2026
+      - text: Baqueira Beret, La Rabassa, Larra-Belagua, Sierra Nevada, Valdezcaray
+    - listitem:
+      - strong: Martes 01/12/2026
+      - text: San Isidro, Leitariegos
+  - link "VER TODAS LAS FECHAS":
+    - /url: estaciones-esqui/fecha-inicio-fin-temporada/
+  - list:
+    - listitem:
+      - link "Webcam en Port Ainé 2000, Port Ainé (Pirineo Catalán) Webcam en Port Ainé 2000, Port Ainé (Pirineo Catalán) Port Ainé (Pirineo Catalán)":
+        - /url: estacion-esqui/port-aine/webcams/
+        - img "Webcam en Port Ainé 2000, Port Ainé (Pirineo Catalán)"
+        - text: Port Ainé (Pirineo Catalán)
+      - link "© turismefgc.cat":
+        - /url: http://www.turismefgc.cat/
+    - listitem:
+      - link "Webcam en Secteur Nordique, Hautacam (Hautes Pyrénées) Webcam en Secteur Nordique, Hautacam (Hautes Pyrénées) Hautacam (Hautes Pyrénées)":
+        - /url: estacion-esqui/hautacam/webcams/
+        - img "Webcam en Secteur Nordique, Hautacam (Hautes Pyrénées)"
+        - text: Hautacam (Hautes Pyrénées)
+      - link "© viewsurf.com":
+        - /url: http://www.viewsurf.com/
+    - listitem:
+      - link "Webcam en Refugi Estany de la Pera, Lles de Cerdanya (Pirineo Catalán) Webcam en Refugi Estany de la Pera, Lles de Cerdanya (Pirineo Catalán) Lles de Cerdanya (Pirineo Catalán)":
+        - /url: espacio-nordico/lles-de-cerdanya/webcams/
+        - img "Webcam en Refugi Estany de la Pera, Lles de Cerdanya (Pirineo Catalán)"
+        - text: Lles de Cerdanya (Pirineo Catalán)
+      - link "© feec.cat":
+        - /url: http://www.feec.cat/
+    - listitem:
+      - link "Webcam en Puerto de Cotos - Desvío, Puerto de Cotos (Sistema Central) Webcam en Puerto de Cotos - Desvío, Puerto de Cotos (Sistema Central) Puerto de Cotos (Sistema Central)":
+        - /url: espacio-nordico/puerto-de-cotos/webcams/
+        - img "Webcam en Puerto de Cotos - Desvío, Puerto de Cotos (Sistema Central)"
+        - text: Puerto de Cotos (Sistema Central)
+      - link "© dgt.es":
+        - /url: http://www.dgt.es/
+    - listitem:
+      - link "Webcam en Pistas de Esquí, Linza (Pirineo Aragonés) Webcam en Pistas de Esquí, Linza (Pirineo Aragonés) Linza (Pirineo Aragonés)":
+        - /url: espacio-nordico/linza/webcams/
+        - img "Webcam en Pistas de Esquí, Linza (Pirineo Aragonés)"
+        - text: Linza (Pirineo Aragonés)
+      - link "© alberguesyrefugiosdearagon.com":
+        - /url: http://www.alberguesyrefugiosdearagon.com/
+    - listitem:
+      - link "Webcam en Cap de Comella - Puigllançada, La Molina (Pirineo Catalán) Webcam en Cap de Comella - Puigllançada, La Molina (Pirineo Catalán) La Molina (Pirineo Catalán)":
+        - /url: estacion-esqui/la-molina/webcams/
+        - img "Webcam en Cap de Comella - Puigllançada, La Molina (Pirineo Catalán)"
+        - text: La Molina (Pirineo Catalán)
+      - link "© roundshot.com":
+        - /url: http://www.roundshot.com/
+  - img
+  - img
+  - iframe
+  - text: EL TIEMPO
+  - link "Previsión meteorológica para los próximos días en las estaciones de esquí":
+    - /url: meteo/
+  - link "ESTÁ NEVANDO Mira las webcams donde está nevando ahora mismo":
+    - /url: sala-de-webcams/donde-esta-nevando/
+  - link "WEBMASTER TOOLS ¿Quieres poner GRATIS toda esta inforación en tu web?":
+    - /url: recursos/
+  - link "ESTACIONES CON MÁS NIEVE":
+    - /url: parte-de-nieve/top-nieve/
+  - list:
+    - listitem: sin datos
+  - link "ESTACIONES CON MÁS KM":
+    - /url: parte-de-nieve/top-km/
+  - list:
+    - listitem: sin datos
+  - link "Muro social de Infonieve.es":
+    - /url: muro-social/
+  - link "Infonieve.es en Twitter":
+    - /url: https://twitter.com/infonieve
+  - text: "#infonieve"
+  - list:
+    - listitem:
+      - link "@infonieve":
+        - /url: https://twitter.com/infonieve
+      - link "Ver en Twitter":
+        - /url: https://x.com/infonieve/status/2120461314950832567
+      - link "11/11/26 11:19":
+        - /url: https://x.com/infonieve/status/2120461314950832567
+      - text: "🔴LIVE : Nevando en cotas altas de"
+      - link "#SierraNevada":
+        - /url: https://x.com/hashtag/SierraNevada?src=hash
+      - text: ❄, con mucho viento 🌬 · 🎥
+      - link "@websierranevada":
+        - /url: https://x.com/websierranevada
+      - text: "[10:49 11/11/2026]"
+      - link:
+        - /url: javascript:;
+    - listitem:
+      - link "@alexmegapc":
+        - /url: https://twitter.com/alexmegapc
+      - link "Ver en Twitter":
+        - /url: https://x.com/alexmegapc/status/2118278291152937036
+      - link "5/11/26 10:44":
+        - /url: https://x.com/alexmegapc/status/2118278291152937036
+      - text: Així tenim avui
+      - link "#lamolina":
+        - /url: https://x.com/hashtag/lamolina?src=hash
+      - link "@Pirineu365":
+        - /url: https://x.com/Pirineu365
+      - link "#meteo":
+        - /url: https://x.com/hashtag/meteo?src=hash
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2118303588476973161&media=1&size=large
+    - listitem:
+      - link "@Meteo_Pyrenees":
+        - /url: https://twitter.com/Meteo_Pyrenees
+      - link "Ver en Twitter":
+        - /url: https://x.com/Meteo_Pyrenees/status/2118233511614112114
+      - link "5/11/26 07:46":
+        - /url: https://x.com/Meteo_Pyrenees/status/2118233511614112114
+      - text: Averses du matin ❄️Font Romeu
+      - link:
+        - /url: javascript:;
+    - listitem:
+      - link "@sanisidronieve":
+        - /url: https://twitter.com/sanisidronieve
+      - link "Ver en Twitter":
+        - /url: https://x.com/sanisidronieve/status/2118106768698224859
+      - link "4/11/26 23:23":
+        - /url: https://x.com/sanisidronieve/status/2118106768698224859
+      - text: Paisajes de hoy mismo, de la que sale el sol en
+      - link "#SanIsidroOficial":
+        - /url: https://x.com/hashtag/SanIsidroOficial?src=hash
+      - link "@diputacionleon":
+        - /url: https://x.com/diputacionleon
+      - text: ℹ️ Les recordamos que MAÑANA 5 de noviembre sale a la venta el forfait anual prepago
+      - link "nieveleonsanisidro.com":
+        - /url: https://www.nieveleonsanisidro.com
+      - link "#NosVemosEnPistas":
+        - /url: https://x.com/hashtag/NosVemosEnPistas?src=hash
+      - link "@Atudem_es":
+        - /url: https://x.com/Atudem_es
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2118260483983626717&media=1&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2118260483983626717&media=2&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2118260483983626717&media=3&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2118260483983626717&media=4&size=large
+    - listitem:
+      - link "@P4Estacions":
+        - /url: https://twitter.com/P4Estacions
+      - link "Ver en Twitter":
+        - /url: https://x.com/P4Estacions/status/2117912004736213133
+      - link "4/11/26 10:29":
+        - /url: https://x.com/P4Estacions/status/2117912004736213133
+      - text: ❄️ Des de la càmera de Boí Taüll - Cap de Mulleres també trobem un paisatge plenament hivernal.
+      - link "#Projecte4Estacions":
+        - /url: https://x.com/hashtag/Projecte4Estacions?src=hash
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117913914553806960&media=1&size=large
+    - listitem:
+      - link "@Pirineu365":
+        - /url: https://twitter.com/Pirineu365
+      - link "Ver en Twitter":
+        - /url: https://x.com/Pirineu365/status/2117906971395498205
+      - link "4/11/26 10:09":
+        - /url: https://x.com/Pirineu365/status/2117906971395498205
+      - text: "Al Ripollès també ha arribat la neu! ❄️ Així tenim #ValldeNúria i"
+      - link "#Vallter":
+        - /url: https://x.com/hashtag/Vallter?src=hash
+      - text: ara mateix 📷 4/11/26
+      - link:
+        - /url: javascript:;
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117910175709331914&media=2&size=large
+    - listitem:
+      - link "@meteobenas":
+        - /url: https://twitter.com/meteobenas
+      - link "Ver en Twitter":
+        - /url: https://x.com/infonieve/status/2117881848625848456
+      - link "4/11/26 08:08":
+        - /url: https://x.com/infonieve/status/2117881848625848456
+      - text: 📍 Cerler Buenos días desde el Gallinero
+      - link "@infonieve":
+        - /url: https://x.com/infonieve
+      - text: ":"
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881848625848456&media=1&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881848625848456&media=2&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881848625848456&media=3&size=large
+    - listitem:
+      - link "@P4Estacions":
+        - /url: https://twitter.com/P4Estacions
+      - link "Ver en Twitter":
+        - /url: https://x.com/P4Estacions/status/2117864628818719020
+      - link "4/11/26 07:20":
+        - /url: https://x.com/P4Estacions/status/2117864628818719020
+      - text: Comencem el dia amb un paisatge hivernal 🥶 a diferents punts del Pirineu després de la nevada d'ahir Imatges d'hivern avançat des del Port del Comte, Tuixent la Vansa, Boí-Taüll i Lles de Cerdanya. Totes les càmeres ▶️
+      - link "app.projecte4estacions.com/v2/":
+        - /url: https://app.projecte4estacions.com/v2/
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881749329850433&media=1&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881749329850433&media=2&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881749329850433&media=3&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881749329850433&media=4&size=large
+    - listitem:
+      - link "@MeteoElpito":
+        - /url: https://twitter.com/MeteoElpito
+      - link "Ver en Twitter":
+        - /url: https://x.com/MeteoElpito/status/2117852812155756796
+      - link "4/11/26 06:33":
+        - /url: https://x.com/MeteoElpito/status/2117852812155756796
+      - text: Nevadeta a Vallter aquestes darreres hores. Imatge de les 6h del sector Marmotes via cam.
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117881685706457437&media=1&size=large
+    - listitem:
+      - link "@ibericam":
+        - /url: https://twitter.com/ibericam
+      - link "Ver en Twitter":
+        - /url: https://x.com/ibericam/status/2117670083527106790
+      - link "3/11/26 18:27":
+        - /url: https://x.com/ibericam/status/2117670083527106790
+      - text: Primera
+      - link "#nieve":
+        - /url: https://x.com/hashtag/nieve?src=hash
+      - text: de la temporada
+      - link "#Valdelinares":
+        - /url: https://x.com/hashtag/Valdelinares?src=hash
+      - link "#Javalambre":
+        - /url: https://x.com/hashtag/Javalambre?src=hash
+      - link "#teruel":
+        - /url: https://x.com/hashtag/teruel?src=hash
+      - link "@AEMET_Aragon":
+        - /url: https://x.com/AEMET_Aragon
+      - link "@eltiempo_atv":
+        - /url: https://x.com/eltiempo_atv
+      - link "@ElTiempoes":
+        - /url: https://x.com/ElTiempoes
+      - link "@meteo_aragon":
+        - /url: https://x.com/meteo_aragon
+      - link "@meteobenas":
+        - /url: https://x.com/meteobenas
+      - link "@MeteoredES":
+        - /url: https://x.com/MeteoredES
+      - link "@RAM_meteo":
+        - /url: https://x.com/RAM_meteo
+      - link "@ElTiempo_tve":
+        - /url: https://x.com/ElTiempo_tve
+      - link "@ElTiempoA3":
+        - /url: https://x.com/ElTiempoA3
+      - link "@VicenteAupi":
+        - /url: https://x.com/VicenteAupi
+      - link "@CarlosDezaDeza":
+        - /url: https://x.com/CarlosDezaDeza
+      - link "@EFerroviario":
+        - /url: https://x.com/EFerroviario
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117704170148929598&media=1&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117704170148929598&media=2&size=large
+      - link:
+        - /url: javascript:;
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117704170148929598&media=4&size=large
+    - listitem:
+      - link "@candanchuesqui":
+        - /url: https://twitter.com/candanchuesqui
+      - link "Ver en Twitter":
+        - /url: https://x.com/candanchuesqui/status/2117668609233494434
+      - link "3/11/26 18:21":
+        - /url: https://x.com/candanchuesqui/status/2117668609233494434
+      - text: Acaba de caer nieve en Candanchú y el atardecer de hoy en Tuca Blanca es de los que gustan. 😏
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117697394284404956&media=1&size=large
+    - listitem:
+      - link "@Pirineu365":
+        - /url: https://twitter.com/Pirineu365
+      - link "Ver en Twitter":
+        - /url: https://x.com/Pirineu365/status/2117660523848507596
+      - link "3/11/26 17:49":
+        - /url: https://x.com/Pirineu365/status/2117660523848507596
+      - text: Ja la tenim aquí 🥹 Així tenim ara mateix
+      - link "#LaMolina":
+        - /url: https://x.com/hashtag/LaMolina?src=hash
+      - text: "#PortAiné #EspotEsquí i #BoíTaüll ❄️ 🔴 3/11/26"
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117697325091156450&media=1&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117697325091156450&media=2&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117697325091156450&media=3&size=large
+      - link:
+        - /url: //www.infonieve.es/muro-social/media.php?id=2117697325091156450&media=4&size=large
+  - text: ACTIVIDADES
+  - list:
+    - listitem:
+      - link "SNOWPARKS":
+        - /url: parte-de-nieve/snowparks/
+        - strong: SNOWPARKS
+    - listitem:
+      - link "ESQUÍ DE MONTAÑA":
+        - /url: parte-de-nieve/skimo/
+        - strong: ESQUÍ DE MONTAÑA
+    - listitem:
+      - link "RAQUETAS":
+        - /url: parte-de-nieve/itinerarios-raquetas/
+        - strong: RAQUETAS
+    - listitem:
+      - link "PISTAS DE TRINEOS":
+        - /url: parte-de-nieve/pistas-trineos/
+        - strong: PISTAS DE TRINEOS
+  - link "Publicar tu propio parte de nieve":
+    - /url: parte-de-nieve/publicar/
+  - link "Partes de nieve publicados por los usuarios":
+    - /url: parte-de-nieve/usuarios/
+  - text: ÚLTIMOS PARTES DE USUARIOS No hay partes de nieve recientes publicados por los usuarios Si has estado recientemente en una estación de esquí,
+  - link "PUBLICA TU PARTE DE NIEVE":
+    - /url: parte-de-nieve/publicar/
+  - list:
+    - listitem:
+      - link "Rechazada la indemnización a una esquiadora por un supuesto 'cañonazo' en Soldeu Publicado en Noticias, el 16/11/2026":
+        - /url: https://www.nevasport.com/noticias/art/71609/la-justicia-rechaza-indemnizar-a-una-esquiadora-por-un-supuesto-canonazo-en-soldeu/
+    - listitem:
+      - link "El Catálogo Esquí Pro 2027, ya disponible Publicado en Esquí Pro, el 16/11/2026":
+        - /url: https://www.nevasport.com/EsquiPro/art/71524/el-catalogo-esqui-pro-2027-ya-disponible/
+    - listitem:
+      - link "Conjunto interior Viking Primeone Man Set Publicado en Esquí Pro, el 16/11/2026":
+        - /url: https://www.nevasport.com/EsquiPro/art/71281/conjunto-interior-viking-primeone-man-set/
+    - listitem:
+      - link "Así está cambiando la forma de entrar a las pistas de esquí Publicado en Noticias, el 16/11/2026":
+        - /url: https://www.nevasport.com/noticias/art/71577/asi-esta-cambiando-la-forma-de-entrar-a-las-pistas-esqui/
+    - listitem:
+      - link "Lo que sorprende a un esquiador de los Pirineos cuando visita los Alpes Publicado en Reportajes, el 16/11/2026":
+        - /url: https://www.nevasport.com/reportajes/art/71496/Lo-que-sorprende-a-un-esquiador-de-los-Pirineos-cuando-visita-los-Alpes/
+    - listitem:
+      - 'link "Pirineos o Alpes: ¿qué viaje de esquí te conviene más? Publicado en Reportajes, el 16/11/2026"':
+        - /url: https://www.nevasport.com/reportajes/art/71432/Pirineos-o-Alpes-que-viaje-de-esqui-te-conviene-mas/
+    - listitem:
+      - 'link "Esquí en Isère, Alpes franceses: disfrutando del paraíso blanco Publicado en Discovery Snow, el 15/11/2026"':
+        - /url: https://www.nevasport.com/discoverysnow/art/71365/alpe-dhuez-disfrutando-del-paraiso-blanco/
+    - listitem:
+      - link "Pinheiro Braathen firma en Levi un doble doblete en la Copa del Mundo de esquí Publicado en Noticias, el 15/11/2026":
+        - /url: https://www.nevasport.com/noticias/art/71607/pinheiro-braathen-firma-un-doble-doblete-en-la-copa-del-mundo-de-esqui/
+  - iframe
+  - contentinfo:
+    - list:
+      - listitem:
+        - link "PORTADA":
+          - /url: ./
+      - listitem:
+        - link "#INFONIEVE":
+          - /url: muro-social/
+      - listitem:
+        - link "ESTACIONES DE ESQUÍ":
+          - /url: estaciones-esqui/
+      - listitem:
+        - link "ESPAÑA":
+          - /url: estaciones-esqui/pais/espana/
+      - listitem:
+        - link "ANDORRA":
+          - /url: estaciones-esqui/pais/andorra/
+      - listitem:
+        - link "PIRINEO FRANCÉS":
+          - /url: estaciones-esqui/pais/pirineo-frances/
+      - listitem:
+        - link "PORTUGAL":
+          - /url: estaciones-esqui/pais/portugal/
+      - listitem:
+        - link "FECHAS APERTURA/CIERRE":
+          - /url: estaciones-esqui/fecha-inicio-fin-temporada/
+      - listitem:
+        - link "EL TIEMPO":
+          - /url: meteo/
+      - listitem:
+        - link "ESQUÍ DE FONDO":
+          - /url: esqui-de-fondo/
+    - list:
+      - listitem:
+        - link "PARTE DE NIEVE":
+          - /url: parte-de-nieve/
+      - listitem:
+        - link "TOP ESPESORES":
+          - /url: parte-de-nieve/top-nieve/
+      - listitem:
+        - link "TOP KM ABIERTOS":
+          - /url: parte-de-nieve/top-km/
+      - listitem:
+        - link "PELIGRO DE ALUDES":
+          - /url: parte-de-nieve/aludes/
+      - listitem:
+        - link "PARTES DE USUARIOS":
+          - /url: parte-de-nieve/usuarios/
+      - listitem:
+        - link "PUBLICA TU PARTE":
+          - /url: parte-de-nieve/publicar/
+      - listitem:
+        - link "SNOWPARKS":
+          - /url: parte-de-nieve/snowparks/
+      - listitem:
+        - link "SKIMO":
+          - /url: parte-de-nieve/skimo/
+      - listitem:
+        - link "RAQUETAS":
+          - /url: parte-de-nieve/itinerarios-raquetas/
+      - listitem:
+        - link "TRINEOS":
+          - /url: parte-de-nieve/pistas-trineos/
+    - list:
+      - listitem:
+        - link "SALA DE WEBCAMS":
+          - /url: sala-de-webcams/
+      - listitem:
+        - link "PENÍNSULA IBÉRICA":
+          - /url: estaciones-esqui/
+      - listitem:
+        - link "ALPES":
+          - /url: sala-de-webcams/reg/alpes/
+      - listitem:
+        - link "NORTEAMÉRICA":
+          - /url: sala-de-webcams/reg/norteamerica/
+      - listitem:
+        - link "SUDAMÉRICA":
+          - /url: sala-de-webcams/reg/sudamerica/
+      - listitem:
+        - link "OCEANÍA":
+          - /url: sala-de-webcams/reg/oceania/
+      - listitem:
+        - link "ÁFRICA":
+          - /url: sala-de-webcams/reg/africa/
+      - listitem:
+        - link "ESTÁ NEVANDO EN...":
+          - /url: sala-de-webcams/donde-esta-nevando/
+      - listitem:
+        - link "MAPA DE WEBCAMS":
+          - /url: mapa-de-webcams/
+    - list:
+      - listitem:
+        - text: "PARA TU WEB O APP:"
+        - link "WIDGETS Y APIs":
+          - /url: recursos/
+      - listitem:
+        - text: "DESARROLLADO POR:"
+        - link "DINARTIS.COM":
+          - /url: http://www.dinartis.com/
+      - listitem:
+        - emphasis: MANTENIMIENTO
+        - text: "TÉCNICO:"
+        - link "BEREIN.COM":
+          - /url: http://www.berein.com/
+    - link "Infonieve.es - Partes de Nieve, Meteo y Webcams":
+      - /url: ./
+    - link "Nevasport.com - Un espacio público abierto todo el año para los amantes del esquí y la nieve":
+      - /url: https://www.nevasport.com/
+    - link "[FRANCÉS] Pyreneige.fr - Parte de nieve, Meteo y Webcams de las estaciones de esquí de Pirineos":
+      - /url: https://www.pyreneige.fr/
+    - text: © INFONIEVE.es 2003-2026 / ski-cams.com
+    - link "Contacto":
+      - /url: contacto/
+    - link "Publicidad":
+      - /url: publicidad/
+    - link "Aviso legal":
+      - /url: aviso-legal/
+    - link "Política de privacidad":
+      - /url: privacidad/
+    - link "Política de cookies":
+      - /url: cookies/
+    - text: Encuéntranos también en
+    - link "Infonieve.es en Instagram":
+      - /url: https://www.instagram.com/infonieve.es/
+    - link "Infonieve.es en Twitter":
+      - /url: https://twitter.com/infonieve
+    - link "Infonieve.es en Facebook":
+      - /url: https://www.facebook.com/infonieve/
+    - link "Esquiades":
+      - /url: https://www.esquiades.com/
+      - img "Esquiades"
+    - link "Aramon":
+      - /url: https://www.aramon.com/
+      - img "Aramon"
+    - link "Pirineu365":
+      - /url: https://pirineu365.cat/
+      - img "Pirineu365"
+    - link "Estiber":
+      - /url: https://www.estiber.com/
+      - img "Estiber"

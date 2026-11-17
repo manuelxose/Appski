@@ -1,0 +1,56 @@
+{
+  "kind": "engine-04-worktree-verify",
+  "worktree": "C:/Users/Admin/Documents/workspace/appski-wt-snow02-gate",
+  "treeObjectId": "3b00c532344c0d3305324455d40be5e1c765722f",
+  "lifecycleRecord": "snow02-main-gate",
+  "baseline": "HEAD (6ab6867)",
+  "gaps": [],
+  "drift": [],
+  "stages": [
+    {
+      "id": "typecheck",
+      "exitCode": 0,
+      "durationMs": 6932
+    },
+    {
+      "id": "schema-invariants",
+      "exitCode": 0,
+      "durationMs": 485
+    },
+    {
+      "id": "unit-snow",
+      "exitCode": 0,
+      "durationMs": 8454
+    },
+    {
+      "id": "integration-http",
+      "exitCode": 0,
+      "durationMs": 7354
+    },
+    {
+      "id": "persistence-restart",
+      "exitCode": 0,
+      "durationMs": 1273
+    },
+    {
+      "id": "adversarial",
+      "exitCode": 0,
+      "durationMs": 13481
+    },
+    {
+      "id": "security-http",
+      "exitCode": 0,
+      "durationMs": 3542
+    },
+    {
+      "id": "captain-http",
+      "exitCode": 0,
+      "durationMs": 1666
+    },
+    {
+      "id": "reviewer-security",
+      "exitCode": 0,
+      "durationMs": 2545
+    }
+  ]
+}

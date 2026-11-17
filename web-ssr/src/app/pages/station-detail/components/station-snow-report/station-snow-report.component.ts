@@ -46,7 +46,9 @@ export class StationSnowReportComponent {
     }
   }
 
-  getQualityLabel(quality: string): string {
+  /** `null` = el parte no publica calidad: se muestra "—", no se presume calidad. */
+  getQualityLabel(quality: string | null): string {
+    if (quality === null) return "—";
     const labels = {
       powder: "Polvo",
       "packed-powder": "Compacta",
@@ -57,7 +59,8 @@ export class StationSnowReportComponent {
     return labels[quality as keyof typeof labels] || quality;
   }
 
-  getQualityColor(quality: string): string {
+  getQualityColor(quality: string | null): string {
+    if (quality === null) return "text-slate-500 bg-slate-50";
     const colors = {
       powder: "text-blue-600 bg-blue-50",
       "packed-powder": "text-green-600 bg-green-50",
@@ -68,7 +71,9 @@ export class StationSnowReportComponent {
     return colors[quality as keyof typeof colors] || "text-gray-600 bg-gray-50";
   }
 
-  getVisibilityLabel(visibility: string): string {
+  /** Sin estación meteorológica autorizada no hay visibilidad: "Sin datos". */
+  getVisibilityLabel(visibility: string | null): string {
+    if (visibility === null || visibility === "unknown") return "Sin datos";
     const labels = {
       excellent: "Excelente",
       good: "Buena",

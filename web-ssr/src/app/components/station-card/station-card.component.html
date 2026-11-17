@@ -78,7 +78,7 @@
         <div
           class="snow-metric text-xl md:text-2xl font-black text-blue-600 mb-0.5"
         >
-          {{ station().snowBase }}
+          {{ station().snowBase ?? "—" }}
         </div>
         <div
           class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
@@ -90,7 +90,7 @@
         <div
           class="snow-metric text-xl md:text-2xl font-black text-blue-700 mb-0.5"
         >
-          {{ station().snowTop }}
+          {{ station().snowTop ?? "—" }}
         </div>
         <div
           class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
@@ -102,7 +102,7 @@
         <div
           class="snow-metric text-xl md:text-2xl font-black text-green-600 mb-0.5"
         >
-          {{ station().snowFresh }}
+          {{ station().snowFresh ?? "—" }}
         </div>
         <div
           class="metric-label text-xs text-slate-600 font-semibold uppercase tracking-wide"
@@ -118,13 +118,13 @@
     >
       <div class="flex items-center gap-1.5">
         <span class="text-base">🚡</span>
-        <span class="font-bold">{{ station().liftsOpen }}</span>
-        <span class="text-slate-500">/{{ station().liftsTotal }}</span>
+        <span class="font-bold">{{ station().liftsOpen ?? "—" }}</span>
+        <span class="text-slate-500">/{{ station().liftsTotal ?? "—" }}</span>
       </div>
       <div class="flex items-center gap-1.5">
         <span class="text-base">⛷️</span>
-        <span class="font-bold">{{ station().slopesOpen }}</span>
-        <span class="text-slate-500">/{{ station().slopesTotal }}</span>
+        <span class="font-bold">{{ station().slopesOpen ?? "—" }}</span>
+        <span class="text-slate-500">/{{ station().slopesTotal ?? "—" }}</span>
       </div>
       <div
         class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform"

@@ -10,8 +10,9 @@ import {
   StationCardComponent,
   type Station,
 } from "../station-card/station-card.component";
-import { HomeDataService } from "../../pages/home/services/home.data.service";
-import type { FeaturedStation } from "../../pages/home/models/home.models";
+import { SnowApi } from "../../snow/client/snow-api.service";
+import type { StationDetailDto } from "../../snow/models/dto";
+
 
 @Component({
   selector: "app-stations-featured",
@@ -22,39 +23,41 @@ import type { FeaturedStation } from "../../pages/home/models/home.models";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StationsFeaturedComponent implements OnInit {
-  private readonly homeDataService = inject(HomeDataService);
+  private readonly snowApi = inject(SnowApi);
 
   featuredStations = signal<Station[]>([]);
 
   async ngOnInit(): Promise<void> {
-    const data = await this.homeDataService.loadFeaturedStations();
-    // Adaptar FeaturedStation a Station
-    const adapted = data.map((fs) => this.adaptToStation(fs));
-    this.featuredStations.set(adapted);
+    // Estaciones destacadas: el bloque es del módulo nieve, así que se sirve del
+    // BORDE REAL (maestro editorial). Antes venía de `home.data.service` (mock).
+    const res = await this.snowApi.stations({ pageSize: 3, sort: "name" });
+    if (!res.ok || res.body.status !== "ok") {
+      // Sin dato ⇒ lista vacía: la plantilla muestra su estado vacío, sin cifras.
+      this.featuredStations.set([]);
+      return;
+    }
+    this.featuredStations.set(res.body.stations.map((s) => this.adaptToStation(s)));
   }
 
-  /**
-   * Adapta FeaturedStation (del mock) a Station (del componente station-card).
-   */
-  private adaptToStation(fs: FeaturedStation): Station {
-    // Mapear temperatura a emoji de clima
-    const weather = this.getWeatherEmoji(fs.tempC, fs.windKmh);
-
+  /** Proyecta el DTO del borde al contrato de `app-station-card` (sin rellenos). */
+  private adaptToStation(s: StationDetailDto): Station {
     return {
-      id: fs.id,
-      name: fs.name,
-      location: fs.region,
-      image: fs.imageUrl,
-      isOpen: fs.status === "open",
-      snowBase: fs.snowBaseCm,
-      snowTop: fs.snowBaseCm + 50, // Estimación (no tenemos dato de cima)
-      snowFresh: fs.snowNew24hCm,
-      liftsOpen: fs.remontesOpen,
-      liftsTotal: fs.remontesTotal,
-      slopesOpen: fs.pistasOpen,
-      slopesTotal: fs.pistasTotal,
-      weather,
-      temperature: fs.tempC,
+      id: s.slug,
+      name: s.name,
+      location: s.region,
+      image: "",
+      isOpen: s.season === "open",
+      // Cifra del BORDE o `null`. Ya NO se fabrica `snowBaseCm + 50` como cima.
+      snowBase: s.snow?.baseCm ?? null,
+      snowTop: null,
+      snowFresh: null,
+      liftsOpen: null,
+      liftsTotal: null,
+      slopesOpen: null,
+      slopesTotal: null,
+      // Sin estación meteorológica autorizada no hay temperatura ni tiempo.
+      weather: "",
+      temperature: null,
     };
   }
 

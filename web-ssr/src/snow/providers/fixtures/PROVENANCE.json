@@ -1,0 +1,31 @@
+{
+  "note": "Fixtures grabadas de la API real de Open-Meteo. Replay exacto en tests; ningún valor está inventado. La captura NO concede ni implica licencia de uso.",
+  "capturedAt": "2026-11-16T21:41:28.254Z",
+  "coordinate": {
+    "lat": 42.638,
+    "lng": 0.766,
+    "note": "Baqueira-Beret (ES)"
+  },
+  "records": [
+    {
+      "label": "forecast-ok",
+      "file": "forecast-ok.json",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=42.638&longitude=0.766&hourly=temperature_2m,wind_speed_10m,precipitation,snowfall,weather_code&current=temperature_2m,wind_speed_10m,weather_code&forecast_days=2&timezone=UTC",
+      "capturedAt": "2026-11-16T21:41:27.809Z",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 2580,
+      "sha256": "0c19a0bdf53f2ab5bb39b7758b38e033da4dcf471ec42526f3fca0d842cf2349"
+    },
+    {
+      "label": "forecast-minimal",
+      "file": "forecast-minimal.json",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=42.638&longitude=0.766&hourly=temperature_2m&forecast_days=1&timezone=UTC",
+      "capturedAt": "2026-11-16T21:41:28.254Z",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 828,
+      "sha256": "14af9cc774909fce7896bba8308a3b6c1e9d97bc3773f7fe4bc35e91f1e644d9"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:09:29Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "relation",
+  "id": 9849543,
+  "center": {
+    "lat": 40.3266873,
+    "lon": -7.6143563
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estância de Ski da Serra da Estrela",
+    "note": "Landuse not rendered in carto. Adding leisure=pitch is an alternative used elsewhere, albeit a bit \"agressive\" to the eye.",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "website": "http://www.skiserradaestrela.com/",
+    "wikidata": "Q533782"
+  }
+}
+
+  ]
+}

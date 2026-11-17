@@ -1,0 +1,1533 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T21:55:05Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 258356188,
+  "lat": 42.5370251,
+  "lon": 1.4906560,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Vallnord: Sector Pal",
+    "name:ca": "Vallnord: Sector Pal",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 258356379,
+  "lat": 42.5736172,
+  "lon": 1.4707472,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Vallnord: Sector Arinsal",
+    "name:ca": "Vallnord: Sector Arinsal",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 258357981,
+  "lat": 42.6313913,
+  "lon": 1.5003889,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Vallnord: Sector Arcalís",
+    "name:ca": "Vallnord: Sector Arcalís",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 321679777,
+  "lat": 42.4353428,
+  "lon": 1.5207202,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "la Rabassa",
+    "piste:type": "nordic",
+    "sport": "skiing",
+    "wikidata": "Q3212119"
+  }
+},
+{
+  "type": "node",
+  "id": 590463654,
+  "lat": 42.5718415,
+  "lon": 1.4841776,
+  "tags": {
+    "addr:city": "Arinsal",
+    "addr:housenumber": "16",
+    "addr:street": "Carretera d'Arinsal",
+    "ele": "1482",
+    "name": "Esports Sant Moritz STM1",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1568150116,
+  "lat": 42.5778117,
+  "lon": 1.6493232,
+  "tags": {
+    "name": "Nordic Esports",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1568150125,
+  "lat": 42.5780351,
+  "lon": 1.6487875,
+  "tags": {
+    "name": "Pic Negre",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1568150130,
+  "lat": 42.5780840,
+  "lon": 1.6482992,
+  "tags": {
+    "name": "Pic Negre",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1568150169,
+  "lat": 42.5794734,
+  "lon": 1.6491335,
+  "tags": {
+    "name": "Sports Calbo",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671657208,
+  "lat": 42.5357095,
+  "lon": 1.5877034,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector d'Encamp)",
+    "name:ca": "Grandvalira (Sector d'Encamp)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671660696,
+  "lat": 42.5659070,
+  "lon": 1.6014096,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Grandvalira (Sector de Canillo)",
+    "name:ca": "Grandvalira (Sector de Canillo)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671662458,
+  "lat": 42.5783067,
+  "lon": 1.6461507,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Grandvalira (Sector del Tarter)",
+    "name:ca": "Grandvalira (Sector del Tarter)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671666127,
+  "lat": 42.5758026,
+  "lon": 1.6680948,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Grandvalira (Sector de Soldeu)",
+    "name:ca": "Grandvalira (Sector de Soldeu)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2671668745,
+  "lat": 42.5329109,
+  "lon": 1.6987250,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector de Grau Roig)",
+    "name:ca": "Grandvalira (Sector de Grau Roig)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 3902532110,
+  "lat": 42.5791294,
+  "lon": 1.6594462,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació esquí Parador Canaro",
+    "sport": "skiing",
+    "website": "http://www.skiparadorcanaro.com"
+  }
+},
+{
+  "type": "node",
+  "id": 6313823448,
+  "lat": 42.5348648,
+  "lon": 1.5878946,
+  "tags": {
+    "name": "Pic Negro",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033502511,
+  "lat": 42.5372122,
+  "lon": 1.7272091,
+  "tags": {
+    "addr:city": "Encamp",
+    "addr:postcode": "AD200",
+    "addr:street": "Carretera General 2",
+    "name": "Viladomat Costa Rodona",
+    "phone": "+376800940",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033504422,
+  "lat": 42.5412394,
+  "lon": 1.7335387,
+  "tags": {
+    "addr:city": "Pas de la Casa",
+    "addr:housenumber": "12",
+    "addr:postcode": "AD200",
+    "addr:street": "Avinguda d'Encamp",
+    "name": "Viladomat Pas de la Casa",
+    "phone": "+376800943",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033513643,
+  "lat": 42.5776398,
+  "lon": 1.6637291,
+  "tags": {
+    "addr:city": "Soldeu",
+    "addr:housenumber": "19",
+    "addr:postcode": "AD100",
+    "addr:street": "Carretera General 2",
+    "name": "Viladomat Signature Park Piolets",
+    "phone": "+376800806",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033519175,
+  "lat": 42.6286514,
+  "lon": 1.4979332,
+  "tags": {
+    "addr:postcode": "AD300",
+    "addr:street": "Carretera General 3",
+    "name": "Viladomat Arcalís Planells",
+    "phone": "+376800942",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033523224,
+  "lat": 42.6317168,
+  "lon": 1.4998777,
+  "tags": {
+    "addr:postcode": "AD300",
+    "addr:street": "Carretera General 3",
+    "name": "Viladomat Arcalís Hortell",
+    "phone": "+376800941",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033527427,
+  "lat": 42.5320113,
+  "lon": 1.6959499,
+  "tags": {
+    "addr:city": "Grau Roig",
+    "addr:postcode": "AD200",
+    "addr:street": "Grandvalira Parking Cubil Sector Grau Roig",
+    "name": "Viladomat Ríbuls Grau Roig",
+    "phone": "+376800602",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033527512,
+  "lat": 42.5323644,
+  "lon": 1.7003513,
+  "tags": {
+    "addr:city": "Grau Roig",
+    "addr:postcode": "AD200",
+    "addr:street": "Parking Grau Roig",
+    "name": "Viladomat Grau Roig",
+    "phone": "+376800603",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 12033533209,
+  "lat": 42.5423032,
+  "lon": 1.6604430,
+  "tags": {
+    "addr:city": "Encamp",
+    "addr:postcode": "AD200",
+    "addr:street": "randvalira Solanelles",
+    "name": "Viladomat Solanelles",
+    "phone": "+376800819",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52112651,
+  "center": {
+    "lat": 42.5341379,
+    "lon": 1.4792521
+  },
+  "tags": {
+    "name": "el Besurt II",
+    "name:ca": "el Besurt II",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52163753,
+  "center": {
+    "lat": 42.5560493,
+    "lon": 1.6741835
+  },
+  "tags": {
+    "name": "Serrat de la Posa",
+    "name:ca": "Serrat de la Posa",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692955,
+  "center": {
+    "lat": 42.5682715,
+    "lon": 1.4485097
+  },
+  "tags": {
+    "name": "Bony Vaques",
+    "name:ca": "Bony Vaques",
+    "piste:difficulty": "advanced",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692956,
+  "center": {
+    "lat": 42.5696572,
+    "lon": 1.4581132
+  },
+  "tags": {
+    "name": "les Fonts",
+    "name:ca": "les Fonts",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692957,
+  "center": {
+    "lat": 42.5700644,
+    "lon": 1.4505148
+  },
+  "tags": {
+    "name": "la Solana",
+    "name:ca": "la Solana",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692959,
+  "center": {
+    "lat": 42.5672617,
+    "lon": 1.4488996
+  },
+  "tags": {
+    "name": "Tub Estadi",
+    "name:ca": "Tub Estadi",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692960,
+  "center": {
+    "lat": 42.5666973,
+    "lon": 1.4488638
+  },
+  "tags": {
+    "name": "la Pala",
+    "name:ca": "la Pala",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692962,
+  "center": {
+    "lat": 42.5708051,
+    "lon": 1.4646918
+  },
+  "tags": {
+    "name": "la Tossa",
+    "name:ca": "la Tossa",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692963,
+  "center": {
+    "lat": 42.5717916,
+    "lon": 1.4672431
+  },
+  "tags": {
+    "name": "Estadi",
+    "name:ca": "Estadi",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692964,
+  "center": {
+    "lat": 42.5694960,
+    "lon": 1.4535846
+  },
+  "tags": {
+    "name": "Planelles",
+    "name:ca": "Planelles",
+    "piste:difficulty": "easy",
+    "piste:type": "snow_park",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692966,
+  "center": {
+    "lat": 42.5689481,
+    "lon": 1.4549158
+  },
+  "tags": {
+    "name": "Port Vell",
+    "name:ca": "Port Vell",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692967,
+  "center": {
+    "lat": 42.5704671,
+    "lon": 1.4610807
+  },
+  "tags": {
+    "name": "Salador",
+    "name:ca": "Salador",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692969,
+  "center": {
+    "lat": 42.5703384,
+    "lon": 1.4593877
+  },
+  "tags": {
+    "name": "Margarida",
+    "name:ca": "Margarida",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52692970,
+  "center": {
+    "lat": 42.5736201,
+    "lon": 1.4681334
+  },
+  "tags": {
+    "name": "el Cortalet",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697931,
+  "center": {
+    "lat": 42.6285691,
+    "lon": 1.4804730
+  },
+  "tags": {
+    "name": "els Orris",
+    "name:ca": "els Orris",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697932,
+  "center": {
+    "lat": 42.6247475,
+    "lon": 1.4828273
+  },
+  "tags": {
+    "name": "la Coma",
+    "name:ca": "la Coma",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697934,
+  "center": {
+    "lat": 42.6266948,
+    "lon": 1.4812719
+  },
+  "tags": {
+    "name": "el Mur",
+    "name:ca": "el Mur",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697935,
+  "center": {
+    "lat": 42.6226268,
+    "lon": 1.4814967
+  },
+  "tags": {
+    "name": "el Tunel",
+    "name:ca": "el Túnel",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697936,
+  "center": {
+    "lat": 42.6275701,
+    "lon": 1.5029138
+  },
+  "tags": {
+    "name": "Woodpark",
+    "piste:difficulty": "freeride",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697937,
+  "center": {
+    "lat": 42.6275747,
+    "lon": 1.5019230
+  },
+  "tags": {
+    "name": "l'Hortell",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697938,
+  "center": {
+    "lat": 42.6264941,
+    "lon": 1.4995764
+  },
+  "tags": {
+    "name": "el Bosc",
+    "name:ca": "el Bosc",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697940,
+  "center": {
+    "lat": 42.6237352,
+    "lon": 1.4999182
+  },
+  "tags": {
+    "name": "les Canals",
+    "name:ca": "les Canals",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697941,
+  "center": {
+    "lat": 42.6229948,
+    "lon": 1.4950383
+  },
+  "tags": {
+    "name": "la Canal Gran",
+    "name:ca": "la Canal Gran",
+    "piste:difficulty": "advanced",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697942,
+  "center": {
+    "lat": 42.6188895,
+    "lon": 1.4847460
+  },
+  "tags": {
+    "name": "els Terragals",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697943,
+  "center": {
+    "lat": 42.6205078,
+    "lon": 1.4819616
+  },
+  "tags": {
+    "name": "ECOA",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697944,
+  "center": {
+    "lat": 42.6209723,
+    "lon": 1.4903789
+  },
+  "tags": {
+    "name": "les Tarteres",
+    "name:ca": "les Tarteres",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697945,
+  "center": {
+    "lat": 42.6217539,
+    "lon": 1.5026079
+  },
+  "tags": {
+    "name": "les Congestes",
+    "name:ca": "les Congestes",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697948,
+  "center": {
+    "lat": 42.6349536,
+    "lon": 1.4784395
+  },
+  "tags": {
+    "name": "l'Estany",
+    "name:ca": "l'Estany",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697950,
+  "center": {
+    "lat": 42.6299237,
+    "lon": 1.4847853
+  },
+  "tags": {
+    "name": "la Bassa",
+    "name:ca": "la Bassa",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697951,
+  "center": {
+    "lat": 42.6298312,
+    "lon": 1.4806611
+  },
+  "tags": {
+    "name": "el Riu",
+    "name:ca": "el Riu",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 52697952,
+  "center": {
+    "lat": 42.6288110,
+    "lon": 1.5010478
+  },
+  "tags": {
+    "name": "l'Avetar",
+    "name:ca": "l'Avetar",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 54858983,
+  "center": {
+    "lat": 42.5411505,
+    "lon": 1.7332791
+  },
+  "tags": {
+    "area": "yes",
+    "highway": "pedestrian",
+    "leisure": "ski_resort",
+    "name": "Grandvalira (Sector de Pas de la Casa)",
+    "name:ca": "Grandvalira (Sector de Pas de la Casa)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 98005844,
+  "center": {
+    "lat": 42.6309250,
+    "lon": 1.4898849
+  },
+  "tags": {
+    "name": "Freeride",
+    "piste:difficulty": "freeride",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 98005848,
+  "center": {
+    "lat": 42.6299685,
+    "lon": 1.4937156
+  },
+  "tags": {
+    "name": "la Basera",
+    "name:ca": "la Basera",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 98005850,
+  "center": {
+    "lat": 42.6327045,
+    "lon": 1.4951093
+  },
+  "tags": {
+    "name": "la Canaleta",
+    "name:ca": "la Canaleta",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 98005851,
+  "center": {
+    "lat": 42.6252790,
+    "lon": 1.4872391
+  },
+  "tags": {
+    "name": "la Balma",
+    "name:ca": "la Balma",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826437,
+  "center": {
+    "lat": 42.5292724,
+    "lon": 1.4602770
+  },
+  "tags": {
+    "name": "Cami Superior",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826439,
+  "center": {
+    "lat": 42.5314774,
+    "lon": 1.4593389
+  },
+  "tags": {
+    "name": "Cami Inferior",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826440,
+  "center": {
+    "lat": 42.5401468,
+    "lon": 1.4496882
+  },
+  "tags": {
+    "name": "Coll de la Botella",
+    "name:ca": "Coll de la Botella",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826441,
+  "center": {
+    "lat": 42.5298564,
+    "lon": 1.4610941
+  },
+  "tags": {
+    "name": "Coms",
+    "name:ca": "Coms",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826442,
+  "center": {
+    "lat": 42.5323160,
+    "lon": 1.4722916
+  },
+  "tags": {
+    "name": "Corpalanca",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826443,
+  "center": {
+    "lat": 42.5372651,
+    "lon": 1.4874108
+  },
+  "tags": {
+    "name": "el Beç",
+    "name:ca": "el Beç",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826444,
+  "center": {
+    "lat": 42.5340449,
+    "lon": 1.4794388
+  },
+  "tags": {
+    "name": "el Besurt",
+    "name:ca": "el Besurt",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826445,
+  "center": {
+    "lat": 42.5319936,
+    "lon": 1.4700669
+  },
+  "tags": {
+    "name": "el Gall",
+    "name:ca": "el Gall",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826447,
+  "center": {
+    "lat": 42.5362697,
+    "lon": 1.4866287
+  },
+  "tags": {
+    "name": "els Avets",
+    "name:ca": "els Avets",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826448,
+  "center": {
+    "lat": 42.5322315,
+    "lon": 1.4720674
+  },
+  "tags": {
+    "name": "Estadi Eslalom",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826449,
+  "center": {
+    "lat": 42.5431508,
+    "lon": 1.4485928
+  },
+  "tags": {
+    "name": "Font Roja",
+    "name:ca": "Font Roja",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826450,
+  "center": {
+    "lat": 42.5311381,
+    "lon": 1.4688637
+  },
+  "tags": {
+    "lit": "no",
+    "name": "Fontanals",
+    "name:ca": "Fontanals",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826451,
+  "center": {
+    "lat": 42.5294851,
+    "lon": 1.4642043
+  },
+  "tags": {
+    "name": "Les Roques",
+    "name:ca": "Les Roques",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826452,
+  "center": {
+    "lat": 42.5298790,
+    "lon": 1.4678781
+  },
+  "tags": {
+    "name": "la Cot",
+    "name:ca": "la Cot",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826453,
+  "center": {
+    "lat": 42.5273585,
+    "lon": 1.4619247
+  },
+  "tags": {
+    "name": "la Serra",
+    "name:ca": "la Serra",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826454,
+  "center": {
+    "lat": 42.5325852,
+    "lon": 1.4815191
+  },
+  "tags": {
+    "name": "la Serra",
+    "name:ca": "la Serra",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826455,
+  "center": {
+    "lat": 42.5418275,
+    "lon": 1.4521807
+  },
+  "tags": {
+    "name": "Estadi Joan Carchat",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826456,
+  "center": {
+    "lat": 42.5287335,
+    "lon": 1.4552785
+  },
+  "tags": {
+    "name": "Tossa",
+    "name:ca": "Tossa",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826457,
+  "center": {
+    "lat": 42.5362501,
+    "lon": 1.4844343
+  },
+  "tags": {
+    "name": "Transversal",
+    "name:ca": "Transversal",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826460,
+  "center": {
+    "lat": 42.5352948,
+    "lon": 1.4904584
+  },
+  "tags": {
+    "name": "El Planell",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 269224749,
+  "center": {
+    "lat": 42.5721128,
+    "lon": 1.4661013
+  },
+  "tags": {
+    "name": "Bony",
+    "name:ca": "Bony",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 269525356,
+  "center": {
+    "lat": 42.5289660,
+    "lon": 1.4694706
+  },
+  "tags": {
+    "name": "Cami Superior",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 269525357,
+  "center": {
+    "lat": 42.5303970,
+    "lon": 1.4566848
+  },
+  "tags": {
+    "name": "Cami del Mig",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448753,
+  "center": {
+    "lat": 42.5317233,
+    "lon": 1.7108247
+  },
+  "tags": {
+    "name": "Diagonal",
+    "name:ca": "Diagonal",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448754,
+  "center": {
+    "lat": 42.5281588,
+    "lon": 1.7270158
+  },
+  "tags": {
+    "name": "Jordi Angles",
+    "name:ca": "Jordi Angles",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448755,
+  "center": {
+    "lat": 42.5328173,
+    "lon": 1.6902607
+  },
+  "tags": {
+    "name": "Moreto",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448759,
+  "center": {
+    "lat": 42.5435006,
+    "lon": 1.6569531
+  },
+  "tags": {
+    "name": "Les Deveses",
+    "name:ca": "Les Deveses",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448761,
+  "center": {
+    "lat": 42.5343251,
+    "lon": 1.7264259
+  },
+  "tags": {
+    "name": "Tubs",
+    "name:ca": "Tubs",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448762,
+  "center": {
+    "lat": 42.5436172,
+    "lon": 1.6595827
+  },
+  "tags": {
+    "name": "Baladre",
+    "name:ca": "Baladre",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 271448763,
+  "center": {
+    "lat": 42.5285180,
+    "lon": 1.7098757
+  },
+  "tags": {
+    "name": "Menera",
+    "name:ca": "Menera",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 371470858,
+  "center": {
+    "lat": 42.6246388,
+    "lon": 1.5004669
+  },
+  "tags": {
+    "name": "la Font",
+    "name:ca": "la Font",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 371470859,
+  "center": {
+    "lat": 42.6233719,
+    "lon": 1.4884068
+  },
+  "tags": {
+    "name": "la Portella d'Arcalis",
+    "piste:difficulty": "expert",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 371470860,
+  "center": {
+    "lat": 42.6246524,
+    "lon": 1.4930231
+  },
+  "tags": {
+    "name": "la Portella del Mig",
+    "name:ca": "la Portella del Mig",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 395231572,
+  "center": {
+    "lat": 42.6320880,
+    "lon": 1.4869568
+  },
+  "tags": {
+    "name": "La Basera",
+    "name:ca": "La Basera",
+    "piste:difficulty": "novice",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758768531,
+  "center": {
+    "lat": 42.5315176,
+    "lon": 1.7307848
+  },
+  "tags": {
+    "name": "Pista Escola",
+    "name:ca": "Pista Escola",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 759889259,
+  "center": {
+    "lat": 42.5343670,
+    "lon": 1.7193876
+  },
+  "tags": {
+    "name": "Taupes",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 760570888,
+  "center": {
+    "lat": 42.5690086,
+    "lon": 1.6434013
+  },
+  "tags": {
+    "name": "Pi di Migdia",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1242377782,
+  "center": {
+    "lat": 42.5348738,
+    "lon": 1.4892827
+  },
+  "tags": {
+    "name": "la Serra",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1266823268,
+  "center": {
+    "lat": 42.5679509,
+    "lon": 1.6456875
+  },
+  "tags": {
+    "name": "Pi di Migdia",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1337941934,
+  "center": {
+    "lat": 42.5321568,
+    "lon": 1.6944921
+  },
+  "tags": {
+    "name": "Moreto",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1348519493,
+  "center": {
+    "lat": 42.5300253,
+    "lon": 1.4598279
+  },
+  "tags": {
+    "name": "Cami Inferior",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1355803598,
+  "center": {
+    "lat": 42.5713292,
+    "lon": 1.4625940
+  },
+  "tags": {
+    "name": "Niu",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1533084691,
+  "center": {
+    "lat": 42.6312632,
+    "lon": 1.4994723
+  },
+  "tags": {
+    "name": "la Canaleta",
+    "name:ca": "la Canaleta",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 1533084692,
+  "center": {
+    "lat": 42.6313066,
+    "lon": 1.4992078
+  },
+  "tags": {
+    "name": "la Canaleta",
+    "name:ca": "la Canaleta",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 18502128,
+  "center": {
+    "lat": 42.5314774,
+    "lon": 1.4593389
+  },
+  "tags": {
+    "name": "Cami Inferior",
+    "piste:type": "downhill",
+    "route": "piste",
+    "sport": "skiing",
+    "type": "route"
+  }
+}
+
+  ]
+}

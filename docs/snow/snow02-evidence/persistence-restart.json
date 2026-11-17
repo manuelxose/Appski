@@ -1,0 +1,26 @@
+{
+  "kind": "driver-cases",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    "PASS arranque#1 del bundle construido",
+    "PASS bootstrap sembró el maestro (season-dates 200)",
+    "PASS POST /admin/reports => 201",
+    "PASS la respuesta trae id de parte",
+    "PASS el fichero existe y es JSON",
+    "PASS el parte está EN DISCO antes del reinicio",
+    "PASS disco: liftsOpen === 12",
+    "PASS disco: author/sourceUrl/capturedAt/confidence",
+    "PASS proceso terminado con SIGKILL (sin cierre ordenado)",
+    "PASS arranque#2 sobre el MISMO SNOW_DATA_DIR",
+    "PASS GET /stations/:slug/report => 200 tras reinicio",
+    "PASS report: liftsOpen === 12 (no 0, no null)",
+    "PASS report: parte con espesores persistidos",
+    "PASS report: atribución persistida (author/sourceUrl/capturedAt/confidence)",
+    "PASS report: procedencia con source/licenseStatus/freshness",
+    "PASS ranking incluye la estación con baseCm 60",
+    "PASS ranking no convierte ausencia en 0",
+    "PASS /admin/reports devuelve el parte tras reinicio"
+  ]
+}
