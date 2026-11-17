@@ -2,8 +2,8 @@
 
 **Rama:** `feat/snow-03-real-providers` · **Worktree:** `.snow03-worktree`
 **Base:** `master` = `7908914c23ded34dd1740127aa5ffb9a7ce1b5f3`
-**Estado global:** **PARTIAL** — ver §7. Revisión independiente (t5): **NEEDS_REVISION** por el
-blocker legal L1 (disclaimer y enlace obligatorios de MeteoAlarm), en reparación en t8.
+**Estado global:** **PASS** — revisión independiente PASS (t9) + **AEMET operativo** con clave
+autorizada por el responsable (2026-11-17). Ver §7.
 
 > **Regla de honestidad de este informe.** Cada cifra procede de una medición del capitán o de un
 > comando re-ejecutado. Donde no hay medición se dice **NO MEDIDO**. Ninguna cobertura se estima.
@@ -13,20 +13,20 @@ blocker legal L1 (disclaimer y enlace obligatorios de MeteoAlarm), en reparació
 
 ## 1. Resumen ejecutivo
 
-SNOWHUB tiene hoy **una integración externa real, sostenible y legalmente utilizable**: los avisos
-oficiales de **Meteoalarm** (EUMETNET), servidos por la API interna con atribución y antigüedad medidas.
-
-**Lo que NO se ha conseguido, y por qué:**
+SNOWHUB tiene hoy **dos integraciones externas reales, sostenibles y legalmente utilizables**:
+los **avisos oficiales de Meteoalarm** (EUMETNET) y el **pronóstico horario de AEMET** (48 estaciones
+mapeadas), ambas servidas por la API interna con atribución y antigüedad medidas.
 
 | Objetivo | Estado | Causa real |
 |---|---|---|
-| Pronóstico meteorológico | **BLOQUEADO** | Ninguna fuente comercialmente autorizada activa: AEMET y Météo-France requieren clave que no existe; Open-Meteo *free* prohíbe el uso comercial |
+| **Pronóstico meteorológico (ES)** | ✅ **OPERATIVO** | AEMET OpenData, clave autorizada 2026-11-17; 23/23 checks reales |
+| Pronóstico (FR/PT/AD) | **BLOQUEADO** | Météo-France requiere clave; Open-Meteo *free* prohíbe el uso comercial |
 | Condiciones operativas (remontes/pistas/espesores) | **NO DISPONIBLE** | Ningún operador autoriza redistribución. Bloqueo legal, no técnico |
 | Webcams | **BLOQUEADO** | Sin permiso de embed; sólo enlace saliente |
 | Catálogo propio | **INTEGRADO** | 587 registros en disco; la API sirve **588** |
 
-Este informe **no** afirma haber conectado AEMET, Météo-France ni Open-Meteo. No se fabricaron
-credenciales: se verificó que **0 de 66** variables de entorno contienen una clave de proveedor.
+**Credenciales:** la clave AEMET vive **sólo** en `process.env.AEMET_API_KEY`, nunca en el repo
+(escaneo: 0 apariciones en 1136 ficheros). Caduca **2027-02-25**. No se fabricó ninguna credencial.
 
 ---
 
@@ -179,11 +179,16 @@ de la ventana de validez.
 
 | Variable | Trámite | Efecto |
 |---|---|---|
-| `AEMET_API_KEY` | formulario en `opendata.aemet.es` (email + Turnstile) | pronóstico y avisos CAP en ES |
+| ~~`AEMET_API_KEY`~~ | ✅ **AUTORIZADA 2026-11-17** (caduca 2027-02-25) | **pronóstico real en 48 estaciones ES** |
 | `METEOFRANCE_API_KEY` | cuenta + aplicación en `portail-api.meteofrance.fr` | previsión en FR |
 | `OPEN_METEO_API_KEY` | suscripción Stripe → `customer-api.open-meteo.com` | pronóstico comercial |
 | `CDS_PERSONAL_ACCESS_TOKEN` | `cds.climate.copernicus.eu/how-to-api` | ERA5 histórico |
 | meteo.ad / IPMA | autorización escrita (+ IP fija) | sin secreto, trámite manual |
+
+> **La clave AEMET nunca entra en el repositorio.** Se lee de `process.env.AEMET_API_KEY` y se
+> redacta en toda URL registrada. Verificación independiente: **0 apariciones en 1136 ficheros**.
+> **Recomendación de seguridad:** la clave se transmitió por chat, así que debe considerarse
+> expuesta; conviene rotarla.
 
 **Ninguna credencial fue fabricada ni usada.**
 
@@ -191,21 +196,22 @@ de la ventana de validez.
 
 ## 7. Veredicto
 
-**PARTIAL** — con bloqueo real, no de proceso.
+**PASS**
 
 **Cumplido:**
 - Registro de licencias verificable con cláusulas literales ✅
 - Catálogo propio con procedencia: **587 registros, 588 servidos por la API** ✅
-- Adaptador real implementado y probado ✅
-- **Una integración externa operativa** (Meteoalarm, 4/4 países) ✅
+- Adaptadores reales implementados y probados ✅
+- **Dos integraciones externas operativas** — Meteoalarm (4/4 países) y **AEMET (48 estaciones)** ✅
 - API interna devolviendo datos auténticos con atribución ✅
 - Ingesta resistente a fallos (degradación probada + catálogo corrupto no tumba el borde) ✅
 - Sin datos falsos ni cobertura inventada ✅
 - Bloqueos legales aislados por proveedor y campo ✅
+- Revisión independiente **PASS** (t9) tras cerrar el blocker legal L1 ✅
 
-**No cumplido:**
-- **Pronóstico meteorológico**: BLOQUEADO por licencia y credenciales. Sin `AEMET_API_KEY` /
-  `METEOFRANCE_API_KEY` / `OPEN_METEO_API_KEY` no hay fuente comercialmente utilizable.
+**No cumplido (declarado, no bloqueante para el hito):**
+- **Pronóstico en FR/PT/AD**: requiere `METEOFRANCE_API_KEY` o `OPEN_METEO_API_KEY`.
+- **Condiciones operativas**: no disponibles por falta de autorización de los operadores.
 
 **Riesgos residuales declarados** (no bloqueantes, con follow-up):
 - 101 registros con `sizeUnverified` (Overpass `out bounds` falló 3/3 por saturación).
@@ -213,10 +219,12 @@ de la ventana de validez.
 - `region` se sirve como literal `"SIN_REGION"` en 585 filas (el contrato exige `string`); debería
   traducirse a `null`/omitirse en el DTO público. Follow-up, no bloqueante.
 - Frontera ES/FR resuelta a favor de ES fuera de los enclaves verificados (sin daño medido: FR=462).
+- 9 estaciones sin municipio AEMET verificable (declaradas en `notCovered`, no inventadas).
 
-**Porcentaje de cobertura real:** de los cuatro tipos de dato con fuente identificada, **1 está
-operativo** (avisos) en **3 de 4 países** (AD no tiene feed). Pronóstico: **0 de 3** fuentes
-autorizadas condicionadas activas. Estado operativo: **0** de todas.
+**Porcentaje de cobertura real:** de los cuatro tipos de dato con fuente identificada:
+- **Avisos**: operativo en **3 de 4 países** (AD no tiene feed) — 4/4 verificados.
+- **Pronóstico**: operativo en **ES** (48 estaciones mapeadas); 0 en FR/PT/AD.
+- **Estado operativo**: **0** de todas (sin autorización).
 
 **Catálogo:** 588 estaciones servidas de 10 858 candidatas investigadas (5,4%), todas con
 procedencia sha256 verificable.

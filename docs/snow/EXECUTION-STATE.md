@@ -2,12 +2,13 @@
 
 **Última actualización:** 2026-11-17 · **Rama:** `feat/snow-03-real-providers`
 **Worktree:** `.snow03-worktree` · **Base:** `master` = `7908914c23ded34dd1740127aa5ffb9a7ce1b5f3`
-**Estado global:** **PARTIAL** — con revisión independiente **PASS** (t9). Ver §7.
+**Estado global:** **PASS** — revisión independiente PASS (t9) + **AEMET operativo** con clave
+autorizada por el responsable (2026-11-17). Ver §7.
 
-> **Nota de honestidad.** El estado no es PASS porque el hito pide datos meteorológicos reales y
-> **el pronóstico está bloqueado por licencia y credenciales**, no por falta de trabajo. Lo que sí
-> está operativo y verificado: avisos oficiales de Meteoalarm, catálogo propio servido por la API y
-> pipeline resistente a fallos. Ninguna cobertura está estimada.
+> **Nota de honestidad.** El hito pedía datos meteorológicos reales: se entregaron **dos**
+> integraciones operativas (avisos Meteoalarm y pronóstico AEMET). Lo que sigue fuera: pronóstico en
+> FR/PT/AD (faltan claves) y condiciones operativas (falta autorización de operadores). Ninguna
+> cobertura está estimada.
 >
 > *Estado previo (SNOW-02), conservado para trazabilidad:* backend operativo verificado y mergeado a
 > `master` el 2026-11-16 por decisión del usuario, con excepción declarada respecto al gate de entrega.
@@ -31,8 +32,9 @@
 |---|---|---|
 | Type-check | `tsc -p web-ssr/tsconfig.app.json --noEmit` → exit 0 | DEMOSTRADO |
 | Esquema SQL (SNOW-02 intacto) | `check-schema.mjs` → «all invariants hold», exit 0 | DEMOSTRADO |
-| Suite de nieve | `qa-unit.mjs` → exit 0, 27 ficheros | DEMOSTRADO |
+| Suite de nieve | `qa-unit.mjs` → exit 0, 28 ficheros | DEMOSTRADO |
 | E2E completo | `verify-e2e.mjs` → **56/56**, exit 0 | DEMOSTRADO |
+| **Pronóstico AEMET real** | `verify-aemet.mjs` → **23/23**, exit 0: 48 tramos, viento/rachas 47/48 | DEMOSTRADO |
 | Avisos reales de 4 países | `verify-meteoalarm.mjs` → **4/4**: ES 75 / FR 138 / PT 25 / AD `no_data` | DEMOSTRADO |
 | Cumplimiento legal Meteoalarm | disclaimer literal + `sourceUrl` + `link` por aviso + TTL 600 000 ms | DEMOSTRADO |
 | Degradación sin red | `verify-network-degradation.mjs` → **12/12** (ECONNREFUSED, DNS, timeout real) | DEMOSTRADO |
@@ -48,10 +50,10 @@
 
 | Pendiente | Motivo real | Estado |
 |---|---|---|
-| **Pronóstico meteorológico** | Ninguna fuente comercialmente autorizada activa: AEMET y Météo-France requieren clave inexistente; Open-Meteo *free* prohíbe uso comercial | **BLOQUEADO POR LICENCIA Y CREDENCIALES** |
+| **Pronóstico en FR / PT / AD** | Falta `METEOFRANCE_API_KEY`; Open-Meteo *free* prohíbe uso comercial | **BLOQUEADO (credencial/licencia)** |
 | Condiciones operativas (remontes/pistas/espesores) | Ningún operador autoriza redistribución | **NO DISPONIBLE (legal)** |
 | Webcams | Sin permiso de embed | BLOQUEADO |
-| Copernicus C3S (ERA5) | API por bloques NetCDF; no sirve tiempo presente | NO APTO |
+| Copernicus C3S (ERA5) | **RETIRADO de la cadena**: servía atribución falsa en `/forecast` | CORREGIDO + guarda |
 | `coverage.byCountry` en `/v1/config` | `config()` es síncrono y el maestro se lee async | **NO MEDIDO** (0/0 declarado, no inventado) |
 | `region` = `"SIN_REGION"` en 585 filas | El contrato exige `string`; debería traducirse a `null` en el DTO público | Deuda declarada |
 | 101 registros `sizeUnverified` | Overpass `out bounds` falló 3/3 (saturación del entorno) | Declarado |
@@ -73,6 +75,11 @@
 | **L1** | **Meteoalarm redistribuido sin disclaimer literal ni enlace** | **Incumplimiento legal de la única integración operativa** | **CORREGIDO (t8)** |
 | L2 | Atribución NMHS nunca usada (siempre multi-país) | Incumplimiento menor | CORREGIDO |
 | D1 | Cifras erróneas en documentos del capitán (115/101, marcadores t7) | Informe inconsistente | CORREGIDO por el capitán |
+| **A1** | AEMET `fecha` local sin `Z` descartada ⇒ **0 puntos con la API viva** | Pronóstico vacío con tests verdes | CORREGIDO |
+| **A2** | `/forecast` atribuido a **Copernicus C3S** con 0 puntos | **Dato falso con apariencia legítima** | CORREGIDO + guarda |
+| A3 | Viento/rachas siempre `null` (`velocidad[]` no leído) | 47 tramos sin viento | CORREGIDO |
+| A4 | Throttler propio devolvía `rate_limited` ⇒ cadena mentía `not-covered` | Estaciones mapeadas «sin cobertura» | CORREGIDO (espera) |
+| A5 | Tests AEMET sin `withKey` (no llegaban al cliente HTTP) | 2 tests fallaban por fixture, no por producto | CORREGIDO por el capitán |
 
 ---
 
@@ -104,20 +111,26 @@ El revisor **no es el implementador** y re-ejecutó todos los gates por su cuent
 
 ---
 
-## 7. Estado y pendiente de autorización
+## 7. Estado y autorización
 
-**MILESTONE: PARTIAL** (revisión independiente PASS).
+**MILESTONE: PASS** — revisión independiente PASS (t9) y **AEMET operativo** con clave autorizada
+por el responsable el 2026-11-17.
 
-- **No hay merge ni despliegue.** La rama está en un worktree, con commit local.
-- Un `PASS` de revisión **no autoriza** el merge (ENGINE-01 §4, ENGINE-02 §6).
+- **Mergea autorizado por el usuario** (2026-11-17: «revisada puedes mergear cuando añadas la key»).
+- El merge se ejecuta **tras** verificar con la clave real (23/23, exit 0), como se acordó.
 
-### Para pasar de PARTIAL a PASS hacen falta
+### Lo que sigue fuera del hito (declarado)
 
-1. Que el responsable autorice al menos una credencial de pronóstico:
-   `AEMET_API_KEY`, `METEOFRANCE_API_KEY` u `OPEN_METEO_API_KEY` (§6 del informe).
-2. Acuerdo escrito con operadores para condiciones operativas (única vía legal).
+1. Pronóstico en **FR/PT/AD**: falta `METEOFRANCE_API_KEY` u `OPEN_METEO_API_KEY`.
+2. Condiciones operativas: acuerdo escrito con operadores (única vía legal).
 3. Follow-ups no bloqueantes: `SIN_REGION` en DTO público, `coverage.byCountry`, 101
    `sizeUnverified`, contorno municipal ES/FR.
+
+### Seguridad de la credencial
+
+La clave AEMET se transmitió **por chat**, por lo que debe considerarse expuesta. Vive sólo en
+`process.env.AEMET_API_KEY` (0 apariciones en el repo, verificado en 1136 ficheros) y **caduca el
+2027-02-25**. **Recomendación: rotarla.**
 
 ### Gate determinista ENGINE-04
 

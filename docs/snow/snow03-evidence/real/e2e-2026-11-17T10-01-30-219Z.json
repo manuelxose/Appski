@@ -108,7 +108,7 @@
       "name": "F2: avisos REALES servidos",
       "ok": true,
       "detail": {
-        "n": 75
+        "n": 40
       }
     },
     {
@@ -149,7 +149,7 @@
       "name": "F2: cada aviso trae enlace utilizable (obligación «must include a link»)",
       "ok": true,
       "detail": {
-        "sample": "https://meteoalarm.org?geocode=EMMA_ID:ES846"
+        "sample": "https://meteoalarm.org?geocode=EMMA_ID:ES841"
       }
     },
     {
@@ -185,15 +185,15 @@
       "name": "F2: antigüedad MEDIDA > 0 (no se recalcula desde la petición)",
       "ok": true,
       "detail": {
-        "freshness": 7045
+        "freshness": 562
       }
     },
     {
       "name": "F2: antigüedad coherente con la emisión real (±120 s)",
       "ok": true,
       "detail": {
-        "freshness": 7045,
-        "fromEmission": 7045
+        "freshness": 562,
+        "fromEmission": 563
       }
     },
     {
@@ -216,8 +216,8 @@
       "ok": true,
       "detail": {
         "levels": [
-          "yellow",
-          "orange"
+          "orange",
+          "yellow"
         ]
       }
     },
@@ -360,7 +360,7 @@
       "name": "F3: Open-Meteo NO aparece como fuente de pronóstico",
       "ok": true,
       "detail": {
-        "source": "copernicus-c3s"
+        "source": "aemet"
       }
     },
     {

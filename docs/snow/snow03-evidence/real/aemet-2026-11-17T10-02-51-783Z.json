@@ -1,0 +1,354 @@
+{
+  "note": "Verificación REAL end-to-end de AEMET OpenData (SNOW-03b t1). Sin dobles: adapter real contra opendata.aemet.es y el borde /v1/stations/:slug/forecast servido desde fuente. Las URLs se publican REDACTADAS (redactUrl) y se comprueba que la clave no aparece en ningún fichero.",
+  "generatedAt": "2026-11-17T10:05:38.687Z",
+  "adapter": "aemet",
+  "dataType": "forecast",
+  "endpoint": "prediccion/especifica/municipio/horaria/{id} (dos pasos: sobre → datos)",
+  "licenseRef": "05#aemet",
+  "attribution": "Datos: AEMET",
+  "mapping": {
+    "source": {
+      "id": "ine-relacion-municipios-codeforspain",
+      "url": "https://raw.githubusercontent.com/codeforspain/ds-organizacion-administrativa/master/data/municipios.json",
+      "sha256": "6a720ef4acd4b5d73d3bb6cf914fb2b26cb250fb6050432954c4cbe31fed4347",
+      "rows": 8132
+    },
+    "coverage": {
+      "mapped": 48,
+      "notCovered": 9
+    },
+    "unresolved": [],
+    "notCovered": [
+      {
+        "slug": "estacio-desqui-de-formiguera",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "puigmal-2900",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "abodi-salazar",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "fuentes-de-invierno",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "la-covatilla",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "estacion-de-esqui-de-la-covatilla",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "aramon-javalambre",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "estacion-de-esqui-de-fondo-llanos-del-hospital",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      },
+      {
+        "slug": "grandvalira",
+        "reason": "sin municipio único verificable / fuera de cobertura AEMET"
+      }
+    ]
+  },
+  "rateLimit": {
+    "selfSpacingMs": 20000,
+    "maxRateWaitMs": 180000,
+    "probes": 2
+  },
+  "probes": [
+    {
+      "slug": "baqueira-beret",
+      "municipio": "25025"
+    },
+    {
+      "slug": "formigal-panticosa",
+      "municipio": "22204"
+    }
+  ],
+  "rawFiles": [
+    {
+      "file": "docs\\snow\\snow03-evidence\\real\\aemet-raw\\baqueira-beret-25025.json",
+      "sha256": "2a569a64aaa372d3e93f897284248b4f47dc7a4adbcaf3a3dc95eeba2d9a5483"
+    },
+    {
+      "file": "docs\\snow\\snow03-evidence\\real\\aemet-raw\\formigal-panticosa-22204.json",
+      "sha256": "12dab4f94d4ff81b757075e11394e118b03ced35335df6b9b7477bab7ddeac63"
+    }
+  ],
+  "results": [
+    {
+      "name": "M1: el mapa estación→municipio cubre las dos estaciones sondeadas",
+      "ok": true,
+      "detail": {
+        "probes": [
+          {
+            "slug": "baqueira-beret",
+            "code": "25025"
+          },
+          {
+            "slug": "formigal-panticosa",
+            "code": "22204"
+          }
+        ],
+        "coverage": {
+          "mapped": 48,
+          "notCovered": 9
+        },
+        "source": "ine-relacion-municipios-codeforspain",
+        "sourceSha256": "6a720ef4acd4b5d73d3bb6cf914fb2b26cb250fb6050432954c4cbe31fed4347"
+      }
+    },
+    {
+      "name": "M2: AEMET está autorizado con atribución obligatoria",
+      "ok": true,
+      "detail": {
+        "registryRef": "05#aemet",
+        "licenseId": "aemet-nota-legal",
+        "attribution": "Datos: AEMET"
+      }
+    },
+    {
+      "name": "A1·baqueira-beret: el adapter REAL devuelve datos auténticos (25025)",
+      "ok": true,
+      "detail": {
+        "status": "ok",
+        "points": 48,
+        "http": [
+          429,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "A2·baqueira-beret: el bundle trae magnitudes reales y 24+ tramos horarios",
+      "ok": true,
+      "detail": {
+        "points": 48,
+        "withTemp": 47,
+        "withWind": 47,
+        "withGust": 47,
+        "withPrecip": 48,
+        "withProbSnow": 0
+      }
+    },
+    {
+      "name": "A2b·baqueira-beret: los tramos no se pierden por conversión de hora",
+      "ok": true,
+      "detail": {
+        "firstValidAt": "2026-11-17T06:00:00.000Z",
+        "lastValidAt": "2026-11-19T05:00:00.000Z",
+        "distinctHours": 24
+      }
+    },
+    {
+      "name": "A3·baqueira-beret: observedAt = hora de emisión REAL de AEMET (no el instante de la petición)",
+      "ok": true,
+      "detail": {
+        "observedAt": "2026-11-17T08:09:08.000Z",
+        "requestedAt": "2026-11-17T10:02:51.787Z",
+        "freshnessS": 6824
+      }
+    },
+    {
+      "name": "A4·baqueira-beret: procedencia con origen aemet, licencia y atribución «© AEMET»",
+      "ok": true,
+      "detail": {
+        "source": "aemet",
+        "attribution": "Datos: AEMET"
+      }
+    },
+    {
+      "name": "A5·baqueira-beret: snowLineM null (AEMET no publica cota de nieve en este producto)",
+      "ok": true,
+      "detail": {
+        "nonNull": 0
+      }
+    },
+    {
+      "name": "A6·baqueira-beret: ningún centinela -99 se sirve como valor",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "name": "A1·formigal-panticosa: el adapter REAL devuelve datos auténticos (22204)",
+      "ok": true,
+      "detail": {
+        "status": "ok",
+        "points": 48,
+        "http": [
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "A2·formigal-panticosa: el bundle trae magnitudes reales y 24+ tramos horarios",
+      "ok": true,
+      "detail": {
+        "points": 48,
+        "withTemp": 47,
+        "withWind": 47,
+        "withGust": 47,
+        "withPrecip": 48,
+        "withProbSnow": 0
+      }
+    },
+    {
+      "name": "A2b·formigal-panticosa: los tramos no se pierden por conversión de hora",
+      "ok": true,
+      "detail": {
+        "firstValidAt": "2026-11-17T06:00:00.000Z",
+        "lastValidAt": "2026-11-19T05:00:00.000Z",
+        "distinctHours": 24
+      }
+    },
+    {
+      "name": "A3·formigal-panticosa: observedAt = hora de emisión REAL de AEMET (no el instante de la petición)",
+      "ok": true,
+      "detail": {
+        "observedAt": "2026-11-17T08:09:08.000Z",
+        "requestedAt": "2026-11-17T10:04:12.154Z",
+        "freshnessS": 6904
+      }
+    },
+    {
+      "name": "A4·formigal-panticosa: procedencia con origen aemet, licencia y atribución «© AEMET»",
+      "ok": true,
+      "detail": {
+        "source": "aemet",
+        "attribution": "Datos: AEMET"
+      }
+    },
+    {
+      "name": "A5·formigal-panticosa: snowLineM null (AEMET no publica cota de nieve en este producto)",
+      "ok": true,
+      "detail": {
+        "nonNull": 0
+      }
+    },
+    {
+      "name": "A6·formigal-panticosa: ningún centinela -99 se sirve como valor",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "name": "B1: /v1/config responde 200 con el token de administración",
+      "ok": true,
+      "detail": {
+        "http": 200,
+        "note": null
+      }
+    },
+    {
+      "name": "B1b: /v1/config declara AEMET con effect y configured (no null)",
+      "ok": true,
+      "detail": {
+        "effect": "serves",
+        "configured": true,
+        "rateLimit": {
+          "requestsPerMinute": 30,
+          "maxConcurrent": 2,
+          "verified": false
+        }
+      }
+    },
+    {
+      "name": "B2·baqueira-beret: /forecast responde 200 con dato",
+      "ok": true,
+      "detail": {
+        "http": 200,
+        "status": "ok",
+        "reason": null
+      }
+    },
+    {
+      "name": "B3·baqueira-beret: /forecast sirve datos AUTÉNTICOS de AEMET con su atribución",
+      "ok": true,
+      "detail": {
+        "source": "aemet",
+        "attribution": "Datos: AEMET",
+        "licenseStatus": "allowed-with-attribution",
+        "provStatus": "live",
+        "observedAt": "2026-11-17T08:09:08.000Z",
+        "points": 48,
+        "firstPoint": {
+          "validAt": "2026-11-17T06:00:00.000Z",
+          "tempC": null,
+          "windKmh": null,
+          "gustKmh": null,
+          "precipMm": 0.1,
+          "snowLineM": null,
+          "condition": "Intervalos nubosos con lluvia escasa",
+          "probSnowPct": null
+        }
+      }
+    },
+    {
+      "name": "B2·formigal-panticosa: /forecast responde 200 con dato",
+      "ok": true,
+      "detail": {
+        "http": 200,
+        "status": "ok",
+        "reason": null
+      }
+    },
+    {
+      "name": "B3·formigal-panticosa: /forecast sirve datos AUTÉNTICOS de AEMET con su atribución",
+      "ok": true,
+      "detail": {
+        "source": "aemet",
+        "attribution": "Datos: AEMET",
+        "licenseStatus": "allowed-with-attribution",
+        "provStatus": "live",
+        "observedAt": "2026-11-17T08:09:08.000Z",
+        "points": 48,
+        "firstPoint": {
+          "validAt": "2026-11-17T06:00:00.000Z",
+          "tempC": null,
+          "windKmh": null,
+          "gustKmh": null,
+          "precipMm": 0,
+          "snowLineM": null,
+          "condition": "Niebla ",
+          "probSnowPct": null
+        }
+      }
+    },
+    {
+      "name": "S1: la clave NO aparece en ninguna respuesta ni evidencia guardada",
+      "ok": true,
+      "detail": {
+        "leaks": []
+      }
+    }
+  ],
+  "summary": {
+    "checks": 23,
+    "passed": 23,
+    "failed": 0,
+    "probes": [
+      {
+        "slug": "baqueira-beret",
+        "municipio": "25025",
+        "status": "ok",
+        "ok": true,
+        "points": 48
+      },
+      {
+        "slug": "formigal-panticosa",
+        "municipio": "22204",
+        "status": "ok",
+        "ok": true,
+        "points": 48
+      }
+    ]
+  }
+}

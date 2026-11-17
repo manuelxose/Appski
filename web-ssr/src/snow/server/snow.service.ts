@@ -73,12 +73,20 @@ const ENV_GATED: ReadonlyArray<{ id: ProviderId; env: readonly string[] }> = [
   { id: 'protomaps', env: ['PROTOMAPS_BASE_URL'] },
 ];
 
+/**
+ * Proveedores con integración CABLEADA de verdad (SNOW-03b). Con credencial
+ * sirven datos; el resto de `ENV_GATED` sigue `not-wired-in-v1`.
+ */
+const WIRED_PROVIDERS: ReadonlySet<ProviderId> = new Set<ProviderId>(['aemet']);
+
 /** Tipos de dato cuyo único proveedor es externo: sin credencial degradan. */
 const LIMITATIONS: ReadonlyArray<{ dataType: SnowDataType; reason: NoDataReason; detail: string }> = [
   {
     dataType: 'forecast',
     reason: 'not-covered',
-    detail: 'sin AEMET_API_KEY/METEOFRANCE_API_KEY/C3S_API_KEY y sin integración cableada: /forecast responde not_configured→no_data',
+    detail:
+      'con AEMET_API_KEY y municipio declarado: /forecast sirve el pronóstico horario REAL de AEMET ' +
+      '(observado = hora `elaborado`); sin clave sigue not_configured→no_data. Meteo-France/C3S siguen sin cablear',
   },
   {
     dataType: 'avalanche',
@@ -463,7 +471,16 @@ export class SnowService {
           missingEnv: cfg.missingEnv,
           requiredEnv: env,
           provides: providesFor(id),
-          effect: cfg.configured ? 'not-wired-in-v1' : 'not-configured',
+          // SNOW-03b: `aemet` ya está CABLEADO (adapter real de dos pasos). Con
+          // clave sirve pronóstico; sin clave el adapter NO toca la red y
+          // devuelve not_configured, así que el efecto es el de antes.
+          effect: WIRED_PROVIDERS.has(id)
+            ? cfg.configured
+              ? 'serves'
+              : 'not-configured'
+            : cfg.configured
+              ? 'not-wired-in-v1'
+              : 'not-configured',
           rateLimit: rl,
           breaker: breakerByParty.get(id),
         });

@@ -49,10 +49,10 @@ Esto es la separación que el hito exige y que **no debe colapsarse en un solo n
 | Tipo de dato | Proveedor | Estado real | Evidencia |
 |---|---|---|---|
 | **Avisos** | **Meteoalarm** | **OPERATIVO** — 4/4 países | `verify-meteoalarm` exit 0 @ 23:42Z: ES 75 / FR 138 / PT 25 / AD `no_data` (feed vacío) |
+| **Pronóstico** | **AEMET** | **OPERATIVO** — 48 estaciones mapeadas de 57 | `verify-aemet` exit 0 · **23/23**: 48 tramos horarios reales, temp 47/48, viento 47/48, rachas 47/48, `elaborado` real |
 | Pronóstico | Open-Meteo | **BLOQUEADO (licencia)** | *free* sólo no comercial (`/en/terms`); sin `OPEN_METEO_API_KEY` |
-| Pronóstico | AEMET | **BLOQUEADO (credencial)** | Sin `AEMET_API_KEY`; sin clave responde 200 con cuerpo VACÍO |
 | Pronóstico | Météo-France | **BLOQUEADO (credencial)** | 401 `Missing Credentials` |
-| Pronóstico | Copernicus C3S | **NO APTO tiempo actual** | ERA5 histórico; API por bloques NetCDF |
+| Pronóstico | Copernicus C3S | **RETIRADO de la cadena** | ERA5 histórico: servía **atribución falsa** en `/forecast`. Eliminado + guarda `NOT_A_FORECAST_PROVIDER` |
 | Aludes | AEMET BPA | **DESCONOCIDO** | Canal PDF sin documentación de redistribución |
 | Aludes | Météo-France BPA/HTML | **NO DISPONIBLE** | Art. 2 prohíbe uso en entorno en red |
 | Estado operativo / espesores | Cualquier operador | **NO DISPONIBLE** | Sin autorización; la vía editorial no puede blanquear datos restringidos |
@@ -93,13 +93,13 @@ Esto es la separación que el hito exige y que **no debe colapsarse en un solo n
 ## 4. Veredicto de cobertura
 
 - **Datos meteorológicos de avisos:** ✅ AUTÉNTICOS y servidos con atribución (Meteoalarm, CC BY 4.0 equivalente).
-- **Pronóstico:** ❌ **BLOQUEADO POR LICENCIA Y CREDENCIALES** — no hay fuente comercialmente utilizable activa.
+- **Pronóstico:** ✅ **OPERATIVO con AEMET** (48 estaciones mapeadas) — con clave autorizada. Sin clave degrada a `not_configured` honesto.
 - **Condiciones operativas (pistas/remontes/espesores):** ❌ **NO DISPONIBLE** por ausencia de autorización.
 - **Catálogo propio:** ✅ generado e **integrado**: 587 registros, **588 servidos** por la API.
 
-**Cobertura real del producto hoy:** 1 de 4 países con datos completos por tipo sería una exageración.
-Lo exacto es: **avisos oficiales operativos en ES/FR/PT; AD vacío por su propio feed; pronóstico y
-estado operativo sin fuente autorizada.**
+**Cobertura real del producto hoy:** **avisos oficiales** operativos en ES/FR/PT (AD vacío por su
+propio feed) y **pronóstico AEMET** en las 48 estaciones mapeadas. El estado operativo sigue sin
+fuente autorizada, y el pronóstico de FR/PT/AD no está cubierto.
 
 ---
 
@@ -107,13 +107,16 @@ estado operativo sin fuente autorizada.**
 
 | Acción | Efecto sobre cobertura |
 |---|---|
-| Autorizar `AEMET_API_KEY` | Habilitaría pronóstico y avisos CAP de AEMET en ES |
+| ~~Autorizar `AEMET_API_KEY`~~ | ✅ **HECHO (2026-11-17)** — pronóstico real en 48 estaciones ES |
 | Autorizar `METEOFRANCE_API_KEY` | Habilitaría previsión/vigilancia de Météo-France en FR |
 | Suscribir Open-Meteo (`OPEN_METEO_API_KEY`) | Pronóstico comercial en toda la zona |
 | Acuerdo escrito con operadores | Única vía para remontes/pistas/espesores |
 
-Sin ninguna de estas, el resultado honesto es **PARTIAL/BLOCKED en pronóstico**, con avisos
-operativos y catálogo propio.
+Con `AEMET_API_KEY` autorizada, el pronóstico está operativo en ES. Sin `METEOFRANCE_API_KEY` ni
+Open-Meteo, **FR/PT/AD siguen sin pronóstico**, y el estado operativo sigue sin fuente autorizada.
+
+> **La clave AEMET vive sólo en el entorno** (`AEMET_API_KEY`), nunca en el repo. Verificado por
+> escaneo: 0 apariciones en 1136 ficheros. Caducidad de la clave: **2027-02-25**.
 
 ---
 

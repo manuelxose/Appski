@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T23:21:45.978Z",
+  "generatedAt": "2026-11-17T10:06:33.718Z",
   "build": {
     "script": "scripts/snow03/build-station-catalog.mjs",
     "mode": "cache-only",

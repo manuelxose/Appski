@@ -1,5 +1,6 @@
 import type { ProviderAdapter, ProviderId } from '../contracts/provider-contracts';
 import type { SnowReportRepository, StationRepository } from '../store/repository';
+import { aemetAdapter } from './aemet.adapter';
 import { authorizationFor } from './authorizations';
 import { BLOCKED_PROVIDER_IDS, blockedAdapter } from './blocked-providers';
 import { EditorialReportAdapter } from './editorial-report.adapter';
@@ -24,7 +25,10 @@ export function createAdapters(deps: AdapterDeps): AdapterRegistry {
   const registry: Partial<Record<ProviderId, ProviderAdapter>> = {
     'editorial-stations': new EditorialStationsAdapter(deps.stations),
     'editorial-report': new EditorialReportAdapter(deps.reports),
-    aemet: envGatedAdapter('aemet', ['AEMET_API_KEY'], ['forecast', 'weather-alert'], authorizationFor('aemet')),
+    // AEMET (SNOW-03b): adapter REAL de dos pasos (sobre + dato), ISO-8859-15 con
+    // BOM y 429 con cuerpo HTML. Sin `AEMET_API_KEY` no toca la red y devuelve
+    // `not_configured`, así que SNOW-02 sigue degradando igual que antes.
+    aemet: aemetAdapter(authorizationFor('aemet')),
     'aemet-bpa': envGatedAdapter('aemet-bpa', ['AEMET_API_KEY'], ['avalanche'], authorizationFor('aemet-bpa')),
     meteofrance: envGatedAdapter('meteofrance', ['METEOFRANCE_API_KEY'], ['forecast', 'weather-alert'], authorizationFor('meteofrance')),
     'copernicus-c3s': envGatedAdapter('copernicus-c3s', ['C3S_API_KEY'], ['forecast'], authorizationFor('copernicus-c3s')),

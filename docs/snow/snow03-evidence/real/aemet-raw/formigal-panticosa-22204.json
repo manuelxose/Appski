@@ -1,0 +1,90 @@
+{
+  "note": "Respuesta AUTÉNTICA de AEMET OpenData (adapter real). Urls redactadas.",
+  "generatedAt": "2026-11-17T10:04:32.308Z",
+  "stationSlug": "formigal-panticosa",
+  "municipio": "22204",
+  "requestedAt": "2026-11-17T10:04:12.154Z",
+  "attempts": [
+    {
+      "status": "ok",
+      "retryAfterMs": null
+    }
+  ],
+  "waitedMs": 0,
+  "http": [
+    {
+      "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/22204?api_key=REDACTED",
+      "httpStatus": 200,
+      "contentType": "application/json;charset=ISO-8859-15",
+      "charset": "iso-8859-15",
+      "bytes": 175,
+      "sha256": "afe378290b8b42f018f03603d2eb5c898ac3ea46832e812340c0d163ed069b3c",
+      "elapsedMs": 103
+    },
+    {
+      "url": "https://opendata.aemet.es/opendata/sh/2b1d76db",
+      "httpStatus": 200,
+      "contentType": "text/plain;charset=ISO-8859-15",
+      "charset": "iso-8859-15",
+      "bytes": 29868,
+      "sha256": "203eaf9e2fabda9432466c0b38d8879bb9c41c539dc4726ff8673360bd6eb85d",
+      "elapsedMs": 136
+    }
+  ],
+  "result": {
+    "status": "ok",
+    "reason": null,
+    "message": null,
+    "retryAfterMs": null,
+    "provenance": {
+      "source": "aemet",
+      "observedAt": "2026-11-17T08:09:08.000Z",
+      "updatedAt": "2026-11-17T08:09:08.000Z",
+      "status": "live",
+      "licenseStatus": "allowed-with-attribution",
+      "freshness": 6904,
+      "authorization": {
+        "registryRef": "05#aemet",
+        "licenseId": "aemet-nota-legal",
+        "commercialUse": true,
+        "storageAllowed": true,
+        "attributionRequired": true
+      },
+      "attribution": "Datos: AEMET"
+    },
+    "points": 48,
+    "horizonHours": 47,
+    "sample": [
+      {
+        "validAt": "2026-11-17T06:00:00.000Z",
+        "tempC": null,
+        "windKmh": null,
+        "gustKmh": null,
+        "precipMm": 0,
+        "snowLineM": null,
+        "condition": "Niebla ",
+        "probSnowPct": null
+      },
+      {
+        "validAt": "2026-11-17T07:00:00.000Z",
+        "tempC": 8,
+        "windKmh": 6,
+        "gustKmh": 20,
+        "precipMm": 0.1,
+        "snowLineM": null,
+        "condition": "Cubierto con lluvia escasa",
+        "probSnowPct": null
+      },
+      {
+        "validAt": "2026-11-17T08:00:00.000Z",
+        "tempC": 8,
+        "windKmh": 5,
+        "gustKmh": 18,
+        "precipMm": 0,
+        "snowLineM": null,
+        "condition": "Cubierto",
+        "probSnowPct": null
+      }
+    ]
+  }
+}

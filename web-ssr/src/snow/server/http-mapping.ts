@@ -41,7 +41,22 @@ export function resultToHttp<T>(r: ProviderResult<T>): HttpOutcome {
     case 'blocked':
       return { status: 200, body: { status: 'blocked', reason: 'license-prohibits' as NoDataReason, provenance: toProvenanceDto(r.provenance) } };
     case 'rate_limited':
-      return { status: 200, body: { status: 'no_data', reason: 'source-silent' as NoDataReason, provenance: toProvenanceDto(r.provenance) } };
+      // Estado PROPIO, no un `no_data` cualquiera: el cliente debe poder
+      // distinguir «vuelve en N ms» de «no hay cobertura». Antes se aplastaba a
+      // `no_data/source-silent`, que es honesto pero pierde la cuota; y el
+      // orquestador podía reducirlo a `not-covered`, que era FALSO (una estación
+      // mapeada tiene cobertura aunque estemos limitados). Se sirve 200 porque
+      // no es un error de transporte, y `retryAfterMs` viaja para que el cliente
+      // pueda reintentar en el momento correcto.
+      return {
+        status: 200,
+        body: {
+          status: 'rate_limited',
+          reason: 'source-silent' as NoDataReason,
+          retryAfterMs: r.retryAfterMs,
+          provenance: toProvenanceDto(r.provenance),
+        },
+      };
     case 'error':
       return { status: 500, body: { error: 'internal' } };
   }

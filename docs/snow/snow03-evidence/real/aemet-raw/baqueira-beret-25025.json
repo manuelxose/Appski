@@ -1,0 +1,103 @@
+{
+  "note": "Respuesta AUTÉNTICA de AEMET OpenData (adapter real). Urls redactadas.",
+  "generatedAt": "2026-11-17T10:04:12.150Z",
+  "stationSlug": "baqueira-beret",
+  "municipio": "25025",
+  "requestedAt": "2026-11-17T10:02:51.787Z",
+  "attempts": [
+    {
+      "status": "rate_limited",
+      "retryAfterMs": 60000
+    },
+    {
+      "status": "ok",
+      "retryAfterMs": null
+    }
+  ],
+  "waitedMs": 60000,
+  "http": [
+    {
+      "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/25025?api_key=REDACTED",
+      "httpStatus": 429,
+      "contentType": "text/plain; charset=UTF-8",
+      "bytes": 127,
+      "sha256": "bd66e9822a4b0c2797cb674b6c937f631c654ee70de9c7b56b5de2623a66f835",
+      "elapsedMs": 161,
+      "note": "respuesta de error (cuerpo no se publica)"
+    },
+    {
+      "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/25025?api_key=REDACTED",
+      "httpStatus": 200,
+      "contentType": "application/json;charset=ISO-8859-15",
+      "charset": "iso-8859-15",
+      "bytes": 175,
+      "sha256": "6128cf06a8193eb9c6304f2c36abffc0bfb34201cd1064a230bd588ccd2952da",
+      "elapsedMs": 99
+    },
+    {
+      "url": "https://opendata.aemet.es/opendata/sh/a41e4733",
+      "httpStatus": 200,
+      "contentType": "text/plain;charset=ISO-8859-15",
+      "charset": "iso-8859-15",
+      "bytes": 29916,
+      "sha256": "e195c475e18a702193a6ac7e33d9bd99c4a0f71f6818696fa183fd92aa416922",
+      "elapsedMs": 132
+    }
+  ],
+  "result": {
+    "status": "ok",
+    "reason": null,
+    "message": null,
+    "retryAfterMs": null,
+    "provenance": {
+      "source": "aemet",
+      "observedAt": "2026-11-17T08:09:08.000Z",
+      "updatedAt": "2026-11-17T08:09:08.000Z",
+      "status": "live",
+      "licenseStatus": "allowed-with-attribution",
+      "freshness": 6824,
+      "authorization": {
+        "registryRef": "05#aemet",
+        "licenseId": "aemet-nota-legal",
+        "commercialUse": true,
+        "storageAllowed": true,
+        "attributionRequired": true
+      },
+      "attribution": "Datos: AEMET"
+    },
+    "points": 48,
+    "horizonHours": 47,
+    "sample": [
+      {
+        "validAt": "2026-11-17T06:00:00.000Z",
+        "tempC": null,
+        "windKmh": null,
+        "gustKmh": null,
+        "precipMm": 0.1,
+        "snowLineM": null,
+        "condition": "Intervalos nubosos con lluvia escasa",
+        "probSnowPct": null
+      },
+      {
+        "validAt": "2026-11-17T07:00:00.000Z",
+        "tempC": 9,
+        "windKmh": 5,
+        "gustKmh": 15,
+        "precipMm": 0.1,
+        "snowLineM": null,
+        "condition": "Muy nuboso con lluvia escasa",
+        "probSnowPct": null
+      },
+      {
+        "validAt": "2026-11-17T08:00:00.000Z",
+        "tempC": 10,
+        "windKmh": 2,
+        "gustKmh": 9,
+        "precipMm": 0.1,
+        "snowLineM": null,
+        "condition": "Cubierto con lluvia escasa",
+        "probSnowPct": null
+      }
+    ]
+  }
+}

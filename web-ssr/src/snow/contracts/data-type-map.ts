@@ -50,14 +50,48 @@ export interface ForecastPoint {
   readonly validAt: string;
   readonly tempC: number | null;
   readonly windKmh: number | null;
+  /** Racha máxima del tramo. AEMET la publica; Open-Meteo no ⇒ `null`. */
+  readonly gustKmh?: number | null;
   readonly precipMm: number | null;
   readonly snowLineM: number | null;
   readonly condition: string | null;
+  /**
+   * Probabilidad de nieve del tramo HORARIO en % (0-100). Open-Meteo no la
+   * publica ⇒ se omite o `null`.
+   *
+   * OJO (defecto 4 de la re-verificación real): AEMET publica `probNieve` por
+   * DÍA (`periodo: "1901"`), NO por hora. Por eso este campo queda `null` con
+   * AEMET y el valor diario se sirve en `ForecastBundle.daily`. No se reparte
+   * entre horas: eso inventaría precisión. `nieve` de AEMET tampoco se mapea
+   * aquí: el servicio lo documenta como ESPESOR en el suelo (cm), no como
+   * precipitación del tramo.
+   *
+   * Añadido aditivo en SNOW-03b: opcional para no romper a los consumidores.
+   */
+  readonly probSnowPct?: number | null;
 }
 
 export interface ForecastBundle {
   readonly points: readonly ForecastPoint[];
   readonly horizonHours: number;
+  /**
+   * Valores que el proveedor publica por DÍA y **no** por hora (SNOW-03b,
+   * defecto 4 de la re-verificación real). AEMET publica `probNieve` con
+   * `periodo: "1901"` («todo el día»): no es de una hora concreta y no puede
+   * repartirse entre las horas sin afirmar una precisión que la fuente no da.
+   * Se expone aquí, agregado, en vez de dejarlo en un `null` silencioso.
+   *
+   * Opcional y aditivo: los proveedores que publican todo por hora la omiten.
+   */
+  readonly daily?: readonly ForecastDailyAggregate[];
+}
+
+/** Agregado diario publicado por la fuente (ver `ForecastBundle.daily`). */
+export interface ForecastDailyAggregate {
+  /** Día local del proveedor, `YYYY-MM-DD`. */
+  readonly day: string;
+  /** Probabilidad de nieve del día en % (0-100), o `null` si no la publica. */
+  readonly snowProbabilityPct: number | null;
 }
 
 export interface WeatherAlertItem {

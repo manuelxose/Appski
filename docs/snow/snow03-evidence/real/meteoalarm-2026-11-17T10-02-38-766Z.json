@@ -1,6 +1,6 @@
 {
   "note": "Verificación REAL end-to-end del adapter de MeteoAlarm contra los feeds auténticos. No hay dobles ni datos sintéticos: sha256 del cuerpo recibido en cada caso. Incluye conformidad legal (t8): disclaimer LITERAL + sourceUrl + atribución por texto.",
-  "generatedAt": "2026-11-17T00:07:46.672Z",
+  "generatedAt": "2026-11-17T10:02:40.035Z",
   "adapter": "meteoalarm",
   "dataType": "weather-alert",
   "licenseRef": "06#meteoalarm-rights-element",
@@ -10,20 +10,20 @@
     {
       "country": "ES",
       "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-spain",
-      "requestedAt": "2026-11-17T00:07:44.416Z",
+      "requestedAt": "2026-11-17T10:02:38.769Z",
       "raw": {
         "httpStatus": 200,
         "contentType": "application/atom+xml; charset=utf-8",
-        "bytes": 126009,
-        "sha256": "061563d1485b2c9615f6e364b00826018e3410d6764c7fc0a830fc9b1906cbb3"
+        "bytes": 119759,
+        "sha256": "b2ea7480d4f875e28a0eeadc421e5479d28ae8f6aaa80102f369a6dc071d701b"
       },
       "result": {
         "status": "ok",
         "reason": null,
         "message": null,
-        "alertsServed": 75,
-        "entriesParsed": 80,
-        "alertsUsable": 80,
+        "alertsServed": 40,
+        "entriesParsed": 76,
+        "alertsUsable": 76,
         "licenseStatus": "allowed-with-attribution",
         "attribution": "AEMET vía EUMETNET – MeteoAlarm"
       },
@@ -41,20 +41,20 @@
     {
       "country": "FR",
       "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-france",
-      "requestedAt": "2026-11-17T00:07:45.103Z",
+      "requestedAt": "2026-11-17T10:02:39.202Z",
       "raw": {
         "httpStatus": 200,
         "contentType": "application/atom+xml; charset=utf-8",
-        "bytes": 236853,
-        "sha256": "1e557423c6cc2e1c1684dddba32989f795f0a37d5b0fcca9162100726279c508"
+        "bytes": 359300,
+        "sha256": "4ff9d4dcc085b71f3dc4b0189e39a600d0e8cd704d1e78b26c373473831bd684"
       },
       "result": {
         "status": "ok",
         "reason": null,
         "message": null,
-        "alertsServed": 138,
-        "entriesParsed": 156,
-        "alertsUsable": 156,
+        "alertsServed": 218,
+        "entriesParsed": 236,
+        "alertsUsable": 236,
         "licenseStatus": "allowed-with-attribution",
         "attribution": "Météo-France vía EUMETNET – MeteoAlarm"
       },
@@ -72,20 +72,20 @@
     {
       "country": "PT",
       "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-portugal",
-      "requestedAt": "2026-11-17T00:07:46.521Z",
+      "requestedAt": "2026-11-17T10:02:39.845Z",
       "raw": {
         "httpStatus": 200,
         "contentType": "application/atom+xml; charset=utf-8",
-        "bytes": 39009,
-        "sha256": "7b0faaa04d46d89e0ee8a4114f5829b7ead2de5140d5eeb9d3a87634c2846906"
+        "bytes": 43563,
+        "sha256": "82149666019ac17ada9025a71a1d39f218ec10d32063425f25de988099c509da"
       },
       "result": {
         "status": "ok",
         "reason": null,
         "message": null,
-        "alertsServed": 25,
-        "entriesParsed": 25,
-        "alertsUsable": 25,
+        "alertsServed": 23,
+        "entriesParsed": 28,
+        "alertsUsable": 28,
         "licenseStatus": "allowed-with-attribution",
         "attribution": "IPMA vía EUMETNET – MeteoAlarm"
       },
@@ -103,12 +103,12 @@
     {
       "country": "AD",
       "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-andorra",
-      "requestedAt": "2026-11-17T00:07:46.605Z",
+      "requestedAt": "2026-11-17T10:02:39.977Z",
       "raw": {
         "httpStatus": 200,
         "contentType": "application/atom+xml; charset=utf-8",
         "bytes": 986,
-        "sha256": "1b3feb7cbff667d34be20d3373b386ff8d4d76ea0371f555fdbc654b11354b0a"
+        "sha256": "7c46887ed1ece7f3a24074622ff134b4522332ab6c64a681aeac86f40046994e"
       },
       "result": {
         "status": "no_data",
