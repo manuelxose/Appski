@@ -74,6 +74,17 @@ export interface ForecastCacheRepositoryV2 extends ForecastCacheRepository {
   isFresh(e: ForecastCacheEntry, at: Date): boolean;
   /** Entradas vigentes en `at` para la estación. */
   listFresh(stationSlug: string, at: Date): Promise<readonly ForecastCacheEntry[]>;
+  /**
+   * Entrada para la identidad completa (estación, fuente, punto consultado).
+   * `null` si no hay entrada o si la guardada corresponde a otras coordenadas.
+   * SNOW-03: un punto reubicado no puede reutilizar el pronóstico de otro punto.
+   */
+  getForPoint(
+    stationSlug: string,
+    source: ProviderId,
+    lat: number,
+    lng: number,
+  ): Promise<ForecastCacheEntry | null>;
 }
 
 // ---------------------------------------------------------------------------

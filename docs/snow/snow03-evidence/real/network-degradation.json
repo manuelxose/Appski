@@ -1,0 +1,115 @@
+{
+  "note": "Degradación con la red CAÍDA, probada contra el cliente HTTP de producción: conexión rechazada, DNS inexistente, timeout real y pipeline con reintentos. Evidencia normalizada.",
+  "kind": "snow03-network-degradation",
+  "results": [
+    {
+      "name": "N1: conexión rechazada ⇒ NO es `ok`",
+      "ok": true,
+      "detail": {
+        "status": "error"
+      }
+    },
+    {
+      "name": "N1: degrada a `error` retryable",
+      "ok": true,
+      "detail": {
+        "status": "error",
+        "retryable": true
+      }
+    },
+    {
+      "name": "N1: sin datos inventados (ni ceros)",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "N1: procedencia presente con motivo",
+      "ok": true,
+      "detail": {
+        "source": "meteoalarm",
+        "provenanceStatus": "degraded",
+        "message": "network error: fetch failed"
+      }
+    },
+    {
+      "name": "N1: el mensaje identifica un fallo de red (no una excepción cruda)",
+      "ok": true,
+      "detail": {
+        "message": "network error: fetch failed"
+      }
+    },
+    {
+      "name": "N2: DNS inexistente ⇒ error retryable, sin datos",
+      "ok": true,
+      "detail": {
+        "status": "error",
+        "retryable": true
+      }
+    },
+    {
+      "name": "N3: timeout real ⇒ error retryable con mensaje de timeout",
+      "ok": true,
+      "detail": {
+        "status": "error",
+        "message": "timeout after 700ms calling http://127.0.0.1:59130/feeds/x-spain"
+      }
+    },
+    {
+      "name": "N4: el pipeline reintenta un fallo de red (3 intentos)",
+      "ok": true,
+      "detail": {
+        "calls": 3
+      }
+    },
+    {
+      "name": "N4: el pipeline devuelve `error` tipado, sin excepción",
+      "ok": true,
+      "detail": {
+        "status": "error"
+      }
+    },
+    {
+      "name": "N4: las métricas cuentan los fallos reales",
+      "ok": true,
+      "detail": {
+        "attempts": 3,
+        "failures": 3
+      }
+    },
+    {
+      "name": "N5: Open-Meteo sin red ⇒ error retryable sin datos",
+      "ok": true,
+      "detail": {
+        "status": "error"
+      }
+    },
+    {
+      "name": "N6: el adapter NUNCA lanza (ningún escenario daría 500)",
+      "ok": true,
+      "detail": {
+        "outcomes": [
+          {
+            "threw": false,
+            "status": "error",
+            "hasProv": true
+          },
+          {
+            "threw": false,
+            "status": "error",
+            "hasProv": true
+          },
+          {
+            "threw": false,
+            "status": "error",
+            "hasProv": true
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  }
+}

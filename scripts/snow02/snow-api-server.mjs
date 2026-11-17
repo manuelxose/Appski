@@ -14,10 +14,21 @@
  * (obligatorio en el driver) y `SNOW_ADMIN_TOKEN` se leen del entorno.
  */
 import express from 'express';
-import { createSnowRouter } from '../../web-ssr/src/snow/server';
+import { createSnowRouter, awaitCatalogLoad } from '../../web-ssr/src/snow/server';
 
+const dataDir = process.env['SNOW_DATA_DIR'];
 const app = express();
-app.use('/api/snow', createSnowRouter(process.env['SNOW_DATA_DIR']));
+app.use('/api/snow', createSnowRouter(dataDir));
+
+// La carga del catálogo maestro es asíncrona y no debe bloquear el arranque; se declara
+// `SNOW_READY` cuando YA terminó, de modo que cualquier verificación que espere la señal
+// vea el almacén completo y no una foto intermedia.
+const state = dataDir === undefined ? null : await awaitCatalogLoad(dataDir, 60_000);
+if (state?.status === 'failed') {
+  process.stderr.write(`CATALOG_LOAD_FAILED ${JSON.stringify(state)}\n`);
+} else if (state !== null) {
+  process.stdout.write(`CATALOG_LOADED ${JSON.stringify(state.result ?? {})}\n`);
+}
 
 const port = Number(process.env['PORT'] ?? 0);
 const server = app.listen(port, '127.0.0.1', () => {

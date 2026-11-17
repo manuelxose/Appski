@@ -1,0 +1,177 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:01:19Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 613344822,
+  "lat": 42.6179676,
+  "lon": 1.4856274,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "exit",
+    "name": "la Coma",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 664085283,
+  "lat": 42.5338531,
+  "lon": 1.4700298,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "entry",
+    "name": "La Sierra",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2671550831,
+  "lat": 42.5301506,
+  "lon": 1.4741801,
+  "tags": {
+    "aerialway": "station",
+    "name": "Pla de la Cot I",
+    "name:ca": "Pla de la Cot I"
+  }
+},
+{
+  "type": "node",
+  "id": 6130433840,
+  "lat": 42.6315676,
+  "lon": 1.4818676,
+  "tags": {
+    "aerialway": "station",
+    "aerialway:summer:access": "both",
+    "name": "Telecabina Tristaina",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 11179138117,
+  "lat": 42.5302091,
+  "lon": 1.4742693,
+  "tags": {
+    "aerialway": "station",
+    "name": "Pla de la Cot II",
+    "name:ca": "Pla de la Cot II"
+  }
+},
+{
+  "type": "node",
+  "id": 11544800846,
+  "lat": 42.5369177,
+  "lon": 1.4909086,
+  "tags": {
+    "aerialway": "station",
+    "name": "Pedres Blanques II"
+  }
+},
+{
+  "type": "node",
+  "id": 11544800847,
+  "lat": 42.5369632,
+  "lon": 1.4901750,
+  "tags": {
+    "aerialway": "station",
+    "name": "Pedres Blanques II"
+  }
+},
+{
+  "type": "way",
+  "id": 966296095,
+  "center": {
+    "lat": 42.6308952,
+    "lon": 1.4833375
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "entry",
+    "building": "yes",
+    "name": "la Coma",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 966296097,
+  "center": {
+    "lat": 42.6179897,
+    "lon": 1.4856327
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "exit",
+    "building": "yes",
+    "name": "la Coma",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 966296098,
+  "center": {
+    "lat": 42.6180837,
+    "lon": 1.4865797
+  },
+  "tags": {
+    "aerialway": "station",
+    "aerialway:access": "exit",
+    "building": "yes",
+    "name": "la Basera",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1529164352,
+  "center": {
+    "lat": 42.6315575,
+    "lon": 1.4819213
+  },
+  "tags": {
+    "aerialway": "station",
+    "building": "yes",
+    "name": "Telecabina Tristaina",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1529164360,
+  "center": {
+    "lat": 42.6315219,
+    "lon": 1.5007024
+  },
+  "tags": {
+    "aerialway": "station",
+    "name": "Telecabina Tristaina",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1529164363,
+  "center": {
+    "lat": 42.6312315,
+    "lon": 1.5002031
+  },
+  "tags": {
+    "aerialway": "station",
+    "building": "yes",
+    "name": "la Basera",
+    "public_transport": "station"
+  }
+}
+
+  ]
+}

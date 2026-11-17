@@ -49,6 +49,31 @@ export const CACHE_POLICY: Readonly<Partial<Record<ProviderId, CachePolicyEntry>
     persistHistory: true,
     shareAlike: true,
   },
+  /**
+   * Open-Meteo (SNOW-03). TTL de 30 min porque el pronóstico horario se
+   * republica con frecuencia y el dato útil es la hora en curso, no el modelo
+   * crudo. `persistHistory:false`: se cachea el último resultado, no un
+   * histórico. `mustStoreUpdatedAt:true` para poder mostrar antigüedad.
+   *
+   * NOTA: la autorización de uso NO se declara aquí (vive en
+   * `providers/authorizations.ts` y depende de la cláusula verificada de Fase A).
+   * Esta entrada sólo fija CUÁNTO se retiene si el adapter llega a servir.
+   */
+  'open-meteo': {
+    ttlMs: 30 * 60_000,
+    persistHistory: false,
+    mustStoreUpdatedAt: true,
+  },
+  /**
+   * MeteoAlarm (SNOW-03). TTL de 10 min = REQUISITO LEGAL de los T&C
+   * ("latencia ≤10 min"): la caché no puede ser más vieja que eso o se
+   * incumpliría la condición de redistribución. No es una preferencia técnica.
+   */
+  meteoalarm: {
+    ttlMs: 10 * 60_000,
+    persistHistory: false,
+    mustStoreUpdatedAt: true,
+  },
   protomaps: {
     ttlMs: 0, // immutable por digest de versión, no TTL temporal
     persistHistory: true,

@@ -14,6 +14,9 @@ export const RATE_LIMITS: Readonly<Partial<Record<ProviderId, RateLimit>>> = {
   'ign-fr': { requestsPerMinute: 30, maxConcurrent: 2, verified: false, note: 'unverified' },
   osm: { requestsPerMinute: 10, maxConcurrent: 1, verified: false, note: 'unverified: Overpass/Nominatim tienen política propia; NO se usan en runtime' },
   protomaps: { requestsPerMinute: 600, maxConcurrent: 8, verified: true, note: 'autohospedado: el límite es el del bucket propio' },
+  // MeteoAlarm no publica cuota legible. La caché de 10 min (requisito T&C)
+  // mantiene la carga real muy por debajo de este valor conservador.
+  meteoalarm: { requestsPerMinute: 6, maxConcurrent: 1, verified: false, note: 'unverified: sin cuota publicada; la caché de 10 min acota las llamadas' },
 };
 
 /**

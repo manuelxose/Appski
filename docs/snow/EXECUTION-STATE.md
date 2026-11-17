@@ -1,17 +1,16 @@
-# EXECUTION-STATE — SNOW-02 (backend operativo, persistencia y APIs)
+# EXECUTION-STATE — SNOW-03 (proveedores reales, condiciones de esquí y licencias)
 
-**Última actualización:** 2026-11-16 · **Rama integrada:** `master` (`61d2a55`)
-**Estado global:** **PASS aceptado por decisión del usuario (2026-11-16)** — backend
-operativo verificado (etapas ENGINE-04 exit 0), revisión independiente PASS sobre
-`6ab6867`, **mergeado a `master`** con excepción explícita del usuario respecto al gate de
-entrega (§7). Re-revisión de los bytes posteriores a `6ab6867`: **PENDIENTE declarada**.
+**Última actualización:** 2026-11-17 · **Rama:** `feat/snow-03-real-providers`
+**Worktree:** `.snow03-worktree` · **Base:** `master` = `7908914c23ded34dd1740127aa5ffb9a7ce1b5f3`
+**Estado global:** **PARTIAL** — con revisión independiente **PASS** (t9). Ver §7.
 
-> **Nota de honestidad sobre el estado.** El 2026-11-16 el usuario indicó «no hace falta qa,
-> mergea todo como pass». El merge se ejecutó con esa autorización y **no** porque el gate
-> determinista hubiera devuelto `PASS`: los tres bloqueantes de §7 siguen siendo ciertos y
-> la re-revisión independiente de los bytes posteriores a `6ab6867` no se ha hecho. Lo
-> verificado sobre el código exacto de `master` tras el merge: `tsc` exit 0, suite de 15
-> ficheros en dos mitades exit 0 y `captain-http-verify` 68/68.
+> **Nota de honestidad.** El estado no es PASS porque el hito pide datos meteorológicos reales y
+> **el pronóstico está bloqueado por licencia y credenciales**, no por falta de trabajo. Lo que sí
+> está operativo y verificado: avisos oficiales de Meteoalarm, catálogo propio servido por la API y
+> pipeline resistente a fallos. Ninguna cobertura está estimada.
+>
+> *Estado previo (SNOW-02), conservado para trazabilidad:* backend operativo verificado y mergeado a
+> `master` el 2026-11-16 por decisión del usuario, con excepción declarada respecto al gate de entrega.
 
 ---
 
@@ -19,63 +18,61 @@ entrega (§7). Re-revisión de los bytes posteriores a `6ab6867`: **PENDIENTE de
 
 | Dato | Valor |
 |---|---|
-| Commit base | `9b503604f802abc4c373fee8b7ba36181e31e0df` (HEAD de `master`) |
-| Rama actual | `feat/snow-02-operational-backend` |
-| HEAD de la rama (pre-commit del hito) | `baec0c865e44e08590e4209eb56d87539b847821` |
-| Commits por delante de `master` (hito anterior) | 4 (`7277cc8` núcleo snow · `f033696` conexión SSR · `02b82e1` docs/REA · `baec0c8` gitignore) |
-| **Commits creados en SNOW-02** | **2** — `b7f6484` (implementación completa del hito) y `5159283` (evidencia HTTP post-commit) |
-| Árbol tras el commit | **limpio** (`git status --porcelain` vacío); `data/` y `.agent-teams/` ignorados por `.gitignore:65-66` |
-
-> **Sellado y re-verificado:** tras el commit se re-ejecutó el driver del capitán contra
-> el bundle reconstruido → `checks=68 passed=68 failed=0`. La evidencia cruda de esa
-> pasada quedó en `docs/snow/snow02-evidence/captain-http-verify.json` (commit `5159283`).
-> El commit es **local**: no hay push ni merge.
+| Commit base | `7908914c23ded34dd1740127aa5ffb9a7ce1b5f3` (`master`) |
+| Rama | `feat/snow-03-real-providers` |
+| Worktree registrado ENGINE-03 | `snow03-main` → `.snow03-worktree` (un escritor, verificado) |
+| `node_modules` | junction a la raíz del repo |
 
 ---
 
-## 2. Funciones DEMOSTRADAS (re-ejecutadas por el revisor independiente)
+## 2. Funciones DEMOSTRADAS (re-ejecutadas por el capitán y por el revisor independiente)
 
 | Función | Evidencia | Estado |
 |---|---|---|
-| Type-check de aplicación | `tsc -p web-ssr/tsconfig.app.json --noEmit` → **exit 0** | DEMOSTRADO |
-| Esquema SQL invariantes | `node scripts/snow/check-schema.mjs` → 8/8 «all invariants hold», exit 0 | DEMOSTRADO |
-| Build producción sin caché | `npx nx build web-ssr --configuration=production --skip-nx-cache` → exit 0 (62.5 s) | DEMOSTRADO |
-| Suite completa `snow/tests` | 123/123 pass, 0 fail, `LEAK_GUARD_OK`, exit 0 (TMP aislado) | DEMOSTRADO |
-| 15 endpoints v1 por HTTP (bundle real) | `integration-http.mjs` 60/60 · `captain-http-verify.mjs` 68/68 | DEMOSTRADO |
-| Persistencia tras SIGKILL (F1) | `persistence-restart.mjs` 18/18: `liftsOpen === 12`, atribución y ranking tras reinicio | DEMOSTRADO |
-| Matriz adversarial | `adversarial.mjs` 14/14 (404/400/413/null≠0/centinelas/draft/futuro) | DEMOSTRADO |
-| Seguridad admin | `security-http-verify.mjs` 51/51 · sonda propia del revisor `reviewer-security-bundle.mjs` 22/22 (auth 8×401, 400/413 sin stack, 429 con Retry-After, /config sin nombres de env, rechazos sin efecto) | DEMOSTRADO |
-| Contratos Angular ↔ backend | `api-client.test.mjs` 6/6 (cliente sin rutas inventadas ni rutas admin) | DEMOSTRADO |
-| Honestidad de datos | sin cifras inventadas, `null ≠ 0`, estados `no_data`/`not_configured`/`blocked`/`stale`, ningún mock como dato real en nieve | DEMOSTRADO |
+| Type-check | `tsc -p web-ssr/tsconfig.app.json --noEmit` → exit 0 | DEMOSTRADO |
+| Esquema SQL (SNOW-02 intacto) | `check-schema.mjs` → «all invariants hold», exit 0 | DEMOSTRADO |
+| Suite de nieve | `qa-unit.mjs` → exit 0, 27 ficheros | DEMOSTRADO |
+| E2E completo | `verify-e2e.mjs` → **56/56**, exit 0 | DEMOSTRADO |
+| Avisos reales de 4 países | `verify-meteoalarm.mjs` → **4/4**: ES 75 / FR 138 / PT 25 / AD `no_data` | DEMOSTRADO |
+| Cumplimiento legal Meteoalarm | disclaimer literal + `sourceUrl` + `link` por aviso + TTL 600 000 ms | DEMOSTRADO |
+| Degradación sin red | `verify-network-degradation.mjs` → **12/12** (ECONNREFUSED, DNS, timeout real) | DEMOSTRADO |
+| Recuperación tras fallo transitorio | proxy local 503→200, pipeline `hits=2` | DEMOSTRADO |
+| Persistencia tras SIGKILL | `liftsOpen=17` sobrevive, atribución editorial intacta | DEMOSTRADO |
+| Idempotencia del catálogo | run1 inserta 587, run2 `noop=true` | DEMOSTRADO |
+| Catálogo corrupto no tumba el borde | sandbox: `http=200`, sirve seed, warning registrado | DEMOSTRADO |
+| Antigüedad medida (no ≡0) | `observedAt` = emisión real (`cap:sent`), ±120 s | DEMOSTRADO |
 
 ---
 
-## 3. Funciones PENDIENTES (no demostradas / no conectadas)
+## 3. Funciones BLOQUEADAS / NO DEMOSTRADAS (declaradas, no maquilladas)
 
-| Pendiente | Motivo | Estado |
+| Pendiente | Motivo real | Estado |
 |---|---|---|
-| `home`, `planner`, `blog-list`, `blog-article`, `lodging-*`, `rental-marketplace`, `premium`, `shop-detail`, `account`, `admin` (resto) | Dominios fuera del alcance nieve v1; siguen con mock (R2/R4 de SNOW-02) | NO CONECTADO (declarado) |
-| Proveedores externos en vivo (AEMET/Météo-France/C3S/CLMS) | Sin credenciales; `forecast`/`avalanche`/`alerts` degradan a `not_configured`/`no_data` | UNVERIFIED en vivo |
-| Radar e histórico de webcam | Sin endpoint en v1 ⇒ `unavailable` explícito en el cliente | PENDIENTE |
-| Enlace portada → `/nieve` y 4 imágenes 404 de portada | Deuda previa del shell legacy | PENDIENTE |
-| Warnings de build (budget CSS, `leaflet` CommonJS) | No bloqueantes | PENDIENTE |
-| **Commit del trabajo SNOW-02** | `b7f6484` (implementación) + `5159283` (evidencia post-commit) + commits de QA | **HECHO por el capitán** — árbol limpio, evidencia HTTP re-verificada tras el commit (68/68) |
-| **Gate ENGINE-04** | `qa/qa-manifest.json` (9 etapas requeridas + `build-production` no requerida) y `qa/README.md` con los requisitos del gate medidos | **STAGES PASS / GATE FAIL — bloqueantes reales, ver §7** |
-| **Re-revisión tras los arreglos de QA** | La revisión independiente (t7) juzgó los bytes de `6ab6867`; después se modificaron `store-durability.test.ts`, `scripts/snow02/*` y el manifiesto | **PENDIENTE — bloquea el PASS del gate** |
-| Aislamiento de seguridad (lectura/secretos/red) | No medido (no es sandbox de lectura/red) | SECURITY PARTIAL |
+| **Pronóstico meteorológico** | Ninguna fuente comercialmente autorizada activa: AEMET y Météo-France requieren clave inexistente; Open-Meteo *free* prohíbe uso comercial | **BLOQUEADO POR LICENCIA Y CREDENCIALES** |
+| Condiciones operativas (remontes/pistas/espesores) | Ningún operador autoriza redistribución | **NO DISPONIBLE (legal)** |
+| Webcams | Sin permiso de embed | BLOQUEADO |
+| Copernicus C3S (ERA5) | API por bloques NetCDF; no sirve tiempo presente | NO APTO |
+| `coverage.byCountry` en `/v1/config` | `config()` es síncrono y el maestro se lee async | **NO MEDIDO** (0/0 declarado, no inventado) |
+| `region` = `"SIN_REGION"` en 585 filas | El contrato exige `string`; debería traducirse a `null` en el DTO público | Deuda declarada |
+| 101 registros `sizeUnverified` | Overpass `out bounds` falló 3/3 (saturación del entorno) | Declarado |
+| Frontera ES/FR | Se resuelve a favor de ES fuera de enclaves verificados; sin daño medido (FR=462) | Aproximación declarada |
+| Aislamiento de seguridad (lectura/red) | No es sandbox de lectura/red | **SECURITY PARTIAL** |
 
 ---
 
-## 4. Hallazgos cerrados (revisión t7)
+## 4. Hallazgos y defectos corregidos durante el hito
 
-| ID | Severidad | Estado | Evidencia |
+| ID | Defecto | Impacto | Estado |
 |---|---|---|---|
-| C1/B2 centinela `-99` aceptado | ALTA | **CORREGIDO** — 400 tipado, no persiste | `adversarial` #9, `integration-http`, sonda propia |
-| C3/B4 `stale` por antigüedad recién escrito | ALTA | **CORREGIDO** — `editorialFreshness(observedAt, capturedAt, now)` | `station-query.ts:257`, suite |
-| C5 visibilidad decidida por reloj | ALTA | **CORREGIDO** — `listPublished` filtra por `mood`, no por reloj | `parte-futuro.test.ts`, `adversarial` #11 |
-| C4/B1 `/config` filtraba nombres de env | MEDIA | **CORREGIDO** — `redactConfig()` en el borde | `security-hardening` C29a, sonda propia |
-| B3 `PUT` = reemplazo total | MEDIA | **POR DISEÑO** — upsert de documento completo, fail-closed | `parseStationUpsert` |
-| Observación: `observedAt` futuro etiquetado `stale` en directorio/ranking vs `live` en `/report` | BAJA | Documentado; no bloquea (visibilidad coherente) | informe §8 |
+| H1 | Nivel de Meteoalarm leído de `cap:event` (sin color) en vez de `<title>` | **ES 0/68 y FR 0/233 avisos servidos** | CORREGIDO |
+| H2 | `freshness` ≡ 0 (se usaba el instante de la petición como `observedAt`) | La antigüedad no se medía; check pasaba vacío | CORREGIDO |
+| H3 | Check `N6` de red con `true` hardcodeado | Habría pasado siempre | CORREGIDO por su autor |
+| H4 | Atribución ODbL perdida en silencio (287 filas como `allowed`) | Incumplimiento de licencia | CORREGIDO |
+| H5 | Catálogo no integrado (`served=3` vs `589`) | Fase B no llegaba al producto | CORREGIDO (t7) |
+| H6 | 61% del catálogo eran pistas sueltas + 2 estaciones en Kazajistán | Cobertura ficticia | CORREGIDO |
+| **L1** | **Meteoalarm redistribuido sin disclaimer literal ni enlace** | **Incumplimiento legal de la única integración operativa** | **CORREGIDO (t8)** |
+| L2 | Atribución NMHS nunca usada (siempre multi-país) | Incumplimiento menor | CORREGIDO |
+| D1 | Cifras erróneas en documentos del capitán (115/101, marcadores t7) | Informe inconsistente | CORREGIDO por el capitán |
 
 ---
 
@@ -83,99 +80,47 @@ entrega (§7). Re-revisión de los bytes posteriores a `6ab6867`: **PENDIENTE de
 
 | Evidencia | Ubicación |
 |---|---|
-| Informe de entrega y revisión | `docs/snow/SNOW-02-BACKEND-REPORT.md` |
-| Arquitectura e inventario | `docs/snow/SNOW-02-ARCHITECTURE.md` |
-| Evidencia cruda de drivers | `docs/snow/snow02-evidence/{integration-http,persistence-restart,adversarial,captain-http-verify,reviewer-security-bundle}.json` |
-| Sonda propia del revisor | `docs/snow/snow02-evidence/reviewer-security-bundle.mjs` |
-| Hallazgos de seguridad | `docs/snow/snow02-evidence/security-findings.md` |
-| Drivers reproducibles | `scripts/snow02/{integration-http,persistence-restart,adversarial,security-http-verify,captain-http-verify}.mjs` |
+| Informe de entrega | `docs/snow/SNOW-03-PROVIDERS-REPORT.md` |
+| Matriz de cobertura | `docs/snow/SNOW-03-COVERAGE-MATRIX.md` |
+| Veredictos de licencia | `docs/snow/SNOW-03-LICENSE-VERDICTS.md` |
+| Evidencia real (URL redactada + sha256) | `docs/snow/snow03-evidence/real/` |
+| Capturas OSM/Wikidata con sha256 | `docs/snow/snow03-evidence/raw/` |
+| Sondas de licencia (53 HTTP) | `docs/snow/snow03-t1-verification-cache.json` |
+| Drivers reproducibles | `scripts/snow03/{verify-e2e,verify-meteoalarm,verify-network-degradation,build-station-catalog}.mjs` |
+
+**Distinción sintético / real:** fixtures en `providers/fixtures/` marcadas como sintéticas; la
+evidencia de producción está en `real/` con URL (redactada) y sha256.
 
 ---
 
-## 6. Estado de aprobación del merge
+## 6. Revisión independiente
 
-**MERGE A `master`: NO AUTORIZADO.**
-
-- No hay merge, fast-forward, tag ni push realizados por SNOW-02.
-- La rama `feat/snow-02-operational-backend` está muy por delante de `master`, sin push.
-- La revisión independiente (t7) emitió **PASS**, pero un PASS de revisión **no** autoriza
-  el merge (ENGINE-01 §4, ENGINE-02 §6).
-- El merge a `master` requiere **autorización explícita del usuario**.
-
-### Condiciones antes de autorizar un merge
-
-1. ~~Commit del trabajo SNOW-02 con identidad de contenido.~~ **HECHO** (`b7f6484` y siguientes).
-2. ~~Re-ejecución de `tsc`, `check-schema`, suite completa y los drivers desde ese commit.~~
-   **HECHO** con el manifiesto ENGINE-04 (ver §7).
-3. Decisión de producto sobre los mocks restantes (home/planner/blog/lodging/rental/
-   premium/shop-detail/account/admin) — declarados fuera de alcance nieve v1.
-
----
-
-## 7. Gate determinista ENGINE-04 (ejecutado por el capitán)
-
-**Manifiesto:** `qa/qa-manifest.json` — 9 etapas requeridas + `build-production` (no
-requerida, ver abajo). `manifest-check` → **ok**.
-
-**`verify` sobre un worktree registrado en ENGINE-03** (`snow02-main-gate`, junction a
-`node_modules`, `dist/` copiado, `NX_DAEMON=false`, `ENGINE04_TEMP` fuera del worktree):
-
-| Etapa | Exit code |
-|---|---|
-| `typecheck` | 0 |
-| `schema-invariants` | 0 |
-| `unit-snow` (dos mitades, 15 ficheros) | 0 |
-| `integration-http` | 0 |
-| `persistence-restart` | 0 |
-| `adversarial` | 0 |
-| `security-http` | 0 |
-| `captain-http` | 0 |
-| `reviewer-security` | 0 |
-
-`gaps = 0`, `duringDrift = 0`, evidencia archivada en
-`docs/snow/snow02-evidence/engine04-worktree-verify.json`.
-
-**`gate` → `FAIL`** con tres bloqueantes y una lista de contradicciones de *binding*.
-Ninguno de los tres es un fallo de las etapas; los tres son consecuencias medidas de haber
-cerrado el equipo y de haber corregido los arreglos de QA después de la revisión:
-
-1. **`trusted-repository-context` / `evidence-repository-identity`** — `worktree path does
-   not resolve`. La evidencia se produjo en un worktree registrado en ENGINE-03
-   (`snow02-main-gate`) que después se retiró con el propio toolkit
-   (`parallel-dev.mjs remove`). El worktree principal nunca estuvo registrado y, en este
-   host, el motor no reconoce el clon principal como raíz de worktree (`assertWorktreeRoot`
-   → `Not a registered worktree root`), así que no existe un contenedor válido para emitir
-   un `PASS` de entrega sobre el árbol principal.
-2. **`change-set-present`** — `evidence carries no valid changed set`. Un `verify` con
-   `--baseline` igual al `HEAD` del worktree registrado no tiene cambio que reconstruir;
-   el que sí lo tenía (`--baseline master`) entraba en contradicción
-   `trusted-baseline: evidence asserts baseline master but the lifecycle baseline is HEAD`.
-3. **`binding-current:<t7>`** — el revisor juzgó los bytes de `6ab6867`; después se
-   modificaron, entre otros, `web-ssr/src/snow/tests/store-durability.test.ts`,
-   `scripts/snow02/*` y `qa/qa-manifest.json`. La revisión ya **no** casa con lo entregado
-   y hace falta una **re-revisión independiente** de esos bytes.
-
-El estado `team-required` **sí** se satisfizo aportando el estado de AgentTeams archivado
-(`--team` con las 8 tareas y la revisión t7 con `reviewedArtifacts`), pero eso no exime de
-los tres bloqueantes anteriores. Por eso el resultado final es **FAIL**, no `BLOCKED`:
-hay contradicciones determinadas, no solo evidencia incompleta.
-
-**Qué sigue pendiente para un gate `PASS` (ni el capitán ni ningún miembro pueden acortarlo):**
-(a) un worktree registrado y **vivo** cuyo `baseline` sea el commit base de la entrega;
-(b) una **re-revisión independiente** de los bytes actuales con `verdict=pass`; (c) el
-estado de equipo de esa revisión aportado al gate con `--team`.
-
-**Hallazgos del entorno que se corrigieron para llegar aquí** (no son cambios de producto):
-
-| Hallazgo | Medición | Corrección |
+| Ronda | Veredicto | Hallazgos |
 |---|---|---|
-| El runner deniega *pipes* | `spawn` `inherit`/`ignore` ok, `pipe` EPERM | `scripts/snow02/lib/child.mjs` lanza hijos sin pipes |
-| `store-durability` usaba `execFileSync` (pipes) y daba 3 fallos falsos | dentro del sandbox | cae a salida por fichero si los pipes no están permitidos |
-| Una invocación de 15 ficheros falla, dos grupos no | 15→exit 1, 8+7→exit 0 | `scripts/snow02/qa-unit.mjs` ejecuta dos mitades con TEMP propio |
-| Nx/Angular no arrancan bajo el sandbox | control 0, `nx` 1, `ng` 1 | `build-production` deja de ser requerida y se verifica fuera del runner |
-| La evidencia se regeneraba con timestamps y derivaba el árbol | `duringDrift` en cada pasada | los drivers escriben evidencia normalizada (solo checks) |
-| El árbol tenía >2000 artefactos ignorados (4096) | `complete-scan` BLOCKED | limpieza de `data/qa-temp*` (propios) y `tmp/`; ahora `gaps = 0` |
+| t5 | **NEEDS_REVISION** | L1 (blocker legal), L2, T1/T2, D1 — ninguno ocultado |
+| t9 | **PASS** | L1 y L2 cerrados y verificados; T1/T2 endurecidos; sin aserciones debilitadas ni tests skip |
 
-**Lo que este estado NO afirma:** que el gate haya devuelto `PASS`. Afirma que las nueve
-etapas se ejecutaron en el runner confined con exit 0, sin gaps ni deriva, y enumera con
-exactitud los bloqueantes que impiden el `PASS`.
+El revisor **no es el implementador** y re-ejecutó todos los gates por su cuenta en ambas rondas.
+
+---
+
+## 7. Estado y pendiente de autorización
+
+**MILESTONE: PARTIAL** (revisión independiente PASS).
+
+- **No hay merge ni despliegue.** La rama está en un worktree, con commit local.
+- Un `PASS` de revisión **no autoriza** el merge (ENGINE-01 §4, ENGINE-02 §6).
+
+### Para pasar de PARTIAL a PASS hacen falta
+
+1. Que el responsable autorice al menos una credencial de pronóstico:
+   `AEMET_API_KEY`, `METEOFRANCE_API_KEY` u `OPEN_METEO_API_KEY` (§6 del informe).
+2. Acuerdo escrito con operadores para condiciones operativas (única vía legal).
+3. Follow-ups no bloqueantes: `SIN_REGION` en DTO público, `coverage.byCountry`, 101
+   `sizeUnverified`, contorno municipal ES/FR.
+
+### Gate determinista ENGINE-04
+
+`qa/qa-manifest.json` sigue describiendo las etapas de SNOW-02. Las etapas nuevas de SNOW-03 se
+verifican con los drivers de `scripts/snow03/`; **no se ha emitido un `verify`/`gate` ENGINE-04
+sobre esta rama**, por lo que el gate determinista queda **NO EJECUTADO** (no "PASS").

@@ -5,6 +5,7 @@ import { BLOCKED_PROVIDER_IDS, blockedAdapter } from './blocked-providers';
 import { EditorialReportAdapter } from './editorial-report.adapter';
 import { EditorialStationsAdapter } from './editorial-stations.adapter';
 import { envGatedAdapter } from './env-gated.adapter';
+import { meteoalarmAdapter } from './meteoalarm.adapter';
 import { osmAdapter } from './osm.adapter';
 
 export interface AdapterDeps {
@@ -32,6 +33,14 @@ export function createAdapters(deps: AdapterDeps): AdapterRegistry {
     'ign-fr': envGatedAdapter('ign-fr', [], ['basemap'], authorizationFor('ign-fr')),
     osm: osmAdapter(),
     protomaps: envGatedAdapter('protomaps', ['PROTOMAPS_BASE_URL'], ['basemap'], authorizationFor('protomaps')),
+    // MeteoAlarm: sin credencial, feed Atom público, licencia verificada en el
+    // propio feed (elemento `<rights>`). Atribución obligatoria + caché ≤10 min.
+    //
+    // Open-Meteo NO se registra a propósito: su free tier es sólo NO comercial
+    // (verificado en /en/terms) y este producto es comercial. El adapter existe
+    // y está probado con fixtures, pero falla cerrado sin licencia verificada y
+    // no debe alcanzarse desde el registry ni desde ninguna cadena.
+    meteoalarm: meteoalarmAdapter(authorizationFor('meteoalarm')),
   };
   for (const id of BLOCKED_PROVIDER_IDS) {
     registry[id] = blockedAdapter(id);

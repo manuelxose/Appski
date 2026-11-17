@@ -1,0 +1,3558 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:04:21Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2183824459,
+  "lat": 45.0129936,
+  "lon": 5.4721277,
+  "tags": {
+    "fixme": "Zone de la station à définir.",
+    "landuse": "winter_sports",
+    "name": "Porte d'Herbouilly",
+    "wikidata": "Q130386437"
+  }
+},
+{
+  "type": "node",
+  "id": 4042749440,
+  "lat": 45.2394405,
+  "lon": 6.2667484,
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Corbier"
+  }
+},
+{
+  "type": "way",
+  "id": 23079840,
+  "center": {
+    "lat": 44.1870912,
+    "lon": 7.1475249
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Isola 2000",
+    "name:ja": "イソラ2000",
+    "website": "https://www.isola2000.com",
+    "wikidata": "Q746545",
+    "wikipedia": "fr:Isola 2000"
+  }
+},
+{
+  "type": "way",
+  "id": 45117869,
+  "center": {
+    "lat": 45.3293683,
+    "lon": 6.5810447
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les 3 Vallées",
+    "website": "https://www.les3vallees.com"
+  }
+},
+{
+  "type": "way",
+  "id": 45146739,
+  "center": {
+    "lat": 45.0089227,
+    "lon": 6.1706154
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Deux Alpes",
+    "website": "https://www.les2alpes.com",
+    "wikidata": "Q974478"
+  }
+},
+{
+  "type": "way",
+  "id": 45146740,
+  "center": {
+    "lat": 45.0194743,
+    "lon": 6.2793819
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Grave",
+    "piste:difficulty": "freeride",
+    "piste:grooming": "backcountry",
+    "piste:type": "downhill",
+    "sport": "skiing",
+    "website": "https://www.la-grave.com"
+  }
+},
+{
+  "type": "way",
+  "id": 45421423,
+  "center": {
+    "lat": 45.4572310,
+    "lon": 6.9660418
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Tignes - Val d'Isère",
+    "operator": "STGM",
+    "website": "https://www.espacekilly.com/",
+    "wikidata": "Q991331"
+  }
+},
+{
+  "type": "way",
+  "id": 45438172,
+  "center": {
+    "lat": 44.9283055,
+    "lon": 6.7287755
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Montgenèvre",
+    "website": "https://www.montgenevre.com"
+  }
+},
+{
+  "type": "way",
+  "id": 45438982,
+  "center": {
+    "lat": 45.1088687,
+    "lon": 6.0861639
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Alpe d'Huez Grand Domaine",
+    "website": "https://www.alpedhuez.com/",
+    "wikidata": "Q214364"
+  }
+},
+{
+  "type": "way",
+  "id": 45523958,
+  "center": {
+    "lat": 45.3844932,
+    "lon": 6.7341336
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Pralognan-la-Vanoise",
+    "website": "https://www.pralognan.com"
+  }
+},
+{
+  "type": "way",
+  "id": 45524871,
+  "center": {
+    "lat": 45.2507189,
+    "lon": 6.7374788
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Aussois",
+    "website": "https://www.aussois.com"
+  }
+},
+{
+  "type": "way",
+  "id": 49393402,
+  "center": {
+    "lat": 44.9247029,
+    "lon": 6.7728501
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Claviere",
+    "operator": "Vialattea",
+    "website": "https://www.vialattea.it"
+  }
+},
+{
+  "type": "way",
+  "id": 51071464,
+  "center": {
+    "lat": 45.7060624,
+    "lon": 6.2783176
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Sambuy Seythenex",
+    "website": "https://www.lasambuy.com",
+    "wikidata": "Q3212711",
+    "wikipedia": "fr:La Sambuy-Seythenex"
+  }
+},
+{
+  "type": "way",
+  "id": 51071766,
+  "center": {
+    "lat": 45.6630074,
+    "lon": 6.5478841
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Arêches Beaufort",
+    "website": "https://www.areches-beaufort.com",
+    "wikipedia": "fr:Arêches-Beaufort"
+  }
+},
+{
+  "type": "way",
+  "id": 77238320,
+  "center": {
+    "lat": 42.6752826,
+    "lon": 2.2571924
+  },
+  "tags": {
+    "abandoned": "yes",
+    "disused": "yes",
+    "landuse": "winter_sports",
+    "name": "Mosset - Col de Jau",
+    "wikipedia:fr": "Col_de_Jau_(centre_de_sports_d'hiver)"
+  }
+},
+{
+  "type": "way",
+  "id": 225815861,
+  "center": {
+    "lat": 48.0514862,
+    "lon": 6.9025734
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gérardmer",
+    "sport": "skiing",
+    "website": "https://www.gerardmer-ski.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 294826109,
+  "center": {
+    "lat": 45.2390408,
+    "lon": 5.9925086
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine de Beldina",
+    "website": "http://www.skidefond-prapoutel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 294826110,
+  "center": {
+    "lat": 45.2601205,
+    "lon": 6.0238821
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les 7 Laux",
+    "website": "http://www.les7laux.com/",
+    "wikidata": "Q674302"
+  }
+},
+{
+  "type": "way",
+  "id": 294837783,
+  "center": {
+    "lat": 45.3297645,
+    "lon": 6.0550129
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Stade des Neiges du Barioz",
+    "website": "https://www.barioz.fr/",
+    "wikidata": "Q115376642"
+  }
+},
+{
+  "type": "way",
+  "id": 294837800,
+  "center": {
+    "lat": 45.3199621,
+    "lon": 6.0525246
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine du Barioz"
+  }
+},
+{
+  "type": "way",
+  "id": 294930896,
+  "center": {
+    "lat": 45.9541140,
+    "lon": 6.7510351
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Passy - Plaine Joux",
+    "website": "https://www.passy-mont-blanc.com",
+    "wikidata": "Q3368414",
+    "wikipedia": "fr:Plaine Joux"
+  }
+},
+{
+  "type": "way",
+  "id": 294934330,
+  "center": {
+    "lat": 46.0169426,
+    "lon": 6.9159511
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Poya (Chamonix)",
+    "website": "https://en.chamonix.com/activities/winter/skiing-in-chamonix-mont-blanc-valley/list-of-ski-areas/la-poya-ski-resort"
+  }
+},
+{
+  "type": "way",
+  "id": 294937387,
+  "center": {
+    "lat": 45.3464346,
+    "lon": 5.9029031
+  },
+  "tags": {
+    "fixme": "Ski de Fond approxilmatif",
+    "landuse": "winter_sports",
+    "name": "Col de Marcieu",
+    "website": "https://www.col-marcieu.com"
+  }
+},
+{
+  "type": "way",
+  "id": 294939838,
+  "center": {
+    "lat": 45.3957016,
+    "lon": 6.1285479
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Collet d'Allevard",
+    "website": "https://www.lecollet.com",
+    "wikidata": "Q3497434"
+  }
+},
+{
+  "type": "way",
+  "id": 296909728,
+  "center": {
+    "lat": 44.4826256,
+    "lon": 6.5691311
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Orres",
+    "operator": "SEMLORE",
+    "website": "https://www.lesorres.com"
+  }
+},
+{
+  "type": "way",
+  "id": 296979402,
+  "center": {
+    "lat": 44.5910800,
+    "lon": 6.6552897
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Vars/Risoul",
+    "website": "https://www.vars.com"
+  }
+},
+{
+  "type": "way",
+  "id": 328853752,
+  "center": {
+    "lat": 48.1394206,
+    "lon": 7.0837931
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Lac Blanc",
+    "sport": "skiing",
+    "website": "https://www.lac-blanc.com"
+  }
+},
+{
+  "type": "way",
+  "id": 331209851,
+  "center": {
+    "lat": 45.2281673,
+    "lon": 5.5870018
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Autrans - Grand domaine la Sure"
+  }
+},
+{
+  "type": "way",
+  "id": 331655170,
+  "center": {
+    "lat": 45.1096969,
+    "lon": 5.6165224
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Montagnes de Lans",
+    "website": "https://www.lansenvercors.com"
+  }
+},
+{
+  "type": "way",
+  "id": 332881926,
+  "center": {
+    "lat": 45.2713587,
+    "lon": 6.8813030
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Val Cenis",
+    "source": "SCOT Pays de Maurienne;Domaine Skiable de France",
+    "website": "https://www.valcenis.com",
+    "wikidata": "Q2920718",
+    "wikipedia": "fr:Val Cenis (domaine skiable)"
+  }
+},
+{
+  "type": "way",
+  "id": 368787406,
+  "center": {
+    "lat": 44.0785536,
+    "lon": 6.9532850
+  },
+  "tags": {
+    "chair_lifts": "7",
+    "highest_summit": "2100",
+    "landuse": "winter_sports",
+    "leisure": "ski_resort",
+    "lowest_base": "1430",
+    "name": "Domaine skiable Valberg",
+    "plate_lifts": "18",
+    "slopes": "56",
+    "vertical_drop": "670",
+    "website": "https://www.valberg.com",
+    "winter_activities": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 404277791,
+  "center": {
+    "lat": 48.0338986,
+    "lon": 6.9837345
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Bresse - Hohneck",
+    "sport": "skiing",
+    "website": "https://labresse.labellemontagne.com",
+    "wikidata": "Q3206868"
+  }
+},
+{
+  "type": "way",
+  "id": 447819146,
+  "center": {
+    "lat": 45.8086422,
+    "lon": 6.9403638
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Courmayeur",
+    "name:fr": "Courmayeur",
+    "website": "https://www.courmayeur-montblanc.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 447819151,
+  "center": {
+    "lat": 45.8836171,
+    "lon": 6.7589834
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Houches (Chamonix)",
+    "website": "https://www.leshouches.com",
+    "wikidata": "Q131523652"
+  }
+},
+{
+  "type": "way",
+  "id": 447908211,
+  "center": {
+    "lat": 44.9181045,
+    "lon": 4.1704849
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Estables"
+  }
+},
+{
+  "type": "way",
+  "id": 447909361,
+  "center": {
+    "lat": 45.0582030,
+    "lon": 4.1259153
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Nordique du Meygal",
+    "phone": "+33 4 71 57 64 67",
+    "source": "data.gouv.fr:Le ministère des droits des femmes, de la ville, de la jeunesse et des sports - 2014",
+    "website": "https://chaletdumeygal.wordpress.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 539977729,
+  "center": {
+    "lat": 44.6909854,
+    "lon": 6.1599880
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Chaillol",
+    "name:oc": "Chalhòl",
+    "source:name:oc": "ieo-bdtopoc",
+    "website": "https://www.champsaur-valgaudemar.com/decouvrir/les-stations/chaillol/"
+  }
+},
+{
+  "type": "way",
+  "id": 540000677,
+  "center": {
+    "lat": 44.6102986,
+    "lon": 6.2131441
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ancelle",
+    "website": "https://www.ancelleski.fr",
+    "wikidata": "Q120311055"
+  }
+},
+{
+  "type": "way",
+  "id": 542214330,
+  "center": {
+    "lat": 45.6500236,
+    "lon": 6.8506365
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Rosière",
+    "website": "https://www.larosiere.ski/"
+  }
+},
+{
+  "type": "way",
+  "id": 542214331,
+  "center": {
+    "lat": 45.6949097,
+    "lon": 6.9198954
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Thuile",
+    "name:fr": "La Thuile",
+    "website": "https://www.lathuile.it/"
+  }
+},
+{
+  "type": "way",
+  "id": 547665070,
+  "center": {
+    "lat": 44.4019887,
+    "lon": 6.3805595
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Montclar",
+    "website": "https://www.montclar.com"
+  }
+},
+{
+  "type": "way",
+  "id": 547761780,
+  "center": {
+    "lat": 44.4601354,
+    "lon": 6.7091426
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Sainte-Anne la Condamine",
+    "website": "https://www.sainte-anne.com",
+    "wikidata": "Q16511275"
+  }
+},
+{
+  "type": "way",
+  "id": 548826689,
+  "center": {
+    "lat": 44.5122634,
+    "lon": 5.9438020
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Céüse",
+    "name:oc": "Ceuse",
+    "source:name:oc": "ieo-bdtopoc"
+  }
+},
+{
+  "type": "way",
+  "id": 549042071,
+  "center": {
+    "lat": 44.8351015,
+    "lon": 5.4226005
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station du Col de Rousset",
+    "website": "https://www.lesstationsdeladrome.fr/stations/col-du-rousset/"
+  }
+},
+{
+  "type": "way",
+  "id": 549102651,
+  "center": {
+    "lat": 44.8871445,
+    "lon": 5.5396896
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gresse en Vercors",
+    "website": "https://www.gresse-en-vercors.fr",
+    "wikipedia": "fr:Gresse-en-Vercors#Station_de_ski"
+  }
+},
+{
+  "type": "way",
+  "id": 549105845,
+  "center": {
+    "lat": 44.9915161,
+    "lon": 5.5871674
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Col de l'Arzelier"
+  }
+},
+{
+  "type": "way",
+  "id": 549108702,
+  "center": {
+    "lat": 45.0076906,
+    "lon": 5.8450377
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "L'Alpe du Grand Serre",
+    "website": "https://www.alpedugrandserre.info/"
+  }
+},
+{
+  "type": "way",
+  "id": 549179138,
+  "center": {
+    "lat": 45.4710508,
+    "lon": 5.8627027
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Entremonts",
+    "website": "https://www.entremonts.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 549179618,
+  "center": {
+    "lat": 45.4609076,
+    "lon": 5.9072220
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Granier",
+    "website": "https://www.stationdugranier.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 549189984,
+  "center": {
+    "lat": 45.3561566,
+    "lon": 5.8342304
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Saint-Pierre-de-Chartreuse",
+    "website": "https://www.ski-alpin-chartreuse.com"
+  }
+},
+{
+  "type": "way",
+  "id": 549191825,
+  "center": {
+    "lat": 45.3138723,
+    "lon": 5.8788871
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Saint-Hilaire-du-Touvet",
+    "website": "https://www.station-ski-saint-hilaire.fr",
+    "wikidata": "Q110410864"
+  }
+},
+{
+  "type": "way",
+  "id": 549210956,
+  "center": {
+    "lat": 45.6413657,
+    "lon": 5.9890080
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Féclaz",
+    "website": "https://www.savoiegrandrevard.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 549533943,
+  "center": {
+    "lat": 44.0747984,
+    "lon": 7.0328164
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Roubion-Les-Buisses",
+    "website": "https://www.roubion.com"
+  }
+},
+{
+  "type": "way",
+  "id": 549558968,
+  "center": {
+    "lat": 43.8229666,
+    "lon": 6.9580686
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gréolières-Les-Neiges",
+    "website": "https://www.stations-greolieres-audibergue.com"
+  }
+},
+{
+  "type": "way",
+  "id": 549563239,
+  "center": {
+    "lat": 43.7561273,
+    "lon": 6.7779958
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "L'Audibergue",
+    "website": "https://www.stations-greolieres-audibergue.com"
+  }
+},
+{
+  "type": "way",
+  "id": 555922896,
+  "center": {
+    "lat": 44.4452929,
+    "lon": 3.7478453
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station de ski Bleymard Mont Lozère"
+  }
+},
+{
+  "type": "way",
+  "id": 555925509,
+  "center": {
+    "lat": 44.6227917,
+    "lon": 4.0820163
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Croix de Bauzon",
+    "website": "https://www.croixdebauzon.com",
+    "wikidata": "Q3207973",
+    "wikipedia": "fr:La Croix de Bauzon"
+  }
+},
+{
+  "type": "way",
+  "id": 555930117,
+  "center": {
+    "lat": 44.5792497,
+    "lon": 3.0140250
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Station de ski de Brameloup",
+    "wikidata": "Q16533890"
+  }
+},
+{
+  "type": "way",
+  "id": 555934234,
+  "center": {
+    "lat": 45.5310940,
+    "lon": 2.7856993
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Chastreix",
+    "sport": "skiing",
+    "website": "https://www.sancy.com/destination/toutes-les-communes/chastreix/station-de-ski/"
+  }
+},
+{
+  "type": "way",
+  "id": 555941955,
+  "center": {
+    "lat": 45.6674742,
+    "lon": 3.8141710
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Chalmazel",
+    "sport": "skiing",
+    "website": "https://www.loire.fr/jcms/dlw_1111340/accueil"
+  }
+},
+{
+  "type": "way",
+  "id": 563477778,
+  "center": {
+    "lat": 47.9249545,
+    "lon": 6.8549844
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ventron",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 563477779,
+  "center": {
+    "lat": 48.0487399,
+    "lon": 6.9435000
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Bresse - Lispach",
+    "website": "https://lispach.com",
+    "wikidata": "Q30141101"
+  }
+},
+{
+  "type": "way",
+  "id": 588986745,
+  "center": {
+    "lat": 45.3624701,
+    "lon": 7.0582158
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bonneval-sur-Arc",
+    "website": "https://www.bonneval-sur-arc.com"
+  }
+},
+{
+  "type": "way",
+  "id": 588988360,
+  "center": {
+    "lat": 45.2914132,
+    "lon": 5.7689300
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Col de Porte",
+    "website": "https://www.coldeporte.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 589003346,
+  "center": {
+    "lat": 45.5081635,
+    "lon": 6.7049809
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Plagne",
+    "website": "https://www.la-plagne.com/",
+    "wikidata": "Q125591703",
+    "wikipedia": "en:La Plagne"
+  }
+},
+{
+  "type": "way",
+  "id": 589005175,
+  "center": {
+    "lat": 45.5743482,
+    "lon": 6.8146479
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Arcs / Peisey-Vallandry",
+    "website": "https://www.lesarcs.com/",
+    "wikidata": "Q670977"
+  }
+},
+{
+  "type": "way",
+  "id": 599030875,
+  "center": {
+    "lat": 44.8158035,
+    "lon": 6.4770155
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Puy-Saint-Vincent",
+    "website": "https://www.paysdesecrins.com/nos-stations/puy-saint-vincent"
+  }
+},
+{
+  "type": "way",
+  "id": 599031565,
+  "center": {
+    "lat": 45.1689625,
+    "lon": 5.6320065
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Saint-Nizier du Moucherotte",
+    "website": "https://www.vercors-experience.com/teleski-de-st-nizier-du-moucherotte.html"
+  }
+},
+{
+  "type": "way",
+  "id": 599366280,
+  "center": {
+    "lat": 46.2831535,
+    "lon": 6.7731565
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Chapelle d'Abondance",
+    "website": "https://hiver.lachapelledabondance-tourisme.com/ski/ski-alpin/domaine-skiable-chapelle-abondance/",
+    "wikidata": "Q61201217"
+  }
+},
+{
+  "type": "way",
+  "id": 599425823,
+  "center": {
+    "lat": 45.7949054,
+    "lon": 6.6865098
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Contamines",
+    "website": "https://www.lescontamines.net",
+    "wikidata": "Q20971722",
+    "wikimedia_commons": "Category:Les Contamines-Montjoie / Hauteluce",
+    "wikipedia": "fr:Les Contamines"
+  }
+},
+{
+  "type": "way",
+  "id": 599425975,
+  "center": {
+    "lat": 45.9136200,
+    "lon": 6.5895190
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Cordon",
+    "website": "https://www.cordon.fr/hiver/domaine-skiable.htm"
+  }
+},
+{
+  "type": "way",
+  "id": 599426194,
+  "center": {
+    "lat": 45.8794335,
+    "lon": 6.5789790
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Portes du Mont-Blanc",
+    "smoothness": "bad",
+    "website": "https://www.lesportesdumontblanc.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 599426637,
+  "center": {
+    "lat": 45.8466580,
+    "lon": 6.6577903
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Megève/Saint-Gervais",
+    "website": "https://www.megeve.com"
+  }
+},
+{
+  "type": "way",
+  "id": 599426852,
+  "center": {
+    "lat": 45.7845520,
+    "lon": 6.5502965
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Espace Diamant (Les Saisies)",
+    "website": "https://www.lessaisies.com"
+  }
+},
+{
+  "type": "way",
+  "id": 599427053,
+  "center": {
+    "lat": 45.8840400,
+    "lon": 6.4509350
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Clusaz",
+    "website": "https://www.laclusaz.com"
+  }
+},
+{
+  "type": "way",
+  "id": 599427142,
+  "center": {
+    "lat": 44.6347265,
+    "lon": 6.8067890
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ceillac en Queyras",
+    "website": "https://ceillac.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 599436073,
+  "center": {
+    "lat": 44.9320568,
+    "lon": 6.5577802
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Serre Chevalier",
+    "website": "https://www.serre-chevalier.com"
+  }
+},
+{
+  "type": "way",
+  "id": 599438862,
+  "center": {
+    "lat": 44.1752850,
+    "lon": 7.5763980
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Riserva Bianca – Limone Piemonte",
+    "website": "https://www.riservabianca.it"
+  }
+},
+{
+  "type": "way",
+  "id": 601113519,
+  "center": {
+    "lat": 44.5323320,
+    "lon": 6.6121095
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Crévoux",
+    "website": "https://www.crevoux.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 601113698,
+  "center": {
+    "lat": 45.7959967,
+    "lon": 6.1018691
+  },
+  "tags": {
+    "contact:facebook": "https://www.facebook.com/lesemnoz/",
+    "contact:instagram": "https://www.instagram.com/le_semnoz",
+    "landuse": "winter_sports",
+    "name": "Le Semnoz",
+    "operator": "Régie du Grand Annecy",
+    "website": "https://www.semnoz.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 601113871,
+  "center": {
+    "lat": 45.6381173,
+    "lon": 6.0490736
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Aillon-Margériaz",
+    "website": "https://www.lesaillons.com",
+    "wikidata": "Q3230435"
+  }
+},
+{
+  "type": "way",
+  "id": 601113916,
+  "center": {
+    "lat": 45.6420038,
+    "lon": 6.0257008
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Col de Plainpalais"
+  }
+},
+{
+  "type": "way",
+  "id": 601114119,
+  "center": {
+    "lat": 45.5968592,
+    "lon": 6.1088041
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Aillon-le-Jeune",
+    "website": "https://www.lesaillons.com"
+  }
+},
+{
+  "type": "way",
+  "id": 601114175,
+  "center": {
+    "lat": 44.3413230,
+    "lon": 6.2917654
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Chabanon",
+    "website": "https://www.chabanon-selonnet.com"
+  }
+},
+{
+  "type": "way",
+  "id": 601114292,
+  "center": {
+    "lat": 44.3192649,
+    "lon": 6.3859930
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Grand Puy",
+    "tourism": "yes",
+    "website": "https://www.seynelesalpes-tourisme.com/ski-neige/ski-alpin"
+  }
+},
+{
+  "type": "way",
+  "id": 601114296,
+  "center": {
+    "lat": 44.0642425,
+    "lon": 7.2245280
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Colmiane",
+    "website": "https://www.colmiane.com"
+  }
+},
+{
+  "type": "way",
+  "id": 601114662,
+  "center": {
+    "lat": 45.2113995,
+    "lon": 6.3540360
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Albiez-Montrond",
+    "website": "https://www.station-albiez.com"
+  }
+},
+{
+  "type": "way",
+  "id": 601125616,
+  "center": {
+    "lat": 44.7742025,
+    "lon": 6.8854535
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Aiguilles",
+    "website": "https://lequeyras.com/selon-ma-nature/addict-de/ski-alpin-village-station-alpes/domaine-aiguilles/"
+  }
+},
+{
+  "type": "way",
+  "id": 601126293,
+  "center": {
+    "lat": 44.8034215,
+    "lon": 6.9493215
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Abriès",
+    "website": "https://lequeyras.com/selon-ma-nature/addict-de/ski-alpin-village-station-alpes/domaine-abries-ski-sauvage-et-nature/"
+  }
+},
+{
+  "type": "way",
+  "id": 601126774,
+  "center": {
+    "lat": 45.2135935,
+    "lon": 6.3998922
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Karellis",
+    "website": "https://www.karellis.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601127473,
+  "center": {
+    "lat": 45.1565640,
+    "lon": 6.6558145
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Valfréjus",
+    "website": "https://www.valfrejus.com/",
+    "wikidata": "Q918282"
+  }
+},
+{
+  "type": "way",
+  "id": 601128684,
+  "center": {
+    "lat": 45.1911315,
+    "lon": 6.7122775
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Norma",
+    "website": "http://www.la-norma.com",
+    "wikidata": "Q1798981"
+  }
+},
+{
+  "type": "way",
+  "id": 601128808,
+  "center": {
+    "lat": 45.5821976,
+    "lon": 6.9118910
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Sainte-Foy Tarentaise",
+    "website": "https://saintefoy-ski.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601130263,
+  "center": {
+    "lat": 45.1604410,
+    "lon": 6.4753143
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Valloire - Galibier Thabor",
+    "website": "https://www.valloire.net/"
+  }
+},
+{
+  "type": "way",
+  "id": 601130316,
+  "center": {
+    "lat": 46.1808643,
+    "lon": 6.4602073
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Massif des Brasses",
+    "website": "https://lesbrasses.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601130333,
+  "center": {
+    "lat": 46.2510158,
+    "lon": 6.5000208
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Hirmentaz - Les Habères",
+    "official_name": "Bellevaux – Hirmentaz",
+    "website": "https://hirmentaz-bellevaux.com"
+  }
+},
+{
+  "type": "way",
+  "id": 601130338,
+  "center": {
+    "lat": 46.2083615,
+    "lon": 6.6052141
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Roc d'Enfer",
+    "website": "https://www.rocdenfer.com",
+    "wikidata": "Q19407210"
+  }
+},
+{
+  "type": "way",
+  "id": 601130394,
+  "center": {
+    "lat": 46.1505868,
+    "lon": 6.5682753
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Praz de Lys Sommand",
+    "website": "https://www.prazdelys-sommand.com/",
+    "wikidata": "Q3401482",
+    "wikipedia": "fr:Praz de Lys - Sommand"
+  }
+},
+{
+  "type": "way",
+  "id": 601130395,
+  "center": {
+    "lat": 46.3468805,
+    "lon": 6.7002305
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bernex",
+    "website": "https://www.bernex.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 601130398,
+  "center": {
+    "lat": 46.3810420,
+    "lon": 6.7400692
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Thollon les Mémises",
+    "website": "https://hiver.thollonlesmemises-tourisme.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601130399,
+  "center": {
+    "lat": 46.2686236,
+    "lon": 6.7025635
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "L’Essert – Abondance",
+    "website": "https://hiver.abondance-tourisme.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601131988,
+  "center": {
+    "lat": 45.4511540,
+    "lon": 6.4021370
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Grand Domaine",
+    "website": "https://www.legranddomaine.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 601132346,
+  "center": {
+    "lat": 45.9597585,
+    "lon": 6.4802086
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Grand Bornand",
+    "website": "https://www.legrandbornand.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 601133274,
+  "center": {
+    "lat": 44.7113910,
+    "lon": 6.8738785
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Molines-en-Queyras - Saint-Véran",
+    "website": "https://lequeyras.com/selon-ma-nature/addict-de/ski-alpin-village-station-alpes/domaine-molines-st-veran/"
+  }
+},
+{
+  "type": "way",
+  "id": 601133334,
+  "center": {
+    "lat": 44.7804700,
+    "lon": 6.7458119
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Arvieux",
+    "website": "https://lequeyras.com/selon-ma-nature/addict-de/ski-alpin-village-station-alpes/domaine-arvieux/"
+  }
+},
+{
+  "type": "way",
+  "id": 601135063,
+  "center": {
+    "lat": 44.9101520,
+    "lon": 5.3234910
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Font d'Urle Chaud Clapier",
+    "website": "https://www.lesstationsdeladrome.fr/",
+    "wikidata": "Q138754763"
+  }
+},
+{
+  "type": "way",
+  "id": 601136336,
+  "center": {
+    "lat": 44.6689119,
+    "lon": 5.9084002
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Dévoluy",
+    "name:oc": "Devoruí",
+    "source:name:oc": "ieo-bdtopoc",
+    "website": "https://www.ledevoluy.com",
+    "wikidata": "Q3504072"
+  }
+},
+{
+  "type": "way",
+  "id": 601290756,
+  "center": {
+    "lat": 45.2360967,
+    "lon": 6.2385545
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Sybelles",
+    "website": "https://www.sybelles.ski"
+  }
+},
+{
+  "type": "way",
+  "id": 642233789,
+  "center": {
+    "lat": 45.8913578,
+    "lon": 6.8022125
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Tourchet (Chamonix)",
+    "website": "https://en.chamonix.com/activities/winter/skiing-in-chamonix-mont-blanc-valley/list-of-ski-areas/domaine-debutant-du-tourchet"
+  }
+},
+{
+  "type": "way",
+  "id": 642247840,
+  "center": {
+    "lat": 45.9500745,
+    "lon": 6.8660100
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Brévent/Flégère (Chamonix)",
+    "website": "https://en.chamonix.com/activities/winter/skiing-in-chamonix-mont-blanc-valley/list-of-ski-areas/domaine-skiable-brevent-flegere"
+  }
+},
+{
+  "type": "way",
+  "id": 642249053,
+  "center": {
+    "lat": 46.0237819,
+    "lon": 6.9525315
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Balme - Vallorcine",
+    "website": "https://en.chamonix.com/activities/winter/skiing-in-chamonix-mont-blanc-valley/list-of-ski-areas/ski-area-balme-vallorcine"
+  }
+},
+{
+  "type": "way",
+  "id": 642251577,
+  "center": {
+    "lat": 45.9643435,
+    "lon": 6.9445650
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Grands Montets",
+    "website": "https://www.chamonix.com/grands-montets-ski-area,285,en.html",
+    "wikidata": "Q60747943",
+    "wikipedia": "fr:Les Grands Montets"
+  }
+},
+{
+  "type": "way",
+  "id": 642252996,
+  "center": {
+    "lat": 45.9741390,
+    "lon": 6.9237970
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Chosalets (Chamonix)",
+    "website": "https://en.chamonix.com/activities/winter/skiing-in-chamonix-mont-blanc-valley/list-of-ski-areas/domaine-debutant-du-tourchet"
+  }
+},
+{
+  "type": "way",
+  "id": 642256846,
+  "center": {
+    "lat": 45.9254310,
+    "lon": 6.8840580
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Planards (Chamonix)",
+    "website": "https://www.planards.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 642259707,
+  "center": {
+    "lat": 45.8932424,
+    "lon": 6.9100112
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Aiguille du Midi (Chamonix)",
+    "name:fr": "Aiguille du Midi (Chamonix)",
+    "website": "https://aiguilledumidi.montblancnaturalresort.com/en"
+  }
+},
+{
+  "type": "way",
+  "id": 642270217,
+  "center": {
+    "lat": 46.0037815,
+    "lon": 6.9523665
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Vormaine",
+    "website": "https://www.lavormaine.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 660208989,
+  "center": {
+    "lat": 44.3256795,
+    "lon": 6.5740244
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Skiable Espace Lumière",
+    "website": "https://www.praloup.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 674846063,
+  "center": {
+    "lat": 44.9331297,
+    "lon": 5.7387548
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Signaraux",
+    "website": "https://lessignaraux.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 676485850,
+  "center": {
+    "lat": 45.0111551,
+    "lon": 5.9757539
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Col d'Ornon",
+    "operator": "SERACO",
+    "website": "https://www.col-dornon.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 682989041,
+  "center": {
+    "lat": 47.9836164,
+    "lon": 7.0456749
+  },
+  "tags": {
+    "alt_name": "Schnepfenried;Le Schnepf",
+    "landuse": "winter_sports",
+    "name": "Station de ski du Schnepfenried",
+    "phone": "+33 6 88 41 67 96",
+    "website": "https://www.leschnepf.com",
+    "wikidata": "Q28041177"
+  }
+},
+{
+  "type": "way",
+  "id": 758071412,
+  "center": {
+    "lat": 42.8573099,
+    "lon": 0.4941493
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bourg d'Oueil",
+    "sport": "skiing",
+    "website": "https://www.haute-garonne-montagne.com/stations/bourg-doueil-hiver/"
+  }
+},
+{
+  "type": "way",
+  "id": 758083153,
+  "center": {
+    "lat": 42.7274932,
+    "lon": -0.0323468
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gavarnie Gèdre",
+    "sport": "skiing",
+    "website": "https://www.ski-gavarnie.com",
+    "wikidata": "Q2835507"
+  }
+},
+{
+  "type": "way",
+  "id": 758110908,
+  "center": {
+    "lat": 42.9052396,
+    "lon": 0.7717420
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Mourtis",
+    "sport": "skiing",
+    "website": "https://www.haute-garonne-montagne.com/stations/le-mourtis-hiver/"
+  }
+},
+{
+  "type": "way",
+  "id": 758112360,
+  "center": {
+    "lat": 42.7760210,
+    "lon": 0.4597628
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Peyragudes",
+    "sport": "skiing",
+    "website": "https://peyragudes.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 758118846,
+  "center": {
+    "lat": 42.9434101,
+    "lon": 0.4546016
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Nistos",
+    "piste:type": "nordic",
+    "sport": "skiing",
+    "website": "https://nistos-ski.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 758119748,
+  "center": {
+    "lat": 42.7802468,
+    "lon": 0.1585993
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Piau Engaly",
+    "sport": "skiing",
+    "website": "https://www.n-py.com/fr/piau",
+    "wikidata": "Q3382234",
+    "wikipedia": "fr:Piau-Engaly"
+  }
+},
+{
+  "type": "way",
+  "id": 758138466,
+  "center": {
+    "lat": 42.7933867,
+    "lon": -0.5399326
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Somport",
+    "website": "https://www.lesomport.com/",
+    "wikidata": "Q3227291"
+  }
+},
+{
+  "type": "way",
+  "id": 758151764,
+  "center": {
+    "lat": 45.0692109,
+    "lon": 2.7569262
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Lioran",
+    "sport": "skiing",
+    "website": "https://skipass.lelioran.com"
+  }
+},
+{
+  "type": "way",
+  "id": 758153616,
+  "center": {
+    "lat": 45.5654156,
+    "lon": 3.8655543
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Prabouré",
+    "piste:type": "downhill",
+    "source": "Le ministère de la ville, de la jeunesse et des sports - 2026-09",
+    "sport": "skiing",
+    "website": "https://praboure.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 758209103,
+  "center": {
+    "lat": 42.0779773,
+    "lon": 9.1450777
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ghisoni",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758209352,
+  "center": {
+    "lat": 42.0039275,
+    "lon": 9.1260870
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Val d'Ese",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758209705,
+  "center": {
+    "lat": 42.2858574,
+    "lon": 8.8885855
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Vergio",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758223096,
+  "center": {
+    "lat": 47.8072317,
+    "lon": 6.8535456
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ballon d'Alsace",
+    "sport": "skiing",
+    "website": "https://www.ballondalsace.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 758224018,
+  "center": {
+    "lat": 47.9005741,
+    "lon": 6.8577896
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bussang Larcenaire",
+    "sport": "skiing",
+    "website": "https://www.larcenaire.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 758228882,
+  "center": {
+    "lat": 47.8505757,
+    "lon": 6.9156165
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Rouge Gazon",
+    "sport": "skiing",
+    "website": "https://rouge-gazon.fr"
+  }
+},
+{
+  "type": "way",
+  "id": 758230302,
+  "center": {
+    "lat": 48.0927182,
+    "lon": 7.0207024
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Valtin",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758317682,
+  "center": {
+    "lat": 45.9862312,
+    "lon": 5.6248017
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Terre Ronde",
+    "sport": "skiing",
+    "website": "https://www.hautbugey-tourisme.com/domaine/site-de-terre-ronde/"
+  }
+},
+{
+  "type": "way",
+  "id": 758318496,
+  "center": {
+    "lat": 46.5617601,
+    "lon": 6.0264278
+  },
+  "tags": {
+    "fixme": "sport=skiing donne une alerte avec validateur josm et osmose, je ne sais pas quoi mettre ; zone de piste de descente par rapport au ski de fond",
+    "landuse": "winter_sports",
+    "name": "Les Gentianes",
+    "sport": "skiing",
+    "website": "https://www.station-lesgentianes.com"
+  }
+},
+{
+  "type": "way",
+  "id": 758328458,
+  "center": {
+    "lat": 46.0349268,
+    "lon": 5.6981236
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Plans d'Hotonnes - Plateau de Retord",
+    "sport": "skiing",
+    "website": "http://www.plateauderetord.fr/"
+  }
+},
+{
+  "type": "way",
+  "id": 758334415,
+  "center": {
+    "lat": 46.4464696,
+    "lon": 6.0478808
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Rousses",
+    "sport": "skiing",
+    "website": "https://www.lesrousses.com"
+  }
+},
+{
+  "type": "way",
+  "id": 758337145,
+  "center": {
+    "lat": 46.7492619,
+    "lon": 6.3564882
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Métabief",
+    "sport": "skiing",
+    "website": "https://www.station-metabief.com/",
+    "wikidata": "Q16665845"
+  }
+},
+{
+  "type": "way",
+  "id": 758340691,
+  "center": {
+    "lat": 46.2999274,
+    "lon": 5.9492802
+  },
+  "tags": {
+    "fixme": "Zone à redessiner pour plus de précision.",
+    "landuse": "winter_sports",
+    "sport": "skiing",
+    "wikidata": "Q130382782"
+  }
+},
+{
+  "type": "way",
+  "id": 758341438,
+  "center": {
+    "lat": 46.5549098,
+    "lon": 6.0747051
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bellefontaine",
+    "sport": "skiing",
+    "website": "http://www.bellefontaine-hautjura.fr/ski-haut-jura-alpin-fond/ski-alpin.html"
+  }
+},
+{
+  "type": "way",
+  "id": 758341903,
+  "center": {
+    "lat": 47.2635623,
+    "lon": 6.8176432
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Goule",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 758342708,
+  "center": {
+    "lat": 47.2196955,
+    "lon": 6.5771616
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Pierrefontaine Les Varans",
+    "sport": "skiing",
+    "website": "https://www.facebook.com/pages/category/Sports---Recreation/Ski-Club-Pierrefontaine-Les-Varans-1005805269434212/"
+  }
+},
+{
+  "type": "way",
+  "id": 758344152,
+  "center": {
+    "lat": 47.0367015,
+    "lon": 6.6710950
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Site du Meix Musy",
+    "sport": "skiing",
+    "website": "https://www.facebook.com/MeixmusyValdeMorteau/"
+  }
+},
+{
+  "type": "way",
+  "id": 758346204,
+  "center": {
+    "lat": 47.0162576,
+    "lon": 6.4325715
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Cernay Blanche",
+    "sport": "skiing",
+    "website": "http://www.cernay.lachaux25.com"
+  }
+},
+{
+  "type": "way",
+  "id": 758347416,
+  "center": {
+    "lat": 46.8301771,
+    "lon": 6.4136758
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Fourgs",
+    "sport": "skiing",
+    "website": "https://www.les-fourgs.com",
+    "wikidata": "Q2409088",
+    "wikipedia": "fr:Les Fourgs (station de sports d'hiver)"
+  }
+},
+{
+  "type": "way",
+  "id": 758348884,
+  "center": {
+    "lat": 46.7042163,
+    "lon": 6.2164884
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Mouthe",
+    "sport": "skiing",
+    "website": "https://espacesourcedudoubs.com/la-station",
+    "wikidata": "Q3326431",
+    "wikipedia": "fr:Mouthe (station de sports d'hiver)"
+  }
+},
+{
+  "type": "way",
+  "id": 758350423,
+  "center": {
+    "lat": 46.6570359,
+    "lon": 6.0883676
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Foncine le Haut",
+    "sport": "skiing",
+    "website": "https://www.jura-foncine.com/hiver/ski-alpin/"
+  }
+},
+{
+  "type": "way",
+  "id": 758353156,
+  "center": {
+    "lat": 46.4569108,
+    "lon": 5.9687785
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Longchaumois Rosset",
+    "sport": "skiing",
+    "website": "https://www.haut-jura.com/fr/bouger-en-hiver/le-ski-alpin.html"
+  }
+},
+{
+  "type": "way",
+  "id": 765136029,
+  "center": {
+    "lat": 44.9769871,
+    "lon": 4.1735547
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Espace Liberté de Chaudeyrac"
+  }
+},
+{
+  "type": "way",
+  "id": 789945463,
+  "center": {
+    "lat": 42.4021202,
+    "lon": 8.9208214
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station d'Asco-Stagnu",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 843588599,
+  "center": {
+    "lat": 44.5806979,
+    "lon": 6.3487069
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station de ski de Reallon",
+    "website": "https://www.reallon-ski.com"
+  }
+},
+{
+  "type": "way",
+  "id": 847040766,
+  "center": {
+    "lat": 42.9737178,
+    "lon": -0.7389660
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Pierre-Saint-Martin",
+    "website": "https://www.pyrenees-bearnaises.com/explorer/neige/la-pierre-saint-martin/",
+    "wheelchair": "no",
+    "wikidata": "Q3211628",
+    "wikipedia": "eu:San Martingo Harriko eski estazioa"
+  }
+},
+{
+  "type": "way",
+  "id": 860985207,
+  "center": {
+    "lat": 42.6787781,
+    "lon": 1.8018436
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ax 3 Domaines"
+  }
+},
+{
+  "type": "way",
+  "id": 863006804,
+  "center": {
+    "lat": 42.5715069,
+    "lon": 2.0518202
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Angles",
+    "website": "https://lesangles.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 896458527,
+  "center": {
+    "lat": 44.1886566,
+    "lon": 6.6649817
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "ski_resort",
+    "name": "Ratery",
+    "winter_activities": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 914767901,
+  "center": {
+    "lat": 46.5859673,
+    "lon": 6.0605573
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Morbier - Le Glacier",
+    "operator": "https://www.espacenordiquejurassien.com/annuaire/site_nordique_de_morbier~ccb25020b08d9f35c028b706a04.html",
+    "sport": "cross_country_skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 923537390,
+  "center": {
+    "lat": 45.8058996,
+    "lon": 6.2489457
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Montmin - Col de la Forclaz",
+    "operator": "SAEM Montmin",
+    "url": "https://www.montminnews.com/station-de-ski.html",
+    "wikidata": "Q736450",
+    "wikipedia": "fr:Montmin"
+  }
+},
+{
+  "type": "way",
+  "id": 935832437,
+  "center": {
+    "lat": 44.1796248,
+    "lon": 5.2670845
+  },
+  "tags": {
+    "alt_name": "Station du Mont Ventoux",
+    "landuse": "winter_sports",
+    "name": "Station du Mont Serein",
+    "website": "https://www.stationdumontserein.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 962494483,
+  "center": {
+    "lat": 42.8310501,
+    "lon": 0.2516770
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine de Saint-Lary"
+  }
+},
+{
+  "type": "way",
+  "id": 999468694,
+  "center": {
+    "lat": 45.2519086,
+    "lon": 5.7815330
+  },
+  "tags": {
+    "area": "yes",
+    "landuse": "winter_sports",
+    "name": "Sappey-en-Chartreuse",
+    "operator": "Domaine alpin du Sappey-en-Chartreuse",
+    "website": "https://www.grenoble-tourisme.com/fr/decouvrir/le-territoire/le-sappey-en-chartreuse-porte-de-chartreuse"
+  }
+},
+{
+  "type": "way",
+  "id": 999474373,
+  "center": {
+    "lat": 45.3135386,
+    "lon": 5.8006603
+  },
+  "tags": {
+    "area": "yes",
+    "landuse": "winter_sports",
+    "name": "Les Egaux - St Hugues",
+    "website": "https://www.sainthugueslesegaux.com"
+  }
+},
+{
+  "type": "way",
+  "id": 999478349,
+  "center": {
+    "lat": 45.1234109,
+    "lon": 5.5072790
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Méaudre",
+    "operator": "Autrans-Méaudre en Vercors",
+    "website": "https://autrans-meaudre.com"
+  }
+},
+{
+  "type": "way",
+  "id": 1014515792,
+  "center": {
+    "lat": 47.9296663,
+    "lon": 7.0262560
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station du Markstein",
+    "operator": "SMMGB",
+    "website": "https://www.lemarkstein.net"
+  }
+},
+{
+  "type": "way",
+  "id": 1015879281,
+  "center": {
+    "lat": 44.2292749,
+    "lon": 6.6072335
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Seignus",
+    "website": "https://www.valdallos.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1020156861,
+  "center": {
+    "lat": 44.1191105,
+    "lon": 3.5499466
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station de ski de Prat Peyrot"
+  }
+},
+{
+  "type": "way",
+  "id": 1041618366,
+  "center": {
+    "lat": 42.9435284,
+    "lon": -0.3361612
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gourette",
+    "website": "https://www.gourette.com/",
+    "wikidata": "Q1540224"
+  }
+},
+{
+  "type": "way",
+  "id": 1041621662,
+  "center": {
+    "lat": 42.9005858,
+    "lon": -0.3849547
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Artouste",
+    "website": "https://artouste.fr/hiver/",
+    "wikidata": "Q2865855"
+  }
+},
+{
+  "type": "way",
+  "id": 1057871737,
+  "center": {
+    "lat": 46.7587331,
+    "lon": 6.4140521
+  },
+  "tags": {
+    "charge": "9-11 EUR / jour",
+    "email": "teleski.elf@gmail.com",
+    "fixme": "Détails à ajouter (piste bleue ouest, snowpark,…)",
+    "landuse": "winter_sports",
+    "name": "Station d'Entre-les-Fourgs",
+    "opening_hours": "Mo-Su 09:00-17:00",
+    "phone": "+33 3 81 49 21 23",
+    "website": "https://www.tourisme-metabief.com/activites-de-plein-air/teleskis-dentre-les-fourgsjougne.html"
+  }
+},
+{
+  "type": "way",
+  "id": 1083826895,
+  "center": {
+    "lat": 45.0655826,
+    "lon": 5.5516148
+  },
+  "tags": {
+    "access": "customers",
+    "description": "Pistes de ski et de luge en hiver\nVTT en été",
+    "landuse": "winter_sports",
+    "name": "Colline des Bains",
+    "operator": "Mairie de Villard de Lans",
+    "website": "https://www.villarddelans-correnconenvercors.com/activites/ski-et-activites-de-neige/luges-et-espace-de-glisse/luge-et-ski-park/"
+  }
+},
+{
+  "type": "way",
+  "id": 1105436338,
+  "center": {
+    "lat": 44.0653109,
+    "lon": 6.6002228
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "ski_resort",
+    "name": "La Colle Saint Michel",
+    "winter_activities": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 1137390776,
+  "center": {
+    "lat": 44.2295756,
+    "lon": 6.9109369
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Auron",
+    "operator": "Syndicat Mixte des stations du Mercantour"
+  }
+},
+{
+  "type": "way",
+  "id": 1137551497,
+  "center": {
+    "lat": 44.5823813,
+    "lon": 6.6713970
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Vars",
+    "website": "https://www.vars.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1137551498,
+  "center": {
+    "lat": 44.5973932,
+    "lon": 6.6271439
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Risoul",
+    "website": "https://www.risoul.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1137686002,
+  "center": {
+    "lat": 44.7149601,
+    "lon": 6.3275181
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Orcières Merlette",
+    "website": "https://orcieres.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1137686932,
+  "center": {
+    "lat": 44.6457614,
+    "lon": 6.2160113
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Skiable Saint-Léger-Les-Mélèzes",
+    "website": "https://www.champsaur-valgaudemar.com/hiver/ski-et-neige/les-stations/saint-leger-les-melezes"
+  }
+},
+{
+  "type": "way",
+  "id": 1137687339,
+  "center": {
+    "lat": 44.6362912,
+    "lon": 6.0614910
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Laye",
+    "website": "https://www.champsaur-valgaudemar.com/hiver/ski-et-neige/les-stations/laye/"
+  }
+},
+{
+  "type": "way",
+  "id": 1137880487,
+  "center": {
+    "lat": 45.0258296,
+    "lon": 5.5503756
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Villard de Lans - Corrençon",
+    "website": "https://www.villarddelans-correnconenvercors.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1144960794,
+  "center": {
+    "lat": 45.9581965,
+    "lon": 6.3418860
+  },
+  "tags": {
+    "contact:email": "glieres@haute-savoie-nordic.com",
+    "contact:facebook": "https://www.facebook.com/domainenordiquedesglieres/",
+    "contact:instagram": "https://www.instagram.com/glieres_domainenordique/",
+    "email": "glieres@haute-savoie-nordic.com",
+    "landuse": "winter_sports",
+    "name": "Plateau des Glières",
+    "phone": "+33 4 50 22 45 63",
+    "website": "https://domainenordiquedesglieres.com",
+    "wikidata": "Q3391934",
+    "wikipedia": "fr:Plateau des Glières"
+  }
+},
+{
+  "type": "way",
+  "id": 1226963957,
+  "center": {
+    "lat": 47.1999388,
+    "lon": 6.8483300
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Combe Saint-Pierre"
+  }
+},
+{
+  "type": "way",
+  "id": 1227293304,
+  "center": {
+    "lat": 46.3619499,
+    "lon": 6.0062548
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Mijoux - La Faucille",
+    "wikidata": "Q130382606"
+  }
+},
+{
+  "type": "way",
+  "id": 1227293450,
+  "center": {
+    "lat": 46.4072144,
+    "lon": 6.0025932
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Serra"
+  }
+},
+{
+  "type": "way",
+  "id": 1227293739,
+  "center": {
+    "lat": 46.3644234,
+    "lon": 5.9515002
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Hautes Combes"
+  }
+},
+{
+  "type": "way",
+  "id": 1227316991,
+  "center": {
+    "lat": 46.2874566,
+    "lon": 6.5084607
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Grange des Bois"
+  }
+},
+{
+  "type": "way",
+  "id": 1227322319,
+  "center": {
+    "lat": 46.0280111,
+    "lon": 6.5779058
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Romme"
+  }
+},
+{
+  "type": "way",
+  "id": 1227322457,
+  "center": {
+    "lat": 46.0084576,
+    "lon": 6.5340421
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Reposoir"
+  }
+},
+{
+  "type": "way",
+  "id": 1227322623,
+  "center": {
+    "lat": 46.0374701,
+    "lon": 6.4974444
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Mont Saxonnex"
+  }
+},
+{
+  "type": "way",
+  "id": 1227322990,
+  "center": {
+    "lat": 46.1178417,
+    "lon": 6.1675303
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Croisette"
+  }
+},
+{
+  "type": "way",
+  "id": 1227560922,
+  "center": {
+    "lat": 45.5342779,
+    "lon": 6.7562498
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Paradiski",
+    "website": "https://paradiski.com",
+    "wikidata": "Q1653915",
+    "wikipedia": "fr:Paradiski"
+  }
+},
+{
+  "type": "way",
+  "id": 1233831147,
+  "center": {
+    "lat": 47.9349011,
+    "lon": 7.0219818
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Snowkite Markstein",
+    "operator": "FFVL",
+    "website": "http://lavl.free.fr/site-parapente-vosges/Markstein-Snow-Kite.html"
+  }
+},
+{
+  "type": "way",
+  "id": 1253414983,
+  "center": {
+    "lat": 42.7275246,
+    "lon": 1.9690204
+  },
+  "tags": {
+    "email": "contact@ascou-ski.com",
+    "landuse": "winter_sports",
+    "name": "Ascou",
+    "phone": "+33 5 61 64 28 86",
+    "website": "https://www.ascou.ski"
+  }
+},
+{
+  "type": "way",
+  "id": 1254156311,
+  "center": {
+    "lat": 42.7736400,
+    "lon": 1.9219416
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Camurac",
+    "wikidata": "Q2935670",
+    "wikipedia": "fr:Camurac (station)"
+  }
+},
+{
+  "type": "way",
+  "id": 1254157227,
+  "center": {
+    "lat": 42.8829339,
+    "lon": -0.1651324
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Cauterets"
+  }
+},
+{
+  "type": "way",
+  "id": 1254184969,
+  "center": {
+    "lat": 44.4519497,
+    "lon": 6.8521758
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Larche"
+  }
+},
+{
+  "type": "way",
+  "id": 1254196497,
+  "center": {
+    "lat": 48.0732451,
+    "lon": 6.9125267
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Xonrupt - Le Poli"
+  }
+},
+{
+  "type": "way",
+  "id": 1254202046,
+  "center": {
+    "lat": 42.7115464,
+    "lon": 1.7081290
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Station de Beille"
+  }
+},
+{
+  "type": "way",
+  "id": 1254202941,
+  "center": {
+    "lat": 45.3251063,
+    "lon": 6.9930203
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Bessans"
+  }
+},
+{
+  "type": "way",
+  "id": 1254203163,
+  "center": {
+    "lat": 42.4726022,
+    "lon": 2.1114882
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Cambre d'Aze",
+    "website": "https://www.trio-pyrenees.com/cambre-aze"
+  }
+},
+{
+  "type": "way",
+  "id": 1254204569,
+  "center": {
+    "lat": 42.6236132,
+    "lon": 2.0514461
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Formiguères",
+    "website": "https://www.trio-pyrenees.com/formigueres/"
+  }
+},
+{
+  "type": "way",
+  "id": 1254204831,
+  "center": {
+    "lat": 48.0370166,
+    "lon": 7.0403921
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Gaschney 360"
+  }
+},
+{
+  "type": "way",
+  "id": 1254205243,
+  "center": {
+    "lat": 42.7361605,
+    "lon": 1.5185068
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Goulier"
+  }
+},
+{
+  "type": "way",
+  "id": 1254206235,
+  "center": {
+    "lat": 42.9101789,
+    "lon": 0.1357760
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Grand Tourmalet"
+  }
+},
+{
+  "type": "way",
+  "id": 1254206668,
+  "center": {
+    "lat": 42.7764222,
+    "lon": 1.3046339
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Guzet"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207021,
+  "center": {
+    "lat": 42.9705472,
+    "lon": 0.0018100
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Hautacam",
+    "website": "https://hautacam.com/fr/",
+    "wikipedia": "fr:Hautacam"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207106,
+  "center": {
+    "lat": 47.9868688,
+    "lon": 6.8659096
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Bresse Brabant"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207382,
+  "center": {
+    "lat": 46.0033779,
+    "lon": 3.7991009
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Loge des Gardes"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207488,
+  "center": {
+    "lat": 47.7714730,
+    "lon": 6.7766496
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Planche des Belles Filles"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207702,
+  "center": {
+    "lat": 48.0526414,
+    "lon": 7.0194798
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Site Nordique des Trois Fours",
+    "opening_hours": "09:00-17:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1254207942,
+  "center": {
+    "lat": 44.6678922,
+    "lon": 2.9240835
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Laguiole"
+  }
+},
+{
+  "type": "way",
+  "id": 1254208633,
+  "center": {
+    "lat": 48.4074671,
+    "lon": 7.2650811
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Champ du Feu"
+  }
+},
+{
+  "type": "way",
+  "id": 1254208731,
+  "center": {
+    "lat": 45.0566242,
+    "lon": 6.2819487
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Chazelet"
+  }
+},
+{
+  "type": "way",
+  "id": 1254209903,
+  "center": {
+    "lat": 42.8370623,
+    "lon": 1.7433190
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Les Monts d'Olmes"
+  }
+},
+{
+  "type": "way",
+  "id": 1254210298,
+  "center": {
+    "lat": 42.7676179,
+    "lon": 0.5663319
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Luchon-Superbagnères",
+    "website": "https://www.haute-garonne-montagne.com/stations/luchon-superbagneres-hiver/"
+  }
+},
+{
+  "type": "way",
+  "id": 1254210490,
+  "center": {
+    "lat": 44.6719444,
+    "lon": 5.7706131
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Lus la Jarjatte"
+  }
+},
+{
+  "type": "way",
+  "id": 1254210626,
+  "center": {
+    "lat": 42.8811262,
+    "lon": -0.0698298
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Luz Ardiden"
+  }
+},
+{
+  "type": "way",
+  "id": 1254210898,
+  "center": {
+    "lat": 46.1698198,
+    "lon": 5.8529117
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Menthières",
+    "wikidata": "Q130382806"
+  }
+},
+{
+  "type": "way",
+  "id": 1254211056,
+  "center": {
+    "lat": 42.7224803,
+    "lon": 2.0093539
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Mijanès - Donezan"
+  }
+},
+{
+  "type": "way",
+  "id": 1254211640,
+  "center": {
+    "lat": 44.8614021,
+    "lon": 6.4732239
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Pelvoux-Vallouise"
+  }
+},
+{
+  "type": "way",
+  "id": 1254211862,
+  "center": {
+    "lat": 42.5500155,
+    "lon": 1.7963962
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Porte Puymorens"
+  }
+},
+{
+  "type": "way",
+  "id": 1254212810,
+  "center": {
+    "lat": 42.6567092,
+    "lon": 2.0622578
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Puyvalador"
+  }
+},
+{
+  "type": "way",
+  "id": 1254213032,
+  "center": {
+    "lat": 44.6718568,
+    "lon": 6.2825975
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Serre Eyraud"
+  }
+},
+{
+  "type": "way",
+  "id": 1254213391,
+  "center": {
+    "lat": 43.9910089,
+    "lon": 7.4047452
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Turini Camp d'Argent"
+  }
+},
+{
+  "type": "way",
+  "id": 1254213592,
+  "center": {
+    "lat": 42.7831439,
+    "lon": 0.3830009
+  },
+  "tags": {
+    "contact:city": "Aspet",
+    "contact:email": "infos@station-vallouron.fr",
+    "contact:facebook": "https://www.facebook.com/stationdevallouron/",
+    "contact:phone": "+33 5 62 99 99 00",
+    "contact:place": "Las Vignes",
+    "contact:postcode": "31160",
+    "landuse": "winter_sports",
+    "name": "Val Louron",
+    "website": "https://www.station-vallouron.fr/",
+    "wikidata": "Q3553369",
+    "wikipedia": "fr:Val-Louron"
+  }
+},
+{
+  "type": "way",
+  "id": 1254213657,
+  "center": {
+    "lat": 44.1541801,
+    "lon": 6.7390319
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Val Pelens"
+  }
+},
+{
+  "type": "way",
+  "id": 1254287014,
+  "center": {
+    "lat": 45.1384959,
+    "lon": 5.4845414
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Coulmes"
+  }
+},
+{
+  "type": "way",
+  "id": 1254287966,
+  "center": {
+    "lat": 44.7717832,
+    "lon": 6.9608927
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Ristolas en Queyras"
+  }
+},
+{
+  "type": "way",
+  "id": 1254296225,
+  "center": {
+    "lat": 45.6731930,
+    "lon": 6.0114929
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Revard"
+  }
+},
+{
+  "type": "way",
+  "id": 1254297385,
+  "center": {
+    "lat": 42.5314673,
+    "lon": 2.0259154
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Font-Romeu Pyrénées 2000"
+  }
+},
+{
+  "type": "way",
+  "id": 1254312210,
+  "center": {
+    "lat": 45.1125988,
+    "lon": 5.8898948
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Skiable Chamrousse"
+  }
+},
+{
+  "type": "way",
+  "id": 1274802207,
+  "center": {
+    "lat": 45.9909255,
+    "lon": 6.5185179
+  },
+  "tags": {
+    "fuzzy": "yes",
+    "landuse": "winter_sports",
+    "name": "Cascades de Glace du Reposoir"
+  }
+},
+{
+  "type": "way",
+  "id": 1342110296,
+  "center": {
+    "lat": 42.5405298,
+    "lon": 2.1156293
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Quillane",
+    "sport": "skiing",
+    "website": "https://www.laquillane.fr/",
+    "wikidata": "Q3212105",
+    "wikipedia": "ca:La Quillana"
+  }
+},
+{
+  "type": "way",
+  "id": 1352488780,
+  "center": {
+    "lat": 48.0597624,
+    "lon": 7.0198809
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "La Schlucht"
+  }
+},
+{
+  "type": "way",
+  "id": 1354438774,
+  "center": {
+    "lat": 45.5244663,
+    "lon": 6.7952689
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Nordique Peisey-Vallandry",
+    "website": "https://www.peisey-vallandry.com/hiver/domaine-nordique-peisey-vallandry.html"
+  }
+},
+{
+  "type": "way",
+  "id": 1355974363,
+  "center": {
+    "lat": 45.4541948,
+    "lon": 6.7518906
+  },
+  "tags": {
+    "contact:facebook": "https://www.facebook.com/sitenordiquedechampagnylehaut",
+    "landuse": "winter_sports",
+    "name": "Domaine Nordique - Vallon de Champagny le Haut",
+    "website": "https://www.la-plagne.com/savourez-une-multitude-d-activites/du-ski-aux-multiples-facettes/ski-de-fond-ski-nordique/itineraires-de-ski-de-fond/domaine-nordique-vallon-de-champagny-le-haut"
+  }
+},
+{
+  "type": "way",
+  "id": 1422098961,
+  "center": {
+    "lat": 46.1568518,
+    "lon": 6.6807023
+  },
+  "tags": {
+    "alt_name": "Morzine-Les gets",
+    "alt_website": "www.ski-morzine.com",
+    "landuse": "winter_sports",
+    "name": "Les Gets-Morzine",
+    "operator": "Solegets & DLMorzine",
+    "website": "https://pass.lesgets.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1422277144,
+  "center": {
+    "lat": 45.2611714,
+    "lon": 6.5787893
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Val Thorens",
+    "website": "https://www.valthorens.com/ski/domaine-skiable/"
+  }
+},
+{
+  "type": "way",
+  "id": 1449703479,
+  "center": {
+    "lat": 46.4395995,
+    "lon": 6.0791766
+  },
+  "tags": {
+    "contact:website": "https://www.jurasurleman.com/en/domaine-skiable-en/dole-tuffes/",
+    "landuse": "winter_sports",
+    "name": "Dôle-Tuffes"
+  }
+},
+{
+  "type": "way",
+  "id": 1485685609,
+  "center": {
+    "lat": 46.0064267,
+    "lon": 6.5039335
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Reposoir Chalet Neuf"
+  }
+},
+{
+  "type": "way",
+  "id": 1546346394,
+  "center": {
+    "lat": 46.3146566,
+    "lon": 5.8984167
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Moussières"
+  }
+},
+{
+  "type": "way",
+  "id": 1546348449,
+  "center": {
+    "lat": 46.3771347,
+    "lon": 5.9795109
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Lajoux"
+  }
+},
+{
+  "type": "way",
+  "id": 1550499900,
+  "center": {
+    "lat": 46.5754361,
+    "lon": 6.0528951
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Morbier - Les Combes (ski nordique)",
+    "sport": "skiing",
+    "website": "https://www.espacenordiquejurassien.com/annuaire/site_nordique_de_morbier~ccb25020b08d9f35c028b706a04.html"
+  }
+},
+{
+  "type": "way",
+  "id": 1552314372,
+  "center": {
+    "lat": 46.2639125,
+    "lon": 6.8563187
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Snowpark de Chatel Secteur SUPER CHATEL"
+  }
+},
+{
+  "type": "way",
+  "id": 1575511238,
+  "center": {
+    "lat": 42.5485402,
+    "lon": 1.6734776
+  },
+  "tags": {
+    "contact:website": "https://www.grandvalira.com/",
+    "landuse": "winter_sports",
+    "name": "Grandvalira",
+    "wikidata": "Q1918034"
+  }
+},
+{
+  "type": "way",
+  "id": 1577984674,
+  "center": {
+    "lat": 44.3530921,
+    "lon": 6.7055713
+  },
+  "tags": {
+    "contact:website": "https://www.sauze.com/",
+    "landuse": "winter_sports",
+    "name": "Le Sauze"
+  }
+},
+{
+  "type": "way",
+  "id": 1577987264,
+  "center": {
+    "lat": 46.2951470,
+    "lon": 5.9629179
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Lélex"
+  }
+},
+{
+  "type": "relation",
+  "id": 3478130,
+  "center": {
+    "lat": 42.7789325,
+    "lon": -0.5418449
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Candanchú",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q588136",
+    "wikipedia": "es:Candanchú"
+  }
+},
+{
+  "type": "relation",
+  "id": 8763133,
+  "center": {
+    "lat": 45.1125988,
+    "lon": 5.8898948
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Chamrousse",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 10059812,
+  "center": {
+    "lat": 45.6731930,
+    "lon": 6.0114929
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Plateau du Revard",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13766275,
+  "center": {
+    "lat": 46.0467806,
+    "lon": 6.7179213
+  },
+  "tags": {
+    "alt_name": "4 Villages;Grand Massif - 4 Villages;Grand Massif - Vill4ages",
+    "landuse": "winter_sports",
+    "name": "Villages",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13766276,
+  "center": {
+    "lat": 46.0006731,
+    "lon": 6.6991340
+  },
+  "tags": {
+    "addr:city": "Flaine",
+    "alt_name": "Grand Massif - Flaine",
+    "landuse": "winter_sports",
+    "name": "Flaine",
+    "type": "multipolygon",
+    "website": "https://www.flaine.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 13766277,
+  "center": {
+    "lat": 46.0296764,
+    "lon": 6.7179213
+  },
+  "tags": {
+    "addr:city": "Flaine",
+    "addr:postcode": "74300",
+    "alt_name": "Grand Massif",
+    "landuse": "winter_sports",
+    "name": "Le Grand Massif",
+    "operator": "SOREMAC",
+    "type": "multipolygon",
+    "website": "https://winter.grand-massif.com/ski-area",
+    "wikidata": "Q2310818",
+    "wikipedia": "fr:Grand Massif"
+  }
+},
+{
+  "type": "relation",
+  "id": 17261841,
+  "center": {
+    "lat": 45.8358079,
+    "lon": 6.6273765
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Evasion Mont Blanc",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17261990,
+  "center": {
+    "lat": 45.2550447,
+    "lon": 6.8531666
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Espace Haute Maurienne Vanoise",
+    "source": "https://www.haute-maurienne-vanoise.com/ski-et-glisse/lespace-haute-maurienne-vanoise/;local knowledge",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17273806,
+  "center": {
+    "lat": 45.1780974,
+    "lon": 5.5434798
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Domaine Autrans - Méaudre",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19457834,
+  "center": {
+    "lat": 46.2215228,
+    "lon": 6.7160579
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Les Portes du Soleil",
+    "previously": "way:742636566",
+    "type": "multipolygon",
+    "website": "https://www.portesdusoleil.com/",
+    "wikidata": "Q264706",
+    "wikipedia": "fr:Portes du Soleil"
+  }
+},
+{
+  "type": "relation",
+  "id": 20949263,
+  "center": {
+    "lat": 46.1897144,
+    "lon": 6.7589350
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Avoriaz",
+    "operator": "SERMA",
+    "type": "multipolygon",
+    "website": "https://www.avoriaz.com/en/discover/discover/ski-area-and-maps/"
+  }
+},
+{
+  "type": "relation",
+  "id": 20949264,
+  "center": {
+    "lat": 46.2065051,
+    "lon": 6.8324737
+  },
+  "tags": {
+    "alt_name": "Domaine Suisse 3CM",
+    "landuse": "winter_sports",
+    "name": "Champéry – Les Crosets – Champoussin – Morgins",
+    "type": "multipolygon",
+    "website": "https://www.regiondentsdumidi.ch"
+  }
+},
+{
+  "type": "relation",
+  "id": 20949265,
+  "center": {
+    "lat": 46.2623325,
+    "lon": 6.8177597
+  },
+  "tags": {
+    "alt_name": "Châtel",
+    "landuse": "winter_sports",
+    "name": "Espace Liberté",
+    "operator": "SELCA & SAEM & SETT",
+    "type": "multipolygon",
+    "website": "https://en.chatel.com/chatel-and-portes-du-soleil-ski-areas.html"
+  }
+},
+{
+  "type": "relation",
+  "id": 21164474,
+  "center": {
+    "lat": 45.5293179,
+    "lon": 2.8317305
+  },
+  "tags": {
+    "contact:website": "https://superbesse.com/",
+    "landuse": "winter_sports",
+    "name": "Le Grand Sancy",
+    "source": "https://www.wikiwand.com/fr/Le_Grand_Sancy",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

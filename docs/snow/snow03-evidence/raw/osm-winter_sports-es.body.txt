@@ -1,0 +1,563 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T21:59:08Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 13424356,
+  "center": {
+    "lat": 43.0557390,
+    "lon": -5.3969397
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación Invernal Fuentes de Invierno",
+    "sport": "skiing",
+    "wikidata": "Q613056",
+    "wikipedia": "es:Estación Invernal Fuentes de Invierno"
+  }
+},
+{
+  "type": "way",
+  "id": 27153705,
+  "center": {
+    "lat": 42.5649963,
+    "lon": 0.5692888
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí de Aramón Cerler",
+    "name:ca": "Estació d'esquí d'Aramón Cerler",
+    "natural": "scrub",
+    "wikidata": "Q625867",
+    "wikipedia": "ca:Aramón Cerler"
+  }
+},
+{
+  "type": "way",
+  "id": 27163365,
+  "center": {
+    "lat": 42.7752963,
+    "lon": -0.4015317
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí Aramón Formigal"
+  }
+},
+{
+  "type": "way",
+  "id": 27163382,
+  "center": {
+    "lat": 42.7053425,
+    "lon": -0.2710413
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí Aramón Panticosa",
+    "sport": "skiing",
+    "wikidata": "Q2859512"
+  }
+},
+{
+  "type": "way",
+  "id": 54580256,
+  "center": {
+    "lat": 42.9843635,
+    "lon": -5.7587263
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Sector Celleros (Abandonado)"
+  }
+},
+{
+  "type": "way",
+  "id": 60960178,
+  "center": {
+    "lat": 41.1952225,
+    "lon": -3.4757509
+  },
+  "tags": {
+    "addr:city": "La Pinilla",
+    "addr:postcode": "40500",
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "La Pinilla Estación de Esquí",
+    "wikidata": "Q2616429",
+    "wikipedia": "es:Estación de esquí de La Pinilla"
+  }
+},
+{
+  "type": "way",
+  "id": 88141668,
+  "center": {
+    "lat": 42.4057502,
+    "lon": -6.5230712
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación de Esquí del Morredero",
+    "name:es": "Estación de Esquí del Morredero",
+    "name:gl": "Estación de Esquí do Morredeiro",
+    "wikidata": "Q5847603",
+    "wikipedia": "es:Estación de esquí de El Morredero"
+  }
+},
+{
+  "type": "way",
+  "id": 178706604,
+  "center": {
+    "lat": 43.0382079,
+    "lon": -5.3912289
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Cebolledo y Requejines)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 191993446,
+  "center": {
+    "lat": 42.9893450,
+    "lon": -6.4172485
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Leitariegos",
+    "wikidata": "Q5847607",
+    "wikipedia": "es:Estación de esquí de Leitariegos"
+  }
+},
+{
+  "type": "way",
+  "id": 194973300,
+  "center": {
+    "lat": 43.0612869,
+    "lon": -5.3805920
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Saliencias)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 200619909,
+  "center": {
+    "lat": 42.2659493,
+    "lon": -7.2976603
+  },
+  "tags": {
+    "alt_name": "Estación de Esquí Cabeza de Manzaneda",
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí de Manzaneda",
+    "sport": "skiing",
+    "wikidata": "Q7400581",
+    "wikipedia": "gl:Estación de montaña Manzaneda"
+  }
+},
+{
+  "type": "way",
+  "id": 259405042,
+  "center": {
+    "lat": 42.0378747,
+    "lon": -2.7824411
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Punto de Nieve Santa Inés",
+    "website": "https://www.puntodenievesantaines.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 320573837,
+  "center": {
+    "lat": 40.3481211,
+    "lon": -5.6895843
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí Sierra de Béjar - La Covatilla",
+    "wikidata": "Q4566905",
+    "wikipedia": "es:Estación de esquí de La Covatilla"
+  }
+},
+{
+  "type": "way",
+  "id": 372072025,
+  "center": {
+    "lat": 42.4245715,
+    "lon": 2.2606176
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Vallter 2000",
+    "wikidata": "Q2717359",
+    "wikipedia": "ca:Vallter 2000"
+  }
+},
+{
+  "type": "way",
+  "id": 406520526,
+  "center": {
+    "lat": 42.5508933,
+    "lon": 1.0819951
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Espot Esquí",
+    "name:ca": "Espot Esquí",
+    "sport": "skiing",
+    "wikidata": "Q2717381",
+    "wikipedia": "ca:Espot Esquí"
+  }
+},
+{
+  "type": "way",
+  "id": 406520527,
+  "center": {
+    "lat": 42.4220571,
+    "lon": 1.2109905
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Port Ainé",
+    "name:ca": "Port Ainé",
+    "sport": "skiing",
+    "wikidata": "Q2717352",
+    "wikipedia": "ca:Estació d'esquí Port Ainé"
+  }
+},
+{
+  "type": "way",
+  "id": 654498540,
+  "center": {
+    "lat": 37.0753974,
+    "lon": -3.3887728
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí y Montaña de Sierra Nevada",
+    "sport": "skiing",
+    "start_date": "1964",
+    "website": "https://sierranevada.es",
+    "wikidata": "Q534256",
+    "wikipedia": "es:Estación de esquí de Sierra Nevada"
+  }
+},
+{
+  "type": "way",
+  "id": 738132226,
+  "center": {
+    "lat": 42.3234065,
+    "lon": 1.9442865
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí de la Molina",
+    "name:ca": "Estació d'esquí de la Molina",
+    "wikidata": "Q18180984",
+    "wikipedia": "ca:La Molina (estació d'esquí)"
+  }
+},
+{
+  "type": "way",
+  "id": 738136889,
+  "center": {
+    "lat": 42.1802095,
+    "lon": 1.5470867
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí Port del Comte",
+    "name:ca": "Estació d'esquí Port del Comte"
+  }
+},
+{
+  "type": "way",
+  "id": 738140305,
+  "center": {
+    "lat": 42.3356321,
+    "lon": 1.9047029
+  },
+  "tags": {
+    "contact:website": "https://www.masella.com/",
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí de Masella"
+  }
+},
+{
+  "type": "way",
+  "id": 738140370,
+  "center": {
+    "lat": 42.6772808,
+    "lon": 1.2195742
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí Tavascan",
+    "name:ca": "Estació d'esquí Tavascan"
+  }
+},
+{
+  "type": "way",
+  "id": 738150827,
+  "center": {
+    "lat": 40.1085253,
+    "lon": -1.0258804
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación esquí Javalambre",
+    "wikidata": "Q3572035",
+    "wikipedia": "es:Aramón Javalambre"
+  }
+},
+{
+  "type": "way",
+  "id": 738151414,
+  "center": {
+    "lat": 40.3823184,
+    "lon": -0.6320169
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Valdelinares",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 738156377,
+  "center": {
+    "lat": 42.4730083,
+    "lon": 0.8764479
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí Boí-Taüll",
+    "name:ca": "Estació d'esquí Boí-Taüll",
+    "name:es": "Estación de esquí de Boí Taüll",
+    "sport": "skiing",
+    "website": "https://www.boitaull.cat",
+    "wikidata": "Q2747063",
+    "wikipedia": "ca:Estació d'esquí Boí-Taüll"
+  }
+},
+{
+  "type": "way",
+  "id": 758138466,
+  "center": {
+    "lat": 42.7933867,
+    "lon": -0.5399326
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Le Somport",
+    "website": "https://www.lesomport.com/",
+    "wikidata": "Q3227291"
+  }
+},
+{
+  "type": "way",
+  "id": 808834228,
+  "center": {
+    "lat": 43.0443660,
+    "lon": -5.4036772
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Riopinos)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 843625525,
+  "center": {
+    "lat": 42.2520735,
+    "lon": -2.9693957
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación de esquí de Valdezcaray",
+    "sport": "skiing",
+    "website": "https://www.valdezcaray.es/",
+    "wikidata": "Q3553510",
+    "wikipedia": "es:Valdezcaray"
+  }
+},
+{
+  "type": "way",
+  "id": 987243867,
+  "center": {
+    "lat": 42.5522842,
+    "lon": 1.4698950
+  },
+  "tags": {
+    "contact:website": "https://www.palarinsal.com/ca",
+    "landuse": "winter_sports",
+    "name": "Pal-Arinsal",
+    "name:ca": "Pal-Arinsal",
+    "operator": "Grandvalira",
+    "wikidata": "Q2551051",
+    "wikipedia": "ca:Vallnord"
+  }
+},
+{
+  "type": "way",
+  "id": 1578231369,
+  "center": {
+    "lat": 42.6936609,
+    "lon": 0.9692477
+  },
+  "tags": {
+    "contact:website": "https://www.baqueira.es/es",
+    "landuse": "winter_sports",
+    "name": "Baqueira/Beret"
+  }
+},
+{
+  "type": "relation",
+  "id": 1462651,
+  "center": {
+    "lat": 42.9744648,
+    "lon": -5.7804162
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña Valgrande-Pajares",
+    "name:ast": "Estación Invernal y de Montaña Valgrande-Payares",
+    "name:es": "Estación Invernal y de Montaña Valgrande-Pajares",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q6159000",
+    "wikipedia": "es:Estación Invernal y de Montaña Valgrande-Pajares"
+  }
+},
+{
+  "type": "relation",
+  "id": 2641663,
+  "center": {
+    "lat": 43.0368820,
+    "lon": -4.3865309
+  },
+  "tags": {
+    "alt_name": "Estación de esquí de Alto Campoo",
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación de Esquí y Montaña Alto Campoo",
+    "short_name": "Alto Campoo",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q4736779",
+    "wikipedia": "es:Alto Campoo"
+  }
+},
+{
+  "type": "relation",
+  "id": 2684548,
+  "center": {
+    "lat": 40.7965048,
+    "lon": -3.9713681
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación de Esquí de Valdesquí",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q3750961"
+  }
+},
+{
+  "type": "relation",
+  "id": 3478130,
+  "center": {
+    "lat": 42.7789325,
+    "lon": -0.5418449
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Candanchú",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q588136",
+    "wikipedia": "es:Candanchú"
+  }
+},
+{
+  "type": "relation",
+  "id": 3479356,
+  "center": {
+    "lat": 42.8047426,
+    "lon": -0.4965084
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación Invernal de Astún",
+    "sport": "skiing",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12475343,
+  "center": {
+    "lat": 42.1904227,
+    "lon": -3.3065714
+  },
+  "tags": {
+    "disused:leisure": "sports_centre",
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí Valle del Sol",
+    "type": "multipolygon",
+    "wikidata": "Q5847609",
+    "wikipedia": "es:Estación de esquí del Valle del Sol"
+  }
+},
+{
+  "type": "relation",
+  "id": 19666571,
+  "center": {
+    "lat": 41.0014406,
+    "lon": -3.8299020
+  },
+  "tags": {
+    "access": "yes",
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Centro de esquí nórdico Navafría",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "website": "https://doblehuella.es/",
+    "wikidata": "Q5486448",
+    "wikipedia": "es:Centro de esquí nórdico Navafría"
+  }
+}
+
+  ]
+}

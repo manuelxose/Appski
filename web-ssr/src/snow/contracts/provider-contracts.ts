@@ -47,6 +47,8 @@ export type ProviderId =
   | 'ign-fr'
   | 'osm'
   | 'protomaps'
+  | 'open-meteo'
+  | 'meteoalarm'
   | 'editorial-stations'
   | 'editorial-report'
   // Declarados pero SIEMPRE bloqueados (existen para que la guarda los rechace):

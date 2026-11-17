@@ -1,0 +1,449 @@
+{
+  "note": "Verificación REAL end-to-end de SNOW-03 sobre el servidor de nieve ejecutado desde fuente. Consultas HTTP reales, red real y SIGKILL real. Evidencia normalizada: sin timestamps ni puertos.",
+  "kind": "snow03-e2e",
+  "results": [
+    {
+      "name": "F5a: primer intento contra upstream 503 ⇒ error retryable",
+      "ok": true,
+      "detail": {
+        "status": "error",
+        "retryable": true
+      }
+    },
+    {
+      "name": "F5a: segundo intento (upstream recuperado) ⇒ sirve datos reales",
+      "ok": true,
+      "detail": {
+        "status": "ok",
+        "alerts": 5
+      }
+    },
+    {
+      "name": "F5a: el pipeline reintenta el 503 y termina en ok",
+      "ok": true,
+      "detail": {
+        "status": "ok",
+        "hits": 2
+      }
+    },
+    {
+      "name": "F5a: las métricas cuentan el fallo y el acierto reales",
+      "ok": true,
+      "detail": {
+        "attempts": 2
+      }
+    },
+    {
+      "name": "F1: /v1/config responde 200",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "F1: meteoalarm declarado como fuente",
+      "ok": true,
+      "detail": {
+        "configured": true
+      }
+    },
+    {
+      "name": "F1: meteoalarm con licencia con atribución",
+      "ok": true,
+      "detail": {
+        "licenseStatus": "allowed-with-attribution"
+      }
+    },
+    {
+      "name": "F1: meteoalarm declara weather-alert",
+      "ok": true,
+      "detail": {
+        "dataTypes": [
+          "weather-alert"
+        ]
+      }
+    },
+    {
+      "name": "F1: /v1/config incluye cobertura medida",
+      "ok": true,
+      "detail": {
+        "dataTypes": 8,
+        "countries": 4
+      }
+    },
+    {
+      "name": "F1: weather-alert en cobertura con eslabones (nunca inventada)",
+      "ok": true,
+      "detail": {
+        "state": "available"
+      }
+    },
+    {
+      "name": "F1: no se exponen nombres de variables de entorno",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "F2: /alerts responde 200",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "F2: /alerts sirve estado tipado",
+      "ok": true,
+      "detail": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "F2: procedencia completa",
+      "ok": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "name": "F2: avisos REALES servidos",
+      "ok": true,
+      "detail": {
+        "n": 75
+      }
+    },
+    {
+      "name": "F2: fuente meteoalarm",
+      "ok": true,
+      "detail": {
+        "source": "meteoalarm"
+      }
+    },
+    {
+      "name": "F2: atribución es el TEXTO obligatorio del NMHS del país",
+      "ok": true,
+      "detail": {
+        "attribution": "AEMET vía EUMETNET – MeteoAlarm",
+        "expected": "AEMET vía EUMETNET – MeteoAlarm"
+      }
+    },
+    {
+      "name": "F2: /alerts publica el disclaimer LITERAL de los T&C",
+      "ok": true,
+      "detail": {
+        "matches": true
+      }
+    },
+    {
+      "name": "F2: /alerts publica el sourceUrl obligatorio",
+      "ok": true,
+      "detail": {
+        "sourceUrl": "https://meteoalarm.org/en/live/"
+      }
+    },
+    {
+      "name": "F2: el disclaimer publicado no trae restos de Markdown",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "F2: cada aviso trae enlace utilizable (obligación «must include a link»)",
+      "ok": true,
+      "detail": {
+        "sample": "https://meteoalarm.org?geocode=EMMA_ID:ES846"
+      }
+    },
+    {
+      "name": "F2: el TTL efectivo del feed es ≤10 min (nunca supera el máximo legal)",
+      "ok": true,
+      "detail": {
+        "ttlMs": 600000,
+        "maxLegalMs": 600000
+      }
+    },
+    {
+      "name": "F2: el TTL efectivo es el techo declarado (10 min)",
+      "ok": true,
+      "detail": {
+        "ttlMs": 600000
+      }
+    },
+    {
+      "name": "F2: observedAt es una emisión real (no el instante de la petición)",
+      "ok": true,
+      "detail": {
+        "observedAt": "<timestamp>"
+      }
+    },
+    {
+      "name": "F2: updatedAt refleja la emisión (cap:sent)",
+      "ok": true,
+      "detail": {
+        "updatedAt": "<timestamp>"
+      }
+    },
+    {
+      "name": "F2: antigüedad MEDIDA > 0 (no se recalcula desde la petición)",
+      "ok": true,
+      "detail": {
+        "freshness": 7045
+      }
+    },
+    {
+      "name": "F2: antigüedad coherente con la emisión real (±120 s)",
+      "ok": true,
+      "detail": {
+        "freshness": 7045,
+        "fromEmission": 7045
+      }
+    },
+    {
+      "name": "F2: la emisión no es futura",
+      "ok": true,
+      "detail": {
+        "observedAt": "<timestamp>"
+      }
+    },
+    {
+      "name": "F2: la emisión cae dentro de la ventana de validez de los avisos servidos",
+      "ok": true,
+      "detail": {
+        "observedAt": "<timestamp>",
+        "oldestValidUntil": "<timestamp>"
+      }
+    },
+    {
+      "name": "F2: niveles dentro del contrato",
+      "ok": true,
+      "detail": {
+        "levels": [
+          "yellow",
+          "orange"
+        ]
+      }
+    },
+    {
+      "name": "F2b: /v1/stations responde 200",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "F2b: /v1/stations devuelve estaciones",
+      "ok": true,
+      "detail": {
+        "n": 20
+      }
+    },
+    {
+      "name": "F2b: /v1/stations expone procedencia",
+      "ok": true,
+      "detail": {
+        "source": "editorial-stations"
+      }
+    },
+    {
+      "name": "F2b: cada estación trae identidad (slug+country)",
+      "ok": true,
+      "detail": {
+        "ok": 20,
+        "total": 20
+      }
+    },
+    {
+      "name": "F2b: cobertura por país declarada, sin inventar",
+      "ok": true,
+      "detail": {
+        "countries": [
+          "ES",
+          "FR"
+        ]
+      }
+    },
+    {
+      "name": "F2b: el catálogo de Fase B existe en disco",
+      "ok": true,
+      "detail": {
+        "records": 587
+      }
+    },
+    {
+      "name": "F2b: /v1/stations declara la fuente del maestro",
+      "ok": true,
+      "detail": {
+        "source": "editorial-stations"
+      }
+    },
+    {
+      "name": "F2b: el detalle de una estación del catálogo resuelve (200)",
+      "ok": true,
+      "detail": {
+        "slug": "ordino-arcalis",
+        "status": 200
+      }
+    },
+    {
+      "name": "F2b: /v1/stations sirve TODOS los registros del catálogo (integración real)",
+      "ok": true,
+      "detail": {
+        "served": 588,
+        "catalog": 587,
+        "total": 588,
+        "overlap": 587
+      }
+    },
+    {
+      "name": "F5: proveedor caído ⇒ el endpoint NUNCA devuelve 500",
+      "ok": true,
+      "detail": {
+        "http": [
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "F5: responde 200 con estado de DATO tipado (no error de transporte)",
+      "ok": true,
+      "detail": {
+        "status": [
+          "no_data",
+          "no_data"
+        ]
+      }
+    },
+    {
+      "name": "F5: sin dato no se devuelven ceros ni payload inventado",
+      "ok": true,
+      "detail": {
+        "data": [
+          "absent",
+          "absent"
+        ]
+      }
+    },
+    {
+      "name": "F5: la procedencia sigue presente en la degradación",
+      "ok": true,
+      "detail": {
+        "hasProv": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "F5: la degradación es idempotente entre llamadas",
+      "ok": true,
+      "detail": {
+        "statuses": [
+          "no_data",
+          "no_data"
+        ]
+      }
+    },
+    {
+      "name": "F3: /forecast responde 200 (degradación, no error)",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "F3: /forecast degrada de forma tipada",
+      "ok": true,
+      "detail": {
+        "status": "no_data"
+      }
+    },
+    {
+      "name": "F3: Open-Meteo NO aparece como fuente de pronóstico",
+      "ok": true,
+      "detail": {
+        "source": "copernicus-c3s"
+      }
+    },
+    {
+      "name": "F3: sin dato no hay bundle inventado",
+      "ok": true,
+      "detail": {
+        "status": "no_data"
+      }
+    },
+    {
+      "name": "F4: POST /admin/reports acepta el parte",
+      "ok": true,
+      "detail": {
+        "status": 201
+      }
+    },
+    {
+      "name": "F4: el parte se lee ANTES del kill",
+      "ok": true,
+      "detail": {
+        "liftsOpen": 17
+      }
+    },
+    {
+      "name": "F4: proceso terminado con SIGKILL (sin cierre ordenado)",
+      "ok": true,
+      "detail": {
+        "code": null,
+        "signal": "SIGKILL"
+      }
+    },
+    {
+      "name": "F4: tras SIGKILL el parte sigue ahí",
+      "ok": true,
+      "detail": {
+        "liftsOpen": 17
+      }
+    },
+    {
+      "name": "F4: se conserva la atribución del parte",
+      "ok": true,
+      "detail": {
+        "source": "editorial-report"
+      }
+    },
+    {
+      "name": "F4: /v1/config responde tras el reinicio",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "F4: el almacén sólo contiene colecciones .json",
+      "ok": true,
+      "detail": {
+        "files": [
+          ".seed-applied.json",
+          "osm-derived.json",
+          "provenance.json",
+          "snow-reports.json",
+          "stations.json"
+        ],
+        "nonCollection": [],
+        "collections": [
+          "osm-derived.json",
+          "provenance.json",
+          "snow-reports.json",
+          "stations.json"
+        ]
+      }
+    },
+    {
+      "name": "F4: el almacén declara si su seed se aplicó (marcador de arranque)",
+      "ok": true,
+      "detail": {
+        "hasMarker": true
+      }
+    }
+  ],
+  "summary": {
+    "total": 56,
+    "passed": 56,
+    "failed": 0
+  }
+}

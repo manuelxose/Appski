@@ -43,7 +43,8 @@ import { SnowDataService } from '../chain/chain';
 import { FALLBACK_CHAINS } from '../chain/fallback-chains';
 import { requireEnv } from '../config/env';
 import { RATE_LIMITS } from '../cache/rate-limit';
-import { authorizationFor, attributionFor } from '../providers/authorizations';
+import { buildCoverageReport, type ProviderRuntimeState } from '../cache/coverage-metrics';
+import { authorizationFor, attributionFor, METEOALARM_DISCLAIMER, METEOALARM_SOURCE_URL } from '../providers/authorizations';
 import { BLOCKED_PROVIDER_IDS, isBlockedProvider } from '../providers/blocked-providers';
 import { makeProvenance } from '../providers/provenance';
 import { toProvenanceDto } from './http-mapping';
@@ -237,6 +238,17 @@ export class SnowService {
       case 'ok':
       case 'stale': {
         const items = r.data.alerts.map((a) => toAlertItem(a, r.provenance, now));
+        // Obligaciones LITERALES de los T&C de MeteoAlarm: si lo servido viene de
+        // ese proveedor la respuesta DEBE llevar disclaimer y enlace, para que un
+        // cliente pueda cumplirlos sólo con la API. Se toman del bundle que
+        // resuelve el adapter; aquí sólo se aplica un respaldo por si faltara.
+        const legal =
+          r.provenance.source === 'meteoalarm'
+            ? {
+                disclaimer: r.data.disclaimer ?? METEOALARM_DISCLAIMER,
+                sourceUrl: r.data.sourceUrl ?? METEOALARM_SOURCE_URL,
+              }
+            : {};
         // Si TODOS los avisos han caducado no hay alerta vigente: `no_data` con
         // `source-silent`, nunca un `ok` que sugiera avisos activos.
         if (items.length === 0 || items.every((a) => a.expired)) {
@@ -245,9 +257,10 @@ export class SnowService {
             reason: 'source-silent',
             provenance: toProvenanceDto(r.provenance),
             alerts: items,
+            ...legal,
           };
         }
-        return { status: r.status, provenance: toProvenanceDto(r.provenance), alerts: items };
+        return { status: r.status, provenance: toProvenanceDto(r.provenance), alerts: items, ...legal };
       }
       case 'no_data':
         return { status: 'no_data', reason: r.reason, provenance: toProvenanceDto(r.provenance), alerts: [] };
@@ -475,6 +488,18 @@ export class SnowService {
         rateLimit: null,
         breaker: breakerByParty.get('editorial-report'),
       }),
+      // MeteoAlarm (SNOW-03): feed Atom público, SIN credencial, licencia
+      // verificada en el propio feed (equivalente CC BY 4.0) ⇒ `serves`.
+      this.sourceStatus({
+        id: 'meteoalarm',
+        configured: true,
+        missingEnv: [],
+        requiredEnv: [],
+        provides: ['weather-alert'],
+        effect: 'serves',
+        rateLimit: RATE_LIMITS['meteoalarm'] ?? null,
+        breaker: breakerByParty.get('meteoalarm'),
+      }),
       ...BLOCKED_PROVIDER_IDS.map((id) =>
         this.sourceStatus({
           id,
@@ -503,10 +528,61 @@ export class SnowService {
         ),
       ),
       providers,
-      breaker: breaker.map((b) => ({ id: b.id, open: b.open, failures: b.failures })),
+      breaker: breaker.map((b) => ({
+        id: b.id,
+        open: b.open,
+        failures: b.failures,
+        phase: b.phase,
+        openUntil: b.openUntilMs === null ? null : new Date(b.openUntilMs).toISOString(),
+      })),
       rateLimits,
       limitations: LIMITATIONS.map((l) => ({ ...l })),
+      coverage: this.coverageReport(now, providers, breaker),
     };
+  }
+
+  /**
+   * Cobertura MEDIDA (SNOW-03). Deriva del estado real de los proveedores; un
+   * tipo de dato sólo es 'available' si algún eslabón podría servir hoy. No
+   * promete cobertura ni expone nombres de variables de entorno.
+   *
+   * `byCountry` va a 0/0 porque `config()` es SÍNCRONO y el maestro de
+   * estaciones se lee de forma asíncrona: inventar un conteo aquí sería
+   * exactamente la cobertura ficticia que este hito prohíbe. El conteo real por
+   * país se expone en `/v1/config` sólo cuando haya una fuente síncrona.
+   */
+  private coverageReport(
+    now: Date,
+    providers: readonly SourceStatusDto[],
+    breaker: ReadonlyArray<{ id: ProviderId; phase: string; openUntilMs: number | null }>,
+  ): ConfigDto['coverage'] {
+    const breakerById = new Map(breaker.map((b) => [b.id, b]));
+    const runtime: ProviderRuntimeState[] = providers.map((p) => {
+      const b = breakerById.get(p.id as ProviderId);
+      return {
+        id: p.id as ProviderId,
+        configured: p.configured,
+        missingEnvCount: p.missingEnv.length,
+        licenseStatus: p.licenseStatus as ProviderRuntimeState['licenseStatus'],
+        breakerPhase: (b?.phase ?? 'closed') as ProviderRuntimeState['breakerPhase'],
+        breakerOpenUntil: b?.openUntilMs == null ? null : new Date(b.openUntilMs).toISOString(),
+        lastSuccessAt: null,
+        lastLatencyMs: null,
+        attempts: 0,
+        failures: p.breaker.failures,
+        stalenessSeconds: null,
+      };
+    });
+    return buildCoverageReport({
+      generatedAt: now.toISOString(),
+      providers: runtime,
+      stationsByCountry: {
+        ES: { total: 0, withSnowData: 0 },
+        AD: { total: 0, withSnowData: 0 },
+        FR: { total: 0, withSnowData: 0 },
+        PT: { total: 0, withSnowData: 0 },
+      },
+    });
   }
 
   private sourceStatus(input: {
@@ -517,7 +593,9 @@ export class SnowService {
     provides: readonly string[];
     effect: SourceEffect;
     rateLimit: { requestsPerMinute: number; maxConcurrent: number; verified: boolean } | null;
-    breaker: { id: ProviderId; open: boolean; failures: number } | undefined;
+    breaker:
+      | { id: ProviderId; open: boolean; failures: number; phase?: string; openUntilMs?: number | null }
+      | undefined;
   }): SourceStatusDto {
     const auth = authorizationFor(input.id);
     const licenseStatus = isBlockedProvider(input.id)

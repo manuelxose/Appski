@@ -1,0 +1,58 @@
+{
+  "note": "Fixtures grabadas de los feeds Atom reales de MeteoAlarm. Replay exacto en tests; ningún valor está inventado. `rights` es la cláusula LITERAL del propio feed.",
+  "capturedAt": "2026-11-16T21:52:58.465Z",
+  "records": [
+    {
+      "country": "ES",
+      "slug": "spain",
+      "file": "meteoalarm-spain.xml",
+      "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-spain",
+      "capturedAt": "2026-11-16T21:52:57.761Z",
+      "httpStatus": 200,
+      "contentType": "application/atom+xml; charset=utf-8",
+      "bytes": 106652,
+      "entries": 68,
+      "sha256": "e0e62207f61c27710b59a69d70512b8fa79027dcf177b9654614c239e432c4ec",
+      "rights": "Copyright © 2026 MeteoAlarm.Org. Licensed under terms equivalent to CC BY 4.0, with additional requirements for redistributing outlined in our Terms and Conditions."
+    },
+    {
+      "country": "FR",
+      "slug": "france",
+      "file": "meteoalarm-france.xml",
+      "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-france",
+      "capturedAt": "2026-11-16T21:52:58.333Z",
+      "httpStatus": 200,
+      "contentType": "application/atom+xml; charset=utf-8",
+      "bytes": 352978,
+      "entries": 233,
+      "sha256": "2b49302c855cbe41dd6f9362d2b068eceda9f7cfe9564ded70df67148c8ea524",
+      "rights": "Copyright © 2026 MeteoAlarm.Org. Licensed under terms equivalent to CC BY 4.0, with additional requirements for redistributing outlined in our Terms and Conditions."
+    },
+    {
+      "country": "PT",
+      "slug": "portugal",
+      "file": "meteoalarm-portugal.xml",
+      "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-portugal",
+      "capturedAt": "2026-11-16T21:52:58.401Z",
+      "httpStatus": 200,
+      "contentType": "application/atom+xml; charset=utf-8",
+      "bytes": 22132,
+      "entries": 14,
+      "sha256": "e169e101102c310db65c3aef599abfca907995b672959d8566368ae59feac97a",
+      "rights": "Copyright © 2026 MeteoAlarm.Org. Licensed under terms equivalent to CC BY 4.0, with additional requirements for redistributing outlined in our Terms and Conditions."
+    },
+    {
+      "country": "AD",
+      "slug": "andorra",
+      "file": "meteoalarm-andorra.xml",
+      "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-andorra",
+      "capturedAt": "2026-11-16T21:52:58.465Z",
+      "httpStatus": 200,
+      "contentType": "application/atom+xml; charset=utf-8",
+      "bytes": 986,
+      "entries": 0,
+      "sha256": "4720aaf0b1f3bb543bb788ba172dc70b5e859c3b5edc004abf8004befc7af347",
+      "rights": "Copyright © 2026 MeteoAlarm.Org. Licensed under terms equivalent to CC BY 4.0, with additional requirements for redistributing outlined in our Terms and Conditions."
+    }
+  ]
+}

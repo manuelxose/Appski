@@ -110,6 +110,8 @@ export interface StationListDto {
 // ---------------------------------------------------------------------------
 
 export type BreakerState = 'closed' | 'open' | 'half_open';
+/** Fase del circuit tal como la expone `/v1/config` (SNOW-03). */
+export type BreakerPhaseName = 'closed' | 'open' | 'half-open';
 export type SourceEffect =
   | 'serves'
   | 'terminal-no-data'
@@ -135,10 +137,46 @@ export interface ConfigDto {
   readonly status: 'ok';
   readonly provenance: ProvenanceDto;
   readonly providers: readonly SourceStatusDto[];
-  readonly breaker: readonly { readonly id: string; readonly open: boolean; readonly failures: number }[];
+  readonly breaker: readonly {
+    readonly id: string;
+    readonly open: boolean;
+    readonly failures: number;
+    /** Fase observable del circuit (SNOW-03): closed / open / half-open. */
+    readonly phase?: BreakerPhaseName;
+    /** Fin de la ventana de apertura (ISO) o null si nunca se abrió. */
+    readonly openUntil?: string | null;
+    /** Último éxito observado (ISO) y latencia del último intento. */
+    readonly lastSuccessAt?: string | null;
+    readonly lastLatencyMs?: number | null;
+  }[];
   readonly rateLimits: Readonly<Record<string, { readonly requestsPerMinute: number; readonly verified: boolean }>>;
   /** Limitaciones declaradas del borde v1 (no errores). */
   readonly limitations: readonly { readonly dataType: string; readonly reason: NoDataReason; readonly detail: string }[];
+  /**
+   * Cobertura MEDIDA por tipo de dato y país (SNOW-03). Describe lo que hoy
+   * podría servirse; no promete cobertura. No expone nombres de env ni secretos.
+   */
+  readonly coverage?: {
+    readonly generatedAt: string;
+    readonly byDataType: readonly {
+      readonly dataType: string;
+      readonly state: 'available' | 'degraded' | 'none';
+      readonly chain: readonly string[];
+      readonly serving: readonly string[];
+      readonly open: readonly string[];
+      readonly reason: string | null;
+    }[];
+    readonly byCountry: readonly { readonly country: string; readonly stations: number; readonly withSnowData: number }[];
+  };
+  /** Métricas de la caché de pronóstico en disco (SNOW-03). */
+  readonly cache?: {
+    readonly hits: number;
+    readonly misses: number;
+    readonly staleServed: number;
+    readonly writes: number;
+    readonly writeSkips: number;
+    readonly lastChangedAt: string | null;
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -160,4 +198,16 @@ export interface AlertsDto {
     readonly provenance: ProvenanceDto;
     readonly expired: boolean;
   })[];
+  /**
+   * DISCLAIMER LITERAL exigido por los T&C de MeteoAlarm. Se publica siempre que
+   * haya avisos de MeteoAlarm: todo redistribuidor debe publicarlo. Texto PLANO
+   * (Markdown resuelto), nunca HTML con corchetes.
+   */
+  readonly disclaimer?: string;
+  /**
+   * Enlace que la licencia obliga a incluir en toda redistribución. Con este
+   * campo y `disclaimer`, un cliente cumple las obligaciones de los T&C usando
+   * SÓLO la respuesta de la API. Cada aviso lleva además su propio `link`.
+   */
+  readonly sourceUrl?: string;
 }

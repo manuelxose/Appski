@@ -26,6 +26,13 @@ export interface SnowReportRepository {
 export interface ForecastCacheEntry {
   readonly stationSlug: string;
   readonly source: ProviderId;
+  /**
+   * Coordenadas del punto consultado (SNOW-03). Junto a `stationSlug`+`source`
+   * forman la identidad del cacheo: reubicar una estación NO puede reutilizar
+   * el pronóstico de otro punto. Redondeadas a 4 decimales por el adapter.
+   */
+  readonly lat: number | null;
+  readonly lng: number | null;
   readonly observedAt: string;
   readonly updatedAt: string;
   readonly expiresAt: string;

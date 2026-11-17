@@ -1,0 +1,700 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:00:11Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 261006429,
+  "lat": 42.3202950,
+  "lon": 1.9438076,
+  "tags": {
+    "name": "la Molina",
+    "name:ca": "la Molina",
+    "sport": "skiing",
+    "wikidata": "Q18180984",
+    "wikipedia": "ca:La Molina (estació d'esquí)"
+  }
+},
+{
+  "type": "node",
+  "id": 619923859,
+  "lat": 40.8042458,
+  "lon": -3.9703754,
+  "tags": {
+    "access": "yes",
+    "addr:city": "Real Sitio de San Ildefonso",
+    "addr:postcode": "40100",
+    "check_date": "2023-03-19",
+    "email": "valdesqui@valdesqui.es",
+    "leisure": "sports_centre",
+    "name": "Valdesquí",
+    "phone": "+34 918 52 39 52",
+    "sport": "skiing",
+    "website": "https://valdesqui.es/"
+  }
+},
+{
+  "type": "node",
+  "id": 1870593497,
+  "lat": 42.5637728,
+  "lon": 1.0936453,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'Espot Esquí",
+    "name:ca": "Estació d'Espot Esquí",
+    "old_name": "Super Espot",
+    "piste:type": "yes",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1870593498,
+  "lat": 42.5504821,
+  "lon": 1.0807788,
+  "tags": {
+    "name": "Espot Esquí - Cota 2.000",
+    "piste:type": "nordic",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1870593500,
+  "lat": 42.5382492,
+  "lon": 1.0749835,
+  "tags": {
+    "name": "Espot Esquí - Cota 2.200",
+    "piste:type": "nordic",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1997384857,
+  "lat": 42.6778758,
+  "lon": 1.2190176,
+  "tags": {
+    "alt_name": "Estació d'Alta Muntanya Tavascan Pleta del Prat",
+    "alt_name:ca": "Estació d'Alta Muntanya Tavascan Pleta del Prat",
+    "leisure": "sports_centre",
+    "name": "Estació d'Esquí Tavascan",
+    "name:ca": "Estació d'Esquí Tavascan",
+    "sport": "skiing",
+    "wikidata": "Q3516284",
+    "wikipedia": "ca:Estació d'esquí Tavascan"
+  }
+},
+{
+  "type": "node",
+  "id": 2008666598,
+  "lat": 42.4175285,
+  "lon": 1.2874699,
+  "tags": {
+    "name": "Estació de Sant Joan de l'Erm",
+    "name:ca": "Estació de Sant Joan de l'Erm",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "sport": "skiing",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 2011528265,
+  "lat": 42.3494654,
+  "lon": 1.9011530,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Alp 2500 (Estació d'esquí La Masella)",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2160114240,
+  "lat": 42.4269701,
+  "lon": 2.2640554,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'esquí i muntanya Vallter 2000",
+    "sport": "skiing",
+    "website": "http://www.vallter2000.com"
+  }
+},
+{
+  "type": "node",
+  "id": 2572711666,
+  "lat": 42.3977599,
+  "lon": 2.1533258,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Estació de muntanya Vall de Núria",
+    "name:ca": "Estació de muntanya Vall de Núria",
+    "sport": "skiing",
+    "website": "http://www.valldenuria.com"
+  }
+},
+{
+  "type": "node",
+  "id": 2574552473,
+  "lat": 42.6988865,
+  "lon": 0.9347175,
+  "tags": {
+    "leisure": "ski_resort",
+    "name": "Estació Baqueira Beret",
+    "sport": "skiing",
+    "website": "http://www.baqueira.es/",
+    "wikidata": "Q1502252"
+  }
+},
+{
+  "type": "node",
+  "id": 2646211916,
+  "lat": 40.1118810,
+  "lon": -1.0336032,
+  "tags": {
+    "name": "Estación de Esquí de Aramón Javalambre",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2651570419,
+  "lat": 42.1718496,
+  "lon": 1.5616240,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'esquí Port del Comte",
+    "name:ca": "Estació d'esquí Port del Comte",
+    "piste:type": "downhill",
+    "site": "piste",
+    "sport": "skiing",
+    "website": "https://www.portdelcomte.net/",
+    "wikidata": "Q3398641",
+    "wikipedia": "ca:Port del Comte (estació d'esquí)"
+  }
+},
+{
+  "type": "node",
+  "id": 2654220848,
+  "lat": 42.4282519,
+  "lon": 1.2127294,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació Port-Ainé",
+    "sport": "skiing",
+    "website": "https://www.portaine.cat/"
+  }
+},
+{
+  "type": "node",
+  "id": 7796267133,
+  "lat": 40.3713416,
+  "lon": -0.6901313,
+  "tags": {
+    "name": "All Montain Outdoor",
+    "shop": "sports",
+    "sport": "skiing",
+    "website": "https://allmountainoutdoor.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 12144126888,
+  "lat": 42.4100524,
+  "lon": 1.8482316,
+  "tags": {
+    "club": "sport",
+    "name": "Ski Club Olimpia Ger",
+    "phone": "+34608147173",
+    "sport": "skiing",
+    "website": "https://www.olimpiager.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13184344965,
+  "lat": 42.7029240,
+  "lon": 0.9386414,
+  "tags": {
+    "name": "Cota1700",
+    "shop": "sports",
+    "sport": "skiing",
+    "website": "https://cota1700.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 14308921944,
+  "lat": 42.8098943,
+  "lon": -0.5068775,
+  "tags": {
+    "addr:city": "Jaca",
+    "addr:postcode": "22889",
+    "addr:street": "Edificio Nevado s/n, Valle de Astún (Huesca)",
+    "club": "sport",
+    "name": "ESCUELA OFICIAL DE ESQUI DE ASTUN",
+    "short_name": "ESCUELA OFICIAL DE ESQUI DE ASTUN",
+    "sport": "skiing",
+    "website": "HTTPS://WWW.ASTUN.COM"
+  }
+},
+{
+  "type": "way",
+  "id": 13424356,
+  "center": {
+    "lat": 43.0557390,
+    "lon": -5.3969397
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación Invernal Fuentes de Invierno",
+    "sport": "skiing",
+    "wikidata": "Q613056",
+    "wikipedia": "es:Estación Invernal Fuentes de Invierno"
+  }
+},
+{
+  "type": "way",
+  "id": 27163382,
+  "center": {
+    "lat": 42.7053425,
+    "lon": -0.2710413
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí Aramón Panticosa",
+    "sport": "skiing",
+    "wikidata": "Q2859512"
+  }
+},
+{
+  "type": "way",
+  "id": 28343264,
+  "center": {
+    "lat": 40.2982714,
+    "lon": -3.9251019
+  },
+  "tags": {
+    "building:part": "yes",
+    "email": "atencionalcliente@snozonemadrid.com",
+    "fee": "yes",
+    "leisure": "sports_centre",
+    "name": "Snozone Madrid",
+    "opening_hours": "Mo-Su 09:30-22:00",
+    "phone": "+34 91 648 22 44",
+    "sport": "skiing",
+    "website": "https://snozonemadrid.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 90186221,
+  "center": {
+    "lat": 42.9573682,
+    "lon": -0.8008864
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro de Montana Valle Roncal",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 94998734,
+  "center": {
+    "lat": 40.3862099,
+    "lon": -0.6271829
+  },
+  "tags": {
+    "leisure": "track",
+    "name": "El Bolage",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 98002572,
+  "center": {
+    "lat": 42.3238417,
+    "lon": 1.9332580
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Volta Muntanya Sagrada",
+    "piste:difficulty": "easy",
+    "piste:ref": "7",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826440,
+  "center": {
+    "lat": 42.5401468,
+    "lon": 1.4496882
+  },
+  "tags": {
+    "name": "Coll de la Botella",
+    "name:ca": "Coll de la Botella",
+    "piste:difficulty": "easy",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 152826455,
+  "center": {
+    "lat": 42.5418275,
+    "lon": 1.4521807
+  },
+  "tags": {
+    "name": "Estadi Joan Carchat",
+    "piste:difficulty": "intermediate",
+    "piste:type": "downhill",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 178706604,
+  "center": {
+    "lat": 43.0382079,
+    "lon": -5.3912289
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Cebolledo y Requejines)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 194973300,
+  "center": {
+    "lat": 43.0612869,
+    "lon": -5.3805920
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Saliencias)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 200619909,
+  "center": {
+    "lat": 42.2659493,
+    "lon": -7.2976603
+  },
+  "tags": {
+    "alt_name": "Estación de Esquí Cabeza de Manzaneda",
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí de Manzaneda",
+    "sport": "skiing",
+    "wikidata": "Q7400581",
+    "wikipedia": "gl:Estación de montaña Manzaneda"
+  }
+},
+{
+  "type": "way",
+  "id": 239167911,
+  "center": {
+    "lat": 40.7882578,
+    "lon": -4.0039547
+  },
+  "tags": {
+    "addr:housenumber": "17",
+    "addr:street": "Carretera de Collado Villalba a Navacerrada",
+    "building": "retail",
+    "check_date:opening_hours": "2023-09-28",
+    "name": "Verdesoto",
+    "opening_hours:signed": "no",
+    "phone": "+34918521448",
+    "shop": "sports",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 320085824,
+  "center": {
+    "lat": 42.7748361,
+    "lon": -0.3727817
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Zona Sextas",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 406520526,
+  "center": {
+    "lat": 42.5508933,
+    "lon": 1.0819951
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Espot Esquí",
+    "name:ca": "Espot Esquí",
+    "sport": "skiing",
+    "wikidata": "Q2717381",
+    "wikipedia": "ca:Espot Esquí"
+  }
+},
+{
+  "type": "way",
+  "id": 406520527,
+  "center": {
+    "lat": 42.4220571,
+    "lon": 1.2109905
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Port Ainé",
+    "name:ca": "Port Ainé",
+    "sport": "skiing",
+    "wikidata": "Q2717352",
+    "wikipedia": "ca:Estació d'esquí Port Ainé"
+  }
+},
+{
+  "type": "way",
+  "id": 654498540,
+  "center": {
+    "lat": 37.0753974,
+    "lon": -3.3887728
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de Esquí y Montaña de Sierra Nevada",
+    "sport": "skiing",
+    "start_date": "1964",
+    "website": "https://sierranevada.es",
+    "wikidata": "Q534256",
+    "wikipedia": "es:Estación de esquí de Sierra Nevada"
+  }
+},
+{
+  "type": "way",
+  "id": 738151414,
+  "center": {
+    "lat": 40.3823184,
+    "lon": -0.6320169
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Valdelinares",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 738156377,
+  "center": {
+    "lat": 42.4730083,
+    "lon": 0.8764479
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estació d'esquí Boí-Taüll",
+    "name:ca": "Estació d'esquí Boí-Taüll",
+    "name:es": "Estación de esquí de Boí Taüll",
+    "sport": "skiing",
+    "website": "https://www.boitaull.cat",
+    "wikidata": "Q2747063",
+    "wikipedia": "ca:Estació d'esquí Boí-Taüll"
+  }
+},
+{
+  "type": "way",
+  "id": 808834228,
+  "center": {
+    "lat": 43.0443660,
+    "lon": -5.4036772
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña San Isidro (Sector Riopinos)",
+    "operator": "Diputación de León",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "way",
+  "id": 843625525,
+  "center": {
+    "lat": 42.2520735,
+    "lon": -2.9693957
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación de esquí de Valdezcaray",
+    "sport": "skiing",
+    "website": "https://www.valdezcaray.es/",
+    "wikidata": "Q3553510",
+    "wikipedia": "es:Valdezcaray"
+  }
+},
+{
+  "type": "relation",
+  "id": 1462651,
+  "center": {
+    "lat": 42.9744648,
+    "lon": -5.7804162
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación Invernal y de Montaña Valgrande-Pajares",
+    "name:ast": "Estación Invernal y de Montaña Valgrande-Payares",
+    "name:es": "Estación Invernal y de Montaña Valgrande-Pajares",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q6159000",
+    "wikipedia": "es:Estación Invernal y de Montaña Valgrande-Pajares"
+  }
+},
+{
+  "type": "relation",
+  "id": 2641663,
+  "center": {
+    "lat": 43.0368820,
+    "lon": -4.3865309
+  },
+  "tags": {
+    "alt_name": "Estación de esquí de Alto Campoo",
+    "landuse": "winter_sports",
+    "leisure": "pitch",
+    "name": "Estación de Esquí y Montaña Alto Campoo",
+    "short_name": "Alto Campoo",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q4736779",
+    "wikipedia": "es:Alto Campoo"
+  }
+},
+{
+  "type": "relation",
+  "id": 2684548,
+  "center": {
+    "lat": 40.7965048,
+    "lon": -3.9713681
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Estación de Esquí de Valdesquí",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q3750961"
+  }
+},
+{
+  "type": "relation",
+  "id": 3478130,
+  "center": {
+    "lat": 42.7789325,
+    "lon": -0.5418449
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación de esquí de Candanchú",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "wikidata": "Q588136",
+    "wikipedia": "es:Candanchú"
+  }
+},
+{
+  "type": "relation",
+  "id": 3479356,
+  "center": {
+    "lat": 42.8047426,
+    "lon": -0.4965084
+  },
+  "tags": {
+    "landuse": "winter_sports",
+    "name": "Estación Invernal de Astún",
+    "sport": "skiing",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 3949536,
+  "center": {
+    "lat": 42.3961992,
+    "lon": 2.1557192
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació de muntanya Vall de Núria",
+    "name:ca": "Estació de muntanya Vall de Núria",
+    "site": "piste",
+    "sport": "skiing",
+    "type": "site",
+    "website": "http://www.valldenuria.com"
+  }
+},
+{
+  "type": "relation",
+  "id": 7811657,
+  "center": {
+    "lat": 42.4252576,
+    "lon": 2.2552971
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'esquí i muntanya Vallter 2000",
+    "site": "piste",
+    "sport": "skiing",
+    "type": "site",
+    "website": "http://www.vallter2000.com"
+  }
+},
+{
+  "type": "relation",
+  "id": 19666571,
+  "center": {
+    "lat": 41.0014406,
+    "lon": -3.8299020
+  },
+  "tags": {
+    "access": "yes",
+    "landuse": "winter_sports",
+    "leisure": "sports_centre",
+    "name": "Centro de esquí nórdico Navafría",
+    "sport": "skiing",
+    "type": "multipolygon",
+    "website": "https://doblehuella.es/",
+    "wikidata": "Q5486448",
+    "wikipedia": "es:Centro de esquí nórdico Navafría"
+  }
+}
+
+  ]
+}

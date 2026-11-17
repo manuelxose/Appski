@@ -21,13 +21,22 @@ export function classifyNoData(dataType: SnowDataType): NoDataReason {
 export class SnowDataService {
   private readonly adapters: Readonly<Partial<Record<ProviderId, ProviderAdapter>>>;
   private readonly breaker = new Breaker();
+  private readonly chains: Readonly<Record<SnowDataType, readonly ProviderId[]>>;
 
-  constructor(deps: AdapterDeps) {
-    this.adapters = createAdapters(deps);
+  /**
+   * `overrides` permite inyectar adaptadores y cadenas en tests (Fase E) sin
+   * tocar la red ni el registry real. En producción no se pasa.
+   */
+  constructor(deps: AdapterDeps, overrides?: {
+    readonly adapters?: Readonly<Partial<Record<ProviderId, ProviderAdapter>>>;
+    readonly chains?: Readonly<Record<SnowDataType, readonly ProviderId[]>>;
+  }) {
+    this.adapters = overrides?.adapters ?? createAdapters(deps);
+    this.chains = overrides?.chains ?? FALLBACK_CHAINS;
   }
 
   async fetch<T extends SnowDataType>(dataType: T, input: ProviderInput): Promise<ProviderResult<DataTypeMap[T]>> {
-    const chain = FALLBACK_CHAINS[dataType];
+    const chain = this.chains[dataType];
     let lastProvenance: Provenance | null = null;
     for (const id of chain) {
       const adapter = this.adapters[id];
@@ -62,7 +71,7 @@ export class SnowDataService {
     } as unknown as ProviderResult<DataTypeMap[T]>;
   }
 
-  breakerSnapshot(): ReadonlyArray<{ id: ProviderId; open: boolean; failures: number }> {
+  breakerSnapshot(): ReturnType<Breaker['snapshot']> {
     return this.breaker.snapshot();
   }
 

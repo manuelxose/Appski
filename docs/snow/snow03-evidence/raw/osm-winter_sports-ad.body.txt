@@ -1,0 +1,60 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T21:54:05Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 987242424,
+  "center": {
+    "lat": 42.6273877,
+    "lon": 1.4897411
+  },
+  "tags": {
+    "contact:website": "https://www.ordinoarcalis.com",
+    "landuse": "winter_sports",
+    "name": "Ordino-Arcalís",
+    "name:ca": "Ordino-Arcalís",
+    "operator": "Grandvalira",
+    "wikidata": "Q546015"
+  }
+},
+{
+  "type": "way",
+  "id": 987243867,
+  "center": {
+    "lat": 42.5522842,
+    "lon": 1.4698950
+  },
+  "tags": {
+    "contact:website": "https://www.palarinsal.com/ca",
+    "landuse": "winter_sports",
+    "name": "Pal-Arinsal",
+    "name:ca": "Pal-Arinsal",
+    "operator": "Grandvalira",
+    "wikidata": "Q2551051",
+    "wikipedia": "ca:Vallnord"
+  }
+},
+{
+  "type": "way",
+  "id": 1575511238,
+  "center": {
+    "lat": 42.5485402,
+    "lon": 1.6734776
+  },
+  "tags": {
+    "contact:website": "https://www.grandvalira.com/",
+    "landuse": "winter_sports",
+    "name": "Grandvalira",
+    "wikidata": "Q1918034"
+  }
+}
+
+  ]
+}

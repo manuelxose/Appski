@@ -1,0 +1,18 @@
+{
+  "key": "osm-winter_sports-pt",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Portugal%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22landuse%22%3D%22winter_sports%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "requestedUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22name%22%3D%22Portugal%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D-%3E.a%3B%0Anwr%5B%22landuse%22%3D%22winter_sports%22%5D(area.a)%3B%0Aout%20tags%20center%3B",
+  "status": 200,
+  "sha256": "5d2be63328a0e3b160ca197d0bc038832ee4548d87d8d22c787587c5d21067b7",
+  "bytes": 814,
+  "capturedAt": "2026-11-16T22:10:30.230Z",
+  "source": "network",
+  "userAgent": "appski-snow03-catalog/1.0 (+https://appski.invalid/snow03; contact: ops@appski.invalid)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "ms": 38321
+    }
+  ]
+}

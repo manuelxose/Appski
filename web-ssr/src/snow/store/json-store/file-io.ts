@@ -322,6 +322,18 @@ function seedContent(fileName: string): string {
   return embedded;
 }
 
+/**
+ * Marca de SEED en el directorio: `bootstrapStore` la escribe cuando copia un fichero
+ * del seed y `createSnowRouter` la usa para saber si el maestro del directorio es el
+ * seed curado del producto (y el loader del catálogo debe poblar el resto) o un almacén
+ * propio de un test/operador (y el loader NO debe añadir nada).
+ *
+ * Sin esta marca, un directorio sembrado a mano (los tests de contrato escriben su
+ * propio `stations.json`) recibiría el catálogo encima y rompería sus aserciones.
+ * La marca NO altera las colecciones `.json`: es un fichero aparte.
+ */
+const SEED_MARKER_FILE = '.seed-applied.json';
+
 export function bootstrapStore(dir: string): BootstrapResult {
   const created: string[] = [];
   const skipped: string[] = [];
@@ -339,6 +351,36 @@ export function bootstrapStore(dir: string): BootstrapResult {
     mkdirSync(dir, { recursive: true });
     writeFileSync(resolve(dir, fileName), body, 'utf8');
     created.push(fileName);
+    markSeeded(dir, fileName);
   }
   return { created, skipped };
+}
+
+
+export function markSeeded(dir: string, fileName: string): void {
+  const path = resolve(dir, SEED_MARKER_FILE);
+  let current: { seeded: string[] } = { seeded: [] };
+  if (existsSync(path)) {
+    try {
+      current = JSON.parse(readFileSync(path, 'utf8')) as { seeded: string[] };
+    } catch {
+      current = { seeded: [] };
+    }
+  }
+  const seeded = new Set(current.seeded ?? []);
+  seeded.add(fileName);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(path, JSON.stringify({ seeded: [...seeded].sort() }, null, 2) + '\n', 'utf8');
+}
+
+/** Lista de ficheros que este directorio recibió del seed. */
+export function seededFiles(dir: string): readonly string[] {
+  const path = resolve(dir, SEED_MARKER_FILE);
+  if (!existsSync(path)) return [];
+  try {
+    const parsed = JSON.parse(readFileSync(path, 'utf8')) as { seeded?: string[] };
+    return Array.isArray(parsed.seeded) ? parsed.seeded : [];
+  } catch {
+    return [];
+  }
 }

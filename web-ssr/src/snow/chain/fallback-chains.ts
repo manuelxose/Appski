@@ -6,7 +6,10 @@ export const FALLBACK_CHAINS: Readonly<Record<SnowDataType, readonly ProviderId[
   'operational-status': ['editorial-report'],
   'snow-depth': ['editorial-report'],
   forecast: ['aemet', 'meteofrance', 'copernicus-c3s'],
-  'weather-alert': ['aemet', 'meteofrance'],
+  // MeteoAlarm se añade DESPUÉS de los existentes (SNOW-03): es un agregador
+  // EUMETNET de avisos oficiales y no reemplaza a la fuente nacional.
+  // `meteofrance-bpa-html` NUNCA entra en ninguna cadena.
+  'weather-alert': ['aemet', 'meteofrance', 'meteoalarm'],
   avalanche: ['aemet-bpa', 'editorial-report'],
   basemap: ['protomaps', 'ign-es', 'ign-fr', 'copernicus-clms'],
   image: [],

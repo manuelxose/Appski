@@ -67,10 +67,26 @@ export interface WeatherAlertItem {
   readonly validFrom: string;
   readonly validUntil: string;
   readonly area: string;
+  /**
+   * Enlace público al aviso original. Los T&C de MeteoAlarm exigen que toda
+   * redistribución por aplicación incluya un enlace a www.meteoalarm.org, así
+   * que el consumidor debe poder construir el enlace con cada aviso. `null`
+   * cuando la fuente no publica uno (nunca se inventa una URL).
+   */
+  readonly link: string | null;
 }
 
 export interface WeatherAlertBundle {
   readonly alerts: readonly WeatherAlertItem[];
+  /**
+   * Texto de atribución obligatorio ya resuelto (NMHS si el bundle es de un
+   * solo país; «EUMETNET – MeteoAlarm» si es multi-país).
+   */
+  readonly attribution?: string | null;
+  /** DISCLAIMER LITERAL exigido por los T&C (se publica, no se parafrasea). */
+  readonly disclaimer?: string | null;
+  /** Enlace que la licencia obliga a incluir en toda redistribución. */
+  readonly sourceUrl?: string | null;
 }
 
 export interface BasemapConfig {

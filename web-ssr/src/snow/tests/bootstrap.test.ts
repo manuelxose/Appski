@@ -50,18 +50,33 @@ test.after(() => {
   for (const d of dirs) rmSync(d, { recursive: true, force: true });
 });
 
-test('B1: directorio de datos VACÍO => el seed se importa y /v1/stations sirve 3 estaciones', async () => {
+test('B1: directorio de datos VACÍO => el seed se importa y /v1/stations sirve las 3 curadas + el catálogo', async () => {
   const dir = emptyDir();
   await withApp(dir, async (base) => {
-    const res = await fetch(`${base}/v1/stations`);
+    const res = await fetch(`${base}/v1/stations?pageSize=100&page=1`);
     assert.strictEqual(res.status, 200);
     const body = await res.json();
     assert.strictEqual(body.status, 'ok');
-    assert.deepStrictEqual(
-      body.stations.map((s) => s.slug).sort(),
-      CURATED_SLUGS,
-      'el maestro debe servir los 3 registros curados del seed, no un array vacío',
-    );
+    // El directorio vacío recibe el seed Y, tras él, el catálogo maestro de la Fase B
+    // (t7). La ruta está PAGINADA, así que se comprueba la pertenencia de las 3 curadas
+    // al conjunto servido completo, no la igualdad del array de una página.
+    const served = new Set<string>();
+    let total = 0;
+    for (let page = 1; page < 50; page += 1) {
+      const r = await fetch(`${base}/v1/stations?pageSize=100&page=${page}`);
+      const b = await r.json();
+      for (const s of b.stations ?? []) served.add(s.slug);
+      total = b.pagination?.total ?? total;
+      if (!b.pagination?.hasNext) break;
+    }
+    for (const slug of CURATED_SLUGS) {
+      assert.ok(served.has(slug), `el maestro debe servir el registro curado ${slug}`);
+    }
+    assert.ok(total >= CURATED_SLUGS.length, `total servido ${total}`);
+    // Las curadas manda el seed: sus valores editoriales están intactos.
+    const bq = await (await fetch(`${base}/v1/stations/baqueira-beret`)).json();
+    assert.strictEqual(bq.station.region, 'Pirineo Catalán', 'el seed no lo pisa el catálogo');
+    assert.strictEqual(bq.station.altitudeBaseM, 1500);
   });
   for (const f of ['stations.json', 'snow-reports.json', 'osm-derived.json']) {
     assert.ok(existsSync(join(dir, f)), `el bootstrap debe crear ${f} en el dir de runtime`);

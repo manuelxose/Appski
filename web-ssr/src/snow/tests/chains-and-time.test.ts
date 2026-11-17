@@ -50,9 +50,11 @@ test('C5: toda cadena no vacía termina en un proveedor autorizado (nunca null)'
     assert.ok(typeof last === 'string' && last.length > 0, `${dt}: el último eslabón no es un proveedor válido`);
 
     // El fin de cadena debe ser editorial (nuestro) o un proveedor autorizado.
+    // `meteoalarm` se añade en SNOW-03: su licencia está verificada en el
+    // elemento <rights> del propio feed (equivalente a CC BY 4.0).
     assert.ok(
       ['editorial-stations', 'editorial-report'].includes(last) ||
-        /^(aemet|aemet-bpa|meteofrance|copernicus-c3s|copernicus-clms|ign-es|ign-fr|osm|protomaps)/.test(last),
+        /^(aemet|aemet-bpa|meteofrance|copernicus-c3s|copernicus-clms|ign-es|ign-fr|osm|protomaps|meteoalarm)/.test(last),
       `${dt}: el último eslabón '${last}' no es editorial ni un proveedor autorizado`,
     );
   }

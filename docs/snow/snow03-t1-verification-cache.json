@@ -1,0 +1,166 @@
+{
+  "task": "t1 [A-met-research] — FASE A — Registro verificado de proveedores meteorológicos y licencias",
+  "attempt_id": "997c9070-47d6-46dc-b3a3-e1ad9d55647b",
+  "member": "specialist-met",
+  "checked_at_utc": "2026-11-16T21:50Z",
+  "checked_at_local": "2026-11-16T22:50+01:00 Europe/Madrid",
+  "tool": "node 22 fetch (undici) with User-Agent appski-snow-research/1.0",
+  "credentials_present": {
+    "env_var_count": 66,
+    "provider_key_like_vars": [],
+    "conclusion": "0 credenciales de proveedor en el entorno; ninguna petición autenticada pudo hacerse"
+  },
+  "http_probes": [
+    { "url": "https://api.open-meteo.com/v1/forecast?latitude=42.63&longitude=0.77&hourly=temperature_2m,snow_depth,weather_code,wind_speed_10m&forecast_days=2&timezone=Europe%2FMadrid", "status": 200, "bytes": 2048, "note": "payload real; snow_depth unit m" },
+    { "url": "https://api.open-meteo.com/v1/elevation?latitude=42.6339&longitude=0.7657", "status": 200, "bytes": 22, "body": "{\"elevation\":[2127.0]}" },
+    { "url": "https://api.open-meteo.com/v1/meteofrance?latitude=42.6339&longitude=0.7657&hourly=temperature_2m,snowfall,snow_depth&forecast_days=1&timezone=Europe%2FAndorra", "status": 200, "bytes": 1149, "note": "snow_depth hourly_units = 'undefined' for this model branch" },
+    { "url": "https://customer-api.open-meteo.com/v1/forecast?latitude=42.63&longitude=0.77&hourly=temperature_2m&forecast_days=1", "status": 401, "note": "endpoint comercial exige &apikey=" },
+    { "url": "https://geocoding-api.open-meteo.com/v1/search?name=Grandvalira&count=2&language=es&format=json", "status": 200, "bytes": 33, "body": "{\"generationtime_ms\":0.067949295}" },
+    { "url": "https://api.ipma.pt/open-data/forecast/warnings/warnings_www.json", "status": 200, "bytes": 40705 },
+    { "url": "https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json", "status": 200, "bytes": 1050501 },
+    { "url": "https://api.ipma.pt/open-data/observation/meteorology/stations/stations.json", "status": 200, "bytes": 49864, "note": "227 estaciones; Penhas Douradas id 1200568 [-7.55865278,40.41136667]" },
+    { "url": "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/hp-daily-forecast-day0.json", "status": 200, "bytes": 6689 },
+    { "url": "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily.json", "status": 404 },
+    { "url": "https://api.ipma.pt/", "status": 200, "note": "declaración de derechos de autor leída" },
+    { "url": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/22001", "status": 200, "bytes": 0, "note": "sin api_key: 200 con cuerpo vacío (no 401)" },
+    { "url": "https://opendata.aemet.es/opendata/api/avisos_cap/ultimoelaborado/area/61", "status": 200, "bytes": 0 },
+    { "url": "https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones?api_key=TESTNoKey", "status": 401 },
+    { "url": "https://opendata.aemet.es/centrodedescargas/inicio", "status": 200, "note": "'Obtención de API Key Solicitar'" },
+    { "url": "https://opendata.aemet.es/centrodedescargas/obtencionAPIKey", "status": 200, "note": "formulario email + Cloudflare Turnstile; requiere intervención humana" },
+    { "url": "https://www.aemet.es/es/nota_legal", "status": 200, "note": "Nota Legal, Noviembre de 2016" },
+    { "url": "https://public-api.meteofrance.fr/public/DPObs/v1/liste-stations", "status": 401, "body": "{\"code\":\"900902\",\"message\":\"Missing Credentials\",\"description\":\"Invalid Credentials. Make sure your API invocation call has a header: 'Authorization : Bearer ACCESS_TOKEN' or 'Authorization : Basic ..." },
+    { "url": "https://public-api.meteofrance.fr/public/DPVigilance/v1/cartevigilance/encours", "status": 401, "body": "same 900902 Missing Credentials" },
+    { "url": "https://portail-api.meteofrance.fr/web/fr/api-doc", "status": 200, "bytes": 632, "note": "SPA Angular (MeteofranceWeb); documentación de API no legible sin JS" },
+    { "url": "https://donneespubliques.meteofrance.fr/", "status": 200, "bytes": 35620 },
+    { "url": "https://donneespubliques.meteofrance.fr/?fond=dossier&id_dossier=1", "status": 200, "note": "'La licence Ouverte d'Etalab (pour les données libres d'accès)'" },
+    { "url": "https://www.meteofrance.fr/droits-de-reproduction", "status": 200, "note": "Articles 1-4 leídos" },
+    { "url": "https://www.meteo.ad/json", "status": 200, "note": "formulario IP fija" },
+    { "url": "https://www.meteo.ad/legal", "status": 200, "note": "sin cláusula de reutilización" },
+    { "url": "https://www.meteo.ad/estatneu", "status": 200, "note": "BPA fuera de temporada; 'Propera actualització 01/12/2026 a les 16:00'" },
+    { "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-spain", "status": 200, "bytes": 106555, "content_type": "application/atom+xml; charset=utf-8" },
+    { "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-france", "status": 200, "bytes": 352833, "note": "233 entradas; 13 'Moderate avalanches warning'" },
+    { "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-andorra", "status": 200, "bytes": 985, "note": "feed vacío (sin <entry>)" },
+    { "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-portugal", "status": 200, "bytes": 22131 },
+    { "url": "https://www.meteoalarm.org/en/about/terms-of-use", "status": 200, "bytes": 422665, "note": "SPA; el contenido real está en el CMS" },
+    { "url": "https://cms-visualization.meteoalarm.org/api/v1/menu-items?locale=en", "status": 200 },
+    { "url": "https://cms-visualization.meteoalarm.org/api/v1/content-pages/terms-and-conditions?locale=en", "status": 200, "note": "texto legal completo; Last Updated 15/03/2024" },
+    { "url": "https://cms-visualization.meteoalarm.org/api/v1/content-pages/redistribution-hub?locale=en", "status": 200 },
+    { "url": "https://eumetnet.org/services/general-terms-and-conditions", "status": "ERR fetch failed (TLS/DNS desde este host)" },
+    { "url": "https://www.copernicus.eu/en/access-data/copyright-and-licences", "status": 200, "note": "solo cubre la marca/logotipo; remite a eu-space.europa.eu" },
+    { "url": "https://www.copernicus.eu/en/access-data", "status": "no verificado en esta ronda (la política de datos se movió a eu-space.europa.eu)" },
+    { "url": "https://cds.climate.copernicus.eu/how-to-api", "status": 200, "note": "url https://cds.climate.copernicus.eu/api, key <PERSONAL-ACCESS-TOKEN> en ~/.cdsapirc" },
+    { "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview", "status": 200, "note": "'Licence CC-BY licence' + DOI 10.24381/cds.adbb2d47" },
+    { "url": "https://cds.climate.copernicus.eu/licences/", "status": 200, "note": "catálogo de licencias por colección" },
+    { "url": "https://www.ign.es/web/ign/portal/politica-datos", "status": 200 },
+    { "url": "https://www.ign.es/web/ign/portal/condiciones-uso", "status": 404 },
+    { "url": "https://data.geopf.fr/wfs/ows?SERVICE=WFS&REQUEST=GetCapabilities", "status": 200, "content_type": "application/xml", "bytes": 2993258, "note": "861 FeatureTypes; Fees none; AccessConstraints = cartes.gouv.fr/cgu" },
+    { "url": "https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ADMINEXPRESS-COG.LATEST:commune&SRSNAME=EPSG:4326&COUNT=2&BBOX=1.9,42.4,2.2,42.6,EPSG:4326&OUTPUTFORMAT=application/json", "status": 200, "bytes": 60848, "note": "Les Angles code_insee 66004; Mérens-les-Vals 09189" },
+    { "url": "https://cartes.gouv.fr/cgu/", "status": 200, "note": "v. 15/10/2024" },
+    { "url": "https://www.openstreetmap.org/copyright", "status": 200 },
+    { "url": "https://operations.osmfoundation.org/policies/tiles/", "status": 200 },
+    { "url": "https://operations.osmfoundation.org/policies/nominatim/", "status": 200 },
+    { "url": "https://wiki.openstreetmap.org/wiki/Overpass_API", "status": 200, "note": "overpass-api.de: <10.000 consultas/día y <1 GB/día" },
+    { "url": "https://wiki.openstreetmap.org/wiki/Key:aerialway", "status": 200, "note": "valores gondola, chair_lift, mixed_lift, t-bar, j-bar, platter, rope_tow, magic_carpet, cable_car" },
+    { "url": "https://www.wikidata.org/wiki/Wikidata:Licensing", "status": 200 },
+    { "url": "https://www.ine.es/aviso_legal/", "status": 200, "note": "solo 11 caracteres de texto extraíble; contenido no legible → INE = DESCONOCIDO" },
+    { "url": "https://www.data.gouv.fr/api/1/organizations/meteo-france/datasets/?page_size=20", "status": 200, "note": "123 datasets, licencia fr-lo; muchos archivados (p.ej. 'Données d'observation des principales stations météorologiques' ARCHIVED 2026-08-07)" }
+  ],
+  "literal_extracts": {
+    "aemet_nota_legal": [
+      "Autorización de reutilización y cesión no exclusiva de derechos de propiedad intelectual",
+      "Las condiciones generales recogidas en la presente nota legal permiten la reutilización de los documentos sometidos a ellas para fines comerciales y no comerciales.",
+      "Esta autorización conlleva, asimismo, la cesión gratuita y no exclusiva de los derechos de propiedad intelectual, en su caso, correspondientes a tales documentos, autorizándose la realización de actividades de reproducción, distribución, comunicación pública o transformación, necesarias para desarrollar la actividad de reutilización autorizada, en cualquier modalidad y bajo cualquier formato, y por el plazo máximo permitido por la citada Ley.",
+      "1. Está prohibido desnaturalizar el sentido de la información.",
+      "2. Se debe citar a AEMET como fuente de la información objeto de la reutilización en una de las siguientes formas:",
+      "Incluir el Copyright de AEMET (© AEMET) o en su lugar el texto: \"Información elaborada por la Agencia Estatal de Meteorología\".",
+      "Mantener el logotipo de AEMET en todos aquellos productos que lo lleven integrado.",
+      "En caso, de realizar con ella servicios de valor añadido ... incluyendo la referencia \"Fuente: AEMET\" o en su lugar el texto: \"Información elaborada utilizando, entre otras, la obtenida de la Agencia Estatal de Meteorología\".",
+      "3. Debe mencionarse la fecha de la última actualización de los documentos objeto de la reutilización, siempre cuando estuviera incluida en el documento original.",
+      "4. No se puede indicar, insinuar o sugerir que AEMET como titular de la información reutilizada participa, patrocina, o apoya la reutilización que se lleve a cabo con ella.",
+      "5. Debe conservarse la integridad de los metadatos sobre la fecha de actualización y las condiciones de reutilización aplicables",
+      "AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma. | Nota legal"
+    ],
+    "aemet_opendata_portal": [
+      "Aemet OpenData Sistema para la difusión y reutilización de la información de Aemet",
+      "Obtención de API Key Solicitar --> Acceso General Entrar --> Acceso Desarrolladores Entrar"
+    ],
+    "mf_donneespubliques": [
+      "Textes officiels et conditions d'accès",
+      "Télécharger les licences au format PDF",
+      "La licence Ouverte d'Etalab (pour les données libres d'accès)"
+    ],
+    "licence_ouverte_2_0": [
+      "Le « Concédant » concède au « Réutilisateur » un droit non exclusif et gratuit de libre « Réutilisation » de l'« Information » objet de la présente licence, à des fins commerciales ou non, dans le monde entier et pour une durée illimitée",
+      "- de l'adapter, la modifier, l'extraire et la transformer, notamment pour créer des « Informations dérivées »",
+      "- de la diffuser, la redistribuer, la publier et la transmettre, de l'exploiter à titre commercial, par exemple en la combinant avec d'autres informations, ou en l'incluant dans votre propre produit ou application.",
+      "- mentionner la paternité de l'«Information» : sa source (a minima le nom du « Concédant ») et la date de la dernière mise à jour de l'« Information » réutilisée."
+    ],
+    "mf_droits_de_reproduction": [
+      "Au titre de la présente licence, est exclusivement concédé un droit d'usage privé, individuel et personnel ou à caractère pédagogique, informatif et/ou éducatif.",
+      "Ils peuvent être utilisés dans les conditions énoncées supra, à la condition expresse de mentionner « Source : Météo-France », lors de chaque utilisation.",
+      "toute utilisation de l'un des éléments des sites Internet dans un environnement informatique en réseau ;",
+      "l'extraction répétée et systématique d'éléments non autorisés, même non protégés, des sites Internet de Météo-France causant un préjudice à Météo-France."
+    ],
+    "ipma_api_root": [
+      "O Utilizador pode copiar, importar ou utilizar gratuitamente informações ou símbolos nacionais existentes neste site para uso pessoal ou público desde que dessa utilização não decorram finalidades lucrativas ou ofensivas .",
+      "O Utilizador deve referir, sempre, a fonte de informação .",
+      "O logo-símbolo do sítio de internet do IPMA deve ser utilizado sempre que um Utilizador pretenda incluir informação disponibilizada pelo sítio de internet em páginas de hiper-documentos , devendo referenciar a hiper-ligação ao site do IPMA."
+    ],
+    "meteo_ad_json": [
+      "posa a disposició de la ciutadania i les empreses la previsió meteorològica codificada amb el mètode JSon.",
+      "Si desitgeu tenir accés a la previsió meteorològica en format numèric, si us plau, ompliu el següent formulari.",
+      "IP (fixa) des de la qual es consultarà la información en format JSon"
+    ],
+    "meteo_ad_estatneu": [
+      "Qualitat de la neu Gruixos de neu nova dels darrers dies (de les últimes 24h mesurat a les 06:00h UTC) 12/11/2026 13/11/2026 14/11/2026 15/11/2026",
+      "La publicació regular de butlletins d'allaus amb mapa del perill d'allaus es reprendrà a principis de desembre, segons la situació de neu.",
+      "Aquest butlletí ha estat elaborat amb col·laboració amb Météo France i elaborat seguint les normes i recomanacions de l'European Avalanche Warning Services"
+    ],
+    "meteo_ad_legal": [
+      "La web de la Meteo del Ministeri d'Economia és una web de titularitat del Govern d'Andorra.",
+      "L'accés a la web del Ministeri d'Economia del Govern d'Andorra i a la informació continguda comporta l'acceptació de les condicions previstes en aquest avís legal."
+    ],
+    "meteoalarm_terms": [
+      "\"Information\" refers to the awareness information provided by the MeteoAlarm Participants within the required elements of the warning, as specified in the MeteoAlarm CAP Profile.",
+      "All Information on the MeteoAlarm Website may be used and redistributed under terms equivalent to the Creative Commons Attribution 4.0 International License (CC BY 4.0), along with the following additional requirements:",
+      "If the Information being redistributed is modified in any way, it must be redistributed along with the same Information without any material change or modification.",
+      "If the Information being redistributed spans more than one country, the source of the Information must always be displayed as \"EUMETNET – MeteoAlarm\".",
+      "If the Information being redistributed spans a single country, the name of the relevant MeteoAlarm Participant (National Meteorological and Hydrological Service) must always be displayed.",
+      "The time of issue of the Information being redistributed, as indicated on the MeteoAlarm Website at the time the Information is extracted, must be included in any redistribution.",
+      "Any Information being redistributed through internet applications must include a link to the following URL: www.meteoalarm.org .",
+      "Any Information being operationally redistributed must always be made available to users in real-time, with the delay between the publishing on the MeteoAlarm Website and the redistributor's website being on average less than five minutes and never longer than ten minutes.",
+      "All redistributors must publish the following disclaimer: \"Time delays between this website and the www.meteoalarm.org website are possible. For the most up-to-date awareness information as published by the participating National Meteorological and Hydrological Services, please refer to www.meteoalarm.org.\"",
+      "The English version of these Terms and Conditions is legally binding.",
+      "Last Updated: 15/03/2024"
+    ],
+    "meteoalarm_feed_rights": "Copyright © 2026 MeteoAlarm.Org. Licensed under terms equivalent to CC BY 4.0, with additional requirements for redistributing outlined in our Terms and Conditions.",
+    "osm_copyright": [
+      "OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
+      "You are free to copy, distribute, transmit and adapt our data, as long as you credit OpenStreetMap and its contributors. If you alter or build upon our data, you may distribute the result only under the same license.",
+      "Provide credit to OpenStreetMap by displaying our attribution notice. Make clear that the data is available under the Open Database License."
+    ],
+    "osm_tiles_policy": [
+      "Commercial services, or those that seek donations, should be especially aware that access may be withdrawn at any point",
+      "You must not: Bulk download (\"scrape\") tiles or offer prefetch features.",
+      "Send a valid HTTP User-Agent that clearly identifies your application",
+      "Cache tiles locally according to HTTP caching headers (or at least 7 days if your cache cannot read them)."
+    ],
+    "osm_nominatim_policy": [
+      "No heavy uses (an absolute maximum of 1 request per second ).",
+      "Data is provided under the ODbL license which requires to share alike (although small extractions are likely to be covered by fair usage / fair dealing)."
+    ],
+    "overpass_api_wiki": "You can assume that you don't disturb other users when you do less than 10,000 queries per day and download less than 1 GB data per day",
+    "ign_es_politica_datos": "Orden FOM/2807/2015. Esta orden establece que el uso de la información de los productos y servicios de datos geográficos definidos en ella, así como sus derivados, conlleva la aceptación implícita por el usuario de las condiciones generales de dicha orden , concretada en la siguiente licencia de uso , compatible con CC-BY 4.0 .",
+    "cartes_gouv_cgu": [
+      "L'accès à une API ne confère aucun droit de propriété intellectuelle sur l'API et sur les données mises à disposition via l'API.",
+      "Vous définissez les conditions d'utilisation et de réutilisation des jeux de données mis à disposition à partir d'une API et renseignez la licence depuis les métadonnées de données de l'API. A défaut, la Licence Ouverte / Open Licence – Etalab s'applique sur ce jeu de données.",
+      "Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous licence etalab-2.0"
+    ],
+    "geopf_wfs_capabilities": "Fees: none | AccessConstraints: Conditions Générales d'Utilisation disponibles ici : https://cartes.gouv.fr/cgu | LayerLimit 2",
+    "cds_how_to_api": "url: https://cds.climate.copernicus.eu/api / key: <PERSONAL-ACCESS-TOKEN>",
+    "cds_era5_dataset": "Citation and attribution DOI: 10.24381/cds.adbb2d47 Licence CC-BY licence",
+    "copernicus_copyright_page": "The www.copernicus.eu main website is now an archive ... The important pages and sections now redirect automatically to the Copernicus pages on eu-space.europa.eu",
+    "copernicus_trademark_art2": "Any user may only use the Copernicus Trade Marks to make reference to Copernicus in the course of its commercial or non-commercial activities related to Copernicus and provided that in the communication: it is acknowledged that the Copernicus Trade Marks are owned by the EU;",
+    "wikidata_licensing": "All structured data (i.e. the main, Property, Lexeme, and EntitySchema namespaces) is released into the public domain under Creative Commons Zero . Text in other namespaces is copyrighted and available under the Creative Commons Attribution-ShareAlike 4.0 License ."
+  }
+}

@@ -382,11 +382,20 @@ test('C28e: no_data / not_configured / blocked / stale son estados DISTINTOS por
   assert.ok(fc.reason, 'la degradación debe explicar el motivo');
   assert.strictEqual(fc.data, undefined, 'degradado NO puede traer datos');
 
-  // Alerta sin proveedor A1/A2: la cadena agota sus eslabones `not_configured` y
-  // termina en `no_data` con motivo; estado y cuerpo tipados (nunca 500/lista).
+  // Alertas: AEMET/Météo-France exigen credencial, pero desde SNOW-03 la cadena
+  // incluye MeteoAlarm, que NO requiere credencial y está licenciado. Por tanto
+  // el estado puede ser `ok` (con avisos reales) y no sólo `not_configured`.
   const alerts = await (await fetch(`${base}/v1/stations/baqueira-beret/alerts`)).json();
-  assert.ok(['not_configured', 'no_data'].includes(alerts.status), `/alerts sin credencial ⇒ '${alerts.status}'`);
-  assert.deepStrictEqual(alerts.alerts, []);
+  assert.ok(
+    ['not_configured', 'no_data', 'ok'].includes(alerts.status),
+    `/alerts sin credencial ⇒ '${alerts.status}'`,
+  );
+  if (alerts.status === 'ok') {
+    assert.strictEqual(alerts.provenance.source, 'meteoalarm', 'sin credencial sólo MeteoAlarm puede servir');
+    assert.ok(Array.isArray(alerts.alerts) && alerts.alerts.length > 0, 'ok implica avisos reales');
+  } else {
+    assert.deepStrictEqual(alerts.alerts, [], 'sin dato no puede haber alertas');
+  }
 
   // blocked: imágenes por licencia.
   const blocked = await (await fetch(`${base}/v1/stations/baqueira-beret/webcams`)).json();
@@ -427,13 +436,22 @@ test('C28e: no_data / not_configured / blocked / stale son estados DISTINTOS por
   await closeAll();
 });
 
-test('C28e: /alerts sin proveedor ⇒ estado tipado con alerts: [] y provenance (nunca inventadas)', async () => {
+test('C28e: /alerts sin credencial ⇒ estado tipado con provenance (nunca avisos inventados)', async () => {
   const { base } = await boot({ token: TOKEN, dir: seedDir() });
   const res = await fetch(`${base}/v1/stations/baqueira-beret/alerts`);
   assert.strictEqual(res.status, 200);
   const body = await res.json();
-  assert.ok(['not_configured', 'no_data'].includes(body.status), `estado inesperado '${body.status}'`);
-  assert.deepStrictEqual(body.alerts, [], 'sin proveedor NO puede haber alertas');
+  // SNOW-03: MeteoAlarm sirve sin credencial ⇒ `ok` es un estado legítimo.
+  assert.ok(
+    ['not_configured', 'no_data', 'ok'].includes(body.status),
+    `estado inesperado '${body.status}'`,
+  );
+  if (body.status === 'ok') {
+    assert.strictEqual(body.provenance.source, 'meteoalarm');
+    assert.ok(body.alerts.length > 0, '`ok` sólo con avisos reales del feed');
+  } else {
+    assert.deepStrictEqual(body.alerts, [], 'sin proveedor NO puede haber alertas');
+  }
   assertProvenance(body, '/alerts');
 
   const missing = await fetch(`${base}/v1/stations/no-existe/alerts`);

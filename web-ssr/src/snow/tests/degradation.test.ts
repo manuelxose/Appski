@@ -88,13 +88,13 @@ test('C22: matriz por ruta — 200, procedencia completa, sin 500', async (t) =>
       );
 
       // Invariante real (no "todo debe ser not_configured"): si la ruta devuelve
-      // `ok`, los datos deben venir de una fuente que NO requiere credencial de
-      // proveedor — es decir, de la base editorial propia, nunca de un proveedor
-      // externo sin configurar.
+      // `ok`, los datos deben venir de una fuente que NO requiere credencial —
+      // la base editorial propia o un proveedor público licenciado como
+      // MeteoAlarm (SNOW-03), nunca de un proveedor externo sin configurar.
       if (body.status === 'ok') {
         assert.ok(
-          ['editorial-stations', 'editorial-report'].includes(prov.source),
-          `${route.sample}: status 'ok' sin credenciales debe venir de fuente editorial, no de '${prov.source}'`,
+          ['editorial-stations', 'editorial-report', 'meteoalarm'].includes(prov.source),
+          `${route.sample}: status 'ok' sin credenciales debe venir de fuente editorial o pública licenciada, no de '${prov.source}'`,
         );
         assert.notStrictEqual(prov.licenseStatus, 'blocked',
           `${route.sample}: una fuente editorial no puede estar 'blocked'`);

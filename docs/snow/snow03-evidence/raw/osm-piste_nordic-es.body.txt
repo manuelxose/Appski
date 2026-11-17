@@ -1,0 +1,2711 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T22:00:11Z",
+    "timestamp_areas_base": "2026-11-16T14:53:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1668637864,
+  "lat": 42.4586935,
+  "lon": 1.8450348,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'esquí de fons de Guils-Fontanera",
+    "name:ca": "Estació d'esquí de fons de Guils-Fontanera",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site",
+    "website": "https://www.guils.com/",
+    "wikidata": "Q3120587",
+    "wikipedia": "ca:Guils Fontanera"
+  }
+},
+{
+  "type": "node",
+  "id": 1870593498,
+  "lat": 42.5504821,
+  "lon": 1.0807788,
+  "tags": {
+    "name": "Espot Esquí - Cota 2.000",
+    "piste:type": "nordic",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 1870593500,
+  "lat": 42.5382492,
+  "lon": 1.0749835,
+  "tags": {
+    "name": "Espot Esquí - Cota 2.200",
+    "piste:type": "nordic",
+    "sport": "skiing"
+  }
+},
+{
+  "type": "node",
+  "id": 2004740613,
+  "lat": 42.4311803,
+  "lon": 1.6670145,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'Esquí de Fons de Lles",
+    "name:ca": "Estació d'Esquí de Fons de Lles",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "node",
+  "id": 2004939747,
+  "lat": 42.4224785,
+  "lon": 1.6361534,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Estació d'esquí nòrdic d'Aransa",
+    "name:ca": "Estació d'esquí nòrdic d'Aransa",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tourism": "attraction",
+    "wikidata": "Q2859531",
+    "wikipedia": "ca:Estació d'Aransa"
+  }
+},
+{
+  "type": "node",
+  "id": 2008666598,
+  "lat": 42.4175285,
+  "lon": 1.2874699,
+  "tags": {
+    "name": "Estació de Sant Joan de l'Erm",
+    "name:ca": "Estació de Sant Joan de l'Erm",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "sport": "skiing",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 3414383022,
+  "lat": 42.7192150,
+  "lon": 0.9601160,
+  "tags": {
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "node",
+  "id": 6202299993,
+  "lat": 42.6837071,
+  "lon": 0.6119438,
+  "tags": {
+    "description": "Estación de esquí de fondo",
+    "leisure": "ski_resort",
+    "name": "Estación de esquí de fondo Llanos del Hospital",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "website": "https://www.llanosdelhospital.com"
+  }
+},
+{
+  "type": "way",
+  "id": 58639553,
+  "center": {
+    "lat": 42.7870940,
+    "lon": -0.7077820
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Senda de Gabardito a Colláu de lo Foratón",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 58639703,
+  "center": {
+    "lat": 42.7851421,
+    "lon": -0.7112614
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Azul",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 67095719,
+  "center": {
+    "lat": 40.9873647,
+    "lon": -3.8156548
+  },
+  "tags": {
+    "bicycle": "yes",
+    "cycleway:both": "no",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "surface": "compacted",
+    "tracktype": "grade1"
+  }
+},
+{
+  "type": "way",
+  "id": 90186215,
+  "center": {
+    "lat": 42.9567654,
+    "lon": -0.7992676
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 90187325,
+  "center": {
+    "lat": 42.9529185,
+    "lon": -0.8011492
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 4 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 103078986,
+  "center": {
+    "lat": 43.0526169,
+    "lon": -5.3806217
+  },
+  "tags": {
+    "length": "3500",
+    "lit": "no",
+    "name": "Vuelta a casa",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:ref": "34",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 103557333,
+  "center": {
+    "lat": 41.0097134,
+    "lon": -3.8436533
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 151201822,
+  "center": {
+    "lat": 42.9581436,
+    "lon": -0.8002753
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 1 Verde El Ferial - Zampori",
+    "piste:difficulty": "novice",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151201823,
+  "center": {
+    "lat": 42.9518987,
+    "lon": -0.7998547
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 5 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151201824,
+  "center": {
+    "lat": 42.9582346,
+    "lon": -0.8004828
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "2",
+    "name": "Pista 1 Verde El Ferial - Zampori",
+    "piste:difficulty": "novice",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151203831,
+  "center": {
+    "lat": 42.9526090,
+    "lon": -0.7995106
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 5 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151203832,
+  "center": {
+    "lat": 42.9576847,
+    "lon": -0.7995231
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 1 Verde El Ferial - Zampori",
+    "piste:difficulty": "novice",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151203926,
+  "center": {
+    "lat": 42.9536062,
+    "lon": -0.8021173
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 4 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 151489822,
+  "center": {
+    "lat": 42.9549947,
+    "lon": -0.8015821
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 184158086,
+  "center": {
+    "lat": 42.9638721,
+    "lon": -0.7599962
+  },
+  "tags": {
+    "colour": "green",
+    "highway": "path",
+    "length": "0.9",
+    "name": "Pista 2 Verde de La Contienda",
+    "name:es": "Pista 2 Verde de La Contienda",
+    "name:eu": "Kontiendako pista berdea 2",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 184158088,
+  "center": {
+    "lat": 42.9645948,
+    "lon": -0.7649647
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Azul de La Contienda",
+    "name:es": "Pista Azul de La Contienda",
+    "name:eu": "Kontiendako pista urdina",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 184158089,
+  "center": {
+    "lat": 42.9637890,
+    "lon": -0.7655423
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Negra de La Contienda",
+    "name:es": "Pista Negra de La Contienda",
+    "name:eu": "Kontiendako pista beltza",
+    "piste:difficulty": "advanced",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 184209330,
+  "center": {
+    "lat": 42.9645677,
+    "lon": -0.7683444
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Azul de La Contienda (Travesía)",
+    "name:es": "Pista Azul de La Contienda (Travesía)",
+    "name:eu": "La Contiendako pista urdina (zeharbidea)",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 184209341,
+  "center": {
+    "lat": 42.9581881,
+    "lon": -0.8008566
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 1 Verde El Ferial - Zampori",
+    "piste:difficulty": "novice",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 190279909,
+  "center": {
+    "lat": 42.4006683,
+    "lon": 1.2807034
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Coll de Leix",
+    "name:ca": "Coll de Leix",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 191259511,
+  "center": {
+    "lat": 42.4051132,
+    "lon": 1.2791318
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 191259514,
+  "center": {
+    "lat": 42.4087921,
+    "lon": 1.2767690
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 192121178,
+  "center": {
+    "lat": 42.9565739,
+    "lon": -0.8003974
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade4",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121179,
+  "center": {
+    "lat": 42.9562159,
+    "lon": -0.7991501
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121180,
+  "center": {
+    "lat": 42.9558733,
+    "lon": -0.8020007
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121181,
+  "center": {
+    "lat": 42.9545433,
+    "lon": -0.8031971
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 3 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121182,
+  "center": {
+    "lat": 42.9552461,
+    "lon": -0.7990511
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 3 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121183,
+  "center": {
+    "lat": 42.9541563,
+    "lon": -0.8009795
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 3 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121184,
+  "center": {
+    "lat": 42.9534149,
+    "lon": -0.7985918
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista 4 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 192121185,
+  "center": {
+    "lat": 42.9576579,
+    "lon": -0.7986948
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 206327612,
+  "center": {
+    "lat": 42.4097011,
+    "lon": 1.2837238
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Coll de Leix",
+    "name:ca": "Coll de Leix",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 206327619,
+  "center": {
+    "lat": 42.4006513,
+    "lon": 1.2801061
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 232477651,
+  "center": {
+    "lat": 41.0077153,
+    "lon": -3.8353518
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 232477652,
+  "center": {
+    "lat": 40.9924573,
+    "lon": -3.8193539
+  },
+  "tags": {
+    "bicycle": "yes",
+    "cycleway:both": "no",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "tracktype": "grade1"
+  }
+},
+{
+  "type": "way",
+  "id": 232477669,
+  "center": {
+    "lat": 40.9979180,
+    "lon": -3.8342042
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 232477688,
+  "center": {
+    "lat": 41.0001735,
+    "lon": -3.8438514
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 232477691,
+  "center": {
+    "lat": 41.0016925,
+    "lon": -3.8500340
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 249294880,
+  "center": {
+    "lat": 42.7935934,
+    "lon": -0.5293245
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "name:oc": "Senda deras Raquetas",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "source:name:oc": "Lo Congrès",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 249294884,
+  "center": {
+    "lat": 42.7886596,
+    "lon": -0.5370040
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "tracktype": "grade5",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 251371428,
+  "center": {
+    "lat": 41.0104757,
+    "lon": -3.8196492
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "yes",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 280272741,
+  "center": {
+    "lat": 42.9809037,
+    "lon": -5.7769588
+  },
+  "tags": {
+    "name": "Pista de fondo Pajares",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 291727268,
+  "center": {
+    "lat": 42.7615195,
+    "lon": -0.2379396
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 291727269,
+  "center": {
+    "lat": 42.7606821,
+    "lon": -0.2361252
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "surface": "ground",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 306481597,
+  "center": {
+    "lat": 42.4215509,
+    "lon": 1.6282656
+  },
+  "tags": {
+    "highway": "path",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 313863524,
+  "center": {
+    "lat": 40.9938312,
+    "lon": -3.8381076
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "path",
+    "horse": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "sac_scale": "mountain_hiking",
+    "surface": "dirt",
+    "trail_visibility": "good"
+  }
+},
+{
+  "type": "way",
+  "id": 327052953,
+  "center": {
+    "lat": 42.4320779,
+    "lon": 1.2641350
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Sant Joan Vell",
+    "name:ca": "Sant Joan Vell",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 327058132,
+  "center": {
+    "lat": 42.4179858,
+    "lon": 1.2805261
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Autopista",
+    "name:ca": "Autopista",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327058133,
+  "center": {
+    "lat": 42.4327397,
+    "lon": 1.2583017
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Circuit Giró",
+    "name:ca": "Circuit Giró",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327064747,
+  "center": {
+    "lat": 42.4227202,
+    "lon": 1.2685532
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Artics",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327064748,
+  "center": {
+    "lat": 42.4187327,
+    "lon": 1.2733809
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327073382,
+  "center": {
+    "lat": 42.4162572,
+    "lon": 1.2775138
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Diagonal",
+    "name:ca": "Diagonal",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327084053,
+  "center": {
+    "lat": 42.3966987,
+    "lon": 1.2807088
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Coll de Leix",
+    "name:ca": "Coll de Leix",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 327087808,
+  "center": {
+    "lat": 42.4170096,
+    "lon": 1.2872588
+  },
+  "tags": {
+    "foot": "designated",
+    "highway": "path",
+    "name": "Tallafocs",
+    "name:ca": "Tallafocs",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327087809,
+  "center": {
+    "lat": 42.4151449,
+    "lon": 1.2847873
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 327087811,
+  "center": {
+    "lat": 42.4125505,
+    "lon": 1.2776287
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 327087812,
+  "center": {
+    "lat": 42.4088588,
+    "lon": 1.2795102
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327089741,
+  "center": {
+    "lat": 42.4128305,
+    "lon": 1.2812928
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 327091346,
+  "center": {
+    "lat": 42.4161655,
+    "lon": 1.2535026
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 327095337,
+  "center": {
+    "lat": 42.4038370,
+    "lon": 1.2761525
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 331942877,
+  "center": {
+    "lat": 42.7926070,
+    "lon": -0.5395423
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Camille",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "sac_scale": "mountain_hiking",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 331942879,
+  "center": {
+    "lat": 42.7914806,
+    "lon": -0.5385539
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 331942880,
+  "center": {
+    "lat": 42.7918985,
+    "lon": -0.5293603
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "name:oc": "Senda deras Raquetas",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "source:name:oc": "Lo Congrès",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 331942882,
+  "center": {
+    "lat": 42.7910307,
+    "lon": -0.5336377
+  },
+  "tags": {
+    "access": "private",
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "tracktype": "grade5",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 331942883,
+  "center": {
+    "lat": 42.7936784,
+    "lon": -0.5348300
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "name:oc": "Senda deras Raquetas",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "source:name:oc": "Lo Congrès",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 331942884,
+  "center": {
+    "lat": 42.7905336,
+    "lon": -0.5367928
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "tracktype": "grade5",
+    "type": "route"
+  }
+},
+{
+  "type": "way",
+  "id": 334326687,
+  "center": {
+    "lat": 42.7170645,
+    "lon": 0.9575965
+  },
+  "tags": {
+    "name": "Beret",
+    "name:ca": "Beret",
+    "name:oc": "Beret",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 376661501,
+  "center": {
+    "lat": 42.7611308,
+    "lon": -0.2361725
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 376664136,
+  "center": {
+    "lat": 42.7587542,
+    "lon": -0.2386033
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 376665220,
+  "center": {
+    "lat": 42.7624416,
+    "lon": -0.2370258
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 376665221,
+  "center": {
+    "lat": 42.7622093,
+    "lon": -0.2368246
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 376665222,
+  "center": {
+    "lat": 42.7621152,
+    "lon": -0.2367069
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 390622739,
+  "center": {
+    "lat": 42.9639567,
+    "lon": -0.7707851
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Azul de La Contienda",
+    "name:es": "Pista Azul de La Contienda",
+    "name:eu": "Kontiendako pista urdina",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 390622740,
+  "center": {
+    "lat": 42.9639572,
+    "lon": -0.7634279
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Pista Negra de La Contienda",
+    "name:es": "Pista Negra de La Contienda",
+    "name:eu": "Kontiendako pista beltza",
+    "piste:difficulty": "advanced",
+    "piste:type": "nordic",
+    "ski": "designated",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 444288829,
+  "center": {
+    "lat": 37.0905069,
+    "lon": -3.4128824
+  },
+  "tags": {
+    "abandoned": "yes",
+    "piste:lit": "no",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 473731294,
+  "center": {
+    "lat": 42.4125937,
+    "lon": 1.2801984
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 473731296,
+  "center": {
+    "lat": 42.4165878,
+    "lon": 1.2870021
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Autopista",
+    "name:ca": "Autopista",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 473731310,
+  "center": {
+    "lat": 42.4391540,
+    "lon": 1.2573356
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Sant Joan Vell",
+    "name:ca": "Sant Joan Vell",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 477953431,
+  "center": {
+    "lat": 42.7599424,
+    "lon": -0.2374685
+  },
+  "tags": {
+    "highway": "track",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 653828310,
+  "center": {
+    "lat": 40.8237330,
+    "lon": -3.9540415
+  },
+  "tags": {
+    "abandoned": "yes",
+    "bicycle": "no",
+    "horse": "no",
+    "name": "Pista esquí de fondo Cotos",
+    "piste:type": "nordic",
+    "ref": "GR 10.4",
+    "sac_scale": "mountain_hiking",
+    "trail_visibility": "good"
+  }
+},
+{
+  "type": "way",
+  "id": 665040035,
+  "center": {
+    "lat": 37.0975326,
+    "lon": -3.3926871
+  },
+  "tags": {
+    "descent": "30",
+    "distance": "2.5",
+    "name": "Circuito Fondo Peñones",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 675387345,
+  "center": {
+    "lat": 42.2097085,
+    "lon": 1.5342364
+  },
+  "tags": {
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387347,
+  "center": {
+    "lat": 42.2105065,
+    "lon": 1.5318520
+  },
+  "tags": {
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387348,
+  "center": {
+    "lat": 42.2077730,
+    "lon": 1.5292310
+  },
+  "tags": {
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387349,
+  "center": {
+    "lat": 42.2035055,
+    "lon": 1.5281595
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387350,
+  "center": {
+    "lat": 42.2133306,
+    "lon": 1.5277893
+  },
+  "tags": {
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387352,
+  "center": {
+    "lat": 42.2102335,
+    "lon": 1.5337720
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387353,
+  "center": {
+    "lat": 42.2133436,
+    "lon": 1.5278029
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387354,
+  "center": {
+    "lat": 42.2131140,
+    "lon": 1.5276610
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387355,
+  "center": {
+    "lat": 42.2077235,
+    "lon": 1.5393975
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387356,
+  "center": {
+    "lat": 42.2097880,
+    "lon": 1.5341510
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387357,
+  "center": {
+    "lat": 42.2123561,
+    "lon": 1.5285754
+  },
+  "tags": {
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387358,
+  "center": {
+    "lat": 42.2015545,
+    "lon": 1.5220865
+  },
+  "tags": {
+    "piste:difficulty": "advanced",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 675387359,
+  "center": {
+    "lat": 42.2123376,
+    "lon": 1.5284993
+  },
+  "tags": {
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 754843887,
+  "center": {
+    "lat": 42.7613226,
+    "lon": -0.2349485
+  },
+  "tags": {
+    "oneway": "yes",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843888,
+  "center": {
+    "lat": 42.7598611,
+    "lon": -0.2380329
+  },
+  "tags": {
+    "lit": "no",
+    "oneway": "yes",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843889,
+  "center": {
+    "lat": 42.7614014,
+    "lon": -0.2366470
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843892,
+  "center": {
+    "lat": 42.7609314,
+    "lon": -0.2367539
+  },
+  "tags": {
+    "lit": "no",
+    "oneway": "yes",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "survey;gps"
+  }
+},
+{
+  "type": "way",
+  "id": 754843894,
+  "center": {
+    "lat": 42.7613052,
+    "lon": -0.2375956
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843896,
+  "center": {
+    "lat": 42.7622413,
+    "lon": -0.2369616
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843897,
+  "center": {
+    "lat": 42.7629529,
+    "lon": -0.2347237
+  },
+  "tags": {
+    "lit": "no",
+    "oneway": "yes",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "source": "survey;gps"
+  }
+},
+{
+  "type": "way",
+  "id": 754843898,
+  "center": {
+    "lat": 42.7623783,
+    "lon": -0.2351377
+  },
+  "tags": {
+    "highway": "residential",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic",
+    "source": "PNOA",
+    "source:date": "2009"
+  }
+},
+{
+  "type": "way",
+  "id": 754843899,
+  "center": {
+    "lat": 42.7618411,
+    "lon": -0.2354247
+  },
+  "tags": {
+    "highway": "path",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic+skating",
+    "piste:oneway": "yes",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 754843900,
+  "center": {
+    "lat": 42.7615757,
+    "lon": -0.2351386
+  },
+  "tags": {
+    "oneway": "yes",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 760482044,
+  "center": {
+    "lat": 42.4237332,
+    "lon": 1.6257648
+  },
+  "tags": {
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 760482046,
+  "center": {
+    "lat": 42.4215029,
+    "lon": 1.6273538
+  },
+  "tags": {
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 760482047,
+  "center": {
+    "lat": 42.4198337,
+    "lon": 1.6263518
+  },
+  "tags": {
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 760482049,
+  "center": {
+    "lat": 42.4169258,
+    "lon": 1.6255870
+  },
+  "tags": {
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 827939838,
+  "center": {
+    "lat": 42.9870106,
+    "lon": -5.7646197
+  },
+  "tags": {
+    "name": "Pista de fondo Pajares",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 897730256,
+  "center": {
+    "lat": 42.4132975,
+    "lon": 1.2801149
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 897730257,
+  "center": {
+    "lat": 42.4118052,
+    "lon": 1.2750241
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 897730259,
+  "center": {
+    "lat": 42.4194177,
+    "lon": 1.2620746
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 897730260,
+  "center": {
+    "lat": 42.4154188,
+    "lon": 1.2686605
+  },
+  "tags": {
+    "highway": "track",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 897730261,
+  "center": {
+    "lat": 42.4384979,
+    "lon": 1.2582986
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Sant Joan Vell",
+    "name:ca": "Sant Joan Vell",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 902087264,
+  "center": {
+    "lat": 43.0505935,
+    "lon": -5.3726198
+  },
+  "tags": {
+    "lit": "no",
+    "name": "El Ausente",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 902087265,
+  "center": {
+    "lat": 43.0466329,
+    "lon": -5.3777664
+  },
+  "tags": {
+    "name": "Entrenamiento",
+    "piste:difficulty": "novice",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 909320174,
+  "center": {
+    "lat": 40.9999818,
+    "lon": -3.8252743
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320175,
+  "center": {
+    "lat": 40.9950381,
+    "lon": -3.8318462
+  },
+  "tags": {
+    "bicycle": "yes",
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "layer": "1",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320176,
+  "center": {
+    "lat": 41.0030656,
+    "lon": -3.8377503
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320177,
+  "center": {
+    "lat": 41.0008167,
+    "lon": -3.8361762
+  },
+  "tags": {
+    "bicycle": "yes",
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "layer": "1",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320178,
+  "center": {
+    "lat": 41.0042140,
+    "lon": -3.8247555
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320179,
+  "center": {
+    "lat": 41.0017594,
+    "lon": -3.8307880
+  },
+  "tags": {
+    "bicycle": "yes",
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "layer": "1",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "surface": "dirt",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 909320184,
+  "center": {
+    "lat": 41.0009089,
+    "lon": -3.8200448
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "surface": "concrete",
+    "tracktype": "grade1"
+  }
+},
+{
+  "type": "way",
+  "id": 909320185,
+  "center": {
+    "lat": 40.9970876,
+    "lon": -3.8220604
+  },
+  "tags": {
+    "bicycle": "yes",
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "track",
+    "horse": "no",
+    "layer": "1",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "segregated": "no",
+    "smoothness": "bad",
+    "tracktype": "grade1"
+  }
+},
+{
+  "type": "way",
+  "id": 926860825,
+  "center": {
+    "lat": 42.4135539,
+    "lon": 1.2812876
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "easy",
+    "piste:grooming": "skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 1117608742,
+  "center": {
+    "lat": 40.9964154,
+    "lon": -3.8252510
+  },
+  "tags": {
+    "bicycle": "yes",
+    "highway": "path",
+    "horse": "no",
+    "lit": "no",
+    "name": "Pista esquí de fondo Navafría",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "sac_scale": "mountain_hiking",
+    "surface": "dirt",
+    "trail_visibility": "good"
+  }
+},
+{
+  "type": "way",
+  "id": 1117677769,
+  "center": {
+    "lat": 40.8246336,
+    "lon": -3.9503174
+  },
+  "tags": {
+    "abandoned": "yes",
+    "bicycle": "no",
+    "foot": "yes",
+    "horse": "no",
+    "motor_vehicle": "no",
+    "name": "Pista esquí de fondo Cotos",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1117677770,
+  "center": {
+    "lat": 40.8243014,
+    "lon": -3.9507447
+  },
+  "tags": {
+    "abandoned": "yes",
+    "name": "Pista esquí de fondo Cotos",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1117679771,
+  "center": {
+    "lat": 42.9821922,
+    "lon": -5.7707077
+  },
+  "tags": {
+    "name": "Pista de fondo Pajares",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1117680771,
+  "center": {
+    "lat": 42.9898549,
+    "lon": -5.7598729
+  },
+  "tags": {
+    "name": "Pista de fondo Pajares",
+    "piste:difficulty": "easy",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1212523988,
+  "center": {
+    "lat": 40.3437486,
+    "lon": -1.7677848
+  },
+  "tags": {
+    "area": "yes",
+    "lit": "yes",
+    "name": "Antigua pista de la Mogorrita",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1229271650,
+  "center": {
+    "lat": 42.4157442,
+    "lon": 1.2874123
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Coll de Leix",
+    "name:ca": "Coll de Leix",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 1231963316,
+  "center": {
+    "lat": 42.4387227,
+    "lon": 1.2579957
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Sant Joan Vell",
+    "name:ca": "Sant Joan Vell",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "ski"
+  }
+},
+{
+  "type": "way",
+  "id": 1232006184,
+  "center": {
+    "lat": 42.4235788,
+    "lon": 1.2722439
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Autopista",
+    "name:ca": "Autopista",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic"
+  }
+},
+{
+  "type": "way",
+  "id": 1232052051,
+  "center": {
+    "lat": 42.4191488,
+    "lon": 1.2600470
+  },
+  "tags": {
+    "highway": "track",
+    "name": "Camí de Sant Joan de l'Erm a les Comes de Rubió",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "tracktype": "grade3"
+  }
+},
+{
+  "type": "way",
+  "id": 1304799719,
+  "center": {
+    "lat": 42.7914606,
+    "lon": -0.5305195
+  },
+  "tags": {
+    "highway": "path",
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "tracktype": "grade5",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589769,
+  "center": {
+    "lat": 42.9644824,
+    "lon": -0.7657991
+  },
+  "tags": {
+    "colour": "blue",
+    "distance": "2",
+    "name": "Pista 1 Azul La Contienda",
+    "name:eu": "La Contiendako pista urdina 1",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589770,
+  "center": {
+    "lat": 42.9576847,
+    "lon": -0.7996515
+  },
+  "tags": {
+    "colour": "green",
+    "distance": "1.5",
+    "name": "Pista 1 Verde El Ferial - Zampori",
+    "piste:difficulty": "novice",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589771,
+  "center": {
+    "lat": 42.9561363,
+    "lon": -0.8005425
+  },
+  "tags": {
+    "colour": "blue",
+    "distance": "1.7",
+    "name": "Pista 2 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589773,
+  "center": {
+    "lat": 42.9637890,
+    "lon": -0.7655423
+  },
+  "tags": {
+    "colour": "black",
+    "distance": "2",
+    "name": "Pista 3 Negra La Contienda",
+    "name:eu": "La Contiendako pista beltza 3",
+    "piste:difficulty": "advanced",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589774,
+  "center": {
+    "lat": 42.9560734,
+    "lon": -0.8006661
+  },
+  "tags": {
+    "colour": "red",
+    "distance": "2.1",
+    "name": "Pista 3 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589775,
+  "center": {
+    "lat": 42.9532736,
+    "lon": -0.8003436
+  },
+  "tags": {
+    "colour": "red",
+    "distance": "3",
+    "name": "Pista 4 Roja El Ferial - Zampori",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 2589776,
+  "center": {
+    "lat": 42.9520525,
+    "lon": -0.7998547
+  },
+  "tags": {
+    "colour": "blue",
+    "distance": "1.8",
+    "name": "Pista 5 Azul El Ferial - Zampori",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic;skating",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 4639547,
+  "center": {
+    "lat": 42.9641768,
+    "lon": -0.7655340
+  },
+  "tags": {
+    "name": "La Contienda",
+    "name:eu": "La Contiendako eski pistak",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site",
+    "website": "http://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.phphttp://www.roncalia.com/es/invierno/espacio-nordico/mapa-pistas.php"
+  }
+},
+{
+  "type": "relation",
+  "id": 4639548,
+  "center": {
+    "lat": 42.9549420,
+    "lon": -0.8002509
+  },
+  "tags": {
+    "name": "Larra-Belagua",
+    "piste:type": "nordic",
+    "site": "piste",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 4659149,
+  "center": {
+    "lat": 42.7914451,
+    "lon": -0.5340087
+  },
+  "tags": {
+    "name": "Senda de Raquetas de Nieve",
+    "piste:difficulty": "novice",
+    "piste:grooming": "backcountry",
+    "piste:type": "nordic",
+    "route": "piste",
+    "ski": "yes",
+    "snowshoe": "designated",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 9380577,
+  "center": {
+    "lat": 42.2077730,
+    "lon": 1.5292310
+  },
+  "tags": {
+    "ascent": "2047",
+    "colour": "red",
+    "descent": "1996",
+    "distance": "2.76",
+    "name": "Esquí - Circuit del Mig",
+    "operator": "Estació d'esquí nòrdic Tuixent - La Vansa",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "roundtrip": "yes",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 9380578,
+  "center": {
+    "lat": 42.2035055,
+    "lon": 1.5281595
+  },
+  "tags": {
+    "colour": "blue",
+    "name": "Esquí - Circuit de l'Avenc",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 9380581,
+  "center": {
+    "lat": 42.2015545,
+    "lon": 1.5220865
+  },
+  "tags": {
+    "colour": "red",
+    "name": "Esquí - Circuit de Prat Llong",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 9380582,
+  "center": {
+    "lat": 42.2106995,
+    "lon": 1.5334430
+  },
+  "tags": {
+    "colour": "blue",
+    "name": "Esquí - Circuit Planer",
+    "piste:difficulty": "easy",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 9380583,
+  "center": {
+    "lat": 42.2105065,
+    "lon": 1.5318520
+  },
+  "tags": {
+    "colour": "red",
+    "name": "Esquí - Circuit de l'Arp",
+    "piste:difficulty": "intermediate",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 11862866,
+  "center": {
+    "lat": 42.9647887,
+    "lon": -1.0409670
+  },
+  "tags": {
+    "distance": "16",
+    "name": "Koitxa",
+    "operator": "Irati-Abodi Mendi Gunearen ipar eski pistak",
+    "piste:difficulty": "advanced",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 11862867,
+  "center": {
+    "lat": 42.9588033,
+    "lon": -1.0329928
+  },
+  "tags": {
+    "distance": "9",
+    "name": "Zamukadioa",
+    "operator": "Irati-Abodi Mendi Gunearen ipar eski pistak",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 11862868,
+  "center": {
+    "lat": 42.9524334,
+    "lon": -1.0341509
+  },
+  "tags": {
+    "distance": "8",
+    "name": "Osabako Gurutzea",
+    "name:es": "Cruz de Osaba",
+    "name:eu": "Osabako Gurutzea",
+    "operator": "Irati-Abodi Mendi Gunearen ipar eski pistak",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 11862869,
+  "center": {
+    "lat": 42.9503388,
+    "lon": -1.0231351
+  },
+  "tags": {
+    "colour": "blue",
+    "distance": "4.5",
+    "name": "Zerrillar",
+    "operator": "Irati-Abodi Mendi Gunearen ipar eski pistak",
+    "piste:difficulty": "intermediate",
+    "piste:type": "nordic",
+    "route": "piste",
+    "type": "route"
+  }
+}
+
+  ]
+}

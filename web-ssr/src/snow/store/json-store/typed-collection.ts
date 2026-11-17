@@ -76,6 +76,8 @@ export const PROVIDER_IDS: readonly string[] = [
   'ign-fr',
   'osm',
   'protomaps',
+  'open-meteo',
+  'meteoalarm',
   'editorial-stations',
   'editorial-report',
   'infonieve',
@@ -104,6 +106,8 @@ export type ProviderIdString =
   | 'ign-fr'
   | 'osm'
   | 'protomaps'
+  | 'open-meteo'
+  | 'meteoalarm'
   | 'editorial-stations'
   | 'editorial-report'
   | 'infonieve'

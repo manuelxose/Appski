@@ -1,0 +1,18 @@
+{
+  "key": "wikidata-ski-resort-ad",
+  "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20%3Fitem%20%3FitemLabel%20%3Fcoord%20%3Felev%20%3Fwebsite%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ130003%20.%0A%20%20%3Fitem%20wdt%3AP625%20%3Fcoord%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ232%20.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2044%20%3Felev%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22es%2Cca%2Cfr%2Cpt%2Cen%22.%20%7D%0A%7D",
+  "requestedUrl": "https://query.wikidata.org/sparql?format=json&query=SELECT%20%3Fitem%20%3FitemLabel%20%3Fcoord%20%3Felev%20%3Fwebsite%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ130003%20.%0A%20%20%3Fitem%20wdt%3AP625%20%3Fcoord%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ232%20.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2044%20%3Felev%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22es%2Cca%2Cfr%2Cpt%2Cen%22.%20%7D%0A%7D",
+  "status": 200,
+  "sha256": "c09caeb0849ae33328812e6b3d95ae14e2af0938c47af680200cb3b58a46d9c8",
+  "bytes": 1290,
+  "capturedAt": "2026-11-16T22:04:11.264Z",
+  "source": "network",
+  "userAgent": "appski-snow03-catalog/1.0 (+https://appski.invalid/snow03; contact: ops@appski.invalid)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "ms": 1003
+    }
+  ]
+}
